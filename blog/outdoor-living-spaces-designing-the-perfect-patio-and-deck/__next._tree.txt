@@ -1,0 +1,7 @@
+:HL["/_next/static/css/3c177ffefca10487.css","style"]
+:HL["/_next/static/css/095a282793cc80b6.css","style"]
+:HL["/_next/static/css/ae49905e2d9137ef.css","style"]
+:HL["/_next/static/css/ba0421b043c6954a.css","style"]
+:HL["/_next/static/css/935f881462710d98.css","style"]
+:HL["../images/services/outdoor-living.webp","image"]
+0:{"buildId":"sAGgTYy2l1s-v3IjHcEPK","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"blog","paramType":null,"paramKey":"blog","hasRuntimePrefetch":false,"slots":{"children":{"name":"slug","paramType":"d","paramKey":"outdoor-living-spaces-designing-the-perfect-patio-and-deck","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}

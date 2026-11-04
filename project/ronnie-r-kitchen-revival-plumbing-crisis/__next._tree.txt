@@ -1,0 +1,6 @@
+:HL["/_next/static/css/3c177ffefca10487.css","style"]
+:HL["/_next/static/css/095a282793cc80b6.css","style"]
+:HL["/_next/static/css/ae49905e2d9137ef.css","style"]
+:HL["/_next/static/css/ba0421b043c6954a.css","style"]
+:HL["/_next/static/css/4e91323ac5fb8ee0.css","style"]
+0:{"buildId":"sAGgTYy2l1s-v3IjHcEPK","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"project","paramType":null,"paramKey":"project","hasRuntimePrefetch":false,"slots":{"children":{"name":"slug","paramType":"d","paramKey":"ronnie-r-kitchen-revival-plumbing-crisis","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}

@@ -1,0 +1,43 @@
+1:"$Sreact.fragment"
+2:I[8176,["8500","static/chunks/8500-27e7d9770d119ae1.js","8437","static/chunks/8437-b973af1d1c64ecb0.js","3789","static/chunks/app/our-team/%5Bslug%5D/page-d1e530c2da19ab65.js"],"default"]
+3:I[38437,["8500","static/chunks/8500-27e7d9770d119ae1.js","8437","static/chunks/8437-b973af1d1c64ecb0.js","3789","static/chunks/app/our-team/%5Bslug%5D/page-d1e530c2da19ab65.js"],"Image"]
+5:I[98500,["8500","static/chunks/8500-27e7d9770d119ae1.js","8437","static/chunks/8437-b973af1d1c64ecb0.js","3789","static/chunks/app/our-team/%5Bslug%5D/page-d1e530c2da19ab65.js"],""]
+14:I[99337,["8500","static/chunks/8500-27e7d9770d119ae1.js","8437","static/chunks/8437-b973af1d1c64ecb0.js","3789","static/chunks/app/our-team/%5Bslug%5D/page-d1e530c2da19ab65.js"],"default"]
+15:I[90484,[],"OutletBoundary"]
+16:"$Sreact.suspense"
+:HL["/images/our-team-bg.jpg","image"]
+:HL["/images/our-team/gus.jpg","image"]
+:HL["/images/our-team/shahwaiz.jpeg","image"]
+:HL["/images/our-team/erika.jpg","image"]
+:HL["/images/our-team/kris-guitton.jpg","image"]
+:HL["/images/our-team/gabriela.jpg","image"]
+:HL["/images/our-team/fawn_baranko.jpg","image"]
+:HL["/images/our-team/debbie-gray.jpg","image"]
+:HL["/images/our-team/laura.jpeg","image"]
+:HL["/images/our-team/noe.jpeg","image"]
+:HL["/images/our-team/jose.jpg","image"]
+:HL["/images/our-team/jorge-tapia.jpg","image"]
+:HL["/_next/static/css/1ce6b7379fd2e6ff.css","style"]
+4:T789,
+			<p>Gustavo F. Placeres is the Chief Executive Officer of DMV General Contracting Group with more than 35 years of practical hands-on experience in the construction industry, especially specializing in residential construction and renovation. Successfully, he has gained massive recognition in the Washington DC Metro Area for his significant contributions to the DMV region.</p>
+			<p>Under his leadership, DMV General Contracting Group became a top choice for homeowners based in Washington, DC Metro Area. Gustavo, for reliable home remodeling services such as custom home upgrades, kitchen and bathroom remodeling, basement finishing, carpentry, home additions, and much more. His leadership blends traditional workmanship with innovative construction methods, ensuring every project meets the highest standards of functionality, design, and durability.</p>
+			<p>Furthermore, Gustavo is also widely recognized for his meticulous attention to detail, skilled craftsmanship, professionalism, and commitment to delivering projects within budget on time. He believes in working closely with homeowners to understand their needs and transform their vision into reality. So he prioritizes clear communication and thoughtful management with a strong respect for every home’s structure and purpose.</p>
+			<p>Whether it is a full home remodeling, focused renovation, or construction, our team approaches every project with high precision, care, pride, and accountability.</p>
+			<h3 class="team-profile__heading">Life Beyond Work</h3>
+			<p>Outside of work, Gustavo enjoys spending quality time with his family and embracing the outdoors. He is an avid cyclist, enjoys exploring new restaurants, and has a passion for cooking and discovering new flavours. Whether reading a good book, being outside in nature, or trying a new culinary experience, he values balance, curiosity, and meaningful moments beyond the job site.</p>
+		0:{"buildId":"sAGgTYy2l1s-v3IjHcEPK","rsc":["$","$1","c",{"children":[["$","main",null,{"className":"page-wrapper","children":[["$","$L2",null,{"nav":"our-team"}],["$","div",null,{"className":"style_banner-holder__dK7aJ","children":[["$","div",null,{"className":"image-holder style_image-holder__my1fm","children":["$","img",null,{"src":"/images/our-team-bg.jpg","alt":"our team"}]}],["$","div",null,{"className":"container","children":["$","div",null,{"className":"style_content-data__dZrWN","children":["$","div",null,{"className":"h-list justify-content-center","children":["$","h1",null,{"children":"Meet our team"}]}]}]}]]}],["$","section",null,{"className":"team-profile style_team-profile__v16Xo","children":["$","div",null,{"className":"container style_container__cfiVg","children":[["$","div",null,{"className":"style_team-profile__main__ZBUQp","children":[["$","div",null,{"className":"style_team-profile__top__6_9kK","children":[["$","div",null,{"className":"style_team-profile__avatar__z8TeU","children":["$","$L3",null,{"src":"/images/our-team/gus.jpg","alt":"Gustavo F. Placeres","width":300,"height":300}]}],["$","div",null,{"className":"style_team-profile__titlebox__aNXya","children":[["$","h2",null,{"className":"fw-bold style_team-profile__name__oac9f","children":"Gustavo F. Placeres"}],["$","p",null,{"className":"style_team-profile__role__qfFu4","children":"CHIEF EXECUTIVE OFFICER"}]]}]]}],["$","div",null,{"className":"style_team-profile__bio__4tIEn","children":[["$","h3",null,{"className":"team-profile__heading","children":"BACKGROUND"}],["$","div",null,{"dangerouslySetInnerHTML":{"__html":"$4"}}]]}]]}],["$","div",null,{"className":"style_team-profile__sidebar__vaJrx","children":[["$","$L5","gustavo-placerese",{"href":"/our-team/gustavo-placerese","className":"\n                  style_team-profile__thumb__lwBUz\n                  style_active__OZ65W\n                ","children":"$L6"}],"$L7","$L8","$L9","$La","$Lb","$Lc","$Ld","$Le","$Lf","$L10"]}]]}]}],"$L11"]}],["$L12"],"$L13"]}],"loading":null,"isPartial":false}
+6:["$","img",null,{"src":"/images/our-team/gus.jpg","alt":"Gustavo F. Placeres"}]
+7:["$","$L5","shahwaiz-faisal",{"href":"/our-team/shahwaiz-faisal","className":"\n                  style_team-profile__thumb__lwBUz\n                  \n                ","children":["$","img",null,{"src":"/images/our-team/shahwaiz.jpeg","alt":"Shahwaiz Faisal"}]}]
+8:["$","$L5","erika-weir",{"href":"/our-team/erika-weir","className":"\n                  style_team-profile__thumb__lwBUz\n                  \n                ","children":["$","img",null,{"src":"/images/our-team/erika.jpg","alt":"Erika Weir"}]}]
+9:["$","$L5","kris-guitton",{"href":"/our-team/kris-guitton","className":"\n                  style_team-profile__thumb__lwBUz\n                  \n                ","children":["$","img",null,{"src":"/images/our-team/kris-guitton.jpg","alt":"Kris Guitton"}]}]
+a:["$","$L5","gabriela-martinez",{"href":"/our-team/gabriela-martinez","className":"\n                  style_team-profile__thumb__lwBUz\n                  \n                ","children":["$","img",null,{"src":"/images/our-team/gabriela.jpg","alt":"Gabriela Martínez"}]}]
+b:["$","$L5","fawn-baranko",{"href":"/our-team/fawn-baranko","className":"\n                  style_team-profile__thumb__lwBUz\n                  \n                ","children":["$","img",null,{"src":"/images/our-team/fawn_baranko.jpg","alt":"Fawn Baranko"}]}]
+c:["$","$L5","debbie-gray",{"href":"/our-team/debbie-gray","className":"\n                  style_team-profile__thumb__lwBUz\n                  \n                ","children":["$","img",null,{"src":"/images/our-team/debbie-gray.jpg","alt":"Debbie Gray"}]}]
+d:["$","$L5","laura-ecker",{"href":"/our-team/laura-ecker","className":"\n                  style_team-profile__thumb__lwBUz\n                  \n                ","children":["$","img",null,{"src":"/images/our-team/laura.jpeg","alt":"Laura Ecker"}]}]
+e:["$","$L5","noe-mendoza",{"href":"/our-team/noe-mendoza","className":"\n                  style_team-profile__thumb__lwBUz\n                  \n                ","children":["$","img",null,{"src":"/images/our-team/noe.jpeg","alt":"Noe Mendoza"}]}]
+f:["$","$L5","jose-armas",{"href":"/our-team/jose-armas","className":"\n                  style_team-profile__thumb__lwBUz\n                  \n                ","children":["$","img",null,{"src":"/images/our-team/jose.jpg","alt":"Jose Armas"}]}]
+10:["$","$L5","jorge-tapia",{"href":"/our-team/jorge-tapia","className":"\n                  style_team-profile__thumb__lwBUz\n                  \n                ","children":["$","img",null,{"src":"/images/our-team/jorge-tapia.jpg","alt":"Jorge Tapia"}]}]
+11:["$","$L14",null,{}]
+12:["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/1ce6b7379fd2e6ff.css","precedence":"next"}]
+13:["$","$L15",null,{"children":["$","$16",null,{"name":"Next.MetadataOutlet","children":"$@17"}]}]
+17:null

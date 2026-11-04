@@ -1,0 +1,9 @@
+1:"$Sreact.fragment"
+2:I[8176,["5187","static/chunks/5187-a619d51205675f07.js","7630","static/chunks/7630-42a390bfa908a17c.js","7110","static/chunks/app/faqs/page-b3ab499abc4e072f.js"],"default"]
+3:I[39720,["5187","static/chunks/5187-a619d51205675f07.js","7630","static/chunks/7630-42a390bfa908a17c.js","7110","static/chunks/app/faqs/page-b3ab499abc4e072f.js"],"default"]
+4:I[90484,[],"OutletBoundary"]
+5:"$Sreact.suspense"
+:HL["/images/faq-banner.jpg","image"]
+:HL["/_next/static/css/a049c022d367da8a.css","style"]
+0:{"buildId":"sAGgTYy2l1s-v3IjHcEPK","rsc":["$","$1","c",{"children":[["$","main",null,{"className":"page-wrapper","children":[["$","$L2",null,{"nav":"faqs"}],["$","div",null,{"className":"style_banner-holder__tb_VF","children":[["$","div",null,{"className":"image-holder style_image-holder__kPVVS","children":["$","img",null,{"src":"/images/faq-banner.jpg","alt":"faq banner"}]}],["$","div",null,{"className":"style_content-data__DUrtj","children":["$","h1",null,{"children":"FAQS"}]}]]}],["$","$L3",null,{}]]}],[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/a049c022d367da8a.css","precedence":"next"}]],["$","$L4",null,{"children":["$","$5",null,{"name":"Next.MetadataOutlet","children":"$@6"}]}]]}],"loading":null,"isPartial":false}
+6:null
