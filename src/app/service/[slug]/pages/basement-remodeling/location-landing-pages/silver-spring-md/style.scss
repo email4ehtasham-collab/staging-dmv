@@ -1,0 +1,242 @@
+.basement-silver-spring-md {
+  $primary: #1565c0;
+  $primary-light: #e3f0fc;
+  $primary-border: #aacfee;
+  $primary-bg: #f0f7fe;
+  $primary-muted: #c5dff8;
+
+  a {
+    color: $primary;
+  }
+
+  .hero-location-tag {
+    background: $primary-light;
+    color: $primary;
+    border: 1px solid $primary-border;
+  }
+
+  h1 {
+    border-left: 5px solid $primary;
+  }
+
+  .badge {
+    background: $primary-light;
+    color: $primary;
+    border: 1px solid $primary-border;
+  }
+
+  .intro-box {
+    background: $primary-bg;
+    border: 1px solid $primary-muted;
+  }
+
+  .adu-banner {
+    background: linear-gradient(135deg, $primary, #1976d2);
+    color: #fff;
+    padding: 20px 26px;
+    border-radius: 10px;
+    margin-bottom: 32px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    .icon {
+      font-size: 32px;
+      flex-shrink: 0;
+    }
+
+    h3 {
+      font-size: 16px;
+      font-family: sans-serif;
+      font-weight: 700;
+      margin: 0 0 4px;
+      color: #fff;
+    }
+
+    p {
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.92);
+      margin: 0;
+      font-family: sans-serif;
+      line-height: 1.6;
+    }
+  }
+
+  h2 {
+    border-bottom: 2px solid $primary-muted;
+  }
+
+  .trust-bar {
+    .trust-item {
+      background: $primary-bg;
+      border: 1px solid $primary-muted;
+    }
+  }
+
+  .service-item::before {
+    color: $primary;
+  }
+
+  .author-box {
+    background: $primary-bg;
+    border: 1px solid $primary-muted;
+  }
+
+  .author-avatar {
+    background: $primary;
+  }
+
+  .cred {
+    background: $primary-muted;
+    color: $primary;
+  }
+
+  .home-type-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 12px;
+    margin: 16px 0 24px;
+
+    .home-type-box {
+      padding: 16px 14px;
+      background: $primary-bg;
+      border: 1px solid $primary-muted;
+      border-radius: 10px;
+      text-align: center;
+
+      .icon {
+        font-size: 24px;
+        margin-bottom: 8px;
+      }
+
+      h3 {
+        font-size: 13px;
+        font-family: sans-serif;
+        font-weight: 700;
+        color: $primary;
+        margin: 0 0 5px;
+      }
+
+      p {
+        font-size: 12px;
+        color: #666;
+        margin: 0;
+        line-height: 1.5;
+      }
+    }
+  }
+
+  .use-type-grid {
+    .use-type-box {
+      background: $primary-bg;
+      border: 1px solid $primary-muted;
+
+      h3 {
+        color: $primary;
+      }
+    }
+  }
+
+  .spec-box {
+    h3 {
+      color: #8b4513;
+    }
+  }
+
+  .neighborhood-grid {
+    .neighborhood-card {
+      background: $primary-bg;
+      border: 1px solid $primary-muted;
+
+      h3 {
+        color: $primary;
+      }
+    }
+  }
+
+  .step-num {
+    background: $primary;
+  }
+
+  .cost-table {
+    th {
+      background: $primary;
+    }
+
+    tr:nth-child(even) td {
+      background: $primary-bg;
+    }
+  }
+
+  .review-card {
+    background: $primary-bg;
+    border: 1px solid $primary-muted;
+  }
+
+  .review-location {
+    color: $primary;
+  }
+
+  .highlight {
+    border-left: 4px solid $primary;
+  }
+
+  .areas-grid {
+    .area-pill {
+      background: $primary-light;
+      border: 1px solid $primary-border;
+      color: $primary;
+    }
+  }
+
+  .cta-banner {
+    background: $primary;
+
+    h2 {
+      color: #fff;
+    }
+
+    p {
+      color: rgba(255, 255, 255, 0.88);
+    }
+  }
+
+  .cta-btn {
+    background: #fff;
+    color: $primary;
+
+    &.outline {
+      background: transparent;
+      color: #fff;
+      border: 2px solid #fff;
+    }
+  }
+
+  .internal-links {
+    a {
+      color: $primary;
+    }
+  }
+
+  .faq-list {
+    .faq-item {
+      border-bottom: 1px solid #f0f0f0;
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+
+  @media (max-width: 600px) {
+    .home-type-grid,
+    .use-type-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .adu-banner {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+}

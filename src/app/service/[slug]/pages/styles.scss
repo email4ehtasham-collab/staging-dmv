@@ -1,0 +1,108 @@
+.service-detail-page{
+    --card-style1-bg: #eef5fb;
+    --card-style1-border: #a9cbe8;
+    --card-style2-bg: #ebf6ff;
+    --card-style2-border: #cbe5fb;
+
+    padding-top: 120px;
+
+    /* BREADCRUMB */
+    .breadcrumb { font-size: 13px; color: #888; margin-bottom: 28px; }
+    .breadcrumb a { color: var(--primary-color); text-decoration: none; }
+    .breadcrumb span { margin: 0 6px; }
+
+    /* HERO */
+    .hero { border-left: 4px solid var(--primary-color); padding-left: 20px; margin-bottom: 36px; }
+    h1 { font-size: 34px; font-weight: 700; line-height: 1.2; color: #111; margin-bottom: 12px; }
+    .hero-meta { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 14px; }
+    .hero-badge { font-size: 12px; font-weight: 600; padding: 4px 12px; border-radius: 20px; background: #ebf6ff; color: var(--primary-color); border: 1px solid #cbe5fb; }
+
+    .main-image{margin-bottom: 32px; height: 500px; border-radius: 20px; overflow: hidden}
+
+    /* INTRO */
+    .intro { font-size: 17px; line-height: 1.8; color: #333; margin-bottom: 32px; padding: 20px 24px; background: #ebf6ff; border-radius: 8px; border: 1px solid #cbe5fb; }
+
+    /* SECTIONS */
+    h2 { font-size: 24px; font-weight: 700; color: #111; margin: 40px 0 14px; border-bottom: 2px solid #cbe5fb; padding-bottom: 8px; }
+    h3 { font-size: 18px; font-weight: 700; color: #222; margin: 24px 0 10px; }
+    p { margin-bottom: 16px; color: #333; }
+
+    /* SERVICE LIST */
+    .service-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 16px 0 24px; }
+    .service-item { padding: 14px 16px; background: #fafafa; border: 1px solid #e8e8e8; border-radius: 8px; font-size: 15px; color: #222; display: flex; align-items: flex-start; gap: 10px; }
+    .service-item::before { content: "✓"; color: var(--primary-color); font-weight: 700; flex-shrink: 0; }
+
+    /* PROCESS STEPS */
+    .steps { display: flex; flex-direction: column; gap: 0; margin: 16px 0 24px; }
+    .step { display: flex; gap: 16px; align-items: flex-start; padding: 16px 0; border-bottom: 1px solid #f0f0f0; }
+    .step:last-child { border-bottom: none; }
+    .step-num { width: 36px; height: 36px; background: var(--primary-color); color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 15px; flex-shrink: 0; }
+    .step-content h3 { margin: 0 0 4px; font-size: 16px; }
+    .step-content p { margin: 0; font-size: 14px; color: #555; }
+
+    /* COST TABLE */
+    .cost-table { width: 100%; border-collapse: collapse; margin: 16px 0 24px; font-size: 14px; }
+    .cost-table th { background: var(--primary-color); color: #fff; padding: 10px 14px; text-align: left; }
+    .cost-table td { padding: 10px 14px; border: 1px solid #ccc; color: #333; }
+    .cost-table tr:nth-child(even) td { background: #fafafa; }
+
+    .table-responsive{
+        width: 100%;
+        overflow-x: auto;
+    }
+    .table-holder{
+        min-width: 600px;
+    }
+
+    /* AREAS */
+    .areas-grid { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0 24px; }
+    .area-pill { padding: 6px 14px; background: #ebf6ff; border: 1px solid #cbe5fb; border-radius: 20px; font-size: 13px; color: var(--primary-color); font-weight: 500; }
+
+    h2.accordion-header{margin: 0; border: 0; padding-bottom: 0; }
+
+    /* TRUST BOXES */
+    .trust-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 16px 0 28px; }
+    .trust-box { text-align: center; padding: 18px 12px; background: #ebf6ff; border: 1px solid #cbe5fb; border-radius: 8px; }
+    .trust-box .icon { font-size: 34px; margin-bottom: 8px; }
+    .trust-box strong { display: block; font-size: 18px; font-weight: 700; color: #111; }
+    .trust-box span { font-size: 14px; color: #777; }
+
+    .cat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 16px 0 28px; }
+    .cat-card { padding: 22px 18px; background: var(--card-style1-bg); border: 1px solid var(--card-style1-border); border-radius: 12px; }
+    .cat-card .tag { display: inline-block; font-size: 11px; font-family: sans-serif; font-weight: 700; padding: 2px 8px; border-radius: 20px; background: var(--primary-color); color: #fff; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.04em; }
+    .cat-card h3 { font-size: 16px; font-family: sans-serif; margin: 0 0 8px; color: #111; font-weight: 700; }
+    .cat-card ul { margin: 0; padding: 0 0 0 18px; }
+    .cat-card ul li { font-size: 13px; color: #555; margin-bottom: 4px; line-height: 1.5; }
+
+
+    /* CTA BANNER */
+    .cta-banner { background: var(--primary-color); color: #fff; padding: 28px 32px; border-radius: 10px; margin: 36px 0; text-align: center; }
+    .cta-banner h2 { color: #fff; border: none; font-size: 22px; margin: 0 0 8px; }
+    .cta-banner p { color: rgba(255,255,255,0.88); margin: 0 0 18px; font-size: 15px; }
+    .cta-btn { display: inline-block; background: #fff; color: var(--primary-color); padding: 12px 28px; border-radius: 6px; font-weight: 700; font-size: 15px; text-decoration: none; }
+
+    /* NEARBY CITIES */
+    .nearby { background: #f9f9f9; border: 1px solid #e8e8e8; border-radius: 8px; padding: 20px 24px; margin: 24px 0; }
+    .nearby h3 { margin: 0 0 10px; font-size: 16px; }
+    .nearby p { margin: 0; font-size: 14px; color: #555; }
+
+    .tip { background: #eef5fb; border-left: 4px solid #2973b0; padding: 14px 18px; border-radius: 0 8px 8px 0; margin: 20px 0; font-size: 14px; color: #0d3b6e; font-family: sans-serif; line-height: 1.6; }
+    .note { background: #fffbf0; border-left: 4px solid #f59e0b; padding: 14px 18px; border-radius: 0 8px 8px 0; margin: 20px 0; font-size: 14px; color: #7a4f00; font-family: sans-serif; line-height: 1.6; }
+
+    .highlight { background: #ebf6ff; border-left: 4px solid var(--primary-color); padding: 16px 20px; border-radius: 0 8px 8px 0; margin: 20px 0; }
+    .highlight p { margin: 0; font-size: 15px; color: var(--primary-color); }
+
+    .danger-note { background: #fff0f0; border-left: 4px solid #dc2626; padding: 14px 18px; border-radius: 0 8px 8px 0; margin: 20px 0; font-size: 14px; color: #7f1d1d; font-family: sans-serif; line-height: 1.6; }
+    .rec { font-size: 10px; font-weight: 700; background: var(--primary-color); color: #fff; padding: 1px 6px; border-radius: 10px; margin-left: 4px; vertical-align: middle; white-space: nowrap; }
+
+
+    @media (max-width: 600px) {
+        h1 { font-size: 26px; }
+        .service-grid { grid-template-columns: 1fr; }
+        .trust-grid { grid-template-columns: 1fr; }
+        .cat-grid { grid-template-columns: 1fr; }
+
+        .main-image{height: 250px;}
+        .cta-btn {  padding: 12px 12px; font-size: 14px; }
+    }
+}

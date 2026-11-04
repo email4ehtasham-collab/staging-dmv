@@ -1,0 +1,418 @@
+'use client';
+import { useEffect } from "react";
+import Link from "next/link";
+import { Accordion } from "react-bootstrap";
+import { useMyContext } from "@/hooks/context";
+
+import "../city-service-style.scss";
+import "./style.scss";
+
+const KensingtonMD = () => {
+    const { setActiveMenuItem } = useMyContext();
+
+    useEffect(() => {
+        setActiveMenuItem("service");
+    }, []);
+
+    const faqData = [
+        {
+            question: "Where are electrical permits filed in Kensington, MD?",
+            answer: "Electrical permits in Kensington are filed with the Town of Kensington at 3710 Mitchell Street, Kensington, MD 20895 — not with Montgomery County DPS. Kensington is an incorporated municipality with its own permit office. A contractor filing at MoCo DPS for Kensington work will be turned away and the permit will not be issued. DMV General Contracting Group files all Kensington electrical permits at 3710 Mitchell Street as standard practice and confirms the correct permit authority for your specific parcel at the free consultation."
+        },
+        {
+            question: "How do I know if my Kensington home has knob-and-tube wiring?",
+            answer: "Visible ceramic knobs and tubes in an unfinished attic or basement are the most obvious signs. Homes built before 1950 in Kensington have a meaningful likelihood of original knob-and-tube, either active or partially replaced. Two-prong ungrounded outlets throughout the home also suggest original wiring is still present. Many Kensington homes have hybrid systems — some rooms rewired, others original — requiring a full assessment to map active wiring. DMV General Contracting Group assesses knob-and-tube presence at the free estimate and scopes remediation based on what is actually active."
+        },
+        {
+            question: "Do I need EPA RRP compliance for electrical work in my Kensington home?",
+            answer: "If your Kensington home was built before 1978 and electrical work will disturb painted surfaces — installing outlet boxes, running wire through walls, accessing junction box locations — EPA RRP rules apply. These rules require a certified renovator on-site, containment of the work area, proper debris disposal, and post-work cleaning verification. DMV General Contracting Group is EPA RRP certified and follows all required protocols for electrical work in Kensington's pre-1978 homes as standard practice."
+        },
+        {
+            question: "Can I install a Level 2 EV charger in my Kensington home?",
+            answer: "Yes — but the first step is assessing whether your existing panel can support a dedicated 50A EV charger circuit. Kensington homes with 60A fuse boxes or older 100A panels may need a panel upgrade before an EV charger can be installed. DMV General Contracting Group assesses panel capacity at the free estimate and quotes the charger and any required panel upgrade together so you have a complete project cost before committing. All EV charger installations permitted at the Town of Kensington and inspected before closing."
+        },
+        {
+            question: "How much does whole-home rewiring cost in Kensington?",
+            answer: "Whole-home rewiring in Kensington typically costs $9,000–$22,000 depending on home size, the extent of knob-and-tube being replaced, the presence of finished walls and ceilings, and the EPA RRP requirements for pre-1978 homes. All rewiring includes new copper wiring throughout, new panel, updated outlets with grounding, and full GFCI and AFCI protection — permitted and inspected at the Town of Kensington. DMV General Contracting Group provides free, detailed rewiring assessments for every Kensington property."
+        }
+    ];
+
+    return (
+        <>
+            <div className="city-service-detail-page electrical-kensington-md">
+                <div className="container">
+                    <nav className="breadcrumb" aria-label="Breadcrumb">
+                        <Link href="/">Home</Link><span>›</span>
+                        <Link href="/services">Services</Link><span>›</span>
+                        <Link href="/service/electrical-services">Electrical Services</Link><span>›</span>
+                        Kensington, MD
+                    </nav>
+
+                    <div className="hero">
+                        <div className="hero-location-tag">📍 Serving Kensington, MD</div>
+                        <h1>Licensed Electrical Services in Kensington, MD</h1>
+                        <div className="hero-meta">
+                            <span className="badge key">🏚️ Old-Home Electrical Specialists</span>
+                            <span className="badge">⭐ 4.9 Rating · 97+ Reviews</span>
+                            <span className="badge">✓ MHIC Licensed #156178</span>
+                            <span className="badge">✓ Permits: Town of Kensington — 3710 Mitchell St</span>
+                            <span className="badge">✓ Knob-and-Tube Rewiring</span>
+                            <span className="badge">✓ EPA RRP Certified</span>
+                            <span className="badge dark">📞 +1 240-730-1292</span>
+                        </div>
+                    </div>
+
+                    <div className="banner">
+                        <div className="icon">🏚️</div>
+                        <div>
+                            <h3>Kensington's Pre-1950 Housing Stock Carries Electrical Conditions That Generic Contractors Are Not Prepared For — Knob-and-Tube Wiring, 60A Fuse Boxes, Federal Pacific Panels, Aluminum Branch Circuits, and Lead Paint That Makes Every Wall Penetration an EPA RRP Event</h3>
+                            <p>Kensington is one of the oldest incorporated municipalities in Montgomery County — and its housing stock reflects that history. A meaningful portion of Kensington homes were built between the 1900s and 1950s, when knob-and-tube wiring was the standard and electrical service was sized for a fraction of what today's households demand. Many of these homes have had partial electrical updates over the decades — some rooms rewired, others left with original knob-and-tube — creating hybrid systems where the active wiring type is not always obvious without a full assessment. Kensington's pre-1978 homes also frequently have lead paint on walls, trim, and ceilings, meaning that any electrical work requiring wall penetrations or box installations must comply with EPA RRP (Renovation, Repair and Painting) rules — a requirement that many electricians skip, leaving Kensington homeowners with undisclosed lead exposure liability. DMV General Contracting Group is EPA RRP certified, experienced with Kensington's hybrid old-home wiring conditions, and files all electrical permits at the correct office: the Town of Kensington at 3710 Mitchell Street — not MoCo DPS, which is the wrong permit authority for Kensington and will not accept Kensington permit applications.</p>
+                        </div>
+                    </div>
+
+                    <div className="intro-box">
+                        Looking for a licensed <strong>electrician in Kensington, MD</strong>? DMV General Contracting Group provides comprehensive residential electrical services for Kensington homeowners — knob-and-tube wiring assessment and replacement, Federal Pacific and Zinsco panel replacement, 200A panel upgrades, aluminum branch circuit remediation, EV charger installation, GFCI and AFCI protection, whole-home rewiring, recessed lighting, and full renovation electrical. All permits filed with the Town of Kensington at 3710 Mitchell Street. EPA RRP certified for work in pre-1978 Kensington homes. MHIC licensed #156178, fully insured. Free in-home electrical assessment. Call +1 240-730-1292.
+                    </div>
+
+                    <div className="trust-bar">
+                        <div className="trust-item"><div className="icon">🏚️</div><strong>Old-Home Wiring Expertise</strong><span>Knob-and-tube, hybrid systems & fuse box replacement in Kensington's pre-1950 stock</span></div>
+                        <div className="trust-item"><div className="icon">🏛️</div><strong>Town of Kensington Permits</strong><span>Filed at 3710 Mitchell St — not MoCo DPS; correct office every time</span></div>
+                        <div className="trust-item"><div className="icon">🧪</div><strong>EPA RRP Certified</strong><span>Lead paint protocols followed on every pre-1978 Kensington electrical project</span></div>
+                        <div className="trust-item"><div className="icon">⭐</div><strong>4.9-Star Rated</strong><span>97+ verified homeowner reviews</span></div>
+                    </div>
+
+                    <h2>Permits for Kensington Electrical Work — Town of Kensington, Not MoCo DPS</h2>
+
+                    <div className="permit-box">
+                        <h3>🏛️ Where Kensington Electrical Permits Are Filed — And Why It Matters</h3>
+                        <ul>
+                            <li><strong>Town of Kensington at 3710 Mitchell Street — the only correct permit office for Kensington electrical work:</strong> Kensington is an incorporated municipality with its own town permit office, separate from Montgomery County DPS. Electrical permits for work performed within the Town of Kensington limits must be filed at 3710 Mitchell Street, Kensington, MD 20895. A contractor who files a Kensington electrical permit at MoCo DPS at 2425 Reedie Drive, Wheaton will be turned away — the county system does not accept permit applications for work within incorporated municipal limits. This is a common error among contractors who are not familiar with Kensington's permit structure.</li>
+                            <li><strong>Why a contractor filing at the wrong office is a serious problem:</strong> An electrical permit filed at the wrong office is not simply a clerical inconvenience — it means no permit is actually issued, no inspection is scheduled, and the electrical work is legally unpermitted regardless of what the contractor tells you. Unpermitted electrical work in Kensington creates insurance coverage gaps, title issues at resale, and potential liability if the work causes a fire or injury. DMV General Contracting Group files every Kensington electrical permit at the Town of Kensington office as standard practice — confirming before any project starts that we are filing at the correct office for your specific property.</li>
+                            <li><strong>Town of Kensington inspection process:</strong> The Town of Kensington conducts its own electrical inspections for permitted work — separate from MoCo DPS inspectors. DMV General Contracting Group schedules and manages all required Town of Kensington electrical inspections in-house, coordinates inspector access with you, and addresses any inspection comments before the project closes.</li>
+                            <li><strong>Properties on the Kensington boundary:</strong> Some properties have Kensington mailing addresses but lie outside the incorporated town limits — falling under MoCo DPS permit jurisdiction. DMV General Contracting Group confirms the correct permit authority by parcel at the free consultation before any permit is submitted.</li>
+                        </ul>
+                    </div>
+
+                    <h2>Electrical Services We Offer in Kensington, MD</h2>
+
+                    <div className="service-grid">
+                        <div className="service-cat">
+                            <div className="cat-icon">🔌</div>
+                            <div className="cat-label">Most Critical</div>
+                            <h3>Old-Home Wiring & Safety</h3>
+                            <ul>
+                                <li>Knob-and-tube wiring assessment</li>
+                                <li>Knob-and-tube full replacement</li>
+                                <li>Partial knob-and-tube remediation</li>
+                                <li>Aluminum branch circuit remediation</li>
+                                <li>Federal Pacific / Zinsco replacement</li>
+                                <li>Fuse box to breaker panel conversion</li>
+                            </ul>
+                        </div>
+                        <div className="service-cat">
+                            <div className="cat-icon">⚡</div>
+                            <div className="cat-label">High Priority</div>
+                            <h3>Panel & Service Upgrades</h3>
+                            <ul>
+                                <li>60A → 100A → 200A panel upgrade</li>
+                                <li>Subpanel for additions or garages</li>
+                                <li>Service entrance upgrade</li>
+                                <li>AFCI breaker installation</li>
+                                <li>GFCI outlet installation — all wet areas</li>
+                                <li>Smoke & CO detector hardwiring</li>
+                            </ul>
+                        </div>
+                        <div className="service-cat">
+                            <div className="cat-icon">🚗</div>
+                            <div className="cat-label">Modern Upgrades</div>
+                            <h3>EV Charging & New Circuits</h3>
+                            <ul>
+                                <li>Level 2 EV charger installation (240V)</li>
+                                <li>Tesla, ChargePoint, JuiceBox install</li>
+                                <li>Dedicated kitchen & appliance circuits</li>
+                                <li>Home office dedicated circuits</li>
+                                <li>New circuit additions throughout home</li>
+                                <li>Outdoor & landscape lighting circuits</li>
+                            </ul>
+                        </div>
+                        <div className="service-cat">
+                            <div className="cat-icon">💡</div>
+                            <div className="cat-label">Lifestyle Upgrades</div>
+                            <h3>Lighting & Smart Home</h3>
+                            <ul>
+                                <li>Recessed LED lighting installation</li>
+                                <li>Under-cabinet lighting wiring</li>
+                                <li>Dimmer switch installation</li>
+                                <li>Smart switch & outlet installation</li>
+                                <li>Ceiling fan installation & wiring</li>
+                                <li>Exterior & porch lighting</li>
+                            </ul>
+                        </div>
+                        <div className="service-cat">
+                            <div className="cat-icon">🔋</div>
+                            <div className="cat-label">Backup Power</div>
+                            <h3>Generator & Backup Power</h3>
+                            <ul>
+                                <li>Whole-home standby generator install</li>
+                                <li>Generac, Kohler installation</li>
+                                <li>Automatic transfer switch</li>
+                                <li>Manual transfer switch & interlock</li>
+                                <li>Portable generator hookup</li>
+                                <li>Gas line coordination</li>
+                            </ul>
+                        </div>
+                        <div className="service-cat">
+                            <div className="cat-icon">🔨</div>
+                            <div className="cat-label">Remodel Support</div>
+                            <h3>Renovation Electrical</h3>
+                            <ul>
+                                <li>Kitchen remodel electrical rough-in</li>
+                                <li>Bathroom electrical & exhaust fan</li>
+                                <li>Home addition full electrical scope</li>
+                                <li>Basement finishing electrical</li>
+                                <li>ADU electrical service installation</li>
+                                <li>Garage & workshop circuits</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h2>Old-Home Wiring in Kensington — What We Find and How We Fix It</h2>
+
+                    <p>Kensington's pre-1950 housing stock contains a range of electrical conditions that do not exist in newer homes. Understanding what each type is, why it matters, and what the correct remedy is separates a qualified electrician from one who is guessing:</p>
+
+                    <div className="wiring-grid">
+                        <div className="wiring-card">
+                            <h3>🔌 Knob-and-Tube Wiring (Pre-1950)</h3>
+                            <p>The original wiring system in Kensington's oldest homes — uninsulated copper conductors routed through ceramic knobs and tubes in framing members, with no ground wire and no insulation where the wire passes through wood. Knob-and-tube was designed for the electrical loads of the early 20th century — a few light fixtures and perhaps one or two outlets per room. It was never designed for today's loads. Active knob-and-tube cannot support GFCI or AFCI protection, makes the home uninsurable with most Maryland carriers, and becomes a fire hazard when insulation is blown over it in attics (blocking the heat dissipation the system depends on). Many Kensington homes have partial knob-and-tube — some rooms updated, others original — requiring a full assessment to map active wiring before any remediation scope is defined. DMV General Contracting Group assesses knob-and-tube presence and activity at the free estimate and scopes full or partial replacement as appropriate.</p>
+                        </div>
+                        <div className="wiring-card">
+                            <h3>⚡ Federal Pacific & Zinsco Panels (1960–1985)</h3>
+                            <p>Kensington's mid-century homes — built from the late 1950s through the early 1980s — frequently received Federal Pacific Electric (Stab-Lok) or Zinsco panels during original construction or early updates. Both panel types have been identified as fire hazards: their breakers fail to trip during overloads at an unacceptable rate, allowing circuits to carry current beyond safe amperage without the protection the breaker is supposed to provide. If your Kensington home was built or substantially updated between 1960 and 1985, a panel inspection is warranted regardless of how the panel appears from the outside. Maryland insurance carriers increasingly require documentation of Federal Pacific and Zinsco replacement before issuing or renewing homeowners coverage.</p>
+                        </div>
+                        <div className="wiring-card">
+                            <h3>🔶 Aluminum Branch Circuit Wiring (1965–1973)</h3>
+                            <p>During a copper shortage in the mid-1960s through early 1970s, many homes nationwide — including some in Kensington built in this era — were wired with aluminum instead of copper for branch circuits. Aluminum wiring expands and contracts at a different rate than copper, causing connections at outlets, switches, and junction boxes to loosen over time. Loose connections arc and generate heat — a leading cause of electrical fires in homes with this wiring type. Full replacement with copper wiring is the most comprehensive solution. Where full replacement is not feasible, CO/ALR-rated devices at every connection point and anti-oxidant compound application are the accepted remediation. DMV General Contracting Group assesses aluminum branch circuit presence and recommends the appropriate remediation at the free estimate.</p>
+                        </div>
+                        <div className="wiring-card">
+                            <h3>🔧 60A & 100A Undersized Service</h3>
+                            <p>Many of Kensington's older homes were built with 60-amp electrical service — a fuse box with two 30-amp fuses providing total service capacity. This was adequate for the era but is wholly insufficient for a modern household. Kensington homes with 60A service cannot safely support a modern kitchen, a home office, a Level 2 EV charger, or any combination of today's electrical demands without chronic blown fuses or overloaded circuits. Upgrading to 100A or 200A service — with a new breaker panel replacing the fuse box — is the foundational electrical improvement for any Kensington home still on 60A service. All panel upgrades permitted with the Town of Kensington at 3710 Mitchell Street.</p>
+                        </div>
+                    </div>
+
+                    <div className="warning-box">
+                        <h3>🚨 Insurance Implications of Old Wiring in Kensington</h3>
+                        <p>Maryland homeowners insurance carriers are increasingly refusing to insure or renewing at significantly higher premiums for Kensington homes with active knob-and-tube wiring, Federal Pacific or Zinsco panels, or 60A fuse box service. Homeowners who have had coverage declined or non-renewed in Kensington frequently discover that the electrical system — not the home's age or condition generally — is the specific reason cited. DMV General Contracting Group's rewiring and panel replacement projects in Kensington directly address the electrical conditions that trigger these insurance issues. We provide detailed documentation of completed work — scope, permits, and inspection sign-off — that Maryland insurance carriers require to issue or reinstate coverage at standard rates.</p>
+                    </div>
+
+                    <h2>EPA RRP Compliance for Electrical Work in Kensington's Older Homes</h2>
+
+                    <div className="rrp-box">
+                        <h3>🧪 EPA RRP — Required for Electrical Work in Pre-1978 Kensington Homes</h3>
+                        <p>Any electrical work that disturbs painted surfaces in a home built before 1978 — installing new outlet boxes, running wire through walls, opening junction box locations — is subject to EPA RRP (Renovation, Repair and Painting) rules if the home has lead paint. Kensington's pre-1978 housing stock — which includes the majority of the town's older colonials, bungalows, and cape cods — frequently has lead paint on walls, trim, ceilings, and window frames. EPA RRP rules require a certified renovator on-site during the work, containment of the work area, proper collection and disposal of lead-containing debris, and post-work cleaning verification. Many electricians performing work in Kensington's older homes do not follow EPA RRP protocols — leaving homeowners with undisclosed lead dust exposure and potential liability for non-compliant renovation work. DMV General Contracting Group holds EPA RRP certification and follows all required protocols for electrical work in Kensington's pre-1978 homes as standard practice on every project.</p>
+                    </div>
+
+                    <h2>Panel Upgrade Cost in Kensington, MD</h2>
+
+                    <div className="table-responsive">
+                        <div className="table-holder">
+                            <table className="cost-table">
+                                <thead>
+                                    <tr><th>Panel Upgrade Type</th><th>Kensington Cost</th><th>Filed With</th><th>Notes</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>60A Fuse Box → 100A Breaker Panel</td><td>$2,800 – $4,500</td><td>Town of Kensington, 3710 Mitchell St</td><td>Foundational upgrade for oldest Kensington homes</td></tr>
+                                    <tr><td>100A → 200A Panel Upgrade ⭐</td><td>$3,200 – $5,500</td><td>Town of Kensington, 3710 Mitchell St</td><td>Today's standard; supports EV charger, modern loads</td></tr>
+                                    <tr><td>Federal Pacific / Zinsco Replacement</td><td>$3,500 – $6,500</td><td>Town of Kensington, 3710 Mitchell St</td><td>Fire hazard elimination; insurance compliance</td></tr>
+                                    <tr><td>Subpanel Addition</td><td>$1,600 – $3,500</td><td>Town of Kensington, 3710 Mitchell St</td><td>Additions, garages, ADUs</td></tr>
+                                    <tr><td>Whole-Home Rewiring</td><td>$9,000 – $22,000+</td><td>Town of Kensington, 3710 Mitchell St</td><td>Knob-and-tube or full replacement; size dependent</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <h2>EV Charger Installation in Kensington — Panel Assessment First</h2>
+
+                    <div className="highlight">
+                        <p>🚗 <strong>Most Kensington homes need a panel assessment before an EV charger is quoted.</strong> A Level 2 EV charger requires a dedicated 50A circuit — and a 60A or 100A fuse box or older breaker panel may not have the available capacity to support one without first upgrading the panel. DMV General Contracting Group assesses your Kensington panel at the free estimate and tells you honestly whether your existing service supports an EV charger directly, or whether a panel upgrade should be scoped first. We quote both the charger and the panel upgrade together so you have a complete picture of the total project cost before committing to either. All EV charger installations in Kensington are permitted with the Town of Kensington at 3710 Mitchell Street and inspected by Town inspectors before the project closes.</p>
+                    </div>
+
+                    <div className="table-responsive">
+                        <div className="table-holder">
+                            <table className="cost-table">
+                                <thead>
+                                    <tr><th>Service</th><th>Kensington Cost</th><th>Notes</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>Level 2 EV Charger Installation</td><td>$550 – $1,600</td><td>Dedicated 50A circuit; panel must support load</td></tr>
+                                    <tr><td>Panel Upgrade + EV Charger (combined)</td><td>$3,800 – $7,000</td><td>100A or 200A upgrade + charger circuit; all-in</td></tr>
+                                    <tr><td>New Circuit Installation</td><td>$300 – $800</td><td>Per circuit; varies by distance and accessibility</td></tr>
+                                    <tr><td>Recessed Lighting (per fixture)</td><td>$150 – $350</td><td>Includes wiring, dimmer, LED trim kit</td></tr>
+                                    <tr><td>GFCI Outlet Installation</td><td>$150 – $300 per outlet</td><td>Bathrooms, kitchen, garage, outdoors</td></tr>
+                                    <tr><td>Standby Generator Installation</td><td>$5,500 – $13,000+</td><td>Includes transfer switch, pad, gas line, permit</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <h2>Electrical Warning Signs in Kensington Homes</h2>
+
+                    <div className="signs-grid">
+                        <div className="sign-card">
+                            <div className="s-icon">💡</div>
+                            <h3>Lights Flickering or Dimming</h3>
+                            <p>Voltage fluctuation — common in Kensington homes with aging knob-and-tube connections or undersized 60A service that can't handle simultaneous loads.</p>
+                        </div>
+                        <div className="sign-card">
+                            <div className="s-icon">💣</div>
+                            <h3>Fuses Blowing Repeatedly</h3>
+                            <p>A fuse box that blows fuses regularly is chronically overloaded — the panel is undersized for the home's current electrical demand.</p>
+                        </div>
+                        <div className="sign-card">
+                            <div className="s-icon">🔥</div>
+                            <h3>Federal Pacific or Zinsco Panel</h3>
+                            <p>Fire hazard panels found in Kensington homes built or updated 1960–1985. Breakers that fail to trip on overload — replacement strongly recommended.</p>
+                        </div>
+                        <div className="sign-card">
+                            <div className="s-icon">🏚️</div>
+                            <h3>Visible Knob-and-Tube in Attic or Basement</h3>
+                            <p>Ceramic knobs and tubes visible in unfinished attic or basement framing — indicates original wiring may still be active in finished areas of the home.</p>
+                        </div>
+                        <div className="sign-card">
+                            <div className="s-icon">🔌</div>
+                            <h3>Two-Prong Outlets Throughout</h3>
+                            <p>Ungrounded two-prong outlets in most rooms — indicates original ungrounded wiring still present; safety issue and limits modern device use.</p>
+                        </div>
+                        <div className="sign-card">
+                            <div className="s-icon">👃</div>
+                            <h3>Burning Smell Near Panel or Outlets</h3>
+                            <p>Any burning or electrical smell near the fuse box, breaker panel, or outlets is a fire emergency warning sign — immediate assessment required.</p>
+                        </div>
+                    </div>
+
+                    <h2>Our Electrical Service Process in Kensington</h2>
+
+                    <div className="steps">
+                        <div className="step">
+                            <div className="step-num">1</div>
+                            <div className="step-content">
+                                <h3>Free In-Home Electrical Assessment — Wiring Type, Panel Condition & Lead Paint Status</h3>
+                                <p>We visit your Kensington home and assess the complete electrical picture: panel type and capacity (fuse box, Federal Pacific, Zinsco, or standard breaker panel), evidence of knob-and-tube wiring in attic or basement, outlet grounding throughout, and home's pre-1978 status for EPA RRP purposes. We confirm the correct permit office for your specific Kensington parcel (Town of Kensington at 3710 Mitchell Street for most; MoCo DPS for boundary properties). Detailed written estimate provided at no charge, no obligation.</p>
+                            </div>
+                        </div>
+                        <div className="step">
+                            <div className="step-num">2</div>
+                            <div className="step-content">
+                                <h3>Lead Paint Protocol Setup (Pre-1978 Homes)</h3>
+                                <p>For Kensington homes built before 1978 where electrical work will disturb painted surfaces, we set up EPA RRP-compliant containment before any work begins — sealing the work area, setting up negative air pressure where appropriate, and briefing all workers on lead-safe work practices. This step is non-negotiable for pre-1978 homes and is standard practice for DMV General Contracting Group's Kensington electrical projects.</p>
+                            </div>
+                        </div>
+                        <div className="step">
+                            <div className="step-num">3</div>
+                            <div className="step-content">
+                                <h3>Town of Kensington Permit Application — 3710 Mitchell Street</h3>
+                                <p>We prepare and file all electrical permits at the Town of Kensington office at 3710 Mitchell Street — not MoCo DPS. For panel upgrades, rewiring, and EV charger installations, we include all required load calculations and documentation. We track permit approval status and manage all Town correspondence. Town of Kensington electrical permit review typically runs 1–3 weeks for straightforward panel projects; rewiring permits may take longer.</p>
+                            </div>
+                        </div>
+                        <div className="step">
+                            <div className="step-num">4</div>
+                            <div className="step-content">
+                                <h3>Electrical Work — Old-Home Conditions Managed Throughout</h3>
+                                <p>Our licensed electricians perform all work with the care Kensington's older homes require — protecting original plaster walls, hardwood floors, and original trim while accessing the wiring and panel locations that need updating. For knob-and-tube replacement, we plan wire routing to minimize wall openings and patch all penetrations. For Federal Pacific and Zinsco panel replacements, we coordinate the brief power interruption window with your household. EPA RRP protocols maintained throughout all work in pre-1978 homes.</p>
+                            </div>
+                        </div>
+                        <div className="step">
+                            <div className="step-num">5</div>
+                            <div className="step-content">
+                                <h3>Town of Kensington Inspection & Final Testing</h3>
+                                <p>We schedule and manage all required Town of Kensington electrical inspections — rough-in for in-wall wiring and final inspections for panels and circuits. Upon passing all inspections, we test all new circuits, outlets, and panels with you. For EPA RRP projects, we complete post-work cleaning verification and provide documentation of RRP compliance. Written warranty documentation provided at project close.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2>What Kensington Homeowners Say About DMV General Contracting Group</h2>
+
+                    <div className="review-grid">
+                        <div className="review-card">
+                            <div className="review-stars">★★★★★</div>
+                            <p className="review-text">"We bought a 1928 Kensington colonial and discovered knob-and-tube wiring in the attic during a home inspection. DMV General Contracting Group came to assess it, found that about 60% of the home was still on original knob-and-tube, and provided a complete rewiring scope. They filed the permit at the Town of Kensington — our previous electrician had filed at MoCo DPS, which was wrong — and completed the rewiring in four days. Our insurance carrier accepted the documentation and issued coverage immediately."</p>
+                            <div className="review-author">— Verified Homeowner · <span className="review-location">Kensington, MD</span></div>
+                        </div>
+                        <div className="review-card">
+                            <div className="review-stars">★★★★★</div>
+                            <p className="review-text">"We had a Federal Pacific Stab-Lok panel in our 1968 Kensington home — discovered when we switched insurance carriers and the new company required a panel inspection. DMV General Contracting Group replaced it with a full 200A upgrade and installed a Level 2 EV charger at the same time. They pulled the Town of Kensington permit correctly, the inspection passed first time, and our insurance renewed without the Federal Pacific surcharge. The EV charger works perfectly."</p>
+                            <div className="review-author">— Verified Homeowner · <span className="review-location">Kensington, MD</span></div>
+                        </div>
+                        <div className="review-card">
+                            <div className="review-stars">★★★★★</div>
+                            <p className="review-text">"We did a kitchen renovation in our 1941 Kensington cape cod and needed new dedicated circuits for the appliances. DMV General Contracting Group flagged immediately that the home was pre-1978 and set up lead paint containment before any wall work started. We hadn't heard of EPA RRP requirements before — our previous kitchen contractor had not mentioned it. DMV handled it completely correctly. The Town of Kensington inspection passed and the renovation proceeded without any issues."</p>
+                            <div className="review-author">— Verified Homeowner · <span className="review-location">Kensington, MD</span></div>
+                        </div>
+                        <div className="review-card">
+                            <div className="review-stars">★★★★★</div>
+                            <p className="review-text">"Our 1952 Kensington ranch still had its original 60A fuse box. We'd been replacing fuses for years without realizing how undersized the service was. DMV General Contracting Group upgraded us to a 200A panel, added AFCI and GFCI protection throughout, and installed recessed lighting in the living room and kitchen. The difference is remarkable — we can run the microwave and air conditioner at the same time without a second thought. Filed at Town of Kensington, inspected and permitted correctly."</p>
+                            <div className="review-author">— Verified Homeowner · <span className="review-location">Kensington, MD</span></div>
+                        </div>
+                    </div>
+
+                    <div className="highlight">
+                        <p>⭐ <strong>4.9-star rated with 97+ verified homeowner reviews.</strong> Kensington homeowners trust DMV General Contracting Group for old-home electrical work that assesses knob-and-tube wiring honestly before recommending a remediation scope, files all permits at the Town of Kensington at 3710 Mitchell Street (not MoCo DPS), follows EPA RRP lead paint protocols in pre-1978 homes as standard practice, and replaces Federal Pacific and Zinsco fire hazard panels with documentation that Maryland insurance carriers accept for coverage reinstatement.</p>
+                    </div>
+
+                    <div className="cta-banner">
+                        <h2>Get a Free Electrical Assessment for Your Kensington Home</h2>
+                        <p>Our licensed electricians will visit your Kensington property, assess knob-and-tube wiring, panel type and capacity, and lead paint status — and provide a detailed estimate at no charge, no obligation. All permits filed at Town of Kensington, 3710 Mitchell Street.</p>
+                        <Link href="/contact-us" className="cta-btn">Schedule Free Electrical Assessment →</Link>
+                        <Link href="tel:+1 (240) 730-1292" className="cta-btn outline">📞 Call +1 240-730-1292</Link>
+                    </div>
+
+                    <h2>Serving All Kensington, MD for Electrical Services</h2>
+                    <div className="areas-grid">
+                        <span className="area-pill">Town of Kensington</span>
+                        <span className="area-pill">Kensington Heights</span>
+                        <span className="area-pill">Ken-Gar</span>
+                        <span className="area-pill">Kensington Estates</span>
+                        <span className="area-pill">Homewood</span>
+                        <span className="area-pill">Mitchell Street Corridor</span>
+                        <span className="area-pill">Connecticut Ave Corridor</span>
+                    </div>
+
+                    <h2>Frequently Asked Questions — Electrical Services in Kensington, MD</h2>
+                    <Accordion defaultActiveKey="0" flush>
+                        {faqData.map((faq, index) => (
+                            <Accordion.Item eventKey={index.toString()} key={index}>
+                                <Accordion.Header>{faq.question}</Accordion.Header>
+                                <Accordion.Body>
+                                    <div className="blog-html-content" dangerouslySetInnerHTML={{ __html: faq.answer }} />
+                                </Accordion.Body>
+                            </Accordion.Item>
+                        ))}
+                    </Accordion>
+
+                    <div className="internal-links">
+                        <h2>Explore Our Other Services in Kensington, MD</h2>
+                        <ul>
+                            <li><Link href="/service/home-additions/kensington-md">Home Additions in Kensington, MD</Link></li>
+                            <li><Link href="/service/design-build/kensington-md">Design-Build Contractor in Kensington, MD</Link></li>
+                            <li><Link href="/service/kitchen-remodeling/kensington-md">Kitchen Remodeling in Kensington, MD</Link></li>
+                            <li><Link href="/service/bathroom-remodeling/kensington-md">Bathroom Remodeling in Kensington, MD</Link></li>
+                            <li><Link href="/service/basement-remodeling/kensington-md">Basement Remodeling in Kensington, MD</Link></li>
+                            <li><Link href="/service/siding-installation/kensington-md">Siding Installation in Kensington, MD</Link></li>
+                            <li><Link href="/service/flooring-remodeling/kensington-md">Flooring Installation in Kensington, MD</Link></li>
+                            <li><Link href="/service/plumbing-services/kensington-md">Plumbing Services in Kensington, MD</Link></li>
+                        </ul>
+                    </div>
+
+                    <div className="cta-banner">
+                        <h2>Ready to Update Your Kensington Home's Electrical System?</h2>
+                        <p>Call us at <strong>+1 240-730-1292</strong> or schedule your free assessment. Knob-and-tube assessment, Federal Pacific replacement, 200A panel upgrade, EV charger installation. All permits filed at Town of Kensington, 3710 Mitchell Street. EPA RRP certified. MHIC licensed. Available 7 days a week.</p>
+                        <Link href="/contact-us" className="cta-btn">Get Free Electrical Estimate in Kensington →</Link>
+                        <Link href="tel:+1 (240) 730-1292" className="cta-btn outline">📞 +1 240-730-1292</Link>
+                    </div>
+
+                </div>
+            </div>
+        </>
+    );
+};
+
+export default KensingtonMD;

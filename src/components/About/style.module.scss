@@ -1,0 +1,33 @@
+.about-us-section{
+	.data-holder{
+		display: grid; grid-template-columns: 1fr 1fr; justify-content: space-between; align-items: center; grid-gap: 40px;
+	}
+	// .video-holder{object-position: top;}
+	// .video-holder video{height: 500px;}
+
+	.video-holder {position: relative; width: 100%; object-position: top; }
+
+		.video-poster {
+			position: relative; cursor: pointer; height: 100%;
+
+			img {
+				height: 100%;
+				object-fit: cover;
+				display: block;
+				border-radius: 20px;
+			}
+		}
+
+		.play-button {
+			position: absolute; left: 20px; bottom: 20px; width: 80px; height: 50px; border-radius: 10px; border: none; cursor: pointer; background: rgba(0, 0, 0, 0.8); color: white;
+		}
+
+		.video { width: 100%; border-radius: 20px; height: 400px; }
+
+	@media (max-width: 768px) {
+		.data-holder{
+			grid-template-columns: 1fr ;
+		}
+		
+	}
+}

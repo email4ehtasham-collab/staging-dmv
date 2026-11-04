@@ -1,0 +1,16 @@
+.roofing-cabin-john-md {
+
+    .moisture-box { background: #eef5fb; border: 1px solid var(--primary-border); border-radius: 10px; padding: 20px 22px; margin: 20px 0; }
+    .moisture-box h3 { font-size: 16px; font-family: sans-serif; font-weight: 700; color: var(--primary-deep); margin: 0 0 10px; }
+    .moisture-box p { font-size: 14px; color: #555; line-height: 1.7; }
+    .moisture-box ul { margin: 0; padding: 0 0 0 20px; }
+    .moisture-box ul li { font-size: 13px; color: #555; margin-bottom: 6px; line-height: 1.7; }
+
+    .permit-box { background: #fff8f0; border: 1px solid #f0cfa0; border-radius: 10px; padding: 20px 22px; margin: 20px 0; }
+    .permit-box h3 { font-size: 16px; font-family: sans-serif; font-weight: 700; color: #8B4513; margin: 0 0 10px; }
+    .permit-box p { font-size: 14px; color: #555; line-height: 1.7; margin: 0; }
+
+    @media (max-width: 600px) {
+        .moisture-box, .permit-box { padding: 16px 14px; }
+    }
+}

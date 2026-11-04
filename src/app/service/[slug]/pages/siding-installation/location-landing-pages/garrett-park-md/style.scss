@@ -1,0 +1,14 @@
+.siding-city-detail-page.siding-garrett-park-md {
+    --primary-color: #2973b0;
+    --primary-dark: #3182bd;
+    --primary-deep: #1c5a8c;
+    --primary-tint: #eef5fb;
+    --primary-soft: #e3f0fa;
+    --primary-border: #a9cbe8;
+    --primary-light: #7fb2dd;
+
+    .historic-box { background: var(--primary-soft); border: 2px solid var(--primary-color); border-radius: 10px; padding: 20px 22px; margin: 20px 0; }
+    .historic-box h3 { font-size: 16px; font-family: inherit; font-weight: 700; color: var(--primary-deep); margin: 0 0 10px; }
+    .historic-box ul { margin: 0; padding: 0 0 0 20px; }
+    .historic-box ul li { font-size: 13px; color: #333; margin-bottom: 8px; line-height: 1.75; }
+}

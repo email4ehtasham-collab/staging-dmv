@@ -1,0 +1,131 @@
+.flooring-laurel-md {
+  --primary-color: #2973b0;
+  --card-bg: #f0f9fd;
+  --card-border: #9dd4e8;
+  --tag-bg: #e0f2f8;
+  --tag-border: #7ec8de;
+  --highlight-text: #0a3a4a;
+  --tip-color: #0a3a4a;
+
+  /* PAGE-SPECIFIC: LAUREL BANNER */
+  .laurel-banner {
+    background: linear-gradient(135deg, #1a6b8a, #2288aa);
+    color: #fff;
+    padding: 20px 26px;
+    border-radius: 10px;
+    margin-bottom: 32px;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+
+    .icon {
+      font-size: 32px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    h3 {
+      font-size: 16px;
+      font-family: sans-serif;
+      font-weight: 700;
+      margin: 0 0 6px;
+      color: #fff;
+    }
+
+    p {
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.92);
+      margin: 0;
+      font-family: sans-serif;
+      line-height: 1.65;
+    }
+  }
+
+  /* PAGE-SPECIFIC: JURISDICTION GRID */
+  .juris-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 12px;
+    margin: 16px 0 24px;
+  }
+
+  .juris-card {
+    padding: 16px 14px;
+    border-radius: 10px;
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+
+    h3 {
+      font-size: 13px;
+      font-family: sans-serif;
+      font-weight: 700;
+      color: var(--primary-color);
+      margin: 0 0 4px;
+    }
+
+    .j-tag {
+      font-size: 10px;
+      font-family: sans-serif;
+      font-weight: 700;
+      padding: 2px 7px;
+      border-radius: 10px;
+      display: inline-block;
+      margin-bottom: 5px;
+      color: #fff;
+      background: var(--primary-color);
+
+      &.moco {
+        background: #2973b0;
+      }
+
+      &.pgco {
+        background: #7b1fa2;
+      }
+    }
+
+    p {
+      font-size: 12px;
+      color: #555;
+      margin: 0;
+      line-height: 1.55;
+    }
+  }
+
+  /* PAGE-SPECIFIC: NEIGHBORHOOD TAGS */
+  .neighborhood-card .n-tag {
+    font-size: 10px;
+    font-family: sans-serif;
+    font-weight: 700;
+    padding: 2px 7px;
+    border-radius: 10px;
+    display: inline-block;
+    margin-bottom: 6px;
+    color: #fff;
+    background: var(--primary-color);
+
+    &.moco {
+      background: #2973b0;
+    }
+
+    &.pgco {
+      background: #7b1fa2;
+    }
+  }
+
+  /* PAGE-SPECIFIC: JURISDICTION BADGE */
+  .badge.juris {
+    background: var(--primary-color);
+    color: #fff;
+    border-color: var(--primary-color);
+  }
+
+  @media (max-width: 600px) {
+    .laurel-banner {
+      flex-direction: column;
+    }
+
+    .juris-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}

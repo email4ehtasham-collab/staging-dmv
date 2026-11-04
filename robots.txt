@@ -13,9 +13,6 @@ Disallow: /admin/
 Disallow: /admin
 Disallow: /wp-admin/
 Disallow: /wp-admin
-Disallow: /s_dashboard
-Disallow: /dashboard_login
-Disallow: /seo-dashboard
 Disallow: /_next/static/
 Disallow: /api/
 Disallow: /api
@@ -23,9 +20,6 @@ Disallow: /api
 # Block duplicate/utility pages from indexing
 Disallow: /404
 Disallow: /500
-
-# LLMs.txt — AI Model Optimization
-LLMs: https://www.dmv-gc.com/llms.txt
 
 # ─── SITEMAP ────────────────────────────────────
 Sitemap: https://www.dmv-gc.com/sitemap.xml

@@ -1,0 +1,219 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0 8px 30px rgba(15, 23, 42, 0.1);
+  backdrop-filter: blur(10px);
+  font-family: var(--dmv-font-body, var(--primary-font));
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--dmv-space-6);
+  min-height: 83px;
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  text-decoration: none;
+}
+
+.logoImage {
+  width: 167px;
+  height: 64px;
+  object-fit: contain;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-left: 56px;
+}
+
+.link {
+  color: #374151;
+  font-size: var(--dmv-font-size-sm);
+  font-weight: var(--dmv-weight-semibold);
+  line-height: var(--dmv-line-snug);
+  text-decoration: none;
+  transition: color 0.2s ease;
+  white-space: nowrap;
+}
+
+.link:hover {
+  color: var(--dmv-color-brand);
+}
+
+.linkActive {
+  color: var(--dmv-color-brand);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: var(--dmv-space-3);
+}
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--dmv-space-2);
+  min-height: 44px;
+  padding-inline: var(--dmv-space-6);
+  border-radius: var(--dmv-radius-pill);
+  background: var(--dmv-color-brand);
+  color: var(--dmv-color-inverse);
+  font-size: var(--dmv-font-size-sm);
+  font-weight: var(--dmv-weight-semibold);
+  line-height: var(--dmv-line-snug);
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+  white-space: nowrap;
+}
+
+.cta:hover {
+  background: var(--dmv-color-brand-dark);
+}
+
+.ctaIcon {
+  width: var(--dmv-icon-size-sm);
+  height: var(--dmv-icon-size-sm);
+  flex-shrink: 0;
+}
+
+.menuButton {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: var(--dmv-space-10);
+  height: var(--dmv-space-10);
+  padding: 0;
+  border: 0;
+  border-radius: var(--dmv-radius-sm);
+  background: transparent;
+  color: var(--dmv-color-heading);
+  cursor: pointer;
+}
+
+.menuIcon {
+  width: 30px;
+  height: 30px;
+}
+
+@media (max-width: 1200px) {
+  .inner {
+    gap: var(--dmv-space-4);
+  }
+
+  .nav {
+    margin-left: var(--dmv-space-6);
+    gap: 20px;
+  }
+
+  .link {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .header {
+    position: sticky;
+  }
+
+  .nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 60;
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    margin: 0;
+    padding: var(--dmv-space-4) 32px var(--dmv-space-6);
+    background: var(--dmv-color-surface);
+    box-shadow: var(--dmv-shadow-card);
+  }
+
+  .navOpen {
+    display: flex;
+  }
+
+  .link {
+    padding-block: var(--dmv-space-3);
+    border-bottom: var(--dmv-border-width) solid #e5e7eb;
+    font-size: var(--dmv-font-size-sm);
+  }
+
+  .menuButton {
+    display: inline-flex;
+  }
+}
+
+@media (max-width: 768px) {
+  .inner {
+    min-height: 72px;
+  }
+
+  .logoImage {
+    width: 134px;
+    height: 52px;
+  }
+
+  .nav {
+    padding-inline: 24px;
+  }
+}
+
+@media (max-width: 560px) {
+  .inner {
+    gap: var(--dmv-space-2);
+  }
+
+  .nav {
+    padding-inline: 20px;
+  }
+
+  .actions > a {
+    min-height: 44px;
+    padding-inline: 14px;
+    font-size: 13px;
+  }
+
+  .cta {
+    padding-inline: var(--dmv-space-4);
+    font-size: 14px;
+  }
+
+  .ctaIcon {
+    display: none;
+  }
+}
+
+@media (max-width: 400px) {
+  .actions {
+    gap: var(--dmv-space-2);
+  }
+
+  .actions > a {
+    padding-inline: 8px;
+  }
+
+  .actions > a span:first-child {
+    display: none;
+  }
+}
+
+@media (max-width: 340px) {
+  .actions > a {
+    display: none;
+  }
+}

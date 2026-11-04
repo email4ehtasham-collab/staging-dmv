@@ -1,0 +1,212 @@
+.flooring-north-bethesda-md {
+  --primary-color: #2973b0;
+  --card-bg: #fdf5ef;
+  --card-border: #f0c4a0;
+  --tag-bg: #fdf0e8;
+  --tag-border: #f0a875;
+  --highlight-text: #7a2e00;
+  --tip-color: #7a2e00;
+
+  /* PAGE-SPECIFIC: NORTH BETHESDA BANNER */
+  .nb-banner {
+    background: linear-gradient(135deg, #c2530a, #d96b20);
+    color: #fff;
+    padding: 20px 26px;
+    border-radius: 10px;
+    margin-bottom: 32px;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+
+    .icon {
+      font-size: 32px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    h3 {
+      font-size: 16px;
+      font-family: sans-serif;
+      font-weight: 700;
+      margin: 0 0 6px;
+      color: #fff;
+    }
+
+    p {
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.92);
+      margin: 0;
+      font-family: sans-serif;
+      line-height: 1.65;
+    }
+  }
+
+  /* PAGE-SPECIFIC: HEADQUARTERS BOX */
+  .hq-box {
+    background: #fdf0e8;
+    border: 2px solid var(--primary-color);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin: 20px 0;
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+
+    .hq-icon {
+      font-size: 28px;
+      flex-shrink: 0;
+    }
+
+    h3 {
+      font-size: 15px;
+      font-family: sans-serif;
+      font-weight: 700;
+      color: #7a2e00;
+      margin: 0 0 4px;
+    }
+
+    p {
+      font-size: 13px;
+      color: #555;
+      margin: 0;
+      font-family: sans-serif;
+      line-height: 1.6;
+    }
+  }
+
+  /* PAGE-SPECIFIC: BUILDING TYPE GRID */
+  .building-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin: 16px 0 24px;
+  }
+
+  .building-card {
+    padding: 20px 18px;
+    border-radius: 10px;
+
+    &.slab {
+      background: var(--card-bg);
+      border: 2px solid var(--primary-color);
+
+      h3 {
+        color: var(--primary-color);
+      }
+
+      .b-tag {
+        background: var(--primary-color);
+      }
+    }
+
+    &.plywood {
+      background: #eef5fb;
+      border: 2px solid #2973b0;
+
+      h3 {
+        color: #2973b0;
+      }
+
+      .b-tag {
+        background: #2973b0;
+      }
+    }
+
+    h3 {
+      font-size: 15px;
+      font-family: sans-serif;
+      font-weight: 700;
+      margin: 0 0 6px;
+    }
+
+    .b-tag {
+      font-size: 11px;
+      font-family: sans-serif;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 10px;
+      display: inline-block;
+      margin-bottom: 8px;
+      color: #fff;
+    }
+
+    ul {
+      margin: 0;
+      padding: 0 0 0 16px;
+
+      li {
+        font-size: 12px;
+        color: #555;
+        margin-bottom: 4px;
+        line-height: 1.6;
+      }
+    }
+  }
+
+  /* PAGE-SPECIFIC: NEIGHBORHOOD TAGS */
+  .neighborhood-card .n-tag {
+    font-size: 10px;
+    font-family: sans-serif;
+    font-weight: 700;
+    padding: 2px 7px;
+    border-radius: 10px;
+    display: inline-block;
+    margin-bottom: 6px;
+    color: #fff;
+    background: var(--primary-color);
+
+    &.sfh {
+      background: #2973b0;
+    }
+  }
+
+  /* PAGE-SPECIFIC: ACOUSTIC BOX */
+  .acoustic-box {
+    background: #fff8f0;
+    border: 1px solid #f0a875;
+    border-radius: 10px;
+    padding: 20px 22px;
+    margin: 20px 0;
+
+    h3 {
+      font-size: 16px;
+      font-family: sans-serif;
+      font-weight: 700;
+      color: #7a3000;
+      margin: 0 0 10px;
+    }
+
+    ul {
+      margin: 0;
+      padding: 0 0 0 20px;
+
+      li {
+        font-size: 13px;
+        color: #555;
+        margin-bottom: 8px;
+        line-height: 1.75;
+      }
+    }
+  }
+
+  /* PAGE-SPECIFIC: SINGLE-FAMILY BADGE */
+  .badge.home {
+    background: var(--primary-color);
+    color: #fff;
+    border-color: var(--primary-color);
+  }
+
+  @media (max-width: 600px) {
+    .nb-banner {
+      flex-direction: column;
+    }
+
+    .hq-box {
+      flex-direction: column;
+    }
+
+    .building-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+}

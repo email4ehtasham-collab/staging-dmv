@@ -1,0 +1,84 @@
+@use "./sass/base/global";
+@use "./sass/base/typography";
+@use "./sass/base/redesign-tokens";
+
+:root {
+    --primary-color: #2973b0;
+    // --primary-color: #426585;
+    // --primary-color: #00305e;
+    --tawk-header-background-color: var(--primary-color);
+    --secondary-color: #63bfec;
+    // --secondary-color: #426585;
+    // --secondary-color: #C63940;
+    --secondary-color-dark: #AB2229;
+    --content-color: #141414;
+    --text-light: #FFFFFF;
+    --section-bg: #f9f9f9;
+    --content-size: 16px;
+    --body-background: #fff;
+    --primary-font : var(--font-jakarta), sans-serif;
+    --button-height: 50px;
+    --header-height: 96px;
+    --container-max: 1440px;
+    --container-gutter: 80px;
+    --btn-radius: 12px;
+    --font-size-base: 16px;
+    --font-size-sm: 14px;
+    --font-size-lg: 18px;
+    
+    @media (max-width: 1024px) {
+        --content-size: 16px;
+    }
+    @media (max-width: 768px) {
+        --content-size: 14px;
+    }
+}
+
+@media (max-width: 1440px) {
+    :root {
+        --container-gutter: 64px;
+    }
+}
+
+@media (max-width: 1200px) {
+    :root {
+        --container-gutter: 48px;
+    }
+}
+
+@media (max-width: 1024px) {
+    :root {
+        --header-height: 70px;
+        --container-gutter: 32px;
+    }
+    
+}
+
+@media (max-width: 768px) {
+    :root {
+        --container-gutter: 24px;
+    }
+}
+
+@media (max-width: 560px) {
+    :root {
+        --container-gutter: 20px;
+    }
+}
+
+.page-wrapper.page-wrapper-home {
+    padding-top: 0;
+    font-family: var(--dmv-font-body, var(--primary-font));
+}
+
+// Hides the public site chrome (header + footer) on admin screens.
+// The site header uses a hashed CSS-module class, so it must be targeted by
+// tag + position: both are direct children of the .isolate wrapper.
+.dashboard-mode {
+    .isolate > header,
+    .isolate > footer {
+        display: none;
+    }
+}
+
+$lightgrey : #ccc;

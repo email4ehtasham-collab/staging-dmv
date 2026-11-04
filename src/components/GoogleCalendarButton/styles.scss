@@ -1,0 +1,210 @@
+.gcal-target {
+    display: none;
+}
+
+.gcal-floating-holder {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    z-index: 10;
+
+    .gcal-floating-button {
+        --size: 60px;
+        height: var(--size);
+        width: var(--size);
+        border-radius: var(--size);
+        background: white;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        color: white;
+        cursor: pointer;
+        position: relative;
+        display: flex;
+        align-items: center;
+        transition: all 0.3s;
+        overflow: hidden;
+
+        .gcal-icon-holder {
+            border-radius: 50px;
+            padding: 11px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            svg {
+                animation: gcalWobble 2.5s ease-in-out infinite;
+            }
+        }
+
+        &:hover {
+            width: 195px;
+            border-color: rgba(60, 144, 255, 0.3);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .gcal-content {
+            color: transparent;
+            white-space: nowrap;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        &:hover .gcal-content {
+            color: #741b1b;
+        }
+    }
+}
+
+.gcal-inline-holder {
+    display: inline-flex;
+
+    .gcal-inline-button {
+        min-height: var(--button-height, 45px);
+        border-radius: 10px;
+        background: var(--secondary-color-dark);
+        color: white;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        transition: all 0.3s;
+        padding: 3px 20px 3px 5px;
+        font-size: 18px;
+        font-weight: 600;
+
+        .gcal-icon-holder {
+            border-radius: 50px;
+            padding: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            svg {
+                width: 28px;
+                height: 28px;
+                path { fill: white; }
+            }
+        }
+
+        .gcal-content {
+            white-space: nowrap;
+            margin-left: 5px;
+        }
+        .gcal-icon-holder svg path.text { fill: var(--secondary-color-dark); }
+
+        &:hover {
+            background: var(--primary-color);
+            color: white;
+            .gcal-icon-holder svg path { fill: white; }
+            .gcal-icon-holder svg path.text { fill: var(--primary-color); }
+        }
+    }
+}
+
+.qxCTlb {
+    display: none !important;
+}
+.qxCTlb:not(:first-of-type) {
+    display: none;
+}
+.hur54b {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    background-color: rgba(32, 33, 36, .6);
+    padding: 72px;
+    z-index: 9999;
+
+}
+
+.hur54b::before {
+    content: "";
+    position: fixed;
+    top: calc(72px);
+    left: calc(72px + 20px);
+    padding: 30px;
+    width: 272px;
+    background-color: #fff;
+}
+.hur54b::after {
+    content: "";
+    position: fixed;
+    top: calc(72px + 20px);
+    left: calc(72px + 20px);
+    background: url('../../../public/images/logo.png') no-repeat left center;
+    color: #fff;
+    padding: 30px;
+    width: 272px;
+    background-color: #fff;
+    background-size: contain;
+}
+.mmGMM {
+    border: none;
+    border-radius: 8px;
+    background-color: white;
+    width: 100%;
+    height: 100%
+}
+
+.Xfsokf {
+    position: fixed;
+    top: 26px;
+    right: 72px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    border: none;
+    border-radius: 18px;
+    background-color: #1f1f1f;
+    height: 36px;
+    padding: 16px;
+    cursor: pointer
+}
+
+.L0Dvsd {
+    color: #fff;
+    font-size: 18px;
+    margin-right: 8px
+}
+
+.uE25ec {
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: .25px;
+    color: #fff
+}
+
+@keyframes gcalWobble {
+    0%, 100% { transform: rotate(0deg) scale(1); }
+    15% { transform: rotate(-12deg) scale(1.1); }
+    30% { transform: rotate(10deg) scale(1.1); }
+    45% { transform: rotate(-8deg) scale(1.05); }
+    60% { transform: rotate(6deg) scale(1.05); }
+    75% { transform: rotate(-3deg) scale(1); }
+}
+
+@media(max-width: 768px) {
+
+    .hur54b {
+        padding: 50px 10px;
+    }
+    .hur54b::before {
+        left: 20px;
+        top: 50px;
+    }
+    .hur54b::after {
+        left: 30px;
+        top: 60px
+    }
+    .Xfsokf{top: 10px; right: 10px}
+
+    .qxCTlb{
+        font-size: 10px;
+        min-height: 36px;
+        padding: 5px 10px
+    }
+}

@@ -1,0 +1,119 @@
+.basement-gaithersburg-md {
+  --primary-color: #2973b0;
+  --card-style1-bg: #faf4fc;
+  --card-style1-border: #e1bee7;
+  --card-style2-bg: #faf4fc;
+  --card-style2-border: #e1bee7;
+
+  .badge.dark {
+    background: #6a1b9a;
+    color: #fff;
+    border-color: #6a1b9a;
+  }
+
+  .hero-location-tag {
+    background: #f3e5f5;
+    border-color: #ce93d8;
+  }
+
+  .intro-box {
+    background: #faf4fc;
+    border-color: #e1bee7;
+  }
+
+  .trust-item {
+    background: #faf4fc;
+    border-color: #e1bee7;
+  }
+
+  .service-item::before {
+    color: #6a1b9a;
+  }
+
+  .hoa-banner {
+    background: linear-gradient(135deg, #6a1b9a, #7b1fa2);
+    color: #fff;
+    padding: 20px 26px;
+    border-radius: 10px;
+    margin-bottom: 32px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    .icon { font-size: 32px; flex-shrink: 0; }
+    h3 { font-size: 16px; font-family: sans-serif; font-weight: 700; margin: 0 0 4px; color: #fff; }
+    p { font-size: 13px; color: rgba(255,255,255,0.92); margin: 0; font-family: sans-serif; line-height: 1.6; }
+  }
+
+  .spec-box {
+    background: #fff8f0;
+    border-color: #f0cfa0;
+
+    h3 {
+      color: #8B4513;
+    }
+  }
+
+  .highlight {
+    background: #f3e5f5;
+    border-left-color: #6a1b9a;
+
+    p {
+      color: #3d0d5e;
+    }
+  }
+
+  .note {
+    background: #fffbf0;
+    border-left-color: #f59e0b;
+    color: #7a4f00;
+  }
+
+  .tip {
+    background: #eef5fb;
+    border-left-color: #2973b0;
+    color: #0d3b6e;
+  }
+
+  .area-pill {
+    background: #f3e5f5;
+    border-color: #ce93d8;
+  }
+
+  .review-card {
+    background: #faf4fc;
+    border-color: #e1bee7;
+  }
+
+  .review-location {
+    color: #6a1b9a;
+  }
+
+  .cta-btn {
+    color: #6a1b9a;
+  }
+
+  .cta-btn.outline {
+    color: #fff;
+  }
+
+  .author-avatar {
+    background: #6a1b9a;
+  }
+
+  .cred {
+    background: #e1bee7;
+    color: #6a1b9a;
+  }
+
+  .cost-table th {
+    background: #6a1b9a;
+  }
+
+  @media (max-width: 600px) {
+    .hoa-banner {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,172 @@
+.basement-laurel-md {
+  --primary-color: #2973b0;
+  --card-style1-bg: #f0f8fb;
+  --card-style1-border: #b5d8e5;
+  --card-style2-bg: #f0f8fb;
+  --card-style2-border: #b5d8e5;
+
+  .hero-location-tag {
+    background: #e0f0f5;
+    border-color: #8cc5d8;
+  }
+
+  .intro-box {
+    background: #f0f8fb;
+    border-color: #b5d8e5;
+  }
+
+  .trust-item {
+    background: #f0f8fb;
+    border-color: #b5d8e5;
+  }
+
+  .service-item::before {
+    color: #1a6b8a;
+  }
+
+  .jurisdiction-banner {
+    background: linear-gradient(135deg, #1a6b8a, #1f82a8);
+    color: #fff;
+    padding: 20px 26px;
+    border-radius: 10px;
+    margin-bottom: 32px;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+
+    .icon { font-size: 32px; flex-shrink: 0; margin-top: 2px; }
+    h3 { font-size: 16px; font-family: sans-serif; font-weight: 700; margin: 0 0 6px; color: #fff; }
+    p { font-size: 13px; color: rgba(255,255,255,0.92); margin: 0; font-family: sans-serif; line-height: 1.65; }
+  }
+
+  .jurisdiction-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 14px;
+    margin: 16px 0 28px;
+  }
+
+  .jurisdiction-card {
+    padding: 18px 16px;
+    border-radius: 10px;
+    border-top: 4px solid #1a6b8a;
+
+    h3 { font-size: 14px; font-family: sans-serif; font-weight: 700; margin: 0 0 4px; color: #111; }
+    p { font-size: 12px; color: #555; margin: 0; line-height: 1.6; }
+
+    .auth { font-size: 11px; font-family: sans-serif; font-weight: 700; padding: 2px 8px; border-radius: 12px; display: inline-block; margin-bottom: 8px; }
+
+    &.city {
+      background: #e0f0f5;
+      border: 1px solid #8cc5d8;
+      border-top: 4px solid #1a6b8a;
+
+      .auth { background: #1a6b8a; color: #fff; }
+    }
+
+    &.moco {
+      background: #e3f0fa;
+      border: 1px solid #a9cbe8;
+      border-top: 4px solid #2973b0;
+
+      .auth { background: #2973b0; color: #fff; }
+    }
+
+    &.pgco {
+      background: #fdf3e3;
+      border: 1px solid #f5c97a;
+      border-top: 4px solid #e67e22;
+
+      .auth { background: #e67e22; color: #fff; }
+    }
+  }
+
+  .spec-box {
+    background: #fff8f0;
+    border-color: #f0cfa0;
+
+    h3 {
+      color: #8B4513;
+    }
+  }
+
+  .highlight {
+    background: #e0f0f5;
+    border-left-color: #1a6b8a;
+
+    p {
+      color: #0d3d50;
+    }
+  }
+
+  .note {
+    background: #fffbf0;
+    border-left-color: #f59e0b;
+    color: #7a4f00;
+  }
+
+  .tip {
+    background: #eef5fb;
+    border-left-color: #2973b0;
+    color: #0d3b6e;
+  }
+
+  .area-pill {
+    background: #e0f0f5;
+    border-color: #8cc5d8;
+    color: #1a6b8a;
+  }
+
+  .review-card {
+    background: #f0f8fb;
+    border-color: #b5d8e5;
+  }
+
+  .review-location {
+    color: #1a6b8a;
+  }
+
+  .cta-btn {
+    color: #1a6b8a;
+  }
+
+  .cta-btn.outline {
+    color: #fff;
+  }
+
+  .author-avatar {
+    background: #1a6b8a;
+  }
+
+  .cred {
+    background: #b5d8e5;
+    color: #1a6b8a;
+  }
+
+  .cost-table th {
+    background: #1a6b8a;
+  }
+
+  .jur-tag {
+    font-size: 10px;
+    font-family: sans-serif;
+    font-weight: 700;
+    padding: 1px 7px;
+    border-radius: 10px;
+    display: inline-block;
+    margin-bottom: 6px;
+
+    &.city { background: #1a6b8a; color: #fff; }
+    &.moco { background: #2973b0; color: #fff; }
+    &.pgco { background: #e67e22; color: #fff; }
+  }
+
+  @media (max-width: 600px) {
+    .jurisdiction-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+    .jurisdiction-banner {
+      flex-direction: column;
+    }
+  }
+}

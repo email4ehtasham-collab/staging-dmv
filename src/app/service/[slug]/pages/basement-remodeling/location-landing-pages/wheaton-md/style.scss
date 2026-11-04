@@ -1,0 +1,169 @@
+.basement-wheaton-md {
+  --primary-color: #2973b0;
+
+  /* PURPLE LINE BANNER — Wheaton-specific transit feature */
+  .purple-banner {
+    background: linear-gradient(135deg, #6a1b9a, #7b1fa2);
+    color: #fff;
+    padding: 20px 26px;
+    border-radius: 10px;
+    margin-bottom: 32px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    .icon {
+      font-size: 32px;
+      flex-shrink: 0;
+    }
+
+    h3 {
+      font-size: 16px;
+      font-family: sans-serif;
+      font-weight: 700;
+      margin: 0 0 4px;
+      color: #fff;
+      border: none;
+      padding-bottom: 0;
+    }
+
+    p {
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.92);
+      margin: 0;
+      font-family: sans-serif;
+      line-height: 1.6;
+    }
+  }
+
+  /* INTRO BOX — green tint for Wheaton */
+  .intro-box {
+    background: #f1f8f1;
+    border-color: #c8e6c9;
+  }
+
+  /* TRUST BAR — green-tinted cards */
+  .trust-item {
+    background: #f1f8f1;
+    border-color: #c8e6c9;
+  }
+
+  /* HOME TYPE GRID — 3-column layout */
+  .home-type-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 12px;
+    margin: 16px 0 24px;
+  }
+
+  .home-type-box {
+    padding: 16px 14px;
+    background: #f1f8f1;
+    border: 1px solid #c8e6c9;
+    border-radius: 10px;
+    text-align: center;
+
+    .icon {
+      font-size: 24px;
+      margin-bottom: 8px;
+    }
+
+    h3 {
+      font-size: 13px;
+      font-family: sans-serif;
+      font-weight: 700;
+      color: #2973b0;
+      margin: 0 0 5px;
+      border: none;
+      padding-bottom: 0;
+    }
+
+    p {
+      font-size: 12px;
+      color: #666;
+      margin: 0;
+      line-height: 1.5;
+    }
+  }
+
+  /* AUTHOR BOX — green-tinted */
+  .author-box {
+    background: #f1f8f1;
+    border-color: #c8e6c9;
+  }
+
+  .author-avatar {
+    background: #2973b0;
+    color: #fff;
+  }
+
+  .cred {
+    background: #c8e6c9;
+    color: #2973b0;
+  }
+
+  /* NEIGHBORHOOD CARDS — green tint */
+  .neighborhood-card {
+    background: #f1f8f1;
+    border-color: #c8e6c9;
+  }
+
+  /* STEP NUMBERS — green */
+  .step-num {
+    background: #2973b0;
+  }
+
+  /* COST TABLE — green header */
+  .cost-table th {
+    background: #2973b0;
+  }
+
+  .cost-table tr:nth-child(even) td {
+    background: #f1f8f1;
+  }
+
+  /* HIGHLIGHT — green accent */
+  .highlight {
+    background: #e3f0fa;
+    border-left-color: #2973b0;
+
+    p {
+      color: #0d3b6e;
+    }
+  }
+
+  /* REVIEW LOCATION — green */
+  .review-location {
+    color: #2973b0;
+  }
+
+  /* AREA PILLS — green tint */
+  .area-pill {
+    background: #e3f0fa;
+    border-color: #a9cbe8;
+    color: #2973b0;
+  }
+
+  /* TIP BOX — green border */
+  .tip {
+    background: #e3f0fc;
+    border-left-color: #1565c0;
+    color: #0d3b6e;
+  }
+
+  /* RESPONSIVE — Wheaton-specific overrides */
+  @media (max-width: 600px) {
+    .purple-banner {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .home-type-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .use-type-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+.content {
+  background: transparent;
+}
+
+.body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  background: transparent;
+}
+
+.frame {
+  position: relative;
+  width: min(100%, calc(100dvh * 16 / 9));
+  max-height: 100dvh;
+  aspect-ratio: 16 / 9;
+  background: #000;
+}
+
+.iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}

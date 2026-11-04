@@ -1,0 +1,298 @@
+.section {
+  background: var(--dmv-color-surface);
+  color: var(--dmv-color-body);
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: minmax(0, 0.88fr) minmax(0, 1fr);
+  align-items: start;
+  gap: clamp(40px, 5vw, 72px);
+  padding-block: var(--dmv-section-padding);
+}
+
+.content {
+  max-width: 640px;
+}
+
+.heading :global(.section-heading__title) {
+  font-size: clamp(40px, 3.4vw, 52px);
+  line-height: 1.15;
+}
+
+.heading :global(.section-heading__text) {
+  margin-top: 24px;
+  margin-bottom: 0;
+  color: var(--dmv-color-muted);
+  font-size: 17px;
+  line-height: 1.55;
+}
+
+.content .badge {
+  min-height: 24px;
+  padding-inline: 14px;
+  border-radius: 999px;
+  font-size: 12px;
+  letter-spacing: 0.06em;
+}
+
+.contactIntro {
+  margin-top: 10px;
+  padding-top: 10px;
+  color: var(--dmv-color-body);
+  font-size: 17px;
+  line-height: 1.5;
+  border-top: var(--dmv-border-width) solid var(--dmv-color-line-soft);
+}
+
+.benefits {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: var(--dmv-space-7);
+}
+
+.benefits li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--dmv-color-muted);
+  font-size: 15px;
+  font-weight: var(--dmv-weight-medium);
+  line-height: 1.5;
+}
+
+.benefits svg {
+  width: 24px;
+  height: 24px;
+  flex: none;
+  color: var(--dmv-color-brand);
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: var(--dmv-space-7);
+  color: var(--dmv-color-body);
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 600
+}
+
+.contact a,
+.contact p {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  color: inherit;
+}
+
+.contact a {
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.contact a:hover {
+  color: var(--dmv-color-brand);
+}
+
+.contact svg {
+  width: 24px;
+  height: 24px;
+  flex: none;
+  margin-top: 2px;
+  color: var(--dmv-color-brand);
+}
+
+.trust {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 40px;
+  margin-top: var(--dmv-space-4);
+  padding-top: var(--dmv-space-4);
+  margin-bottom: 0;
+  color: var(--dmv-color-muted);
+  font-size: 15px;
+  font-weight: var(--dmv-weight-medium);
+  line-height: 1.4;
+  border-top: var(--dmv-border-width) solid var(--dmv-color-line-soft);
+}
+
+.formCard {
+  padding: 40px;
+  border: 1px solid rgba(15, 23, 42, 0.05);
+  border-radius: 20px;
+  background: var(--dmv-color-surface);
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.08);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.formHeader h3 {
+  color: var(--dmv-color-heading);
+  font-size: var(--dmv-font-size-xl);
+  font-weight: var(--dmv-weight-bold);
+  line-height: var(--dmv-line-snug);
+}
+
+.formHeader p {
+  margin-top: var(--dmv-space-1);
+  margin-bottom: 0;
+  color: var(--dmv-color-muted);
+  font-size: 14px;
+  line-height: var(--dmv-line-normal);
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--dmv-space-4);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.field > span {
+  color: var(--dmv-color-heading);
+  font-size: 14px;
+  font-weight: var(--dmv-weight-semibold);
+  line-height: var(--dmv-line-normal);
+}
+
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  border: var(--dmv-border-width) solid var(--dmv-color-line-soft);
+  border-radius: var(--dmv-radius-sm);
+  background: var(--dmv-color-surface);
+  color: #374151;
+  font-family: var(--dmv-font-body);
+  font-size: var(--dmv-font-size-sm);
+  line-height: var(--dmv-line-normal);
+}
+
+.field input,
+.field select {
+  height: 48px;
+  padding: 0 var(--dmv-space-4);
+}
+
+.field select {
+  cursor: pointer;
+}
+
+.field textarea {
+  height: 84px;
+  min-height: 84px;
+  padding: var(--dmv-space-3) var(--dmv-space-4);
+  resize: vertical;
+}
+
+.field input::placeholder,
+.field textarea::placeholder {
+  color: var(--dmv-color-faint);
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  border-color: var(--dmv-color-brand);
+  outline: none;
+  box-shadow: var(--dmv-focus-ring);
+}
+
+.submit {
+  width: 100%;
+  min-height: 50px;
+  margin-top: 18px;
+}
+
+.submit:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.consent {
+  margin-bottom: 0;
+  color: var(--dmv-color-faint);
+  font-size: 12px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.status:empty {
+  display: none;
+}
+
+.success,
+.error {
+  padding: var(--dmv-space-3) var(--dmv-space-4);
+  border-radius: var(--dmv-radius-sm);
+  font-size: 14px;
+  line-height: var(--dmv-line-normal);
+}
+
+.success {
+  background: #ecfdf3;
+  color: #067647;
+}
+
+.error {
+  background: #fef3f2;
+  color: #b42318;
+}
+
+@media (max-width: 1024px) {
+  .wrapper {
+    grid-template-columns: 1fr;
+    gap: var(--dmv-space-10);
+  }
+
+  .content {
+    max-width: 720px;
+  }
+
+  .heading :global(.section-heading__title) {
+    font-size: var(--dmv-font-size-4xl);
+  }
+
+  .formCard {
+    max-width: 728px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .heading :global(.section-heading__title) {
+    font-size: var(--dmv-font-size-3xl);
+  }
+
+  .formCard {
+    padding: var(--dmv-space-6);
+  }
+}
+
+@media (max-width: 560px) {
+  .row {
+    grid-template-columns: 1fr;
+  }
+
+  .heading :global(.section-heading__title) {
+    font-size: var(--dmv-font-size-2xl);
+  }
+
+  .formCard {
+    padding: var(--dmv-space-5);
+    border-radius: var(--dmv-radius-lg);
+  }
+}

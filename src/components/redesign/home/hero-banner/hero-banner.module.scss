@@ -1,0 +1,336 @@
+.hero {
+  background: linear-gradient(180deg, #f9fafb 0%, #ffffff 50%, #f3f4f6 100%);
+  padding-block: var(--dmv-section-padding);
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 699px);
+  align-items: start;
+  gap: 80px;
+}
+
+.content {
+  max-width: 670px;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  padding-inline: var(--dmv-space-4);
+  border: var(--dmv-border-width) solid var(--dmv-color-brand-wash-strong);
+  border-radius: var(--dmv-radius-pill);
+  background: var(--dmv-color-brand-wash);
+  color: var(--dmv-color-brand);
+  font-size: 14px;
+  font-weight: var(--dmv-weight-semibold);
+  letter-spacing: var(--dmv-tracking-wide);
+  line-height: var(--dmv-line-tight);
+  text-transform: uppercase;
+}
+
+.title {
+  margin-top: var(--dmv-space-6);
+  color: var(--dmv-color-heading);
+  font-size: var(--dmv-font-size-5xl);
+  font-weight: var(--dmv-weight-extrabold);
+  letter-spacing: var(--dmv-tracking-wide);
+  line-height: 1.2;
+}
+
+.highlight {
+  color: var(--dmv-color-brand);
+}
+
+.lede {
+  margin-top: var(--dmv-space-8);
+  color: var(--dmv-color-body);
+  font-size: var(--dmv-font-size-base);
+  line-height: var(--dmv-line-relaxed);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--dmv-space-7);
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--dmv-space-2);
+  min-height: 52px;
+  padding-inline: var(--dmv-space-8);
+  border-radius: var(--dmv-radius-pill);
+  font-size: var(--dmv-font-size-base);
+  font-weight: var(--dmv-weight-semibold);
+  line-height: var(--dmv-line-snug);
+  text-decoration: none;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.buttonPrimary {
+  background: var(--dmv-color-brand);
+  color: var(--dmv-color-inverse);
+}
+
+.buttonPrimary:hover {
+  background: var(--dmv-color-brand-dark);
+}
+
+.buttonGhost {
+  border: var(--dmv-border-width) solid #d1d5db;
+  background: var(--dmv-color-surface);
+  color: var(--dmv-color-heading);
+}
+
+.buttonGhost:hover {
+  border-color: var(--dmv-color-heading);
+}
+
+.buttonIcon {
+  width: var(--dmv-icon-size-sm);
+  height: var(--dmv-icon-size-sm);
+  flex-shrink: 0;
+}
+
+.phoneIcon {
+  color: var(--dmv-color-brand);
+}
+
+.note {
+  max-width: 670px;
+  margin-top: 20px;
+  color: var(--dmv-color-body);
+  font-size: 14px;
+  line-height: var(--dmv-line-normal);
+  border-top: 1px solid #ccc;
+  padding-top: 20px
+}
+
+.media {
+  position: relative;
+  width: 100%;
+  max-width: 699px;
+  justify-self: end;
+}
+
+.mediaFrame {
+  position: relative;
+  height: 524px;
+  overflow: hidden;
+  border: 4px solid var(--dmv-color-surface);
+  border-radius: var(--dmv-radius-xl);
+  background: var(--dmv-color-heading);
+  box-shadow: var(--dmv-shadow-card);
+}
+
+.mediaImage {
+  object-fit: cover;
+}
+
+.mediaOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.2) 0%, rgba(15, 23, 42, 0.9) 100%);
+}
+
+.featured {
+  position: absolute;
+  left: var(--dmv-space-9);
+  right: var(--dmv-space-9);
+  bottom: var(--dmv-space-9);
+  color: var(--dmv-color-inverse);
+}
+
+.featuredBadge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 24px;
+  padding-inline: var(--dmv-space-3);
+  border-radius: var(--dmv-radius-sm);
+  background: var(--dmv-color-accent);
+  color: var(--dmv-color-heading);
+  font-size: var(--dmv-font-size-2xs);
+  font-weight: var(--dmv-weight-bold);
+  letter-spacing: var(--dmv-tracking-wide);
+  line-height: var(--dmv-line-tight);
+  text-transform: uppercase;
+}
+
+.featuredTitle {
+  max-width: 670px;
+  margin-top: var(--dmv-space-4);
+  color: var(--dmv-color-inverse);
+  font-size: var(--dmv-font-size-3xl);
+  font-weight: var(--dmv-weight-semibold);
+  line-height: var(--dmv-line-snug);
+}
+
+.featuredMeta {
+  margin-top: var(--dmv-space-3);
+  color: var(--dmv-color-inverse-soft);
+  font-size: var(--dmv-font-size-sm);
+  line-height: var(--dmv-line-snug);
+}
+
+.reviewCard {
+  position: absolute;
+  top: var(--dmv-space-7);
+  right: calc(24px * -1);
+  width: 267px;
+  padding: var(--dmv-space-4) var(--dmv-space-5);
+  border: var(--dmv-border-width) solid var(--dmv-color-border-card);
+  border-radius: var(--dmv-radius-sm);
+  background: var(--dmv-color-surface);
+  box-shadow: var(--dmv-shadow-card);
+}
+
+.reviewTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--dmv-space-3);
+}
+
+.rating {
+  color: var(--dmv-color-ink);
+  font-size: 36px;
+  font-weight: var(--dmv-weight-bold);
+  line-height: var(--dmv-line-tight);
+}
+
+.stars {
+  display: inline-flex;
+  gap: var(--dmv-space-1);
+  color: #ffb020;
+}
+
+.star {
+  width: 14px;
+  height: 14px;
+}
+
+.reviewText {
+  margin-top: var(--dmv-space-3);
+  color: #5b6a82;
+  font-size: 14px;
+  line-height: var(--dmv-line-snug);
+}
+
+.reviewLink {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--dmv-space-2);
+  margin-top: var(--dmv-space-3);
+  color: var(--dmv-color-ink);
+  font-size: var(--dmv-font-size-sm);
+  font-weight: var(--dmv-weight-semibold);
+  line-height: var(--dmv-line-snug);
+  text-decoration: none;
+}
+
+@media (max-width: 1200px) {
+  .inner {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 560px);
+    gap: var(--dmv-space-12);
+  }
+
+  .title {
+    font-size: var(--dmv-font-size-5xl);
+  }
+}
+
+@media (max-width: 1024px) {
+  .inner {
+    grid-template-columns: 1fr;
+    gap: var(--dmv-space-12);
+  }
+
+  .content {
+    max-width: none;
+  }
+
+  .media {
+    max-width: none;
+    justify-self: stretch;
+  }
+
+  .reviewCard {
+    right: var(--dmv-space-5);
+  }
+
+  .mediaFrame {
+    height: 440px;
+  }
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: var(--dmv-font-size-4xl);
+  }
+
+  .actions {
+    gap: var(--dmv-space-3);
+  }
+
+  .button {
+    width: 100%;
+  }
+
+  .note {
+    line-height: var(--dmv-line-relaxed);
+  }
+
+  .media {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .featured {
+    left: var(--dmv-space-6);
+    right: var(--dmv-space-6);
+    bottom: var(--dmv-space-6);
+  }
+
+  .featuredTitle {
+    font-size: var(--dmv-font-size-2xl);
+  }
+
+  .reviewCard {
+    position: relative;
+    top: auto;
+    right: auto;
+    width: 100%;
+    margin-top: var(--dmv-space-5);
+  }
+
+  .mediaFrame {
+    height: 360px;
+  }
+}
+
+@media (max-width: 560px) {
+  .eyebrow {
+    padding-inline: var(--dmv-space-3);
+    font-size: var(--dmv-font-size-2xs);
+  }
+
+  .title {
+    font-size: var(--dmv-font-size-3xl);
+  }
+
+  .featuredTitle {
+    font-size: var(--dmv-font-size-xl);
+  }
+
+  .featuredMeta {
+    font-size: 14px;
+  }
+
+  .mediaFrame {
+    height: 300px;
+  }
+}

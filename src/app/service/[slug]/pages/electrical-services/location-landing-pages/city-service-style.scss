@@ -1,0 +1,169 @@
+.city-service-detail-page{
+    --card-style1-bg: #eef5fb;
+    --card-style1-border: #a9cbe8;
+    --card-style2-bg: #ebf6ff;
+    --card-style2-border: #cbe5fb;
+
+    padding-top: 120px;
+
+    /* BREADCRUMB */
+    .breadcrumb { font-size: 13px; color: #888; margin-bottom: 28px; }
+    .breadcrumb a { color: var(--primary-color); text-decoration: none; }
+    .breadcrumb span { margin: 0 6px; }
+
+    /* HERO */
+    .hero { border-left: 4px solid var(--primary-color); padding-left: 20px; margin-bottom: 36px; }
+    h1 { font-size: 34px; font-weight: 700; line-height: 1.2; color: #111; margin-bottom: 12px; }
+    .hero-meta { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 14px; }
+    .hero-location-tag { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-family: sans-serif; font-weight: 600; color: var(--primary-color); background: #ebf6ff; padding: 4px 12px; border-radius: 20px; margin-bottom: 14px; border: 1px solid #cbe5fb; }
+    .badge { font-size: 12px; font-weight: 600; padding: 4px 12px; border-radius: 20px; background: #ebf6ff; color: var(--primary-color); border: 1px solid #cbe5fb; }
+    .badge.dark { background: #1a1a1a; color: #fff; border-color: #1a1a1a; }
+    .badge.key { background: var(--primary-color); color: #fff; border-color: var(--primary-color); }
+
+    .main-image{margin-bottom: 32px; height: 500px; border-radius: 20px; overflow: hidden}
+
+    /* INTRO */
+    .intro-box { font-size: 17px; line-height: 1.8; color: #333; margin-bottom: 32px; padding: 20px 24px; background: #ebf6ff; border-radius: 8px; border: 1px solid #cbe5fb; }
+
+    /* SECTIONS */
+    h2 { font-size: 24px; font-weight: 700; color: #111; margin: 40px 0 14px; border-bottom: 2px solid #cbe5fb; padding-bottom: 8px; }
+    h3 { font-size: 18px; font-weight: 700; color: #222; margin: 24px 0 10px; }
+    p { margin-bottom: 16px; color: #333; }
+
+    /* BANNER */
+    .banner {background: #ebf6ff; border-left: 5px solid var(--primary-color); padding: 22px 24px; border-radius: 8px; margin: 22px 0; }
+    .banner .icon { font-size: 32px; flex-shrink: 0; }
+    .banner h3 { margin: 0 0 6px; font-size: 16px; font-family: sans-serif; font-weight: 700; color: #111; }
+    .banner p { margin: 0; font-size: 14px; color: #34495e; line-height: 1.65; }
+
+    /* TRUST BOXES */
+    .trust-bar { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin: 16px 0 28px; }
+    .trust-item { text-align: center; padding: 18px 12px; background: #ebf6ff; border: 1px solid #cbe5fb; border-radius: 8px; }
+    .trust-item .icon { font-size: 26px; margin-bottom: 8px; }
+    .trust-item strong { display: block; font-size: 13px; font-family: sans-serif; color: #111; font-weight: 700; margin-bottom: 3px; }
+    .trust-item span { font-size: 12px; color: #777; font-family: sans-serif; }
+
+    /* PERMIT / RRP / HISTORIC / WARNING BOXES */
+    .permit-box, .rrp-box, .historic-box, .warning-box { border-radius: 10px; padding: 20px 22px; margin: 20px 0; }
+    .permit-box { background: #eef5fb; border: 2px solid var(--primary-color); }
+    .permit-box h3 { font-size: 16px; font-family: sans-serif; color: #0d3b6e; margin: 0 0 10px; }
+    .permit-box ul { margin: 0; padding-left: 20px; }
+    .permit-box li { font-size: 13px; color: #333; margin-bottom: 10px; line-height: 1.75; }
+    .rrp-box { background: #eef4fb; border: 1px solid #aac4e0; }
+    .rrp-box h3 { font-size: 15px; font-family: sans-serif; color: #1a3a5c; margin: 0 0 8px; }
+    .rrp-box p { font-size: 13px; color: #444; margin: 0; line-height: 1.7; }
+    .historic-box { background: #ebf6ff; border: 1px solid #cbe5fb; }
+    .historic-box h3 { font-size: 15px; font-family: sans-serif; color: #0d3b6e; margin: 0 0 8px; }
+    .historic-box p { font-size: 13px; color: #444; margin: 0; line-height: 1.7; }
+    .warning-box { background: #fff3cd; border: 2px solid #e0a800; }
+    .warning-box h3 { font-size: 15px; font-family: sans-serif; color: #7a4f00; margin: 0 0 8px; }
+    .warning-box p { font-size: 13px; color: #555; margin: 0; }
+
+    /* SERVICE CATEGORY GRID */
+    .service-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin: 16px 0 28px; }
+    .service-cat { padding: 18px 16px; background: var(--card-style1-bg); border: 1px solid var(--card-style1-border); border-radius: 10px; border-top: 3px solid var(--primary-color); }
+    .service-cat .cat-icon { font-size: 22px; margin-bottom: 6px; }
+    .service-cat .cat-label { font-size: 10px; font-family: sans-serif; font-weight: 700; color: var(--primary-color); text-transform: uppercase; letter-spacing: .5px; margin-bottom: 8px; }
+    .service-cat h3 { font-size: 14px; font-family: sans-serif; font-weight: 700; color: #111; margin: 0 0 8px; }
+    .service-cat ul { margin: 0; padding-left: 14px; }
+    .service-cat li { font-size: 12px; color: #444; margin-bottom: 4px; line-height: 1.5; }
+
+    /* WIRING CARDS */
+    .wiring-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 16px 0 28px; }
+    .wiring-card { padding: 20px 18px; background: var(--card-style2-bg); border: 1px solid var(--card-style2-border); border-radius: 10px; border-top: 3px solid var(--primary-color); }
+    .wiring-card h3 { font-size: 15px; font-family: sans-serif; margin: 0 0 8px; }
+    .wiring-card p { font-size: 13px; color: #555; margin: 0; line-height: 1.65; }
+
+    /* COST TABLE */
+    .cost-table { width: 100%; border-collapse: collapse; margin: 16px 0 28px; font-family: sans-serif; font-size: 14px; }
+    .cost-table th { background: var(--primary-color); color: #fff; padding: 10px 14px; text-align: left; }
+    .cost-table td { padding: 10px 14px; border-bottom: 1px solid #cbe5fb; color: #333; vertical-align: top; }
+    .cost-table tr:nth-child(even) td { background: #f5faff; }
+
+    .table-responsive{
+        width: 100%;
+        overflow-x: auto;
+    }
+    .table-holder{
+        min-width: 600px;
+    }
+
+    /* SIGNS GRID */
+    .signs-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin: 16px 0 28px; }
+    .sign-card { padding: 18px 14px; background: var(--card-style1-bg); border: 1px solid var(--card-style1-border); border-radius: 10px; text-align: center; }
+    .sign-card .s-icon { font-size: 26px; margin-bottom: 8px; }
+    .sign-card h3 { font-size: 13px; font-family: sans-serif; margin: 0 0 6px; }
+    .sign-card p { font-size: 12px; color: #666; margin: 0; line-height: 1.5; }
+
+    /* PROCESS STEPS */
+    .steps { display: flex; flex-direction: column; gap: 0; margin: 16px 0 24px; }
+    .step { display: flex; gap: 16px; align-items: flex-start; padding: 16px 0; border-bottom: 1px solid #f0f0f0; }
+    .step:last-child { border-bottom: none; }
+    .step-num { width: 36px; height: 36px; background: var(--primary-color); color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 15px; flex-shrink: 0; }
+    .step-content h3 { margin: 0 0 4px; font-size: 16px; }
+    .step-content p { margin: 0; font-size: 14px; color: #555; }
+
+    /* REVIEWS */
+    .review-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 16px 0 28px; }
+    .review-card { padding: 18px; background: var(--card-style2-bg); border: 1px solid var(--card-style2-border); border-radius: 10px; }
+    .review-stars { color: #f59e0b; font-size: 14px; margin-bottom: 8px; }
+    .review-text { font-size: 14px; color: #333; line-height: 1.6; margin-bottom: 10px; font-style: italic; }
+    .review-author { font-size: 12px; font-family: sans-serif; color: #888; font-weight: 600; }
+    .review-location { color: var(--primary-color); font-weight: 600; }
+
+    /* HIGHLIGHT / TIP */
+    .highlight { background: #ebf6ff; border-left: 4px solid var(--primary-color); padding: 16px 20px; border-radius: 0 8px 8px 0; margin: 20px 0; }
+    .highlight p { margin: 0; font-size: 15px; color: #0d3b6e; }
+    .tip { background: #eef5fb; border-left: 4px solid #2973b0; padding: 14px 18px; border-radius: 0 8px 8px 0; margin: 20px 0; font-size: 14px; color: #1c5a8c; font-family: sans-serif; line-height: 1.6; }
+
+    /* AREAS */
+    .areas-grid { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0 24px; }
+    .area-pill { padding: 6px 14px; background: #ebf6ff; border: 1px solid #cbe5fb; border-radius: 20px; font-size: 13px; color: var(--primary-color); font-weight: 500; }
+
+    h2.accordion-header{margin: 0; border: 0; padding-bottom: 0; }
+    h3.accordion-header{margin: 0; border: 0; padding-bottom: 0; }
+
+    /* CTA BANNER */
+    .cta-banner { background: var(--primary-color); color: #fff; padding: 28px 32px; border-radius: 10px; margin: 36px 0; text-align: center; }
+    .cta-banner h2 { color: #fff; border: none; font-size: 22px; margin: 0 0 8px; }
+    .cta-banner p { color: rgba(255,255,255,0.88); margin: 0 0 18px; font-size: 15px; }
+    .cta-btn { display: inline-block; background: #fff; color: var(--primary-color); padding: 12px 28px; border-radius: 6px; font-weight: 700; font-size: 15px; text-decoration: none; margin: 4px; }
+    .cta-btn.outline { background: transparent; color: #fff; border: 2px solid #fff; }
+
+    /* AUTHOR BOX */
+    .author-box {
+        background: #f8fafc; border: 1px solid #e2e8f0;
+        border-radius: 10px; padding: 20px 22px; margin: 32px 0;
+        display: flex; gap: 18px; align-items: flex-start;
+    }
+    .author-avatar {
+        width: 60px; height: 60px; border: 1px solid #c3cbd6;
+        border-radius: 50%; display: flex; align-items: center;
+        justify-content: center; font-size: 22px; flex-shrink: 0;
+    }
+    .author-info h4 { font-size: 15px; font-family: sans-serif; font-weight: 700; color: #111; margin: 0 0 4px; }
+    .author-info p { font-size: 13px; color: #555; margin: 0; line-height: 1.6; font-family: sans-serif; }
+    .author-creds { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+    .cred { font-size: 11px; font-family: sans-serif; font-weight: 600; padding: 2px 8px; border-radius: 20px; background: #e2e8f0; color: #2d3748; }
+
+    /* INTERNAL LINKS */
+    .internal-links ul { margin: 12px 0 0 20px; font-size: 15px; line-height: 2.2; }
+    .internal-links li a { color: var(--primary-color); }
+
+    /* SOURCE NOTE */
+    .source-note { font: 12px/1.6 sans-serif; color: #666; background: #f7f7f7; border: 1px solid #ddd; padding: 14px 16px; border-radius: 8px; margin-top: 28px; }
+
+    @media (max-width: 1024px) {
+        .trust-bar { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 600px) {
+        h1 { font-size: 26px; }
+        .trust-bar { grid-template-columns: 1fr; }
+        .service-grid, .signs-grid { grid-template-columns: 1fr 1fr; }
+        .wiring-grid, .review-grid { grid-template-columns: 1fr; }
+        .cost-table { font-size: 12px; }
+        .banner { flex-direction: column; }
+        .cta-banner { padding: 28px 16px; }
+        .cta-btn { width: 100%; }
+    }
+}

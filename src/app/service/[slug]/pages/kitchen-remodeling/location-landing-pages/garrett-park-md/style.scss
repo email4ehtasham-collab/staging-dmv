@@ -1,0 +1,35 @@
+.kitchen-garrett-park-md {
+    .service-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 16px 0 24px; }
+    .service-item { padding: 12px 16px; background: #fafafa; border: 1px solid #eee; border-radius: 8px; font-size: 14px; font-family: sans-serif; color: #222; display: flex; align-items: flex-start; gap: 10px; }
+    .service-item::before { content: "✓"; color: #8b5a2b; font-weight: 700; flex-shrink: 0; }
+
+    .author-box { background: #fdf9f4; border: 1px solid #f0e2cc; border-radius: 10px; padding: 20px 22px; margin: 32px 0; display: flex; gap: 18px; align-items: flex-start; }
+    .author-avatar { width: 60px; height: 60px; background: #8b5a2b; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 22px; flex-shrink: 0; }
+    .author-info h4 { font-size: 15px; font-family: sans-serif; font-weight: 700; color: #111; margin: 0 0 4px; }
+    .author-info p { font-size: 13px; color: #555; margin: 0; line-height: 1.6; font-family: sans-serif; }
+    .author-creds { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+    .cred { font-size: 11px; font-family: sans-serif; font-weight: 600; padding: 2px 8px; border-radius: 20px; background: #f0e2cc; color: #8b5a2b; }
+
+    .home-type-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin: 16px 0 24px; }
+    .home-type-box { padding: 16px 14px; background: #fdf9f4; border: 1px solid #f0e2cc; border-radius: 10px; text-align: center; }
+    .home-type-box .icon { font-size: 24px; margin-bottom: 8px; }
+    .home-type-box h3 { font-size: 13px; font-family: sans-serif; font-weight: 700; color: #8b5a2b; margin: 0 0 5px; }
+    .home-type-box p { font-size: 12px; color: #666; margin: 0; line-height: 1.5; }
+
+    .historic-box { background: #fff8f0; border: 1px solid #f0cfa0; border-radius: 10px; padding: 20px 22px; margin: 20px 0; }
+    .historic-box h3 { font-size: 16px; font-family: sans-serif; font-weight: 700; color: #8B4513; margin: 0 0 10px; }
+    .historic-box ul { margin: 0; padding: 0 0 0 20px; }
+    .historic-box ul li { font-size: 13px; color: #555; margin-bottom: 6px; line-height: 1.7; }
+
+    .review-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 16px 0 28px; }
+    .review-card { padding: 18px; background: #fdf9f4; border: 1px solid #f0e2cc; border-radius: 10px; }
+    .review-stars { color: #f59e0b; font-size: 14px; margin-bottom: 8px; }
+    .review-text { font-size: 14px; color: #333; line-height: 1.6; margin-bottom: 10px; font-style: italic; }
+    .review-author { font-size: 12px; font-family: sans-serif; color: #888; font-weight: 600; }
+    .review-location { color: #8b5a2b; }
+
+    @media (max-width: 600px) {
+        .trust-bar, .home-type-grid { grid-template-columns: 1fr; }
+        .service-grid, .review-grid { grid-template-columns: 1fr; }
+    }
+}

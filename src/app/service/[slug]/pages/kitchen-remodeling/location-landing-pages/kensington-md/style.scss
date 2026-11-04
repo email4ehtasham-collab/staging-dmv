@@ -1,0 +1,30 @@
+.kitchen-kensington-md{
+
+    .challenge-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 16px 0 28px; }
+    .challenge-card { padding: 20px 18px; background: #f4f8fb; border: 1px solid #d4e6f1; border-radius: 10px; }
+    .challenge-card .number { font-size: 28px; font-weight: 700; color: #1a5276; font-family: sans-serif; margin-bottom: 6px; }
+    .challenge-card h3 { font-size: 15px; font-family: sans-serif; margin: 0 0 6px; color: #111; font-weight: 700; }
+    .challenge-card p { font-size: 13px; color: #555; margin: 0; line-height: 1.6; }
+
+    .tip-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin: 16px 0 24px; }
+    .tip-box { padding: 18px 14px; background: #f4f8fb; border: 1px solid #d4e6f1; border-radius: 10px; }
+    .tip-box .icon { font-size: 34px; margin-bottom: 8px; }
+    .tip-box h3 { font-size: 16px; font-family: sans-serif; font-weight: 700; color: #1a5276; margin: 0 0 6px; }
+    .tip-box p { font-size: 14px; color: #666; margin: 0; line-height: 1.5; }
+
+    .compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 16px 0 24px; }
+    .compare-box { padding: 20px 18px; border-radius: 10px; }
+    .compare-box.stay { background: #eafaf1; border: 1px solid #a9dfbf; }
+    .compare-box.move { background: #fdedec; border: 1px solid #f1948a; }
+    .compare-box h3 { font-size: 15px; font-family: sans-serif; font-weight: 700; margin: 0 0 12px; }
+    .compare-box.stay h3 { color: #1e8449; }
+    .compare-box.move h3 { color: #a93226; }
+    .compare-box ul { margin: 0; padding: 0 0 0 18px; }
+    .compare-box ul li { font-size: 13px; color: #333; margin-bottom: 6px; line-height: 1.5; }
+
+
+    @media (max-width: 600px) {
+        .challenge-grid, .tip-grid, .compare-grid{ grid-template-columns: 1fr; }
+    }
+}
+

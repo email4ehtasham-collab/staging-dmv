@@ -1,0 +1,266 @@
+'use client';
+import { useEffect } from "react";
+import Link from "next/link";
+import { Accordion } from "react-bootstrap";
+import { useMyContext } from "@/hooks/context";
+
+import "../city-service-style.scss";
+import "./style.scss";
+
+const ChevyChaseMD = () => {
+    const { setActiveMenuItem } = useMyContext();
+
+    useEffect(() => {
+        setActiveMenuItem("service");
+    }, []);
+
+    const faqData = [
+        {
+            question: "How many permit jurisdictions cover patio work in Chevy Chase, MD?",
+            answer: "Six. Village of Chevy Chase, Chevy Chase Section 3, Chevy Chase Section 5, Village of Somerset, Village of Friendship Heights, and unincorporated Montgomery County each have separate permit offices. The correct office is confirmed by parcel location — not by mailing address, neighborhood name, or zip code. DMV General Contracting Group confirms the applicable jurisdiction at every Chevy Chase consultation."
+        },
+        {
+            question: "What patio material is most appropriate for a Chevy Chase colonial or tudor?",
+            answer: "Natural bluestone is the first choice for most Chevy Chase colonials and tudor revivals — the cool gray tone and natural texture complement both architectural profiles and age gracefully in Chevy Chase's established garden settings. Brick is an excellent alternative for homes with brick exterior details — reclaimed brick in a traditional pattern is the most period-authentic option. Modern large-format porcelain and stamped concrete are not recommended for Chevy Chase's estate architectural context."
+        },
+        {
+            question: "My Chevy Chase lot has very large mature trees — can a patio still be designed around them?",
+            answer: "Yes — Chevy Chase's century-old oaks and maples are often the most important features on the property, and patio design should work with them rather than against them. DMV General Contracting Group assesses mature tree root zones before any patio layout is finalized, adjusts the design to maintain safe setbacks from significant roots, and specifies permeable paving base systems where coverage within a root zone is unavoidable and accepted by the homeowner."
+        },
+        {
+            question: "Do I need a permit for a simple ground-level bluestone patio in Chevy Chase?",
+            answer: "A basic ground-level patio without structural elements — no pergola, no outdoor kitchen with gas or electrical, no retaining walls above a certain height — typically does not require a permit in any Chevy Chase jurisdiction. Adding structural elements to the patio scope does require the applicable village permit. DMV General Contracting Group confirms permit requirements for your specific Chevy Chase scope at the free consultation."
+        },
+        {
+            question: "How much does patio installation cost in Chevy Chase, MD?",
+            answer: "Chevy Chase patio costs reflect the community's estate-level properties and preference for premium natural materials. A natural bluestone or travertine patio starts at $18,000–$40,000+ for estate-scale installations. A brick patio in a traditional pattern runs $15,000–$30,000+. A pergola or outdoor kitchen addition runs $12,000–$40,000+ depending on scope and materials. DMV General Contracting Group provides a free, itemized estimate after reviewing the site."
+        }
+    ];
+
+    return (
+        <div className="city-service-detail-page patios-chevy-chase-md">
+            <div className="container">
+                <nav className="breadcrumb" aria-label="Breadcrumb">
+                    <Link href="/">Home</Link><span>›</span>
+                    <Link href="/services">Services</Link><span>›</span>
+                    <Link href="/service/patios">Patios</Link><span>›</span>
+                    Chevy Chase, MD
+                </nav>
+
+                <div className="hero">
+                    <div className="hero-location-tag">📍 Serving Chevy Chase, MD</div>
+                    <h1>Patio Installation &amp; Design in Chevy Chase, MD</h1>
+                    <p>
+                        Professional custom patio design and installation for Chevy Chase homeowners — natural bluestone, travertine, limestone, brick, and estate-level outdoor living spaces suited to Chevy Chase's 1910s–1940s colonials, tudors, and georgian revival homes. Six permit jurisdictions — confirmed by parcel at every consultation. Premium materials, mature landscape integration, estate-scale design.
+                    </p>
+                    <div className="hero-meta">
+                        <span className="badge">🏛️ Six Permit Jurisdictions — Confirmed by Parcel</span>
+                        <span className="badge">⭐ 4.9 Rating · 97+ Reviews</span>
+                        <span className="badge">MD MHIC #156178</span>
+                        <span className="badge">Licensed &amp; Insured</span>
+                        <span className="badge">1-Year Workmanship Warranty</span>
+                        <span className="badge">Free Consultation</span>
+                    </div>
+                </div>
+
+                <div className="patio-banner">
+                    <strong>Chevy Chase Patio Expertise:</strong> Chevy Chase is not a single municipality — it is a collection of six independent villages and unincorporated county territory, each with its own permit office. It is also home to some of Montgomery County's most architecturally significant residential properties — 1910s–1940s colonials, tudors, and georgian revivals on estate lots with mature tree canopy and established formal gardens. Patio installation here requires a contractor who knows which of six permit offices applies to the specific parcel, what materials complement the community's estate-level architectural character, and how to work within mature landscape settings without compromising the established trees and gardens that define these properties. DMV General Contracting Group brings all three.
+                </div>
+
+                <h2>Chevy Chase's Six Permit Jurisdictions — The Most Important Thing to Confirm Before Any Patio Work Begins</h2>
+
+                <p>Two adjacent Chevy Chase homes with identical mailing addresses may file patio permits at different offices depending on which village boundary their parcels fall within. A contractor who files by neighborhood name or zip code rather than parcel location will get it wrong for a meaningful percentage of Chevy Chase properties — leaving homeowners with unpermitted work and the resale and insurance documentation gaps that creates. DMV General Contracting Group confirms the correct permit authority by parcel at every Chevy Chase consultation.</p>
+
+                <div className="juris-grid">
+                    <div className="juris-card">
+                        <h3>🏛️ Village of Chevy Chase</h3>
+                        <p>Oldest and largest Chevy Chase village. Own municipal permit office. All structural patio permits filed here for Village of Chevy Chase properties — not MoCo DPS.</p>
+                    </div>
+                    <div className="juris-card">
+                        <h3>🏛️ Chevy Chase Section 3</h3>
+                        <p>Separate incorporated village with its own permit office. Distinct from the Village of Chevy Chase — filing at the Village office for a Section 3 property will not result in a permit.</p>
+                    </div>
+                    <div className="juris-card">
+                        <h3>🏛️ Chevy Chase Section 5</h3>
+                        <p>Another independent incorporated section with its own permit authority. Separate from both the Village and Section 3 — each section is its own jurisdiction.</p>
+                    </div>
+                    <div className="juris-card">
+                        <h3>🏛️ Village of Somerset</h3>
+                        <p>Small incorporated village within the Chevy Chase area. Own permit authority for all construction including structural patio elements.</p>
+                    </div>
+                    <div className="juris-card">
+                        <h3>🏛️ Village of Friendship Heights</h3>
+                        <p>Incorporated village bordering DC. Own permit office for patio and construction work. Not the same as the DC neighborhood of the same name.</p>
+                    </div>
+                    <div className="juris-card">
+                        <h3>🏛️ Unincorporated MoCo</h3>
+                        <p>Some Chevy Chase-area properties fall outside all village limits. These file structural patio permits with MoCo DPS at 2425 Reedie Drive, Wheaton.</p>
+                    </div>
+                </div>
+
+                <div className="patio-banner">
+                    <strong>Simple ground-level patios:</strong> A basic ground-level patio without structural elements typically does not require a permit in any Chevy Chase jurisdiction. Structural elements — pergolas, outdoor kitchens with gas or electrical connections, retaining walls over a certain height, raised patio footings — require permits filed at the correct village or county office. DMV General Contracting Group confirms permit requirements for your specific Chevy Chase project at the free consultation.
+                </div>
+
+                <h2>Complete Patio Services for Chevy Chase Homes</h2>
+                <div className="card-grid">
+                    <div className="card"><h3>Custom Estate Patio Design</h3><p>Patio designs scaled to Chevy Chase's estate properties — formal terraces adjacent to the home, garden patios integrated with established plantings, pool surrounds, and multi-zone outdoor living areas. Design that respects and complements the home's architectural character and the property's mature landscape.</p></div>
+                    <div className="card"><h3>Natural Bluestone Patio</h3><p>The most popular premium patio material for Chevy Chase's traditional colonials and georgian revivals — cool gray tone, natural texture, timeless character. Mortar-set on a rigid base for estate-quality installation. Available in irregular (natural cleft) and uniform (thermal or sawn) profiles to suit the home's formality.</p></div>
+                    <div className="card"><h3>Travertine Patio &amp; Pool Surround</h3><p>Warm cream and tan tones — travertine is the leading choice for Chevy Chase's pool surrounds and outdoor kitchen areas. Tumbled profile stays cooler underfoot and provides natural slip resistance. Honed profile for more formal contemporary settings. Requires sealing for outdoor kitchen areas.</p></div>
+                    <div className="card"><h3>Brick Patio Installation</h3><p>Reclaimed or new brick in running bond, herringbone, or basket weave — deeply embedded in Chevy Chase's architectural character. Most appropriate for the community's older colonials and tudor revival homes with brick exterior details. Warm tone, durable, repairable, and authentically period for this housing stock.</p></div>
+                    <div className="card"><h3>Limestone &amp; Fieldstone</h3><p>Natural limestone and local fieldstone for Chevy Chase's larger traditional and craftsman-style properties. Fieldstone is particularly well suited to naturalistic landscape settings where a more organic, less formal patio aesthetic is appropriate alongside established garden beds.</p></div>
+                    <div className="card"><h3>Pergola &amp; Garden Structure</h3><p>Natural wood pergolas — cedar, pressure-treated, or ipe — scaled to Chevy Chase's estate lots and designed to complement the home's architectural profile. Structural pergolas require the applicable village permit. Wood reads as appropriate in Chevy Chase's estate context where aluminum and vinyl structures do not.</p></div>
+                    <div className="card"><h3>Outdoor Kitchen &amp; Entertaining Area</h3><p>Complete outdoor kitchen design and installation for Chevy Chase's entertaining-focused homeowners — built-in grills, countertops, outdoor refrigerators, sinks, and storage. Natural stone countertops preferred for Chevy Chase's estate aesthetic. Gas line and electrical work managed in-house by licensed trades.</p></div>
+                    <div className="card"><h3>Mature Tree &amp; Root Zone Planning</h3><p>Chevy Chase's mature tree canopy — oaks, maples, and specimen trees that are often decades or a century old — defines the community's character. Root zones assessed before any patio excavation is planned. Patio layouts adjusted to preserve root zones. Permeable base options where tree proximity warrants it.</p></div>
+                </div>
+
+                <h2>Common Patio Needs in Chevy Chase</h2>
+                <div className="table-responsive">
+                    <div className="table-holder">
+                        <table className="plain-table">
+                            <thead>
+                                <tr>
+                                    <th>Homeowner Need</th>
+                                    <th>Chevy Chase-Specific Considerations</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>New patio for a 1920s–1940s colonial or tudor</td>
+                                    <td>Natural bluestone or brick in a pattern appropriate to the home's era and formality. Mortar-set for estate-quality installation. Layout that integrates with formal garden features and the home's primary outdoor door. Permit jurisdiction confirmed by parcel before any structural element is included.</td>
+                                </tr>
+                                <tr>
+                                    <td>Pool terrace and surround</td>
+                                    <td>Travertine or bluestone pool surround coordinated with pool coping material. Slip resistance and heat absorption both considered — tumbled travertine stays cooler underfoot in summer. Pool contractor schedule coordinated. Permit jurisdiction confirmed for any structural poolside features.</td>
+                                </tr>
+                                <tr>
+                                    <td>Formal garden terrace</td>
+                                    <td>Stone or brick terrace integrated with established formal garden beds, hedges, and mature specimen trees. Patio layout planned around existing landscape features rather than replacing them. Root zones from mature trees assessed before any excavation is planned.</td>
+                                </tr>
+                                <tr>
+                                    <td>Outdoor kitchen on estate property</td>
+                                    <td>Natural stone countertops and period-appropriate surround materials for Chevy Chase's estate aesthetic. Gas line extension and electrical connections managed in-house. Applicable village permit confirmed and filed before installation begins.</td>
+                                </tr>
+                                <tr>
+                                    <td>Replacing a settled or cracked old patio</td>
+                                    <td>Original stone or brick surface removed, subgrade assessed for drainage and root conditions, base improved, and new period-appropriate material installed. Where the original patio was bluestone or brick, replacement in the same material maintains the property's character.</td>
+                                </tr>
+                                <tr>
+                                    <td>Pergola or garden structure addition</td>
+                                    <td>Natural wood pergola or garden pavilion in cedar or ipe — scaled to the estate property and designed to complement the home's architectural profile. Applicable village permit required and managed in-house. Wood preferred over aluminum or vinyl for Chevy Chase's estate context.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <h2>Patio Materials for Chevy Chase's Estate Homes</h2>
+                <p>Chevy Chase's 1910s–1940s colonials, tudors, and georgian revivals represent some of the most architecturally refined residential properties in Montgomery County. The right patio material complements this character; the wrong one contrasts with it in a way that is immediately visible. DMV General Contracting Group recommends materials at every Chevy Chase consultation with each home's specific architectural profile as the primary reference.</p>
+                <div className="card-grid">
+                    <div className="card"><h3>🪨 Natural Bluestone ✅ First Choice</h3><p>The most popular premium patio choice for Chevy Chase's traditional estate homes — cool gray tone, natural texture, and timeless character that ages beautifully alongside mature plantings and formal gardens. Mortar-set for estate-quality durability. Irregular profile for informal garden settings; uniform sawn profile for more formal terrace applications.</p></div>
+                    <div className="card"><h3>🪨 Travertine ✅ Pool &amp; Outdoor Kitchen</h3><p>Warm cream and tan tones — the preferred choice for pool surrounds and outdoor kitchen areas on Chevy Chase estate properties. Tumbled profile provides natural slip resistance and stays cooler underfoot. Requires periodic sealing. Well suited to Chevy Chase's larger rear gardens with pool features.</p></div>
+                    <div className="card"><h3>🧱 Reclaimed or New Brick ✅ Period Authentic</h3><p>The most architecturally authentic choice for Chevy Chase's older colonials and tudor revivals with brick exterior details. Reclaimed brick from the same era as the home delivers the most authentic character. Traditional patterns — running bond, herringbone — read as genuinely period rather than decorative.</p></div>
+                    <div className="card"><h3>🪨 Limestone &amp; Fieldstone ✅ Naturalistic Settings</h3><p>Natural limestone and fieldstone for Chevy Chase properties where an organic, less formal patio aesthetic is appropriate — homes with naturalistic garden designs, informal landscape settings, or where the patio will be deeply integrated with established plantings.</p></div>
+                    <div className="card"><h3>🧱 Concrete Pavers ⚠️ Period Profile Only</h3><p>Acceptable in Chevy Chase only in earth-tone tumbled profiles that read as period-compatible — never large-format contemporary slabs. Natural stone and brick are the preferred choices for this community; concrete pavers are appropriate where budget requires a compromise, provided the profile and color are carefully chosen.</p></div>
+                    <div className="card"><h3>🏗️ Large-Format Porcelain / Stamped Concrete ❌ Not Recommended</h3><p>Contemporary large-format porcelain and stamped concrete are not compatible with Chevy Chase's estate architectural character. These materials read as modern additions that contrast with — rather than complement — the community's historic colonial and tudor streetscapes. Not recommended for Chevy Chase properties.</p></div>
+                </div>
+
+                <h2>Why Choose DMV General Contracting Group for Patio Work in Chevy Chase?</h2>
+                <div className="trust-bar">
+                    <div className="trust-item">
+                        <div className="icon">🏛️</div>
+                        <strong>Six-Jurisdiction Expertise</strong>
+                        <span>Correct permit office by parcel</span>
+                    </div>
+                    <div className="trust-item">
+                        <div className="icon">🪨</div>
+                        <strong>Estate Material Knowledge</strong>
+                        <span>Bluestone, travertine, brick, limestone</span>
+                    </div>
+                    <div className="trust-item">
+                        <div className="icon">⭐</div>
+                        <strong>4.9 Rating</strong>
+                        <span>97+ verified reviews</span>
+                    </div>
+                    <div className="trust-item">
+                        <div className="icon">📋</div>
+                        <strong>MD MHIC #156178</strong>
+                        <span>Licensed &amp; fully insured</span>
+                    </div>
+                </div>
+                <div className="card-grid">
+                    <div className="card"><h3>Six-Jurisdiction Permit Expertise</h3><p>Village of Chevy Chase, Section 3, Section 5, Somerset, Friendship Heights, and unincorporated MoCo — six separate permit offices. Correct office confirmed by parcel at the free consultation. All village correspondence and inspection coordination managed in-house.</p></div>
+                    <div className="card"><h3>Estate-Level Material Recommendations</h3><p>Natural bluestone, travertine, brick, and limestone recommended as primary choices for Chevy Chase's historic estate homes. Modern materials that conflict with the community's architectural character are not recommended — even where the homeowner might be open to them.</p></div>
+                    <div className="card"><h3>Mature Landscape Integration</h3><p>Chevy Chase's century-old trees and established formal gardens are assessed before any patio layout is finalized. Root zones noted and respected. Patio designs that work with existing landscape features rather than removing them.</p></div>
+                    <div className="card"><h3>All Trades In-House</h3><p>Gas line extensions, electrical connections, and patio installation all coordinated under one design-build workflow — no separate subcontractors on different schedules managing pieces of your Chevy Chase patio project.</p></div>
+                </div>
+
+                <h2>Our Patio Installation Process in Chevy Chase</h2>
+                <div className="steps">
+                    {[
+                        { num: 1, title: "Free Consultation & Jurisdiction Confirmation", desc: "We visit your Chevy Chase property, assess the outdoor space — lot character, mature trees, formal garden features, architectural profile, pool adjacency — and confirm the correct permit jurisdiction for your specific parcel. Mature tree root zones noted. Material recommendations appropriate to the home's era and character discussed. Free, no obligation." },
+                        { num: 2, title: "Design & Estate-Appropriate Material Selection", desc: "Patio layout and materials selected with Chevy Chase's estate architectural character as the guiding framework — natural stone, brick, and wood as the primary palette. Root zone setbacks incorporated into the layout. Design that integrates with established formal garden features rather than replacing them." },
+                        { num: 3, title: "Village Permit Filed at the Correct Office", desc: "All required structural patio permits prepared and filed at the confirmed correct village or county permit office. All village correspondence managed in-house. Permit approval tracked and inspections scheduled by our permit team. You do not contact any permit office." },
+                        { num: 4, title: "Root Zone Assessment & Base Preparation", desc: "Mature tree root proximity assessed and excavation approach adjusted before any digging begins. Standard compacted gravel base where away from significant roots. Permeable base system where root zone protection is warranted. Drainage slope established away from both home and established plantings." },
+                        { num: 5, title: "Patio & Feature Installation", desc: "Natural stone, brick, or period-appropriate material installed on the prepared base. Wood pergola framed where included. Outdoor kitchen installed with natural stone countertop and stone surround. Gas and electrical work completed by licensed in-house trades. Established garden plantings protected throughout installation." },
+                        { num: 6, title: "Village Inspection, Cleanup & Completion", desc: "All required village or MoCo DPS inspections scheduled and managed. Work area cleaned — established Chevy Chase gardens protected and restored at completion. Final walkthrough. Warranty documentation provided at project close." }
+                    ].map(step => (
+                        <div className="step" key={step.num}>
+                            <div className="step-num">{step.num}</div>
+                            <div className="step-content">
+                                <h3>{step.title}</h3>
+                                <p>{step.desc}</p>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+
+                <h2>Patio Service Area</h2>
+                <p>DMV General Contracting Group provides residential patio installation and outdoor living services throughout <strong>Chevy Chase, MD</strong> — including Village of Chevy Chase, Chevy Chase Section 3, Chevy Chase Section 5, Village of Somerset, Village of Friendship Heights, and surrounding communities including Bethesda, Kensington, North Bethesda, Silver Spring, and Washington DC.</p>
+
+                <div className="patio-banner">
+                    <strong>Chevy Chase Permit Reminder:</strong> Six separate permit offices cover Chevy Chase-area patio work. Two adjacent properties with identical mailing addresses may file at different offices based on which village boundary their parcels fall within. DMV General Contracting Group confirms the correct permit authority by parcel at every Chevy Chase patio consultation — not by street name, neighborhood name, or zip code. This is the single most important step before any Chevy Chase structural patio project begins.
+                </div>
+
+                <h2>Frequently Asked Questions — Patio Installation in Chevy Chase, MD</h2>
+                <Accordion className="faq-list">
+                    {faqData.map((item, index) => (
+                        <Accordion.Item eventKey={index.toString()} key={index} className="faq-item">
+                            <Accordion.Header as="h3" className="faq-q">{item.question}</Accordion.Header>
+                            <Accordion.Body className="faq-a">{item.answer}</Accordion.Body>
+                        </Accordion.Item>
+                    ))}
+                </Accordion>
+
+                <h2>Explore Our Other Services in Chevy Chase, MD</h2>
+                <ul className="related-links">
+                    <li><Link href="/service/decks/chevy-chase-md">Deck Building in Chevy Chase, MD</Link></li>
+                    <li><Link href="/service/roofing/chevy-chase-md">Roofing Services in Chevy Chase, MD</Link></li>
+                    <li><Link href="/service/home-additions/chevy-chase-md">Home Additions in Chevy Chase, MD</Link></li>
+                    <li><Link href="/service/design-build/chevy-chase-md">Design-Build Contractor in Chevy Chase, MD</Link></li>
+                    <li><Link href="/service/siding-installation/chevy-chase-md">Siding Installation in Chevy Chase, MD</Link></li>
+                    <li><Link href="/service/electrical-services/chevy-chase-md">Electrical Services in Chevy Chase, MD</Link></li>
+                </ul>
+
+                <div className="cta-banner">
+                    <h2>Need Patio Installation in Chevy Chase, MD?</h2>
+                    <p>Talk with DMV General Contracting Group about custom patio design for your Chevy Chase estate property — six permit jurisdictions confirmed by parcel, period-appropriate natural stone and brick materials, mature tree root zones assessed. Free consultation, no obligation.</p>
+                    <a href="tel:+1 (240) 730-1292" className="cta-btn">📞 Call +1 240-730-1292</a>
+                    <a href="mailto:support@dmv-gc.com" className="cta-btn outline">Email support@dmv-gc.com</a>
+                </div>
+
+                <div className="page-footer">
+                    <div className="container">
+                        <strong>DMV General Contracting Group LLC</strong>
+                        <p>11810 Grand Park Ave. Suite 500, North Bethesda, MD 20852</p>
+                        <p>MD MHIC #156178 · DC DLCP #410526000209</p>
+                        <p>Available 7 Days a Week · 1-Year Workmanship Warranty</p>
+                        <p>Phone: +1 240-730-1292 · Email: support@dmv-gc.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+};
+
+export default ChevyChaseMD;

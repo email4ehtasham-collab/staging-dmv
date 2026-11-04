@@ -1,0 +1,82 @@
+.flooring-kensington-md {
+  --primary-color: #2973b0;
+  --card-bg: #faf7f5;
+  --card-border: #d7ccc8;
+  --tag-bg: #efebe9;
+  --tag-border: #bcaaa4;
+  --highlight-text: #3e2723;
+  --tip-color: #3e2723;
+
+  /* PAGE-SPECIFIC: OLD HOUSE BANNER */
+  .oldhouse-banner {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    background: linear-gradient(135deg, #5d4037, #6d4c41);
+    border-radius: 10px;
+    padding: 20px 26px;
+    margin-bottom: 32px;
+
+    .banner-icon {
+      font-size: 34px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .banner-text {
+      h3 {
+        color: #fff;
+        margin-bottom: 8px;
+        font-size: 17px;
+        font-weight: 700;
+      }
+
+      p {
+        color: #f5ebe4;
+        font-size: 14px;
+        line-height: 1.7;
+        margin: 0;
+      }
+    }
+  }
+
+  /* PAGE-SPECIFIC: SUBFLOOR GRID */
+  .subfloor-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin: 16px 0 24px;
+  }
+
+  .subfloor-card {
+    padding: 18px 16px;
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 10px;
+    border-left: 4px solid var(--primary-color);
+
+    h3 {
+      font-size: 15px;
+      margin: 0 0 6px;
+      color: #333;
+      font-family: sans-serif;
+    }
+
+    p {
+      font-size: 13px;
+      color: #555;
+      margin: 0;
+      line-height: 1.6;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .oldhouse-banner {
+      flex-direction: column;
+    }
+
+    .subfloor-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+}

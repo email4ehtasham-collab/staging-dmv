@@ -1,0 +1,243 @@
+.adu-silver-spring-md {
+  --primary-color: #2973b0;
+  --card-style1-bg: #e3f0fc;
+  --card-style1-border: #aacfee;
+  --card-style2-bg: #f2f8fe;
+  --card-style2-border: #c8e1f7;
+
+  .hero-location-tag {
+    background: #e3f0fc;
+    border-color: #aacfee;
+  }
+
+  .intro-box {
+    background: #f2f8fe;
+    border-color: #c8e1f7;
+  }
+
+  .trust-item {
+    background: #f2f8fe;
+    border-color: #c8e1f7;
+  }
+
+  .service-item::before {
+    color: #1565c0;
+  }
+
+  .highlight {
+    background: #e3f0fc;
+    border-left-color: #1565c0;
+    p { color: #0d3d74; }
+  }
+
+  .note {
+    background: #fffbf0;
+    border-left-color: #f59e0b;
+    color: #7a4f00;
+  }
+
+  .tip {
+    background: #eef5fb;
+    border-left-color: #2973b0;
+    color: #0d3b6e;
+  }
+
+  .area-pill {
+    background: #e3f0fc;
+    border-color: #aacfee;
+  }
+
+  .review-card {
+    background: #f2f8fe;
+    border-color: #c8e1f7;
+  }
+
+  .review-location {
+    color: #1565c0;
+  }
+
+  .cta-btn {
+    color: #1565c0;
+  }
+
+  .author-avatar {
+    background: #1565c0;
+  }
+
+  .cred {
+    background: #c8e1f7;
+    color: #1565c0;
+  }
+
+  .cost-table th {
+    background: #1565c0;
+  }
+
+  .spec-box {
+    background: #fff8f0;
+    border-color: #f0cfa0;
+    h3 { color: #8B4513; }
+  }
+
+  .metro-banner {
+    background: linear-gradient(135deg, #1565c0, #1976d2);
+    color: #fff;
+    padding: 20px 26px;
+    border-radius: 10px;
+    margin-bottom: 32px;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+
+    .icon {
+      font-size: 32px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    h3 {
+      font-size: 16px;
+      font-family: sans-serif;
+      font-weight: 700;
+      margin: 0 0 6px;
+      color: #fff;
+    }
+
+    p {
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.92);
+      margin: 0;
+      font-family: sans-serif;
+      line-height: 1.65;
+    }
+  }
+
+  .adu-type-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin: 20px 0 28px;
+  }
+
+  .adu-type-card {
+    padding: 22px 20px;
+    background: #f0f7fe;
+    border: 1px solid #c5dff8;
+    border-radius: 10px;
+    border-top: 4px solid #1565c0;
+
+    h3 {
+      font-size: 16px;
+      margin: 0 0 8px;
+      color: #111;
+    }
+
+    p {
+      font-size: 13px;
+      color: #555;
+      margin: 0 0 12px;
+      line-height: 1.6;
+    }
+  }
+
+  .adu-tag {
+    display: inline-block;
+    font-size: 11px;
+    font-family: sans-serif;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 20px;
+    background: #1565c0;
+    color: #fff;
+    margin-bottom: 10px;
+  }
+
+  .adu-cost {
+    font-size: 13px;
+    font-family: sans-serif;
+    font-weight: 700;
+    color: #1565c0;
+    background: #e3f0fc;
+    padding: 6px 12px;
+    border-radius: 6px;
+    display: inline-block;
+  }
+
+  .split-level-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 12px;
+    margin: 16px 0 24px;
+  }
+
+  .split-level-box {
+    padding: 18px 14px;
+    background: #f0f7fe;
+    border: 1px solid #c5dff8;
+    border-radius: 10px;
+    text-align: center;
+
+    .icon {
+      font-size: 26px;
+      margin-bottom: 8px;
+    }
+
+    h3 {
+      font-size: 13px;
+      font-family: sans-serif;
+      font-weight: 700;
+      color: #1565c0;
+      margin: 0 0 6px;
+    }
+
+    p {
+      font-size: 12px;
+      color: #555;
+      margin: 0;
+      line-height: 1.55;
+    }
+  }
+
+  .benefit-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 12px;
+    margin: 16px 0 24px;
+  }
+
+  .benefit-box {
+    text-align: center;
+    padding: 20px 14px;
+    background: #f0f7fe;
+    border: 1px solid #c5dff8;
+    border-radius: 10px;
+
+    .icon {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    strong {
+      display: block;
+      font-size: 13px;
+      font-family: sans-serif;
+      font-weight: 700;
+      color: #111;
+      margin-bottom: 4px;
+    }
+
+    span {
+      font-size: 12px;
+      color: #666;
+      font-family: sans-serif;
+      line-height: 1.5;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .service-grid, .home-type-grid, .use-type-grid { grid-template-columns: 1fr; }
+    .trust-bar, .split-level-grid, .benefit-grid { grid-template-columns: 1fr 1fr; }
+    .adu-type-grid, .neighborhood-grid, .review-grid { grid-template-columns: 1fr; }
+    .metro-banner { flex-direction: column; }
+  }
+}

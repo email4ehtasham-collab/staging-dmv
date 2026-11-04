@@ -1,0 +1,324 @@
+.footer {
+  border-top: 1px solid #1e293b;
+  background: #0f172a;
+  color: #ccd6e0;
+}
+
+.contactBar {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: center;
+  min-height: 106px;
+  margin-top: 40px;
+  padding-left: 25px;
+  border-radius: 16px;
+  background: #1e293b;
+}
+
+.contactItem {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 16px;
+}
+
+.contactItem:first-child {
+  gap: 12px;
+}
+
+.contactItem:first-child .contactLabel {
+  position: relative;
+  top: 2px;
+}
+
+.contactIcon {
+  display: inline-flex;
+  width: 48px;
+  height: 48px;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+}
+
+.contactIcon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.contactIconBrand {
+  background: rgba(197, 34, 31, 0.2);
+  color: #c63940;
+}
+
+.contactIconGold {
+  background: rgba(212, 175, 55, 0.2);
+  color: #d4af37;
+}
+
+.contactText {
+  min-width: 0;
+}
+
+.contactLabel {
+  margin: 0;
+  color: #94a3b8;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 16px;
+  text-transform: uppercase;
+}
+
+.contactValue {
+  position: relative;
+  top: -1px;
+  display: block;
+  margin: 2px 0 0;
+  color: #f8fafc;
+  font-size: 14.3px;
+  font-style: normal;
+  line-height: 20px;
+  text-decoration: none;
+}
+
+.address {
+  max-width: 370px;
+}
+
+.body {
+  display: grid;
+  grid-template-columns: 440px 334px 333px minmax(0, 1fr);
+  margin-top: 53px;
+}
+
+.intro {
+  max-width: 440px;
+}
+
+.description {
+  position: relative;
+  top: -4px;
+  margin: 0;
+  color: #ccd6e0;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.legalRow {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  margin-top: 17px;
+}
+
+.legalRow span,
+.insurance {
+  display: flex;
+  min-height: 39px;
+  align-items: center;
+  padding: 0 14px 2px;
+  border-radius: 8px;
+  background: #1e293b;
+  color: #ccd6e0;
+  font-size: 13px;
+  line-height: 20px;
+  white-space: nowrap;
+}
+
+.insurance {
+  margin: 12px 0 0;
+}
+
+.hours {
+  position: relative;
+  top: -2px;
+  margin: 13px 0 0;
+  color: #4ade80;
+  font-size: 13.5px;
+  line-height: 24px;
+}
+
+.socials {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.socials a {
+  display: inline-flex;
+  width: 50px;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background: #1e293b;
+  color: #ccd6e0;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.socials a:hover {
+  background: #c5221f;
+  color: #f8fafc;
+}
+
+.socials svg {
+  width: 20px;
+  height: 20px;
+}
+
+.estimateButton {
+  display: flex;
+  width: 440px;
+  height: 42px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 12px;
+  padding-bottom: 2px;
+  border-radius: 8px;
+  background: #c5221f;
+  color: #f8fafc;
+  font-size: 13.2px;
+  font-weight: 600;
+  line-height: 20px;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.estimateButton:hover {
+  background: #a91d1a;
+}
+
+.linkColumn {
+  padding-left: 40px;
+}
+
+.linkColumn h2 {
+  position: relative;
+  top: -3px;
+  color: #f8fafc;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.linkColumn ul {
+  display: flex;
+  flex-direction: column;
+  gap: 17.5px;
+  margin: 23px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.linkColumn li {
+  line-height: 20px;
+}
+
+.linkColumn a {
+  display: block;
+  color: #ccd6e0;
+  font-size: 13px;
+  line-height: 20px;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.linkColumn a:hover {
+  color: #f8fafc;
+}
+
+.bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 52px;
+  padding: 27px 65px 42px 0;
+  border-top: 1px solid #1e293b;
+}
+
+.bottom p {
+  margin: 0;
+}
+
+.bottom p,
+.legalLinks a {
+  color: #94a3b8;
+  font-size: 13px;
+  line-height: 20px;
+}
+
+.bottom p {
+  position: relative;
+  top: -1px;
+  font-size: 12.2px;
+}
+
+.legalLinks {
+  display: flex;
+  align-items: center;
+  gap: 21px;
+}
+
+.legalLinks a {
+  display: block;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.legalLinks a:hover {
+  color: #f8fafc;
+}
+
+@media (max-width: 1200px) {
+  .contactBar {
+    grid-template-columns: 1fr;
+    gap: var(--dmv-space-5);
+    min-height: 0;
+    padding: var(--dmv-space-6);
+  }
+
+  .body {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--dmv-space-8) var(--dmv-space-4);
+  }
+
+  .linkColumn {
+    padding-left: 0;
+  }
+
+  .estimateButton {
+    max-width: 440px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .address {
+    max-width: none;
+  }
+
+  .body {
+    grid-template-columns: 1fr;
+  }
+
+  .legalRow {
+    grid-template-columns: 1fr;
+  }
+
+  .legalRow span {
+    white-space: normal;
+  }
+
+  .bottom {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: var(--dmv-space-3);
+  }
+
+  .legalLinks {
+    flex-wrap: wrap;
+  }
+}

@@ -1,0 +1,140 @@
+.city-service-detail-page{
+    --primary-color: #2973b0;
+    --card-bg: #faf7f5;
+    --card-border: #d7ccc8;
+    --tag-bg: #efebe9;
+    --tag-border: #bcaaa4;
+    --highlight-text: #3e2723;
+    --tip-color: #3e2723;
+
+    padding-top: 120px;
+
+    /* BREADCRUMB */
+    .breadcrumb { font-size: 13px; color: #888; margin-bottom: 28px; font-family: sans-serif; display: flex; flex-wrap: wrap; gap: 4px; align-items: center; }
+    .breadcrumb a { color: var(--primary-color); text-decoration: none; }
+    .breadcrumb a:hover { text-decoration: underline; }
+    .breadcrumb span { color: #ccc; }
+
+    /* HERO */
+    .hero { margin-bottom: 36px; }
+    .hero-location-tag { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-family: sans-serif; font-weight: 600; color: var(--primary-color); background: var(--tag-bg); padding: 4px 12px; border-radius: 20px; margin-bottom: 14px; border: 1px solid var(--tag-border); }
+    h1 { font-size: 36px; font-weight: 700; line-height: 1.18; color: #111; margin-bottom: 16px; border-left: 5px solid var(--primary-color); padding-left: 18px; }
+    .hero-meta { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px; }
+    .badge { font-size: 12px; font-family: sans-serif; font-weight: 600; padding: 4px 12px; border-radius: 20px; background: var(--tag-bg); color: var(--primary-color); border: 1px solid var(--tag-border); }
+    .badge.dark { background: #1a1a1a; color: #fff; border-color: #1a1a1a; }
+
+    /* INTRO */
+    .intro-box { font-size: 17px; line-height: 1.85; color: #333; background: var(--card-bg); border-radius: 10px; border: 1px solid var(--card-border); padding: 22px 26px; margin-bottom: 36px; }
+
+    /* SECTIONS */
+    h2 { font-size: 26px; font-weight: 700; color: #111; margin: 44px 0 14px; padding-bottom: 10px; border-bottom: 2px solid var(--card-border); }
+    h3 { font-size: 19px; font-weight: 700; color: #222; margin: 24px 0 10px; }
+    p { margin-bottom: 16px; color: #333; }
+
+    /* TRUST BAR */
+    .trust-bar { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin: 28px 0; }
+    .trust-item { text-align: center; padding: 18px 12px; background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 10px; }
+    .trust-item .icon { font-size: 26px; margin-bottom: 8px; }
+    .trust-item strong { display: block; font-size: 13px; font-family: sans-serif; font-weight: 700; color: #111; margin-bottom: 3px; }
+    .trust-item span { font-size: 12px; color: #888; font-family: sans-serif; }
+
+    /* SERVICE LIST */
+    .service-list { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 16px 0 28px; }
+    .service-item { padding: 12px 16px; background: #fafafa; border: 1px solid #eee; border-radius: 8px; font-size: 14px; font-family: sans-serif; color: #222; display: flex; align-items: flex-start; gap: 10px; }
+    .service-item::before { content: "✓"; color: var(--primary-color); font-weight: 700; flex-shrink: 0; }
+
+    /* FLOOR TYPE GRID */
+    .floor-type-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 20px 0 28px; }
+    .floor-card { padding: 22px 20px; background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 10px; border-top: 4px solid var(--primary-color); }
+    .floor-label { display: inline-block; font-size: 11px; font-family: sans-serif; font-weight: 700; padding: 3px 10px; border-radius: 20px; background: var(--primary-color); color: #fff; margin-bottom: 10px; }
+    .floor-card h3 { font-size: 16px; margin: 0 0 8px; color: #111; }
+    .floor-card p { font-size: 13px; color: #555; margin: 0 0 12px; line-height: 1.6; }
+    .floor-meta { font-size: 12px; font-family: sans-serif; color: #888; margin-top: 6px; }
+    .floor-meta strong { color: var(--primary-color); }
+
+    /* AUTHOR BOX */
+    .author-box { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 10px; padding: 20px 22px; margin: 32px 0; display: flex; gap: 18px; align-items: flex-start; }
+    .author-avatar { width: 60px; height: 60px; background: var(--primary-color); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 22px; flex-shrink: 0; }
+    .author-info h4 { font-size: 15px; font-family: sans-serif; font-weight: 700; color: #111; margin: 0 0 4px; }
+    .author-info p { font-size: 13px; color: #555; margin: 0; line-height: 1.6; font-family: sans-serif; }
+    .author-creds { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+    .cred { font-size: 11px; font-family: sans-serif; font-weight: 600; padding: 2px 8px; border-radius: 20px; background: var(--tag-border); color: var(--primary-color); }
+
+    /* TABLES */
+    .comparison-table, .cost-table, .room-table { width: 100%; border-collapse: collapse; margin: 16px 0 24px; font-family: sans-serif; font-size: 14px; }
+    .comparison-table th, .cost-table th, .room-table th { background: var(--primary-color); color: #fff; padding: 10px 14px; text-align: left; }
+    .comparison-table td, .cost-table td, .room-table td { padding: 10px 14px; border-bottom: 1px solid #f0f0f0; color: #333; vertical-align: top; }
+    .comparison-table tr:last-child td, .cost-table tr:last-child td, .room-table tr:last-child td { border-bottom: none; }
+    .comparison-table tr:nth-child(even) td, .cost-table tr:nth-child(even) td, .room-table tr:nth-child(even) td { background: var(--card-bg); }
+
+    .table-responsive { width: 100%; overflow-x: auto; }
+    .table-holder { min-width: 600px; }
+
+    /* PROCESS STEPS */
+    .steps { display: flex; flex-direction: column; margin: 16px 0 24px; }
+    .step { display: flex; gap: 16px; align-items: flex-start; padding: 16px 0; border-bottom: 1px solid var(--tag-bg); }
+    .step:last-child { border-bottom: none; }
+    .step-num { width: 38px; height: 38px; background: var(--primary-color); color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 16px; font-family: sans-serif; flex-shrink: 0; }
+    .step-content h3 { margin: 0 0 4px; font-size: 16px; }
+    .step-content p { margin: 0; font-size: 14px; color: #666; }
+
+    /* REVIEWS */
+    .review-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 16px 0 28px; }
+    .review-card { padding: 18px; background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 10px; }
+    .review-stars { color: #f59e0b; font-size: 14px; margin-bottom: 8px; }
+    .review-text { font-size: 14px; color: #333; line-height: 1.6; margin-bottom: 10px; font-style: italic; }
+    .review-author { font-size: 12px; font-family: sans-serif; color: #888; font-weight: 600; }
+    .review-location { color: var(--primary-color); }
+
+    /* CALLOUTS */
+    .highlight { background: var(--tag-bg); border-left: 4px solid var(--primary-color); padding: 16px 20px; border-radius: 0 8px 8px 0; margin: 20px 0; }
+    .highlight p { margin: 0; font-size: 15px; color: var(--highlight-text); }
+    .tip { background: var(--card-bg); border-left: 4px solid var(--primary-color); padding: 14px 18px; border-radius: 0 8px 8px 0; margin: 20px 0; font-size: 14px; color: var(--tip-color); font-family: sans-serif; line-height: 1.6; }
+    .note { background: #fffbf0; border-left: 4px solid #f59e0b; padding: 14px 18px; border-radius: 0 8px 8px 0; margin: 20px 0; font-size: 14px; color: #7a4f00; font-family: sans-serif; line-height: 1.6; }
+    .warning { background: #fdecea; border-left: 4px solid #b22234; padding: 14px 18px; border-radius: 0 8px 8px 0; margin: 20px 0; font-size: 14px; color: #7c0000; font-family: sans-serif; line-height: 1.6; }
+
+    /* WHY GRID */
+    .why-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin: 16px 0 28px; }
+    .why-box { text-align: center; padding: 22px 14px; background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 10px; }
+    .why-box .icon { font-size: 28px; margin-bottom: 10px; }
+    .why-box strong { display: block; font-size: 13px; font-family: sans-serif; font-weight: 700; color: #111; margin-bottom: 6px; }
+    .why-box span { font-size: 12px; color: #666; font-family: sans-serif; line-height: 1.55; }
+
+    /* AREAS */
+    .areas-grid { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0 24px; }
+    .area-pill { padding: 6px 14px; background: var(--tag-bg); border: 1px solid var(--tag-border); border-radius: 20px; font-size: 13px; font-family: sans-serif; color: var(--primary-color); font-weight: 500; }
+
+    /* NEIGHBORHOOD GRID */
+    .neighborhood-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 16px 0 24px; }
+    .neighborhood-card { padding: 18px 16px; background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 10px; }
+    .neighborhood-card h3 { font-size: 15px; font-family: sans-serif; margin: 0 0 4px; color: var(--primary-color); font-weight: 700; }
+    .neighborhood-card .hood-tag { font-size: 11px; font-family: sans-serif; color: #888; margin-bottom: 6px; display: block; }
+    .neighborhood-card p { font-size: 13px; color: #555; margin: 0; line-height: 1.6; }
+
+    /* ACCORDION */
+    h2.accordion-header { margin: 0; border: 0; padding-bottom: 0; }
+    h3.accordion-header { margin: 0; border: 0; padding-bottom: 0; }
+
+    /* CTA BANNER */
+    .cta-banner { background: var(--primary-color); color: #fff; padding: 28px 32px; border-radius: 10px; margin: 36px 0; text-align: center; }
+    .cta-banner h2 { color: #fff; border: none; font-size: 22px; margin: 0 0 8px; padding: 0; }
+    .cta-banner p { color: rgba(255,255,255,0.88); margin: 0 0 18px; font-size: 15px; }
+    .cta-btn { display: inline-block; background: #fff; color: var(--primary-color); padding: 13px 30px; border-radius: 6px; font-weight: 700; font-family: sans-serif; font-size: 15px; text-decoration: none; margin: 4px; }
+    .cta-btn.outline { background: transparent; color: #fff; border: 2px solid #fff; }
+
+    /* NEARBY */
+    .nearby-box { background: #f9f9f9; border: 1px solid #e8e8e8; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .nearby-box h3 { margin: 0 0 8px; font-size: 16px; }
+    .nearby-box p { margin: 0; font-size: 14px; color: #555; }
+
+    /* INTERNAL LINKS */
+    .internal-links ul { margin: 12px 0 0 20px; font-size: 15px; line-height: 2.4; }
+    .internal-links a { color: var(--primary-color); }
+
+    @media (max-width: 600px) {
+        h1 { font-size: 26px; }
+        .trust-bar, .why-grid { grid-template-columns: 1fr 1fr; }
+        .floor-type-grid, .review-grid, .service-list, .neighborhood-grid { grid-template-columns: 1fr; }
+        .comparison-table, .cost-table, .room-table { font-size: 12px; }
+    }
+}

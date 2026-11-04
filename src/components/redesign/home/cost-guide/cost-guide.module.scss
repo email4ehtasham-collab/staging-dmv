@@ -1,0 +1,194 @@
+.section {
+  padding-block: var(--dmv-section-padding);
+  background: var(--dmv-color-surface-soft);
+}
+
+.header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--dmv-space-8);
+}
+
+.heading {
+  max-width: 760px;
+}
+
+.range {
+  flex: none;
+  max-width: 280px;
+  padding: var(--dmv-space-5);
+  border: var(--dmv-border-width) solid var(--dmv-color-brand-wash-strong);
+  border-radius: var(--dmv-radius-md);
+  background: var(--dmv-color-surface);
+  text-align: right;
+}
+
+.range strong {
+  display: block;
+  color: var(--dmv-color-brand);
+  font-size: var(--dmv-font-size-3xl);
+  font-weight: var(--dmv-weight-bold);
+  line-height: var(--dmv-line-tight);
+}
+
+.range span {
+  display: block;
+  margin-top: var(--dmv-space-2);
+  color: var(--dmv-color-body);
+  font-size: 14px;
+  font-weight: var(--dmv-weight-semibold);
+  letter-spacing: var(--dmv-tracking-wide);
+  line-height: var(--dmv-line-normal);
+  text-transform: uppercase;
+}
+
+.intro {
+  max-width: 1180px;
+  margin-top: var(--dmv-space-6);
+  color: var(--dmv-color-body);
+  font-size: var(--dmv-font-size-base);
+  line-height: var(--dmv-line-normal);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--dmv-space-6);
+  margin-top: var(--dmv-space-10);
+}
+
+.card {
+  min-height: 210px;
+  padding: var(--dmv-space-6);
+  border: var(--dmv-border-width) solid var(--dmv-color-border-card);
+  border-radius: var(--dmv-radius-lg);
+  background: var(--dmv-color-surface);
+  box-shadow: var(--dmv-shadow-soft);
+}
+
+.cardTitle {
+  color: var(--dmv-color-heading);
+  font-size: 18px;
+  font-weight: var(--dmv-weight-semibold);
+  line-height: var(--dmv-line-snug);
+  text-transform: uppercase;
+}
+
+.amount {
+  margin-top: var(--dmv-space-4);
+  color: var(--dmv-color-brand);
+  font-size: var(--dmv-font-size-2xl);
+  font-weight: var(--dmv-weight-bold);
+  line-height: var(--dmv-line-tight);
+}
+
+.cardLabel {
+  display: block;
+  margin-top: var(--dmv-space-2);
+  color: var(--dmv-color-muted);
+  font-size: var(--dmv-font-size-2xs);
+  font-weight: var(--dmv-weight-semibold);
+  letter-spacing: var(--dmv-tracking-wide);
+}
+
+.cardText {
+  margin-top: var(--dmv-space-3);
+  padding-top: var(--dmv-space-3);
+  color: var(--dmv-color-body);
+  font-size: var(--dmv-font-size-sm);
+  line-height: var(--dmv-line-normal);
+  border-top: var(--dmv-border-width) solid var(--dmv-color-line-soft);
+}
+
+.note {
+  margin-top: var(--dmv-space-6);
+  padding-top: var(--dmv-space-5);
+  border-top: var(--dmv-border-width) solid var(--dmv-color-line-soft);
+  color: var(--dmv-color-muted);
+  font-size: 16px;
+  line-height: var(--dmv-line-normal);
+}
+
+.cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--dmv-space-8);
+  margin-top: var(--dmv-space-8);
+  padding: var(--dmv-space-7);
+  border: var(--dmv-border-width) solid var(--dmv-color-border-card);
+  border-radius: var(--dmv-radius-lg);
+  background: var(--dmv-color-surface);
+}
+
+.cta h3 {
+  color: var(--dmv-color-heading);
+  font-size: var(--dmv-font-size-lg);
+  font-weight: var(--dmv-weight-semibold);
+  line-height: var(--dmv-line-snug);
+}
+
+.cta p {
+  max-width: 880px;
+  margin-top: var(--dmv-space-2);
+  color: var(--dmv-color-body);
+  font-size: var(--dmv-font-size-sm);
+  line-height: var(--dmv-line-normal);
+}
+
+.cta a {
+  flex: none;
+}
+
+@media (max-width: 1024px) {
+  .header {
+    align-items: flex-start;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .cta {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    gap: var(--dmv-space-5);
+  }
+
+  .range {
+    max-width: none;
+    width: 100%;
+    text-align: left;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    margin-top: var(--dmv-space-8);
+  }
+
+  .card {
+    min-height: 0;
+  }
+
+  .cta {
+    padding: var(--dmv-space-5);
+  }
+}
+
+@media (max-width: 560px) {
+  .range strong {
+    font-size: var(--dmv-font-size-2xl);
+  }
+
+  .cta a {
+    width: 100%;
+    white-space: normal;
+  }
+}

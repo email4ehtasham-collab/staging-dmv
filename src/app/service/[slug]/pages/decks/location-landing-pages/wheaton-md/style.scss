@@ -1,0 +1,454 @@
+.decks-wheaton-md {
+  --primary-color: #2973b0;
+  --card-style1-bg: #f4fbf4;
+  --card-style1-border: #c8e6c9;
+  --card-style2-bg: #f4fbf4;
+  --card-style2-border: #c8e6c9;
+
+  .hero {
+    border-left: none;
+    padding-left: 0;
+  }
+
+  h1 {
+    font-size: 36px;
+    line-height: 1.18;
+    color: #111;
+    margin-bottom: 16px;
+    border-left: 5px solid #2973b0;
+    padding-left: 18px;
+  }
+
+  h2 {
+    font-size: 26px;
+    margin: 44px 0 14px;
+    padding-bottom: 10px;
+    border-bottom-color: #c8e6c9;
+  }
+
+  .hero-location-tag {
+    background: #e3f0fa;
+    border-color: #a9cbe8;
+  }
+
+  .badge {
+    background: #e3f0fa;
+    color: #2973b0;
+    border-color: #a9cbe8;
+  }
+
+  .intro-box {
+    background: #f4fbf4;
+    border-color: #c8e6c9;
+  }
+
+  .splitlvl-banner {
+    background: linear-gradient(135deg, #2973b0, #3182bd);
+    color: #fff;
+    padding: 20px 26px;
+    border-radius: 10px;
+    margin-bottom: 32px;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+
+    .icon {
+      font-size: 32px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    h3 {
+      font-size: 16px;
+      font-family: sans-serif;
+      font-weight: 700;
+      margin: 0 0 6px;
+      color: #fff;
+    }
+
+    p {
+      font-size: 13px;
+      color: rgba(255,255,255,0.92);
+      margin: 0;
+      font-family: sans-serif;
+      line-height: 1.65;
+    }
+  }
+
+  .trust-item {
+    background: #f4fbf4;
+    border-color: #c8e6c9;
+
+    .icon {
+      font-size: 26px;
+      margin-bottom: 8px;
+    }
+
+    strong {
+      display: block;
+      font-size: 13px;
+      font-family: sans-serif;
+      font-weight: 700;
+      color: #111;
+      margin-bottom: 3px;
+    }
+
+    span {
+      font-size: 12px;
+      color: #888;
+      font-family: sans-serif;
+    }
+  }
+
+  .service-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin: 16px 0 24px;
+  }
+
+  .service-item {
+    padding: 12px 16px;
+    background: #fafafa;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: sans-serif;
+    color: #222;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+
+    &::before {
+      content: "✓";
+      color: #2973b0;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+  }
+
+  .author-box {
+    background: #f4fbf4;
+    border: 1px solid #c8e6c9;
+    border-radius: 10px;
+    padding: 20px 22px;
+    margin: 32px 0;
+    display: flex;
+    gap: 18px;
+    align-items: flex-start;
+  }
+
+  .author-avatar {
+    background: #2973b0;
+  }
+
+  .cred {
+    background: #c8e6c9;
+    color: #2973b0;
+  }
+
+  .deck-type-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin: 20px 0 28px;
+  }
+
+  .deck-type-card {
+    padding: 22px 20px;
+    background: #f4fbf4;
+    border: 1px solid #c8e6c9;
+    border-radius: 10px;
+    border-top: 4px solid #2973b0;
+
+    h3 {
+      font-size: 16px;
+      margin: 0 0 8px;
+      color: #111;
+    }
+
+    p {
+      font-size: 13px;
+      color: #555;
+      margin: 0 0 12px;
+      line-height: 1.6;
+    }
+  }
+
+  .deck-tag {
+    display: inline-block;
+    font-size: 11px;
+    font-family: sans-serif;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 20px;
+    background: #2973b0;
+    color: #fff;
+    margin-bottom: 10px;
+  }
+
+  .deck-cost {
+    font-size: 13px;
+    font-family: sans-serif;
+    font-weight: 700;
+    color: #2973b0;
+    background: #e3f0fa;
+    padding: 6px 12px;
+    border-radius: 6px;
+    display: inline-block;
+  }
+
+  .cmu-box {
+    background: #fff8f0;
+    border: 1px solid #f0cfa0;
+    border-radius: 10px;
+    padding: 20px 22px;
+    margin: 20px 0;
+
+    h3 {
+      font-size: 16px;
+      font-family: sans-serif;
+      font-weight: 700;
+      color: #8B4513;
+      margin: 0 0 10px;
+    }
+
+    ul {
+      margin: 0;
+      padding: 0 0 0 20px;
+    }
+
+    ul li {
+      font-size: 13px;
+      color: #555;
+      margin-bottom: 7px;
+      line-height: 1.75;
+    }
+  }
+
+  .spec-box {
+    h3 { color: #8B4513; }
+  }
+
+  .transit-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin: 16px 0 24px;
+  }
+
+  .transit-card {
+    padding: 18px 16px;
+    background: #f4fbf4;
+    border: 1px solid #c8e6c9;
+    border-radius: 10px;
+    border-left: 4px solid #2973b0;
+
+    h3 {
+      font-size: 15px;
+      font-family: sans-serif;
+      margin: 0 0 6px;
+      color: #2973b0;
+      font-weight: 700;
+    }
+
+    p {
+      font-size: 13px;
+      color: #555;
+      margin: 0;
+      line-height: 1.6;
+    }
+  }
+
+  .tip {
+    background: #f4fbf4;
+    border-left-color: #2973b0;
+    color: #1c5a8c;
+  }
+
+  .note {
+    background: #fffbf0;
+    border-left-color: #f59e0b;
+    color: #7a4f00;
+  }
+
+  .feature-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 12px;
+    margin: 16px 0 24px;
+  }
+
+  .feature-box {
+    text-align: center;
+    padding: 20px 14px;
+    background: #f4fbf4;
+    border: 1px solid #c8e6c9;
+    border-radius: 10px;
+
+    .icon {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    strong {
+      display: block;
+      font-size: 13px;
+      font-family: sans-serif;
+      font-weight: 700;
+      color: #111;
+      margin-bottom: 4px;
+    }
+
+    span {
+      font-size: 12px;
+      color: #666;
+      font-family: sans-serif;
+      line-height: 1.5;
+    }
+  }
+
+  .neighborhood-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin: 16px 0 24px;
+  }
+
+  .neighborhood-card {
+    padding: 18px 16px;
+    background: #f4fbf4;
+    border: 1px solid #c8e6c9;
+    border-radius: 10px;
+
+    h3 {
+      font-size: 15px;
+      font-family: sans-serif;
+      margin: 0 0 4px;
+      color: #2973b0;
+      font-weight: 700;
+    }
+
+    .hood-tag {
+      font-size: 11px;
+      font-family: sans-serif;
+      color: #888;
+      margin-bottom: 6px;
+      display: block;
+    }
+
+    p {
+      font-size: 13px;
+      color: #555;
+      margin: 0;
+      line-height: 1.6;
+    }
+  }
+
+  .steps {
+    display: flex;
+    flex-direction: column;
+    margin: 16px 0 24px;
+  }
+
+  .step {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    padding: 16px 0;
+    border-bottom: 1px solid #e3f0fa;
+
+    &:last-child { border-bottom: none; }
+  }
+
+  .step-num {
+    width: 38px;
+    height: 38px;
+    background: #2973b0;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 16px;
+    font-family: sans-serif;
+    flex-shrink: 0;
+  }
+
+  .step-content {
+    h3 {
+      margin: 0 0 4px;
+      font-size: 16px;
+    }
+
+    p {
+      margin: 0;
+      font-size: 14px;
+      color: #666;
+    }
+  }
+
+  .cost-table {
+    th {
+      background: #2973b0;
+    }
+
+    td {
+      padding: 10px 14px;
+      border: none;
+      border-bottom: 1px solid #f0f0f0;
+      color: #333;
+      vertical-align: top;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    tr:nth-child(even) td {
+      background: #f4fbf4;
+    }
+  }
+
+  .review-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin: 16px 0 28px;
+  }
+
+  .review-card {
+    padding: 18px;
+    background: #f4fbf4;
+    border: 1px solid #c8e6c9;
+    border-radius: 10px;
+  }
+
+  .review-location {
+    color: #2973b0;
+  }
+
+  .highlight {
+    background: #e3f0fa;
+    border-left-color: #2973b0;
+
+    p { color: #1c5a8c; }
+  }
+
+  .area-pill {
+    background: #e3f0fa;
+    border-color: #a9cbe8;
+  }
+
+  .cta-btn {
+    color: #2973b0;
+  }
+
+  @media (max-width: 600px) {
+    h1 { font-size: 26px; }
+    .trust-bar, .feature-grid { grid-template-columns: 1fr 1fr; }
+    .deck-type-grid, .transit-grid, .neighborhood-grid, .review-grid, .service-grid { grid-template-columns: 1fr; }
+    .splitlvl-banner { flex-direction: column; }
+  }
+}

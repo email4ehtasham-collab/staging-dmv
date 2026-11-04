@@ -1,0 +1,115 @@
+.basement-garrett-park-md {
+  --primary-color: #2973b0;
+  --card-style1-bg: #faf5f2;
+  --card-style1-border: #eed5c5;
+  --card-style2-bg: #faf5f2;
+  --card-style2-border: #eed5c5;
+
+  .badge.red {
+    background: #5d4037;
+    color: #fff;
+    border-color: #5d4037;
+  }
+
+  .hero-location-tag {
+    background: #f5ede8;
+    border-color: #d9b8a8;
+  }
+
+  .intro-box {
+    background: #faf5f2;
+    border-color: #eed5c5;
+  }
+
+  .trust-item {
+    background: #faf5f2;
+    border-color: #eed5c5;
+  }
+
+  .service-item::before {
+    color: #5d4037;
+  }
+
+  .historic-banner {
+    background: linear-gradient(135deg, #4e342e, #5d4037);
+    color: #fff;
+    padding: 20px 26px;
+    border-radius: 10px;
+    margin-bottom: 32px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    .icon { font-size: 32px; flex-shrink: 0; }
+    h3 { font-size: 16px; font-family: sans-serif; font-weight: 700; margin: 0 0 4px; color: #fff; }
+    p { font-size: 13px; color: rgba(255,255,255,0.92); margin: 0; font-family: sans-serif; line-height: 1.6; }
+  }
+
+  .older-home-box {
+    background: #fff8f0;
+    border: 1px solid #f0cfa0;
+    border-radius: 10px;
+    padding: 20px 22px;
+    margin: 20px 0;
+
+    h3 { font-size: 16px; font-family: sans-serif; font-weight: 700; color: #8B4513; margin: 0 0 10px; }
+    ul { margin: 0; padding: 0 0 0 20px; }
+    ul li { font-size: 13px; color: #555; margin-bottom: 7px; line-height: 1.75; }
+  }
+
+  .highlight {
+    background: #f5ede8;
+    border-left-color: #5d4037;
+
+    p {
+      color: #3e2a22;
+    }
+  }
+
+  .note {
+    background: #fffbf0;
+    border-left-color: #f59e0b;
+    color: #7a4f00;
+  }
+
+  .tip {
+    background: #eef5fb;
+    border-left-color: #2973b0;
+    color: #0d3b6e;
+  }
+
+  .area-pill {
+    background: #f5ede8;
+    border-color: #d9b8a8;
+  }
+
+  .review-card {
+    background: #faf5f2;
+    border-color: #eed5c5;
+  }
+
+  .review-location {
+    color: #5d4037;
+  }
+
+  .cta-btn {
+    color: #5d4037;
+  }
+
+  .cta-btn.outline {
+    color: #fff;
+  }
+
+  .author-avatar {
+    background: #5d4037;
+  }
+
+  .cred {
+    background: #eed5c5;
+    color: #5d4037;
+  }
+
+  .cost-table th {
+    background: #5d4037;
+  }
+}

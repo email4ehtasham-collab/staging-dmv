@@ -1,0 +1,164 @@
+.flooring-chevy-chase-md {
+  --primary-color: #2973b0;
+  --card-bg: #f4f7fb;
+  --card-border: #c5d0df;
+  --tag-bg: #e8edf4;
+  --tag-border: #9daec4;
+  --highlight-text: #0f2235;
+  --tip-color: #0f2235;
+
+  /* PAGE-SPECIFIC: CHEVY CHASE BANNER */
+  .cc-banner {
+    background: linear-gradient(135deg, #1a3a5c, #2a4f7a);
+    color: #fff;
+    padding: 20px 26px;
+    border-radius: 10px;
+    margin-bottom: 32px;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+
+    .icon {
+      font-size: 32px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    h3 {
+      font-size: 16px;
+      font-family: sans-serif;
+      font-weight: 700;
+      margin: 0 0 6px;
+      color: #fff;
+    }
+
+    p {
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.92);
+      margin: 0;
+      font-family: sans-serif;
+      line-height: 1.65;
+    }
+  }
+
+  /* PAGE-SPECIFIC: VILLAGE GRID */
+  .village-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 12px;
+    margin: 16px 0 24px;
+  }
+
+  .village-card {
+    padding: 16px 14px;
+    border-radius: 10px;
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+
+    h3 {
+      font-size: 13px;
+      font-family: sans-serif;
+      font-weight: 700;
+      color: var(--primary-color);
+      margin: 0 0 4px;
+    }
+
+    .v-tag {
+      font-size: 10px;
+      font-family: sans-serif;
+      font-weight: 700;
+      padding: 2px 7px;
+      border-radius: 10px;
+      display: inline-block;
+      margin-bottom: 5px;
+      color: #fff;
+      background: var(--primary-color);
+
+      &.moco {
+        background: #2973b0;
+      }
+    }
+
+    p {
+      font-size: 12px;
+      color: #555;
+      margin: 0;
+      line-height: 1.55;
+    }
+  }
+
+  /* PAGE-SPECIFIC: SUBFLOOR BOX */
+  .subfloor-box {
+    background: #fff8f0;
+    border: 1px solid #f0cfa0;
+    border-radius: 10px;
+    padding: 20px 22px;
+    margin: 20px 0;
+
+    h3 {
+      font-size: 16px;
+      font-family: sans-serif;
+      font-weight: 700;
+      color: #7a3f00;
+      margin: 0 0 10px;
+    }
+
+    ul {
+      margin: 0;
+      padding: 0 0 0 20px;
+
+      li {
+        font-size: 13px;
+        color: #555;
+        margin-bottom: 8px;
+        line-height: 1.75;
+      }
+    }
+  }
+
+  /* PAGE-SPECIFIC: ESTATE BOX */
+  .estate-box {
+    background: var(--card-bg);
+    border: 2px solid var(--primary-color);
+    border-radius: 10px;
+    padding: 20px 22px;
+    margin: 20px 0;
+
+    h3 {
+      font-size: 16px;
+      font-family: sans-serif;
+      font-weight: 700;
+      color: var(--primary-color);
+      margin: 0 0 10px;
+    }
+
+    ul {
+      margin: 0;
+      padding: 0 0 0 20px;
+
+      li {
+        font-size: 13px;
+        color: #444;
+        margin-bottom: 8px;
+        line-height: 1.75;
+      }
+    }
+  }
+
+  /* PAGE-SPECIFIC: ESTATE BADGE */
+  .badge.estate {
+    background: var(--primary-color);
+    color: #fff;
+    border-color: var(--primary-color);
+  }
+
+  @media (max-width: 600px) {
+    .cc-banner {
+      flex-direction: column;
+    }
+
+    .village-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}

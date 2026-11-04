@@ -1,0 +1,13 @@
+.blog-card{
+    background: #FFFFFF; border: 1px solid #B1B1B1; border-radius: 12px; padding: 20px; font-size: 16px; display: grid; grid-template-columns: 4fr 5fr; grid-gap: 40px; align-items: center;
+
+    .blog-image{height: 320px; overflow: hidden; border-radius: 10px; margin-bottom: 20px;}
+    h4 a{color: var(--bs-heading-color); text-decoration: none; }
+    .read-more-button{transition: 0.2s all; width: fit-content; cursor: pointer}
+    .read-more-button svg{transform: rotate(-40deg); transition: 0.2s all}
+    .read-more-button:hover svg{transform: rotate(-40deg) translate(5px, -2px);}
+
+    @media(max-width: 768px){
+        grid-template-columns: 1fr;
+    }
+}

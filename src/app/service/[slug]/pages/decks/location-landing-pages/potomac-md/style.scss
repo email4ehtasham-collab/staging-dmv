@@ -1,0 +1,224 @@
+.decks-potomac-md {
+  --primary-color: #2973b0;
+  --card-style1-bg: #fdecea;
+  --card-style1-border: #f5c6c2;
+  --card-style2-bg: #fdf8f7;
+  --card-style2-border: #f0dedd;
+
+  .hero-location-tag {
+    background: #fdecea;
+    border-color: #f5c6c2;
+  }
+
+  .intro-box {
+    background: #fdf8f7;
+    border-color: #f0dedd;
+  }
+
+  .trust-item {
+    background: #fdf8f7;
+    border-color: #f0dedd;
+  }
+
+  .highlight {
+    background: #fdecea;
+    border-left-color: #c0392b;
+
+    p { color: #7c0000; }
+  }
+
+  .note {
+    background: #fffbf0;
+    border-left-color: #f59e0b;
+    color: #7a4f00;
+  }
+
+  .tip {
+    background: #eef5fb;
+    border-left-color: #2973b0;
+    color: #0d3b6e;
+  }
+
+  .area-pill {
+    background: #fdecea;
+    border-color: #f5c6c2;
+  }
+
+  .review-card {
+    background: #fdf8f7;
+    border-color: #f0dedd;
+  }
+
+  .review-location {
+    color: #c0392b;
+  }
+
+  .cta-btn {
+    color: #c0392b;
+  }
+
+  .author-avatar {
+    background: #c0392b;
+  }
+
+  .cred {
+    background: #f0dedd;
+    color: #c0392b;
+  }
+
+  .cost-table th {
+    background: #c0392b;
+  }
+
+  .material-table th {
+    background: #c0392b;
+  }
+
+  .estate-banner {
+    background: linear-gradient(135deg, #c0392b, #d44032);
+    color: #fff;
+    padding: 20px 26px;
+    border-radius: 10px;
+    margin-bottom: 32px;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+
+    .icon {
+      font-size: 32px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    h3 {
+      font-size: 16px;
+      font-family: sans-serif;
+      font-weight: 700;
+      margin: 0 0 6px;
+      color: #fff;
+    }
+
+    p {
+      font-size: 13px;
+      color: rgba(255,255,255,0.92);
+      margin: 0;
+      font-family: sans-serif;
+      line-height: 1.65;
+    }
+  }
+
+  .service-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .service-item {
+    padding: 12px 16px;
+    background: #fafafa;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    font-size: 14px;
+
+    &::before {
+      content: "✓";
+      color: #c0392b;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+  }
+
+  .deck-type-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .deck-type-card {
+    padding: 22px 20px;
+    background: #fdf8f7;
+    border: 1px solid #f0dedd;
+    border-radius: 10px;
+    border-top: 4px solid #c0392b;
+
+    h3 {
+      font-size: 16px;
+      margin: 0 0 8px;
+      color: #111;
+    }
+
+    p {
+      font-size: 13px;
+      color: #555;
+      margin: 0 0 12px;
+      line-height: 1.6;
+    }
+  }
+
+  .deck-tag {
+    display: inline-block;
+    font-size: 11px;
+    font-family: sans-serif;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 20px;
+    background: #c0392b;
+    color: #fff;
+    margin-bottom: 10px;
+  }
+
+  .deck-cost {
+    font-size: 13px;
+    font-family: sans-serif;
+    font-weight: 700;
+    color: #c0392b;
+    background: #fdecea;
+    padding: 6px 12px;
+    border-radius: 6px;
+    display: inline-block;
+  }
+
+  .pool-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+
+  .pool-card {
+    padding: 18px 16px;
+    background: #fdf8f7;
+    border: 1px solid #f0dedd;
+    border-radius: 10px;
+
+    h3 {
+      font-size: 15px;
+      font-family: sans-serif;
+      margin: 0 0 6px;
+      color: #c0392b;
+      font-weight: 700;
+    }
+
+    p {
+      font-size: 13px;
+      color: #555;
+      margin: 0;
+      line-height: 1.6;
+    }
+  }
+
+  .feature-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 12px;
+  }
+
+  .feature-box {
+    text-align: center;
+    padding: 20px 14px;
+    background: #fdf8f7;
+    border: 1px solid #f0dedd;
+    border-radius: 10px;
+  }
+
+  @media (max-width: 600px) {
+    .trust-bar, .feature-grid { grid-template-columns: 1fr 1fr; }
+    .deck-type-grid, .pool-grid, .review-grid, .service-grid { grid-template-columns: 1fr; }
+    .estate-banner { flex-direction: column; }
+  }
+}

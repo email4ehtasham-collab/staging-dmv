@@ -1,0 +1,70 @@
+.roofing-washington-dc {
+
+    .dc-box {
+        background: #e8ecf5;
+        border: 2px solid #00205b;
+        border-radius: 10px;
+        padding: 22px;
+        margin: 30px 0;
+    }
+    .dc-box h3 {
+        color: #00205b;
+        margin-top: 0;
+    }
+    .dc-box ul {
+        margin: 10px 0 0 20px;
+        line-height: 2.1;
+    }
+    .dc-box ul li {
+        font-size: 13px;
+        color: #555;
+        margin-bottom: 6px;
+        line-height: 1.7;
+    }
+
+    .hprb-box {
+        background: #fff8f0;
+        border: 1px solid #f0cfa0;
+        border-radius: 10px;
+        padding: 20px 22px;
+        margin: 20px 0;
+    }
+    .hprb-box h3 {
+        color: #7a3f00;
+        margin-top: 0;
+        font-size: 15px;
+    }
+    .hprb-box p {
+        font-size: 13px;
+        color: #555;
+        margin: 0;
+        line-height: 1.7;
+    }
+
+    .license-box {
+        background: #e8ecf5;
+        border: 2px solid #00205b;
+        border-radius: 10px;
+        padding: 18px 22px;
+        margin: 20px 0;
+    }
+    .license-box h3 {
+        font-size: 15px;
+        font-family: sans-serif;
+        font-weight: 700;
+        color: #00205b;
+        margin: 0 0 8px;
+    }
+    .license-box p {
+        font-size: 13px;
+        color: #333;
+        margin: 0;
+        line-height: 1.7;
+    }
+
+    @media (max-width: 600px) {
+        .dc-box,
+        .hprb-box,
+        .license-box { padding: 16px 14px; }
+    }
+}

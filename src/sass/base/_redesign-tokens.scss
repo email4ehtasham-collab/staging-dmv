@@ -1,0 +1,85 @@
+:root {
+    --dmv-font-body: var(--font-jakarta), Arial, sans-serif;
+
+    --dmv-color-brand: #c63940;
+    --dmv-color-brand-dark: #c5221f;
+    --dmv-color-accent: #d4af37;
+    --dmv-color-heading: #0f172a;
+    --dmv-color-ink: #0c1524;
+    --dmv-color-dark-blue: #1e293b;
+    --dmv-color-body: #4b5563;
+    --dmv-color-muted: #64748b;
+    --dmv-color-faint: #9ca3af;
+    --dmv-color-line-soft: #e2e8f0;
+    --dmv-color-border-card: #e4e9f1;
+    --dmv-color-surface: #ffffff;
+    --dmv-color-surface-soft: #f8fafc;
+    --dmv-color-inverse: #ffffff;
+    --dmv-color-inverse-soft: #d1d5db;
+    --dmv-color-brand-wash: rgba(197, 34, 31, 0.1);
+    --dmv-color-brand-wash-strong: rgba(197, 34, 31, 0.2);
+
+    --dmv-font-size-2xs: 14px;
+    --dmv-font-size-sm: 16px;
+    --dmv-font-size-base: 16px;
+    --dmv-font-size-lg: 20px;
+    --dmv-font-size-xl: 24px;
+    --dmv-font-size-2xl: 28px;
+    --dmv-font-size-3xl: 32px;
+    --dmv-font-size-4xl: 40px;
+    --dmv-font-size-5xl: 48px;
+    --dmv-line-tight: 1;
+    --dmv-line-snug: 1.25;
+    --dmv-line-normal: 1.6;
+    --dmv-line-relaxed: 1.75;
+    --dmv-weight-medium: 500;
+    --dmv-weight-semibold: 600;
+    --dmv-weight-bold: 700;
+    --dmv-weight-extrabold: 800;
+    --dmv-tracking-wide: 0.04em;
+
+    --dmv-space-1: 4px;
+    --dmv-space-2: 8px;
+    --dmv-space-3: 12px;
+    --dmv-space-4: 16px;
+    --dmv-space-5: 20px;
+    --dmv-space-6: 24px;
+    --dmv-space-7: 28px;
+    --dmv-space-8: 32px;
+    --dmv-space-9: 36px;
+    --dmv-space-10: 40px;
+    --dmv-space-12: 48px;
+
+    --dmv-radius-sm: 8px;
+    --dmv-radius-md: 12px;
+    --dmv-radius-lg: 16px;
+    --dmv-radius-xl: 24px;
+    --dmv-radius-pill: 999px;
+
+    --dmv-shadow-soft: 0 8px 24px rgba(15, 23, 42, 0.06);
+    --dmv-shadow-card: 0 24px 60px rgba(15, 23, 42, 0.12);
+
+    --dmv-section-padding: 80px;
+    --dmv-icon-size-xs: 22px;
+    --dmv-icon-size-sm: 20px;
+    --dmv-border-width: 1px;
+    --dmv-focus-ring: 0 0 0 3px rgba(198, 57, 64, 0.35);
+}
+
+@media (max-width: 1200px) {
+    :root {
+        --dmv-section-padding: 64px;
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        --dmv-section-padding: 48px;
+    }
+}
+
+@media (max-width: 560px) {
+    :root {
+        --dmv-section-padding: 40px;
+    }
+}

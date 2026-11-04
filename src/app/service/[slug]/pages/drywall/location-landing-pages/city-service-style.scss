@@ -1,0 +1,138 @@
+.city-service-detail-page{
+    --card-style1-bg: #eef5fb;
+    --card-style1-border: #a9cbe8;
+    --card-style2-bg: #ebf6ff;
+    --card-style2-border: #cbe5fb;
+    --accent-color: #7b5548;
+    --accent-dark: #3b2314;
+    --accent-tint: #f5ede8;
+    --accent-border: #eadbd3;
+
+    padding-top: 120px;
+
+    /* BREADCRUMB */
+    .breadcrumb { font-size: 13px; color: #888; margin-bottom: 28px; }
+    .breadcrumb a { color: var(--primary-color); text-decoration: none; }
+    .breadcrumb span { margin: 0 6px; }
+
+    /* HERO */
+    .hero { border-left: 4px solid var(--primary-color); padding-left: 20px; margin-bottom: 36px; }
+    h1 { font-size: 34px; font-weight: 700; line-height: 1.2; color: #111; margin-bottom: 12px; }
+    .hero-meta { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 14px; }
+    .hero-location-tag { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-family: sans-serif; font-weight: 600; color: var(--accent-dark); background: var(--accent-tint); padding: 4px 12px; border-radius: 20px; margin-bottom: 14px; border: 1px solid var(--accent-border); }
+    .badge { font-size: 12px; font-weight: 600; padding: 4px 12px; border-radius: 20px; background: #ebf6ff; color: var(--primary-color); border: 1px solid #cbe5fb; }
+    .badge.dark { background: #1a1a1a; color: #fff; border-color: #1a1a1a; }
+    .badge.key { background: var(--primary-color); color: #fff; border-color: var(--primary-color); }
+
+    .main-image{margin-bottom: 32px; height: 500px; border-radius: 20px; overflow: hidden}
+
+    /* INTRO */
+    .intro-box, .intro { font-size: 17px; line-height: 1.8; color: #333; margin-bottom: 32px; padding: 20px 24px; background: #ebf6ff; border-radius: 8px; border: 1px solid #cbe5fb; }
+
+    /* SECTIONS */
+    h2 { font-size: 24px; font-weight: 700; color: #111; margin: 40px 0 14px; border-bottom: 2px solid var(--accent-border); padding-bottom: 8px; }
+    h3 { font-size: 18px; font-weight: 700; color: #222; margin: 24px 0 10px; }
+    p { margin-bottom: 16px; color: #333; }
+
+    /* BANNER */
+    .banner {background: var(--accent-tint); border-left: 5px solid var(--accent-color); padding: 22px 24px; border-radius: 8px; margin: 22px 0; }
+    .banner .icon { font-size: 32px; flex-shrink: 0; }
+    .banner h3 { margin: 0 0 6px; font-size: 16px; font-family: sans-serif; font-weight: 700; color: #111; }
+    .banner p { margin: 0; font-size: 14px; color: #34495e; line-height: 1.65; }
+
+    /* TRUST BOXES */
+    .trust-bar { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin: 16px 0 28px; }
+    .trust-item { text-align: center; padding: 18px 12px; background: #ebf6ff; border: 1px solid #cbe5fb; border-radius: 8px; font-weight: 700; font-size: 13px; font-family: sans-serif; color: #111; }
+    .trust-item .icon { font-size: 26px; margin-bottom: 8px; display: block; }
+    .trust-item span { display: block; font-size: 12px; color: #777; font-family: sans-serif; font-weight: 400; }
+
+    /* SERVICE GRID / CARDS */
+    .service-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin: 16px 0 28px; }
+    .service-card { padding: 18px 16px; background: var(--card-style1-bg); border: 1px solid var(--card-style1-border); border-radius: 10px; border-top: 3px solid var(--primary-color); }
+    .service-card h3 { font-size: 15px; font-family: sans-serif; font-weight: 700; color: #111; margin: 0 0 8px; }
+    .service-card p { font-size: 13px; color: #555; margin: 0; line-height: 1.65; }
+    .service-card ul { margin: 8px 0 0 18px; padding: 0; font-size: 13px; color: #555; line-height: 1.7; }
+
+    /* WARNING GRID */
+    .warning-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 16px 0 28px; }
+    .warning { padding: 18px; background: var(--card-style2-bg); border: 1px solid var(--card-style2-border); border-radius: 10px; }
+    .warning h3 { margin: 0 0 6px; font-size: 15px; font-family: sans-serif; color: #111; }
+    .warning p { margin: 0; font-size: 13px; color: #555; line-height: 1.6; }
+
+    /* COST TABLE */
+    .cost-table { width: 100%; border-collapse: collapse; margin: 16px 0 28px; font-family: sans-serif; font-size: 14px; }
+    .cost-table th { background: var(--primary-color); color: #fff; padding: 10px 14px; text-align: left; }
+    .cost-table td { padding: 10px 14px; border: 1px solid #cbe5fb; color: #333; vertical-align: top; }
+    .cost-table tr:nth-child(even) td { background: #f5faff; }
+
+    .table-responsive{
+        width: 100%;
+        overflow-x: auto;
+    }
+    .table-holder{
+        min-width: 600px;
+    }
+
+    /* PROCESS STEPS */
+    .steps { display: flex; flex-direction: column; gap: 0; margin: 16px 0 24px; }
+    .step { display: flex; gap: 16px; align-items: flex-start; padding: 16px 0; border-bottom: 1px solid #f0f0f0; }
+    .step:last-child { border-bottom: none; }
+    .step-num { width: 36px; height: 36px; background: var(--primary-color); color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 15px; flex-shrink: 0; }
+    .step-content h3 { margin: 0 0 4px; font-size: 16px; }
+    .step-content p { margin: 0; font-size: 14px; color: #555; }
+
+    /* HIGHLIGHT */
+    .highlight { background: var(--accent-tint); border-left: 4px solid var(--accent-color); padding: 16px 20px; border-radius: 0 8px 8px 0; margin: 20px 0; }
+    .highlight p { margin: 0; font-size: 15px; color: var(--accent-dark); }
+
+    /* AREAS */
+    .areas-grid { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0 24px; }
+    .area-pill { padding: 6px 14px; background: #ebf6ff; border: 1px solid #cbe5fb; border-radius: 20px; font-size: 13px; color: var(--primary-color); font-weight: 500; }
+
+    h2.accordion-header{margin: 0; border: 0; padding-bottom: 0; }
+    h3.accordion-header{margin: 0; border: 0; padding-bottom: 0; }
+
+    /* CTA BANNER */
+    .cta-banner { background: var(--primary-color); color: #fff; padding: 28px 32px; border-radius: 10px; margin: 36px 0; text-align: center; }
+    .cta-banner h2 { color: #fff; border: none; font-size: 22px; margin: 0 0 8px; }
+    .cta-banner p { color: rgba(255,255,255,0.88); margin: 0 0 18px; font-size: 15px; }
+    .cta-btn { display: inline-block; background: #fff; color: var(--primary-color); padding: 12px 28px; border-radius: 6px; font-weight: 700; font-size: 15px; text-decoration: none; margin: 4px; }
+    .cta-btn.outline { background: transparent; color: #fff; border: 2px solid #fff; }
+
+    /* AUTHOR BOX */
+    .author-box {
+        background: #f8fafc; border: 1px solid #e2e8f0;
+        border-radius: 10px; padding: 20px 22px; margin: 32px 0;
+        display: flex; gap: 18px; align-items: flex-start;
+    }
+    .author-avatar {
+        width: 60px; height: 60px; border: 1px solid #c3cbd6;
+        border-radius: 50%; display: flex; align-items: center;
+        justify-content: center; font-size: 22px; flex-shrink: 0;
+    }
+    .author-info h4 { font-size: 15px; font-family: sans-serif; font-weight: 700; color: #111; margin: 0 0 4px; }
+    .author-info p { font-size: 13px; color: #555; margin: 0; line-height: 1.6; font-family: sans-serif; }
+    .author-creds { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+    .cred { font-size: 11px; font-family: sans-serif; font-weight: 600; padding: 2px 8px; border-radius: 20px; background: #e2e8f0; color: #2d3748; }
+
+    /* INTERNAL LINKS */
+    .internal-links ul { margin: 12px 0 0 20px; font-size: 15px; line-height: 2.2; }
+    .internal-links li a { color: var(--primary-color); }
+
+    /* SOURCE NOTE */
+    .source-note { font: 12px/1.6 sans-serif; color: #666; background: #f7f7f7; border: 1px solid #ddd; padding: 14px 16px; border-radius: 8px; margin-top: 28px; }
+
+    @media (max-width: 1024px) {
+        .trust-bar { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 600px) {
+        h1 { font-size: 26px; }
+        .trust-bar { grid-template-columns: 1fr; }
+        .service-grid { grid-template-columns: 1fr; }
+        .warning-grid { grid-template-columns: 1fr; }
+        .cost-table { font-size: 12px; }
+        .banner { flex-direction: column; }
+        .cta-banner { padding: 28px 16px; }
+        .cta-btn { width: 100%; }
+    }
+}

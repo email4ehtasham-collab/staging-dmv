@@ -1,0 +1,151 @@
+.basement-washington-dc {
+  --primary-color: #2973b0;
+  --card-style1-bg: #e8ecf5;
+  --card-style1-border: #a0b0d0;
+  --card-style2-bg: #f2f4f9;
+  --card-style2-border: #c0ccdf;
+
+  .badge.red {
+    background: #fdecea;
+    color: #b22234;
+    border: 1px solid #f5c6c2;
+  }
+
+  .hero-location-tag {
+    background: #e8ecf5;
+    border-color: #a0b0d0;
+  }
+
+  .intro-box {
+    background: #f2f4f9;
+    border-color: #c0ccdf;
+  }
+
+  .trust-item {
+    background: #f2f4f9;
+    border-color: #c0ccdf;
+  }
+
+  .service-item::before {
+    color: #00205b;
+  }
+
+  .dlcp-banner {
+    background: linear-gradient(135deg, #00205b, #003580);
+    color: #fff;
+    padding: 20px 26px;
+    border-radius: 10px;
+    margin-bottom: 32px;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+
+    .icon { font-size: 32px; flex-shrink: 0; margin-top: 2px; }
+    h3 { font-size: 16px; font-family: sans-serif; font-weight: 700; margin: 0 0 6px; color: #fff; }
+    p { font-size: 13px; color: rgba(255,255,255,0.92); margin: 0; font-family: sans-serif; line-height: 1.65; }
+  }
+
+  .english-basement-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin: 16px 0 24px;
+  }
+
+  .eb-card {
+    padding: 18px 16px;
+    background: #f2f4f9;
+    border: 1px solid #c0ccdf;
+    border-radius: 10px;
+
+    h3 { font-size: 15px; font-family: sans-serif; margin: 0 0 6px; color: #00205b; font-weight: 700; }
+    p { font-size: 13px; color: #555; margin: 0; line-height: 1.6; }
+  }
+
+  .highlight {
+    background: #e8ecf5;
+    border-left-color: #00205b;
+
+    p {
+      color: #001238;
+    }
+  }
+
+  .note {
+    background: #fffbf0;
+    border-left-color: #f59e0b;
+    color: #7a4f00;
+  }
+
+  .tip {
+    background: #eef5fb;
+    border-left-color: #2973b0;
+    color: #0d3b6e;
+  }
+
+  .warning {
+    background: #fdecea;
+    border-left-color: #b22234;
+    padding: 14px 18px;
+    border-radius: 0 8px 8px 0;
+    margin: 20px 0;
+    font-size: 14px;
+    color: #7c0000;
+    font-family: sans-serif;
+    line-height: 1.6;
+  }
+
+  .area-pill {
+    background: #e8ecf5;
+    border-color: #a0b0d0;
+  }
+
+  .review-card {
+    background: #f2f4f9;
+    border-color: #c0ccdf;
+  }
+
+  .review-location {
+    color: #00205b;
+  }
+
+  .cta-btn {
+    color: #00205b;
+  }
+
+  .cta-btn.outline {
+    color: #fff;
+  }
+
+  .author-avatar {
+    background: #00205b;
+  }
+
+  .cred {
+    background: #c0ccdf;
+    color: #00205b;
+  }
+
+  .cred.red {
+    background: #fdecea;
+    color: #b22234;
+  }
+
+  .cost-table th {
+    background: #00205b;
+  }
+
+  .spec-box {
+    background: #fff8f0;
+    border-color: #f0cfa0;
+
+    h3 {
+      color: #8B4513;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .dlcp-banner { flex-direction: column; }
+    .service-grid, .english-basement-grid, .use-type-grid, .neighborhood-grid, .review-grid { grid-template-columns: 1fr; }
+  }
+}

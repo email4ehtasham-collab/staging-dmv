@@ -1,8 +1,0 @@
-1:"$Sreact.fragment"
-2:I[90484,[],"ViewportBoundary"]
-4:I[90484,[],"MetadataBoundary"]
-5:"$Sreact.suspense"
-7:I[86869,[],"IconMark"]
-0:{"buildId":"sAGgTYy2l1s-v3IjHcEPK","rsc":["$","$1","h",{"children":[null,["$","$L2",null,{"children":"$@3"}],["$","div",null,{"hidden":true,"children":["$","$L4",null,{"children":["$","$5",null,{"name":"Next.Metadata","children":"$@6"}]}]}],null]}],"loading":null,"isPartial":false}
-3:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
-6:[["$","title","0",{"children":"Patio Installation & Design in Chevy Chase, MD | Estate Patio & Outdoor Living Contractor | DMV General Contracting Group"}],["$","meta","1",{"name":"description","content":"Professional patio installation and design in Chevy Chase, MD — custom stone patios, brick patios, pergolas and outdoor living for Chevy Chase's estate colonials and historic homes. All 6 permit jurisdictions confirmed by parcel. Period-appropriate materials. MHIC #156178. Free consultation. Call +1 240-730-1292!"}],["$","link","2",{"rel":"canonical","href":"https://www.dmv-gc.com/service/patios/chevy-chase-md"}],["$","meta","3",{"name":"google-site-verification","content":"FD2Eg66WLTKVmM3d-ImTnaOLj1F2LYcz0myqfIA7yAY"}],["$","link","4",{"rel":"icon","href":"/favicon.ico?719fd4117d7f2cb7","type":"image/x-icon","sizes":"32x31"}],["$","$L7","5",{}]]

@@ -1,0 +1,61 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--dmv-space-2, 8px);
+  min-height: 52px;
+  padding-inline: var(--dmv-space-8, 32px);
+  border-radius: var(--btn-radius, 12px);
+  border: 1px solid transparent;
+  font-family: var(--dmv-font-body, var(--primary-font));
+  font-size: var(--dmv-font-size-base, 16px);
+  font-weight: var(--dmv-weight-semibold, 600);
+  line-height: var(--dmv-line-snug, 1.25);
+  text-decoration: none;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+  white-space: nowrap;
+}
+
+.primary {
+  background: var(--dmv-color-brand, #c63940);
+  color: var(--dmv-color-inverse, #ffffff);
+}
+
+.primary:hover {
+  background: var(--dmv-color-brand-dark, #c5221f);
+  color: var(--dmv-color-inverse, #ffffff);
+}
+
+.secondary {
+  background: var(--dmv-color-dark-blue, #000000);
+  border-color: var(--dmv-color-heading, #0f172a);
+  color: var(--dmv-color-inverse, #fff);
+}
+
+.secondary:hover {
+  background: var(--dmv-color-heading, #000000);
+  border-color: var(--dmv-color-heading, #0f172a);
+  color: var(--dmv-color-inverse, #fff);
+}
+
+.button:focus-visible {
+  outline: none;
+  box-shadow: var(--dmv-focus-ring);
+}
+
+.iconLeft,
+.iconRight {
+  display: inline-flex;
+  align-items: center;
+}
+
+.iconLeft svg,
+.iconRight svg {
+  width: 18px;
+  height: 18px;
+}
+
+.label {
+  display: inline-flex;
+  align-items: center;
+}

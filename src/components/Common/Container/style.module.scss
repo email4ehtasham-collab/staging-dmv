@@ -1,0 +1,4 @@
+.container {
+  width: min(calc(100% - (var(--container-gutter, 80px) * 2)), var(--container-max, 1440px));
+  margin-inline: auto;
+}

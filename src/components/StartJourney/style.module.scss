@@ -1,0 +1,13 @@
+.start-journey{
+    background: var(--primary-color) url('../../../public/images/start-journey-bg.png'); color: white; position: relative; background-position: bottom center; background-size: cover;
+
+    h2{font-size: 42px}
+    .contact-button{background: white; color: var(--primary-color)}
+    .container{display: grid; align-content: center; justify-items: center; grid-gap: 20px}
+
+    @media (max-width: 768px){
+        h2{font-size: 24px; text-align: center}
+        .container{grid-gap: 10px}
+
+    }
+}

@@ -1,0 +1,139 @@
+.flooring-rockville-md {
+  --primary-color: #2973b0;
+  --card-bg: #f0fbfd;
+  --card-border: #b2dde5;
+  --tag-bg: #e0f4f7;
+  --tag-border: #80cdd8;
+  --highlight-text: #06414d;
+  --tip-color: #06414d;
+
+  /* PAGE-SPECIFIC: ROCKVILLE BANNER */
+  .rockville-banner {
+    background: linear-gradient(135deg, #0b7285, #0d8ea5);
+    color: #fff;
+    padding: 20px 26px;
+    border-radius: 10px;
+    margin-bottom: 32px;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+
+    .icon {
+      font-size: 32px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    h3 {
+      font-size: 16px;
+      font-family: sans-serif;
+      font-weight: 700;
+      margin: 0 0 6px;
+      color: #fff;
+    }
+
+    p {
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.92);
+      margin: 0;
+      font-family: sans-serif;
+      line-height: 1.65;
+    }
+  }
+
+  /* PAGE-SPECIFIC: TWO-ERA GRID */
+  .two-era-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin: 16px 0 24px;
+  }
+
+  .era-card {
+    padding: 18px 16px;
+    border-radius: 10px;
+
+    &.newer {
+      background: #e0f4f7;
+      border: 2px solid var(--primary-color);
+
+      h3 {
+        color: var(--primary-color);
+      }
+
+      .era-tag {
+        background: var(--primary-color);
+      }
+    }
+
+    &.older {
+      background: #efebe9;
+      border: 2px solid #5d4037;
+
+      h3 {
+        color: #5d4037;
+      }
+
+      .era-tag {
+        background: #5d4037;
+      }
+    }
+
+    h3 {
+      font-size: 15px;
+      font-family: sans-serif;
+      font-weight: 700;
+      margin: 0 0 6px;
+    }
+
+    .era-tag {
+      font-size: 11px;
+      font-family: sans-serif;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 10px;
+      display: inline-block;
+      margin-bottom: 8px;
+      color: #fff;
+    }
+
+    ul {
+      margin: 0;
+      padding: 0 0 0 16px;
+
+      li {
+        font-size: 12px;
+        color: #555;
+        margin-bottom: 4px;
+        line-height: 1.6;
+      }
+    }
+  }
+
+  /* PAGE-SPECIFIC: NEIGHBORHOOD TAGS */
+  .neighborhood-card .juris-tag {
+    font-size: 10px;
+    font-family: sans-serif;
+    font-weight: 700;
+    padding: 2px 7px;
+    border-radius: 10px;
+    display: inline-block;
+    margin-bottom: 6px;
+    color: #fff;
+    background: var(--primary-color);
+
+    &.moco {
+      background: #2973b0;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .rockville-banner {
+      flex-direction: column;
+    }
+
+    .two-era-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+}

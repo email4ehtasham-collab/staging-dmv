@@ -1,0 +1,18 @@
+.kitchen-silver-spring-md {
+
+    .home-type-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin: 16px 0 24px; }
+    .home-type-box { padding: 16px 14px; background: #ebf6ff; border: 1px solid #cbe5fb; border-radius: 10px; text-align: center; }
+    .home-type-box .icon { font-size: 24px; margin-bottom: 8px; }
+    .home-type-box h3 { font-size: 13px; font-family: sans-serif; font-weight: 700; color: var(--primary-color); margin: 0 0 5px; }
+    .home-type-box p { font-size: 12px; color: #666; margin: 0; line-height: 1.5; }
+
+    .neighborhood-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 16px 0 24px; }
+    .neighborhood-card { padding: 18px 16px; background: #ebf6ff; border: 1px solid #cbe5fb; border-radius: 10px; }
+    .neighborhood-card h3 { font-size: 15px; font-family: sans-serif; margin: 0 0 6px; color: var(--primary-color); font-weight: 700; }
+    .neighborhood-card p { font-size: 13px; color: #555; margin: 0; line-height: 1.6; }
+
+    @media (max-width: 600px) {
+        .home-type-grid { grid-template-columns: 1fr; }
+        .neighborhood-grid { grid-template-columns: 1fr; }
+    }
+}

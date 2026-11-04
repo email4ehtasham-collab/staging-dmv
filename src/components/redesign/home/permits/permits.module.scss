@@ -1,0 +1,173 @@
+.section {
+  padding-block: var(--dmv-section-padding);
+  background: var(--dmv-color-surface-soft);
+}
+
+.header {
+  max-width: 980px;
+  margin: auto
+}
+
+.tableWrap {
+  margin-top: var(--dmv-space-10);
+  overflow: hidden;
+  border: var(--dmv-border-width) solid var(--dmv-color-border-card);
+  border-radius: var(--dmv-radius-lg);
+  box-shadow: var(--dmv-shadow-soft);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.table th,
+.table td {
+  padding: var(--dmv-space-5);
+  border-bottom: var(--dmv-border-width) solid var(--dmv-color-line-soft);
+  text-align: left;
+  vertical-align: top;
+  font-size: var(--dmv-font-size-sm);
+  line-height: var(--dmv-line-normal);
+}
+
+.table thead th {
+  background: var(--dmv-color-dark-blue);
+  color: var(--dmv-color-inverse);
+  font-size: 14px;
+  font-weight: var(--dmv-weight-semibold);
+  letter-spacing: var(--dmv-tracking-wide);
+  text-transform: uppercase;
+}
+
+.table thead th:first-child {
+  width: 27%;
+}
+
+.table tbody th {
+  color: var(--dmv-color-heading);
+  font-weight: var(--dmv-weight-semibold);
+}
+
+.table tbody th strong {
+  display: block;
+  font-weight: inherit;
+}
+
+.table tbody th span {
+  display: block;
+  margin-top: var(--dmv-space-2);
+  color: var(--dmv-color-muted);
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.table td {
+  color: var(--dmv-color-body);
+}
+
+.table tbody tr:last-child th,
+.table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.table tbody tr:nth-child(even) {
+  background: var(--dmv-color-surface-soft);
+}
+
+
+.note {
+  display: flex;
+  gap: var(--dmv-space-3);
+  min-height: 61px;
+  margin-top: var(--dmv-space-10);
+  padding: var(--dmv-space-4) var(--dmv-space-6);
+  border: var(--dmv-border-width) solid var(--dmv-color-line-soft);
+  border-radius: var(--dmv-radius-md);
+  background: var(--dmv-color-surface);
+}
+
+.noteIcon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  color: var(--dmv-color-brand);
+  margin-top: 5px 
+}
+
+.note p {
+  color: var(--dmv-color-body);
+  font-size: var(--dmv-font-size-sm);
+  line-height: var(--dmv-line-normal);
+  margin: 0;
+}
+
+.note a {
+  color: var(--dmv-color-brand);
+  font-weight: var(--dmv-weight-semibold);
+  text-decoration: none;
+}
+
+.note a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .tableWrap {
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    overflow: visible;
+  }
+
+  .table,
+  .table tbody,
+  .table tr,
+  .table th,
+  .table td {
+    display: block;
+    width: 100%;
+  }
+
+  .table thead {
+    display: none;
+  }
+
+  .table tr {
+    margin-bottom: var(--dmv-space-4);
+    padding: var(--dmv-space-4);
+    border: var(--dmv-border-width) solid var(--dmv-color-border-card);
+    border-radius: var(--dmv-radius-md);
+    background: var(--dmv-color-surface-soft);
+  }
+
+  .table th,
+  .table td {
+    padding: 0;
+    border: 0;
+    background: transparent;
+  }
+
+  .table tbody th {
+    padding-bottom: var(--dmv-space-3);
+  }
+
+  .table td {
+    margin-top: var(--dmv-space-3);
+    padding-top: var(--dmv-space-3);
+    border-top: var(--dmv-border-width) solid var(--dmv-color-line-soft);
+  }
+
+  .table td::before {
+    content: attr(data-label);
+    display: block;
+    margin-bottom: var(--dmv-space-1);
+    color: var(--dmv-color-muted);
+    font-size: var(--dmv-font-size-2xs);
+    font-weight: var(--dmv-weight-semibold);
+    letter-spacing: var(--dmv-tracking-wide);
+    text-transform: uppercase;
+  }
+}
+

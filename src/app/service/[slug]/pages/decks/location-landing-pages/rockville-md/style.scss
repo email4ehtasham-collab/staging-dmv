@@ -1,0 +1,412 @@
+.decks-rockville-md {
+  --primary-color: #2973b0;
+  --card-style1-bg: #e0f4f7;
+  --card-style1-border: #80cdd8;
+  --card-style2-bg: #f4fbfc;
+  --card-style2-border: #b2dde5;
+
+  .hero-location-tag {
+    background: #e0f4f7;
+    border-color: #80cdd8;
+  }
+
+  .intro-box {
+    background: #f4fbfc;
+    border-color: #b2dde5;
+  }
+
+  .trust-item {
+    background: #f4fbfc;
+    border-color: #b2dde5;
+  }
+
+  .highlight {
+    background: #e0f4f7;
+    border-left-color: #0b7285;
+    p { color: #06414d; }
+  }
+
+  .note {
+    background: #fffbf0;
+    border-left-color: #f59e0b;
+    color: #7a4f00;
+  }
+
+  .tip {
+    background: #eef5fb;
+    border-left-color: #2973b0;
+    color: #0d3b6e;
+  }
+
+  .area-pill {
+    background: #e0f4f7;
+    border-color: #80cdd8;
+  }
+
+  .review-card {
+    background: #f4fbfc;
+    border-color: #b2dde5;
+  }
+
+  .review-location {
+    color: #0b7285;
+  }
+
+  .cta-btn {
+    color: #0b7285;
+  }
+
+  .author-avatar {
+    background: #0b7285;
+  }
+
+  .cred {
+    background: #b2dde5;
+    color: #0b7285;
+  }
+
+  .cost-table th {
+    background: #0b7285;
+  }
+
+  .spec-box {
+    background: #fff8f0;
+    border-color: #f0cfa0;
+    h3 { color: #8B4513; }
+  }
+
+  .permit-banner {
+    background: linear-gradient(135deg, #0b7285, #0d8ea5);
+    color: #fff;
+    padding: 20px 26px;
+    border-radius: 10px;
+    margin-bottom: 32px;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+
+    .icon {
+      font-size: 32px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    h3 {
+      font-size: 16px;
+      font-family: sans-serif;
+      font-weight: 700;
+      margin: 0 0 6px;
+      color: #fff;
+    }
+
+    p {
+      font-size: 13px;
+      color: rgba(255,255,255,0.92);
+      margin: 0;
+      font-family: sans-serif;
+      line-height: 1.65;
+    }
+  }
+
+  .juris-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin: 16px 0 24px;
+  }
+
+  .juris-card {
+    padding: 18px 16px;
+    border-radius: 10px;
+
+    &.city {
+      background: #e0f4f7;
+      border: 2px solid #0b7285;
+    }
+
+    &.county {
+      background: #e3f0fa;
+      border: 2px solid #2973b0;
+    }
+
+    h3 {
+      font-size: 15px;
+      font-family: sans-serif;
+      font-weight: 700;
+      margin: 0 0 6px;
+    }
+
+    &.city h3 { color: #0b7285; }
+    &.county h3 { color: #2973b0; }
+
+    .permit-tag {
+      font-size: 11px;
+      font-family: sans-serif;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 10px;
+      display: inline-block;
+      margin-bottom: 8px;
+      color: #fff;
+    }
+
+    &.city .permit-tag { background: #0b7285; }
+    &.county .permit-tag { background: #2973b0; }
+
+    ul {
+      margin: 0;
+      padding: 0 0 0 16px;
+
+      li {
+        font-size: 12px;
+        color: #555;
+        margin-bottom: 4px;
+        line-height: 1.6;
+      }
+    }
+  }
+
+  .hoa-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin: 16px 0 24px;
+  }
+
+  .hoa-card {
+    padding: 18px 16px;
+    background: #f4fbfc;
+    border: 1px solid #b2dde5;
+    border-radius: 10px;
+
+    h3 {
+      font-size: 15px;
+      font-family: sans-serif;
+      margin: 0 0 4px;
+      color: #0b7285;
+      font-weight: 700;
+    }
+
+    .hoa-tag {
+      font-size: 10px;
+      font-family: sans-serif;
+      font-weight: 700;
+      padding: 2px 7px;
+      border-radius: 10px;
+      display: inline-block;
+      margin-bottom: 6px;
+      color: #fff;
+
+      &.city { background: #0b7285; }
+      &.county { background: #2973b0; }
+    }
+
+    p {
+      font-size: 13px;
+      color: #555;
+      margin: 0;
+      line-height: 1.6;
+    }
+  }
+
+  .neighborhood-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin: 16px 0 24px;
+  }
+
+  .neighborhood-card {
+    padding: 18px 16px;
+    background: #f4fbfc;
+    border: 1px solid #b2dde5;
+    border-radius: 10px;
+
+    h3 {
+      font-size: 15px;
+      font-family: sans-serif;
+      margin: 0 0 4px;
+      color: #0b7285;
+      font-weight: 700;
+    }
+
+    .hood-tag {
+      font-size: 11px;
+      font-family: sans-serif;
+      color: #888;
+      margin-bottom: 6px;
+      display: block;
+    }
+
+    p {
+      font-size: 13px;
+      color: #555;
+      margin: 0;
+      line-height: 1.6;
+    }
+  }
+
+  .author-box {
+    background: #f4fbfc;
+    border-color: #b2dde5;
+  }
+
+  .warning {
+    background: #fdecea;
+    border-left: 4px solid #b22234;
+    padding: 14px 18px;
+    border-radius: 0 8px 8px 0;
+    margin: 20px 0;
+    font-size: 14px;
+    color: #7c0000;
+    font-family: sans-serif;
+    line-height: 1.6;
+  }
+
+  .service-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin: 16px 0 24px;
+  }
+
+  .service-item {
+    padding: 12px 16px;
+    background: #fafafa;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: sans-serif;
+    color: #222;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+
+    &::before {
+      content: "✓";
+      color: #0b7285;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+  }
+
+  .deck-type-card {
+    padding: 22px 20px;
+    background: #f4fbfc;
+    border: 1px solid #b2dde5;
+    border-radius: 10px;
+    border-top: 4px solid #0b7285;
+
+    h3 {
+      font-size: 16px;
+      margin: 0 0 8px;
+      color: #111;
+    }
+
+    p {
+      font-size: 13px;
+      color: #555;
+      margin: 0 0 12px;
+      line-height: 1.6;
+    }
+  }
+
+  .deck-tag {
+    display: inline-block;
+    font-size: 11px;
+    font-family: sans-serif;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 20px;
+    background: #0b7285;
+    color: #fff;
+    margin-bottom: 10px;
+  }
+
+  .deck-cost {
+    font-size: 13px;
+    font-family: sans-serif;
+    font-weight: 700;
+    color: #0b7285;
+    background: #e0f4f7;
+    padding: 6px 12px;
+    border-radius: 6px;
+    display: inline-block;
+  }
+
+  .feature-box {
+    text-align: center;
+    padding: 20px 14px;
+    background: #f4fbfc;
+    border: 1px solid #b2dde5;
+    border-radius: 10px;
+
+    .icon {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    strong {
+      display: block;
+      font-size: 13px;
+      font-family: sans-serif;
+      font-weight: 700;
+      color: #111;
+      margin-bottom: 4px;
+    }
+
+    span {
+      font-size: 12px;
+      color: #666;
+      font-family: sans-serif;
+      line-height: 1.5;
+    }
+  }
+
+  .step {
+    border-bottom: 1px solid #e0f4f7;
+  }
+
+  .step-num {
+    width: 38px;
+    height: 38px;
+    background: #0b7285;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 16px;
+    font-family: sans-serif;
+    flex-shrink: 0;
+  }
+
+  .step-content p {
+    color: #666;
+  }
+
+  .cost-table {
+    font-family: sans-serif;
+
+    td {
+      border-bottom: 1px solid #f0f0f0;
+      vertical-align: top;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    tr:nth-child(even) td {
+      background: #f4fbfc;
+    }
+  }
+
+  @media (max-width: 600px) {
+    h1 { font-size: 26px; }
+    .trust-bar, .feature-grid { grid-template-columns: 1fr 1fr; }
+    .deck-type-grid, .juris-grid, .hoa-grid, .neighborhood-grid, .review-grid, .service-grid { grid-template-columns: 1fr; }
+    .permit-banner { flex-direction: column; }
+  }
+}

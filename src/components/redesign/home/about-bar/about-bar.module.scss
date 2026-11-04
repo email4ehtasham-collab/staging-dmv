@@ -1,0 +1,102 @@
+.section {
+  padding-block: var(--dmv-space-10);
+  background: var(--dmv-color-surface);
+}
+
+.panel {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  align-items: center;
+  min-height: 124px;
+  padding: var(--dmv-space-5);
+  border: var(--dmv-border-width) solid var(--dmv-color-line-soft);
+  border-radius: var(--dmv-radius-lg);
+  background: var(--dmv-color-surface);
+  box-shadow: var(--dmv-shadow-card);
+  list-style: none;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: var(--dmv-space-3);
+  min-height: 72px;
+  padding-inline: var(--dmv-space-5);
+  border-left: var(--dmv-border-width) solid var(--dmv-color-line-soft);
+}
+
+.item:first-child {
+  border-left: 0;
+}
+
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  border: var(--dmv-border-width) solid var(--dmv-color-line-soft);
+  border-radius: var(--dmv-radius-pill);
+  background: var(--dmv-color-surface);
+  color: var(--dmv-color-brand);
+  box-shadow: var(--dmv-shadow-soft);
+}
+
+.icon svg {
+  width: 32px;
+  height: 32px;
+}
+
+.copy {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: var(--dmv-space-1);
+}
+
+.title {
+  color: var(--dmv-color-heading);
+  font-size: var(--dmv-font-size-base);
+  font-weight: var(--dmv-weight-semibold);
+  line-height: var(--dmv-line-snug);
+}
+
+.detail {
+  color: var(--dmv-color-muted);
+  font-size: var(--dmv-font-size-sm);
+  line-height: var(--dmv-line-snug);
+}
+
+@media (max-width: 1200px) {
+  .panel {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--dmv-space-5);
+  }
+
+  .item {
+    border-left: 0;
+    padding-inline: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding-block: var(--dmv-space-8);
+  }
+
+  .panel {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding: var(--dmv-space-6);
+  }
+}
+
+@media (max-width: 560px) {
+  .panel {
+    grid-template-columns: 1fr;
+  }
+
+  .item {
+    min-height: 0;
+  }
+}

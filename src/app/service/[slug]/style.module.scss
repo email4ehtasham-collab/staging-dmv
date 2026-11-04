@@ -1,0 +1,25 @@
+  .main-image {
+    height: 500px;
+    margin: 40px 0 60px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  .desc-item--title {
+    color: var(--primary-color);
+    position: relative;
+    padding-left: 10px;
+    margin-bottom: 10px;
+    font-weight: 700;
+  }
+
+  .desc-item--title:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 2px;
+    background: var(--primary-color);
+  }

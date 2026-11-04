@@ -1,9 +1,0 @@
-1:"$Sreact.fragment"
-2:I[8176,["8500","static/chunks/8500-27e7d9770d119ae1.js","5187","static/chunks/5187-a619d51205675f07.js","7630","static/chunks/7630-42a390bfa908a17c.js","5953","static/chunks/app/blog/%5Bslug%5D/page-fbbb55703532a256.js"],"default"]
-3:I[21957,["8500","static/chunks/8500-27e7d9770d119ae1.js","5187","static/chunks/5187-a619d51205675f07.js","7630","static/chunks/7630-42a390bfa908a17c.js","5953","static/chunks/app/blog/%5Bslug%5D/page-fbbb55703532a256.js"],"PreloadChunks"]
-4:I[56725,["8500","static/chunks/8500-27e7d9770d119ae1.js","5187","static/chunks/5187-a619d51205675f07.js","7630","static/chunks/7630-42a390bfa908a17c.js","5953","static/chunks/app/blog/%5Bslug%5D/page-fbbb55703532a256.js"],"default"]
-5:I[90484,[],"OutletBoundary"]
-6:"$Sreact.suspense"
-:HL["/_next/static/css/935f881462710d98.css","style"]
-0:{"buildId":"sAGgTYy2l1s-v3IjHcEPK","rsc":["$","$1","c",{"children":[[["$","$L2",null,{"nav":"blog"}],[["$","$L3",null,{"moduleIds":["app\\blog\\[slug]\\blogRoutes.js -> @/data/blogs/pages/HowMuchDoesAKitchenRemodelCostInBethesdaMDIn2026"]}],["$","$L4",null,{}]]],[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/935f881462710d98.css","precedence":"next"}]],["$","$L5",null,{"children":["$","$6",null,{"name":"Next.MetadataOutlet","children":"$@7"}]}]]}],"loading":null,"isPartial":false}
-7:null

@@ -1,0 +1,122 @@
+.basement-rockville-md {
+  --primary-color: #2973b0;
+  --card-style1-bg: #e0f5f7;
+  --card-style1-border: #8dd4db;
+  --card-style2-bg: #e0f5f7;
+  --card-style2-border: #8dd4db;
+
+  .hero-location-tag {
+    background: #e0f5f7;
+    border-color: #8dd4db;
+  }
+
+  .intro-box {
+    background: #f0fafb;
+    border-color: #b2e0e5;
+  }
+
+  .trust-item {
+    background: #f0fafb;
+    border-color: #b2e0e5;
+  }
+
+  .service-item::before {
+    color: #0b7285;
+  }
+
+  .permit-banner {
+    background: linear-gradient(135deg, #0b7285, #0d8fa5);
+    color: #fff;
+    padding: 20px 26px;
+    border-radius: 10px;
+    margin-bottom: 32px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    .icon { font-size: 32px; flex-shrink: 0; }
+    h3 { font-size: 16px; font-family: sans-serif; font-weight: 700; margin: 0 0 4px; color: #fff; }
+    p { font-size: 13px; color: rgba(255,255,255,0.92); margin: 0; font-family: sans-serif; line-height: 1.6; }
+  }
+
+  .highlight {
+    background: #e0f5f7;
+    border-left-color: #0b7285;
+
+    p {
+      color: #064a56;
+    }
+  }
+
+  .note {
+    background: #fffbf0;
+    border-left-color: #f59e0b;
+    color: #7a4f00;
+  }
+
+  .tip {
+    background: #eef5fb;
+    border-left-color: #2973b0;
+    color: #0d3b6e;
+  }
+
+  .area-pill {
+    background: #e0f5f7;
+    border-color: #8dd4db;
+  }
+
+  .review-card {
+    background: #f0fafb;
+    border-color: #b2e0e5;
+  }
+
+  .review-location {
+    color: #0b7285;
+  }
+
+  .cta-btn {
+    color: #0b7285;
+  }
+
+  .cta-btn.outline {
+    color: #fff;
+  }
+
+  .author-avatar {
+    background: #0b7285;
+  }
+
+  .cred {
+    background: #b2e0e5;
+    color: #0b7285;
+  }
+
+  .cost-table th {
+    background: #0b7285;
+  }
+
+  .spec-box {
+    background: #fff8f0;
+    border-color: #f0cfa0;
+
+    h3 {
+      color: #8B4513;
+    }
+  }
+
+  .home-type-box {
+    background: #f0fafb;
+    border-color: #b2e0e5;
+
+    h3 {
+      color: #0b7285;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .permit-banner {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+}

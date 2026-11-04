@@ -1,0 +1,271 @@
+.adu-north-bethesda-md {
+  --primary-color: #2973b0;
+  --card-style1-bg: #fdf0e8;
+  --card-style1-border: #f0b080;
+  --card-style2-bg: #fdf6f1;
+  --card-style2-border: #f0c8a8;
+
+  .hero-location-tag {
+    background: #fdf0e8;
+    border-color: #f0b080;
+  }
+
+  .intro-box {
+    background: #fdf6f1;
+    border-color: #f0c8a8;
+  }
+
+  .trust-item {
+    background: #fdf6f1;
+    border-color: #f0c8a8;
+  }
+
+  .service-item::before {
+    color: #c2530a;
+  }
+
+  .highlight {
+    background: #fdf0e8;
+    border-left-color: #c2530a;
+    p { color: #7a2f06; }
+  }
+
+  .note {
+    background: #fffbf0;
+    border-left-color: #f59e0b;
+    color: #7a4f00;
+  }
+
+  .tip {
+    background: #eef5fb;
+    border-left-color: #2973b0;
+    color: #0d3b6e;
+  }
+
+  .area-pill {
+    background: #fdf0e8;
+    border-color: #f0b080;
+  }
+
+  .review-card {
+    background: #fdf6f1;
+    border-color: #f0c8a8;
+  }
+
+  .review-location {
+    color: #c2530a;
+  }
+
+  .cta-btn {
+    color: #c2530a;
+  }
+
+  .author-avatar {
+    background: #c2530a;
+  }
+
+  .cred {
+    background: #f0c8a8;
+    color: #c2530a;
+  }
+
+  .cost-table th {
+    background: #c2530a;
+  }
+
+  .spec-box {
+    background: #fff8f0;
+    border-color: #f0cfa0;
+    h3 { color: #8B4513; }
+  }
+
+  .hq-banner {
+    background: linear-gradient(135deg, #c2530a, #d4620e);
+    color: #fff;
+    padding: 20px 26px;
+    border-radius: 10px;
+    margin-bottom: 32px;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+
+    .icon {
+      font-size: 32px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    h3 {
+      font-size: 16px;
+      font-family: sans-serif;
+      font-weight: 700;
+      margin: 0 0 6px;
+      color: #fff;
+    }
+
+    p {
+      font-size: 13px;
+      color: rgba(255,255,255,0.92);
+      margin: 0;
+      font-family: sans-serif;
+      line-height: 1.65;
+    }
+  }
+
+  .adu-type-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin: 20px 0 28px;
+  }
+
+  .adu-type-card {
+    padding: 22px 20px;
+    background: #fdf6f1;
+    border: 1px solid #f0c8a8;
+    border-radius: 10px;
+    border-top: 4px solid #c2530a;
+
+    h3 {
+      font-size: 16px;
+      margin: 0 0 8px;
+      color: #111;
+    }
+
+    p {
+      font-size: 13px;
+      color: #555;
+      margin: 0 0 12px;
+      line-height: 1.6;
+    }
+  }
+
+  .adu-tag {
+    display: inline-block;
+    font-size: 11px;
+    font-family: sans-serif;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 20px;
+    background: #c2530a;
+    color: #fff;
+    margin-bottom: 10px;
+  }
+
+  .adu-cost {
+    font-size: 13px;
+    font-family: sans-serif;
+    font-weight: 700;
+    color: #c2530a;
+    background: #fdf0e8;
+    padding: 6px 12px;
+    border-radius: 6px;
+    display: inline-block;
+  }
+
+  .split-level-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 12px;
+    margin: 16px 0 24px;
+  }
+
+  .split-level-box {
+    padding: 18px 14px;
+    background: #fdf6f1;
+    border: 1px solid #f0c8a8;
+    border-radius: 10px;
+    text-align: center;
+
+    .icon {
+      font-size: 26px;
+      margin-bottom: 8px;
+    }
+
+    h3 {
+      font-size: 13px;
+      font-family: sans-serif;
+      font-weight: 700;
+      color: #c2530a;
+      margin: 0 0 6px;
+    }
+
+    p {
+      font-size: 12px;
+      color: #555;
+      margin: 0;
+      line-height: 1.55;
+    }
+  }
+
+  .neighborhood-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin: 16px 0 24px;
+  }
+
+  .neighborhood-card {
+    padding: 18px 16px;
+    background: #fdf6f1;
+    border: 1px solid #f0c8a8;
+    border-radius: 10px;
+
+    h3 {
+      font-size: 15px;
+      font-family: sans-serif;
+      margin: 0 0 6px;
+      color: #c2530a;
+      font-weight: 700;
+    }
+
+    p {
+      font-size: 13px;
+      color: #555;
+      margin: 0;
+      line-height: 1.6;
+    }
+  }
+
+  .benefit-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 12px;
+    margin: 16px 0 24px;
+  }
+
+  .benefit-box {
+    text-align: center;
+    padding: 20px 14px;
+    background: #fdf6f1;
+    border: 1px solid #f0c8a8;
+    border-radius: 10px;
+
+    .icon {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    strong {
+      display: block;
+      font-size: 13px;
+      font-family: sans-serif;
+      font-weight: 700;
+      color: #111;
+      margin-bottom: 4px;
+    }
+
+    span {
+      font-size: 12px;
+      color: #666;
+      font-family: sans-serif;
+      line-height: 1.5;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .trust-bar, .split-level-grid, .benefit-grid { grid-template-columns: 1fr 1fr; }
+    .adu-type-grid, .neighborhood-grid, .review-grid { grid-template-columns: 1fr; }
+    .hq-banner { flex-direction: column; }
+  }
+}

@@ -1,0 +1,306 @@
+.adu-gaithersburg-md {
+  --primary-color: #2973b0;
+  --card-style1-bg: #f3e5f5;
+  --card-style1-border: #ce93d8;
+  --card-style2-bg: #faf5fc;
+  --card-style2-border: #e1bee7;
+
+  .hero-location-tag {
+    background: #f3e5f5;
+    border-color: #ce93d8;
+  }
+
+  .intro-box {
+    background: #faf5fc;
+    border-color: #e1bee7;
+  }
+
+  .trust-item {
+    background: #faf5fc;
+    border-color: #e1bee7;
+  }
+
+  .service-item::before {
+    color: #6a1b9a;
+  }
+
+  .highlight {
+    background: #f3e5f5;
+    border-left-color: #6a1b9a;
+
+    p {
+      color: #3d0d5e;
+    }
+  }
+
+  .note {
+    background: #fffbf0;
+    border-left-color: #f59e0b;
+    color: #7a4f00;
+  }
+
+  .tip {
+    background: #eef5fb;
+    border-left-color: #2973b0;
+    color: #0d3b6e;
+  }
+
+  .area-pill {
+    background: #f3e5f5;
+    border-color: #ce93d8;
+  }
+
+  .review-card {
+    background: #faf5fc;
+    border-color: #e1bee7;
+  }
+
+  .review-location {
+    color: #6a1b9a;
+  }
+
+  .cta-btn {
+    color: #6a1b9a;
+  }
+
+  .author-avatar {
+    background: #6a1b9a;
+  }
+
+  .cred {
+    background: #e1bee7;
+    color: #6a1b9a;
+  }
+
+  .cost-table th {
+    background: #6a1b9a;
+  }
+
+  .spec-box {
+    background: #fff8f0;
+    border-color: #f0cfa0;
+    h3 { color: #8B4513; }
+  }
+
+  .permit-banner {
+    background: linear-gradient(135deg, #6a1b9a, #7b1fa2);
+    color: #fff;
+    padding: 20px 26px;
+    border-radius: 10px;
+    margin-bottom: 32px;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+
+    .icon {
+      font-size: 32px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    h3 {
+      font-size: 16px;
+      font-family: sans-serif;
+      font-weight: 700;
+      margin: 0 0 6px;
+      color: #fff;
+    }
+
+    p {
+      font-size: 13px;
+      color: rgba(255,255,255,0.92);
+      margin: 0;
+      font-family: sans-serif;
+      line-height: 1.65;
+    }
+  }
+
+  .adu-type-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin: 20px 0 28px;
+  }
+
+  .adu-type-card {
+    padding: 22px 20px;
+    background: #faf5fc;
+    border: 1px solid #e1bee7;
+    border-radius: 10px;
+    border-top: 4px solid #6a1b9a;
+
+    h3 {
+      font-size: 16px;
+      margin: 0 0 8px;
+      color: #111;
+    }
+
+    p {
+      font-size: 13px;
+      color: #555;
+      margin: 0 0 12px;
+      line-height: 1.6;
+    }
+  }
+
+  .adu-tag {
+    display: inline-block;
+    font-size: 11px;
+    font-family: sans-serif;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 20px;
+    background: #6a1b9a;
+    color: #fff;
+    margin-bottom: 10px;
+  }
+
+  .adu-cost {
+    font-size: 13px;
+    font-family: sans-serif;
+    font-weight: 700;
+    color: #6a1b9a;
+    background: #f3e5f5;
+    padding: 6px 12px;
+    border-radius: 6px;
+    display: inline-block;
+  }
+
+  .jurisdiction-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin: 16px 0 24px;
+  }
+
+  .jurisdiction-card {
+    padding: 20px 18px;
+    border-radius: 10px;
+
+    &.city {
+      background: #f3e5f5;
+      border: 2px solid #6a1b9a;
+      h3 { color: #6a1b9a; }
+    }
+
+    &.county {
+      background: #e3f0fa;
+      border: 2px solid #2973b0;
+      h3 { color: #2973b0; }
+    }
+
+    h3 {
+      font-size: 15px;
+      font-family: sans-serif;
+      margin: 0 0 8px;
+      font-weight: 700;
+    }
+
+    ul {
+      margin: 0;
+      padding: 0 0 0 18px;
+
+      li {
+        font-size: 13px;
+        color: #555;
+        margin-bottom: 5px;
+        line-height: 1.6;
+      }
+    }
+  }
+
+  .hoa-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin: 16px 0 24px;
+  }
+
+  .hoa-card {
+    padding: 18px 16px;
+    background: #faf5fc;
+    border: 1px solid #e1bee7;
+    border-radius: 10px;
+
+    h3 {
+      font-size: 15px;
+      font-family: sans-serif;
+      margin: 0 0 6px;
+      color: #6a1b9a;
+      font-weight: 700;
+    }
+
+    p {
+      font-size: 13px;
+      color: #555;
+      margin: 0;
+      line-height: 1.6;
+    }
+  }
+
+  .benefit-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 12px;
+    margin: 16px 0 24px;
+  }
+
+  .benefit-box {
+    text-align: center;
+    padding: 20px 14px;
+    background: #faf5fc;
+    border: 1px solid #e1bee7;
+    border-radius: 10px;
+
+    .icon {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    strong {
+      display: block;
+      font-size: 13px;
+      font-family: sans-serif;
+      font-weight: 700;
+      color: #111;
+      margin-bottom: 4px;
+    }
+
+    span {
+      font-size: 12px;
+      color: #666;
+      font-family: sans-serif;
+      line-height: 1.5;
+    }
+  }
+
+  .neighborhood-card {
+    .permit-tag {
+      font-size: 10px;
+      font-family: sans-serif;
+      font-weight: 700;
+      padding: 2px 7px;
+      border-radius: 10px;
+      display: inline-block;
+      margin-bottom: 6px;
+
+      &.city {
+        background: #6a1b9a;
+        color: #fff;
+      }
+
+      &.county {
+        background: #2973b0;
+        color: #fff;
+      }
+    }
+  }
+
+  @media (max-width: 600px) {
+    .hoa-banner { flex-direction: column; }
+    .service-grid, .home-type-grid, .use-type-grid, .neighborhood-grid, .review-grid { grid-template-columns: 1fr; }
+    .benefit-grid { grid-template-columns: 1fr 1fr; }
+    .adu-type-grid, .jurisdiction-grid, .hoa-grid { grid-template-columns: 1fr; }
+    .permit-banner { flex-direction: column; }
+  }
+}

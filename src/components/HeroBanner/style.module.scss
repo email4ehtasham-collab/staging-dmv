@@ -1,0 +1,106 @@
+.hero-banner {
+    min-height: calc(100vh - var(--header-height));
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    background: white;
+    z-index: 10;
+    padding: 30px 0;
+
+    .image-holder.background-image {
+        height: 100%;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 0;
+        display: flex;
+
+        &:before {
+            content: "";
+            height: 100%;
+            width: 100%;
+            background: linear-gradient(90deg, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+
+        img {
+            width: 100%;
+            margin-left: auto;
+        }
+    }
+
+    .content-data {
+        position: relative;
+        z-index: 1;
+
+        .top-label {
+            font-size: 14px;
+            background: var(--primary-color);
+            padding: 8px 15px;
+            border-radius: 20px;
+            margin-bottom: 10px;
+            white-space: wrap;
+        }
+
+        .buttons-holder{
+            
+        }
+
+        h1 {
+            font-size: 38px;
+            position: relative;
+            font-weight: 800;
+        }
+
+        h2 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-top: 16px;
+        }
+
+        p {
+            font-size: 16px;
+            margin-top: 20px;
+        }
+
+        .view-work {
+            padding-right: 20px;
+            padding-left: 20px;
+        }
+    }
+
+    .sub-title {
+        background: var(--primary-color);
+        color: #ffffff;
+        font-size: 28px;
+        padding: 2px 10px;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+
+    @media (max-width: 1024px) {
+        .content-data h1 {
+            font-size: 28px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+
+        .content-data {
+            text-align: center;
+            h2 { font-size: 20px; }
+            p { font-size: 14px; }
+        }
+
+        .image-holder {
+            display: flex;
+            img { margin: auto; }
+        }
+    }
+}

@@ -1,0 +1,127 @@
+.section {
+  padding-block: var(--dmv-section-padding);
+  background: var(--dmv-color-surface);
+}
+
+.header {
+  max-width: 1000px;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--dmv-space-6);
+  margin-top: var(--dmv-space-10);
+}
+
+.card {
+  position: relative;
+  display: block;
+  min-height: 350px;
+  overflow: hidden;
+  border-radius: var(--dmv-radius-lg);
+  background: var(--dmv-color-ink);
+  color: var(--dmv-color-inverse);
+  text-decoration: none;
+}
+
+.image {
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+.card:hover .image {
+  transform: scale(1.04);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.08) 15%, rgba(15, 23, 42, 0.9) 100%);
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 350px;
+  padding: var(--dmv-space-5);
+}
+
+.location {
+  color: var(--dmv-color-accent);
+  font-size: var(--dmv-font-size-2xs);
+  font-weight: var(--dmv-weight-bold);
+  letter-spacing: 0.08em;
+  line-height: var(--dmv-line-normal);
+  text-transform: uppercase;
+}
+
+.cardTitle {
+  margin-top: var(--dmv-space-2);
+  color: var(--dmv-color-inverse);
+  font-size: var(--dmv-font-size-lg);
+  font-weight: var(--dmv-weight-semibold);
+  line-height: var(--dmv-line-snug);
+}
+
+.cardText {
+  margin-top: var(--dmv-space-2);
+  color: var(--dmv-color-inverse-soft);
+  font-size: 14px;
+  line-height: var(--dmv-line-normal);
+}
+
+.details {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--dmv-space-2);
+  margin-top: var(--dmv-space-4);
+  color: var(--dmv-color-inverse);
+  font-size: var(--dmv-font-size-sm);
+  font-weight: var(--dmv-weight-semibold);
+}
+
+.details svg {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.2s ease;
+}
+
+.card:hover .details svg {
+  transform: translateX(3px);
+}
+
+.card:focus-visible {
+  outline: none;
+  box-shadow: var(--dmv-focus-ring);
+}
+
+@media (max-width: 1200px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+    margin-top: var(--dmv-space-8);
+  }
+
+  .card,
+  .content {
+    min-height: 320px;
+  }
+}
+
+@media (max-width: 560px) {
+  .card,
+  .content {
+    min-height: 290px;
+  }
+}

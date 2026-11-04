@@ -1,0 +1,208 @@
+.section {
+  padding-block: var(--dmv-section-padding);
+  background: var(--dmv-color-surface);
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 626px);
+  gap: 54px;
+  align-items: center;
+}
+
+.content {
+  min-width: 0;
+}
+
+.label {
+  margin-top: var(--dmv-space-6);
+  color: var(--dmv-color-heading);
+  font-size: var(--dmv-font-size-base);
+  font-weight: var(--dmv-weight-semibold);
+}
+
+.areas {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--dmv-space-3) var(--dmv-space-4);
+  margin: var(--dmv-space-4) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.areas li {
+  display: flex;
+  align-items: center;
+  min-height: 36px;
+  padding: 7px var(--dmv-space-4);
+  border: var(--dmv-border-width) solid var(--dmv-color-line-soft);
+  border-radius: var(--dmv-radius-sm);
+  background: var(--dmv-color-surface-soft);
+  color: var(--dmv-color-heading);
+  font-size: var(--dmv-font-size-sm);
+  font-weight: var(--dmv-weight-medium);
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  margin-right: var(--dmv-space-2);
+  border-radius: 50%;
+  background: var(--dmv-color-accent);
+  flex: none;
+}
+
+.district {
+  margin-top: var(--dmv-space-6);
+  padding-top: var(--dmv-space-5);
+  border-top: var(--dmv-border-width) solid var(--dmv-color-line-soft);
+}
+
+.district p {
+  max-width: 760px;
+  color: var(--dmv-color-body);
+  font-size: var(--dmv-font-size-sm);
+  line-height: var(--dmv-line-normal);
+}
+
+.district strong {
+  color: var(--dmv-color-heading);
+  font-weight: var(--dmv-weight-semibold);
+}
+
+.company {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--dmv-space-2) var(--dmv-space-5);
+  margin-top: var(--dmv-space-4);
+  color: var(--dmv-color-muted);
+  font-size: 14px;
+}
+
+.company span:first-child {
+  color: var(--dmv-color-heading);
+  font-weight: var(--dmv-weight-semibold);
+}
+
+.company a {
+  color: var(--dmv-color-brand);
+  text-decoration: none;
+}
+
+.company a:hover {
+  color: var(--dmv-color-brand-dark);
+}
+
+.visual {
+  position: relative;
+  min-height: 498px;
+  overflow: hidden;
+  border-radius: var(--dmv-radius-lg);
+  background: var(--dmv-color-ink);
+}
+
+.image {
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.05) 30%, rgba(15, 23, 42, 0.82) 100%);
+}
+
+.officeCard {
+  position: absolute;
+  right: 24px;
+  bottom: 24px;
+  left: 24px;
+  padding: var(--dmv-space-5);
+  border: var(--dmv-border-width) solid rgba(255, 255, 255, 0.16);
+  border-radius: var(--dmv-radius-md);
+  background: rgba(30, 41, 59, 0.94);
+  color: var(--dmv-color-inverse);
+}
+
+.eyebrow {
+  color: var(--dmv-color-accent);
+  font-size: var(--dmv-font-size-2xs);
+  font-weight: var(--dmv-weight-bold);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.officeCard p {
+  margin-top: var(--dmv-space-2);
+  color: var(--dmv-color-inverse-soft);
+  font-size: var(--dmv-font-size-sm);
+  line-height: var(--dmv-line-normal);
+}
+
+.officeCard address {
+  margin-top: var(--dmv-space-3);
+  color: var(--dmv-color-inverse);
+  font-size: var(--dmv-font-size-sm);
+  font-style: normal;
+  line-height: var(--dmv-line-normal);
+}
+
+.officeCard a {
+  display: inline-flex;
+  margin-top: var(--dmv-space-4);
+  color: var(--dmv-color-accent);
+  font-size: var(--dmv-font-size-sm);
+  font-weight: var(--dmv-weight-semibold);
+  text-decoration: none;
+}
+
+.officeCard a:hover {
+  color: var(--dmv-color-inverse);
+}
+
+@media (max-width: 1200px) {
+  .layout {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 480px);
+    gap: var(--dmv-space-8);
+  }
+
+  .visual {
+    min-height: 520px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .visual {
+    min-height: 460px;
+  }
+}
+
+@media (max-width: 768px) {
+  .areas {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .visual {
+    min-height: 420px;
+  }
+}
+
+@media (max-width: 560px) {
+  .areas {
+    grid-template-columns: 1fr;
+  }
+
+  .visual {
+    min-height: 440px;
+  }
+
+  .officeCard {
+    right: 16px;
+    bottom: 16px;
+    left: 16px;
+    padding: var(--dmv-space-4);
+  }
+}

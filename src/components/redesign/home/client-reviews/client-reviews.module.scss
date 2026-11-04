@@ -1,0 +1,214 @@
+.section {
+  padding-block: var(--dmv-section-padding);
+  background: var(--dmv-color-surface-soft);
+}
+
+.header {
+  max-width: 1000px;
+  margin-inline: auto;
+  text-align: center;
+}
+.header a{text-decoration: underline;}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--dmv-space-6);
+  margin-top: var(--dmv-space-10);
+}
+
+.card,
+.storiesCard,
+.summary {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  overflow: hidden;
+  border: var(--dmv-border-width) solid var(--dmv-color-border-card);
+  border-radius: var(--dmv-radius-lg);
+  background: var(--dmv-color-surface);
+  box-shadow: var(--dmv-shadow-soft);
+}
+
+.media {
+  position: relative;
+  height: 190px;
+  background: #f3f4f6;
+}
+
+.image {
+  object-fit: cover;
+}
+
+.body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: var(--dmv-space-5);
+}
+
+.stars,
+.summaryStars {
+  display: flex;
+  gap: 3px;
+  color: #ffb020;
+}
+
+.stars svg,
+.summaryStars svg {
+  width: 15px;
+  height: 15px;
+}
+
+.quote {
+  margin: var(--dmv-space-4) 0 0;
+  color: #374151;
+  font-size: var(--dmv-font-size-sm);
+  line-height: var(--dmv-line-normal);
+}
+
+.name {
+  margin-top: auto;
+  padding-top: var(--dmv-space-4);
+  color: var(--dmv-color-heading);
+  font-size: var(--dmv-font-size-sm);
+  font-weight: var(--dmv-weight-semibold);
+}
+
+.meta {
+  margin-top: var(--dmv-space-1);
+  color: var(--dmv-color-muted);
+  font-size: 14px;
+  line-height: var(--dmv-line-normal);
+}
+
+.storiesCard {
+  justify-content: center;
+  padding: var(--dmv-space-6);
+  background: var(--dmv-color-surface-soft);
+  justify-content: flex-start;
+}
+
+.storiesIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: var(--dmv-radius-md);
+  background: var(--dmv-color-brand-wash);
+  color: var(--dmv-color-brand);
+}
+
+.storiesIcon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.storiesCard h3 {
+  margin-top: var(--dmv-space-5);
+  color: var(--dmv-color-heading);
+  font-size: var(--dmv-font-size-lg);
+  font-weight: var(--dmv-weight-semibold);
+  line-height: var(--dmv-line-snug);
+}
+
+.storiesCard p {
+  margin-top: var(--dmv-space-3);
+  color: var(--dmv-color-body);
+  font-size: var(--dmv-font-size-sm);
+  line-height: var(--dmv-line-normal);
+}
+
+.storiesCard a {
+  margin-top: var(--dmv-space-5);
+  color: var(--dmv-color-brand);
+  font-size: var(--dmv-font-size-sm);
+  font-weight: var(--dmv-weight-semibold);
+  text-decoration: none;
+}
+
+.storiesCard a:hover {
+  color: var(--dmv-color-brand-dark);
+}
+
+.summary {
+  padding: var(--dmv-space-6);
+  border-color: transparent;
+  background: var(--dmv-color-dark-blue);
+  color: var(--dmv-color-inverse);
+}
+
+.google {
+  color: var(--dmv-color-accent);
+  font-size: var(--dmv-font-size-2xs);
+  font-weight: var(--dmv-weight-bold);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.score {
+  display: flex;
+  align-items: baseline;
+  gap: var(--dmv-space-1);
+  margin-top: var(--dmv-space-4);
+}
+
+.score strong {
+  color: var(--dmv-color-inverse);
+  font-size: var(--dmv-font-size-5xl);
+  font-weight: var(--dmv-weight-bold);
+  line-height: var(--dmv-line-tight);
+}
+
+.score span {
+  color: var(--dmv-color-inverse-soft);
+  font-size: var(--dmv-font-size-lg);
+  font-weight: var(--dmv-weight-semibold);
+}
+
+.summaryStars {
+  margin-top: var(--dmv-space-3);
+}
+
+.summary p {
+  margin-top: var(--dmv-space-4);
+  color: var(--dmv-color-inverse-soft);
+  font-size: var(--dmv-font-size-sm);
+  line-height: var(--dmv-line-normal);
+}
+
+.summaryButton {
+  width: 100%;
+  margin-top: auto;
+  padding-inline: var(--dmv-space-4);
+  color: var(--dmv-color-heading);
+  white-space: normal;
+}
+
+@media (max-width: 1200px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .summaryButton {
+    margin-top: var(--dmv-space-6);
+  }
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+    margin-top: var(--dmv-space-8);
+  }
+
+  .media {
+    height: 220px;
+  }
+}
+
+@media (max-width: 560px) {
+  .score strong {
+    font-size: var(--dmv-font-size-4xl);
+  }
+}

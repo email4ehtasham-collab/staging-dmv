@@ -1,0 +1,59 @@
+.c-blog-detail-page{
+    margin-top: 30px;
+
+    h1.section-title{margin: 30px 0; display: block;}
+    
+    h2{font-size: 24px; font-weight: 700; margin: 20px 0 10px;}
+    h3{font-size: 22px; font-weight: 700; margin: 20px 0 10px;}
+    h4{font-size: 20px; font-weight: 700; margin: 20px 0 10px;}
+
+    .accordion-item h2{font-size: 16px; margin: 0}
+    
+    .image-holder.main-image{max-width: 100%}
+    .image-holder{max-width: 800px}
+    
+    ol li.title-h3{
+        font-size: 22px; font-weight: 700;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+        background: #fff;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    }
+
+    thead th{
+        background: #1d1d1d;
+        font-weight: 600;
+        color: #fff;
+        padding: 14px 16px;
+        font-size: 16px;
+    }
+
+    tr {
+        border-bottom: 1px solid #eee;
+    }
+
+    tr:last-child {
+        border-bottom: none;
+    }
+
+    td {
+        padding: 14px 16px;
+        font-size: 16px;
+        color: #333;
+    }
+
+
+    /* Hover effect */
+    tr:hover {
+        background: #f7f7f7;
+        transition: 0.2s ease;
+    }
+
+}
+

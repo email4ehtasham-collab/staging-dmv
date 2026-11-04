@@ -1,0 +1,128 @@
+.flooring-gaithersburg-md {
+  --primary-color: #2973b0;
+  --card-bg: #faf4fc;
+  --card-border: #e1bee7;
+  --tag-bg: #f3e5f5;
+  --tag-border: #ce93d8;
+  --highlight-text: #4a148c;
+  --tip-color: #4a148c;
+
+  /* PAGE-SPECIFIC: COMMUNITY BANNER */
+  .community-banner {
+    background: linear-gradient(135deg, #6a1b9a, #7b1fa2);
+    color: #fff;
+    padding: 20px 26px;
+    border-radius: 10px;
+    margin-bottom: 32px;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+
+    .icon {
+      font-size: 32px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    h3 {
+      font-size: 16px;
+      font-family: sans-serif;
+      font-weight: 700;
+      margin: 0 0 6px;
+      color: #fff;
+    }
+
+    p {
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.92);
+      margin: 0;
+      font-family: sans-serif;
+      line-height: 1.65;
+    }
+  }
+
+  /* PAGE-SPECIFIC: COMMUNITY GRID */
+  .community-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin: 16px 0 24px;
+  }
+
+  .community-card {
+    padding: 18px 16px;
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 10px;
+
+    h3 {
+      font-size: 15px;
+      font-family: sans-serif;
+      margin: 0 0 4px;
+      color: var(--primary-color);
+      font-weight: 700;
+    }
+
+    .comm-tag {
+      font-size: 10px;
+      font-family: sans-serif;
+      font-weight: 700;
+      padding: 2px 7px;
+      border-radius: 10px;
+      display: inline-block;
+      margin-bottom: 6px;
+      color: #fff;
+      background: var(--primary-color);
+
+      &.moco {
+        background: #2973b0;
+      }
+    }
+
+    p {
+      font-size: 13px;
+      color: #555;
+      margin: 0;
+      line-height: 1.6;
+    }
+  }
+
+  /* PAGE-SPECIFIC: SUBFLOOR ADVANTAGE */
+  .subfloor-advantage {
+    background: #e3f0fa;
+    border: 1px solid #a9cbe8;
+    border-radius: 10px;
+    padding: 20px 22px;
+    margin: 20px 0;
+
+    h3 {
+      font-size: 16px;
+      font-family: sans-serif;
+      font-weight: 700;
+      color: #1c5a8c;
+      margin: 0 0 10px;
+    }
+
+    ul {
+      margin: 0;
+      padding: 0 0 0 20px;
+
+      li {
+        font-size: 13px;
+        color: #555;
+        margin-bottom: 7px;
+        line-height: 1.75;
+      }
+    }
+  }
+
+  @media (max-width: 600px) {
+    .community-banner {
+      flex-direction: column;
+    }
+
+    .community-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+}

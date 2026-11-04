@@ -1,0 +1,243 @@
+.adu-garrett-park-md {
+  --primary-color: #2973b0;
+  --card-style1-bg: #efebe9;
+  --card-style1-border: #d7ccc8;
+  --card-style2-bg: #faf7f5;
+  --card-style2-border: #e8ddd8;
+
+  .hero-location-tag {
+    background: #efebe9;
+    border-color: #d7ccc8;
+  }
+
+  .intro-box {
+    background: #faf7f5;
+    border-color: #e8ddd8;
+  }
+
+  .trust-item {
+    background: #faf7f5;
+    border-color: #e8ddd8;
+  }
+
+  .service-item::before {
+    color: #5d4037;
+  }
+
+  .highlight {
+    background: #efebe9;
+    border-left-color: #5d4037;
+    p { color: #3e2c25; }
+  }
+
+  .note {
+    background: #fffbf0;
+    border-left-color: #f59e0b;
+    color: #7a4f00;
+  }
+
+  .tip {
+    background: #eef5fb;
+    border-left-color: #2973b0;
+    color: #0d3b6e;
+  }
+
+  .warning {
+    background: #fdecea;
+    border-left-color: #b22234;
+    color: #7c0000;
+  }
+
+  .area-pill {
+    background: #efebe9;
+    border-color: #d7ccc8;
+  }
+
+  .review-card {
+    background: #faf7f5;
+    border-color: #e8ddd8;
+  }
+
+  .review-location {
+    color: #5d4037;
+  }
+
+  .cta-btn {
+    color: #5d4037;
+  }
+
+  .author-avatar {
+    background: #5d4037;
+  }
+
+  .cred {
+    background: #e8ddd8;
+    color: #5d4037;
+  }
+
+  .cost-table th {
+    background: #5d4037;
+  }
+
+  .spec-box {
+    background: #fff8f0;
+    border-color: #f0cfa0;
+    h3 { color: #8B4513; }
+  }
+
+  .historic-banner {
+    background: linear-gradient(135deg, #4e342e, #5d4037);
+    color: #fff;
+    padding: 20px 26px;
+    border-radius: 10px;
+    margin-bottom: 32px;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+
+    .icon {
+      font-size: 32px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    h3 {
+      font-size: 16px;
+      font-family: sans-serif;
+      font-weight: 700;
+      margin: 0 0 6px;
+      color: #fff;
+    }
+
+    p {
+      font-size: 13px;
+      color: rgba(255,255,255,0.92);
+      margin: 0;
+      font-family: sans-serif;
+      line-height: 1.65;
+    }
+  }
+
+  .historic-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin: 16px 0 24px;
+  }
+
+  .historic-card {
+    padding: 18px 16px;
+    background: #faf7f5;
+    border: 1px solid #e8ddd8;
+    border-radius: 10px;
+
+    h3 {
+      font-size: 15px;
+      font-family: sans-serif;
+      margin: 0 0 6px;
+      color: #5d4037;
+      font-weight: 700;
+    }
+
+    p {
+      font-size: 13px;
+      color: #555;
+      margin: 0;
+      line-height: 1.6;
+    }
+  }
+
+  .adu-type-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin: 20px 0 28px;
+  }
+
+  .adu-type-card {
+    padding: 22px 20px;
+    background: #faf7f5;
+    border: 1px solid #e8ddd8;
+    border-radius: 10px;
+    border-top: 4px solid #5d4037;
+
+    h3 {
+      font-size: 16px;
+      margin: 0 0 8px;
+      color: #111;
+    }
+
+    p {
+      font-size: 13px;
+      color: #555;
+      margin: 0 0 12px;
+      line-height: 1.6;
+    }
+  }
+
+  .adu-tag {
+    display: inline-block;
+    font-size: 11px;
+    font-family: sans-serif;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 20px;
+    background: #5d4037;
+    color: #fff;
+    margin-bottom: 10px;
+  }
+
+  .adu-cost {
+    font-size: 13px;
+    font-family: sans-serif;
+    font-weight: 700;
+    color: #5d4037;
+    background: #efebe9;
+    padding: 6px 12px;
+    border-radius: 6px;
+    display: inline-block;
+  }
+
+  .benefit-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 12px;
+    margin: 16px 0 24px;
+  }
+
+  .benefit-box {
+    text-align: center;
+    padding: 20px 14px;
+    background: #faf7f5;
+    border: 1px solid #e8ddd8;
+    border-radius: 10px;
+
+    .icon {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    strong {
+      display: block;
+      font-size: 13px;
+      font-family: sans-serif;
+      font-weight: 700;
+      color: #111;
+      margin-bottom: 4px;
+    }
+
+    span {
+      font-size: 12px;
+      color: #666;
+      font-family: sans-serif;
+      line-height: 1.5;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .service-grid, .home-type-grid, .use-type-grid, .neighborhood-grid, .review-grid { grid-template-columns: 1fr; }
+    .trust-bar, .benefit-grid { grid-template-columns: 1fr 1fr; }
+    .adu-type-grid, .historic-grid { grid-template-columns: 1fr; }
+    .historic-banner { flex-direction: column; }
+  }
+}

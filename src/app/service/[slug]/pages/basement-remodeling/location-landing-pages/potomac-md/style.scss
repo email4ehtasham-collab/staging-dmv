@@ -1,0 +1,106 @@
+.basement-potomac-md {
+  --primary-color: #2973b0;
+  --card-style1-bg: #fdf8f7;
+  --card-style1-border: #f0dedd;
+  --card-style2-bg: #fdf8f7;
+  --card-style2-border: #f0dedd;
+
+  .badge.red {
+    background: #c0392b;
+    color: #fff;
+    border-color: #c0392b;
+  }
+
+  .hero-location-tag {
+    background: #fdecea;
+    border-color: #f5c6c2;
+  }
+
+  .intro-box {
+    background: #fdf8f7;
+    border-color: #f0dedd;
+  }
+
+  .trust-item {
+    background: #fdf8f7;
+    border-color: #f0dedd;
+  }
+
+  .service-item::before {
+    color: #c0392b;
+  }
+
+  .spec-box {
+    background: #fff8f0;
+    border-color: #f0cfa0;
+
+    h3 {
+      color: #8B4513;
+    }
+  }
+
+  .neighborhood-card {
+    background: #fdf8f7;
+    border-color: #f0dedd;
+
+    h3 {
+      color: #c0392b;
+    }
+  }
+
+  .highlight {
+    background: #fdecea;
+    border-left-color: #c0392b;
+
+    p {
+      color: #7c0000;
+    }
+  }
+
+  .note {
+    background: #fffbf0;
+    border-left-color: #f59e0b;
+    color: #7a4f00;
+  }
+
+  .tip {
+    background: #eef5fb;
+    border-left-color: #2973b0;
+    color: #0d3b6e;
+  }
+
+  .area-pill {
+    background: #fdecea;
+    border-color: #f5c6c2;
+  }
+
+  .review-card {
+    background: #fdf8f7;
+    border-color: #f0dedd;
+  }
+
+  .review-location {
+    color: #c0392b;
+  }
+
+  .cta-btn {
+    color: #c0392b;
+  }
+
+  .cta-btn.outline {
+    color: #fff;
+  }
+
+  .author-avatar {
+    background: #c0392b;
+  }
+
+  .cred {
+    background: #f0dedd;
+    color: #c0392b;
+  }
+
+  .cost-table th {
+    background: #c0392b;
+  }
+}

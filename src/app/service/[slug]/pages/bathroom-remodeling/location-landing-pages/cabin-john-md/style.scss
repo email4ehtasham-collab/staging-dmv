@@ -1,0 +1,38 @@
+.bathroom-cabin-john-md {
+  a { color: #2f6f4e; }
+
+  .badge.red { background: #fdecea; color: #b22234; border-color: #f5c6c2; }
+
+  .dlcp-banner {
+    background: linear-gradient(135deg, #2f6f4e, #4a9c6e);
+    color: #fff;
+    padding: 20px 26px;
+    border-radius: 10px;
+    margin-bottom: 32px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .dlcp-banner .icon { font-size: 32px; flex-shrink: 0; }
+  .dlcp-banner h3 { font-size: 16px; font-family: sans-serif; font-weight: 700; margin: 0 0 4px; color: #fff; }
+  .dlcp-banner p { font-size: 13px; color: rgba(255,255,255,0.92); margin: 0; font-family: sans-serif; line-height: 1.6; }
+
+  .neighborhood-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 16px 0 24px; }
+  .neighborhood-card { padding: 18px 16px; background: #eef5fb; border: 1px solid #a9cbe8; border-radius: 10px; text-align: left; }
+  .neighborhood-card h3 { font-size: 15px; font-family: sans-serif; margin: 0 0 6px; color: #2f6f4e; font-weight: 700; }
+  .neighborhood-card p { font-size: 13px; color: #555; margin: 0; line-height: 1.6; }
+
+  .site-box, .rowhouse-box { background: #fff8f0; border: 1px solid #f0cfa0; border-radius: 10px; padding: 20px 22px; margin: 20px 0; text-align: left; }
+  .site-box h3, .rowhouse-box h3 { font-size: 16px; font-family: sans-serif; font-weight: 700; color: #8B4513; margin: 0 0 10px; }
+  .site-box ul, .rowhouse-box ul { margin: 0; padding: 0 0 0 20px; }
+  .site-box ul li, .rowhouse-box ul li { font-size: 13px; color: #555; margin-bottom: 6px; line-height: 1.7; }
+
+  .cost-table tr:last-child td { border-bottom: none; }
+
+  .internal-links ul { margin: 12px 0 0 20px; font-size: 15px; line-height: 2.4; text-align: left; }
+  .internal-links a { color: #2f6f4e; }
+
+  @media (max-width: 600px) {
+    .dlcp-banner { flex-direction: column; text-align: center; }
+  }
+}

@@ -1,0 +1,153 @@
+﻿.section {
+  display: flex;
+  min-height: 268px;
+  align-items: center;
+  background: #1e293b;
+  color: #fff;
+}
+
+.inner {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: 48px;
+}
+
+.copy {
+  position: relative;
+  top: 1px;
+  max-width: 700px;
+}
+
+.title {
+  position: relative;
+  top: 1px;
+  max-width: 700px;
+  margin: 0;
+  color: #fff;
+  font-size: 49.4px;
+  font-weight: 600;
+  line-height: 60px;
+  text-shadow: 0 10px 15px rgba(12, 21, 36, 0.07);
+}
+
+.text {
+  max-width: 700px;
+  margin: 18px 0 0;
+  color: #fff;
+  font-size: 16px;
+  line-height: 26px;
+  text-shadow: 0 10px 15px rgba(12, 21, 36, 0.07);
+}
+
+.actions {
+  display: flex;
+  width: 205px;
+  flex: none;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.phoneButton,
+.estimateButton {
+  display: flex;
+  width: 205px;
+  height: 54.75px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  box-shadow: 0 8px 10px rgba(255, 138, 31, 0.3);
+  font-size: 16.25px;
+  font-weight: 600;
+  text-decoration: none;
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.phoneButton {
+  gap: 6px;
+  background: #fff;
+  color: #d4af37;
+}
+
+.phoneButton svg {
+  width: 20px;
+  height: 20px;
+  flex: none;
+}
+
+.estimateButton {
+  background: #d4af37;
+  color: #fff;
+  font-size: 16.15px;
+}
+
+.estimateButton span {
+  position: relative;
+  top: 1px;
+}
+
+.phoneButton:hover,
+.estimateButton:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 16px rgba(255, 138, 31, 0.34);
+}
+
+@media (max-width: 1200px) {
+  .title {
+    font-size: 42px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .section {
+    min-height: 0;
+    padding-block: 56px;
+  }
+
+  .inner {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .copy {
+    max-width: 720px;
+  }
+
+  .actions {
+    width: auto;
+    flex-direction: row;
+  }
+
+  .phoneButton,
+  .estimateButton {
+    width: 205px;
+  }
+}
+
+@media (max-width: 560px) {
+  .section {
+    padding-block: 48px;
+  }
+
+  .title {
+    font-size: 34px;
+  }
+
+  .text {
+    margin-top: 16px;
+  }
+
+  .actions {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .phoneButton,
+  .estimateButton {
+    width: 100%;
+  }
+}
