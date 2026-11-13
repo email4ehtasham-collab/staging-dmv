@@ -12,6 +12,15 @@
   text-align: center;
 }
 
+.section[data-variant="kitchen"] .header :global(.section-heading__title) {
+  font-size: var(--dmv-font-size-3xl);
+  line-height: var(--dmv-line-snug);
+}
+
+.section[data-variant="kitchen"] .cardTitle {
+  font-size: 18px;
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -94,8 +103,9 @@
 .footer p {
   max-width: 700px;
   color: var(--dmv-color-body);
-  font-size: var(--dmv-font-size-sm);
-  line-height: var(--dmv-line-normal);
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 0;
 }
 
 .actions {
@@ -117,6 +127,10 @@
 }
 
 @media (max-width: 768px) {
+  .section[data-variant="kitchen"] .header :global(.section-heading__title) {
+    font-size: var(--dmv-font-size-2xl);
+  }
+
   .panel {
     padding: var(--dmv-space-6);
   }
@@ -141,6 +155,10 @@
 }
 
 @media (max-width: 560px) {
+  .section[data-variant="kitchen"] .header :global(.section-heading__title) {
+    font-size: var(--dmv-font-size-xl);
+  }
+
   .card {
     padding: var(--dmv-space-5);
   }

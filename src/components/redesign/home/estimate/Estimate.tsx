@@ -4,19 +4,44 @@ import SectionHeading from "@/components/Common/SectionHeading";
 import EstimateForm from "./EstimateForm";
 import styles from "./estimate.module.scss";
 
-const benefits = [
-  "Free written estimate after the in-home consultation",
-  "No minimum project size - one room to whole home",
-  "One contract for design, permits and construction",
-  "1-year warranty on every project",
-];
+type EstimateVariant = "home" | "kitchen" | "bethesda-kitchen";
 
-const trustItems = [
-  "4.9 on Google",
-  "MHIC #156178",
-  "DLCP #410526000209",
-  "1-year warranty",
-];
+const benefitsByVariant: Record<EstimateVariant, string[]> = {
+  home: [
+    "Free written estimate after the in-home consultation",
+    "No minimum project size - one room to whole home",
+    "One contract for design, permits and construction",
+    "1-year warranty on every project",
+  ],
+  kitchen: [
+    "Free visit to measure your kitchen",
+    "Written estimate with the cost of each part of the job",
+    "One contract for design, permits and the build",
+    "1-year workmanship warranty on every kitchen",
+  ],
+  "bethesda-kitchen": [],
+};
+
+const trustItemsByVariant: Record<EstimateVariant, string[]> = {
+  home: [
+    "4.9 on Google",
+    "MHIC #156178",
+    "DLCP #410526000209",
+    "1-year warranty",
+  ],
+  kitchen: [
+    "4.9 on Google",
+    "MHIC #156178",
+    "DLCP #410526000209",
+    "35 years",
+  ],
+  "bethesda-kitchen": [
+    "4.9 on Google",
+    "MHIC #156178",
+    "DLCP #410526000209",
+    "1-year warranty",
+  ],
+};
 
 function CheckIcon() {
   return (
@@ -53,9 +78,28 @@ function PinIcon() {
   );
 }
 
-export default function Estimate() {
+function ClockIcon() {
   return (
-    <section id="estimate" className={styles.section} aria-labelledby="estimate-title">
+    <svg viewBox="0 0 20 20" fill="none" aria-hidden="true" focusable="false">
+      <circle cx="10" cy="10" r="7.5" stroke="currentColor" strokeWidth="1.5" />
+      <path d="M10 5.5V10l3 2" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+export default function Estimate({ variant = "home" }: { variant?: EstimateVariant }) {
+  const isKitchen = variant === "kitchen";
+  const isBethesdaKitchen = variant === "bethesda-kitchen";
+  const benefits = benefitsByVariant[variant];
+  const trustItems = trustItemsByVariant[variant];
+
+  return (
+    <section
+      id="estimate"
+      className={styles.section}
+      data-variant={variant}
+      aria-labelledby="estimate-title"
+    >
       <Container>
         <div className={styles.wrapper}>
           <div className={styles.content}>
@@ -63,36 +107,99 @@ export default function Estimate() {
               className={styles.heading}
               id="estimate-title"
               size="large"
-              eyebrow={<Badge className={styles.badge}>Free Estimate</Badge>}
-              title="Get a Free Estimate From a Maryland General Contractor"
-              text="DMV General Contracting Group is a licensed residential general contractor serving Maryland and Washington, DC, with design-build service from the first drawing to the final inspection. Tell us about your kitchen, bathroom, basement, ADU or addition, and we will set up your free in-home consultation."
+              eyebrow={
+                isKitchen || isBethesdaKitchen ? (
+                  <div className={styles.eyebrowRow}>
+                    <Badge className={styles.badge}>
+                      {isBethesdaKitchen ? "Free In-Home Consultation" : "Free Kitchen Estimate"}
+                    </Badge>
+                    <span className={styles.stars} aria-label="4.9 out of 5 stars">
+                      ★★★★★
+                    </span>
+                  </div>
+                ) : (
+                  <Badge className={styles.badge}>Free Estimate</Badge>
+                )
+              }
+              title={
+                isBethesdaKitchen
+                  ? "Start Your Kitchen Remodel in Bethesda, MD"
+                  : isKitchen
+                    ? "Start Your Kitchen Remodel in Maryland"
+                    : "Get a Free Estimate From a Maryland General Contractor"
+              }
+              text={
+                isBethesdaKitchen
+                  ? "When you are ready for kitchen remodeling in Bethesda, MD, our licensed design-build team handles design, permits and construction so the budget and schedule hold. Book a free in-home consultation to see what your kitchen could become."
+                  : isKitchen
+                    ? "A new kitchen is one call away for homeowners seeking kitchen remodeling in Maryland and Washington, DC. DMV General Contracting Group designs, permits and builds it under one license-backed contract. It starts with a no-cost visit to measure your kitchen."
+                    : "DMV General Contracting Group is a licensed residential general contractor serving Maryland and Washington, DC, with design-build service from the first drawing to the final inspection. Tell us about your kitchen, bathroom, basement, ADU or addition, and we will set up your free in-home consultation."
+              }
             />
 
-            <p className={styles.contactIntro}>Request a free estimate, call or email us. We are open 7 days a week.</p>
-
-            <ul className={styles.benefits}>
-              {benefits.map((benefit) => (
-                <li key={benefit}>
-                  <CheckIcon />
-                  {benefit}
-                </li>
-              ))}
-            </ul>
-
-            <div className={styles.contact}>
-              <a href="tel:+12407301292">
-                <PhoneIcon />
-                <span>(240) 730-1292</span>
-              </a>
-              <a href="mailto:support@dmv-gc.com">
-                <MailIcon />
-                <span>support@dmv-gc.com</span>
-              </a>
-              <p>
-                <PinIcon />
-                <span>11810 Grand Park Ave, Suite 500, North Bethesda, MD 20852</span>
+            {isBethesdaKitchen ? (
+              <p className={styles.contactIntro}>
+                To set up the free in-home consultation, use the contact form or phone{" "}
+                <a href="tel:+12407301292">(240) 730-1292</a>.
               </p>
-            </div>
+            ) : isKitchen ? (
+              <p className={styles.contactIntro}>
+                Use our form to book a free kitchen estimate, or dial{" "}
+                <a href="tel:+12407301292">(240) 730-1292</a> seven days a week.
+              </p>
+            ) : (
+              <p className={styles.contactIntro}>
+                Request a free estimate, call or email us. We are open 7 days a week.
+              </p>
+            )}
+
+            {benefits.length > 0 ? (
+              <ul className={styles.benefits}>
+                {benefits.map((benefit) => (
+                  <li key={benefit}>
+                    <CheckIcon />
+                    {benefit}
+                  </li>
+                ))}
+              </ul>
+            ) : null}
+
+            {isBethesdaKitchen ? (
+              <div className={styles.contact}>
+                <p className={styles.companyName}>DMV General Contracting Group LLC</p>
+                <p>
+                  <PinIcon />
+                  <span>11810 Grand Park Ave, Suite 500, North Bethesda, MD 20852</span>
+                </p>
+                <p className={styles.contactLine}>
+                  <PhoneIcon />
+                  <span>
+                    <a href="tel:+12407301292">(240) 730-1292</a>
+                    <span className={styles.contactDot}>·</span>
+                    <a href="mailto:support@dmv-gc.com">support@dmv-gc.com</a>
+                  </span>
+                </p>
+                <p>
+                  <ClockIcon />
+                  <span>Open 7 days a week</span>
+                </p>
+              </div>
+            ) : !isKitchen ? (
+              <div className={styles.contact}>
+                <a href="tel:+12407301292">
+                  <PhoneIcon />
+                  <span>(240) 730-1292</span>
+                </a>
+                <a href="mailto:support@dmv-gc.com">
+                  <MailIcon />
+                  <span>support@dmv-gc.com</span>
+                </a>
+                <p>
+                  <PinIcon />
+                  <span>11810 Grand Park Ave, Suite 500, North Bethesda, MD 20852</span>
+                </p>
+              </div>
+            ) : null}
 
             <ul className={styles.trust} aria-label="Credentials and ratings">
               {trustItems.map((item) => (
@@ -102,7 +209,7 @@ export default function Estimate() {
           </div>
 
           <div className={styles.formCard}>
-            <EstimateForm />
+            <EstimateForm variant={variant} />
           </div>
         </div>
       </Container>

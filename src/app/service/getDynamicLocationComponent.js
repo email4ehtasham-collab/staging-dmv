@@ -2,7 +2,7 @@ import dynamic from "next/dynamic";
 
 const components = {
   "kitchen-remodeling": {
-    "bethesda-md": dynamic(() => import("./[slug]/pages/kitchen-remodeling")),
+    "bethesda-md": dynamic(() => import("./[slug]/pages/kitchen-remodeling/location-landing-pages/bethesda-md")),
     "washington-dc": dynamic(() => import("./[slug]/pages/kitchen-remodeling/location-landing-pages/washington-dc")),
     "chevy-chase-md": dynamic(() => import("./[slug]/pages/kitchen-remodeling/location-landing-pages/chevy-chase-md")),
     "rockville-md": dynamic(() => import("./[slug]/pages/kitchen-remodeling/location-landing-pages/rockville-md")),

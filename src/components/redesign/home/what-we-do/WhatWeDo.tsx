@@ -46,7 +46,15 @@ export default function WhatWeDo() {
             align="center"
             eyebrow={<Badge>The Job</Badge>}
             title="What Does a Residential General Contractor Do for Your Remodel?"
-            text="A residential general contractor is a licensed builder who runs a home remodel from start to finish: design, permits, trades, schedule, inspections and the final walkthrough. Instead of hiring a plumber, an electrician, a framer and a tile setter one at a time, you sign one contract and deal with one company."
+            text={
+              <>
+                A residential{" "}
+                <a href="https://en.wikipedia.org/wiki/General_contractor" target="_blank" rel="noopener noreferrer">
+                  general contractor
+                </a>{" "}
+                is a licensed builder who runs a home remodel from start to finish: design, permits, trades, schedule, inspections and the final walkthrough. Instead of hiring a plumber, an electrician, a framer and a tile setter one at a time, you sign one contract and deal with one company.
+              </>
+            }
           />
           <p className={styles.introStrong}>As your general contractor, we handle four jobs:</p>
         </div>

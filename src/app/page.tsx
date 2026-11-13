@@ -22,8 +22,8 @@ import NavitemActive from "@/components/Common/NavitemActive";
 
 import { Metadata } from "next";
 export const metadata: Metadata = {
-  title: "Licensed General Contractor Bethesda MD | DMV General Contracting Group",
-  description: "Transform your home with DMV General Contracting Group — top-rated remodeling contractors in the DMV area. Kitchen remodels, bathroom renovations, basement finishing & more. 4.9★ rated. Book your free estimate today or Call +1 240-730-1292. ",
+  title: "General Contractor Maryland & DC | DMV General Contracting",
+  description: "Licensed general contractor for home remodeling in Maryland and Washington, DC: kitchens, bathrooms, basements, ADUs and additions. Get Free estimate.",
   
   alternates: {
     canonical: "/",

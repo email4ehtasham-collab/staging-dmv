@@ -4,9 +4,9 @@ import Container from "@/components/Common/Container";
 import SectionHeading from "@/components/Common/SectionHeading";
 import styles from "./licensed-insured.module.scss";
 
-type IconName = "verified" | "compliance" | "protected" | "fairness" | "experience" | "warranty";
+type IconName = "verified" | "compliance" | "protected" | "fairness" | "experience" | "warranty" | "inHouse" | "local";
 
-const reasons = [
+const homeReasons = [
   {
     icon: "verified" as IconName,
     label: "Verified",
@@ -44,6 +44,141 @@ const reasons = [
     text: "Every project we build comes with a 1-year warranty. There is no minimum job size, so a single-room update gets the same care as a whole-home renovation.",
   },
 ];
+
+const kitchenReasons = [
+  {
+    icon: "verified" as IconName,
+    label: "Verified",
+    title: "Licensed and Insured",
+    text: "Our Maryland Home Improvement Commission license is #156178. Our DC Department of Licensing and Consumer Protection license is #410526000209. General liability insurance covers every job.",
+  },
+  {
+    icon: "fairness" as IconName,
+    label: "One Contract",
+    title: "One Contract From Design to Final Inspection",
+    text: "Drawings, permits, pipes, wiring, cabinets and finishes sit in a single contract. One company answers for the whole kitchen.",
+  },
+  {
+    icon: "experience" as IconName,
+    label: "Experience",
+    title: "35 Years of Experience",
+    text: "Our crews have spent 35 years in residential construction, from cabinet refreshes to full guts with new layouts.",
+  },
+  {
+    icon: "compliance" as IconName,
+    label: "Compliance",
+    title: "Permits Handled in Every Area We Serve",
+    text: "We know the permit office for every county, city and town on our map. Plans are drawn to those rules before we file.",
+  },
+  {
+    icon: "warranty" as IconName,
+    label: "Warranty",
+    title: "Workmanship Warranty and Small Jobs Welcome",
+    text: "Labor defects in any kitchen we finish are covered for a year after handover. A $10,000 refresh gets the same care as a $100,000 remodel.",
+  },
+];
+
+const bethesdaReasons = [
+  {
+    icon: "verified" as IconName,
+    label: "Verified",
+    title: "Licensed in Maryland and DC",
+    text: "Maryland lists our firm as MHIC #156178, and the District lists us as DLCP #410526000209. Check either number with the state or DC before signing.",
+  },
+  {
+    icon: "inHouse" as IconName,
+    label: "In-House",
+    title: "Design, Engineering and Trades Under One Roof",
+    text: "Our architects, engineers, electricians, plumbers and HVAC technicians are on our own payroll. Nobody waits on an outside firm to redraw a plan.",
+  },
+  {
+    icon: "experience" as IconName,
+    label: "Experience",
+    title: "35 Years of Residential Experience",
+    text: "Three and a half decades of building and remodeling homes mean we know what hides behind Bethesda's plaster walls.",
+  },
+  {
+    icon: "local" as IconName,
+    label: "Local",
+    title: "Close to Your House",
+    text: "Our Grand Park Avenue office sits a few miles north of downtown Bethesda, so site visits and inspections are easy to schedule.",
+  },
+  {
+    icon: "warranty" as IconName,
+    label: "Warranty",
+    title: "Line-Item Pricing and Warranty Coverage",
+    text: "You see a line-item estimate before work begins and keep a 1-year workmanship warranty after it ends.",
+  },
+];
+
+const bethesdaKitchenReasons = [
+  {
+    icon: "local" as IconName,
+    label: "Local",
+    title: "An Office a Short Drive Away",
+    text: "We drive in from 11810 Grand Park Avenue, minutes up Rockville Pike, which keeps selection meetings and inspection days simple to book.",
+  },
+  {
+    icon: "fairness" as IconName,
+    label: "Fairness",
+    title: "Budgets That Hold",
+    text: "Your estimate lists every line before work starts, and we check the panel, pipes and walls first. Any change is priced in writing before we do it.",
+  },
+  {
+    icon: "verified" as IconName,
+    label: "Verified",
+    title: "Licensed and Well Reviewed",
+    text: "We hold MHIC #156178 and average 4.9 on Google, and one project lead stays with your kitchen from design to final inspection.",
+  },
+];
+
+function BethesdaReasonIcon({ name }: { name: IconName }) {
+  if (name === "verified") {
+    return (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M12 3 20 6v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6l8-3Z" />
+        <path d="m8.5 12 2.5 2.5 4.5-5" />
+      </svg>
+    );
+  }
+
+  if (name === "inHouse") {
+    return (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+        <circle cx="9" cy="7" r="4" />
+        <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+      </svg>
+    );
+  }
+
+  if (name === "experience") {
+    return (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+        <circle cx="12" cy="8" r="5" />
+        <path d="m8.2 12.3-1.2 9.7 5-3 5 3-1.2-9.7" />
+      </svg>
+    );
+  }
+
+  if (name === "local") {
+    return (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z" />
+        <circle cx="12" cy="10" r="3" />
+      </svg>
+    );
+  }
+
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z" />
+      <path d="M14 2v6h6" />
+      <path d="m9 15 2 2 4-4" />
+    </svg>
+  );
+}
 
 function ReasonIcon({ name }: { name: IconName }) {
   if (name === "verified") {
@@ -84,6 +219,26 @@ function ReasonIcon({ name }: { name: IconName }) {
     );
   }
 
+  if (name === "inHouse") {
+    return (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M3 11 12 4l9 7" />
+        <path d="M5 10v10h14V10" />
+        <path d="M9 20v-5h6v5" />
+        <path d="M9 12h6" />
+      </svg>
+    );
+  }
+
+  if (name === "local") {
+    return (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M12 21s7-5.5 7-12a7 7 0 1 0-14 0c0 6.5 7 12 7 12Z" />
+        <circle cx="12" cy="9" r="2.5" />
+      </svg>
+    );
+  }
+
   if (name === "experience") {
     return (
       <svg width="67" height="55" viewBox="0 0 67 55" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -104,17 +259,53 @@ function ReasonIcon({ name }: { name: IconName }) {
   );
 }
 
-export default function LicensedInsured() {
+type LicensedInsuredProps = {
+  variant?: "home" | "kitchen" | "bethesda" | "bethesda-kitchen";
+};
+
+export default function LicensedInsured({ variant = "home" }: LicensedInsuredProps) {
+  const isKitchen = variant === "kitchen";
+  const isBethesda = variant === "bethesda";
+  const isBethesdaKitchen = variant === "bethesda-kitchen";
+  const reasons = isBethesdaKitchen
+    ? bethesdaKitchenReasons
+    : isKitchen
+      ? kitchenReasons
+      : isBethesda
+        ? bethesdaReasons
+        : homeReasons;
+
   return (
-    <section id="licensed-insured" className={styles.section} aria-labelledby="licensed-title">
+    <section
+      id="licensed-insured"
+      className={styles.section}
+      aria-labelledby="licensed-title"
+      data-variant={variant}
+    >
       <Container>
           <div className={styles.header}>
             <SectionHeading
               id="licensed-title"
               align="center"
-              eyebrow={<Badge>Why choose us</Badge>}
-              title="Licensed and Insured in Maryland and Washington, DC"
-              text="Hiring a contractor to work inside your home is a big decision. These are the reasons homeowners in Maryland and Washington, DC choose us:"
+              eyebrow={<Badge>{isKitchen || isBethesda || isBethesdaKitchen ? "Why Choose Us" : "Why choose us"}</Badge>}
+              title={
+                isBethesdaKitchen
+                  ? "Why Bethesda Homeowners Choose Us for Kitchens"
+                  : isKitchen
+                    ? "Why Homeowners Choose Us for Their Kitchen Remodel"
+                    : isBethesda
+                      ? "Why Bethesda Homeowners Hire Us"
+                      : "Licensed and Insured in Maryland and Washington, DC"
+              }
+              text={
+                isBethesdaKitchen
+                  ? "Bethesda owners tend to give us three reasons for hiring us."
+                  : isKitchen
+                    ? "Homeowners in Maryland and DC pick us for kitchen remodeling for five reasons:"
+                    : isBethesda
+                      ? "Five things set us apart for Bethesda owners:"
+                      : "Hiring a contractor to work inside your home is a big decision. These are the reasons homeowners in Maryland and Washington, DC choose us:"
+              }
             />
           </div>
 
@@ -123,7 +314,7 @@ export default function LicensedInsured() {
               <article key={reason.label} className={styles.card}>
                 <div className={styles.cardTop}>
                   <span className={styles.icon}>
-                    <ReasonIcon name={reason.icon} />
+                    {isBethesda ? <BethesdaReasonIcon name={reason.icon} /> : <ReasonIcon name={reason.icon} />}
                   </span>
                   <span className={styles.label}>{reason.label}</span>
                 </div>
@@ -134,17 +325,42 @@ export default function LicensedInsured() {
           </div>
 
           <div className={styles.footer}>
-            <p>
-              Our five-step process below shows what working with us looks like, from the first visit to the final walkthrough.
-            </p>
-            <div className={styles.actions}>
-              <Button href="/license/MHIC-License.pdf" variant="primary" target="_blank" rel="noopener noreferrer">
-                View MHIC License
-              </Button>
-              <Button href="/license/DC-License-2026.pdf" variant="secondary" target="_blank" rel="noopener noreferrer">
-                View DC License
-              </Button>
-            </div>
+            {isBethesdaKitchen ? (
+              <>
+                <p>Twelve months of workmanship coverage starts the day your Bethesda kitchen passes its final.</p>
+                <div className={styles.actions}>
+                  <Button href="/contact-us" data-estimate-trigger>
+                    Get a Free Estimate
+                  </Button>
+                </div>
+              </>
+            ) : isBethesda ? (
+              <>
+                <p>One company stays accountable from the first sketch to the final inspection.</p>
+                <div className={styles.actions}>
+                  <Button href="/contact-us" data-estimate-trigger>
+                    Get a Free Estimate
+                  </Button>
+                </div>
+              </>
+            ) : isKitchen ? (
+              <p>These kitchens show that approach in finished homes.</p>
+            ) : (
+              <>
+                <p>
+                  Our five-step process below shows what working with us looks like, from the first visit to the final
+                  walkthrough.
+                </p>
+                <div className={styles.actions}>
+                  <Button href="/license/MHIC-License.pdf" variant="primary" target="_blank" rel="noopener noreferrer">
+                    View MHIC License
+                  </Button>
+                  <Button href="/license/DC-License-2026.pdf" variant="secondary" target="_blank" rel="noopener noreferrer">
+                    View DC License
+                  </Button>
+                </div>
+              </>
+            )}
           </div>
       </Container>
     </section>

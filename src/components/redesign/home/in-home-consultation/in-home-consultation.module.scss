@@ -1,9 +1,9 @@
-﻿.section {
+.section {
   display: flex;
   min-height: 268px;
   align-items: center;
-  background: #1e293b;
-  color: #fff;
+  background: var(--dmv-color-dark-blue);
+  color: var(--dmv-color-inverse);
 }
 
 .inner {
@@ -25,7 +25,7 @@
   top: 1px;
   max-width: 700px;
   margin: 0;
-  color: #fff;
+  color: var(--dmv-color-inverse);
   font-size: 49.4px;
   font-weight: 600;
   line-height: 60px;
@@ -35,7 +35,7 @@
 .text {
   max-width: 700px;
   margin: 18px 0 0;
-  color: #fff;
+  color: var(--dmv-color-inverse);
   font-size: 16px;
   line-height: 26px;
   text-shadow: 0 10px 15px rgba(12, 21, 36, 0.07);
@@ -43,7 +43,6 @@
 
 .actions {
   display: flex;
-  width: 205px;
   flex: none;
   flex-direction: column;
   gap: 16px;
@@ -52,7 +51,6 @@
 .phoneButton,
 .estimateButton {
   display: flex;
-  width: 205px;
   height: 54.75px;
   align-items: center;
   justify-content: center;
@@ -64,12 +62,13 @@
   transition:
     transform 180ms ease,
     box-shadow 180ms ease;
+    padding: 20px;
 }
 
 .phoneButton {
   gap: 6px;
-  background: #fff;
-  color: #d4af37;
+  background: var(--dmv-color-inverse);
+  color: var(--dmv-color-accent);
 }
 
 .phoneButton svg {
@@ -79,8 +78,8 @@
 }
 
 .estimateButton {
-  background: #d4af37;
-  color: #fff;
+  background: var(--dmv-color-accent);
+  color: var(--dmv-color-inverse);
   font-size: 16.15px;
 }
 
@@ -122,10 +121,7 @@
     flex-direction: row;
   }
 
-  .phoneButton,
-  .estimateButton {
-    width: 205px;
-  }
+
 }
 
 @media (max-width: 560px) {

@@ -43,6 +43,16 @@
   font-weight: var(--dmv-weight-medium);
 }
 
+.areaLink {
+  color: var(--dmv-color-brand);
+  text-decoration: none;
+}
+
+.areaLink:hover {
+  color: var(--dmv-color-brand-dark);
+  text-decoration: underline;
+}
+
 .dot {
   width: 6px;
   height: 6px;

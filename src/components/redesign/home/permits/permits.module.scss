@@ -8,6 +8,11 @@
   margin: auto
 }
 
+.section[data-variant="kitchen"] .header :global(.section-heading__title) {
+  font-size: var(--dmv-font-size-3xl);
+  line-height: var(--dmv-line-snug);
+}
+
 .tableWrap {
   margin-top: var(--dmv-space-10);
   overflow: hidden;
@@ -114,6 +119,10 @@
 }
 
 @media (max-width: 768px) {
+  .section[data-variant="kitchen"] .header :global(.section-heading__title) {
+    font-size: var(--dmv-font-size-2xl);
+  }
+
   .tableWrap {
     border: 0;
     border-radius: 0;
@@ -168,6 +177,12 @@
     font-weight: var(--dmv-weight-semibold);
     letter-spacing: var(--dmv-tracking-wide);
     text-transform: uppercase;
+  }
+}
+
+@media (max-width: 640px) {
+  .section[data-variant="kitchen"] .header :global(.section-heading__title) {
+    font-size: var(--dmv-font-size-xl);
   }
 }
 

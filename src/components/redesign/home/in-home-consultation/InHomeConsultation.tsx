@@ -16,18 +16,30 @@ function PhoneIcon() {
   );
 }
 
-export default function InHomeConsultation() {
+type InHomeConsultationProps = {
+  id?: string;
+  headingId?: string;
+  title?: string;
+  text?: string;
+  ctaLabel?: string;
+};
+
+export default function InHomeConsultation({
+  id = "consultation",
+  headingId = "consultation-title",
+  title = "Start With A Free In-Home Consultation.",
+  text = "We look at the space, listen to what you want and talk through your budget and timing. You get a free written estimate afterward.",
+  ctaLabel = "Get a Free Estimate",
+}: InHomeConsultationProps = {}) {
   return (
-    <section className={styles.section} aria-labelledby="consultation-title">
+    <section id={id} className={styles.section} aria-labelledby={headingId}>
       <Container>
         <div className={styles.inner}>
           <div className={styles.copy}>
-            <h2 id="consultation-title" className={styles.title}>
-              Start With A Free In-Home Consultation.
+            <h2 id={headingId} className={styles.title}>
+              {title}
             </h2>
-            <p className={styles.text}>
-              We look at the space, listen to what you want and talk through your budget and timing. You get a free written estimate afterward.
-            </p>
+            <p className={styles.text}>{text}</p>
           </div>
 
           <div className={styles.actions}>
@@ -36,7 +48,7 @@ export default function InHomeConsultation() {
               <span>(240) 730-1292</span>
             </a>
             <Link className={styles.estimateButton} href="/contact-us" data-estimate-trigger>
-              <span>Get a Free Estimate</span>
+              <span>{ctaLabel}</span>
             </Link>
           </div>
         </div>

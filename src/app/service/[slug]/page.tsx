@@ -66,8 +66,8 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
 
                 <div className={`image-holder ${styles["main-image"]}`}>
                     <img
-                    src={`.${service.image}`}
-                    alt={service.title}
+                    src={service.image.replace(/^\./, "")}
+                    alt={service.imageAlt || service.title}
                     />
                 </div>
 

@@ -38,6 +38,14 @@
   color: var(--dmv-color-inverse, #fff);
 }
 
+.white {
+  background: var(--dmv-color-inverse, white);
+  color: var(--dmv-color-brand-dark, #fff);
+}
+.white:hover {
+  background: #e2e1e1;
+}
+
 .button:focus-visible {
   outline: none;
   box-shadow: var(--dmv-focus-ring);

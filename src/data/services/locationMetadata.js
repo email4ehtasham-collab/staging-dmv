@@ -1,4 +1,8 @@
 const locationMetadata = {
+    "kitchen-remodeling/bethesda-md": {
+        title: "Kitchen Remodeling in Bethesda, MD | Licensed Kitchen Contractor | DMV General Contracting Group",
+        description: "Licensed kitchen remodeling contractor in Bethesda, MD. Full gut renovations, custom cabinets, countertops, layout changes and permits handled in-house. MHIC #156178. Call (240) 730-1292.",
+    },
     "junk-removal/bethesda-md": {
         title: "Junk Removal Services in Bethesda, MD | DMV General Contracting Group",
         description: "Professional junk removal services in Bethesda, MD — construction debris removal, residential cleanouts, bulk item pickup, estate cleanouts, and renovation waste hauling. Same-day and scheduled service. MHIC #156178. Call +1 240-730-1292.",

@@ -68,7 +68,7 @@ export default function HeroBanner() {
               <Badge variant="accent" className={`${styles.featuredBadge} nostars`}>
                 Featured Transformation
               </Badge>
-              <p className={styles.featuredTitle}>Bethesda Custom Open-Concept Kitchen</p>
+              <p className={styles.featuredTitle}>Custom Open-Concept Kitchen</p>
               <p className={styles.featuredMeta}>Design, Architectural Engineering, Permits &amp; Complete Remodel</p>
             </div>
           </div>

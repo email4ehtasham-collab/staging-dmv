@@ -4,7 +4,7 @@ import Container from "@/components/Common/Container";
 import SectionHeading from "@/components/Common/SectionHeading";
 import styles from "./five-steps.module.scss";
 
-const steps = [
+const defaultSteps = [
   {
     number: "01",
     title: "Meet",
@@ -35,7 +35,30 @@ const steps = [
     side: "left",
     text: "We pass the final inspection, walk the finished space with you, close out the punch list and start your 1-year warranty.",
   },
-];
+] as const;
+
+type ProcessStep = {
+  number: string;
+  title: string;
+  side: "left" | "right";
+  text: string;
+};
+
+type ProcessDuration = {
+  value: string;
+  text: string;
+};
+
+type FiveStepsProps = {
+  title?: string;
+  text?: string;
+  steps?: readonly ProcessStep[];
+  durations?: readonly ProcessDuration[];
+  showContact?: boolean;
+  contactTitle?: string;
+  contactText?: string;
+  contactCtaLabel?: string;
+};
 
 function SparkIcon() {
   return (
@@ -55,7 +78,16 @@ function HeadsetIcon() {
   );
 }
 
-export default function FiveSteps() {
+export default function FiveSteps({
+  title = "Our 5-Step Remodeling Process",
+  text = "Every project we take on follows the same five steps, so you always know what happens next and who is responsible for it:",
+  steps = defaultSteps,
+  durations = [],
+  showContact = true,
+  contactTitle = "Single Point of Contact",
+  contactText = "Your project lead is your day-to-day contact from the first day of construction to the final walkthrough, so you always know who to call.",
+  contactCtaLabel = "Start With Step 1 - It's Free",
+}: FiveStepsProps = {}) {
   return (
     <section id="process" className={styles.section} aria-labelledby="process-title">
       <Container>
@@ -64,8 +96,8 @@ export default function FiveSteps() {
             id="process-title"
             align="center"
             eyebrow={<Badge className={styles.badge} >Process</Badge>}
-            title="Our 5-Step Remodeling Process"
-            text="Every project we take on follows the same five steps, so you always know what happens next and who is responsible for it:"
+            title={title}
+            text={text}
           />
         </div>
 
@@ -101,18 +133,31 @@ export default function FiveSteps() {
           })}
         </div>
 
-        <div className={styles.contact}>
-          <span className={styles.contactIconWrap}>
-            <HeadsetIcon />
-          </span>
-          <div className={styles.contactCopy}>
-            <h3>Single Point of Contact</h3>
-            <p>
-              Your project lead is your day-to-day contact from the first day of construction to the final walkthrough, so you always know who to call.
-            </p>
+        {durations.length > 0 ? (
+          <div className={styles.durations}>
+            {durations.map((duration) => (
+              <div className={styles.durationCard} key={`${duration.value}-${duration.text}`}>
+                <strong className={styles.durationValue}>{duration.value}</strong>
+                <p className={styles.durationText}>{duration.text}</p>
+              </div>
+            ))}
           </div>
-          <Button href="/contact-us" data-estimate-trigger className={styles.contactButton}>Start With Step 1 - It&apos;s Free</Button>
-        </div>
+        ) : null}
+
+        {showContact ? (
+          <div className={styles.contact}>
+            <span className={styles.contactIconWrap}>
+              <HeadsetIcon />
+            </span>
+            <div className={styles.contactCopy}>
+              <h3>{contactTitle}</h3>
+              <p>{contactText}</p>
+            </div>
+            <Button href="/contact-us" data-estimate-trigger className={styles.contactButton}>
+              {contactCtaLabel}
+            </Button>
+          </div>
+        ) : null}
       </Container>
     </section>
   );

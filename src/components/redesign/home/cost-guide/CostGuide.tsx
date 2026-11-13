@@ -64,15 +64,27 @@ export default function CostGuide() {
           In Maryland, most home remodels cost between $60 and $250 or more per square foot. Construction and labor costs in Maryland run higher than the national average, so your budget depends on your county, the size of your home and the scope of the work. Here is what each type of project typically costs:
         </p>
 
-        <div className={styles.grid}>
-          {costs.map((cost) => (
-            <article key={cost.title} className={styles.card}>
-              <h3 className={styles.cardTitle}>{cost.title}</h3>
-              <p className={styles.amount}>{cost.amount}</p>
-              <span className={styles.cardLabel}>{cost.label}</span>
-              <p className={styles.cardText}>{cost.text}</p>
-            </article>
-          ))}
+        <div className={styles.tableWrap}>
+          <table className={styles.table}>
+            <thead>
+              <tr>
+                <th scope="col">Project</th>
+                <th scope="col">Typical cost</th>
+                <th scope="col">Cost basis</th>
+                <th scope="col">What affects the cost</th>
+              </tr>
+            </thead>
+            <tbody>
+              {costs.map((cost) => (
+                <tr key={cost.title}>
+                  <th scope="row" className={styles.project}>{cost.title}</th>
+                  <td className={styles.amount}>{cost.amount}</td>
+                  <td className={styles.label}>{cost.label}</td>
+                  <td className={styles.detail}>{cost.text}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
 
         <p className={styles.note}>

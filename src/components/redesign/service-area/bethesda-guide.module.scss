@@ -1,0 +1,442 @@
+.section {
+  padding-block: var(--dmv-section-padding);
+}
+
+.neighborhoods {
+  border-top: var(--dmv-border-width) solid var(--dmv-color-border-card);
+  border-bottom: var(--dmv-border-width) solid var(--dmv-color-border-card);
+  background: var(--dmv-color-surface);
+}
+
+.permits {
+  border-bottom: var(--dmv-border-width) solid var(--dmv-color-border-card);
+  background: var(--dmv-color-surface-soft);
+}
+
+.costs {
+  background: var(--dmv-color-surface);
+}
+
+.heading {
+  max-width: 920px;
+  margin-inline: auto;
+  margin-bottom: var(--dmv-space-12);
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--dmv-space-4);
+  margin-bottom: var(--dmv-space-12);
+}
+
+.statCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--dmv-space-6);
+  border: var(--dmv-border-width) solid var(--dmv-color-border-card);
+  border-radius: var(--dmv-radius-lg);
+  background: var(--dmv-color-surface-soft);
+  box-shadow: var(--dmv-shadow-soft);
+  text-align: center;
+}
+
+.statValue {
+  color: var(--dmv-color-heading);
+  font-size: 24px;
+  font-weight: var(--dmv-weight-extrabold);
+  line-height: 1.25;
+}
+
+.statFeatured {
+  border-color: var(--dmv-color-dark-blue);
+  background: var(--dmv-color-dark-blue);
+}
+
+.statFeatured .statValue {
+  color: var(--dmv-color-inverse);
+}
+
+.neighborhoodGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--dmv-space-6);
+  margin-bottom: var(--dmv-space-12);
+}
+
+.neighborhoodCard {
+  display: flex;
+  flex-direction: column;
+  padding: var(--dmv-space-7);
+  border: var(--dmv-border-width) solid var(--dmv-color-border-card);
+  border-radius: var(--dmv-radius-lg);
+  background: var(--dmv-color-surface);
+  box-shadow: var(--dmv-shadow-soft);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.neighborhoodCard:hover {
+  border-color: var(--dmv-color-brand-wash-strong);
+  box-shadow: var(--dmv-shadow-card);
+  transform: translateY(-2px);
+}
+
+.neighborhoodTag {
+  margin-bottom: var(--dmv-space-3);
+  color: var(--dmv-color-brand);
+  font-size: 11px;
+  font-weight: var(--dmv-weight-bold);
+  letter-spacing: 0.08em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.neighborhoodIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  margin-bottom: var(--dmv-space-5);
+  border-radius: var(--dmv-radius-md);
+  background: var(--dmv-color-brand-wash);
+  color: var(--dmv-color-brand);
+}
+
+.neighborhoodIcon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.neighborhoodCard h3 {
+  color: var(--dmv-color-heading);
+  font-size: var(--dmv-font-size-lg);
+  font-weight: var(--dmv-weight-bold);
+  line-height: 1.3;
+}
+
+.neighborhoodCard p {
+  margin-top: var(--dmv-space-2);
+  color: var(--dmv-color-body);
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+
+
+.confirmBanner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--dmv-space-6);
+  padding: var(--dmv-space-8);
+  border-radius: var(--dmv-radius-lg);
+  background: var(--dmv-color-dark-blue);
+  color: var(--dmv-color-inverse);
+  box-shadow: var(--dmv-shadow-card);
+}
+
+.confirmBanner p {
+  max-width: 860px;
+  color: var(--dmv-color-inverse-soft);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.confirmButton {
+  flex-shrink: 0;
+}
+
+.tableWrap {
+  overflow-x: auto;
+  border: var(--dmv-border-width) solid var(--dmv-color-border-card);
+  border-radius: var(--dmv-radius-lg);
+  background: var(--dmv-color-surface);
+  box-shadow: var(--dmv-shadow-soft);
+}
+
+.table {
+  width: 100%;
+  min-width: 760px;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.table thead {
+  background: var(--dmv-color-dark-blue);
+  color: var(--dmv-color-inverse);
+}
+
+.table th,
+.table td {
+  padding: var(--dmv-space-4) var(--dmv-space-6);
+  vertical-align: top;
+}
+
+.table thead th {
+  font-size: 11px;
+  font-weight: var(--dmv-weight-bold);
+  letter-spacing: 0.08em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.table tbody tr {
+  border-top: var(--dmv-border-width) solid var(--dmv-color-line-soft);
+  transition: background-color 0.2s ease;
+}
+
+.table tbody tr:hover {
+  background: var(--dmv-color-surface-soft);
+}
+
+.table tbody th {
+  color: var(--dmv-color-heading);
+  font-size: 14px;
+  font-weight: var(--dmv-weight-bold);
+  line-height: 1.5;
+}
+
+.table tbody td {
+  color: var(--dmv-color-body);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.statusYes,
+.statusNo {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  border-radius: var(--dmv-radius-sm);
+  font-size: 11px;
+  font-weight: var(--dmv-weight-bold);
+  line-height: 1.4;
+  white-space: nowrap;
+}
+
+.statusYes {
+  background: rgba(41, 115, 176, 0.12);
+  color: var(--dmv-color-brand-secondary);
+}
+
+.statusNo {
+  background: var(--dmv-color-surface-soft);
+  color: var(--dmv-color-muted);
+}
+
+.notRequired {
+  color: var(--dmv-color-muted);
+  font-style: italic;
+}
+
+.noteCard {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--dmv-space-4);
+  margin-top: var(--dmv-space-8);
+  padding: var(--dmv-space-6) var(--dmv-space-8);
+  border: var(--dmv-border-width) solid rgba(212, 175, 55, 0.38);
+  border-radius: var(--dmv-radius-lg);
+  background: rgba(212, 175, 55, 0.1);
+}
+
+.noteIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  flex: none;
+  border-radius: var(--dmv-radius-md);
+  background: var(--dmv-color-accent);
+  color: var(--dmv-color-heading);
+}
+
+.noteIcon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.noteCard h3 {
+  color: var(--dmv-color-heading);
+  font-size: 16px;
+  font-weight: var(--dmv-weight-bold);
+  line-height: 1.35;
+}
+
+.noteCard p {
+  margin-top: var(--dmv-space-1);
+  color: var(--dmv-color-body);
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.amount {
+  color: var(--dmv-color-brand);
+  font-weight: var(--dmv-weight-semibold);
+}
+
+.tableNote {
+  margin-top: var(--dmv-space-4);
+  color: var(--dmv-color-muted);
+  font-size: 12px;
+  font-style: italic;
+  line-height: 1.6;
+}
+
+.demoCard {
+  position: relative;
+  overflow: hidden;
+  margin-top: var(--dmv-space-12);
+  padding: clamp(24px, 4vw, 40px);
+  border-radius: var(--dmv-radius-xl);
+  background: var(--dmv-color-dark-blue);
+  color: var(--dmv-color-inverse);
+  box-shadow: var(--dmv-shadow-card);
+}
+
+.demoCard::before {
+  content: "";
+  position: absolute;
+  top: -120px;
+  right: -100px;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  background: var(--dmv-color-brand);
+  opacity: 0.14;
+  filter: blur(16px);
+  pointer-events: none;
+}
+
+.demoCard > * {
+  position: relative;
+}
+
+.demoEyebrow {
+  display: block;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 11px;
+  font-weight: var(--dmv-weight-bold);
+  letter-spacing: 0.1em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.demoCard h3 {
+  margin-top: var(--dmv-space-2);
+  color: var(--dmv-color-inverse);
+  font-size: clamp(24px, 2.5vw, 30px);
+  font-weight: var(--dmv-weight-bold);
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+}
+
+.demoCard p {
+  max-width: 760px;
+  margin-top: var(--dmv-space-3);
+  color: var(--dmv-color-inverse-soft);
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.demoCard p strong {
+  color: var(--dmv-color-inverse);
+}
+
+.demoStats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--dmv-space-6);
+  margin-top: var(--dmv-space-8);
+  padding-top: var(--dmv-space-6);
+  border-top: var(--dmv-border-width) solid rgba(255, 255, 255, 0.12);
+}
+
+.demoStat {
+  padding: var(--dmv-space-6);
+  border: var(--dmv-border-width) solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--dmv-radius-lg);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.demoStat span {
+  display: block;
+  margin-bottom: var(--dmv-space-1);
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 11px;
+  font-weight: var(--dmv-weight-bold);
+  letter-spacing: 0.08em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.demoStat strong {
+  color: var(--dmv-color-accent);
+  font-size: 30px;
+  font-weight: var(--dmv-weight-extrabold);
+  line-height: 1.2;
+}
+
+.demoSource {
+  margin-top: var(--dmv-space-6);
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 12px;
+  font-weight: var(--dmv-weight-medium);
+}
+
+@media (max-width: 1100px) {
+  .neighborhoodGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 900px) {
+  .stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .heading {
+    margin-bottom: var(--dmv-space-8);
+  }
+
+  .confirmBanner {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .confirmButton {
+    width: 100%;
+  }
+
+  .noteCard {
+    padding: var(--dmv-space-5);
+  }
+
+  .demoStats {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .stats {
+    grid-template-columns: 1fr;
+  }
+
+  .neighborhoodGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .statValue {
+    font-size: 22px;
+  }
+
+  .demoStat strong {
+    font-size: 26px;
+  }
+}

@@ -36,6 +36,30 @@
   letter-spacing: 0.06em;
 }
 
+.eyebrowRow {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.stars {
+  color: var(--dmv-color-brand);
+  font-size: 14px;
+  letter-spacing: 2px;
+  line-height: 1;
+}
+
+.contactIntro a {
+  color: var(--dmv-color-brand);
+  font-weight: var(--dmv-weight-semibold);
+  text-decoration: none;
+}
+
+.contactIntro a:hover {
+  color: var(--dmv-color-brand-dark);
+}
+
 .contactIntro {
   margin-top: 10px;
   padding-top: 10px;
@@ -95,6 +119,19 @@
 
 .contact a:hover {
   color: var(--dmv-color-brand);
+}
+
+.contact .companyName {
+  display: block;
+  margin-bottom: 2px;
+  color: var(--dmv-color-heading);
+  font-size: 16px;
+  font-weight: var(--dmv-weight-bold);
+}
+
+.contactDot {
+  margin-inline: 6px;
+  color: var(--dmv-color-muted);
 }
 
 .contact svg {

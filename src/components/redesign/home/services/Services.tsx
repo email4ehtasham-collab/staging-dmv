@@ -1,24 +1,11 @@
-﻿import Image from "next/image";
-import Link from "next/link";
+﻿import Link from "next/link";
 import Badge from "@/components/Common/Badge";
 import Button from "@/components/Common/Button";
 import Container from "@/components/Common/Container";
 import SectionHeading from "@/components/Common/SectionHeading";
-import ServiceData from "@/data/services/ServiceData";
+import { HomeServicesData } from "@/data/services/ServiceData";
+import ServiceCard from "./ServiceCard";
 import styles from "./services.module.scss";
-
-const featuredServiceSlugs = [
-  "kitchen-remodeling",
-  "home-additions",
-  "bathroom-remodeling",
-  "decks",
-  "basement-remodeling",
-  "flooring-remodeling",
-];
-
-const services = featuredServiceSlugs
-  .map((slug) => ServiceData.find((service) => service.slug === slug))
-  .filter(Boolean);
 
 const supportingLinks = [
   { label: "Framing", href: "/service/framing" },
@@ -33,25 +20,30 @@ const supportingLinks = [
   { label: "Patios", href: "/service/patios" },
 ];
 
-function ArrowIcon() {
-  return (
-    <svg viewBox="0 0 16 16" fill="none" aria-hidden="true" focusable="false" className={styles.arrowIcon}>
-      <path d="M3 8h9M8.5 3.5 13 8l-4.5 4.5" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
-  );
-}
+type ServicesProps = {
+  eyebrow?: string;
+  title?: string;
+  text?: string;
+  align?: "left" | "center";
+};
 
-export default function Services() {
+export default function Services({
+  eyebrow = "Our Exclusive Services",
+  title = "Our Home Remodeling Services in Maryland and DC",
+  text = "These are seven of the main remodeling services we offer across Maryland and Washington, DC. Each one has its own page with details on design, permits, costs and timelines, and the rest of our services are listed after these seven.",
+  align = "left",
+}: ServicesProps = {}) {
   return (
     <section id="services" className={styles.section} aria-labelledby="services-title">
       <Container>
-        <div className={styles.header}>
+        <div className={`${styles.header} ${align === "center" ? styles.headerCentered : ""}`}>
           <SectionHeading
             className={styles.heading}
             id="services-title"
-            eyebrow={<Badge>Our Exclusive Services</Badge>}
-            title="Our Home Remodeling Services in Maryland and DC"
-            text="These are seven of the main remodeling services we offer across Maryland and Washington, DC. Each one has its own page with details on design, permits, costs and timelines, and the rest of our services are listed after these seven."
+            align={align}
+            eyebrow={<Badge>{eyebrow}</Badge>}
+            title={title}
+            text={text}
           />
           <Button href="/services" variant="secondary">
             View All Services
@@ -59,31 +51,8 @@ export default function Services() {
         </div>
 
         <div className={styles.grid}>
-          {services.map((service) => (
-            <Link
-              key={service.slug}
-              href={`/service/${service.slug}`}
-              className={styles.card}
-              aria-label={`View ${service.title} service`}
-            >
-              <div className={styles.media}>
-                <Image
-                  src={service.image.replace(/^\./, "")}
-                  alt={service.imageAlt}
-                  fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 460px"
-                  className={styles.image}
-                />
-              </div>
-              <div className={styles.body}>
-                <h3 className={styles.cardTitle}>{service.title}</h3>
-                <p className={styles.cardText}>{service.desc}</p>
-                <span className={styles.details}>
-                  View Details
-                  <ArrowIcon />
-                </span>
-              </div>
-            </Link>
+          {HomeServicesData.map((service) => (
+            <ServiceCard key={service.slug} service={service} />
           ))}
         </div>
 

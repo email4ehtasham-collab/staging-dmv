@@ -1,4 +1,4 @@
-export default [
+const ServiceData = [
     {
         id: '0',
         image: './images/services/kitchen.jpg',
@@ -10,8 +10,8 @@ export default [
         points_main_title: "Our Kitchen Remodeling services include",
         newService: true,
         imageAlt: 'Kitchen remodeling services in Bethesda MD —custom design and renovation',
-        meta_title: "Kitchen Remodeling in Bethesda, MD | Licensed Contractor | DMV General Contracting Group",
-        meta_description: "Expert kitchen remodeling in Bethesda, MD. Licensed design-build contractor serving Potomac, Chevy Chase & North Bethesda. Free in-home consultation. 1-Year Warranty. Call +1 240-730-1292!",
+        meta_title: "Kitchen Remodeling in Maryland & DC | DMV General Contracting",
+        meta_description: "DMV General Contracting Group offers kitchen remodeling in Maryland and DC from $15,000, with design, permits and a 1-year warranty. Free estimate.",
         schemaData: {
             "@context": "https://schema.org",
             "@graph": [
@@ -2462,5 +2462,99 @@ export default [
         ],
         last_desc: "At DMV, we're committed to delivering excellence in every aspect of our Patio services. Contact us today to schedule a consultation and discover how we can help you create the outdoor living space of your dreams with our premium patio solutions.",
     },
+    {
+        id: '21',
+        image: './images/services/general-contractor.jpg',
+        cover: './images/services/cover/general-contractor.jpg',
+        title: 'Whole-Home Renovation',
+        slug: 'whole-home-renovation',
+        desc: "We renovate whole homes when several rooms, the floor plan and the home's systems all need work, and we run it as one project instead of a string of small jobs. Past work includes a full condo renovation in Bethesda and a condo where we combined two units into one.",
+        desc_dt_1: "Whole-home renovation brings the layout, finishes and major systems together under one plan. Instead of coordinating separate contractors for each room, our team manages design, permits, construction and final finishes as a single project, keeping decisions and timelines connected from start to finish.",
+        points_main_title: "Our Whole-Home Renovation services include",
+        newService: true,
+        imageAlt: 'Whole-home renovation contractor in Bethesda MD and Washington DC',
+        meta_title: "Whole-Home Renovation in Bethesda, MD | DMV General Contracting Group",
+        meta_description: "Whole-home renovation in Bethesda, MD and Washington, DC. One team for layout changes, kitchens, bathrooms, systems and finishes. Free in-home consultation.",
+        points_items: [
+            {
+                point_title: 'Layout and Scope Planning:',
+                point_desc: "We review how the entire home works today, then plan the layout, structural changes and finish scope together so every room is part of one coordinated renovation.",
+            },
+            {
+                point_title: 'Kitchens and Bathrooms:',
+                point_desc: "Kitchens, bathrooms and other high-use spaces are planned alongside the rest of the home, with materials, fixtures and timelines coordinated from the start.",
+            },
+            {
+                point_title: 'Structural and System Updates:',
+                point_desc: "When walls move or the home's electrical, plumbing and HVAC systems need work, our licensed team handles the permits and construction as part of the same project.",
+            },
+            {
+                point_title: 'One Team From Design to Finish:',
+                point_desc: "Design, permitting, construction and final finishes stay with one team, so changes, budgets and schedules remain connected instead of being passed between separate contractors.",
+            },
+        ],
+        last_desc: "At DMV General Contracting Group, we approach whole-home renovations as one connected project, from the first design decision to the final walkthrough. Contact us today to schedule a consultation for your Bethesda or Washington, DC home.",
+    },
 
 ]
+
+export const HomeServicesData = [
+    {
+        title: "Kitchen Remodeling",
+        slug: "kitchen-remodeling",
+        href: "/service/kitchen-remodeling",
+        image: "./images/services/kitchen.jpg",
+        imageAlt: "kitchen remodeling in MD & DC by DMV general contracting group",
+        desc: "We provide kitchen remodeling for every scope, from a cabinet and countertop update to a full gut with a new layout. Many Montgomery County homes built in the 1950s and 1960s have closed galley kitchens, and opening one up often means taking out a wall and getting a structural permit, which we handle for you.",
+    },
+    {
+        title: "Bathroom Remodeling",
+        slug: "bathroom-remodeling",
+        href: "/service/bathroom-remodeling",
+        image: "./images/services/bathroom.webp",
+        imageAlt: "bathroom remodeling in MD & DC by DMV general contracting group",
+        desc: "We provide bathroom remodeling for primary bathrooms, hall baths and powder rooms, including tub-to-shower conversions and walk-in showers. In most of Montgomery County, moving or adding plumbing needs a WSSC Water plumbing permit on top of the county building permit, and we file both.",
+    },
+    {
+        title: "Basement Remodeling",
+        slug: "basement-remodeling",
+        href: "/service/basement-remodeling",
+        image: "./images/services/basement-remodeling.jpg",
+        imageAlt: "Basement remodeling and finishing in Bethesda MD",
+        desc: "We finish and remodel basements into family rooms, home offices, guest suites and rental units. Before we frame a single wall, we check for moisture, ceiling height and egress, because a basement bedroom needs an emergency escape window under the residential building code.",
+    },
+    {
+        title: "ADU Construction",
+        slug: "adu",
+        href: "/service/adu",
+        image: "./images/services/adu.jpg",
+        imageAlt: "ADU construction in Bethesda MD",
+        desc: "We design and build accessory dwelling units (ADUs), a second, smaller home on your lot such as a backyard cottage, a garage conversion or a basement apartment. Montgomery County and DC both allow ADUs on many single-family lots, each with its own zoning and rental rules, and we check yours before design starts.",
+    },
+    {
+        title: "Whole-Home Renovation",
+        slug: "whole-home-renovation",
+        href: "/service/whole-home-renovation",
+        image: "./images/services/general-contractor.jpg",
+        imageAlt: "Whole-home renovation contractor in Bethesda MD and Washington DC",
+        desc: "We renovate whole homes when several rooms, the floor plan and the home's systems all need work, and we run it as one project instead of a string of small jobs. Past work includes a full condo renovation in Bethesda and a condo where we combined two units into one.",
+    },
+    {
+        title: "Home Additions",
+        slug: "home-additions",
+        href: "/service/home-additions",
+        image: "./images/services/additions.jpg",
+        imageAlt: "Home addition contractor in Bethesda MD",
+        desc: "We build home additions that give you more space by building out or up: a rear family room, a primary suite or a full second story. Every addition needs a building permit and has to meet zoning setbacks and lot coverage limits, which we check before design starts.",
+    },
+    {
+        title: "Design-Build",
+        slug: "design-build",
+        href: "/service/design-build",
+        image: "./images/services/general-contractor.jpg",
+        imageAlt: "Design-build contractor in Bethesda MD",
+        desc: "We offer design-build, which puts design and construction under one contract with one team. The budget is checked against real construction prices while the design is still on paper, and there is no handoff between a separate architect and a separate builder.",
+    },
+];
+
+export default ServiceData;

@@ -2,7 +2,7 @@ import { ButtonHTMLAttributes, ReactNode } from "react";
 import Link from "next/link";
 import styles from "./style.module.scss";
 
-type ButtonVariant = "primary" | "secondary";
+type ButtonVariant = "primary" | "secondary" | "white";
 
 interface ButtonBaseProps {
   variant?: ButtonVariant;

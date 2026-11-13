@@ -30,7 +30,11 @@ export default function ServiceAreas() {
               id="areas-title"
               eyebrow={<Badge>Areas We Serve</Badge>}
               title="General Contractor for Washington, DC and Montgomery County, MD"
-              text="We serve Washington, DC and 12 Maryland communities from our North Bethesda office near Pike & Rose. Most of our Maryland work is in Montgomery County, and we also work in Laurel. In Washington, DC, many of our projects are rowhouses, townhomes and condos, where party walls, English basements and condo board rules shape the plan."
+              text={
+                <>
+                  We serve Washington, DC and 12 Maryland communities from our North Bethesda office near Pike & Rose. Most of our Maryland work is in <Link target="_blank" href="https://en.wikipedia.org/wiki/Montgomery_County,_Maryland">Montgomery County</Link>, and we also work in Laurel. In Washington, DC, many of our projects are rowhouses, townhomes and condos, where party walls, English basements and condo board rules shape the plan.
+                </>
+              }
             />
             <p className={styles.label}>These are the 12 Maryland communities we serve most often:</p>
 
@@ -38,7 +42,13 @@ export default function ServiceAreas() {
               {areas.map((area) => (
                 <li key={area}>
                   <span className={styles.dot} aria-hidden="true" />
-                  {area}
+                  {area === "Bethesda" ? (
+                    <Link href="/service-area/bethesda-md" className={styles.areaLink}>
+                      {area}
+                    </Link>
+                  ) : (
+                    area
+                  )}
                 </li>
               ))}
             </ul>
@@ -49,8 +59,8 @@ export default function ServiceAreas() {
               </p>
               <div className={styles.company}>
                 <span>DMV General Contracting Group LLC</span>
-                <a href="tel:+12407301292">Phone: (240) 730-1292</a>
-                <a href="mailto:support@dmv-gc.com">Email: support@dmv-gc.com</a>
+                <span><strong>Phone: </strong><a href="tel:+12407301292">(240) 730-1292</a></span>
+                <span><strong>Email: </strong><a href="mailto:support@dmv-gc.com">support@dmv-gc.com</a></span>
                 <address>11810 Grand Park Ave, Suite 500 North Bethesda, MD 20852</address>
                 <span>Open 7 days a week</span>
               </div>

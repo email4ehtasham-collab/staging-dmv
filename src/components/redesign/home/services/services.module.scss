@@ -14,6 +14,15 @@
   max-width: 860px;
 }
 
+.header.headerCentered {
+  flex-direction: column;
+  align-items: center;
+}
+
+.headerCentered .heading {
+  max-width: 900px;
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));

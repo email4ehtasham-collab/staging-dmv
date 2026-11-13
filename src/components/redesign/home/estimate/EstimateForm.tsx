@@ -6,6 +6,7 @@ import Button from "@/components/Common/Button";
 import styles from "./estimate.module.scss";
 
 type Status = "idle" | "submitting" | "success" | "error";
+type EstimateFormVariant = "home" | "kitchen" | "bethesda-kitchen";
 
 const initialForm = {
   name: "",
@@ -16,7 +17,7 @@ const initialForm = {
   message: "",
 };
 
-const projectTypes = [
+const homeProjectTypes = [
   "Kitchen Remodel",
   "Bathroom Remodel",
   "Basement Finishing",
@@ -27,9 +28,69 @@ const projectTypes = [
   "Something else",
 ];
 
-export default function EstimateForm() {
+const kitchenProjectTypes = [
+  "Full kitchen remodel",
+  "Minor kitchen refresh",
+  "Cabinet refacing",
+  "Countertop replacement",
+  "Kitchen layout change",
+  "Kitchen plus adjacent room",
+  "Something else",
+];
+
+const copyByVariant: Record<
+  EstimateFormVariant,
+  {
+    heading: string;
+    subheading: string;
+    projectLabel: string;
+    projectPlaceholder: string;
+    projectTypes: string[];
+    zipPlaceholder: string;
+    messageLabel: string;
+    messagePlaceholder: string;
+    submit: string;
+  }
+> = {
+  home: {
+    heading: "Request your free estimate",
+    subheading: "No minimum project size. No obligation.",
+    projectLabel: "Project type",
+    projectPlaceholder: "Choose a project type",
+    projectTypes: homeProjectTypes,
+    zipPlaceholder: "20852",
+    messageLabel: "Tell us about the project (optional)",
+    messagePlaceholder: "Rough size, timing, and anything you already know you want.",
+    submit: "Request My Free Estimate",
+  },
+  kitchen: {
+    heading: "Book your free kitchen estimate",
+    subheading: "No minimum project size. No obligation.",
+    projectLabel: "Kitchen project",
+    projectPlaceholder: "Choose a kitchen project",
+    projectTypes: kitchenProjectTypes,
+    zipPlaceholder: "20852",
+    messageLabel: "Tell us about your kitchen (optional)",
+    messagePlaceholder: "Room size, what you want to change, and when you'd like to start.",
+    submit: "Book My Free Kitchen Estimate",
+  },
+  "bethesda-kitchen": {
+    heading: "Book your free in-home consultation",
+    subheading: "Bethesda kitchens · No minimum project size · No obligation",
+    projectLabel: "Kitchen project",
+    projectPlaceholder: "Choose a kitchen project",
+    projectTypes: kitchenProjectTypes,
+    zipPlaceholder: "20814",
+    messageLabel: "Tell us about your kitchen (optional)",
+    messagePlaceholder: "Home style, what you want to change, and when you'd like to start.",
+    submit: "Book My Free Consultation",
+  },
+};
+
+export default function EstimateForm({ variant = "home" }: { variant?: EstimateFormVariant }) {
   const [formData, setFormData] = useState(initialForm);
   const [status, setStatus] = useState<Status>("idle");
+  const copy = copyByVariant[variant];
 
   function handleChange(event: ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) {
     const { name, value } = event.target;
@@ -57,8 +118,8 @@ export default function EstimateForm() {
   return (
     <form className={styles.form} onSubmit={handleSubmit}>
       <div className={styles.formHeader}>
-        <h3>Request your free estimate</h3>
-        <p>No minimum project size. No obligation.</p>
+        <h3>{copy.heading}</h3>
+        <p>{copy.subheading}</p>
       </div>
 
       <div className={styles.row}>
@@ -114,43 +175,51 @@ export default function EstimateForm() {
             inputMode="numeric"
             pattern="[0-9]{5}"
             maxLength={5}
-            placeholder="20852"
+            placeholder={copy.zipPlaceholder}
             required
           />
         </label>
       </div>
 
       <label className={styles.field}>
-        <span>Project type</span>
+        <span>{copy.projectLabel}</span>
         <select name="projectType" value={formData.projectType} onChange={handleChange} required>
-          <option value="" disabled>Choose a project type</option>
-          {projectTypes.map((type) => (
-            <option key={type} value={type}>{type}</option>
+          <option value="" disabled>
+            {copy.projectPlaceholder}
+          </option>
+          {copy.projectTypes.map((type) => (
+            <option key={type} value={type}>
+              {type}
+            </option>
           ))}
         </select>
       </label>
 
       <label className={styles.field}>
-        <span>Tell us about the project (optional)</span>
+        <span>{copy.messageLabel}</span>
         <textarea
           name="message"
           value={formData.message}
           onChange={handleChange}
           rows={3}
-          placeholder="Rough size, timing, and anything you already know you want."
+          placeholder={copy.messagePlaceholder}
         />
       </label>
 
       <Button type="submit" className={styles.submit} disabled={status === "submitting"}>
-        {status === "submitting" ? "Sending..." : "Request My Free Estimate"}
+        {status === "submitting" ? "Sending..." : copy.submit}
       </Button>
 
       <p className={styles.consent}>We only use your details to contact you about your project.</p>
 
       {status === "success" || status === "error" ? (
         <div className={styles.status} aria-live="polite">
-          {status === "success" ? <p className={styles.success}>Thank you. Your request was sent, and our team will be in touch shortly.</p> : null}
-          {status === "error" ? <p className={styles.error}>Something went wrong. Please call us at (240) 730-1292 or try again.</p> : null}
+          {status === "success" ? (
+            <p className={styles.success}>Thank you. Your request was sent, and our team will be in touch shortly.</p>
+          ) : null}
+          {status === "error" ? (
+            <p className={styles.error}>Something went wrong. Please call us at (240) 730-1292 or try again.</p>
+          ) : null}
         </div>
       ) : null}
     </form>

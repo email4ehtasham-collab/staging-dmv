@@ -34,9 +34,11 @@ h6, .h6{ font-size: 14px; font-weight: 700; margin: 0;}
 .text-light-grey{color: var(--grey-light) !important;}
 .text-primary{color: var(--primary-color) !important;}
 .text-secondary{color: var(--secondary-color-dark) !important;}
+.brand-color-primary{color: var(--dmv-color-brand);}
+.brand-color-secondary{color: var(--dmv-color-brand-secondary);}
 .content-size{font-size: var(--content-size) !important;}
 
-.page-wrapper{padding-top: var(--header-height)}
+// .page-wrapper{padding-top: var(--header-height)}
 
 ::-webkit-scrollbar {width: 8px;}
 ::-webkit-scrollbar-track {background: #f1f1f1;}
@@ -57,5 +59,5 @@ a:hover{text-decoration: none;}
 }
 
 @media (min-width: 768px) {
-    .page-wrapper{padding-top: var(--header-height)}
+    // .page-wrapper{padding-top: var(--header-height)}
 }

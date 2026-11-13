@@ -96,8 +96,10 @@
   flex-shrink: 0;
 }
 
-.phoneIcon {
-  color: var(--dmv-color-brand);
+svg.phoneIcon {
+  color: inherit;
+  height: 22px;
+  width: 22px;
 }
 
 .note {

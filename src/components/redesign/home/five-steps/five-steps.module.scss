@@ -112,6 +112,40 @@
   grid-column: 3;
 }
 
+.durations {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--dmv-space-4);
+  max-width: 900px;
+  margin: var(--dmv-space-8) auto 0;
+}
+
+.durationCard {
+  display: flex;
+  align-items: center;
+  gap: var(--dmv-space-5);
+  padding: var(--dmv-space-5) var(--dmv-space-6);
+  border: var(--dmv-border-width) solid var(--dmv-color-border-card);
+  border-radius: var(--dmv-radius-lg);
+  background: var(--dmv-color-surface-soft);
+  box-shadow: var(--dmv-shadow-soft);
+}
+
+.durationValue {
+  flex: none;
+  color: var(--dmv-color-brand);
+  font-size: var(--dmv-font-size-xl);
+  font-weight: var(--dmv-weight-extrabold);
+  line-height: var(--dmv-line-snug);
+  white-space: nowrap;
+}
+
+.durationText {
+  color: var(--dmv-color-body);
+  font-size: var(--dmv-font-size-sm);
+  line-height: var(--dmv-line-normal);
+}
+
 .contact {
   display: grid;
   grid-template-columns: 68px minmax(0, 1fr) auto;
@@ -198,8 +232,18 @@
     font-size: 12px;
   }
 
+  .header :global(.section-heading__title) {
+    font-size: 30px;
+    line-height: 1.2;
+  }
+
+  .header :global(.section-heading__text) {
+    margin-top: 16px;
+    font-size: 15px;
+  }
+
   .timeline {
-    gap: var(--dmv-space-4);
+    gap: 28px;
     margin-top: var(--dmv-space-8);
     padding-block: 0;
   }
@@ -210,46 +254,97 @@
 
   .row,
   .rowRight {
-    grid-template-columns: 52px minmax(0, 1fr);
+    grid-template-columns: 48px minmax(0, 1fr);
     align-items: start;
-    gap: var(--dmv-space-4);
+    gap: 14px;
   }
 
   .card,
   .row .card,
   .rowRight .card {
     grid-column: 2;
+    grid-row: 1;
     max-width: none;
-    padding-inline: 0;
+    padding: 18px 20px;
     justify-self: stretch;
   }
 
   .marker {
     grid-column: 1;
+    grid-row: 1;
     width: 44px;
     height: 44px;
-    font-size: 14px;
+    font-size: 15px;
+  }
+
+  .durations {
+    grid-template-columns: 1fr;
+    margin-top: var(--dmv-space-6);
   }
 
   .contact {
     grid-template-columns: 1fr;
+    gap: var(--dmv-space-4);
     margin-top: var(--dmv-space-8);
-    padding: var(--dmv-space-6);
+    padding: var(--dmv-space-5);
   }
 
   .contactCopy h3 {
-    font-size: 28px;
+    font-size: 26px;
+  }
+
+  .contactCopy p {
+    font-size: 15px;
+    line-height: 1.5;
   }
 
   .contactButton {
     grid-column: auto;
     width: 100%;
     min-width: 0;
+    min-height: 52px;
+    white-space: normal;
   }
 }
 
 @media (max-width: 560px) {
+  .header :global(.section-heading__title) {
+    font-size: 26px;
+  }
+
+  .row,
+  .rowRight {
+    grid-template-columns: 42px minmax(0, 1fr);
+    gap: 12px;
+  }
+
+  .card,
+  .row .card,
+  .rowRight .card {
+    padding: 16px;
+  }
+
   .cardTitle {
-    font-size: 20px;
+    font-size: 18px;
+  }
+
+  .marker {
+    width: 40px;
+    height: 40px;
+    font-size: 13px;
+  }
+
+  .durationCard {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: var(--dmv-space-2);
+  }
+
+  .contact {
+    padding: var(--dmv-space-4);
+  }
+
+  .contactCopy h3 {
+    font-size: 24px;
   }
 }

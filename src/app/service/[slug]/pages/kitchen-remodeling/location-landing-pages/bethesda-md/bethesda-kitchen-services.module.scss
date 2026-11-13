@@ -1,0 +1,119 @@
+.section {
+  padding-block: var(--dmv-section-padding);
+  border-bottom: var(--dmv-border-width) solid var(--dmv-color-border-card);
+  background: var(--dmv-color-surface-soft);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: var(--dmv-space-6);
+}
+
+.headerButton {
+  flex-shrink: 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--dmv-space-6);
+  margin-top: var(--dmv-space-12);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: var(--dmv-space-7);
+  border: var(--dmv-border-width) solid var(--dmv-color-border-card);
+  border-radius: 18px;
+  background: var(--dmv-color-surface);
+  box-shadow: var(--dmv-shadow-soft);
+}
+
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  margin-bottom: var(--dmv-space-5);
+  border-radius: var(--dmv-radius-pill);
+  background: var(--dmv-color-brand-soft, rgba(196, 30, 58, 0.1));
+  color: var(--dmv-color-brand);
+}
+
+.icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.cardTitle {
+  color: var(--dmv-color-heading);
+  font-size: var(--dmv-font-size-lg);
+  font-weight: var(--dmv-weight-semibold);
+  line-height: var(--dmv-line-snug);
+}
+
+.cardText {
+  margin-top: var(--dmv-space-3);
+  color: var(--dmv-color-body);
+  font-size: var(--dmv-font-size-sm);
+  line-height: var(--dmv-line-relaxed);
+}
+
+.note {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--dmv-space-8);
+  margin-top: var(--dmv-space-8);
+  padding: var(--dmv-space-5) var(--dmv-space-6);
+  border-left: 4px solid var(--dmv-color-brand);
+  border-radius: var(--dmv-radius-md);
+  background: var(--dmv-color-surface);
+}
+
+.noteText {
+  max-width: 860px;
+  color: var(--dmv-color-heading);
+  font-size: var(--dmv-font-size-md);
+  font-weight: var(--dmv-weight-medium);
+  line-height: var(--dmv-line-relaxed);
+}
+
+.noteButton {
+  flex-shrink: 0;
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .grid {
+    grid-template-columns: 1fr;
+    margin-top: var(--dmv-space-8);
+  }
+
+  .card {
+    padding: var(--dmv-space-6);
+  }
+
+  .headerButton {
+    width: 100%;
+  }
+
+  .note {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: var(--dmv-space-5);
+  }
+
+  .noteButton {
+    width: 100%;
+  }
+}
