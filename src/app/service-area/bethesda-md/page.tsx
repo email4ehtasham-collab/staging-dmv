@@ -70,6 +70,59 @@ export default function BethesdaServiceAreaPage() {
         title="Home Remodeling Services in Bethesda, MD"
         text="Our home remodeling in Bethesda, MD covers seven core services. Each runs under one project lead with our in-house designers, permit staff and licensed trades:"
         align="center"
+        serviceOrder={[
+          "kitchen-remodeling",
+          "bathroom-remodeling",
+          "basement-remodeling",
+          "home-additions",
+          "adu",
+          "whole-home-renovation",
+          "design-build",
+        ]}
+        serviceOverrides={[
+          {
+            slug: "kitchen-remodeling",
+            eyebrow: "Kitchen remodeling in Bethesda",
+            title: "Kitchen Remodeling",
+            imageAlt: "Bethesda kitchens",
+            desc: "We handle kitchen remodeling in Bethesda from design to final inspection. Jobs range from opening a closed colonial kitchen to fitting custom cabinetry and pro-style appliances into a newer house.",
+          },
+          {
+            slug: "bathroom-remodeling",
+            eyebrow: "Bathroom remodeling in Bethesda",
+            title: "Bathroom Remodeling",
+            desc: "We rebuild primary suites, hall baths and powder rooms with waterproofed showers and heated floors. Many older Bethesda houses also get the ducted exhaust fan they never had.",
+          },
+          {
+            slug: "basement-remodeling",
+            eyebrow: "Basement remodeling in Bethesda",
+            title: "Basement Remodeling",
+            desc: "We turn lower levels into family rooms, guest suites and gyms. Any planned bedroom gets a code-compliant egress window.",
+          },
+          {
+            slug: "home-additions",
+            eyebrow: "Home additions in Bethesda",
+            title: "Home Additions",
+            desc: "We add space behind, beside or on top of the house, from a sunroom bump-out to a second floor. Building up or out is the usual way Bethesda owners gain space without leaving their street.",
+          },
+          {
+            slug: "adu",
+            eyebrow: "ADU construction in Bethesda",
+            title: "ADU Construction",
+            desc: "We build accessory dwelling units, from basement apartments to backyard cottages. County zoning changes that took effect October 5, 2026 let a Bethesda ADU reach 75% of the primary home's floor area.",
+          },
+          {
+            slug: "whole-home-renovation",
+            eyebrow: "Whole-home renovation in Bethesda",
+            title: "Whole-Home Renovation",
+            desc: "We take on the entire house in one coordinated job when the floor plan, wiring, plumbing and surfaces are all past due. That often follows the purchase of an older Bethesda home.",
+          },
+          {
+            slug: "design-build",
+            title: "Design-Build",
+            desc: "We keep design and construction under one contract, so the people who price your plans also build them. See what our design-build service includes.",
+          },
+        ]}
       />
 
       <SupportingServices

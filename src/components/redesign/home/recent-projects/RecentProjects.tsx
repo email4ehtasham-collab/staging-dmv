@@ -76,6 +76,7 @@ function getProjects(serviceType?: string): ProjectCardData[] {
 
 type RecentProjectsProps = {
   serviceType?: string;
+  projects?: ProjectCardData[];
   eyebrow?: string;
   title?: ReactNode;
   text?: ReactNode;
@@ -87,6 +88,7 @@ type RecentProjectsProps = {
 
 export default function RecentProjects({
   serviceType,
+  projects: customProjects,
   eyebrow = "Case Studies & Projects",
   title = "Recent Remodeling Projects in Maryland and DC",
   text = "Each of these projects was planned, permitted and built by our team. See before and after photos of these and other jobs.",
@@ -95,7 +97,7 @@ export default function RecentProjects({
   ctaLabel = "View All Projects",
   ctaHref = "/projects",
 }: RecentProjectsProps) {
-  const projects = getProjects(serviceType).slice(0, limit);
+  const projects = (customProjects ?? getProjects(serviceType)).slice(0, limit);
 
   return (
     <section id="projects" className={styles.section} aria-labelledby={headingId}>

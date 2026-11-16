@@ -111,6 +111,60 @@ const bethesdaReasons = [
   },
 ];
 
+const bathroomReasons = [
+  {
+    icon: "verified" as IconName,
+    label: "Licensed",
+    title: "Licensed and Insured",
+    text: "Our MHIC number, 156178, and our DC DLCP number, 410526000209, can both be checked on the state and District lookup sites. A general liability policy backs each project.",
+  },
+  {
+    icon: "protected" as IconName,
+    label: "Waterproofing",
+    title: "Waterproofing Done Right",
+    text: "Every shower gets a membrane, a sloped floor and a ducted fan. The plumbing passes inspection before the walls close.",
+  },
+  {
+    icon: "experience" as IconName,
+    label: "Experience",
+    title: "35 Years of Experience",
+    text: "Three and a half decades in home building mean our crews have tiled everything from half baths to spa-style suites.",
+  },
+  {
+    icon: "inHouse" as IconName,
+    label: "One Contract",
+    title: "One Contract and One Project Lead",
+    text: "Plumbing, wiring, tile and finishes sit in one contract, with one person to call from tear-out to sign-off.",
+  },
+  {
+    icon: "warranty" as IconName,
+    label: "Warranty",
+    title: "Workmanship Warranty With No Minimum Size",
+    text: "Labor on each finished bath is guaranteed for twelve months under our 1-year workmanship warranty. A vanity swap gets the same attention as a primary suite.",
+  },
+];
+
+const bethesdaBathroomReasons = [
+  {
+    icon: "local" as IconName,
+    label: "Local",
+    title: "Close to Home",
+    text: "Our office in North Bethesda is minutes away, so site visits, inspections and punch-list trips happen quickly.",
+  },
+  {
+    icon: "protected" as IconName,
+    label: "Waterproofing",
+    title: "Waterproofing You Never See",
+    text: "Membranes, sloped shower floors and exhaust fans ducted outdoors are standard on every job, and we check them before tile goes on.",
+  },
+  {
+    icon: "inHouse" as IconName,
+    label: "In-House",
+    title: "Trades on Staff",
+    text: "Our in-house plumbers and electricians handle the rough-in work, so county and WSSC inspections stay on schedule.",
+  },
+];
+
 const bethesdaKitchenReasons = [
   {
     icon: "local" as IconName,
@@ -260,20 +314,26 @@ function ReasonIcon({ name }: { name: IconName }) {
 }
 
 type LicensedInsuredProps = {
-  variant?: "home" | "kitchen" | "bethesda" | "bethesda-kitchen";
+  variant?: "home" | "kitchen" | "bethesda" | "bethesda-kitchen" | "bethesda-bathroom" | "bathroom";
 };
 
 export default function LicensedInsured({ variant = "home" }: LicensedInsuredProps) {
   const isKitchen = variant === "kitchen";
   const isBethesda = variant === "bethesda";
   const isBethesdaKitchen = variant === "bethesda-kitchen";
-  const reasons = isBethesdaKitchen
-    ? bethesdaKitchenReasons
-    : isKitchen
-      ? kitchenReasons
-      : isBethesda
-        ? bethesdaReasons
-        : homeReasons;
+  const isBethesdaBathroom = variant === "bethesda-bathroom";
+  const isBathroom = variant === "bathroom";
+  const reasons = isBethesdaBathroom
+    ? bethesdaBathroomReasons
+    : isBathroom
+      ? bathroomReasons
+      : isBethesdaKitchen
+        ? bethesdaKitchenReasons
+        : isKitchen
+          ? kitchenReasons
+          : isBethesda
+            ? bethesdaReasons
+            : homeReasons;
 
   return (
     <section
@@ -287,24 +347,34 @@ export default function LicensedInsured({ variant = "home" }: LicensedInsuredPro
             <SectionHeading
               id="licensed-title"
               align="center"
-              eyebrow={<Badge>{isKitchen || isBethesda || isBethesdaKitchen ? "Why Choose Us" : "Why choose us"}</Badge>}
+              eyebrow={
+                <Badge>{isKitchen || isBethesda || isBethesdaKitchen || isBethesdaBathroom || isBathroom ? "Why Choose Us" : "Why choose us"}</Badge>
+              }
               title={
-                isBethesdaKitchen
-                  ? "Why Bethesda Homeowners Choose Us for Kitchens"
-                  : isKitchen
-                    ? "Why Homeowners Choose Us for Their Kitchen Remodel"
-                    : isBethesda
-                      ? "Why Bethesda Homeowners Hire Us"
-                      : "Licensed and Insured in Maryland and Washington, DC"
+                isBethesdaBathroom
+                  ? "Reasons Bethesda Clients Pick Our Bathroom Team"
+                  : isBathroom
+                    ? "Why Homeowners Choose Us for Their Bathroom Remodel"
+                    : isBethesdaKitchen
+                      ? "Why Bethesda Homeowners Choose Us for Kitchens"
+                      : isKitchen
+                        ? "Why Homeowners Choose Us for Their Kitchen Remodel"
+                        : isBethesda
+                          ? "Why Bethesda Homeowners Hire Us"
+                          : "Licensed and Insured in Maryland and Washington, DC"
               }
               text={
-                isBethesdaKitchen
-                  ? "Bethesda owners tend to give us three reasons for hiring us."
-                  : isKitchen
-                    ? "Homeowners in Maryland and DC pick us for kitchen remodeling for five reasons:"
-                    : isBethesda
-                      ? "Five things set us apart for Bethesda owners:"
-                      : "Hiring a contractor to work inside your home is a big decision. These are the reasons homeowners in Maryland and Washington, DC choose us:"
+                isBethesdaBathroom
+                  ? "Clients tend to mention the same three things:"
+                  : isBathroom
+                    ? "Five strengths bring Maryland and DC families to us for bathroom remodeling:"
+                    : isBethesdaKitchen
+                      ? "Bethesda owners tend to give us three reasons for hiring us."
+                      : isKitchen
+                        ? "Homeowners in Maryland and DC pick us for kitchen remodeling for five reasons:"
+                        : isBethesda
+                          ? "Five things set us apart for Bethesda owners:"
+                          : "Hiring a contractor to work inside your home is a big decision. These are the reasons homeowners in Maryland and Washington, DC choose us:"
               }
             />
           </div>
@@ -325,7 +395,16 @@ export default function LicensedInsured({ variant = "home" }: LicensedInsuredPro
           </div>
 
           <div className={styles.footer}>
-            {isBethesdaKitchen ? (
+            {isBethesdaBathroom ? (
+              <>
+                <p>Thirty-five years of house work and a one-year guarantee on our labor stand behind it.</p>
+                <div className={styles.actions}>
+                  <Button href="/contact-us" data-estimate-trigger>
+                    Get a Free Estimate
+                  </Button>
+                </div>
+              </>
+            ) : isBethesdaKitchen ? (
               <>
                 <p>Twelve months of workmanship coverage starts the day your Bethesda kitchen passes its final.</p>
                 <div className={styles.actions}>
@@ -343,6 +422,8 @@ export default function LicensedInsured({ variant = "home" }: LicensedInsuredPro
                   </Button>
                 </div>
               </>
+            ) : isBathroom ? (
+              <p>The four bathrooms in the next section show that work in finished homes.</p>
             ) : isKitchen ? (
               <p>These kitchens show that approach in finished homes.</p>
             ) : (

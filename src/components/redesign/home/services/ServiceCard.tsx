@@ -2,13 +2,15 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "./services.module.scss";
 
-type ServiceCardData = {
+export type ServiceCardData = {
   slug: string;
+  eyebrow?: string;
   title: string;
   href?: string;
   image: string;
   imageAlt?: string;
   desc: string;
+  ctaLabel?: string;
 };
 
 type ServiceCardProps = {
@@ -40,10 +42,11 @@ export default function ServiceCard({ service }: ServiceCardProps) {
         />
       </div>
       <div className={styles.body}>
+        {service.eyebrow ? <span className={styles.cardEyebrow}>{service.eyebrow}</span> : null}
         <h3 className={styles.cardTitle}>{service.title}</h3>
         <p className={styles.cardText}>{service.desc}</p>
         <span className={styles.details}>
-          View Details
+          {service.ctaLabel ?? "View Details"}
           <ArrowIcon />
         </span>
       </div>

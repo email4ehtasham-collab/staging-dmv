@@ -29,6 +29,7 @@ const components = {
     "wheaton-md": dynamic(() => import("./[slug]/pages/basement-remodeling/location-landing-pages/wheaton-md")),
   },
   "bathroom-remodeling": {
+    "bethesda-md": dynamic(() => import("./[slug]/pages/bathroom-remodeling/location-landing-pages/bethesda-md/index.tsx")),
     "cabin-john-md": dynamic(() => import("./[slug]/pages/bathroom-remodeling/location-landing-pages/cabin-john-md/index.tsx")),
     "chevy-chase-md": dynamic(() => import("./[slug]/pages/bathroom-remodeling/location-landing-pages/chevy-chase-md/index.tsx")),
     "gaithersburg-md": dynamic(() => import("./[slug]/pages/bathroom-remodeling/location-landing-pages/gaithersburg-md/index.tsx")),

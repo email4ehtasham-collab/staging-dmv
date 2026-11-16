@@ -72,6 +72,16 @@
   padding: var(--dmv-space-6);
 }
 
+.cardEyebrow {
+  margin-bottom: var(--dmv-space-2);
+  color: var(--dmv-color-brand);
+  font-size: 11px;
+  font-weight: var(--dmv-weight-bold);
+  letter-spacing: var(--dmv-tracking-wide);
+  line-height: var(--dmv-line-tight);
+  text-transform: uppercase;
+}
+
 .cardTitle {
   color: var(--dmv-color-heading);
   font-size: var(--dmv-font-size-lg);

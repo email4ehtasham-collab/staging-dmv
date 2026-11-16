@@ -164,8 +164,8 @@ const ServiceData = [
         points_main_title: "Explore our comprehensive Bathroom Remodeling services:",
         newService: true,
         imageAlt: 'Bathroom renovation contractor in Bethesda Maryland —DMV General Contracting Group',
-        meta_title: "Bathroom Remodeling in Bethesda, MD | Licensed Contractor | DMV General Contracting Group",
-        meta_description: "Expert bathroom remodeling in Bethesda, MD. Licensed design-build contractor serving Potomac, Chevy Chase & North Bethesda. Free in-home consultation. 1-Year Warranty. Call +1 240-730-1292!",
+        meta_title: "Bathroom Remodeling in Maryland & DC | DMV General Contracting",
+        meta_description: "DMV General Contracting Group offers bathroom remodeling in Maryland and DC from $10,000, with waterproofing, permits and a 1-year warranty. Free estimate.",
         schemaData: {
             "@context": "https://schema.org",
             "@graph": [
@@ -215,21 +215,22 @@ const ServiceData = [
                     "name": "DMV General Contracting Group"
                 },
                 "areaServed": {
-                    "@type": "City",
-                    "name": "Bethesda",
-                    "sameAs": "https://en.wikipedia.org/wiki/Bethesda,_Maryland"
+                    "@type": "AdministrativeArea",
+                    "name": "Maryland and Washington, DC"
                 },
-                "description": "Full-service bathroom remodeling and renovation in Bethesda, MD. Includes design, permits, tile work, shower installation, vanity, flooring, electrical, plumbing, and final finishes.",
+                "description": "DMV General Contracting Group provides bathroom remodeling in Maryland and Washington, DC as a licensed general contractor. We design, permit, waterproof and tile the room under one contract. Thirty-five years of hands-on building have taught our crew where bathrooms in older Maryland houses tend to hide trouble.",
                 "hasOfferCatalog": {
                     "@type": "OfferCatalog",
                     "name": "Bathroom Remodeling Services",
                     "itemListElement": [
-                    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Master Bathroom Renovation"}},
-                    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Walk-In Shower Installation"}},
-                    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Bathtub Replacement"}},
-                    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Bathroom Tile Installation"}},
-                    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Vanity & Cabinet Installation"}},
-                    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Bathroom Addition"}}
+                    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Primary Suites"}},
+                    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Guest and Hall Baths"}},
+                    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Powder Rooms and New Half Baths"}},
+                    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Tub-to-Shower Conversions"}},
+                    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Walk-In and Curbless Showers"}},
+                    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Accessible and Aging-in-Place Designs"}},
+                    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Condo Projects"}},
+                    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Added Bathrooms"}}
                     ]
                 }
                 },
@@ -238,50 +239,42 @@ const ServiceData = [
                 "mainEntity": [
                     {
                     "@type": "Question",
-                    "name": "How much does a bathroom remodel cost in Bethesda, MD?",
+                    "name": "What are the bathroom remodel trends for 2026?",
                     "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": "In Bethesda, MD, a bathroom remodel typically costs between $10,000 and $80,000+ depending on scope and size. A guest bathroom refresh starts around $8,000–$15,000. A mid-range master bathroom remodel runs $20,000–$45,000. A luxury spa-style bathroom renovation in Bethesda averages $50,000–$80,000+. DMV General Contracting Group offers free in-home consultations with detailed cost estimates at no charge."
+                        "text": "Bigger showers, hotel-style finishes and smart fixtures lead 2026. The NKBA 2026 Bath Trends Report found 77% of designers seeing more hotel-style design. More than half of homeowners now prefer a larger shower to a tub. Light neutral colors, wood vanities and large-format floor tile round out the list."
                     }
                     },
                     {
                     "@type": "Question",
-                    "name": "How long does a bathroom renovation take in Bethesda?",
+                    "name": "Does a bathroom remodel add value to a home?",
                     "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": "A typical bathroom renovation in Bethesda takes 3–8 weeks depending on scope. A simple guest bath update takes 2–3 weeks. A full master bathroom gut renovation takes 6–10 weeks. DMV General Contracting Group manages all trades in-house — tile, plumbing, electrical — which keeps timelines tighter than contractors who subcontract."
+                        "text": "Yes, and midrange baths pay back best. National 2025 Cost vs. Value data puts midrange bath payback near 80%, against about 42% for upscale baths. Sellers on a short timeline get the best return from mid-grade finishes."
                     }
                     },
                     {
                     "@type": "Question",
-                    "name": "Does DMV General Contracting Group handle permits for bathroom remodeling in Maryland?",
+                    "name": "Can I keep using my bathroom during the remodel?",
                     "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": "Yes. DMV General Contracting Group has an in-house permit processing team that handles all Montgomery County and Maryland building permits required for bathroom renovations, including plumbing and electrical permits."
+                        "text": "No, the room is out of service while we work. In a one-bath home, we sequence the work so the toilet returns as quickly as possible. Plan on 3 to 6 weeks without the shower, and tell us early so we can schedule around it."
                     }
                     },
                     {
                     "@type": "Question",
-                    "name": "Can you convert a tub to a walk-in shower in Bethesda?",
+                    "name": "What if you find water damage under the old tile?",
                     "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": "Yes. Tub-to-shower conversions are one of the most popular bathroom remodeling requests we receive from Bethesda homeowners. Our team handles the full conversion including plumbing rerouting, waterproofing, custom tile work, glass enclosure installation, and any required permits."
+                        "text": "Work pauses, you see the damage, and a written repair price comes before anything else. Rotted subfloor and old drain leaks can turn up in older Maryland and DC homes. Maryland home improvement contracts require written change orders, so nothing extra is built without your approval."
                     }
                     },
                     {
                     "@type": "Question",
-                    "name": "Do you remodel small bathrooms in Bethesda?",
+                    "name": "Can you make a bathroom accessible for aging in place?",
                     "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": "Yes. Many Bethesda homes have compact hall baths or powder rooms that can be dramatically improved with smart layout planning, large-format tiles, floating vanities, and frameless glass. Our designers specialize in making small bathrooms look and feel larger."
-                    }
-                    },
-                    {
-                    "@type": "Question",
-                    "name": "Is DMV General Contracting Group licensed and insured for bathroom remodeling in Maryland?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "Yes. DMV General Contracting Group is fully MHIC licensed, DLCP licensed, bonded, and insured in Maryland and Washington DC. We provide a 1-year workmanship warranty on all bathroom remodeling projects completed in Bethesda and the surrounding DMV area."
+                        "text": "Yes. We build curbless showers, mount grab bars over solid blocking and install comfort-height toilets and slip-resistant tile. Doorways are widened where the framing allows. The 2025 Cost vs. Value Report prices a universal design bath at about $42,183 nationally."
                     }
                     }
                 ]

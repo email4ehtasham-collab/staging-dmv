@@ -76,6 +76,39 @@ const kitchenRows = [
   },
 ];
 
+const bathroomRows = [
+  {
+    location: "Unincorporated Montgomery County",
+    detail: "such as Bethesda, Potomac, Silver Spring and Wheaton",
+    building: "Montgomery County DPS",
+    plumbing: "WSSC Water",
+  },
+  {
+    location: "City of Rockville",
+    detail: "",
+    building: "City of Rockville",
+    plumbing: "City of Rockville, or WSSC Water for homes on WSSC water",
+  },
+  {
+    location: "City of Gaithersburg",
+    detail: "",
+    building: "City of Gaithersburg",
+    plumbing: "WSSC Water",
+  },
+  {
+    location: "Laurel",
+    detail: "",
+    building: "City of Laurel within city limits; Prince George's County DPIE beyond them",
+    plumbing: "WSSC Water",
+  },
+  {
+    location: "Washington, DC",
+    detail: "",
+    building: "DC Department of Buildings (DOB)",
+    plumbing: "DC Department of Buildings (DOB)",
+  },
+];
+
 function InfoIcon() {
   return (
     <svg viewBox="0 0 20 20" fill="none" aria-hidden="true" focusable="false" className={styles.noteIcon}>
@@ -86,12 +119,20 @@ function InfoIcon() {
 }
 
 type PermitsProps = {
-  variant?: "home" | "kitchen";
+  variant?: "home" | "kitchen" | "bathroom";
 };
 
 export default function Permits({ variant = "home" }: PermitsProps) {
   const isKitchen = variant === "kitchen";
-  const rows = isKitchen ? kitchenRows : homeRows;
+  const isBathroom = variant === "bathroom";
+  const rows = isBathroom ? bathroomRows : isKitchen ? kitchenRows : homeRows;
+
+  const firstColumn = isKitchen || isBathroom ? "Building permit" : "Building permits issued by";
+  const secondColumn = isKitchen
+    ? "Plumbing and gas permit"
+    : isBathroom
+      ? "Plumbing permit"
+      : "Plumbing and gas permits issued by";
 
   return (
     <section id="permits" className={styles.section} aria-labelledby="permits-title" data-variant={variant}>
@@ -104,12 +145,16 @@ export default function Permits({ variant = "home" }: PermitsProps) {
             title={
               isKitchen
                 ? "Do You Need a Permit to Remodel a Kitchen in Maryland or DC?"
-                : "Permits Handled Wherever We Work"
+                : isBathroom
+                  ? "Do You Need a Permit to Remodel a Bathroom in Maryland?"
+                  : "Permits Handled Wherever We Work"
             }
             text={
               isKitchen
                 ? "Yes, if the work changes walls, wiring or plumbing. The Montgomery County Department of Permitting Services lists cabinet installs and floor coverings as work that needs no permit. In Maryland and DC, the permit office depends on your address:"
-                : "We apply for and manage every permit your project needs. Who issues it depends on where you live, and in Maryland the plumbing and gas permit often comes from a different office than the building permit."
+                : isBathroom
+                  ? "Yes, once you move or add plumbing, change walls or add circuits. Plumbing appears on the Montgomery County Department of Permitting Services permit-required list, with a note to contact WSSC Water. Which agency signs off on a Maryland or DC bathroom depends on the jurisdiction:"
+                  : "We apply for and manage every permit your project needs. Who issues it depends on where you live, and in Maryland the plumbing and gas permit often comes from a different office than the building permit."
             }
           />
         </div>
@@ -119,8 +164,8 @@ export default function Permits({ variant = "home" }: PermitsProps) {
             <thead>
               <tr>
                 <th scope="col">Location</th>
-                <th scope="col">{isKitchen ? "Building permit" : "Building permits issued by"}</th>
-                <th scope="col">{isKitchen ? "Plumbing and gas permit" : "Plumbing and gas permits issued by"}</th>
+                <th scope="col">{firstColumn}</th>
+                <th scope="col">{secondColumn}</th>
               </tr>
             </thead>
             <tbody>
@@ -130,10 +175,8 @@ export default function Permits({ variant = "home" }: PermitsProps) {
                     <strong>{row.location}</strong>
                     {row.detail ? <span>{row.detail}</span> : null}
                   </th>
-                  <td data-label={isKitchen ? "Building permit" : "Building permits issued by"}>{row.building}</td>
-                  <td data-label={isKitchen ? "Plumbing and gas permit" : "Plumbing and gas permits issued by"}>
-                    {row.plumbing}
-                  </td>
+                  <td data-label={firstColumn}>{row.building}</td>
+                  <td data-label={secondColumn}>{row.plumbing}</td>
                 </tr>
               ))}
             </tbody>
@@ -145,6 +188,8 @@ export default function Permits({ variant = "home" }: PermitsProps) {
           <p>
             {isKitchen ? (
               "New circuits or rewiring also need an electrical permit, which DPS issues in Montgomery County and DOB issues in DC. We draw the plans, file each application and book every inspection for you."
+            ) : isBathroom ? (
+              "New circuits for lights, fans or heated floors also need an electrical permit from DPS or DOB. Our office prepares drawings, submits every form and lines up both the rough-in and final inspector visits."
             ) : (
               <>
                 According to{" "}

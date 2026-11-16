@@ -6,7 +6,7 @@ import Button from "@/components/Common/Button";
 import styles from "./estimate.module.scss";
 
 type Status = "idle" | "submitting" | "success" | "error";
-type EstimateFormVariant = "home" | "kitchen" | "bethesda-kitchen";
+type EstimateFormVariant = "home" | "kitchen" | "bethesda-kitchen" | "bethesda-bathroom" | "bathroom";
 
 const initialForm = {
   name: "",
@@ -25,6 +25,18 @@ const homeProjectTypes = [
   "Whole-Home Renovation",
   "Home Addition",
   "Design-build",
+  "Something else",
+];
+
+const bathroomProjectTypes = [
+  "Primary bathroom remodel",
+  "Guest or hall bath remodel",
+  "Powder room update",
+  "Tub-to-shower conversion",
+  "Walk-in or curbless shower",
+  "Accessible / aging-in-place bath",
+  "Bathroom addition",
+  "Condo bathroom remodel",
   "Something else",
 ];
 
@@ -76,7 +88,7 @@ const copyByVariant: Record<
   },
   "bethesda-kitchen": {
     heading: "Book your free in-home consultation",
-    subheading: "Bethesda kitchens · No minimum project size · No obligation",
+    subheading: "Bethesda kitchens A� No minimum project size A� No obligation",
     projectLabel: "Kitchen project",
     projectPlaceholder: "Choose a kitchen project",
     projectTypes: kitchenProjectTypes,
@@ -84,6 +96,28 @@ const copyByVariant: Record<
     messageLabel: "Tell us about your kitchen (optional)",
     messagePlaceholder: "Home style, what you want to change, and when you'd like to start.",
     submit: "Book My Free Consultation",
+  },
+  "bethesda-bathroom": {
+    heading: "Book your free bathroom estimate",
+    subheading: "Bethesda bathrooms · No minimum project size · No obligation",
+    projectLabel: "Bathroom project",
+    projectPlaceholder: "Choose a bathroom project",
+    projectTypes: bathroomProjectTypes,
+    zipPlaceholder: "20814",
+    messageLabel: "Tell us about your bathroom (optional)",
+    messagePlaceholder: "Home style, what you want to change, and when you'd like to start.",
+    submit: "Book My Free Bathroom Estimate",
+  },
+  bathroom: {
+    heading: "Book your free bathroom estimate",
+    subheading: "No minimum project size. No obligation.",
+    projectLabel: "Bathroom project",
+    projectPlaceholder: "Choose a bathroom project",
+    projectTypes: bathroomProjectTypes,
+    zipPlaceholder: "20852",
+    messageLabel: "Tell us about your bathroom (optional)",
+    messagePlaceholder: "Room size, what you want to change, and when you'd like to start.",
+    submit: "Book My Free Bathroom Estimate",
   },
 };
 

@@ -4,7 +4,7 @@ import Button from "@/components/Common/Button";
 import Container from "@/components/Common/Container";
 import SectionHeading from "@/components/Common/SectionHeading";
 import { HomeServicesData } from "@/data/services/ServiceData";
-import ServiceCard from "./ServiceCard";
+import ServiceCard, { type ServiceCardData } from "./ServiceCard";
 import styles from "./services.module.scss";
 
 const supportingLinks = [
@@ -20,19 +20,48 @@ const supportingLinks = [
   { label: "Patios", href: "/service/patios" },
 ];
 
+export type ServiceCardOverride = Partial<Omit<ServiceCardData, "slug">> & Pick<ServiceCardData, "slug">;
+
 type ServicesProps = {
   eyebrow?: string;
   title?: string;
   text?: string;
   align?: "left" | "center";
+  serviceOverrides?: ServiceCardOverride[];
+  serviceOrder?: string[];
 };
+
+function getServices(serviceOverrides?: ServiceCardOverride[], serviceOrder?: string[]): ServiceCardData[] {
+  const allServices = HomeServicesData as ServiceCardData[];
+  const merged = allServices.map((service) => {
+    const override = serviceOverrides?.find((item) => item.slug === service.slug);
+    return override ? { ...service, ...override } : service;
+  });
+
+  if (!serviceOrder?.length) {
+    return merged;
+  }
+
+  const ordered = serviceOrder
+    .map((slug) => merged.find((service) => service.slug === slug))
+    .filter((service): service is ServiceCardData => Boolean(service));
+
+  return [
+    ...ordered,
+    ...merged.filter((service) => !serviceOrder.includes(service.slug)),
+  ];
+}
 
 export default function Services({
   eyebrow = "Our Exclusive Services",
   title = "Our Home Remodeling Services in Maryland and DC",
   text = "These are seven of the main remodeling services we offer across Maryland and Washington, DC. Each one has its own page with details on design, permits, costs and timelines, and the rest of our services are listed after these seven.",
   align = "left",
+  serviceOverrides,
+  serviceOrder,
 }: ServicesProps = {}) {
+  const services = getServices(serviceOverrides, serviceOrder);
+
   return (
     <section id="services" className={styles.section} aria-labelledby="services-title">
       <Container>
@@ -51,7 +80,7 @@ export default function Services({
         </div>
 
         <div className={styles.grid}>
-          {HomeServicesData.map((service) => (
+          {services.map((service) => (
             <ServiceCard key={service.slug} service={service} />
           ))}
         </div>

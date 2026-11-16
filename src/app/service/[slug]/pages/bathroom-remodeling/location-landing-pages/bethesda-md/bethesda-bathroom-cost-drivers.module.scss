@@ -1,0 +1,142 @@
+.section {
+  padding-block: var(--dmv-section-padding);
+  border-bottom: var(--dmv-border-width) solid var(--dmv-color-border-card);
+  background: var(--dmv-color-surface-soft);
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+}
+
+.questionHeader {
+  margin-top: var(--dmv-space-10);
+}
+
+.noteBanner {
+  display: flex;
+  align-items: center;
+  gap: var(--dmv-space-3);
+  margin-top: var(--dmv-space-10);
+  padding: var(--dmv-space-4) var(--dmv-space-5);
+  border: var(--dmv-border-width) solid var(--dmv-color-border-card);
+  border-left: 4px solid var(--dmv-color-brand);
+  border-radius: var(--dmv-radius-md);
+  background: var(--dmv-color-surface);
+  box-shadow: var(--dmv-shadow-soft);
+}
+
+.noteBanner svg {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+  fill: none;
+  stroke: var(--dmv-color-brand);
+  stroke-width: 2;
+}
+
+.noteBanner span {
+  color: var(--dmv-color-heading);
+  font-size: var(--dmv-font-size-sm);
+  font-weight: var(--dmv-weight-medium);
+  line-height: var(--dmv-line-relaxed);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--dmv-space-6);
+  margin-top: var(--dmv-space-8);
+}
+
+.card {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  padding: var(--dmv-space-7);
+  border: var(--dmv-border-width) solid var(--dmv-color-brand);
+  border-radius: 18px;
+  background: var(--dmv-color-surface);
+  box-shadow: var(--dmv-shadow-card);
+  transform: translateY(-2px);
+}
+
+.card::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--dmv-color-brand);
+  content: "";
+}
+
+.cardTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--dmv-space-5);
+}
+
+.iconBox {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: var(--dmv-radius-md);
+  background: var(--dmv-color-brand-soft, rgba(196, 30, 58, 0.1));
+  color: var(--dmv-color-brand);
+}
+
+.iconBox svg {
+  width: 26px;
+  height: 26px;
+}
+
+.step {
+  padding: 4px var(--dmv-space-3);
+  border: var(--dmv-border-width) solid var(--dmv-color-border-card);
+  border-radius: var(--dmv-radius-pill);
+  background: var(--dmv-color-surface-soft);
+  color: var(--dmv-color-body);
+  font-size: 13px;
+  font-weight: var(--dmv-weight-extrabold);
+  line-height: 1.2;
+}
+
+.cardTitle {
+  color: var(--dmv-color-heading);
+  font-size: var(--dmv-font-size-lg);
+  font-weight: var(--dmv-weight-bold);
+  line-height: var(--dmv-line-snug);
+}
+
+.cardText {
+  margin-top: var(--dmv-space-3);
+  color: var(--dmv-color-body);
+  font-size: var(--dmv-font-size-sm);
+  line-height: var(--dmv-line-relaxed);
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    padding: var(--dmv-space-6);
+  }
+
+  .noteBanner {
+    align-items: flex-start;
+    margin-top: var(--dmv-space-8);
+  }
+}
