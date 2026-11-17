@@ -7,6 +7,10 @@ const locationMetadata = {
         title: "Bathroom Remodeling Bethesda MD | Bethesda Bathroom Remodeling",
         description: "Bathroom remodeling in Bethesda, MD: primary baths, walk-in showers, tub-to-shower conversions and powder rooms. Costs, permits and timelines.",
     },
+    "basement-remodeling/bethesda-md": {
+        title: "Basement Remodeling Bethesda MD | Basement Finishing in Bethesda",
+        description: "Basement finishing in Bethesda, MD: waterproofing, egress windows, basement baths and legal basement apartments. Costs, permits and local projects.",
+    },
     "junk-removal/bethesda-md": {
         title: "Junk Removal Services in Bethesda, MD | DMV General Contracting Group",
         description: "Professional junk removal services in Bethesda, MD — construction debris removal, residential cleanouts, bulk item pickup, estate cleanouts, and renovation waste hauling. Same-day and scheduled service. MHIC #156178. Call +1 240-730-1292.",

@@ -1,17 +1,17 @@
 import type { Metadata } from "next";
-import Estimate from "@/components/redesign/home/estimate/Estimate";
-import FiveSteps from "@/components/redesign/home/five-steps/FiveSteps";
-import HomeFaq from "@/components/redesign/home/home-faq/HomeFaq";
-import InHomeConsultation from "@/components/redesign/home/in-home-consultation/InHomeConsultation";
-import LicensedInsured from "@/components/redesign/home/licensed-insured/LicensedInsured";
-import HomeServices from "@/components/redesign/home/services/Services";
-import BethesdaContractorValue from "@/components/redesign/service-area/BethesdaContractorValue";
-import BethesdaGuide from "@/components/redesign/service-area/BethesdaGuide";
-import BethesdaNearbyAreas from "@/components/redesign/service-area/BethesdaNearbyAreas";
-import BethesdaProjectsReviews from "@/components/redesign/service-area/BethesdaProjectsReviews";
-import HomesMatrix from "@/components/redesign/service-area/HomesMatrix";
-import ServiceAreaPage from "@/components/redesign/service-area/ServiceAreaPage";
-import SupportingServices from "@/components/redesign/service-area/SupportingServices";
+import Estimate from "@/components/Home/Estimate/Estimate";
+import FiveSteps from "@/components/Home/FiveSteps/FiveSteps";
+import HomeFaq from "@/components/Home/HomeFaq/HomeFaq";
+import InHomeConsultation from "@/components/Home/InHomeConsultation/InHomeConsultation";
+import LicensedInsured from "@/components/Home/LicensedInsured/LicensedInsured";
+import HomeServices from "@/components/Home/Services/Services";
+import BethesdaContractorValue from "@/components/ServiceArea/BethesdaContractorValue";
+import BethesdaGuide from "@/components/ServiceArea/BethesdaGuide";
+import BethesdaNearbyAreas from "@/components/ServiceArea/BethesdaNearbyAreas";
+import BethesdaProjectsReviews from "@/components/ServiceArea/BethesdaProjectsReviews";
+import HomesMatrix from "@/components/ServiceArea/HomesMatrix";
+import ServiceAreaPage from "@/components/ServiceArea/ServiceAreaPage";
+import SupportingServices from "@/components/ServiceArea/SupportingServices";
 
 export const metadata: Metadata = {
   title: "General Contractor & Home Remodeling in Bethesda, MD | DMV General Contracting Group",

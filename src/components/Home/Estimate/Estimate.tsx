@@ -4,7 +4,7 @@ import SectionHeading from "@/components/Common/SectionHeading";
 import EstimateForm from "./EstimateForm";
 import styles from "./estimate.module.scss";
 
-type EstimateVariant = "home" | "kitchen" | "bethesda-kitchen" | "bethesda-bathroom" | "bathroom";
+type EstimateVariant = "home" | "kitchen" | "bethesda-kitchen" | "bethesda-bathroom" | "bethesda-basement" | "bathroom" | "basement";
 
 const benefitsByVariant: Record<EstimateVariant, string[]> = {
   home: [
@@ -21,6 +21,13 @@ const benefitsByVariant: Record<EstimateVariant, string[]> = {
   ],
   "bethesda-kitchen": [],
   "bethesda-bathroom": [],
+  "bethesda-basement": [],
+  basement: [
+    "Free visit to test the slab and measure headroom",
+    "Written estimate with moisture, egress and finish costs itemized",
+    "One contract for design, permits and construction",
+    "1-year workmanship warranty on every basement",
+  ],
   bathroom: [
     "Free bathroom estimate after the walkthrough",
     "One contract for waterproofing, permits and the build",
@@ -53,6 +60,18 @@ const trustItemsByVariant: Record<EstimateVariant, string[]> = {
     "MHIC #156178",
     "DLCP #410526000209",
     "35 years",
+  ],
+  "bethesda-basement": [
+    "4.9 on Google",
+    "MHIC #156178",
+    "DLCP #410526000209",
+    "1-year warranty",
+  ],
+  basement: [
+    "4.9 on Google",
+    "MHIC #156178",
+    "DLCP #410526000209",
+    "1-year warranty",
   ],
   bathroom: [
     "4.9 on Google",
@@ -110,7 +129,9 @@ export default function Estimate({ variant = "home" }: { variant?: EstimateVaria
   const isKitchen = variant === "kitchen";
   const isBethesdaKitchen = variant === "bethesda-kitchen";
   const isBethesdaBathroom = variant === "bethesda-bathroom";
+  const isBethesdaBasement = variant === "bethesda-basement";
   const isBathroom = variant === "bathroom";
+  const isBasement = variant === "basement";
   const benefits = benefitsByVariant[variant];
   const trustItems = trustItemsByVariant[variant];
 
@@ -129,14 +150,16 @@ export default function Estimate({ variant = "home" }: { variant?: EstimateVaria
               id="estimate-title"
               size="large"
               eyebrow={
-                isKitchen || isBethesdaKitchen || isBethesdaBathroom || isBathroom ? (
+                isKitchen || isBethesdaKitchen || isBethesdaBathroom || isBethesdaBasement || isBathroom || isBasement ? (
                   <div className={styles.eyebrowRow}>
                     <Badge className={styles.badge}>
-                      {isBethesdaKitchen
-                        ? "Free In-Home Consultation"
-                        : isBethesdaBathroom || isBathroom
-                          ? "Free Bathroom Estimate"
-                          : "Free Kitchen Estimate"}
+                      {isBethesdaBasement || isBasement
+                        ? "Free Basement Estimate"
+                        : isBethesdaKitchen
+                          ? "Free In-Home Consultation"
+                          : isBethesdaBathroom || isBathroom
+                            ? "Free Bathroom Estimate"
+                            : "Free Kitchen Estimate"}
                     </Badge>
                     <span className={styles.stars} aria-label="4.9 out of 5 stars">
                       ★★★★★
@@ -147,30 +170,49 @@ export default function Estimate({ variant = "home" }: { variant?: EstimateVaria
                 )
               }
               title={
-                isBethesdaKitchen
-                  ? "Start Your Kitchen Remodel in Bethesda, MD"
-                  : isBethesdaBathroom
-                    ? "Start Your Bathroom Remodel in Bethesda, MD"
-                    : isBathroom
-                      ? "Start Your Bathroom Remodel in Maryland"
-                      : isKitchen
-                        ? "Start Your Kitchen Remodel in Maryland"
-                        : "Get a Free Estimate From a Maryland General Contractor"
+                isBethesdaBasement
+                  ? "Start Your Basement Project in Bethesda, MD"
+                  : isBasement
+                    ? "Start Your Basement Finishing Project in Maryland"
+                  : isBethesdaKitchen
+                    ? "Start Your Kitchen Remodel in Bethesda, MD"
+                    : isBethesdaBathroom
+                      ? "Start Your Bathroom Remodel in Bethesda, MD"
+                      : isBathroom
+                        ? "Start Your Bathroom Remodel in Maryland"
+                        : isKitchen
+                          ? "Start Your Kitchen Remodel in Maryland"
+                          : "Get a Free Estimate From a Maryland General Contractor"
               }
               text={
-                isBethesdaKitchen
-                  ? "When you are ready for kitchen remodeling in Bethesda, MD, our licensed design-build team handles design, permits and construction so the budget and schedule hold. Book a free in-home consultation to see what your kitchen could become."
-                  : isBethesdaBathroom
-                    ? "From a powder room to a full primary suite, our licensed team handles bathroom remodeling in Bethesda, MD with waterproofing done right and permits filed on your behalf. The first step is an in-home visit at no charge."
-                    : isBathroom
-                      ? "Your next shower, vanity and tile job is a single call to DMV General Contracting Group, handling bathroom remodeling in Maryland and Washington, DC. One contract covers waterproofing, permits and the build."
-                      : isKitchen
-                        ? "A new kitchen is one call away for homeowners seeking kitchen remodeling in Maryland and Washington, DC. DMV General Contracting Group designs, permits and builds it under one license-backed contract. It starts with a no-cost visit to measure your kitchen."
-                        : "DMV General Contracting Group is a licensed residential general contractor serving Maryland and Washington, DC, with design-build service from the first drawing to the final inspection. Tell us about your kitchen, bathroom, basement, ADU or addition, and we will set up your free in-home consultation."
+                isBethesdaBasement
+                  ? "Our licensed team handles basement remodeling and basement finishing in Bethesda, MD, making sure the space is dry and the egress is legal before the first wall goes up. Book a free assessment to find out what your basement can become."
+                  : isBasement
+                    ? "Finishing costs $30 to $85 per square foot, against $200 to $400 for an addition. Bare concrete becomes finished rooms with DMV General Contracting Group, your crew for basement remodeling and finishing across Maryland and Washington, DC."
+                  : isBethesdaKitchen
+                    ? "When you are ready for kitchen remodeling in Bethesda, MD, our licensed design-build team handles design, permits and construction so the budget and schedule hold. Book a free in-home consultation to see what your kitchen could become."
+                    : isBethesdaBathroom
+                      ? "From a powder room to a full primary suite, our licensed team handles bathroom remodeling in Bethesda, MD with waterproofing done right and permits filed on your behalf. The first step is an in-home visit at no charge."
+                      : isBathroom
+                        ? "Your next shower, vanity and tile job is a single call to DMV General Contracting Group, handling bathroom remodeling in Maryland and Washington, DC. One contract covers waterproofing, permits and the build."
+                        : isKitchen
+                          ? "A new kitchen is one call away for homeowners seeking kitchen remodeling in Maryland and Washington, DC. DMV General Contracting Group designs, permits and builds it under one license-backed contract. It starts with a no-cost visit to measure your kitchen."
+                          : "DMV General Contracting Group is a licensed residential general contractor serving Maryland and Washington, DC, with design-build service from the first drawing to the final inspection. Tell us about your kitchen, bathroom, basement, ADU or addition, and we will set up your free in-home consultation."
               }
             />
 
-            {isBethesdaKitchen ? (
+            {isBethesdaBasement ? (
+              <p className={styles.contactIntro}>
+                Any of three routes gets you a free basement assessment: the phone at{" "}
+                <a href="tel:+12407301292">(240) 730-1292</a>, which we pick up daily, a note to{" "}
+                <a href="mailto:support@dmv-gc.com">support@dmv-gc.com</a>, or the site form.
+              </p>
+            ) : isBasement ? (
+              <p className={styles.contactIntro}>
+                Schedule your free basement estimate online, or phone{" "}
+                <a href="tel:+12407301292">(240) 730-1292</a> any day of the week.
+              </p>
+            ) : isBethesdaKitchen ? (
               <p className={styles.contactIntro}>
                 To set up the free in-home consultation, use the contact form or phone{" "}
                 <a href="tel:+12407301292">(240) 730-1292</a>.
@@ -208,7 +250,7 @@ export default function Estimate({ variant = "home" }: { variant?: EstimateVaria
               </ul>
             ) : null}
 
-            {isBethesdaKitchen || isBethesdaBathroom ? (
+            {isBethesdaKitchen || isBethesdaBathroom || isBethesdaBasement ? (
               <div className={styles.contact}>
                 <p className={styles.companyName}>DMV General Contracting Group LLC</p>
                 <p>

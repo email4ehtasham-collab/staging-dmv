@@ -316,8 +316,8 @@ const ServiceData = [
         points_main_title: "Explore our comprehensive Basement Remodeling services:",
         newService: true,
         imageAlt: 'Basement finishing and remodeling in Bethesda MD —licensed contractor',
-        meta_title: "Basement Remodeling in Bethesda, MD | Licensed Contractor | DMV General Contracting Group",
-        meta_description: "Expert basement finishing & remodeling in Bethesda, MD. Licensed design-build contractor serving Potomac, Chevy Chase & North Bethesda. Free in-home consultation. 1-Year Warranty. Call +1 240-730-1292!",
+        meta_title: "Basement Remodeling & Finishing in Maryland & DC",
+        meta_description: "DMV General Contracting Group offers basement remodeling and finishing in Maryland and DC from $30 per sq ft, with permits and a 1-year warranty.",
         schemaData: {
             "@context": "https://schema.org",
             "@graph": [

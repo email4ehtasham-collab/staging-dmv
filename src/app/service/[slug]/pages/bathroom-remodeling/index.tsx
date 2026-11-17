@@ -8,13 +8,13 @@ import Button from "@/components/Common/Button";
 import Container from "@/components/Common/Container";
 import NavitemActive from "@/components/Common/NavitemActive";
 import SectionHeading from "@/components/Common/SectionHeading";
-import Estimate from "@/components/redesign/home/estimate/Estimate";
-import HomeFaq from "@/components/redesign/home/home-faq/HomeFaq";
-import InHomeConsultation from "@/components/redesign/home/in-home-consultation/InHomeConsultation";
-import LicensedInsured from "@/components/redesign/home/licensed-insured/LicensedInsured";
-import Permits from "@/components/redesign/home/permits/Permits";
-import RecentProjects from "@/components/redesign/home/recent-projects/RecentProjects";
-import type { ProjectCardData } from "@/components/redesign/home/recent-projects/ProjectCard";
+import Estimate from "@/components/Home/Estimate/Estimate";
+import HomeFaq from "@/components/Home/HomeFaq/HomeFaq";
+import InHomeConsultation from "@/components/Home/InHomeConsultation/InHomeConsultation";
+import LicensedInsured from "@/components/Home/LicensedInsured/LicensedInsured";
+import Permits from "@/components/Home/Permits/Permits";
+import RecentProjects from "@/components/Home/RecentProjects/RecentProjects";
+import type { ProjectCardData } from "@/components/Home/RecentProjects/ProjectCard";
 import styles from "./style.module.scss";
 
 type BathroomService = {

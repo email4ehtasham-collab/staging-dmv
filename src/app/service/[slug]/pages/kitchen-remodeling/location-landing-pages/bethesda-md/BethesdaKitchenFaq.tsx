@@ -1,4 +1,4 @@
-import HomeFaq from "@/components/redesign/home/home-faq/HomeFaq";
+import HomeFaq from "@/components/Home/HomeFaq/HomeFaq";
 
 const bethesdaKitchenFaqs = [
   {

@@ -15,6 +15,7 @@ const components = {
     "cabin-john-md": dynamic(() => import("./[slug]/pages/kitchen-remodeling/location-landing-pages/cabin-john-md")),
   },
   "basement-remodeling": {
+    "bethesda-md": dynamic(() => import("./[slug]/pages/basement-remodeling/location-landing-pages/bethesda-md")),
     "cabin-john-md": dynamic(() => import("./[slug]/pages/basement-remodeling/location-landing-pages/cabin-john-md")),
     "chevy-chase-md": dynamic(() => import("./[slug]/pages/basement-remodeling/location-landing-pages/chevy-chase-md")),
     "gaithersburg-md": dynamic(() => import("./[slug]/pages/basement-remodeling/location-landing-pages/gaithersburg-md")),

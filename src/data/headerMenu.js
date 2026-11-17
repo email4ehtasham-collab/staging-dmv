@@ -59,6 +59,7 @@ export const headerMenu = [
         label: "Basement Remodeling",
         href: "/service/basement-remodeling",
         submenu: [
+          { label: "Bethesda, MD", href: "/service/basement-remodeling/bethesda-md" },
           { label: "Washington, DC", href: "/service/basement-remodeling/washington-dc" },
           { label: "Rockville, MD", href: "/service/basement-remodeling/rockville-md" },
           { label: "Kensington, MD", href: "/service/basement-remodeling/kensington-md" },

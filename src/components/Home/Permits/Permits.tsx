@@ -109,6 +109,39 @@ const bathroomRows = [
   },
 ];
 
+const basementRows = [
+  {
+    location: "Unincorporated Montgomery County (Bethesda, Potomac, Silver Spring, Wheaton and nearby)",
+    detail: "",
+    building: "Montgomery County Department of Permitting Services (DPS)",
+    plumbing: "WSSC Water",
+  },
+  {
+    location: "City of Rockville",
+    detail: "",
+    building: "City of Rockville",
+    plumbing: "City of Rockville, or WSSC Water for homes served by WSSC water",
+  },
+  {
+    location: "City of Gaithersburg",
+    detail: "",
+    building: "City of Gaithersburg",
+    plumbing: "WSSC Water",
+  },
+  {
+    location: "Laurel",
+    detail: "",
+    building: "Laurel's own permit office in town; Prince George's County DPIE beyond the city line",
+    plumbing: "WSSC Water",
+  },
+  {
+    location: "Washington, DC",
+    detail: "",
+    building: "DC Department of Buildings (DOB)",
+    plumbing: "DC Department of Buildings (DOB)",
+  },
+];
+
 function InfoIcon() {
   return (
     <svg viewBox="0 0 20 20" fill="none" aria-hidden="true" focusable="false" className={styles.noteIcon}>
@@ -119,18 +152,25 @@ function InfoIcon() {
 }
 
 type PermitsProps = {
-  variant?: "home" | "kitchen" | "bathroom";
+  variant?: "home" | "kitchen" | "bathroom" | "basement";
 };
 
 export default function Permits({ variant = "home" }: PermitsProps) {
   const isKitchen = variant === "kitchen";
   const isBathroom = variant === "bathroom";
-  const rows = isBathroom ? bathroomRows : isKitchen ? kitchenRows : homeRows;
+  const isBasement = variant === "basement";
+  const rows = isBasement
+    ? basementRows
+    : isBathroom
+      ? bathroomRows
+      : isKitchen
+        ? kitchenRows
+        : homeRows;
 
-  const firstColumn = isKitchen || isBathroom ? "Building permit" : "Building permits issued by";
+  const firstColumn = isKitchen || isBathroom || isBasement ? "Building permit" : "Building permits issued by";
   const secondColumn = isKitchen
     ? "Plumbing and gas permit"
-    : isBathroom
+    : isBathroom || isBasement
       ? "Plumbing permit"
       : "Plumbing and gas permits issued by";
 
@@ -143,18 +183,22 @@ export default function Permits({ variant = "home" }: PermitsProps) {
             align="center"
             eyebrow={<Badge>Permits</Badge>}
             title={
-              isKitchen
-                ? "Do You Need a Permit to Remodel a Kitchen in Maryland or DC?"
-                : isBathroom
-                  ? "Do You Need a Permit to Remodel a Bathroom in Maryland?"
-                  : "Permits Handled Wherever We Work"
+              isBasement
+                ? "Do You Need a Permit to Finish a Basement in Maryland?"
+                : isKitchen
+                  ? "Do You Need a Permit to Remodel a Kitchen in Maryland or DC?"
+                  : isBathroom
+                    ? "Do You Need a Permit to Remodel a Bathroom in Maryland?"
+                    : "Permits Handled Wherever We Work"
             }
             text={
-              isKitchen
-                ? "Yes, if the work changes walls, wiring or plumbing. The Montgomery County Department of Permitting Services lists cabinet installs and floor coverings as work that needs no permit. In Maryland and DC, the permit office depends on your address:"
-                : isBathroom
-                  ? "Yes, once you move or add plumbing, change walls or add circuits. Plumbing appears on the Montgomery County Department of Permitting Services permit-required list, with a note to contact WSSC Water. Which agency signs off on a Maryland or DC bathroom depends on the jurisdiction:"
-                  : "We apply for and manage every permit your project needs. Who issues it depends on where you live, and in Maryland the plumbing and gas permit often comes from a different office than the building permit."
+              isBasement
+                ? "Yes. Finishing a basement is an interior alteration, so Montgomery County, Rockville, Gaithersburg and DC all require a building permit. New circuits or a bathroom add electrical and plumbing permits. This table shows which Maryland or DC office handles your address:"
+                : isKitchen
+                  ? "Yes, if the work changes walls, wiring or plumbing. The Montgomery County Department of Permitting Services lists cabinet installs and floor coverings as work that needs no permit. In Maryland and DC, the permit office depends on your address:"
+                  : isBathroom
+                    ? "Yes, once you move or add plumbing, change walls or add circuits. Plumbing appears on the Montgomery County Department of Permitting Services permit-required list, with a note to contact WSSC Water. Which agency signs off on a Maryland or DC bathroom depends on the jurisdiction:"
+                    : "We apply for and manage every permit your project needs. Who issues it depends on where you live, and in Maryland the plumbing and gas permit often comes from a different office than the building permit."
             }
           />
         </div>
@@ -186,7 +230,9 @@ export default function Permits({ variant = "home" }: PermitsProps) {
         <div className={styles.note}>
           <InfoIcon />
           <p>
-            {isKitchen ? (
+            {isBasement ? (
+              "Renting out a basement apartment brings a second set of rules. Montgomery County registers and licenses accessory dwelling units through its Department of Housing and Community Affairs. DC requires a certificate of occupancy and a rental license, so we confirm the rules for your address before design."
+            ) : isKitchen ? (
               "New circuits or rewiring also need an electrical permit, which DPS issues in Montgomery County and DOB issues in DC. We draw the plans, file each application and book every inspection for you."
             ) : isBathroom ? (
               "New circuits for lights, fans or heated floors also need an electrical permit from DPS or DOB. Our office prepares drawings, submits every form and lines up both the rough-in and final inspector visits."

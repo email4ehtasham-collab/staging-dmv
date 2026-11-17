@@ -1,4 +1,4 @@
-import type { ServiceLocationContent } from "@/components/redesign/service-location/types";
+import type { ServiceLocationContent } from "@/components/ServiceLocation/types";
 
 const bethesdaBathroomContent: ServiceLocationContent = {
   hero: {

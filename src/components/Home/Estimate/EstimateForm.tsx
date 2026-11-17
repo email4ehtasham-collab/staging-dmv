@@ -6,7 +6,7 @@ import Button from "@/components/Common/Button";
 import styles from "./estimate.module.scss";
 
 type Status = "idle" | "submitting" | "success" | "error";
-type EstimateFormVariant = "home" | "kitchen" | "bethesda-kitchen" | "bethesda-bathroom" | "bathroom";
+type EstimateFormVariant = "home" | "kitchen" | "bethesda-kitchen" | "bethesda-bathroom" | "bethesda-basement" | "bathroom" | "basement";
 
 const initialForm = {
   name: "",
@@ -37,6 +37,17 @@ const bathroomProjectTypes = [
   "Accessible / aging-in-place bath",
   "Bathroom addition",
   "Condo bathroom remodel",
+  "Something else",
+];
+
+const basementProjectTypes = [
+  "Basement finishing",
+  "Basement remodeling",
+  "Basement bathroom",
+  "Family room or playroom",
+  "Home office or gym",
+  "Home theater or wet bar",
+  "Guest suite or apartment",
   "Something else",
 ];
 
@@ -107,6 +118,28 @@ const copyByVariant: Record<
     messageLabel: "Tell us about your bathroom (optional)",
     messagePlaceholder: "Home style, what you want to change, and when you'd like to start.",
     submit: "Book My Free Bathroom Estimate",
+  },
+  "bethesda-basement": {
+    heading: "Book your free Bethesda basement estimate",
+    subheading: "Bethesda basements · No minimum project size · No obligation",
+    projectLabel: "Basement project",
+    projectPlaceholder: "Choose a basement project",
+    projectTypes: basementProjectTypes,
+    zipPlaceholder: "20814",
+    messageLabel: "Tell us about your basement (optional)",
+    messagePlaceholder: "Ceiling height, moisture concerns, rooms you want, and timing.",
+    submit: "Book My Free Basement Estimate",
+  },
+  basement: {
+    heading: "Book your free basement estimate",
+    subheading: "Maryland and DC basements · No minimum project size · No obligation",
+    projectLabel: "Basement project",
+    projectPlaceholder: "Choose a basement project",
+    projectTypes: basementProjectTypes,
+    zipPlaceholder: "20852",
+    messageLabel: "Tell us about your basement (optional)",
+    messagePlaceholder: "Ceiling height, moisture concerns, rooms you want, and timing.",
+    submit: "Book My Free Basement Estimate",
   },
   bathroom: {
     heading: "Book your free bathroom estimate",

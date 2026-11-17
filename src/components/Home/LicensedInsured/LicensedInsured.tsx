@@ -144,6 +144,39 @@ const bathroomReasons = [
   },
 ];
 
+const basementReasons = [
+  {
+    icon: "verified" as IconName,
+    label: "Licensed",
+    title: "Licensed in Maryland and DC",
+    text: "Our MHIC license #156178 and DC DLCP license #410526000209 cover basement work on both sides of the District line. Each basement job is covered by our general liability policy.",
+  },
+  {
+    icon: "protected" as IconName,
+    label: "Dry First",
+    title: "Water Problems Fixed First",
+    text: "We never frame over a damp wall. Grading, drainage or sump issues are solved before finish work starts.",
+  },
+  {
+    icon: "compliance" as IconName,
+    label: "Compliant",
+    title: "Code-Compliant Egress and Height",
+    text: "Bedrooms get legal escape windows, and every room meets the IRC ceiling height rule. Both protect you at resale and in an emergency.",
+  },
+  {
+    icon: "experience" as IconName,
+    label: "Experience",
+    title: "Three and a Half Decades of Building",
+    text: "Our crew's 35 years of residential work include basements in 1950s ramblers, split-levels, newer colonials and DC rowhouses.",
+  },
+  {
+    icon: "warranty" as IconName,
+    label: "Warranty",
+    title: "Small Jobs Welcome, Backed by a Workmanship Warranty",
+    text: "From a single basement bathroom to a full apartment, the work carries the same 1-year workmanship warranty.",
+  },
+];
+
 const bethesdaBathroomReasons = [
   {
     icon: "local" as IconName,
@@ -162,6 +195,27 @@ const bethesdaBathroomReasons = [
     label: "In-House",
     title: "Trades on Staff",
     text: "Our in-house plumbers and electricians handle the rough-in work, so county and WSSC inspections stay on schedule.",
+  },
+];
+
+const bethesdaBasementReasons = [
+  {
+    icon: "protected" as IconName,
+    label: "Dry First",
+    title: "Dry Before Drywall",
+    text: "Walls only go up on a foundation that has stayed dry through rain, so drainage and sump fixes always come first.",
+  },
+  {
+    icon: "compliance" as IconName,
+    label: "Code",
+    title: "Code Built In",
+    text: "Headroom, egress and fire separation are designed from the first drawing, which protects you at resale and makes a rental unit licensable.",
+  },
+  {
+    icon: "local" as IconName,
+    label: "Local",
+    title: "Nearby and On Call",
+    text: "Our North Bethesda office keeps site visits and inspections quick, and the same lead handles your project start to finish.",
   },
 ];
 
@@ -314,7 +368,7 @@ function ReasonIcon({ name }: { name: IconName }) {
 }
 
 type LicensedInsuredProps = {
-  variant?: "home" | "kitchen" | "bethesda" | "bethesda-kitchen" | "bethesda-bathroom" | "bathroom";
+  variant?: "home" | "kitchen" | "bethesda" | "bethesda-kitchen" | "bethesda-bathroom" | "bethesda-basement" | "bathroom" | "basement";
 };
 
 export default function LicensedInsured({ variant = "home" }: LicensedInsuredProps) {
@@ -322,18 +376,24 @@ export default function LicensedInsured({ variant = "home" }: LicensedInsuredPro
   const isBethesda = variant === "bethesda";
   const isBethesdaKitchen = variant === "bethesda-kitchen";
   const isBethesdaBathroom = variant === "bethesda-bathroom";
+  const isBethesdaBasement = variant === "bethesda-basement";
   const isBathroom = variant === "bathroom";
-  const reasons = isBethesdaBathroom
-    ? bethesdaBathroomReasons
-    : isBathroom
-      ? bathroomReasons
-      : isBethesdaKitchen
-        ? bethesdaKitchenReasons
-        : isKitchen
-          ? kitchenReasons
-          : isBethesda
-            ? bethesdaReasons
-            : homeReasons;
+  const isBasement = variant === "basement";
+  const reasons = isBethesdaBasement
+    ? bethesdaBasementReasons
+    : isBasement
+      ? basementReasons
+      : isBethesdaBathroom
+      ? bethesdaBathroomReasons
+      : isBathroom
+        ? bathroomReasons
+        : isBethesdaKitchen
+          ? bethesdaKitchenReasons
+          : isKitchen
+            ? kitchenReasons
+            : isBethesda
+              ? bethesdaReasons
+              : homeReasons;
 
   return (
     <section
@@ -348,12 +408,16 @@ export default function LicensedInsured({ variant = "home" }: LicensedInsuredPro
               id="licensed-title"
               align="center"
               eyebrow={
-                <Badge>{isKitchen || isBethesda || isBethesdaKitchen || isBethesdaBathroom || isBathroom ? "Why Choose Us" : "Why choose us"}</Badge>
+                <Badge>{isKitchen || isBethesda || isBethesdaKitchen || isBethesdaBathroom || isBethesdaBasement || isBathroom || isBasement ? "Why Choose Us" : "Why choose us"}</Badge>
               }
               title={
-                isBethesdaBathroom
-                  ? "Reasons Bethesda Clients Pick Our Bathroom Team"
-                  : isBathroom
+                isBethesdaBasement
+                  ? "Why Bethesda Families Choose Us for Basements"
+                  : isBasement
+                    ? "Why Maryland Homeowners Pick Us to Finish Their Basements"
+                  : isBethesdaBathroom
+                    ? "Reasons Bethesda Clients Pick Our Bathroom Team"
+                    : isBathroom
                     ? "Why Homeowners Choose Us for Their Bathroom Remodel"
                     : isBethesdaKitchen
                       ? "Why Bethesda Homeowners Choose Us for Kitchens"
@@ -364,9 +428,13 @@ export default function LicensedInsured({ variant = "home" }: LicensedInsuredPro
                           : "Licensed and Insured in Maryland and Washington, DC"
               }
               text={
-                isBethesdaBathroom
-                  ? "Clients tend to mention the same three things:"
-                  : isBathroom
+                isBethesdaBasement
+                  ? "Three things matter most below grade:"
+                  : isBasement
+                    ? "Five habits set our basement remodeling crews apart:"
+                  : isBethesdaBathroom
+                    ? "Clients tend to mention the same three things:"
+                    : isBathroom
                     ? "Five strengths bring Maryland and DC families to us for bathroom remodeling:"
                     : isBethesdaKitchen
                       ? "Bethesda owners tend to give us three reasons for hiring us."
@@ -395,7 +463,25 @@ export default function LicensedInsured({ variant = "home" }: LicensedInsuredPro
           </div>
 
           <div className={styles.footer}>
-            {isBethesdaBathroom ? (
+            {isBethesdaBasement ? (
+              <>
+                <p>Our team brings 35 years of residential experience to each lower level, and the labor on yours carries a twelve-month guarantee.</p>
+                <div className={styles.actions}>
+                  <Button href="/contact-us" data-estimate-trigger>
+                    Get a Free Estimate
+                  </Button>
+                </div>
+              </>
+            ) : isBasement ? (
+              <>
+                <p>The first visit tells you whether your basement is worth finishing before you spend anything.</p>
+                <div className={styles.actions}>
+                  <Button href="/contact-us" data-estimate-trigger>
+                    Get a Free Estimate
+                  </Button>
+                </div>
+              </>
+            ) : isBethesdaBathroom ? (
               <>
                 <p>Thirty-five years of house work and a one-year guarantee on our labor stand behind it.</p>
                 <div className={styles.actions}>
