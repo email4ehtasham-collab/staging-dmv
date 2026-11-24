@@ -1,0 +1,123 @@
+.topBar {
+  background: var(--dmv-color-heading);
+  color: var(--dmv-color-inverse-soft);
+  font-family: var(--dmv-font-body, var(--primary-font));
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  gap: var(--dmv-space-4);
+  min-height: 43px;
+}
+
+.license {
+  min-width: 0;
+}
+
+.license .licenseBadge {
+    min-height: auto;
+    padding: 5px 10px;
+    font-size: 12px;
+    background: transparent;
+    color: var(--dmv-color-accent);
+    border-color: var(--dmv-color-accent);
+
+}
+
+.licensePill {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--dmv-space-2);
+  min-height: 22px;
+  padding-inline: var(--dmv-space-4);
+  border: var(--dmv-border-width) solid rgba(212, 175, 55, 0.3);
+  border-radius: var(--dmv-radius-pill);
+  background: rgba(212, 175, 55, 0.1);
+  color: var(--dmv-color-accent);
+  font-size: 14px;
+  font-weight: var(--dmv-weight-medium);
+  line-height: var(--dmv-line-snug);
+}
+
+.licenseIcon {
+  width: var(--dmv-icon-size-xs);
+  height: var(--dmv-icon-size-xs);
+  flex-shrink: 0;
+}
+
+.hours {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--dmv-space-2);
+  color: var(--dmv-color-faint);
+  font-size: 14px;
+  line-height: var(--dmv-line-snug);
+  white-space: nowrap;
+  margin-left: auto
+}
+
+.hoursIcon {
+  width: var(--dmv-icon-size-xs);
+  height: var(--dmv-icon-size-xs);
+  flex-shrink: 0;
+}
+
+.phone {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--dmv-space-2);
+  color: var(--dmv-color-inverse-soft);
+  font-size: 14px;
+  font-weight: var(--dmv-weight-medium);
+  line-height: var(--dmv-line-snug);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.phone:hover {
+  color: var(--dmv-color-accent);
+}
+
+.phoneIcon {
+  width: var(--dmv-icon-size-xs);
+  height: var(--dmv-icon-size-xs);
+  color: var(--dmv-color-accent);
+  flex-shrink: 0;
+}
+
+@media (max-width: 1200px) {
+  .inner {
+    padding-block: var(--dmv-space-2);
+  }
+
+  .licensePill {
+    white-space: normal;
+  }
+}
+
+@media (max-width: 768px) {
+  .inner {
+    flex-wrap: wrap;
+    gap: var(--dmv-space-2) var(--dmv-space-4);
+    min-height: auto;
+  }
+
+  .license {
+    flex-basis: 100%;
+  }
+
+  .licensePill {
+    min-height: auto;
+    padding-block: var(--dmv-space-1);
+    font-size: var(--dmv-font-size-2xs);
+  }
+
+  .hours {
+    font-size: var(--dmv-font-size-2xs);
+  }
+
+  .phone {
+    font-size: var(--dmv-font-size-2xs);
+  }
+}

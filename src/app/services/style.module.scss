@@ -1,0 +1,328 @@
+.section {
+  padding-block: var(--dmv-section-padding);
+}
+
+.sectionSoft {
+  border-block: var(--dmv-border-width) solid var(--dmv-color-line-soft);
+  background: var(--dmv-color-surface-soft);
+}
+
+.sectionHeader {
+  max-width: 860px;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.serviceGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--dmv-space-6);
+  margin-top: var(--dmv-space-10);
+}
+
+.serviceCard {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  border: var(--dmv-border-width) solid var(--dmv-color-border-card);
+  border-radius: var(--dmv-radius-lg);
+  background: var(--dmv-color-surface);
+  box-shadow: var(--dmv-shadow-soft);
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.serviceCard:hover {
+  border-color: var(--dmv-color-accent);
+  transform: translateY(-2px);
+}
+
+.serviceCardLink {
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+  border-radius: inherit;
+}
+
+.serviceCardLink:focus-visible {
+  outline: 3px solid var(--dmv-color-accent);
+  outline-offset: 3px;
+}
+
+.serviceMedia {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16 / 10;
+  background: var(--dmv-color-surface-soft);
+}
+
+.serviceMedia img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.serviceBody {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: var(--dmv-space-6);
+}
+
+.serviceTitle {
+  margin: 0 0 var(--dmv-space-3);
+  color: var(--dmv-color-heading);
+  font-size: 20px;
+  font-weight: var(--dmv-weight-extrabold);
+  line-height: 1.3;
+}
+
+.serviceText {
+  margin: 0;
+  color: var(--dmv-color-body);
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.inlineLink {
+  color: var(--dmv-color-heading);
+  font-weight: var(--dmv-weight-semibold);
+  text-decoration: underline;
+  text-decoration-color: var(--dmv-color-accent);
+  text-underline-offset: 3px;
+}
+
+.note {
+  margin: var(--dmv-space-7) auto 0;
+  max-width: 860px;
+  color: var(--dmv-color-body);
+  font-size: 16px;
+  line-height: 1.7;
+  text-align: center;
+}
+
+.contentTableWrap {
+  width: 100%;
+  margin-top: var(--dmv-space-8);
+  overflow-x: auto;
+  border: var(--dmv-border-width) solid var(--dmv-color-line-soft);
+  border-radius: var(--dmv-radius-md);
+}
+
+.contentTable {
+  width: 100%;
+  min-width: 640px;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.contentTable th,
+.contentTable td {
+  padding: 14px 16px;
+  border-bottom: var(--dmv-border-width) solid var(--dmv-color-line-soft);
+  text-align: left;
+  vertical-align: top;
+}
+
+.contentTable thead th {
+  background: var(--dmv-color-brand);
+  color: var(--dmv-color-inverse);
+  font-weight: 700;
+}
+
+.contentTable tbody th {
+  color: var(--dmv-color-heading);
+  font-weight: 700;
+}
+
+.contentTable tbody td {
+  color: var(--dmv-color-body);
+}
+
+.contentTable tbody tr:nth-child(even) {
+  background: var(--dmv-color-surface-soft);
+}
+
+.contentTable tbody tr:last-child th,
+.contentTable tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.qaGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--dmv-space-6);
+  margin-top: var(--dmv-space-8);
+}
+
+.qaCard {
+  padding: var(--dmv-space-7);
+  border: var(--dmv-border-width) solid var(--dmv-color-border-card);
+  border-radius: var(--dmv-radius-lg);
+  background: var(--dmv-color-surface);
+}
+
+.qaCard h3 {
+  margin: 0 0 var(--dmv-space-4);
+  color: var(--dmv-color-heading);
+  font-size: 22px;
+  font-weight: var(--dmv-weight-extrabold);
+  line-height: 1.35;
+}
+
+.qaCard p {
+  margin: 0;
+  color: var(--dmv-color-body);
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+.relatedWorkHeader {
+  max-width: 760px;
+  text-align: center;
+  margin-inline: auto;
+}
+
+.relatedWorkHeader h2 {
+  margin: var(--dmv-space-4) 0 0;
+  color: var(--dmv-color-heading);
+  font-size: clamp(30px, 3vw, 42px);
+  font-weight: var(--dmv-weight-extrabold);
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.relatedWorkHeader p {
+  margin: var(--dmv-space-4) 0 0;
+  color: var(--dmv-color-body);
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.relatedWorkGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--dmv-space-6);
+  margin-top: var(--dmv-space-10);
+}
+
+.relatedWorkCard {
+  padding: var(--dmv-space-7);
+  border: var(--dmv-border-width) solid var(--dmv-color-border-card);
+  border-radius: var(--dmv-radius-lg);
+  background: var(--dmv-color-surface);
+  box-shadow: var(--dmv-shadow-soft);
+}
+
+.relatedWorkNumber {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--dmv-color-brand);
+  color: var(--dmv-color-inverse);
+  font-size: 14px;
+  font-weight: var(--dmv-weight-bold);
+}
+
+.relatedWorkCard h3 {
+  margin: var(--dmv-space-5) 0 var(--dmv-space-3);
+  color: var(--dmv-color-heading);
+  font-size: 20px;
+  font-weight: var(--dmv-weight-extrabold);
+  line-height: 1.3;
+}
+
+.relatedWorkCard p {
+  margin: 0;
+  color: var(--dmv-color-body);
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.relatedWorkNote {
+  margin: var(--dmv-space-7) auto 0;
+  max-width: 860px;
+  color: var(--dmv-color-body);
+  font-size: 16px;
+  line-height: 1.7;
+  text-align: center;
+}
+
+.areaGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--dmv-space-4);
+  margin-top: var(--dmv-space-8);
+}
+
+.areaLink {
+  display: flex;
+  min-height: 64px;
+  align-items: center;
+  justify-content: center;
+  padding: var(--dmv-space-4);
+  border: var(--dmv-border-width) solid var(--dmv-color-border-card);
+  border-radius: 999px;
+  background: var(--dmv-color-surface);
+  color: var(--dmv-color-heading);
+  font-size: 15px;
+  font-weight: var(--dmv-weight-semibold);
+  line-height: 1.4;
+  text-align: center;
+  text-decoration: none;
+}
+
+.areaLink:hover {
+  border-color: var(--dmv-color-accent);
+  color: var(--dmv-color-accent);
+}
+
+@media (max-width: 1024px) {
+  .serviceGrid,
+  .relatedWorkGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .areaGrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .qaGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .areaGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .contentTableWrap {
+    margin-inline: calc(var(--dmv-space-4) * -1);
+    border-radius: 0;
+  }
+
+  .contentTable {
+    min-width: 620px;
+  }
+}
+
+@media (max-width: 560px) {
+  .serviceGrid,
+  .relatedWorkGrid,
+  .areaGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .serviceBody,
+  .qaCard,
+  .relatedWorkCard {
+    padding: var(--dmv-space-5);
+  }
+}

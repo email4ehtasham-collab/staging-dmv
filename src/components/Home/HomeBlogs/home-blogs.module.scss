@@ -1,0 +1,155 @@
+.section {
+  padding-block: var(--dmv-section-padding);
+  background: #f6f8fb;
+}
+
+.header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--dmv-space-8);
+}
+
+.heading {
+  max-width: 900px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--dmv-space-6);
+  margin-top: var(--dmv-space-10);
+}
+
+.card {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  overflow: hidden;
+  border: var(--dmv-border-width) solid var(--dmv-color-border-card);
+  border-radius: var(--dmv-radius-lg);
+  background: var(--dmv-color-surface);
+  box-shadow: var(--dmv-shadow-soft);
+}
+
+.media {
+  position: relative;
+  display: block;
+  height: 260px;
+  overflow: hidden;
+  background: #f3f4f6;
+}
+
+.image {
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+.card:hover .image {
+  transform: scale(1.04);
+}
+
+.body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: var(--dmv-space-6);
+}
+
+.category {
+  align-self: flex-start;
+  padding: 3px 10px;
+  border-radius: var(--dmv-radius-pill);
+  background: var(--dmv-color-brand-wash);
+  color: var(--dmv-color-brand);
+  font-size: var(--dmv-font-size-2xs);
+  font-weight: var(--dmv-weight-bold);
+  letter-spacing: var(--dmv-tracking-wide);
+  text-transform: uppercase;
+}
+
+.cardTitle {
+  margin-top: var(--dmv-space-4);
+  color: var(--dmv-color-heading);
+  font-size: var(--dmv-font-size-lg);
+  font-weight: var(--dmv-weight-semibold);
+  line-height: var(--dmv-line-snug);
+}
+
+.cardTitle a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.cardTitle a:hover {
+  color: var(--dmv-color-brand);
+}
+
+.cardText {
+  margin-top: var(--dmv-space-3);
+  color: var(--dmv-color-body);
+  font-size: var(--dmv-font-size-sm);
+  line-height: var(--dmv-line-normal);
+}
+
+.readMore {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--dmv-space-2);
+  margin-top: auto;
+  padding-top: var(--dmv-space-5);
+  color: var(--dmv-color-brand);
+  font-size: var(--dmv-font-size-sm);
+  font-weight: var(--dmv-weight-semibold);
+  text-decoration: none;
+}
+
+.readMore svg {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.2s ease;
+}
+
+.readMore:hover svg {
+  transform: translateX(3px);
+}
+
+.media:focus-visible,
+.cardTitle a:focus-visible,
+.readMore:focus-visible {
+  outline: none;
+  box-shadow: var(--dmv-focus-ring);
+}
+
+@media (max-width: 1024px) {
+  .header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: var(--dmv-space-6);
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+    margin-top: var(--dmv-space-8);
+  }
+
+  .media {
+    height: 230px;
+  }
+}
+
+@media (max-width: 560px) {
+  .media {
+    height: 200px;
+  }
+
+  .body {
+    padding: var(--dmv-space-5);
+  }
+}

@@ -1,0 +1,44 @@
+.badgeStars:global(.nostars) > svg,
+.badgeStars:global(.nostarts) > svg {
+  display: none;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--dmv-space-2, 8px);
+  min-height: 34px;
+  padding-inline: var(--dmv-space-4, 16px);
+  border-radius: var(--dmv-radius-pill, 999px);
+  border: var(--dmv-border-width, 1px) solid var(--dmv-color-brand-wash-strong, rgba(197, 34, 31, 0.2));
+  background: var(--dmv-color-brand-wash, rgba(197, 34, 31, 0.1));
+  color: var(--dmv-color-brand, #c63940);
+  font-family: var(--dmv-font-body, var(--primary-font));
+  font-size: 14px;
+  font-weight: var(--dmv-weight-semibold, 600);
+  max-width: 100%;
+  letter-spacing: var(--dmv-tracking-wide, 0.04em);
+  line-height: 1.35;
+  text-transform: uppercase;
+}
+
+.accent {
+  border-color: rgba(212, 175, 55, 0.3);
+  background: var(--dmv-color-accent, #d4af37);
+  color: var(--dmv-color-heading, #0f172a);
+}
+
+.icon {
+  display: inline-flex;
+  align-items: center;
+}
+
+.icon svg {
+  width: 16px;
+  height: 16px;
+}
+
+.text {
+  display: inline-flex;
+  align-items: center;
+}

@@ -1,0 +1,174 @@
+.section {
+  padding-block: var(--dmv-section-padding);
+  background: var(--dmv-color-surface);
+}
+
+.section[data-variant="kitchen"],
+.section[data-variant="adu"] {
+  background: var(--dmv-color-surface-soft);
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  gap: clamp(40px, 6vw, 88px);
+  align-items: start;
+}
+
+.intro {
+  max-width: 460px;
+}
+
+.callBox {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--dmv-space-5);
+  margin-top: var(--dmv-space-8);
+}
+
+.callButton {
+  min-height: 52px;
+}
+
+.phone {
+  color: var(--dmv-color-heading);
+  font-size: 18px;
+  font-weight: var(--dmv-weight-bold);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.phone:hover {
+  color: var(--dmv-color-brand);
+}
+
+.list {
+  border-top: var(--dmv-border-width) solid var(--dmv-color-border-card);
+}
+
+.item {
+  border-bottom: var(--dmv-border-width) solid var(--dmv-color-border-card);
+}
+
+.summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--dmv-space-6);
+  min-height: 76px;
+  padding: 22px 0;
+  color: var(--dmv-color-heading);
+  font-size: 16px;
+  font-weight: var(--dmv-weight-semibold);
+  line-height: 1.45;
+  list-style: none;
+  cursor: pointer;
+}
+
+.summary::-webkit-details-marker {
+  display: none;
+}
+
+.question {
+  flex: 1;
+}
+
+.icon {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: var(--dmv-border-width) solid var(--dmv-color-border-card);
+  border-radius: 50%;
+  background: var(--dmv-color-surface);
+  color: var(--dmv-color-brand);
+  transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.icon svg {
+  width: 14px;
+  height: 14px;
+}
+
+.item[open] .icon {
+  transform: rotate(45deg);
+  background: var(--dmv-color-brand-wash);
+  border-color: var(--dmv-color-brand-wash-strong);
+}
+
+.summary:focus-visible {
+  outline: none;
+  border-radius: var(--dmv-radius-sm);
+  box-shadow: inset var(--dmv-focus-ring);
+}
+
+.answer {
+  padding: 0 56px var(--dmv-space-6) 0;
+  color: var(--dmv-color-body);
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.section[data-variant="kitchen"] .intro :global(.section-heading__title),
+.section[data-variant="adu"] .intro :global(.section-heading__title) {
+  font-size: 32px;
+}
+
+@media (max-width: 1024px) {
+  .layout {
+    grid-template-columns: 1fr;
+    gap: var(--dmv-space-8);
+  }
+
+  .intro {
+    max-width: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .section[data-variant="kitchen"] .intro :global(.section-heading__title),
+  .section[data-variant="adu"] .intro :global(.section-heading__title) {
+    font-size: 28px;
+  }
+
+  .summary {
+    min-height: 68px;
+    padding-block: 18px;
+  }
+
+  .answer {
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 560px) {
+  .section[data-variant="kitchen"] .intro :global(.section-heading__title),
+  .section[data-variant="adu"] .intro :global(.section-heading__title) {
+    font-size: 24px;
+  }
+
+  .summary {
+    gap: var(--dmv-space-4);
+    font-size: 15px;
+  }
+
+  .icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .callBox {
+    gap: var(--dmv-space-4);
+  }
+
+  .phone {
+    font-size: 17px;
+  }
+
+  .answer {
+    font-size: 15px;
+  }
+}

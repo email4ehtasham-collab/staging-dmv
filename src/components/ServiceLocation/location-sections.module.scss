@@ -1,0 +1,354 @@
+.section {
+  padding-block: var(--dmv-section-padding);
+  background: var(--dmv-color-surface);
+}
+
+.sectionSoft {
+  border-block: var(--dmv-border-width) solid var(--dmv-color-border-card);
+  background: var(--dmv-color-surface-soft);
+}
+
+.header {
+  max-width: 900px;
+  margin-inline: auto;
+}
+
+.overviewGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(360px, 0.92fr);
+  align-items: start;
+  gap: clamp(40px, 6vw, 80px);
+  margin-top: var(--dmv-space-12);
+}
+
+.copy > p {
+  color: var(--dmv-color-body);
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+.copy > p + p {
+  margin-top: var(--dmv-space-4);
+}
+
+.itemsTitle {
+  margin-top: var(--dmv-space-8);
+  color: var(--dmv-color-heading);
+  font-size: var(--dmv-font-size-xl);
+  font-weight: var(--dmv-weight-bold);
+  line-height: var(--dmv-line-snug);
+}
+
+.serviceList {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: var(--dmv-space-5);
+}
+
+.serviceItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  min-height: 58px;
+  padding: 12px 14px;
+  border: var(--dmv-border-width) solid var(--dmv-color-border-card);
+  border-radius: var(--dmv-radius-md);
+  background: var(--dmv-color-surface);
+}
+
+.serviceItem strong {
+  display: block;
+  color: var(--dmv-color-heading);
+  font-size: 14px;
+  font-weight: var(--dmv-weight-semibold);
+  line-height: 1.4;
+}
+
+.serviceItem span:not(.serviceCheck) {
+  display: block;
+  margin-top: 2px;
+  color: var(--dmv-color-muted);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.serviceCheck {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  flex: none;
+  color: var(--dmv-color-brand);
+}
+
+.serviceCheck svg {
+  width: 18px;
+  height: 18px;
+}
+
+.note {
+  margin-top: var(--dmv-space-6);
+  padding: var(--dmv-space-5);
+  border-left: 3px solid var(--dmv-color-brand);
+  border-radius: 0 var(--dmv-radius-md) var(--dmv-radius-md) 0;
+  background: var(--dmv-color-brand-wash);
+  color: var(--dmv-color-heading);
+  font-size: 14px;
+  font-weight: var(--dmv-weight-medium);
+  line-height: 1.7;
+}
+
+.mediaCard {
+  overflow: hidden;
+  border: var(--dmv-border-width) solid var(--dmv-color-border-card);
+  border-radius: var(--dmv-radius-xl);
+  background: var(--dmv-color-surface);
+  box-shadow: var(--dmv-shadow-soft);
+}
+
+.imageWrap {
+  position: relative;
+  height: 380px;
+  background: var(--dmv-color-surface-soft);
+}
+
+.image {
+  object-fit: cover;
+}
+
+.mediaBody {
+  padding: var(--dmv-space-6);
+}
+
+.mediaBadge {
+  display: inline-flex;
+  padding: 5px 10px;
+  border-radius: var(--dmv-radius-pill);
+  background: var(--dmv-color-brand-wash);
+  color: var(--dmv-color-brand);
+  font-size: 11px;
+  font-weight: var(--dmv-weight-bold);
+  letter-spacing: var(--dmv-tracking-wide);
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.mediaCaption {
+  margin-top: var(--dmv-space-3);
+  color: var(--dmv-color-body);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.mediaFacts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  overflow: hidden;
+  margin-top: var(--dmv-space-5);
+  border: var(--dmv-border-width) solid var(--dmv-color-border-card);
+  border-radius: var(--dmv-radius-md);
+  background: var(--dmv-color-border-card);
+}
+
+.mediaFacts > div {
+  padding: var(--dmv-space-4);
+  background: var(--dmv-color-surface-soft);
+}
+
+.mediaFacts dt {
+  color: var(--dmv-color-muted);
+  font-size: 11px;
+  font-weight: var(--dmv-weight-semibold);
+  letter-spacing: var(--dmv-tracking-wide);
+  line-height: 1.3;
+  text-transform: uppercase;
+}
+
+.mediaFacts dd {
+  margin-top: 3px;
+  color: var(--dmv-color-heading);
+  font-size: 15px;
+  font-weight: var(--dmv-weight-bold);
+  line-height: 1.4;
+}
+
+.costGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--dmv-space-5);
+  margin-top: var(--dmv-space-12);
+}
+
+.costFeatured {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--dmv-space-6);
+  margin-top: var(--dmv-space-8);
+  padding: var(--dmv-space-5) var(--dmv-space-7);
+  border-radius: var(--dmv-radius-lg);
+  background: var(--dmv-color-brand);
+  color: var(--dmv-color-inverse);
+}
+
+.costFeatured strong {
+  font-size: var(--dmv-font-size-2xl);
+  font-weight: var(--dmv-weight-extrabold);
+  line-height: var(--dmv-line-tight);
+}
+
+.costFeatured span {
+  font-size: 11px;
+  font-weight: var(--dmv-weight-bold);
+  letter-spacing: var(--dmv-tracking-wide);
+  line-height: 1.3;
+  text-align: right;
+  text-transform: uppercase;
+}
+
+.costCard {
+  position: relative;
+  padding: var(--dmv-space-7);
+  border: var(--dmv-border-width) solid var(--dmv-color-border-card);
+  border-radius: var(--dmv-radius-lg);
+  background: var(--dmv-color-surface);
+  box-shadow: var(--dmv-shadow-soft);
+}
+
+.costBadge {
+  position: absolute;
+  top: var(--dmv-space-4);
+  right: var(--dmv-space-4);
+  padding: 5px var(--dmv-space-3);
+  border-radius: var(--dmv-radius-pill);
+  background: var(--dmv-color-brand-soft, rgba(196, 30, 58, 0.1));
+  color: var(--dmv-color-brand);
+  font-size: 10px;
+  font-weight: var(--dmv-weight-bold);
+  letter-spacing: var(--dmv-tracking-wide);
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.costLevel {
+  color: var(--dmv-color-brand);
+  font-size: 11px;
+  font-weight: var(--dmv-weight-bold);
+  letter-spacing: var(--dmv-tracking-wide);
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.costTitle {
+  margin-top: var(--dmv-space-2);
+  color: var(--dmv-color-heading);
+  font-size: var(--dmv-font-size-lg);
+  font-weight: var(--dmv-weight-bold);
+  line-height: var(--dmv-line-snug);
+}
+
+.costRange {
+  display: block;
+  margin-top: var(--dmv-space-3);
+  color: var(--dmv-color-heading);
+  font-size: var(--dmv-font-size-2xl);
+  font-weight: var(--dmv-weight-extrabold);
+  line-height: var(--dmv-line-tight);
+}
+
+.costText {
+  margin-top: var(--dmv-space-3);
+  color: var(--dmv-color-body);
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.costFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--dmv-space-8);
+  margin-top: var(--dmv-space-8);
+  padding: var(--dmv-space-6) var(--dmv-space-8);
+  border: var(--dmv-border-width) solid var(--dmv-color-border-card);
+  border-radius: var(--dmv-radius-lg);
+  background: var(--dmv-color-surface);
+}
+
+.costFooter p {
+  max-width: 760px;
+  color: var(--dmv-color-body);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+@media (max-width: 1100px) {
+  .overviewGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .mediaCard {
+    max-width: 680px;
+  }
+
+  .imageWrap {
+    height: 360px;
+  }
+
+  .costGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .serviceList,
+  .costGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .costFooter {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: var(--dmv-space-5);
+    padding: var(--dmv-space-5);
+  }
+
+  .costFeatured {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: var(--dmv-space-2);
+  }
+
+  .costFeatured span {
+    text-align: left;
+  }
+}
+
+@media (max-width: 560px) {
+  .itemsTitle {
+    font-size: var(--dmv-font-size-lg);
+  }
+
+  .imageWrap {
+    height: 250px;
+  }
+
+  .mediaBody {
+    padding: var(--dmv-space-5);
+  }
+
+  .mediaFacts {
+    grid-template-columns: 1fr;
+  }
+
+  .costCard {
+    padding: var(--dmv-space-5);
+  }
+
+  .costRange {
+    font-size: var(--dmv-font-size-xl);
+  }
+}

@@ -1,0 +1,109 @@
+.section {
+  padding-block: 66px 62px;
+  background: var(--dmv-color-brand);
+  color: var(--dmv-color-inverse);
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 48px;
+}
+
+.heading {
+  max-width: 660px;
+}
+
+.inner .badge {
+  min-height: 22px;
+  padding-inline: 13px;
+  border-color: transparent;
+  background: rgba(255, 255, 255, 0.2);
+  color: var(--dmv-color-inverse);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+}
+
+.heading :global(.section-heading__title) {
+  margin-top: 16px;
+  color: var(--dmv-color-inverse);
+  line-height: 1.25;
+}
+
+.heading :global(.section-heading__text) {
+  max-width: 640px;
+  margin-top: 12px;
+  margin-bottom: 0;
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 17px;
+  line-height: 1.45;
+}
+
+.actions {
+  display: flex;
+  flex: none;
+  gap: 16px;
+}
+
+.actions .estimateButton,
+.actions .phoneButton {
+  min-height: 60px;
+}
+
+.actions .estimateButton {
+  min-width: 203px;
+  background: var(--dmv-color-accent);
+  color: var(--dmv-color-heading);
+}
+
+.actions .estimateButton:hover {
+  background: var(--dmv-color-accent);
+  color: var(--dmv-color-heading);
+}
+
+.actions .phoneButton {
+  min-width: 212px;
+  border-color: var(--dmv-color-heading);
+  background: var(--dmv-color-heading);
+}
+
+.actions .phoneButton:hover {
+  border-color: var(--dmv-color-heading);
+  background: var(--dmv-color-heading);
+}
+
+@media (max-width: 1024px) {
+  .inner {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .heading {
+    max-width: 720px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding-block: 56px;
+  }
+}
+
+@media (max-width: 560px) {
+  .section {
+    padding-block: var(--dmv-space-12);
+  }
+
+  .actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .actions .estimateButton,
+  .actions .phoneButton {
+    width: 100%;
+    min-width: 0;
+  }
+}

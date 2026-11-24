@@ -1,0 +1,163 @@
+.featured-projects-section {
+	position: relative;
+	@media (min-width: 1024px) {
+		.animated-primary-button {
+			right: -18px;
+		}
+	}
+}
+
+.featured-content-wrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+
+	@media (min-width: 992px) {
+		display: grid;
+		grid-template-columns: 180px 1fr;
+		align-items: stretch; // Makes columns equal height
+	}
+}
+
+.slider-column {
+	min-width: 0;
+	border-radius: 15px;
+	overflow: hidden;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+	background: #fff;
+	position: relative;
+
+	@media (min-width: 992px) {
+		grid-column: 2;
+		grid-row: 1;
+	}
+
+	:global(.home-before-after-holder) {
+		width: 100%;
+		display: block;
+	}
+}
+
+.thumbnails-column {
+	display: flex;
+	flex-direction: row;
+	gap: 15px;
+	overflow-x: auto;
+	overflow-y: hidden;
+	padding-bottom: 10px;
+	scrollbar-width: thin;
+	scrollbar-color: var(--primary-color) transparent;
+
+	@media (min-width: 992px) {
+		flex-direction: column;
+		overflow-x: hidden;
+		overflow-y: auto;
+		padding-bottom: 0;
+		padding-right: 10px;
+		
+		// Crucial: This ensures the column doesn't push the grid height,
+		// but instead fills the height provided by the sibling (Slider).
+		height: 0;
+		min-height: 100%;
+		
+		grid-column: 1;
+		grid-row: 1;
+	}
+
+	&::-webkit-scrollbar {
+		width: 5px;
+		height: 5px;
+	}
+	&::-webkit-scrollbar-button {
+		display: none;
+	}
+	&::-webkit-scrollbar-track {
+		background: #f1f1f1;
+		border-radius: 10px;
+	}
+	&::-webkit-scrollbar-thumb {
+		background: var(--primary-color);
+		border-radius: 10px;
+		&:hover {
+			background: #1e5a8a;
+		}
+	}
+}
+
+.thumbnail-item {
+	cursor: pointer;
+	border: 3px solid #eee;
+	border-radius: 12px;
+	overflow: hidden;
+	transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+	width: 120px;
+	height: 80px;
+	flex-shrink: 0;
+	position: relative;
+	display: block;
+
+	@media (min-width: 992px) {
+		width: 100%;
+		height: 110px;
+		margin-bottom: 12px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	// &.active {
+	// 	border-color: var(--primary-color);
+	// 	transform: scale(1.02);
+	// 	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+
+	// 	@media (min-width: 992px) {
+	// 		transform: translateX(5px);
+	// 	}
+	// }
+
+	// &:hover:not(.active) {
+	// 	border-color: rgba(41, 115, 176, 0.3);
+	// 	transform: translateY(-2px);
+	// 	@media (min-width: 992px) {
+	// 		transform: translateX(3px);
+	// 	}
+	// }
+}
+
+.thumbnail-image-wrapper {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+.thumbnail-overlay {
+	position: absolute;
+	inset: 0;
+	background: rgba(0, 0, 0, 0.2);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	opacity: 0;
+	transition: opacity 0.3s ease;
+	color: white;
+	font-weight: 600;
+	font-size: 0.75rem;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+
+	span {
+		background: var(--primary-color);
+		padding: 4px 12px;
+		border-radius: 20px;
+		transform: translateY(10px);
+		transition: transform 0.3s ease;
+	}
+}
+
+.thumbnail-item:hover .thumbnail-overlay,
+.thumbnail-item.active .thumbnail-overlay {
+	opacity: 1;
+	span {
+		transform: translateY(0);
+	}
+}

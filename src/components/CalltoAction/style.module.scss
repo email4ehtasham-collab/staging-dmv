@@ -1,0 +1,17 @@
+.call-to-action {
+	background-color: var(--primary-color);
+	color: white;
+	border-bottom: 1px solid #ccc; 
+	margin-bottom: 70px;
+
+	.data-holder{
+		display: grid; grid-template-columns: 3fr 2fr; grid-gap: 20px; align-items: center;
+	
+		.image-holder{
+			position: relative; height: 200px; overflow: initial; 
+
+			img{position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); max-width: 100%; height: auto;}
+		}
+	}
+
+}

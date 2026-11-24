@@ -1,0 +1,301 @@
+.section {
+  padding-block: var(--dmv-section-padding);
+  background: var(--dmv-color-surface-soft);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: stretch;
+  gap: clamp(24px, 3vw, 36px);
+}
+
+.projectCard {
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: space-between;
+  border: var(--dmv-border-width) solid var(--dmv-color-border-card);
+  border-radius: var(--dmv-radius-xl);
+  background: var(--dmv-color-surface);
+  box-shadow: var(--dmv-shadow-soft);
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.projectCard:hover {
+  border-color: var(--dmv-color-brand-wash-strong);
+  box-shadow: var(--dmv-shadow-card);
+  transform: translateY(-3px);
+}
+
+.media {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+  background: var(--dmv-color-surface-soft);
+}
+
+.image {
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.projectCard:hover .image {
+  transform: scale(1.04);
+}
+
+.location {
+  position: absolute;
+  top: var(--dmv-space-4);
+  left: var(--dmv-space-4);
+  padding: 6px var(--dmv-space-3);
+  border-radius: var(--dmv-radius-sm);
+  background: rgba(15, 23, 42, 0.84);
+  color: var(--dmv-color-inverse);
+  font-size: 12px;
+  font-weight: var(--dmv-weight-bold);
+  letter-spacing: 0.06em;
+  line-height: 1.3;
+  text-transform: uppercase;
+  backdrop-filter: blur(8px);
+}
+
+.projectBody {
+  padding: var(--dmv-space-8);
+}
+
+.badgeWrap {
+  margin-bottom: var(--dmv-space-3);
+}
+
+.cardBadge {
+  font-size: 12px;
+}
+
+.projectTitle {
+  color: var(--dmv-color-heading);
+  font-size: var(--dmv-font-size-2xl);
+  font-weight: var(--dmv-weight-extrabold);
+  line-height: var(--dmv-line-snug);
+}
+
+.projectText {
+  margin-top: var(--dmv-space-3);
+  color: var(--dmv-color-body);
+  font-size: var(--dmv-font-size-sm);
+  line-height: var(--dmv-line-relaxed);
+}
+
+.projectFooter {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--dmv-space-4);
+  padding: var(--dmv-space-5) var(--dmv-space-8) var(--dmv-space-8);
+  border-top: var(--dmv-border-width) solid var(--dmv-color-line-soft);
+}
+
+.primaryLink,
+.secondaryLink {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--dmv-space-2);
+  font-size: 14px;
+  font-weight: var(--dmv-weight-bold);
+  line-height: 1.4;
+  text-decoration: none;
+  transition: color 0.2s ease, gap 0.2s ease;
+}
+
+.primaryLink {
+  color: var(--dmv-color-brand);
+}
+
+.secondaryLink {
+  color: var(--dmv-color-muted);
+}
+
+.primaryLink svg,
+.secondaryLink svg {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+}
+
+.primaryLink:hover,
+.secondaryLink:hover {
+  gap: var(--dmv-space-3);
+}
+
+.primaryLink:hover {
+  color: var(--dmv-color-brand-dark);
+}
+
+.secondaryLink:hover {
+  color: var(--dmv-color-heading);
+}
+
+.reviewsCard {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: var(--dmv-space-10);
+  border: var(--dmv-border-width) solid var(--dmv-color-heading);
+  border-radius: var(--dmv-radius-xl);
+  background: linear-gradient(135deg, var(--dmv-color-dark-blue), var(--dmv-color-heading));
+  color: var(--dmv-color-inverse);
+  box-shadow: var(--dmv-shadow-card);
+}
+
+.reviewsCard::after {
+  position: absolute;
+  right: -80px;
+  bottom: -80px;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  background: rgba(41, 115, 176, 0.16);
+  content: "";
+  filter: blur(36px);
+  pointer-events: none;
+}
+
+.reviewsTitle {
+  margin-top: var(--dmv-space-2);
+  color: var(--dmv-color-inverse);
+  font-size: 30px;
+  font-weight: var(--dmv-weight-extrabold);
+  line-height: var(--dmv-line-snug);
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: var(--dmv-space-5);
+  margin-block: var(--dmv-space-6);
+}
+
+.score {
+  color: var(--dmv-color-accent);
+  font-size: 52px;
+  font-weight: var(--dmv-weight-extrabold);
+  line-height: 1;
+}
+
+.stars {
+  display: flex;
+  gap: 4px;
+  color: var(--dmv-color-accent);
+}
+
+.stars svg {
+  width: 17px;
+  height: 17px;
+}
+
+.ratingLabel {
+  display: block;
+  margin-top: 4px;
+  color: var(--dmv-color-inverse-soft);
+  font-size: 12px;
+  font-weight: var(--dmv-weight-medium);
+  line-height: 1.4;
+}
+
+.reviewsText {
+  max-width: 620px;
+  color: var(--dmv-color-inverse-soft);
+  font-size: var(--dmv-font-size-sm);
+  line-height: var(--dmv-line-relaxed);
+}
+
+.inlineLink {
+  color: var(--dmv-color-accent);
+  font-weight: var(--dmv-weight-semibold);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.2s ease;
+}
+
+.inlineLink:hover {
+  color: var(--dmv-color-inverse);
+}
+
+.reviewsFooter {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--dmv-space-4);
+  margin-top: var(--dmv-space-8);
+  padding-top: var(--dmv-space-6);
+  border-top: var(--dmv-border-width) solid rgba(255, 255, 255, 0.16);
+}
+
+.secondaryButton {
+  border-color: rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--dmv-color-inverse);
+}
+
+.secondaryButton:hover {
+  border-color: rgba(255, 255, 255, 0.26);
+  background: rgba(255, 255, 255, 0.2);
+  color: var(--dmv-color-inverse);
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .media {
+    height: 320px;
+  }
+}
+
+@media (max-width: 768px) {
+  .reviewsCard {
+    padding: var(--dmv-space-8);
+  }
+
+  .projectBody {
+    padding: var(--dmv-space-6);
+  }
+
+  .projectFooter {
+    padding-inline: var(--dmv-space-6);
+    padding-bottom: var(--dmv-space-6);
+  }
+}
+
+@media (max-width: 560px) {
+  .media {
+    height: 240px;
+  }
+
+  .projectTitle,
+  .reviewsTitle {
+    font-size: var(--dmv-font-size-xl);
+  }
+
+  .reviewsCard {
+    padding: var(--dmv-space-6);
+  }
+
+  .score {
+    font-size: 42px;
+  }
+
+  .reviewsFooter {
+    flex-direction: column;
+  }
+
+  .reviewsFooter :global(a) {
+    width: 100%;
+    white-space: normal;
+  }
+}

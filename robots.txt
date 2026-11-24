@@ -1,0 +1,25 @@
+# ================================================
+# DMV-GC GROUP — robots.txt
+# Website: https://www.dmv-gc.com
+# Updated: 2026-05-04
+# ================================================
+
+# Allow all search engine crawlers
+User-agent: *
+Allow: /
+
+# Block admin and private areas (add more if needed)
+Disallow: /admin/
+Disallow: /admin
+Disallow: /wp-admin/
+Disallow: /wp-admin
+Disallow: /_next/static/
+Disallow: /api/
+Disallow: /api
+
+# Block duplicate/utility pages from indexing
+Disallow: /404
+Disallow: /500
+
+# ─── SITEMAP ────────────────────────────────────
+Sitemap: https://www.dmv-gc.com/sitemap.xml

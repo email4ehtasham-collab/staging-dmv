@@ -1,0 +1,84 @@
+.trust-bar {
+    padding: 40px;
+    position: relative;
+
+    .items-holder {
+        --grid-item-width: 4;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 20px;
+    }
+
+    @media (max-width: 1024px) {
+        padding: 20px;
+        margin-top: 0;
+    }
+
+    @media (max-width: 992px) {
+        .items-holder {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (max-width: 600px) {
+        .items-holder {
+            grid-template-columns: 1fr;
+        }
+    }
+}
+
+.trust-bar-card {
+    min-width: 200px;
+    
+    a {
+        min-height: 200px;
+        display: grid;
+        background: #fbfbfb;
+        border: 1px solid #B1B1B1;
+        border-radius: 10px;
+        position: relative;
+        align-content: center;
+        gap: 15px;
+        padding: 10px;
+        justify-content: center;
+        text-align: center;
+        text-decoration: none;
+        transition: 0.2s all;
+
+        .image-holder {
+            color: var(--primary-color);
+        }
+
+        .title {
+            color: var(--content-color);
+            font-weight: 700;
+            font-size: 20px;
+        }
+
+        &:hover .title {
+            color: var(--primary-color);
+        }
+
+        .arrow-holder {
+            position: absolute;
+            right: 15px;
+            top: 15px;
+        }
+
+        &:hover {
+            scale: 1.05;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+    }
+
+    .image-holder {
+        --size: 80px;
+        border: 2px solid var(--primary-color);
+        width: var(--size);
+        margin: auto;
+        padding: 13px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+
+        img{height: 100%; width: 100%;}
+    }
+}
