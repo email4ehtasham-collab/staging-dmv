@@ -261,7 +261,7 @@ export default function Estimate({ variant = "home" }: { variant?: EstimateVaria
             {isServices ? (
               <p className={styles.contactIntro}>
                 Use the online form to ask for a free estimate, or dial{" "}
-                <a href="tel:+12407301292">(240) 730-1292</a>; the line is staffed daily.
+                <a href="tel:+12407301292">+1 240-730-1292</a>; the line is staffed daily.
               </p>
             ) : isBethesdaAddition ? (
               <p className={styles.contactIntro}>
@@ -271,44 +271,44 @@ export default function Estimate({ variant = "home" }: { variant?: EstimateVaria
               </p>
             ) : isAddition ? (
               <p className={styles.contactIntro}>
-                A free addition estimate is one form or one call away: (240) 730-1292, answered every day.
+                A free addition estimate is one form or one call away: +1 240-730-1292, answered every day.
               </p>
             ) : isAdu ? (
               <p className={styles.contactIntro}>
                 Book a free ADU feasibility check online, or call{" "}
-                <a href="tel:+12407301292">(240) 730-1292</a> on any day.
+                <a href="tel:+12407301292">+1 240-730-1292</a> on any day.
               </p>
             ) : isBethesdaBasement ? (
               <p className={styles.contactIntro}>
                 Any of three routes gets you a free basement assessment: the phone at{" "}
-                <a href="tel:+12407301292">(240) 730-1292</a>, which we pick up daily, a note to{" "}
+                <a href="tel:+12407301292">+1 240-730-1292</a>, which we pick up daily, a note to{" "}
                 <a href="mailto:support@dmv-gc.com">support@dmv-gc.com</a>, or the site form.
               </p>
             ) : isBasement ? (
               <p className={styles.contactIntro}>
                 Schedule your free basement estimate online, or phone{" "}
-                <a href="tel:+12407301292">(240) 730-1292</a> any day of the week.
+                <a href="tel:+12407301292">+1 240-730-1292</a> any day of the week.
               </p>
             ) : isBethesdaKitchen ? (
               <p className={styles.contactIntro}>
                 To set up the free in-home consultation, use the contact form or phone{" "}
-                <a href="tel:+12407301292">(240) 730-1292</a>.
+                <a href="tel:+12407301292">+1 240-730-1292</a>.
               </p>
             ) : isBethesdaBathroom ? (
               <p className={styles.contactIntro}>
                 To set up your free bathroom estimate, ring{" "}
-                <a href="tel:+12407301292">(240) 730-1292</a> any day, write to{" "}
+                <a href="tel:+12407301292">+1 240-730-1292</a> any day, write to{" "}
                 <a href="mailto:support@dmv-gc.com">support@dmv-gc.com</a>, or send the short form on our site.
               </p>
             ) : isBathroom ? (
               <p className={styles.contactIntro}>
                 Fill in our short form to get a free bathroom estimate scheduled, or ring{" "}
-                <a href="tel:+12407301292">(240) 730-1292</a> seven days a week.
+                <a href="tel:+12407301292">+1 240-730-1292</a> seven days a week.
               </p>
             ) : isKitchen ? (
               <p className={styles.contactIntro}>
                 Use our form to book a free kitchen estimate, or dial{" "}
-                <a href="tel:+12407301292">(240) 730-1292</a> seven days a week.
+                <a href="tel:+12407301292">+1 240-730-1292</a> seven days a week.
               </p>
             ) : (
               <p className={styles.contactIntro}>
@@ -337,7 +337,7 @@ export default function Estimate({ variant = "home" }: { variant?: EstimateVaria
                 <p className={styles.contactLine}>
                   <PhoneIcon />
                   <span>
-                    <a href="tel:+12407301292">(240) 730-1292</a>
+                    <a href="tel:+12407301292">+1 240-730-1292</a>
                     <span className={styles.contactDot}>•</span>
                     <a href="mailto:support@dmv-gc.com">support@dmv-gc.com</a>
                   </span>
@@ -351,7 +351,7 @@ export default function Estimate({ variant = "home" }: { variant?: EstimateVaria
               <div className={styles.contact}>
                 <a href="tel:+12407301292">
                   <PhoneIcon />
-                  <span>(240) 730-1292</span>
+                  <span>+1 240-730-1292</span>
                 </a>
                 <a href="mailto:support@dmv-gc.com">
                   <MailIcon />

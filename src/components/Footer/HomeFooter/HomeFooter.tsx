@@ -105,7 +105,7 @@ export default function HomeFooter() {
             <div className={styles.contactText}>
               <p className={styles.contactLabel}>Head office</p>
               <address className={`${styles.contactValue} ${styles.address}`}>
-                11810 Grand Park Ave, Suite 500, North Bethesda, MD 20852
+                11810 Grand Park Ave #500, North Bethesda, MD 20852
               </address>
             </div>
           </div>
@@ -117,7 +117,7 @@ export default function HomeFooter() {
             <div className={styles.contactText}>
               <p className={styles.contactLabel}>Direct phone</p>
               <a className={styles.contactValue} href="tel:+12407301292">
-                (240) 730-1292
+                +1 240-730-1292
               </a>
             </div>
           </div>

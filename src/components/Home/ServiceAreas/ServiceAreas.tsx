@@ -59,7 +59,7 @@ export default function ServiceAreas() {
               </p>
               <div className={styles.company}>
                 <span>DMV General Contracting Group LLC</span>
-                <span><strong>Phone: </strong><a href="tel:+12407301292">(240) 730-1292</a></span>
+                <span><strong>Phone: </strong><a href="tel:+12407301292">+1 240-730-1292</a></span>
                 <span><strong>Email: </strong><a href="mailto:support@dmv-gc.com">support@dmv-gc.com</a></span>
                 <address>11810 Grand Park Ave, Suite 500 North Bethesda, MD 20852</address>
                 <span>Open 7 days a week</span>

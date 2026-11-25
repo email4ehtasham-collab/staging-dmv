@@ -45,7 +45,7 @@ export default function InHomeConsultation({
           <div className={styles.actions}>
             <a className={styles.phoneButton} href="tel:+12407301292">
               <PhoneIcon />
-              <span>(240) 730-1292</span>
+              <span>+1 240-730-1292</span>
             </a>
             <Link className={styles.estimateButton} href="/contact-us" data-estimate-trigger>
               <span>{ctaLabel}</span>

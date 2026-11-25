@@ -46,7 +46,7 @@ export default function HeroBanner() {
               Get Free Estimate
             </Button>
             <Button href="tel:+12407301292" variant="secondary" icon={<PhoneIcon />} iconPosition="left">
-              (240) 730-1292
+              +1 240-730-1292
             </Button>
           </div>
           <p className={styles.note}>

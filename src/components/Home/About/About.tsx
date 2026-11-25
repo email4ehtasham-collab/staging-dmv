@@ -61,7 +61,7 @@ export default function About() {
               We keep architecture, engineering, permitting, electrical, plumbing and HVAC in-house, so the people who design your project are the same team that builds it. We are licensed by the Maryland Home Improvement Commission <span className={styles.inlineLink}> (MHIC #156178) </span> and the DC Department of Licensing and Consumer Protection <span className={styles.inlineLink}> (DLCP #410526000209), </span> and we carry general liability insurance.
             </p>
             <p>
-              Homeowners rate us 4.9 out of 5 on Google. Every project comes with a 1-year warranty, and you can call us 7 days a week at <a href="tel:+12407301292" className={styles.inlineLink}>(240) 730-1292</a>.
+              Homeowners rate us 4.9 out of 5 on Google. Every project comes with a 1-year warranty, and you can call us 7 days a week at <a href="tel:+12407301292" className={styles.inlineLink}>+1 240-730-1292</a>.
             </p>
           </div>
 

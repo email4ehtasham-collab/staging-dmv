@@ -47,7 +47,7 @@ export default function ADUBethesdaMD() {
               <span className="badge">MHIC #156178</span>
               <span className="badge">DC DLCP #410526000209</span>
               <span className="badge">4.9 out of 5 on Google</span>
-              <span className="badge dark">Call (240) 730-1292</span>
+              <span className="badge dark">Call +1 240-730-1292</span>
             </div>
           </div>
 
@@ -100,7 +100,7 @@ export default function ADUBethesdaMD() {
           ))}
 
           <h2>Request a Free ADU Feasibility Check</h2>
-          <p>Book a free ADU feasibility check, or call <a href="tel:+12407301292">(240) 730-1292</a> any day. See the full <Link href="/service/adu">ADU builder guide</Link> for Maryland and Washington, DC.</p>
+          <p>Book a free ADU feasibility check, or call <a href="tel:+12407301292">+1 240-730-1292</a> any day. See the full <Link href="/service/adu">ADU builder guide</Link> for Maryland and Washington, DC.</p>
         </div>
       </div>
     </main>

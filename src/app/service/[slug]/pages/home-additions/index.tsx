@@ -435,7 +435,7 @@ export default function HomeAdditions({ data }: { data?: AdditionService }) {
                                     Get a free addition estimate
                                 </Button>
                                 <Button href="tel:+12407301292" variant="secondary">
-                                    (240) 730-1292
+                                    +1 240-730-1292
                                 </Button>
                             </div>
 

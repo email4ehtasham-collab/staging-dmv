@@ -145,7 +145,7 @@ export default function ServiceAreaPage({
                   icon={<PhoneIcon />}
                   iconPosition="left"
                 >
-                  (240) 730-1292
+                  +1 240-730-1292
                 </Button>
               </div>
             </div>
