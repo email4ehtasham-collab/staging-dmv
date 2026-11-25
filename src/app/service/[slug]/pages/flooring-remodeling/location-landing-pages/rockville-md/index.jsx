@@ -11,16 +11,17 @@ const schemaJsonLd = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "LocalBusiness",
+      "@type": "GeneralContractor",
       "@id": "https://www.dmv-gc.com/#business",
-      "name": "DMV-GC Group",
-      "alternateName": "DMV General Contracting Group LLC",
+      "name": "DMV General Contracting Group LLC",
+      "legalName": "DMV General Contracting Group LLC",
+      "alternateName": ["DMV General Contracting Group", "DMV-GC"],
       "url": "https://www.dmv-gc.com",
-      "telephone": "+12407301292",
+      "telephone": "+1-240-730-1292",
       "email": "support@dmv-gc.com",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "11810 Grand Park Ave, Suite 500",
+        "streetAddress": "11810 Grand Park Ave #500",
         "addressLocality": "North Bethesda",
         "addressRegion": "MD",
         "postalCode": "20852",
@@ -41,12 +42,6 @@ const schemaJsonLd = {
           "name": "DLCP License #410526000209"
         }
       ],
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": "97",
-        "bestRating": "5"
-      },
       "priceRange": "$$$"
     },
     {
@@ -110,7 +105,7 @@ const schemaJsonLd = {
           "name": "How much does flooring installation cost in Rockville, MD?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Flooring installation in Rockville, MD typically costs $3–$18 per square foot installed depending on material and neighborhood. Hardwood refinishing for Twinbrook and older Rockville colonials costs $3–$6 per square foot. Wide-plank white oak installation for King Farm and Fallsgrove runs $10–$18 per square foot. Standard hardwood installation costs $8–$15 per square foot. LVP for split-level lower levels and kitchens runs $5–$10 per square foot. Porcelain tile costs $8–$18 per square foot. A typical King Farm or Fallsgrove whole-home flooring project runs $14,000–$30,000. DMV-GC Group provides free, detailed in-home estimates for all Rockville neighborhoods."
+            "text": "Flooring installation in Rockville, MD typically costs $3–$18 per square foot installed depending on material and neighborhood. Hardwood refinishing for Twinbrook and older Rockville colonials costs $3–$6 per square foot. Wide-plank white oak installation for King Farm and Fallsgrove runs $10–$18 per square foot. Standard hardwood installation costs $8–$15 per square foot. LVP for split-level lower levels and kitchens runs $5–$10 per square foot. Porcelain tile costs $8–$18 per square foot. A typical King Farm or Fallsgrove whole-home flooring project runs $14,000–$30,000. DMV General Contracting Group provides free, detailed in-home estimates for all Rockville neighborhoods."
           }
         },
         {
@@ -126,23 +121,23 @@ const schemaJsonLd = {
           "name": "Can the original hardwood floors in Twinbrook colonials be refinished?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Often yes. Twinbrook's 1950s–60s colonials and split-levels frequently have original 2.25-inch or 3-inch strip hardwood that has survived under carpet and retains sufficient thickness for refinishing. DMV-GC Group checks remaining wood thickness before recommending refinishing. When viable, refinishing restores the original floor at $3–$6 per square foot versus $8–$15 for new hardwood replacement. For Twinbrook's split-level homes, the two-zone strategy applies: above-grade floors are candidates for refinishing or new hardwood; lower-level below-grade floors require LVP regardless of original floor condition."
+            "text": "Often yes. Twinbrook's 1950s–60s colonials and split-levels frequently have original 2.25-inch or 3-inch strip hardwood that has survived under carpet and retains sufficient thickness for refinishing. DMV General Contracting Group checks remaining wood thickness before recommending refinishing. When viable, refinishing restores the original floor at $3–$6 per square foot versus $8–$15 for new hardwood replacement. For Twinbrook's split-level homes, the two-zone strategy applies: above-grade floors are candidates for refinishing or new hardwood; lower-level below-grade floors require LVP regardless of original floor condition."
           }
         },
         {
           "@type": "Question",
-          "name": "Does DMV-GC Group handle both City of Rockville and Montgomery County flooring projects?",
+          "name": "Does DMV General Contracting Group handle both City of Rockville and Montgomery County flooring projects?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. DMV-GC Group serves all Rockville neighborhoods regardless of whether they fall within the City of Rockville limits or in unincorporated Montgomery County. When flooring is part of a broader renovation scope that requires a building permit, we file with the correct authority — City of Rockville DPS at 111 Maryland Avenue for city-limit properties, or Montgomery County DPS for unincorporated areas. Flooring-only projects typically do not require a building permit in either jurisdiction."
+            "text": "Yes. DMV General Contracting Group serves all Rockville neighborhoods regardless of whether they fall within the City of Rockville limits or in unincorporated Montgomery County. When flooring is part of a broader renovation scope that requires a building permit, we file with the correct authority — City of Rockville DPS at 111 Maryland Avenue for city-limit properties, or Montgomery County DPS for unincorporated areas. Flooring-only projects typically do not require a building permit in either jurisdiction."
           }
         },
         {
           "@type": "Question",
-          "name": "Is DMV-GC Group licensed for flooring installation in Rockville, MD?",
+          "name": "Is DMV General Contracting Group licensed for flooring installation in Rockville, MD?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. DMV-GC Group holds a Maryland MHIC license (#156178) — required for all home improvement work in Rockville across both City and County jurisdictions. We are fully bonded, carry comprehensive general liability insurance and workers' compensation coverage, and provide a 1-year workmanship warranty on every Rockville flooring project."
+            "text": "Yes. DMV General Contracting Group holds a Maryland MHIC license (#156178) — required for all home improvement work in Rockville across both City and County jurisdictions. We are fully bonded, carry comprehensive general liability insurance and workers' compensation coverage, and provide a 1-year workmanship warranty on every Rockville flooring project."
           }
         }
       ]

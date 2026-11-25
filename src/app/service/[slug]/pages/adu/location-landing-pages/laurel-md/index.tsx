@@ -11,19 +11,20 @@ const schemaJsonLd = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "LocalBusiness",
+      "@type": "GeneralContractor",
       "@id": "https://www.dmv-gc.com/#business",
-      "name": "DMV-GC Group",
-      "alternateName": "DMV General Contracting Group LLC",
+      "name": "DMV General Contracting Group LLC",
+      "legalName": "DMV General Contracting Group LLC",
+      "alternateName": ["DMV General Contracting Group", "DMV-GC"],
       "image": "https://www.dmv-gc.com/logo.png",
       "url": "https://www.dmv-gc.com",
-      "telephone": "+12407301292",
+      "telephone": "+1-240-730-1292",
       "email": "support@dmv-gc.com",
       "foundingDate": "2018",
       "description": "Licensed design-build general contractor serving Laurel, MD. Specializing in ADU construction across all three of Laurel's jurisdictions — City of Laurel, Montgomery County, and Prince George's County — with basement ADU conversions, garage conversions, and in-law suite additions for Laurel's diverse housing stock.",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "11810 Grand Park Ave, Suite 500",
+        "streetAddress": "11810 Grand Park Ave #500",
         "addressLocality": "North Bethesda",
         "addressRegion": "MD",
         "postalCode": "20852",
@@ -41,7 +42,6 @@ const schemaJsonLd = {
         { "@type": "EducationalOccupationalCredential", "name": "MHIC License", "credentialCategory": "Maryland Home Improvement Contractor License" },
         { "@type": "EducationalOccupationalCredential", "name": "DLCP License", "credentialCategory": "Washington DC Department of Licensing and Consumer Protection" }
       ],
-      "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "97", "bestRating": "5" },
       "priceRange": "$$"
     },
     {
@@ -76,7 +76,7 @@ const schemaJsonLd = {
           "name": "How much does it cost to build an ADU in Laurel, MD?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "ADU construction in Laurel, MD typically costs between $55,000 and $190,000 depending on ADU type and jurisdiction. A basement ADU conversion runs $58,000–$112,000. A garage conversion ADU costs $55,000–$105,000. An attached in-law suite addition costs $92,000–$190,000. Laurel's accessible price points combined with strong MARC rail and I-95 corridor rental demand make ADU investments here among the strongest in the DMV region. DMV-GC Group provides free in-home consultations with detailed estimates regardless of which jurisdiction your Laurel property falls in."
+            "text": "ADU construction in Laurel, MD typically costs between $55,000 and $190,000 depending on ADU type and jurisdiction. A basement ADU conversion runs $58,000–$112,000. A garage conversion ADU costs $55,000–$105,000. An attached in-law suite addition costs $92,000–$190,000. Laurel's accessible price points combined with strong MARC rail and I-95 corridor rental demand make ADU investments here among the strongest in the DMV region. DMV General Contracting Group provides free in-home consultations with detailed estimates regardless of which jurisdiction your Laurel property falls in."
           }
         },
         {
@@ -84,15 +84,15 @@ const schemaJsonLd = {
           "name": "How many permit jurisdictions does Laurel, MD have for ADU construction?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Laurel has three separate permit jurisdictions — making it the most complex jurisdiction landscape in the DMV-GC Group campaign. The City of Laurel (incorporated municipality) issues permits through its own Department of Public Works at 8103 Sandy Spring Road. Properties in the unincorporated Montgomery County portion of the Laurel area use Montgomery County DPS permits. Properties in the unincorporated Prince George's County portion use Prince George's County DPS permits. The jurisdiction is determined by your property's parcel location — not your mailing address. DMV-GC Group verifies the correct permit authority for every Laurel address before any application is filed."
+            "text": "Laurel has three separate permit jurisdictions — making it the most complex jurisdiction landscape in the DMV General Contracting Group campaign. The City of Laurel (incorporated municipality) issues permits through its own Department of Public Works at 8103 Sandy Spring Road. Properties in the unincorporated Montgomery County portion of the Laurel area use Montgomery County DPS permits. Properties in the unincorporated Prince George's County portion use Prince George's County DPS permits. The jurisdiction is determined by your property's parcel location — not your mailing address. DMV General Contracting Group verifies the correct permit authority for every Laurel address before any application is filed."
           }
         },
         {
           "@type": "Question",
-          "name": "Does DMV-GC Group handle ADU permits in all three Laurel jurisdictions?",
+          "name": "Does DMV General Contracting Group handle ADU permits in all three Laurel jurisdictions?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. DMV-GC Group handles ADU permit applications with all three Laurel-area permit authorities — the City of Laurel, Montgomery County DPS, and Prince George's County DPS. Each jurisdiction has its own application process, plan review staff, and inspection schedule. Our permit team manages all correspondence with whichever authority governs your specific Laurel property from permit application through Certificate of Occupancy issuance."
+            "text": "Yes. DMV General Contracting Group handles ADU permit applications with all three Laurel-area permit authorities — the City of Laurel, Montgomery County DPS, and Prince George's County DPS. Each jurisdiction has its own application process, plan review staff, and inspection schedule. Our permit team manages all correspondence with whichever authority governs your specific Laurel property from permit application through Certificate of Occupancy issuance."
           }
         },
         {
@@ -100,7 +100,7 @@ const schemaJsonLd = {
           "name": "What ADU types work best in Laurel?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The most practical ADU types for Laurel's postwar and mid-century housing stock are basement ADU conversions (most common across all Laurel neighborhoods), garage conversions (where a detached garage exists), and attached in-law suite additions (on lots with sufficient rear yard room). Laurel's split-levels — common in West Laurel and Montpelier — offer the same natural light and ceiling height advantages as split-levels in Silver Spring and Wheaton. Larger lots in Laurel Pines and Montpelier support attached additions in some cases. DMV-GC Group assesses which ADU type is most practical for your specific Laurel property during the free consultation."
+            "text": "The most practical ADU types for Laurel's postwar and mid-century housing stock are basement ADU conversions (most common across all Laurel neighborhoods), garage conversions (where a detached garage exists), and attached in-law suite additions (on lots with sufficient rear yard room). Laurel's split-levels — common in West Laurel and Montpelier — offer the same natural light and ceiling height advantages as split-levels in Silver Spring and Wheaton. Larger lots in Laurel Pines and Montpelier support attached additions in some cases. DMV General Contracting Group assesses which ADU type is most practical for your specific Laurel property during the free consultation."
           }
         },
         {
@@ -113,10 +113,10 @@ const schemaJsonLd = {
         },
         {
           "@type": "Question",
-          "name": "Is DMV-GC Group licensed for ADU construction in Laurel, MD?",
+          "name": "Is DMV General Contracting Group licensed for ADU construction in Laurel, MD?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. DMV-GC Group holds a Maryland MHIC license — required for all home improvement and construction work in Laurel regardless of which jurisdiction (City, MoCo, or PGC) governs the property. We are fully bonded, carry comprehensive general liability insurance and workers' compensation coverage, and provide a 1-year workmanship warranty on every ADU project completed in Laurel."
+            "text": "Yes. DMV General Contracting Group holds a Maryland MHIC license — required for all home improvement and construction work in Laurel regardless of which jurisdiction (City, MoCo, or PGC) governs the property. We are fully bonded, carry comprehensive general liability insurance and workers' compensation coverage, and provide a 1-year workmanship warranty on every ADU project completed in Laurel."
           }
         }
       ]

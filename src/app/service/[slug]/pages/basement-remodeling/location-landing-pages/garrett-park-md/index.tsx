@@ -11,19 +11,20 @@ const schemaJsonLd = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "LocalBusiness",
+      "@type": "GeneralContractor",
       "@id": "https://www.dmv-gc.com/#business",
-      "name": "DMV-GC Group",
-      "alternateName": "DMV General Contracting Group LLC",
+      "name": "DMV General Contracting Group LLC",
+      "legalName": "DMV General Contracting Group LLC",
+      "alternateName": ["DMV General Contracting Group", "DMV-GC"],
       "image": "https://www.dmv-gc.com/logo.png",
       "url": "https://www.dmv-gc.com",
-      "telephone": "+12407301292",
+      "telephone": "+1-240-730-1292",
       "email": "support@dmv-gc.com",
       "foundingDate": "2018",
       "description": "Licensed design-build general contractor serving Garrett Park, MD. Specializing in basement remodeling for Garrett Park's Victorian, Craftsman, and historic homes — with expertise in older foundation systems, low ceiling height navigation, and the Town of Garrett Park permit process.",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "11810 Grand Park Ave, Suite 500",
+        "streetAddress": "11810 Grand Park Ave #500",
         "addressLocality": "North Bethesda",
         "addressRegion": "MD",
         "postalCode": "20852",
@@ -41,7 +42,6 @@ const schemaJsonLd = {
         { "@type": "EducationalOccupationalCredential", "name": "MHIC License", "credentialCategory": "Maryland Home Improvement Contractor License" },
         { "@type": "EducationalOccupationalCredential", "name": "DLCP License", "credentialCategory": "Washington DC Department of Licensing and Consumer Protection" }
       ],
-      "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "97", "bestRating": "5" },
       "priceRange": "$$$"
     },
     {
@@ -75,7 +75,7 @@ const schemaJsonLd = {
           "name": "How much does basement remodeling cost in Garrett Park, MD?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Basement remodeling in Garrett Park, MD typically costs between $22,000 and $115,000 depending on scope and finish level. A standard basement finishing runs $22,000–$50,000. A mid-range basement with bathroom and home office runs $45,000–$80,000. A full renovation with guest suite can reach $80,000–$115,000. Garrett Park's Victorian and Craftsman homes often require additional work addressing older systems — stone or block foundations, lower ceiling heights, galvanized plumbing — which adds 10–20% to comparable projects in newer homes. DMV-GC Group provides free in-home consultations with honest, detailed estimates."
+            "text": "Basement remodeling in Garrett Park, MD typically costs between $22,000 and $115,000 depending on scope and finish level. A standard basement finishing runs $22,000–$50,000. A mid-range basement with bathroom and home office runs $45,000–$80,000. A full renovation with guest suite can reach $80,000–$115,000. Garrett Park's Victorian and Craftsman homes often require additional work addressing older systems — stone or block foundations, lower ceiling heights, galvanized plumbing — which adds 10–20% to comparable projects in newer homes. DMV General Contracting Group provides free in-home consultations with honest, detailed estimates."
           }
         },
         {
@@ -83,15 +83,15 @@ const schemaJsonLd = {
           "name": "Does Garrett Park require its own permits for basement remodeling?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. Garrett Park is an incorporated town with its own municipal government — Town of Garrett Park permits are required for basement remodeling within the town limits, issued through the Town Hall. These are separate from Montgomery County permits. DMV-GC Group's permit team is familiar with the Town of Garrett Park permit process and manages all required applications, plan review, and inspections from start to finish."
+            "text": "Yes. Garrett Park is an incorporated town with its own municipal government — Town of Garrett Park permits are required for basement remodeling within the town limits, issued through the Town Hall. These are separate from Montgomery County permits. DMV General Contracting Group's permit team is familiar with the Town of Garrett Park permit process and manages all required applications, plan review, and inspections from start to finish."
           }
         },
         {
           "@type": "Question",
-          "name": "Can DMV-GC Group finish the basement of a Victorian or Craftsman home in Garrett Park?",
+          "name": "Can DMV General Contracting Group finish the basement of a Victorian or Craftsman home in Garrett Park?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. Garrett Park's older Victorian and Craftsman homes are among the most common projects we see in the area. These homes typically have basements with stone or block foundations, ceiling heights ranging from 6'4\" to 7'2\", and older systems including galvanized plumbing and older electrical. DMV-GC Group assesses all of these conditions honestly during the free in-home consultation and factors them into a realistic scope and budget before any design work begins."
+            "text": "Yes. Garrett Park's older Victorian and Craftsman homes are among the most common projects we see in the area. These homes typically have basements with stone or block foundations, ceiling heights ranging from 6'4\" to 7'2\", and older systems including galvanized plumbing and older electrical. DMV General Contracting Group assesses all of these conditions honestly during the free in-home consultation and factors them into a realistic scope and budget before any design work begins."
           }
         },
         {
@@ -99,7 +99,7 @@ const schemaJsonLd = {
           "name": "How does Garrett Park's historic designation affect basement remodeling?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Garrett Park is listed on the National Register of Historic Places as a historic district. For interior basement renovations — finishing, framing, drywall, flooring — the historic designation typically does not add regulatory requirements beyond standard Town of Garrett Park permits. However, any exterior modification, including egress window installation, may be subject to review for compatibility with the historic character of the town. DMV-GC Group assesses any exterior scope items for historic review requirements during the consultation."
+            "text": "Garrett Park is listed on the National Register of Historic Places as a historic district. For interior basement renovations — finishing, framing, drywall, flooring — the historic designation typically does not add regulatory requirements beyond standard Town of Garrett Park permits. However, any exterior modification, including egress window installation, may be subject to review for compatibility with the historic character of the town. DMV General Contracting Group assesses any exterior scope items for historic review requirements during the consultation."
           }
         },
         {
@@ -107,15 +107,15 @@ const schemaJsonLd = {
           "name": "What ceiling height is needed to finish a Garrett Park basement?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Montgomery County and the Town of Garrett Park require a minimum ceiling height of 7 feet for habitable basement space. Garrett Park's older Victorian and Craftsman homes often have ceiling heights of 6'4\"–7'2\" — some areas may meet the minimum while others don't. DMV-GC Group measures all basement ceiling heights during the consultation and identifies where ductwork rerouting or mechanical adjustments can recover clearance in borderline areas."
+            "text": "Montgomery County and the Town of Garrett Park require a minimum ceiling height of 7 feet for habitable basement space. Garrett Park's older Victorian and Craftsman homes often have ceiling heights of 6'4\"–7'2\" — some areas may meet the minimum while others don't. DMV General Contracting Group measures all basement ceiling heights during the consultation and identifies where ductwork rerouting or mechanical adjustments can recover clearance in borderline areas."
           }
         },
         {
           "@type": "Question",
-          "name": "Is DMV-GC Group licensed for basement remodeling in Garrett Park, MD?",
+          "name": "Is DMV General Contracting Group licensed for basement remodeling in Garrett Park, MD?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. DMV-GC Group holds a Maryland MHIC (Home Improvement Contractor) license — required for all home renovation work in Garrett Park. We are fully bonded, carry comprehensive general liability insurance and workers' compensation coverage, and provide a 1-year workmanship warranty on every basement remodeling project completed in Garrett Park."
+            "text": "Yes. DMV General Contracting Group holds a Maryland MHIC (Home Improvement Contractor) license — required for all home renovation work in Garrett Park. We are fully bonded, carry comprehensive general liability insurance and workers' compensation coverage, and provide a 1-year workmanship warranty on every basement remodeling project completed in Garrett Park."
           }
         }
       ]

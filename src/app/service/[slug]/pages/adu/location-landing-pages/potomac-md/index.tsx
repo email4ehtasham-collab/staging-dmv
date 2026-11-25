@@ -11,19 +11,20 @@ const schemaJsonLd = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "LocalBusiness",
+      "@type": "GeneralContractor",
       "@id": "https://www.dmv-gc.com/#business",
-      "name": "DMV-GC Group",
-      "alternateName": "DMV General Contracting Group LLC",
+      "name": "DMV General Contracting Group LLC",
+      "legalName": "DMV General Contracting Group LLC",
+      "alternateName": ["DMV General Contracting Group", "DMV-GC"],
       "image": "https://www.dmv-gc.com/logo.png",
       "url": "https://www.dmv-gc.com",
-      "telephone": "+12407301292",
+      "telephone": "+1-240-730-1292",
       "email": "support@dmv-gc.com",
       "foundingDate": "2018",
       "description": "Licensed design-build general contractor serving Potomac, MD. Specializing in ADU construction on Potomac's estate properties — detached backyard cottages, garage conversions, basement ADU apartments, and attached in-law suites — including full architectural design, Montgomery County zoning coordination, and permit management.",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "11810 Grand Park Ave, Suite 500",
+        "streetAddress": "11810 Grand Park Ave #500",
         "addressLocality": "North Bethesda",
         "addressRegion": "MD",
         "postalCode": "20852",
@@ -41,7 +42,6 @@ const schemaJsonLd = {
         { "@type": "EducationalOccupationalCredential", "name": "MHIC License", "credentialCategory": "Maryland Home Improvement Contractor License" },
         { "@type": "EducationalOccupationalCredential", "name": "DLCP License", "credentialCategory": "Washington DC Department of Licensing and Consumer Protection" }
       ],
-      "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "97", "bestRating": "5" },
       "priceRange": "$$$$"
     },
     {
@@ -88,7 +88,7 @@ const schemaJsonLd = {
           "name": "How much does it cost to build an ADU in Potomac, MD?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "ADU construction in Potomac, MD typically costs between $80,000 and $450,000+ depending on ADU type, size, and finish level. A basement ADU conversion runs $80,000–$140,000. A garage conversion ADU runs $70,000–$140,000. An attached in-law suite addition costs $130,000–$260,000. A detached backyard cottage — the most popular ADU type in Potomac given the large lot sizes — typically runs $175,000–$450,000+. Potomac's estate properties often have the lot coverage and setback room to accommodate larger, more substantial detached ADUs than most Montgomery County communities. DMV-GC Group provides free in-home consultations with detailed estimates."
+            "text": "ADU construction in Potomac, MD typically costs between $80,000 and $450,000+ depending on ADU type, size, and finish level. A basement ADU conversion runs $80,000–$140,000. A garage conversion ADU runs $70,000–$140,000. An attached in-law suite addition costs $130,000–$260,000. A detached backyard cottage — the most popular ADU type in Potomac given the large lot sizes — typically runs $175,000–$450,000+. Potomac's estate properties often have the lot coverage and setback room to accommodate larger, more substantial detached ADUs than most Montgomery County communities. DMV General Contracting Group provides free in-home consultations with detailed estimates."
           }
         },
         {
@@ -96,7 +96,7 @@ const schemaJsonLd = {
           "name": "What are the Montgomery County ADU zoning rules for Potomac?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "In Montgomery County (which governs unincorporated Potomac), an ADU is permitted on any single-family residential lot that meets size requirements under the county's ADU ordinance. Key rules include: the lot must be at least 6,000 sq ft (most Potomac properties exceed this significantly); the ADU cannot exceed 1,200 sq ft or 50% of the main house floor area (whichever is less); setback requirements apply to detached ADUs; only one ADU is permitted per lot; the property owner must occupy either the main house or the ADU; and a Certificate of Occupancy is required before the ADU can be rented or occupied. DMV-GC Group verifies all applicable zoning rules for your specific Potomac property during the free consultation."
+            "text": "In Montgomery County (which governs unincorporated Potomac), an ADU is permitted on any single-family residential lot that meets size requirements under the county's ADU ordinance. Key rules include: the lot must be at least 6,000 sq ft (most Potomac properties exceed this significantly); the ADU cannot exceed 1,200 sq ft or 50% of the main house floor area (whichever is less); setback requirements apply to detached ADUs; only one ADU is permitted per lot; the property owner must occupy either the main house or the ADU; and a Certificate of Occupancy is required before the ADU can be rented or occupied. DMV General Contracting Group verifies all applicable zoning rules for your specific Potomac property during the free consultation."
           }
         },
         {
@@ -104,15 +104,15 @@ const schemaJsonLd = {
           "name": "Can I build a detached ADU (backyard cottage) on a Potomac estate property?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes — and Potomac's large estate lots are among the most favorable in Montgomery County for detached ADU construction. With lots commonly ranging from 1 to 5+ acres in Avenel, Travilah, and the River Road corridor, Potomac homeowners typically have ample room to accommodate a detached ADU while meeting all setback and lot coverage requirements. DMV-GC Group's in-house architects design detached ADUs from a single-bedroom cottage to a fully appointed two-bedroom guest house, managing all Montgomery County permits and zoning approvals."
+            "text": "Yes — and Potomac's large estate lots are among the most favorable in Montgomery County for detached ADU construction. With lots commonly ranging from 1 to 5+ acres in Avenel, Travilah, and the River Road corridor, Potomac homeowners typically have ample room to accommodate a detached ADU while meeting all setback and lot coverage requirements. DMV General Contracting Group's in-house architects design detached ADUs from a single-bedroom cottage to a fully appointed two-bedroom guest house, managing all Montgomery County permits and zoning approvals."
           }
         },
         {
           "@type": "Question",
-          "name": "Does DMV-GC Group handle ADU permits in Potomac?",
+          "name": "Does DMV General Contracting Group handle ADU permits in Potomac?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. DMV-GC Group handles the complete ADU permit process in Potomac and Montgomery County — including architectural design drawings, zoning confirmation, building permit application, all required trade permits (electrical, plumbing, mechanical), and Certificate of Occupancy inspection. Our in-house permit team manages every step. Potomac homeowners never need to contact Montgomery County directly or manage any aspect of the permit or zoning process."
+            "text": "Yes. DMV General Contracting Group handles the complete ADU permit process in Potomac and Montgomery County — including architectural design drawings, zoning confirmation, building permit application, all required trade permits (electrical, plumbing, mechanical), and Certificate of Occupancy inspection. Our in-house permit team manages every step. Potomac homeowners never need to contact Montgomery County directly or manage any aspect of the permit or zoning process."
           }
         },
         {
@@ -120,15 +120,15 @@ const schemaJsonLd = {
           "name": "Can I convert my garage into an ADU in Potomac?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. Garage conversion ADUs are a popular and cost-effective option in Potomac, particularly for homeowners with attached 3-car garages where one bay can be converted while maintaining parking for the main residence. The conversion involves adding insulation, HVAC, plumbing rough-in, egress windows or doors, interior framing, drywall, flooring, kitchen and bathroom. Montgomery County permits and a Certificate of Occupancy are required. DMV-GC Group handles the complete design and construction of garage conversion ADUs in Potomac."
+            "text": "Yes. Garage conversion ADUs are a popular and cost-effective option in Potomac, particularly for homeowners with attached 3-car garages where one bay can be converted while maintaining parking for the main residence. The conversion involves adding insulation, HVAC, plumbing rough-in, egress windows or doors, interior framing, drywall, flooring, kitchen and bathroom. Montgomery County permits and a Certificate of Occupancy are required. DMV General Contracting Group handles the complete design and construction of garage conversion ADUs in Potomac."
           }
         },
         {
           "@type": "Question",
-          "name": "Is DMV-GC Group licensed for ADU construction in Potomac, MD?",
+          "name": "Is DMV General Contracting Group licensed for ADU construction in Potomac, MD?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. DMV-GC Group holds a Maryland MHIC (Home Improvement Contractor) license — required for all home improvement and construction work in Potomac and Montgomery County. We are fully bonded, carry comprehensive general liability insurance and workers' compensation coverage, and provide a 1-year workmanship warranty on every ADU project completed in Potomac."
+            "text": "Yes. DMV General Contracting Group holds a Maryland MHIC (Home Improvement Contractor) license — required for all home improvement and construction work in Potomac and Montgomery County. We are fully bonded, carry comprehensive general liability insurance and workers' compensation coverage, and provide a 1-year workmanship warranty on every ADU project completed in Potomac."
           }
         }
       ]

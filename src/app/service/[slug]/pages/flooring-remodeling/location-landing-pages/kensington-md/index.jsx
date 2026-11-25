@@ -11,19 +11,20 @@ const schemaJsonLd = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "LocalBusiness",
+      "@type": "GeneralContractor",
       "@id": "https://www.dmv-gc.com/#business",
-      "name": "DMV-GC Group",
-      "alternateName": "DMV General Contracting Group LLC",
+      "name": "DMV General Contracting Group LLC",
+      "legalName": "DMV General Contracting Group LLC",
+      "alternateName": ["DMV General Contracting Group", "DMV-GC"],
       "image": "https://www.dmv-gc.com/logo.png",
       "url": "https://www.dmv-gc.com",
-      "telephone": "+12407301292",
+      "telephone": "+1-240-730-1292",
       "email": "support@dmv-gc.com",
       "foundingDate": "2018",
       "description": "Licensed design-build general contractor serving Kensington, MD. Specializing in hardwood refinishing, LVP, tile, and carpet installation for Kensington's 1920s–40s bungalows and colonials.",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "11810 Grand Park Ave, Suite 500",
+        "streetAddress": "11810 Grand Park Ave #500",
         "addressLocality": "North Bethesda",
         "addressRegion": "MD",
         "postalCode": "20852",
@@ -44,12 +45,6 @@ const schemaJsonLd = {
         { "@type": "EducationalOccupationalCredential", "name": "MHIC #133211" },
         { "@type": "EducationalOccupationalCredential", "name": "Licensed General Contractor - Maryland" }
       ],
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": "412",
-        "bestRating": "5"
-      },
       "openingHours": "Mo-Sa 08:00-18:00",
       "priceRange": "$$",
       "sameAs": [
@@ -100,22 +95,22 @@ const schemaJsonLd = {
         {
           "@type": "Question",
           "name": "How much does flooring installation cost in Kensington, MD?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Flooring in Kensington typically costs $3–$18 per square foot depending on material and zone. Hardwood refinishing costs $3–$6 per square foot. New hardwood installation runs $8–$15 per square foot. LVP for kitchens and basements costs $5–$10 per square foot. Porcelain tile runs $8–$18 per square foot. A typical Kensington home package runs $8,000–$18,000 for a 1,500–2,000 sq ft home. DMV-GC Group provides free, itemized zone-by-zone estimates." }
+          "acceptedAnswer": { "@type": "Answer", "text": "Flooring in Kensington typically costs $3–$18 per square foot depending on material and zone. Hardwood refinishing costs $3–$6 per square foot. New hardwood installation runs $8–$15 per square foot. LVP for kitchens and basements costs $5–$10 per square foot. Porcelain tile runs $8–$18 per square foot. A typical Kensington home package runs $8,000–$18,000 for a 1,500–2,000 sq ft home. DMV General Contracting Group provides free, itemized zone-by-zone estimates." }
         },
         {
           "@type": "Question",
           "name": "How do I know if my Kensington hardwood floors can be refinished?",
-          "acceptedAnswer": { "@type": "Answer", "text": "The key factor is remaining wood thickness above the tongue. Original ¾-inch strip hardwood needs at least 3/16\" above the tongue to safely sand. DMV-GC Group checks remaining thickness during the free in-home consultation using a thickness gauge. If sufficient thickness remains and the wood is structurally sound, refinishing is almost always the right choice." }
+          "acceptedAnswer": { "@type": "Answer", "text": "The key factor is remaining wood thickness above the tongue. Original ¾-inch strip hardwood needs at least 3/16\" above the tongue to safely sand. DMV General Contracting Group checks remaining thickness during the free in-home consultation using a thickness gauge. If sufficient thickness remains and the wood is structurally sound, refinishing is almost always the right choice." }
         },
         {
           "@type": "Question",
           "name": "Why does tile crack in older Kensington homes?",
-          "acceptedAnswer": { "@type": "Answer", "text": "The most common cause is installation over diagonal plank subfloor boards without an uncoupling membrane. Diagonal plank subfloors move seasonally, and that movement telegraphs through a rigid tile installation and cracks the tiles or grout joints. DMV-GC Group installs uncoupling membrane as a standard part of every tile project on older Kensington subfloors." }
+          "acceptedAnswer": { "@type": "Answer", "text": "The most common cause is installation over diagonal plank subfloor boards without an uncoupling membrane. Diagonal plank subfloors move seasonally, and that movement telegraphs through a rigid tile installation and cracks the tiles or grout joints. DMV General Contracting Group installs uncoupling membrane as a standard part of every tile project on older Kensington subfloors." }
         },
         {
           "@type": "Question",
           "name": "Is LVP a good choice for a Kensington home with a crawlspace?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Yes — LVP is often the best choice for first-floor rooms with crawlspace foundations where moisture is a concern. LVP is 100% waterproof and dimensionally stable, so it will not cup, buckle, or squeak in response to seasonal moisture changes. DMV-GC Group recommends a vapor barrier under LVP in crawlspace homes." }
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes — LVP is often the best choice for first-floor rooms with crawlspace foundations where moisture is a concern. LVP is 100% waterproof and dimensionally stable, so it will not cup, buckle, or squeak in response to seasonal moisture changes. DMV General Contracting Group recommends a vapor barrier under LVP in crawlspace homes." }
         },
         {
           "@type": "Question",
@@ -124,7 +119,7 @@ const schemaJsonLd = {
         },
         {
           "@type": "Question",
-          "name": "Does DMV-GC Group provide flooring warranties?",
+          "name": "Does DMV General Contracting Group provide flooring warranties?",
           "acceptedAnswer": { "@type": "Answer", "text": "Yes. Every project includes our workmanship warranty — one full year with no proration. Material warranties are provided by the manufacturer (typically 15–50 years for hardwood and LVP, lifetime for some tile). We also offer maintenance guidance so your warranty stays valid." }
         }
       ]

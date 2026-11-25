@@ -11,16 +11,17 @@ const schemaJsonLd = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "LocalBusiness",
+      "@type": "GeneralContractor",
       "@id": "https://www.dmv-gc.com/#business",
-      "name": "DMV-GC Group",
-      "alternateName": "DMV General Contracting Group LLC",
+      "name": "DMV General Contracting Group LLC",
+      "legalName": "DMV General Contracting Group LLC",
+      "alternateName": ["DMV General Contracting Group", "DMV-GC"],
       "url": "https://www.dmv-gc.com",
-      "telephone": "+12407301292",
+      "telephone": "+1-240-730-1292",
       "email": "support@dmv-gc.com",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "11810 Grand Park Ave, Suite 500",
+        "streetAddress": "11810 Grand Park Ave #500",
         "addressLocality": "North Bethesda",
         "addressRegion": "MD",
         "postalCode": "20852",
@@ -41,12 +42,6 @@ const schemaJsonLd = {
           "name": "DLCP License #410526000209"
         }
       ],
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": "97",
-        "bestRating": "5"
-      },
       "priceRange": "$$$"
     },
     {
@@ -115,10 +110,10 @@ const schemaJsonLd = {
         },
         {
           "@type": "Question",
-          "name": "Does DMV-GC Group hold a DC contractor license for flooring work?",
+          "name": "Does DMV General Contracting Group hold a DC contractor license for flooring work?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. DMV-GC Group holds a DLCP (DC Department of Licensing and Consumer Protection) license #410526000209 — required for all home improvement contracting work in Washington, DC. We also hold Maryland MHIC license #156178. We are fully licensed in both jurisdictions, bonded, and insured, making us one of the few flooring contractors in the DMV region who can serve both DC and Maryland clients under valid jurisdiction-specific licenses."
+            "text": "Yes. DMV General Contracting Group holds a DLCP (DC Department of Licensing and Consumer Protection) license #410526000209 — required for all home improvement contracting work in Washington, DC. We also hold Maryland MHIC license #156178. We are fully licensed in both jurisdictions, bonded, and insured, making us one of the few flooring contractors in the DMV region who can serve both DC and Maryland clients under valid jurisdiction-specific licenses."
           }
         },
         {
@@ -126,7 +121,7 @@ const schemaJsonLd = {
           "name": "Does Flooring installation in Washington, DC require HPRB approval?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No — interior flooring is not reviewed by the Historic Preservation Review Board (HPRB) or any DC historic preservation authority. HPRB reviews exterior changes to properties in DC's historic districts and individual landmark buildings. Interior renovations, including flooring of any type, are not subject to historic review. However, when flooring is part of a broader renovation that includes exterior scope — such as a rear addition, window replacement, or facade modification — those exterior components require HPRB review if the property is in a historic district or is an individual DC landmark. DMV-GC Group holds the DLCP license required for all DC renovation work and understands when broader project scope requires HPRB coordination."
+            "text": "No — interior flooring is not reviewed by the Historic Preservation Review Board (HPRB) or any DC historic preservation authority. HPRB reviews exterior changes to properties in DC's historic districts and individual landmark buildings. Interior renovations, including flooring of any type, are not subject to historic review. However, when flooring is part of a broader renovation that includes exterior scope — such as a rear addition, window replacement, or facade modification — those exterior components require HPRB review if the property is in a historic district or is an individual DC landmark. DMV General Contracting Group holds the DLCP license required for all DC renovation work and understands when broader project scope requires HPRB coordination."
           }
         },
         {
@@ -134,7 +129,7 @@ const schemaJsonLd = {
           "name": "Can I install solid hardwood floors in a Washington, DC condo?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "It depends on the building type. DC's mid-rise and high-rise condo and co-op buildings have concrete slab subfloors — solid hardwood nail-down is not possible on concrete. The correct specification for DC condo slab construction is engineered hardwood glue-down or premium LVP floated with acoustic underlayment. DC's historic rowhouse conversions to condo units may have wood subfloors if the original joists and flooring were retained — in these cases, solid hardwood may be viable above grade. DMV-GC Group confirms subfloor type at the consultation before any material is specified."
+            "text": "It depends on the building type. DC's mid-rise and high-rise condo and co-op buildings have concrete slab subfloors — solid hardwood nail-down is not possible on concrete. The correct specification for DC condo slab construction is engineered hardwood glue-down or premium LVP floated with acoustic underlayment. DC's historic rowhouse conversions to condo units may have wood subfloors if the original joists and flooring were retained — in these cases, solid hardwood may be viable above grade. DMV General Contracting Group confirms subfloor type at the consultation before any material is specified."
           }
         },
         {
@@ -142,7 +137,7 @@ const schemaJsonLd = {
           "name": "What flooring is best for Washington, DC rowhouses?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Original hardwood refinishing is almost always the right first recommendation for DC rowhouses in Georgetown, Capitol Hill, Logan Circle, Dupont Circle, and similar historic neighborhoods. DC rowhouses built between 1880 and 1940 frequently have original heart pine, oak, or fir strip hardwood that has survived under carpet and retains sufficient thickness for refinishing. These floors carry the authentic material character of DC's historic neighborhoods. DMV-GC Group checks remaining thickness, assesses crawlspace or basement moisture conditions, addresses squeak sources, and refinishes at $3–$6 per square foot — a fraction of the $10–$18 per square foot cost of new hardwood installation."
+            "text": "Original hardwood refinishing is almost always the right first recommendation for DC rowhouses in Georgetown, Capitol Hill, Logan Circle, Dupont Circle, and similar historic neighborhoods. DC rowhouses built between 1880 and 1940 frequently have original heart pine, oak, or fir strip hardwood that has survived under carpet and retains sufficient thickness for refinishing. These floors carry the authentic material character of DC's historic neighborhoods. DMV General Contracting Group checks remaining thickness, assesses crawlspace or basement moisture conditions, addresses squeak sources, and refinishes at $3–$6 per square foot — a fraction of the $10–$18 per square foot cost of new hardwood installation."
           }
         }
       ]

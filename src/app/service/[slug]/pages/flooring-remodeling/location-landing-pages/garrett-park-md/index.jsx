@@ -11,19 +11,20 @@ const schemaJsonLd = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "LocalBusiness",
+      "@type": "GeneralContractor",
       "@id": "https://www.dmv-gc.com/#business",
-      "name": "DMV-GC Group",
-      "alternateName": "DMV General Contracting Group LLC",
+      "name": "DMV General Contracting Group LLC",
+      "legalName": "DMV General Contracting Group LLC",
+      "alternateName": ["DMV General Contracting Group", "DMV-GC"],
       "url": "https://www.dmv-gc.com",
-      "telephone": "+12407301292",
+      "telephone": "+1-240-730-1292",
       "email": "support@dmv-gc.com",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "11810 Grand Park Ave, Suite 500",
+        "streetAddress": "11810 Grand Park Ave #500",
         "addressLocality": "North Bethesda",
         "addressRegion": "MD",
-        "postalCode": "20896",
+        "postalCode": "20852",
         "addressCountry": "US"
       },
       "areaServed": { "@type": "City", "name": "Garrett Park", "sameAs": "https://en.wikipedia.org/wiki/Garrett_Park,_Maryland" },
@@ -31,7 +32,6 @@ const schemaJsonLd = {
         { "@type": "EducationalOccupationalCredential", "name": "MHIC License #156178" },
         { "@type": "EducationalOccupationalCredential", "name": "DLCP License #410526000209" }
       ],
-      "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "97", "bestRating": "5" },
       "priceRange": "$$$"
     },
     {
@@ -64,7 +64,7 @@ const schemaJsonLd = {
           "name": "How much does flooring installation cost in Garrett Park, MD?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Flooring installation in Garrett Park, MD typically costs $3–$18 per square foot installed depending on material. Hardwood refinishing — the most appropriate and most cost-effective first choice for Garrett Park's 1900s–1940s bungalows — costs $3–$6 per square foot. New hardwood installation runs $8–$15 per square foot. LVP installation costs $5–$10 per square foot. Porcelain tile costs $8–$18 per square foot. Older Garrett Park homes frequently have crawlspace moisture conditions and diagonal plank subfloors that require assessment before any material is specified — DMV-GC Group evaluates both during the free in-home consultation and includes all required prep in the itemized estimate."
+            "text": "Flooring installation in Garrett Park, MD typically costs $3–$18 per square foot installed depending on material. Hardwood refinishing — the most appropriate and most cost-effective first choice for Garrett Park's 1900s–1940s bungalows — costs $3–$6 per square foot. New hardwood installation runs $8–$15 per square foot. LVP installation costs $5–$10 per square foot. Porcelain tile costs $8–$18 per square foot. Older Garrett Park homes frequently have crawlspace moisture conditions and diagonal plank subfloors that require assessment before any material is specified — DMV General Contracting Group evaluates both during the free in-home consultation and includes all required prep in the itemized estimate."
           }
         },
         {
@@ -72,7 +72,7 @@ const schemaJsonLd = {
           "name": "Can original hardwood floors in Garrett Park's historic bungalows be refinished?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Usually yes — and for Garrett Park's 1900s–1940s bungalows and colonials, refinishing original hardwood is almost always the right first choice when the wood is structurally sound. Garrett Park's oldest homes were floored with old-growth Douglas fir or oak strip that is denser and more dimensionally stable than modern plantation-grown equivalents. Original floors that have survived 80–100 years in a Garrett Park bungalow carry the authentic material character of the home — character that no new flooring product can replicate. DMV-GC Group checks remaining wood thickness above the tongue before recommending refinishing. When viable — as it often is — refinishing preserves what is genuinely irreplaceable at $3–$6 per square foot, compared to $8–$15 for new hardwood that will never match the density or grain of the original."
+            "text": "Usually yes — and for Garrett Park's 1900s–1940s bungalows and colonials, refinishing original hardwood is almost always the right first choice when the wood is structurally sound. Garrett Park's oldest homes were floored with old-growth Douglas fir or oak strip that is denser and more dimensionally stable than modern plantation-grown equivalents. Original floors that have survived 80–100 years in a Garrett Park bungalow carry the authentic material character of the home — character that no new flooring product can replicate. DMV General Contracting Group checks remaining wood thickness above the tongue before recommending refinishing. When viable — as it often is — refinishing preserves what is genuinely irreplaceable at $3–$6 per square foot, compared to $8–$15 for new hardwood that will never match the density or grain of the original."
           }
         },
         {
@@ -88,15 +88,15 @@ const schemaJsonLd = {
           "name": "What flooring works best in Garrett Park's older homes with crawlspace foundations?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Garrett Park's pre-1950 homes frequently have crawlspace foundations rather than full basements. Crawlspace moisture — especially seasonally elevated in Garrett Park's shaded, wooded lots — can cause solid hardwood on the first floor to cup, squeak, and buckle if the crawlspace is not properly managed. DMV-GC Group assesses crawlspace moisture conditions before specifying first-floor flooring. Where moisture is confirmed manageable, solid or engineered hardwood on the main floor is viable. Where crawlspace moisture is elevated, engineered hardwood (more dimensionally stable) or LVP (entirely moisture-immune) is the honest recommendation. We never recommend solid hardwood over a high-moisture crawlspace regardless of how authentic it would be — flooring that fails in two seasons is not authentic, it is wrong."
+            "text": "Garrett Park's pre-1950 homes frequently have crawlspace foundations rather than full basements. Crawlspace moisture — especially seasonally elevated in Garrett Park's shaded, wooded lots — can cause solid hardwood on the first floor to cup, squeak, and buckle if the crawlspace is not properly managed. DMV General Contracting Group assesses crawlspace moisture conditions before specifying first-floor flooring. Where moisture is confirmed manageable, solid or engineered hardwood on the main floor is viable. Where crawlspace moisture is elevated, engineered hardwood (more dimensionally stable) or LVP (entirely moisture-immune) is the honest recommendation. We never recommend solid hardwood over a high-moisture crawlspace regardless of how authentic it would be — flooring that fails in two seasons is not authentic, it is wrong."
           }
         },
         {
           "@type": "Question",
-          "name": "Is DMV-GC Group licensed for flooring installation in Garrett Park, MD?",
+          "name": "Is DMV General Contracting Group licensed for flooring installation in Garrett Park, MD?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. DMV-GC Group holds a Maryland MHIC license (#156178) — required for all home improvement work in Garrett Park. When flooring is part of a broader renovation requiring a Town of Garrett Park building permit, DMV-GC Group handles the permit application with the Town's permit office at 4600 Oxford Street — the same Town permit process we navigate for deck and ADU projects in Garrett Park. We are fully bonded, carry comprehensive general liability insurance and workers' compensation coverage, and provide a 1-year workmanship warranty on every Garrett Park flooring project."
+            "text": "Yes. DMV General Contracting Group holds a Maryland MHIC license (#156178) — required for all home improvement work in Garrett Park. When flooring is part of a broader renovation requiring a Town of Garrett Park building permit, DMV General Contracting Group handles the permit application with the Town's permit office at 4600 Oxford Street — the same Town permit process we navigate for deck and ADU projects in Garrett Park. We are fully bonded, carry comprehensive general liability insurance and workers' compensation coverage, and provide a 1-year workmanship warranty on every Garrett Park flooring project."
           }
         }
       ]

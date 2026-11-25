@@ -75,16 +75,18 @@ const HardscapingRockvilleMD = () => {
                             "@context": "https://schema.org",
                             "@graph": [
                                 {
-                                    "@type": "LocalBusiness",
+                                    "@type": "GeneralContractor",
                                     "@id": "https://www.dmv-gc.com/#business",
                                     "name": "DMV General Contracting Group LLC",
+                                    "legalName": "DMV General Contracting Group LLC",
+                                    "alternateName": ["DMV General Contracting Group", "DMV-GC"],
                                     "url": "https://www.dmv-gc.com/",
                                     "telephone": "+1-240-730-1292",
                                     "email": "support@dmv-gc.com",
                                     "description": "Professional hardscaping contractor serving Rockville, MD. Dual permit jurisdiction — City of Rockville at 111 Maryland Avenue for Twinbrook and most King Farm properties; MoCo DPS for properties outside city limits. King Farm and Congressional HOA coordination. Custom patios, walkways, retaining walls, driveways and outdoor kitchens. MHIC #156178.",
                                     "address": {
                                         "@type": "PostalAddress",
-                                        "streetAddress": "11810 Grand Park Ave. Suite 500",
+                                        "streetAddress": "11810 Grand Park Ave #500",
                                         "addressLocality": "North Bethesda",
                                         "addressRegion": "MD",
                                         "postalCode": "20852",
@@ -95,7 +97,7 @@ const HardscapingRockvilleMD = () => {
                                 {
                                     "@type": "Service",
                                     "name": "Hardscaping Services in Rockville, MD",
-                                    "provider": { "@type": "LocalBusiness", "name": "DMV General Contracting Group LLC", "telephone": "+1-240-730-1292", "url": "https://www.dmv-gc.com/" },
+                                    "provider": { "@type": "GeneralContractor", "name": "DMV General Contracting Group LLC", "telephone": "+1-240-730-1292", "url": "https://www.dmv-gc.com/" },
                                     "areaServed": { "@type": "City", "name": "Rockville" },
                                     "serviceType": "Hardscaping, Patio, Walkways, Retaining Walls, Driveway Paving, Outdoor Kitchen, Outdoor Living"
                                 },

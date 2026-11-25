@@ -413,19 +413,20 @@ export default function BathroomCabinJohnMD() {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "LocalBusiness",
+      "@type": "GeneralContractor",
       "@id": "https://www.dmv-gc.com/#business",
-      "name": "DMV-GC Group",
-      "alternateName": "DMV General Contracting Group LLC",
+      "name": "DMV General Contracting Group LLC",
+      "legalName": "DMV General Contracting Group LLC",
+      "alternateName": ["DMV General Contracting Group", "DMV-GC"],
       "image": "https://www.dmv-gc.com/logo.png",
       "url": "https://www.dmv-gc.com",
-      "telephone": "+12407301292",
+      "telephone": "+1-240-730-1292",
       "email": "support@dmv-gc.com",
       "foundingDate": "2018",
       "description": "Licensed design-build general contractor serving Cabin John, MD and the greater DMV area. Specializing in bathroom remodeling for wooded-lot and hillside homes, master spa bathrooms, natural light design, and all bathroom renovation work.",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "11810 Grand Park Ave, Suite 500",
+        "streetAddress": "11810 Grand Park Ave #500",
         "addressLocality": "North Bethesda",
         "addressRegion": "MD",
         "postalCode": "20852",
@@ -459,13 +460,6 @@ export default function BathroomCabinJohnMD() {
           "credentialCategory": "Washington DC Department of Licensing and Consumer Protection"
         }
       ],
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": "97",
-        "bestRating": "5",
-        "worstRating": "1"
-      },
       "priceRange": "$$$"
     },
     {
@@ -520,31 +514,31 @@ export default function BathroomCabinJohnMD() {
           "name": "How much does a bathroom remodel cost in Cabin John, MD?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Bathroom remodeling in Cabin John, MD typically costs between $15,000 and $110,000 depending on bathroom size, scope, and finishes. A hall bathroom refresh starts around $14,000\u2013$26,000. A mid-range master bathroom renovation runs $35,000\u2013$65,000. A full luxury master bathroom renovation with spa shower, skylight, and premium finishes ranges from $65,000\u2013$110,000. Cabin John's wooded, hillside setting sometimes adds modest site-access costs for material delivery. DMV-GC Group provides free in-home consultations with detailed estimates."
+            "text": "Bathroom remodeling in Cabin John, MD typically costs between $15,000 and $110,000 depending on bathroom size, scope, and finishes. A hall bathroom refresh starts around $14,000\u2013$26,000. A mid-range master bathroom renovation runs $35,000\u2013$65,000. A full luxury master bathroom renovation with spa shower, skylight, and premium finishes ranges from $65,000\u2013$110,000. Cabin John's wooded, hillside setting sometimes adds modest site-access costs for material delivery. DMV General Contracting Group provides free in-home consultations with detailed estimates."
           }
         },
         {
           "@type": "Question",
-          "name": "Can DMV-GC Group add a skylight to a Cabin John bathroom?",
+          "name": "Can DMV General Contracting Group add a skylight to a Cabin John bathroom?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. Skylight installation is one of our most requested services for Cabin John bathrooms, where dense tree canopy can make interior spaces feel darker than on open lots. DMV-GC Group's in-house team handles the full skylight installation \u2014 structural framing, roofing integration, interior finishing, and waterproofing \u2014 as part of a broader bathroom renovation or as a standalone project. A properly installed skylight in a bathroom creates natural light that makes the space feel significantly larger and more open."
+            "text": "Yes. Skylight installation is one of our most requested services for Cabin John bathrooms, where dense tree canopy can make interior spaces feel darker than on open lots. DMV General Contracting Group's in-house team handles the full skylight installation \u2014 structural framing, roofing integration, interior finishing, and waterproofing \u2014 as part of a broader bathroom renovation or as a standalone project. A properly installed skylight in a bathroom creates natural light that makes the space feel significantly larger and more open."
           }
         },
         {
           "@type": "Question",
-          "name": "Does DMV-GC Group handle permits for bathroom remodeling in Cabin John?",
+          "name": "Does DMV General Contracting Group handle permits for bathroom remodeling in Cabin John?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. Cabin John is an unincorporated community in Montgomery County, so bathroom remodeling permits are processed through Montgomery County's Department of Permitting Services. DMV-GC Group's in-house permit team handles all required building, electrical, and plumbing permits, and manages all county correspondence and inspection scheduling from start to finish."
+            "text": "Yes. Cabin John is an unincorporated community in Montgomery County, so bathroom remodeling permits are processed through Montgomery County's Department of Permitting Services. DMV General Contracting Group's in-house permit team handles all required building, electrical, and plumbing permits, and manages all county correspondence and inspection scheduling from start to finish."
           }
         },
         {
           "@type": "Question",
-          "name": "Does DMV-GC Group have experience working on Cabin John's wooded, hillside properties?",
+          "name": "Does DMV General Contracting Group have experience working on Cabin John's wooded, hillside properties?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. DMV-GC Group has completed renovation projects throughout Cabin John's distinctive wooded hillside setting. Our team understands the site access considerations common in Cabin John \u2014 narrow driveways, sloped lots, and mature tree proximity \u2014 and plans material delivery, equipment staging, and construction access specifically for each property before work begins."
+            "text": "Yes. DMV General Contracting Group has completed renovation projects throughout Cabin John's distinctive wooded hillside setting. Our team understands the site access considerations common in Cabin John \u2014 narrow driveways, sloped lots, and mature tree proximity \u2014 and plans material delivery, equipment staging, and construction access specifically for each property before work begins."
           }
         },
         {
@@ -552,15 +546,15 @@ export default function BathroomCabinJohnMD() {
           "name": "How long does a bathroom remodel take in Cabin John, MD?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Most bathroom renovations in Cabin John take 4\u20138 weeks from construction start to completion. A hall bathroom refresh can be done in 2\u20133 weeks. A full master bathroom gut renovation takes 5\u20138 weeks. Projects that include skylight installation may add 1\u20132 weeks. Montgomery County permit processing typically adds 3\u20135 weeks before construction begins. DMV-GC Group provides a detailed timeline with every estimate."
+            "text": "Most bathroom renovations in Cabin John take 4\u20138 weeks from construction start to completion. A hall bathroom refresh can be done in 2\u20133 weeks. A full master bathroom gut renovation takes 5\u20138 weeks. Projects that include skylight installation may add 1\u20132 weeks. Montgomery County permit processing typically adds 3\u20135 weeks before construction begins. DMV General Contracting Group provides a detailed timeline with every estimate."
           }
         },
         {
           "@type": "Question",
-          "name": "Is DMV-GC Group licensed for bathroom remodeling in Cabin John, MD?",
+          "name": "Is DMV General Contracting Group licensed for bathroom remodeling in Cabin John, MD?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. DMV-GC Group holds a Maryland MHIC (Home Improvement Contractor) license \u2014 required for all home renovation work in Cabin John and Montgomery County. We are fully bonded, carry comprehensive general liability insurance and workers' compensation coverage, and provide a 1-year workmanship warranty on every bathroom remodeling project completed in Cabin John."
+            "text": "Yes. DMV General Contracting Group holds a Maryland MHIC (Home Improvement Contractor) license \u2014 required for all home renovation work in Cabin John and Montgomery County. We are fully bonded, carry comprehensive general liability insurance and workers' compensation coverage, and provide a 1-year workmanship warranty on every bathroom remodeling project completed in Cabin John."
           }
         }
       ]

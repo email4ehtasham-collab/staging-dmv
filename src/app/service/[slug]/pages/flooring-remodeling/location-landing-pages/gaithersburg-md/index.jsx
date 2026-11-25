@@ -11,16 +11,17 @@ const schemaJsonLd = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "LocalBusiness",
+      "@type": "GeneralContractor",
       "@id": "https://www.dmv-gc.com/#business",
-      "name": "DMV-GC Group",
-      "alternateName": "DMV General Contracting Group LLC",
+      "name": "DMV General Contracting Group LLC",
+      "legalName": "DMV General Contracting Group LLC",
+      "alternateName": ["DMV General Contracting Group", "DMV-GC"],
       "url": "https://www.dmv-gc.com",
-      "telephone": "+12407301292",
+      "telephone": "+1-240-730-1292",
       "email": "support@dmv-gc.com",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "11810 Grand Park Ave, Suite 500",
+        "streetAddress": "11810 Grand Park Ave #500",
         "addressLocality": "North Bethesda",
         "addressRegion": "MD",
         "postalCode": "20852",
@@ -31,7 +32,6 @@ const schemaJsonLd = {
         { "@type": "EducationalOccupationalCredential", "name": "MHIC License #156178" },
         { "@type": "EducationalOccupationalCredential", "name": "DLCP License #410526000209" }
       ],
-      "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "97", "bestRating": "5" },
       "priceRange": "$$$"
     },
     {
@@ -64,7 +64,7 @@ const schemaJsonLd = {
           "name": "How much does flooring installation cost in Gaithersburg, MD?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Flooring installation in Gaithersburg, MD typically costs $4–$20 per square foot installed depending on material and community. Wide-plank white oak hardwood — the most popular choice in Kentlands and Crown Farm — runs $10–$18 per square foot installed. LVP costs $5–$10 per square foot and is the right choice for Gaithersburg kitchens, lower levels, and any below-grade finished space. Porcelain tile runs $8–$18 per square foot. Hardwood refinishing costs $3–$6 per square foot for Gaithersburg's older housing stock. A typical Gaithersburg whole-home flooring project for a Kentlands or Crown Farm townhome runs $14,000–$32,000. DMV-GC Group provides free in-home estimates with detailed, room-by-room pricing."
+            "text": "Flooring installation in Gaithersburg, MD typically costs $4–$20 per square foot installed depending on material and community. Wide-plank white oak hardwood — the most popular choice in Kentlands and Crown Farm — runs $10–$18 per square foot installed. LVP costs $5–$10 per square foot and is the right choice for Gaithersburg kitchens, lower levels, and any below-grade finished space. Porcelain tile runs $8–$18 per square foot. Hardwood refinishing costs $3–$6 per square foot for Gaithersburg's older housing stock. A typical Gaithersburg whole-home flooring project for a Kentlands or Crown Farm townhome runs $14,000–$32,000. DMV General Contracting Group provides free in-home estimates with detailed, room-by-room pricing."
           }
         },
         {
@@ -72,7 +72,7 @@ const schemaJsonLd = {
           "name": "What flooring is most popular in Kentlands and Lakelands, Gaithersburg?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Wide-plank white oak hardwood — typically 5-inch planks in natural to warm medium stain with matte or satin finish — is the most requested flooring in Kentlands and Lakelands' 1990s–2000s colonials and townhomes. The clean, contemporary grain of white oak suits the traditional architectural vocabulary of the Kentlands community while reading as an updated upgrade over the original builder hardwood many of these homes came with. LVP is the complement in kitchens, lower levels, and bathrooms. Porcelain tile in large format for primary bathrooms. DMV-GC Group has installed wide-plank white oak in multiple Kentlands and Lakelands projects."
+            "text": "Wide-plank white oak hardwood — typically 5-inch planks in natural to warm medium stain with matte or satin finish — is the most requested flooring in Kentlands and Lakelands' 1990s–2000s colonials and townhomes. The clean, contemporary grain of white oak suits the traditional architectural vocabulary of the Kentlands community while reading as an updated upgrade over the original builder hardwood many of these homes came with. LVP is the complement in kitchens, lower levels, and bathrooms. Porcelain tile in large format for primary bathrooms. DMV General Contracting Group has installed wide-plank white oak in multiple Kentlands and Lakelands projects."
           }
         },
         {
@@ -80,7 +80,7 @@ const schemaJsonLd = {
           "name": "Do Gaithersburg HOAs like Kentlands ARC require approval for flooring changes?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Generally, interior flooring changes — replacing carpet with hardwood, installing LVP, retiling a bathroom — do not require HOA Architectural Review Committee approval because they are interior modifications not visible from the exterior or common areas. However, some Gaithersburg HOAs and condo associations have rules about flooring types in relation to noise transmission — particularly in multi-story condos and attached townhomes where hard flooring on upper levels can transmit noise to neighbors below. In these cases, HOA rules may require underlayment specifications or limit hard flooring to certain areas. DMV-GC Group checks applicable HOA flooring rules for every Gaithersburg condo and attached townhome project before materials are ordered."
+            "text": "Generally, interior flooring changes — replacing carpet with hardwood, installing LVP, retiling a bathroom — do not require HOA Architectural Review Committee approval because they are interior modifications not visible from the exterior or common areas. However, some Gaithersburg HOAs and condo associations have rules about flooring types in relation to noise transmission — particularly in multi-story condos and attached townhomes where hard flooring on upper levels can transmit noise to neighbors below. In these cases, HOA rules may require underlayment specifications or limit hard flooring to certain areas. DMV General Contracting Group checks applicable HOA flooring rules for every Gaithersburg condo and attached townhome project before materials are ordered."
           }
         },
         {
@@ -93,10 +93,10 @@ const schemaJsonLd = {
         },
         {
           "@type": "Question",
-          "name": "Is DMV-GC Group licensed for flooring installation in Gaithersburg, MD?",
+          "name": "Is DMV General Contracting Group licensed for flooring installation in Gaithersburg, MD?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. DMV-GC Group holds a Maryland MHIC license (#156178) — required for all home improvement work in Gaithersburg. We handle both City of Gaithersburg and Montgomery County DPS permit requirements when flooring is part of a broader renovation scope requiring permits. We are fully bonded, carry comprehensive general liability insurance and workers' compensation coverage, and provide a 1-year workmanship warranty on every Gaithersburg flooring project."
+            "text": "Yes. DMV General Contracting Group holds a Maryland MHIC license (#156178) — required for all home improvement work in Gaithersburg. We handle both City of Gaithersburg and Montgomery County DPS permit requirements when flooring is part of a broader renovation scope requiring permits. We are fully bonded, carry comprehensive general liability insurance and workers' compensation coverage, and provide a 1-year workmanship warranty on every Gaithersburg flooring project."
           }
         }
       ]

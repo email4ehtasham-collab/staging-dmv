@@ -11,19 +11,20 @@ const schemaJsonLd = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "LocalBusiness",
+      "@type": "GeneralContractor",
       "@id": "https://www.dmv-gc.com/#business",
-      "name": "DMV-GC Group",
-      "alternateName": "DMV General Contracting Group LLC",
+      "name": "DMV General Contracting Group LLC",
+      "legalName": "DMV General Contracting Group LLC",
+      "alternateName": ["DMV General Contracting Group", "DMV-GC"],
       "image": "https://www.dmv-gc.com/logo.png",
       "url": "https://www.dmv-gc.com",
-      "telephone": "+12407301292",
+      "telephone": "+1-240-730-1292",
       "email": "support@dmv-gc.com",
       "foundingDate": "2018",
       "description": "Licensed design-build general contractor serving Wheaton, MD. Specializing in basement remodeling for Wheaton's split-levels, ranches, and colonials — recreation rooms, ADU conversions, home offices, and guest suites.",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "11810 Grand Park Ave, Suite 500",
+        "streetAddress": "11810 Grand Park Ave #500",
         "addressLocality": "North Bethesda",
         "addressRegion": "MD",
         "postalCode": "20852",
@@ -41,7 +42,6 @@ const schemaJsonLd = {
         { "@type": "EducationalOccupationalCredential", "name": "MHIC License", "credentialCategory": "Maryland Home Improvement Contractor License" },
         { "@type": "EducationalOccupationalCredential", "name": "DLCP License", "credentialCategory": "Washington DC Department of Licensing and Consumer Protection" }
       ],
-      "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "97", "bestRating": "5" },
       "priceRange": "$$"
     },
     {
@@ -87,31 +87,31 @@ const schemaJsonLd = {
           "name": "How much does basement remodeling cost in Wheaton, MD?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Basement remodeling in Wheaton, MD typically costs between $16,000 and $100,000 depending on scope, basement size, and finish level. A basic split-level lower-level finishing runs $16,000–$35,000. A mid-range basement with bathroom and home office runs $35,000–$65,000. A full ADU basement conversion with egress windows, separate entrance, kitchen, and bathroom typically runs $60,000–$100,000. Wheaton's value-oriented housing market means basement renovations here offer some of the strongest ROI percentages in Montgomery County. DMV-GC Group provides free in-home consultations with detailed estimates."
+            "text": "Basement remodeling in Wheaton, MD typically costs between $16,000 and $100,000 depending on scope, basement size, and finish level. A basic split-level lower-level finishing runs $16,000–$35,000. A mid-range basement with bathroom and home office runs $35,000–$65,000. A full ADU basement conversion with egress windows, separate entrance, kitchen, and bathroom typically runs $60,000–$100,000. Wheaton's value-oriented housing market means basement renovations here offer some of the strongest ROI percentages in Montgomery County. DMV General Contracting Group provides free in-home consultations with detailed estimates."
           }
         },
         {
           "@type": "Question",
-          "name": "Can DMV-GC Group finish a split-level basement in Wheaton?",
+          "name": "Can DMV General Contracting Group finish a split-level basement in Wheaton?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. Split-level homes are extremely common in Wheaton — built extensively throughout the 1950s–1970s. Their lower levels are partially above grade, which typically means natural light from existing windows, more generous ceiling heights than fully below-grade basements, and sometimes an existing exterior door that simplifies separate entrance requirements for ADU conversions. DMV-GC Group has extensive experience finishing Wheaton split-level lower levels."
+            "text": "Yes. Split-level homes are extremely common in Wheaton — built extensively throughout the 1950s–1970s. Their lower levels are partially above grade, which typically means natural light from existing windows, more generous ceiling heights than fully below-grade basements, and sometimes an existing exterior door that simplifies separate entrance requirements for ADU conversions. DMV General Contracting Group has extensive experience finishing Wheaton split-level lower levels."
           }
         },
         {
           "@type": "Question",
-          "name": "Does DMV-GC Group build ADU basement units in Wheaton?",
+          "name": "Does DMV General Contracting Group build ADU basement units in Wheaton?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. ADU basement conversions are a popular project in Wheaton, driven by the area's affordable home values, diverse community, and growing transit access from the Wheaton Metro station and the incoming Purple Line. A legal Montgomery County basement ADU requires egress windows, a separate entrance, a full kitchen or kitchenette, a full bathroom, fire separation, and a Certificate of Occupancy — all of which DMV-GC Group designs, builds, and permits in-house."
+            "text": "Yes. ADU basement conversions are a popular project in Wheaton, driven by the area's affordable home values, diverse community, and growing transit access from the Wheaton Metro station and the incoming Purple Line. A legal Montgomery County basement ADU requires egress windows, a separate entrance, a full kitchen or kitchenette, a full bathroom, fire separation, and a Certificate of Occupancy — all of which DMV General Contracting Group designs, builds, and permits in-house."
           }
         },
         {
           "@type": "Question",
-          "name": "Does DMV-GC Group handle permits for basement remodeling in Wheaton?",
+          "name": "Does DMV General Contracting Group handle permits for basement remodeling in Wheaton?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. Wheaton is an unincorporated community in Montgomery County, so all basement remodeling permits are processed through Montgomery County's Department of Permitting Services (DPS). DMV-GC Group handles all required building, electrical, and plumbing permits and manages all county correspondence and inspection scheduling. For ADU projects, we also manage the Certificate of Occupancy process."
+            "text": "Yes. Wheaton is an unincorporated community in Montgomery County, so all basement remodeling permits are processed through Montgomery County's Department of Permitting Services (DPS). DMV General Contracting Group handles all required building, electrical, and plumbing permits and manages all county correspondence and inspection scheduling. For ADU projects, we also manage the Certificate of Occupancy process."
           }
         },
         {
@@ -119,15 +119,15 @@ const schemaJsonLd = {
           "name": "How long does a basement remodel take in Wheaton, MD?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Most basement renovations in Wheaton take 6–12 weeks from construction start to completion. A split-level lower-level finishing takes 5–8 weeks. A full ADU conversion takes 10–14 weeks. Montgomery County permit processing typically adds 4–6 weeks before construction begins. ADU projects also require a Certificate of Occupancy inspection at completion. DMV-GC Group manages the complete timeline in-house."
+            "text": "Most basement renovations in Wheaton take 6–12 weeks from construction start to completion. A split-level lower-level finishing takes 5–8 weeks. A full ADU conversion takes 10–14 weeks. Montgomery County permit processing typically adds 4–6 weeks before construction begins. ADU projects also require a Certificate of Occupancy inspection at completion. DMV General Contracting Group manages the complete timeline in-house."
           }
         },
         {
           "@type": "Question",
-          "name": "Is DMV-GC Group licensed for basement remodeling in Wheaton, MD?",
+          "name": "Is DMV General Contracting Group licensed for basement remodeling in Wheaton, MD?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. DMV-GC Group holds a Maryland MHIC (Home Improvement Contractor) license — required for all home renovation work in Wheaton and Montgomery County. We are fully bonded, carry comprehensive general liability insurance and workers' compensation coverage, and provide a 1-year workmanship warranty on every basement remodeling project completed in Wheaton."
+            "text": "Yes. DMV General Contracting Group holds a Maryland MHIC (Home Improvement Contractor) license — required for all home renovation work in Wheaton and Montgomery County. We are fully bonded, carry comprehensive general liability insurance and workers' compensation coverage, and provide a 1-year workmanship warranty on every basement remodeling project completed in Wheaton."
           }
         }
       ]

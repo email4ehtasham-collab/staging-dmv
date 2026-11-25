@@ -427,19 +427,20 @@ export default function BathroomLaurelMD() {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "LocalBusiness",
+      "@type": "GeneralContractor",
       "@id": "https://www.dmv-gc.com/#business",
-      "name": "DMV-GC Group",
-      "alternateName": "DMV General Contracting Group LLC",
+      "name": "DMV General Contracting Group LLC",
+      "legalName": "DMV General Contracting Group LLC",
+      "alternateName": ["DMV General Contracting Group", "DMV-GC"],
       "image": "https://www.dmv-gc.com/logo.png",
       "url": "https://www.dmv-gc.com",
-      "telephone": "+12407301292",
+      "telephone": "+1-240-730-1292",
       "email": "support@dmv-gc.com",
       "foundingDate": "2018",
       "description": "Licensed design-build general contractor serving Laurel, MD and the greater DMV area. Specializing in bathroom remodeling across Laurel's diverse housing stock \u2014 townhomes, single-family homes, and condos \u2014 across all three permit jurisdictions.",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "11810 Grand Park Ave, Suite 500",
+        "streetAddress": "11810 Grand Park Ave #500",
         "addressLocality": "North Bethesda",
         "addressRegion": "MD",
         "postalCode": "20852",
@@ -473,13 +474,6 @@ export default function BathroomLaurelMD() {
           "credentialCategory": "Washington DC Department of Licensing and Consumer Protection"
         }
       ],
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": "97",
-        "bestRating": "5",
-        "worstRating": "1"
-      },
       "priceRange": "$$"
     },
     {
@@ -534,20 +528,20 @@ export default function BathroomLaurelMD() {
           "name": "How much does a bathroom remodel cost in Laurel, MD?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Bathroom remodeling in Laurel, MD typically costs between $8,000 and $85,000 depending on bathroom type, size, and scope. A hall or townhome bathroom refresh starts around $8,000\u2013$18,000. A mid-range master bathroom renovation runs $22,000\u2013$45,000. A full gut renovation with walk-in shower, custom tile, and premium fixtures ranges from $45,000\u2013$85,000. Laurel's diverse housing market \u2014 spanning townhomes, single-family homes, and older colonials \u2014 means renovation scopes vary widely. DMV-GC Group provides free in-home consultations with detailed estimates."
+            "text": "Bathroom remodeling in Laurel, MD typically costs between $8,000 and $85,000 depending on bathroom type, size, and scope. A hall or townhome bathroom refresh starts around $8,000\u2013$18,000. A mid-range master bathroom renovation runs $22,000\u2013$45,000. A full gut renovation with walk-in shower, custom tile, and premium fixtures ranges from $45,000\u2013$85,000. Laurel's diverse housing market \u2014 spanning townhomes, single-family homes, and older colonials \u2014 means renovation scopes vary widely. DMV General Contracting Group provides free in-home consultations with detailed estimates."
           }
         },
         {
           "@type": "Question",
-          "name": "Does DMV-GC Group handle permits for bathroom remodeling in Laurel, MD?",
+          "name": "Does DMV General Contracting Group handle permits for bathroom remodeling in Laurel, MD?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. Laurel's permit jurisdiction depends on your property's exact location \u2014 homes within the City of Laurel's incorporated limits require City of Laurel permits, while properties in the surrounding unincorporated areas require either Montgomery County or Prince George's County permits depending on which county they sit in. DMV-GC Group's in-house permit team determines the correct jurisdiction for your specific Laurel address and manages the entire permit process from application through final inspection."
+            "text": "Yes. Laurel's permit jurisdiction depends on your property's exact location \u2014 homes within the City of Laurel's incorporated limits require City of Laurel permits, while properties in the surrounding unincorporated areas require either Montgomery County or Prince George's County permits depending on which county they sit in. DMV General Contracting Group's in-house permit team determines the correct jurisdiction for your specific Laurel address and manages the entire permit process from application through final inspection."
           }
         },
         {
           "@type": "Question",
-          "name": "Does DMV-GC Group remodel townhome bathrooms in Laurel?",
+          "name": "Does DMV General Contracting Group remodel townhome bathrooms in Laurel?",
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Yes. Townhome bathroom remodels are the most common project type we complete in Laurel, where townhomes make up a large portion of the housing stock. Townhome bathroom renovations typically involve working within existing footprints \u2014 new tile, tub-to-shower conversions, vanity upgrades, and layout improvements that maximize a compact space. We also handle any required HOA documentation and coordination for Laurel's townhome communities."
@@ -555,10 +549,10 @@ export default function BathroomLaurelMD() {
         },
         {
           "@type": "Question",
-          "name": "Can DMV-GC Group do a tub-to-shower conversion in a Laurel townhome?",
+          "name": "Can DMV General Contracting Group do a tub-to-shower conversion in a Laurel townhome?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. Tub-to-shower conversions are one of the most popular bathroom projects in Laurel's townhome communities. Converting an underused tub to a walk-in shower maximizes the usable space in a small bathroom and significantly updates the look and feel. DMV-GC Group's licensed plumbers handle the drain relocation, our team applies proper waterproofing, and our tile setters install the shower tile and glass enclosure \u2014 all in-house."
+            "text": "Yes. Tub-to-shower conversions are one of the most popular bathroom projects in Laurel's townhome communities. Converting an underused tub to a walk-in shower maximizes the usable space in a small bathroom and significantly updates the look and feel. DMV General Contracting Group's licensed plumbers handle the drain relocation, our team applies proper waterproofing, and our tile setters install the shower tile and glass enclosure \u2014 all in-house."
           }
         },
         {
@@ -566,15 +560,15 @@ export default function BathroomLaurelMD() {
           "name": "How long does a bathroom remodel take in Laurel, MD?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Most bathroom renovations in Laurel take 3\u20137 weeks from construction start to completion. A townhome bathroom refresh can be done in 2\u20133 weeks. A full master bathroom gut renovation takes 5\u20138 weeks. Permit processing \u2014 through the City of Laurel, Montgomery County, or Prince George's County depending on your address \u2014 typically adds 3\u20135 weeks before construction begins. DMV-GC Group manages the complete timeline in-house."
+            "text": "Most bathroom renovations in Laurel take 3\u20137 weeks from construction start to completion. A townhome bathroom refresh can be done in 2\u20133 weeks. A full master bathroom gut renovation takes 5\u20138 weeks. Permit processing \u2014 through the City of Laurel, Montgomery County, or Prince George's County depending on your address \u2014 typically adds 3\u20135 weeks before construction begins. DMV General Contracting Group manages the complete timeline in-house."
           }
         },
         {
           "@type": "Question",
-          "name": "Is DMV-GC Group licensed for bathroom remodeling in Laurel, MD?",
+          "name": "Is DMV General Contracting Group licensed for bathroom remodeling in Laurel, MD?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. DMV-GC Group holds a Maryland MHIC (Home Improvement Contractor) license \u2014 required for all home renovation work in Laurel, whether in Montgomery County, Prince George's County, or the City of Laurel. We are fully bonded, carry comprehensive general liability insurance and workers' compensation coverage, and provide a 1-year workmanship warranty on every bathroom remodeling project completed in Laurel."
+            "text": "Yes. DMV General Contracting Group holds a Maryland MHIC (Home Improvement Contractor) license \u2014 required for all home renovation work in Laurel, whether in Montgomery County, Prince George's County, or the City of Laurel. We are fully bonded, carry comprehensive general liability insurance and workers' compensation coverage, and provide a 1-year workmanship warranty on every bathroom remodeling project completed in Laurel."
           }
         }
       ]

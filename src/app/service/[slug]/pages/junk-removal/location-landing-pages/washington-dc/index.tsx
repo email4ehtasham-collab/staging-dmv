@@ -11,19 +11,20 @@ const schemaJsonLd = {
     "@context": "https://schema.org",
     "@graph": [
         {
-            "@type": "LocalBusiness",
+            "@type": "GeneralContractor",
             "@id": "https://www.dmv-gc.com/#business",
-            "name": "DMV-GC Group",
-            "alternateName": "DMV General Contracting Group LLC",
+            "name": "DMV General Contracting Group LLC",
+            "legalName": "DMV General Contracting Group LLC",
+            "alternateName": ["DMV General Contracting Group", "DMV-GC"],
             "image": "https://www.dmv-gc.com/logo.png",
             "url": "https://www.dmv-gc.com",
-            "telephone": "+12407301292",
+            "telephone": "+1-240-730-1292",
             "email": "support@dmv-gc.com",
             "foundingDate": "2018",
             "description": "Licensed general contractor providing professional junk removal and debris hauling services in Washington DC. Residential and commercial cleanouts, construction debris removal, bulk item pickup, and property cleanouts. DC DLCP #410526000209.",
             "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "11810 Grand Park Ave, Suite 500",
+                "streetAddress": "11810 Grand Park Ave #500",
                 "addressLocality": "North Bethesda",
                 "addressRegion": "MD",
                 "postalCode": "20852",
@@ -40,7 +41,6 @@ const schemaJsonLd = {
                 { "@type": "City", "name": "Capitol Hill" },
                 { "@type": "City", "name": "Dupont Circle" },
                 { "@type": "City", "name": "Friendship Heights" },
-                { "@type": "City", "name": "Arlington" },
                 { "@type": "AdministrativeArea", "name": "Washington, DC" }
             ],
             "hasCredential": [
@@ -55,13 +55,6 @@ const schemaJsonLd = {
                     "credentialCategory": "Maryland Home Improvement Contractor License — issued by the Maryland Home Improvement Commission #156178"
                 }
             ],
-            "aggregateRating": {
-                "@type": "AggregateRating",
-                "ratingValue": "4.9",
-                "reviewCount": "97",
-                "bestRating": "5",
-                "worstRating": "1"
-            },
             "priceRange": "$$",
             "openingHoursSpecification": {
                 "@type": "OpeningHoursSpecification",

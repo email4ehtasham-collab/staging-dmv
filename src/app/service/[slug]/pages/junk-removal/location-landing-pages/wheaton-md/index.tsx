@@ -11,19 +11,20 @@ const schemaJsonLd = {
     "@context": "https://schema.org",
     "@graph": [
         {
-            "@type": "LocalBusiness",
+            "@type": "GeneralContractor",
             "@id": "https://www.dmv-gc.com/#business",
-            "name": "DMV-GC Group",
-            "alternateName": "DMV General Contracting Group LLC",
+            "name": "DMV General Contracting Group LLC",
+            "legalName": "DMV General Contracting Group LLC",
+            "alternateName": ["DMV General Contracting Group", "DMV-GC"],
             "image": "https://www.dmv-gc.com/logo.png",
             "url": "https://www.dmv-gc.com",
-            "telephone": "+12407301292",
+            "telephone": "+1-240-730-1292",
             "email": "support@dmv-gc.com",
             "foundingDate": "2018",
             "description": "Licensed Maryland general contractor providing professional junk removal and debris hauling services in Wheaton, MD. Residential cleanouts, commercial spaces, bulky items, renovation debris, and unwanted clutter. MHIC #156178.",
             "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "11810 Grand Park Ave, Suite 500",
+                "streetAddress": "11810 Grand Park Ave #500",
                 "addressLocality": "North Bethesda",
                 "addressRegion": "MD",
                 "postalCode": "20852",
@@ -56,13 +57,6 @@ const schemaJsonLd = {
                     "credentialCategory": "Washington DC Department of Licensing and Consumer Protection — Home Improvement Contractor #410526000209"
                 }
             ],
-            "aggregateRating": {
-                "@type": "AggregateRating",
-                "ratingValue": "4.9",
-                "reviewCount": "97",
-                "bestRating": "5",
-                "worstRating": "1"
-            },
             "priceRange": "$$",
             "openingHoursSpecification": {
                 "@type": "OpeningHoursSpecification",

@@ -11,19 +11,20 @@ const schemaJsonLd = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "LocalBusiness",
+      "@type": "GeneralContractor",
       "@id": "https://www.dmv-gc.com/#business",
-      "name": "DMV-GC Group",
-      "alternateName": "DMV General Contracting Group LLC",
+      "name": "DMV General Contracting Group LLC",
+      "legalName": "DMV General Contracting Group LLC",
+      "alternateName": ["DMV General Contracting Group", "DMV-GC"],
       "image": "https://www.dmv-gc.com/logo.png",
       "url": "https://www.dmv-gc.com",
-      "telephone": "+12407301292",
+      "telephone": "+1-240-730-1292",
       "email": "support@dmv-gc.com",
       "foundingDate": "2018",
       "description": "Licensed design-build general contractor serving Rockville, MD. Specializing in basement remodeling across Rockville&apos;s diverse housing stock — single-family colonials, townhomes in King Farm and Fallsgrove, and mid-century ranches — with City of Rockville permit expertise.",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "11810 Grand Park Ave, Suite 500",
+        "streetAddress": "11810 Grand Park Ave #500",
         "addressLocality": "North Bethesda",
         "addressRegion": "MD",
         "postalCode": "20852",
@@ -41,7 +42,6 @@ const schemaJsonLd = {
         { "@type": "EducationalOccupationalCredential", "name": "MHIC License", "credentialCategory": "Maryland Home Improvement Contractor License" },
         { "@type": "EducationalOccupationalCredential", "name": "DLCP License", "credentialCategory": "Washington DC Department of Licensing and Consumer Protection" }
       ],
-      "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "97", "bestRating": "5" },
       "priceRange": "$$"
     },
     {
@@ -75,7 +75,7 @@ const schemaJsonLd = {
           "name": "How much does basement remodeling cost in Rockville, MD?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Basement remodeling in Rockville, MD typically costs between $18,000 and $115,000 depending on scope, home type, and finish level. A townhome basement finishing (King Farm, Fallsgrove) runs $18,000\u2013$40,000. A full single-family basement finishing costs $28,000\u2013$58,000. A mid-range renovation with bathroom and home office runs $40,000\u2013$75,000. A full ADU conversion with egress windows, separate entrance, kitchen, and bathroom typically costs $65,000\u2013$115,000. DMV-GC Group provides free in-home consultations with detailed estimates."
+            "text": "Basement remodeling in Rockville, MD typically costs between $18,000 and $115,000 depending on scope, home type, and finish level. A townhome basement finishing (King Farm, Fallsgrove) runs $18,000\u2013$40,000. A full single-family basement finishing costs $28,000\u2013$58,000. A mid-range renovation with bathroom and home office runs $40,000\u2013$75,000. A full ADU conversion with egress windows, separate entrance, kitchen, and bathroom typically costs $65,000\u2013$115,000. DMV General Contracting Group provides free in-home consultations with detailed estimates."
           }
         },
         {
@@ -83,23 +83,23 @@ const schemaJsonLd = {
           "name": "Does Rockville require City permits for basement remodeling?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. Rockville is an incorporated city \u2014 properties within the City of Rockville\u2019s boundaries require permits from the City of Rockville\u2019s Department of Community Planning and Development Services, not from Montgomery County DPS. Properties in unincorporated areas with Rockville mailing addresses (including parts of Fallsgrove and some North Bethesda-adjacent areas) require Montgomery County permits. DMV-GC Group verifies the correct permit jurisdiction for every Rockville address before filing any permits."
+            "text": "Yes. Rockville is an incorporated city \u2014 properties within the City of Rockville\u2019s boundaries require permits from the City of Rockville\u2019s Department of Community Planning and Development Services, not from Montgomery County DPS. Properties in unincorporated areas with Rockville mailing addresses (including parts of Fallsgrove and some North Bethesda-adjacent areas) require Montgomery County permits. DMV General Contracting Group verifies the correct permit jurisdiction for every Rockville address before filing any permits."
           }
         },
         {
           "@type": "Question",
-          "name": "Does DMV-GC Group handle HOA requirements for basement remodeling in King Farm and Fallsgrove?",
+          "name": "Does DMV General Contracting Group handle HOA requirements for basement remodeling in King Farm and Fallsgrove?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. King Farm, Fallsgrove, and Congressional are planned communities with active HOAs. DMV-GC Group prepares and submits all required HOA documentation \u2014 certificates of insurance, contractor registration, scope descriptions, and work-hour compliance scheduling \u2014 as a standard part of every project in these communities. Homeowners never need to manage HOA coordination themselves."
+            "text": "Yes. King Farm, Fallsgrove, and Congressional are planned communities with active HOAs. DMV General Contracting Group prepares and submits all required HOA documentation \u2014 certificates of insurance, contractor registration, scope descriptions, and work-hour compliance scheduling \u2014 as a standard part of every project in these communities. Homeowners never need to manage HOA coordination themselves."
           }
         },
         {
           "@type": "Question",
-          "name": "Can DMV-GC Group convert a Rockville basement into a legal ADU?",
+          "name": "Can DMV General Contracting Group convert a Rockville basement into a legal ADU?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. ADU basement conversions are increasingly popular in Rockville, driven by the city\u2019s strong rental market and access to the Rockville and Shady Grove Metro stations. A legal basement ADU requires egress windows in sleeping areas, a separate entrance, a full kitchen or kitchenette, a full bathroom, fire-rated separation between the unit and main dwelling, and a Certificate of Occupancy. DMV-GC Group designs, builds, and permits complete ADU conversions in Rockville \u2014 including all City of Rockville permit applications and COO inspections."
+            "text": "Yes. ADU basement conversions are increasingly popular in Rockville, driven by the city\u2019s strong rental market and access to the Rockville and Shady Grove Metro stations. A legal basement ADU requires egress windows in sleeping areas, a separate entrance, a full kitchen or kitchenette, a full bathroom, fire-rated separation between the unit and main dwelling, and a Certificate of Occupancy. DMV General Contracting Group designs, builds, and permits complete ADU conversions in Rockville \u2014 including all City of Rockville permit applications and COO inspections."
           }
         },
         {
@@ -107,15 +107,15 @@ const schemaJsonLd = {
           "name": "How long does a basement remodel take in Rockville, MD?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Most Rockville basement renovations take 6\u201312 weeks from construction start to completion. A townhome finishing takes 5\u20138 weeks. A full ADU conversion takes 10\u201314 weeks. City of Rockville permit processing typically takes 3\u20135 weeks. HOA review (King Farm, Fallsgrove, Congressional) runs concurrently with permit processing where possible. DMV-GC Group manages the complete timeline in-house."
+            "text": "Most Rockville basement renovations take 6\u201312 weeks from construction start to completion. A townhome finishing takes 5\u20138 weeks. A full ADU conversion takes 10\u201314 weeks. City of Rockville permit processing typically takes 3\u20135 weeks. HOA review (King Farm, Fallsgrove, Congressional) runs concurrently with permit processing where possible. DMV General Contracting Group manages the complete timeline in-house."
           }
         },
         {
           "@type": "Question",
-          "name": "Is DMV-GC Group licensed for basement remodeling in Rockville, MD?",
+          "name": "Is DMV General Contracting Group licensed for basement remodeling in Rockville, MD?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. DMV-GC Group holds a Maryland MHIC (Home Improvement Contractor) license \u2014 required for all home renovation work in Rockville. We are fully bonded, carry comprehensive general liability insurance and workers\u2019 compensation coverage, and provide a 1-year workmanship warranty on every basement remodeling project completed in Rockville."
+            "text": "Yes. DMV General Contracting Group holds a Maryland MHIC (Home Improvement Contractor) license \u2014 required for all home renovation work in Rockville. We are fully bonded, carry comprehensive general liability insurance and workers\u2019 compensation coverage, and provide a 1-year workmanship warranty on every basement remodeling project completed in Rockville."
           }
         }
       ]

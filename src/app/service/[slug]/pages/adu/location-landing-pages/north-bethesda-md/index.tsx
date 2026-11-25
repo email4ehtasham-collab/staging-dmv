@@ -11,19 +11,20 @@ const schemaJsonLd = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "LocalBusiness",
+      "@type": "GeneralContractor",
       "@id": "https://www.dmv-gc.com/#business",
-      "name": "DMV-GC Group",
-      "alternateName": "DMV General Contracting Group LLC",
+      "name": "DMV General Contracting Group LLC",
+      "legalName": "DMV General Contracting Group LLC",
+      "alternateName": ["DMV General Contracting Group", "DMV-GC"],
       "image": "https://www.dmv-gc.com/logo.png",
       "url": "https://www.dmv-gc.com",
-      "telephone": "+12407301292",
+      "telephone": "+1-240-730-1292",
       "email": "support@dmv-gc.com",
       "foundingDate": "2018",
-      "description": "Licensed design-build general contractor headquartered in North Bethesda, MD at 11810 Grand Park Ave, Suite 500. Specializing in ADU construction across North Bethesda's diverse housing — basement ADUs, split-level lower-level conversions, garage conversions, and attached in-law suites — with full Montgomery County permit and Certificate of Occupancy management.",
+      "description": "Licensed design-build general contractor headquartered in North Bethesda, MD at 11810 Grand Park Ave #500. Specializing in ADU construction across North Bethesda's diverse housing — basement ADUs, split-level lower-level conversions, garage conversions, and attached in-law suites — with full Montgomery County permit and Certificate of Occupancy management.",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "11810 Grand Park Ave, Suite 500",
+        "streetAddress": "11810 Grand Park Ave #500",
         "addressLocality": "North Bethesda",
         "addressRegion": "MD",
         "postalCode": "20852",
@@ -41,7 +42,6 @@ const schemaJsonLd = {
         { "@type": "EducationalOccupationalCredential", "name": "MHIC License", "credentialCategory": "Maryland Home Improvement Contractor License" },
         { "@type": "EducationalOccupationalCredential", "name": "DLCP License", "credentialCategory": "Washington DC Department of Licensing and Consumer Protection" }
       ],
-      "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "97", "bestRating": "5" },
       "priceRange": "$$$"
     },
     {
@@ -76,15 +76,15 @@ const schemaJsonLd = {
           "name": "How much does it cost to build an ADU in North Bethesda, MD?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "ADU construction in North Bethesda, MD typically costs between $60,000 and $220,000 depending on ADU type and scope. A split-level lower-level ADU conversion runs $60,000–$110,000. A basement ADU conversion costs $65,000–$120,000. A garage conversion ADU costs $60,000–$108,000. An attached in-law suite addition costs $100,000–$220,000. As North Bethesda's local contractor headquartered at 11810 Grand Park Ave, DMV-GC Group provides free in-home consultations with detailed, honest estimates."
+            "text": "ADU construction in North Bethesda, MD typically costs between $60,000 and $220,000 depending on ADU type and scope. A split-level lower-level ADU conversion runs $60,000–$110,000. A basement ADU conversion costs $65,000–$120,000. A garage conversion ADU costs $60,000–$108,000. An attached in-law suite addition costs $100,000–$220,000. As North Bethesda's local contractor headquartered at 11810 Grand Park Ave #500, DMV General Contracting Group provides free in-home consultations with detailed, honest estimates."
           }
         },
         {
           "@type": "Question",
-          "name": "Is DMV-GC Group based in North Bethesda?",
+          "name": "Is DMV General Contracting Group based in North Bethesda?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. DMV-GC Group is headquartered at 11810 Grand Park Ave, Suite 500, North Bethesda, MD 20852 — in the Pike District redevelopment area near the White Flint Metro station. We are North Bethesda's local licensed ADU contractor, with direct familiarity with every neighborhood's housing stock, the Montgomery County permit process, and the White Flint Metro rental market that makes North Bethesda ADU investments so compelling."
+            "text": "Yes. DMV General Contracting Group is headquartered at 11810 Grand Park Ave #500, North Bethesda, MD 20852 — in the Pike District redevelopment area near the White Flint Metro station. We are North Bethesda's local licensed ADU contractor, with direct familiarity with every neighborhood's housing stock, the Montgomery County permit process, and the White Flint Metro rental market that makes North Bethesda ADU investments so compelling."
           }
         },
         {
@@ -92,15 +92,15 @@ const schemaJsonLd = {
           "name": "Can I convert a North Bethesda split-level lower level into an ADU?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes — and split-level lower-level ADU conversions are among the most practical and cost-effective ADU paths in North Bethesda. North Bethesda has a high concentration of 1960s–1970s split-level homes in White Flint Farm, Luxmanor, and surrounding neighborhoods where the lower level is partially above grade, naturally lit, and often has an existing side entrance. Many also have existing lower-level half bath rough-ins that reduce the cost of adding a bathroom. DMV-GC Group assesses split-level ADU feasibility during the free in-home consultation."
+            "text": "Yes — and split-level lower-level ADU conversions are among the most practical and cost-effective ADU paths in North Bethesda. North Bethesda has a high concentration of 1960s–1970s split-level homes in White Flint Farm, Luxmanor, and surrounding neighborhoods where the lower level is partially above grade, naturally lit, and often has an existing side entrance. Many also have existing lower-level half bath rough-ins that reduce the cost of adding a bathroom. DMV General Contracting Group assesses split-level ADU feasibility during the free in-home consultation."
           }
         },
         {
           "@type": "Question",
-          "name": "Does DMV-GC Group handle ADU permits in North Bethesda?",
+          "name": "Does DMV General Contracting Group handle ADU permits in North Bethesda?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. North Bethesda is an unincorporated community in Montgomery County — all ADU permits go through Montgomery County's Department of Permitting Services (DPS). DMV-GC Group handles all required building, electrical, and plumbing permits plus the Certificate of Occupancy application and all required inspections. As North Bethesda's local contractor, our permit team manages all county correspondence from application through final COO issuance — homeowners never need to contact Montgomery County directly."
+            "text": "Yes. North Bethesda is an unincorporated community in Montgomery County — all ADU permits go through Montgomery County's Department of Permitting Services (DPS). DMV General Contracting Group handles all required building, electrical, and plumbing permits plus the Certificate of Occupancy application and all required inspections. As North Bethesda's local contractor, our permit team manages all county correspondence from application through final COO issuance — homeowners never need to contact Montgomery County directly."
           }
         },
         {
@@ -113,10 +113,10 @@ const schemaJsonLd = {
         },
         {
           "@type": "Question",
-          "name": "Is DMV-GC Group licensed for ADU construction in North Bethesda, MD?",
+          "name": "Is DMV General Contracting Group licensed for ADU construction in North Bethesda, MD?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. DMV-GC Group holds a Maryland MHIC license — required for all home improvement and construction work in North Bethesda and Montgomery County. We are fully bonded, carry comprehensive general liability insurance and workers' compensation coverage, and provide a 1-year workmanship warranty on every ADU project in North Bethesda."
+            "text": "Yes. DMV General Contracting Group holds a Maryland MHIC license — required for all home improvement and construction work in North Bethesda and Montgomery County. We are fully bonded, carry comprehensive general liability insurance and workers' compensation coverage, and provide a 1-year workmanship warranty on every ADU project in North Bethesda."
           }
         }
       ]

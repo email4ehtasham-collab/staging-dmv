@@ -11,20 +11,21 @@ const schemaJsonLd = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "LocalBusiness",
+      "@type": "GeneralContractor",
       "@id": "https://www.dmv-gc.com/#business",
-      name: "DMV-GC Group",
-      alternateName: "DMV General Contracting Group LLC",
+      name: "DMV General Contracting Group LLC",
+      legalName: "DMV General Contracting Group LLC",
+      alternateName: ["DMV General Contracting Group", "DMV-GC"],
       image: "https://www.dmv-gc.com/logo.png",
       url: "https://www.dmv-gc.com",
-      telephone: "+12407301292",
+      telephone: "+1-240-730-1292",
       email: "support@dmv-gc.com",
       foundingDate: "2018",
       description:
         "Licensed design-build general contractor serving Kensington, MD. Specializing in ADU construction for Kensington's Victorian, Craftsman, and historic homes — basement ADUs, garage conversions, and attached in-law suites — with Town of Kensington permit expertise.",
       address: {
         "@type": "PostalAddress",
-        streetAddress: "11810 Grand Park Ave, Suite 500",
+        streetAddress: "11810 Grand Park Ave #500",
         addressLocality: "North Bethesda",
         addressRegion: "MD",
         postalCode: "20852",
@@ -50,7 +51,6 @@ const schemaJsonLd = {
           credentialCategory: "Washington DC Department of Licensing and Consumer Protection",
         },
       ],
-      aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", reviewCount: "97", bestRating: "5" },
       priceRange: "$$$",
     },
     {
@@ -91,7 +91,7 @@ const schemaJsonLd = {
           name: "How much does it cost to build an ADU in Kensington, MD?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "ADU construction in Kensington, MD typically costs between $65,000 and $220,000 depending on ADU type and scope. A basement ADU conversion runs $75,000–$130,000. A garage conversion ADU runs $65,000–$120,000. An attached in-law suite addition costs $110,000–$220,000. Detached ADUs are less common in Kensington due to smaller lot sizes but are feasible on some properties. Kensington's Victorian and Craftsman homes may require additional work addressing older systems — galvanized plumbing, older electrical — before ADU construction begins. DMV-GC Group provides free in-home consultations with honest, detailed estimates.",
+            text: "ADU construction in Kensington, MD typically costs between $65,000 and $220,000 depending on ADU type and scope. A basement ADU conversion runs $75,000–$130,000. A garage conversion ADU runs $65,000–$120,000. An attached in-law suite addition costs $110,000–$220,000. Detached ADUs are less common in Kensington due to smaller lot sizes but are feasible on some properties. Kensington's Victorian and Craftsman homes may require additional work addressing older systems — galvanized plumbing, older electrical — before ADU construction begins. DMV General Contracting Group provides free in-home consultations with honest, detailed estimates.",
           },
         },
         {
@@ -99,7 +99,7 @@ const schemaJsonLd = {
           name: "Does the Town of Kensington have its own ADU permit process?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Yes. Kensington is an incorporated town within Montgomery County, and properties within the town limits require permits from the Town of Kensington rather than Montgomery County DPS. The Town has its own plan review process and inspection staff. DMV-GC Group verifies the correct permit jurisdiction for every Kensington address — Town permits vs. Montgomery County permits — before filing anything. A small number of Kensington-mailing-address properties fall outside the town limits and require county permits; we verify each specific address using parcel boundary data.",
+            text: "Yes. Kensington is an incorporated town within Montgomery County, and properties within the town limits require permits from the Town of Kensington rather than Montgomery County DPS. The Town has its own plan review process and inspection staff. DMV General Contracting Group verifies the correct permit jurisdiction for every Kensington address — Town permits vs. Montgomery County permits — before filing anything. A small number of Kensington-mailing-address properties fall outside the town limits and require county permits; we verify each specific address using parcel boundary data.",
           },
         },
         {
@@ -107,7 +107,7 @@ const schemaJsonLd = {
           name: "Can I build an ADU on a small Kensington lot?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "It depends on your specific lot size and the ADU type. Montgomery County's ADU ordinance requires a minimum lot size of 6,000 sq ft for an ADU. Many of Kensington's historic lots are at or just above this threshold. For smaller Kensington lots, basement ADU conversions and garage conversions are often the most feasible options — since they use existing structure rather than adding new building footprint. DMV-GC Group confirms ADU feasibility for your specific Kensington property during the free consultation.",
+            text: "It depends on your specific lot size and the ADU type. Montgomery County's ADU ordinance requires a minimum lot size of 6,000 sq ft for an ADU. Many of Kensington's historic lots are at or just above this threshold. For smaller Kensington lots, basement ADU conversions and garage conversions are often the most feasible options — since they use existing structure rather than adding new building footprint. DMV General Contracting Group confirms ADU feasibility for your specific Kensington property during the free consultation.",
           },
         },
         {
@@ -115,7 +115,7 @@ const schemaJsonLd = {
           name: "Can I convert my Kensington garage into an ADU?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Yes, if the garage has sufficient square footage and ceiling height. Many of Kensington's older detached garages — built in the 1920s–1940s — have enough footprint for a studio or one-bedroom ADU. The conversion involves insulation, HVAC, plumbing rough-in, egress windows or doors, interior framing, drywall, flooring, kitchen, and bathroom. Town of Kensington permits and a Certificate of Occupancy are required. DMV-GC Group assesses garage conversion feasibility during the free in-home consultation.",
+            text: "Yes, if the garage has sufficient square footage and ceiling height. Many of Kensington's older detached garages — built in the 1920s–1940s — have enough footprint for a studio or one-bedroom ADU. The conversion involves insulation, HVAC, plumbing rough-in, egress windows or doors, interior framing, drywall, flooring, kitchen, and bathroom. Town of Kensington permits and a Certificate of Occupancy are required. DMV General Contracting Group assesses garage conversion feasibility during the free in-home consultation.",
           },
         },
         {
@@ -123,15 +123,15 @@ const schemaJsonLd = {
           name: "How does Kensington's historic character affect ADU construction?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Kensington is not on the National Register of Historic Places like Garrett Park, so there is no formal federal historic review for ADU projects. However, the Town of Kensington's permit review process may consider architectural compatibility for any new addition or garage conversion that affects the exterior appearance of a historic home. DMV-GC Group designs all Kensington ADU additions to be architecturally compatible with the Victorian and Craftsman character of the existing homes — both because it's good design and because it facilitates smoother town permit review.",
+            text: "Kensington is not on the National Register of Historic Places like Garrett Park, so there is no formal federal historic review for ADU projects. However, the Town of Kensington's permit review process may consider architectural compatibility for any new addition or garage conversion that affects the exterior appearance of a historic home. DMV General Contracting Group designs all Kensington ADU additions to be architecturally compatible with the Victorian and Craftsman character of the existing homes — both because it's good design and because it facilitates smoother town permit review.",
           },
         },
         {
           "@type": "Question",
-          name: "Is DMV-GC Group licensed for ADU construction in Kensington, MD?",
+          name: "Is DMV General Contracting Group licensed for ADU construction in Kensington, MD?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Yes. DMV-GC Group holds a Maryland MHIC (Home Improvement Contractor) license — required for all home improvement and construction work in Kensington. We are fully bonded, carry comprehensive general liability insurance and workers' compensation coverage, and provide a 1-year workmanship warranty on every ADU project completed in Kensington.",
+            text: "Yes. DMV General Contracting Group holds a Maryland MHIC (Home Improvement Contractor) license — required for all home improvement and construction work in Kensington. We are fully bonded, carry comprehensive general liability insurance and workers' compensation coverage, and provide a 1-year workmanship warranty on every ADU project completed in Kensington.",
           },
         },
       ],

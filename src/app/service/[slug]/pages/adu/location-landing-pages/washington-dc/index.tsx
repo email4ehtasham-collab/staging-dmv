@@ -11,20 +11,21 @@ const schemaJsonLd = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "LocalBusiness",
+      "@type": "GeneralContractor",
       "@id": "https://www.dmv-gc.com/#business",
-      "name": "DMV-GC Group",
-      "alternateName": "DMV General Contracting Group LLC",
+      "name": "DMV General Contracting Group LLC",
+      "legalName": "DMV General Contracting Group LLC",
+      "alternateName": ["DMV General Contracting Group", "DMV-GC"],
       "image": "https://www.dmv-gc.com/logo.png",
       "url": "https://www.dmv-gc.com",
-      "telephone": "+12407301292",
+      "telephone": "+1-240-730-1292",
       "email": "support@dmv-gc.com",
       "foundingDate": "2018",
       "description":
         "DLCP-licensed design-build general contractor serving Washington, DC. Specializing in ADU construction for DC's rowhouse stock — English basement ADU conversions, basement apartment buildouts, and carriage house ADUs — with DC DOB permit expertise and HPRB historic district coordination.",
       address: {
         "@type": "PostalAddress",
-        streetAddress: "11810 Grand Park Ave, Suite 500",
+        streetAddress: "11810 Grand Park Ave #500",
         addressLocality: "North Bethesda",
         addressRegion: "MD",
         postalCode: "20852",
@@ -46,7 +47,6 @@ const schemaJsonLd = {
           credentialCategory: "Washington DC Department of Licensing and Consumer Protection",
         },
       ],
-      aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", reviewCount: "97", bestRating: "5" },
       priceRange: "$$$$",
     },
     {
@@ -98,15 +98,15 @@ const schemaJsonLd = {
           name: "How much does it cost to build an ADU in Washington, DC?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "ADU construction in Washington, DC typically costs between $85,000 and $175,000 depending on ADU type and scope. An English basement ADU conversion — the most common DC ADU type — runs $90,000–$150,000. A below-grade basement ADU conversion costs $85,000–$140,000. A carriage house or rear structure ADU runs $95,000–$160,000. DC's urban construction premium — labor, logistics, permit fees, and DC DOB processing — adds 15–25% compared to comparable projects in Maryland suburbs. Projects in DC historic districts that involve exterior modifications requiring HPRB review add additional timeline but not necessarily large cost. DMV-GC Group provides free in-home consultations with detailed estimates.",
+            text: "ADU construction in Washington, DC typically costs between $85,000 and $175,000 depending on ADU type and scope. An English basement ADU conversion — the most common DC ADU type — runs $90,000–$150,000. A below-grade basement ADU conversion costs $85,000–$140,000. A carriage house or rear structure ADU runs $95,000–$160,000. DC's urban construction premium — labor, logistics, permit fees, and DC DOB processing — adds 15–25% compared to comparable projects in Maryland suburbs. Projects in DC historic districts that involve exterior modifications requiring HPRB review add additional timeline but not necessarily large cost. DMV General Contracting Group provides free in-home consultations with detailed estimates.",
           },
         },
         {
           "@type": "Question",
-          name: "Does DMV-GC Group hold a DC DLCP license for ADU construction in Washington, DC?",
+          name: "Does DMV General Contracting Group hold a DC DLCP license for ADU construction in Washington, DC?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Yes. DMV-GC Group holds a Washington DC DLCP (Department of Licensing and Consumer Protection) license — legally required for all home improvement work in the District of Columbia, including ADU construction. A Maryland MHIC license alone does not authorize ADU work in DC. DMV-GC Group holds both MHIC (Maryland) and DLCP (DC) licenses — one of the relatively small number of contractors in the DMV area fully licensed to perform ADU construction in both jurisdictions. Before hiring any contractor for DC ADU work, verify their DLCP license at DC's licensing portal.",
+            text: "Yes. DMV General Contracting Group holds a Washington DC DLCP (Department of Licensing and Consumer Protection) license — legally required for all home improvement work in the District of Columbia, including ADU construction. A Maryland MHIC license alone does not authorize ADU work in DC. DMV General Contracting Group holds both MHIC (Maryland) and DLCP (DC) licenses — one of the relatively small number of contractors in the DMV area fully licensed to perform ADU construction in both jurisdictions. Before hiring any contractor for DC ADU work, verify their DLCP license at DC's licensing portal.",
           },
         },
         {
@@ -114,7 +114,7 @@ const schemaJsonLd = {
           name: "What is an English basement ADU and how does it work in DC?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "An English basement is the semi-below-grade level of a DC rowhouse — partially below street grade on the front but at or above grade on the rear, with its own separate entrance typically below the main stoop. English basement ADU conversions are the most common ADU type in DC's rowhouse neighborhoods. The conversion requires a separate entrance (often already in place at the below-stoop door), egress window compliance in sleeping areas, a full kitchen, a full bathroom (with ejector pump where the floor is below the sewer line), fire-rated ceiling separation, and a DC Certificate of Occupancy. DMV-GC Group designs, builds, and permits complete English basement ADU conversions in all DC neighborhoods.",
+            text: "An English basement is the semi-below-grade level of a DC rowhouse — partially below street grade on the front but at or above grade on the rear, with its own separate entrance typically below the main stoop. English basement ADU conversions are the most common ADU type in DC's rowhouse neighborhoods. The conversion requires a separate entrance (often already in place at the below-stoop door), egress window compliance in sleeping areas, a full kitchen, a full bathroom (with ejector pump where the floor is below the sewer line), fire-rated ceiling separation, and a DC Certificate of Occupancy. DMV General Contracting Group designs, builds, and permits complete English basement ADU conversions in all DC neighborhoods.",
           },
         },
         {
@@ -122,7 +122,7 @@ const schemaJsonLd = {
           name: "Does DC historic district designation affect ADU construction?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "For interior ADU work — finishing, kitchen, bathroom, framing — DC historic district designation does not add requirements beyond standard DC DOB permits. HPRB (Historic Preservation Review Board) reviews exterior changes, not interior renovations. However, any exterior modification that is part of the ADU project and is visible from a public street — a new egress window opening in the front facade, changes to the English basement entrance on the primary front facade — may require HPRB review or a Certificate of No Objection in a historic district. DMV-GC Group assesses every DC ADU project for HPRB applicability during the consultation and designs exterior modifications to avoid historic review where possible — typically by siting egress windows at the rear rather than the front.",
+            text: "For interior ADU work — finishing, kitchen, bathroom, framing — DC historic district designation does not add requirements beyond standard DC DOB permits. HPRB (Historic Preservation Review Board) reviews exterior changes, not interior renovations. However, any exterior modification that is part of the ADU project and is visible from a public street — a new egress window opening in the front facade, changes to the English basement entrance on the primary front facade — may require HPRB review or a Certificate of No Objection in a historic district. DMV General Contracting Group assesses every DC ADU project for HPRB applicability during the consultation and designs exterior modifications to avoid historic review where possible — typically by siting egress windows at the rear rather than the front.",
           },
         },
         {
@@ -130,7 +130,7 @@ const schemaJsonLd = {
           name: "Do DC ADU bathrooms require ejector pumps?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Often yes. DC rowhouse basements and English basements are frequently at or below the elevation of the city sewer line, meaning waste from below-grade bathroom fixtures cannot drain by gravity. An ejector pump — a sealed pit in the floor with a pump that pushes waste up to the gravity drain line — is required when the proposed bathroom floor elevation is below the existing drain invert. DMV-GC Group's licensed plumbers assess drain invert elevation on every DC ADU bathroom project before any plumbing is designed or priced.",
+            text: "Often yes. DC rowhouse basements and English basements are frequently at or below the elevation of the city sewer line, meaning waste from below-grade bathroom fixtures cannot drain by gravity. An ejector pump — a sealed pit in the floor with a pump that pushes waste up to the gravity drain line — is required when the proposed bathroom floor elevation is below the existing drain invert. DMV General Contracting Group's licensed plumbers assess drain invert elevation on every DC ADU bathroom project before any plumbing is designed or priced.",
           },
         },
         {
@@ -138,7 +138,7 @@ const schemaJsonLd = {
           name: "Does DC require a Certificate of Occupancy for a basement ADU?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Yes. A Certificate of Occupancy (COO) from the DC Department of Buildings is required before any basement or English basement ADU in Washington, DC can be legally rented or occupied. An unpermitted basement unit — without a COO — is illegal to rent under DC law, creates insurance and mortgage complications, and may result in fines and required removal. DMV-GC Group manages the complete COO process — DC DOB permit application, all required inspections, and COO issuance — as a standard part of every DC ADU project.",
+            text: "Yes. A Certificate of Occupancy (COO) from the DC Department of Buildings is required before any basement or English basement ADU in Washington, DC can be legally rented or occupied. An unpermitted basement unit — without a COO — is illegal to rent under DC law, creates insurance and mortgage complications, and may result in fines and required removal. DMV General Contracting Group manages the complete COO process — DC DOB permit application, all required inspections, and COO issuance — as a standard part of every DC ADU project.",
           },
         },
       ],

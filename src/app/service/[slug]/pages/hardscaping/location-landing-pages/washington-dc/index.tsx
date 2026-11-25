@@ -96,16 +96,18 @@ const HardscapingWashingtonDC = () => {
                             "@context": "https://schema.org",
                             "@graph": [
                                 {
-                                    "@type": "LocalBusiness",
+                                    "@type": "GeneralContractor",
                                     "@id": "https://www.dmv-gc.com/#business",
                                     "name": "DMV General Contracting Group LLC",
+                                    "legalName": "DMV General Contracting Group LLC",
+                                    "alternateName": ["DMV General Contracting Group", "DMV-GC"],
                                     "url": "https://www.dmv-gc.com/",
                                     "telephone": "+1-240-730-1292",
                                     "email": "support@dmv-gc.com",
                                     "description": "Licensed hardscaping contractor serving Washington DC. DLCP licensed #410526000209. DC DOB permits at 1100 4th Street SW. Rear garden patios, courtyard paving, retaining walls, outdoor kitchens, rooftop terraces and party wall coordination for DC rowhouses, Georgetown colonials and Capitol Hill Victorians. HPRB guidance for historic district properties.",
                                     "address": {
                                         "@type": "PostalAddress",
-                                        "streetAddress": "11810 Grand Park Ave. Suite 500",
+                                        "streetAddress": "11810 Grand Park Ave #500",
                                         "addressLocality": "North Bethesda",
                                         "addressRegion": "MD",
                                         "postalCode": "20852",
@@ -116,7 +118,7 @@ const HardscapingWashingtonDC = () => {
                                 {
                                     "@type": "Service",
                                     "name": "Hardscaping Services in Washington DC",
-                                    "provider": { "@type": "LocalBusiness", "name": "DMV General Contracting Group LLC", "telephone": "+1-240-730-1292", "url": "https://www.dmv-gc.com/" },
+                                    "provider": { "@type": "GeneralContractor", "name": "DMV General Contracting Group LLC", "telephone": "+1-240-730-1292", "url": "https://www.dmv-gc.com/" },
                                     "areaServed": { "@type": "Place", "name": "Washington, DC" },
                                     "serviceType": "Hardscaping, Rear Garden Patio, Courtyard Paving, Retaining Walls, Driveway Paving, Outdoor Kitchen, Rooftop Terrace, DC Rowhouse Hardscaping"
                                 },

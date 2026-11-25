@@ -11,16 +11,17 @@ const schemaJsonLd = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "LocalBusiness",
+      "@type": "GeneralContractor",
       "@id": "https://www.dmv-gc.com/#business",
-      "name": "DMV-GC Group",
-      "alternateName": "DMV General Contracting Group LLC",
+      "name": "DMV General Contracting Group LLC",
+      "legalName": "DMV General Contracting Group LLC",
+      "alternateName": ["DMV General Contracting Group", "DMV-GC"],
       "url": "https://www.dmv-gc.com",
-      "telephone": "+12407301292",
+      "telephone": "+1-240-730-1292",
       "email": "support@dmv-gc.com",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "11810 Grand Park Ave, Suite 500",
+        "streetAddress": "11810 Grand Park Ave #500",
         "addressLocality": "North Bethesda",
         "addressRegion": "MD",
         "postalCode": "20852",
@@ -31,7 +32,6 @@ const schemaJsonLd = {
         { "@type": "EducationalOccupationalCredential", "name": "MHIC License #156178" },
         { "@type": "EducationalOccupationalCredential", "name": "DLCP License #410526000209" }
       ],
-      "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "97", "bestRating": "5" },
       "priceRange": "$$$$"
     },
     {
@@ -64,7 +64,7 @@ const schemaJsonLd = {
           "name": "How much does hardwood flooring installation cost in Potomac, MD?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Hardwood flooring installation in Potomac, MD typically costs $9–$18 per square foot installed for solid hardwood, and $7–$14 for engineered hardwood. Wide-plank white oak — the most popular premium choice in Potomac's estate market — runs $12–$22 per square foot installed depending on plank width, grade, and finish. For a typical Potomac main floor of 1,500–2,500 sq ft, expect to invest $14,000–$55,000 depending on material and scope. Potomac's estate homes and premium market position mean flooring investment here is expected to match the quality of the home — and return accordingly at resale. DMV-GC Group provides free in-home estimates with exact, itemized pricing."
+            "text": "Hardwood flooring installation in Potomac, MD typically costs $9–$18 per square foot installed for solid hardwood, and $7–$14 for engineered hardwood. Wide-plank white oak — the most popular premium choice in Potomac's estate market — runs $12–$22 per square foot installed depending on plank width, grade, and finish. For a typical Potomac main floor of 1,500–2,500 sq ft, expect to invest $14,000–$55,000 depending on material and scope. Potomac's estate homes and premium market position mean flooring investment here is expected to match the quality of the home — and return accordingly at resale. DMV General Contracting Group provides free in-home estimates with exact, itemized pricing."
           }
         },
         {
@@ -72,31 +72,31 @@ const schemaJsonLd = {
           "name": "What is the best flooring for Potomac estate homes?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Wide-plank solid or engineered white oak is the most popular and most appropriate premium flooring choice for Potomac's estate homes — its clean, contemporary grain suits both the traditional colonial and newer transitional architectural styles prevalent in Potomac. For main living areas and formal rooms, hardwood adds measurable resale value and complements Potomac's premium market. For primary bathrooms and mudrooms in estate homes, large-format marble or porcelain tile is the standard. LVP is the smart choice for basement levels and utility areas. DMV-GC Group recommends a mixed-material strategy: hardwood on main living floors, marble or stone in bathrooms and entries, LVP below grade."
+            "text": "Wide-plank solid or engineered white oak is the most popular and most appropriate premium flooring choice for Potomac's estate homes — its clean, contemporary grain suits both the traditional colonial and newer transitional architectural styles prevalent in Potomac. For main living areas and formal rooms, hardwood adds measurable resale value and complements Potomac's premium market. For primary bathrooms and mudrooms in estate homes, large-format marble or porcelain tile is the standard. LVP is the smart choice for basement levels and utility areas. DMV General Contracting Group recommends a mixed-material strategy: hardwood on main living floors, marble or stone in bathrooms and entries, LVP below grade."
           }
         },
         {
           "@type": "Question",
-          "name": "Does DMV-GC Group refinish hardwood floors in Potomac, MD?",
+          "name": "Does DMV General Contracting Group refinish hardwood floors in Potomac, MD?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. DMV-GC Group offers professional hardwood floor refinishing throughout Potomac and Montgomery County. Many of Potomac's 1970s–90s estate homes have original hardwood floors that are structurally sound but show decades of wear, scratching, or an outdated finish color. Refinishing costs $3–$6 per square foot — significantly less than full replacement — and can completely transform the look of your floors. We sand, restain (any color, including the popular wire-brushed and matte finishes current in Potomac's renovation market), and apply fresh coats of finish for floors that look brand new."
+            "text": "Yes. DMV General Contracting Group offers professional hardwood floor refinishing throughout Potomac and Montgomery County. Many of Potomac's 1970s–90s estate homes have original hardwood floors that are structurally sound but show decades of wear, scratching, or an outdated finish color. Refinishing costs $3–$6 per square foot — significantly less than full replacement — and can completely transform the look of your floors. We sand, restain (any color, including the popular wire-brushed and matte finishes current in Potomac's renovation market), and apply fresh coats of finish for floors that look brand new."
           }
         },
         {
           "@type": "Question",
-          "name": "Is DMV-GC Group licensed for flooring installation in Potomac, MD?",
+          "name": "Is DMV General Contracting Group licensed for flooring installation in Potomac, MD?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. DMV-GC Group holds a Maryland MHIC license (#156178) — required for all home improvement work in Potomac and Montgomery County. We are fully bonded, carry comprehensive general liability insurance and workers' compensation coverage, and provide a 1-year workmanship warranty on every flooring project in Potomac."
+            "text": "Yes. DMV General Contracting Group holds a Maryland MHIC license (#156178) — required for all home improvement work in Potomac and Montgomery County. We are fully bonded, carry comprehensive general liability insurance and workers' compensation coverage, and provide a 1-year workmanship warranty on every flooring project in Potomac."
           }
         },
         {
           "@type": "Question",
-          "name": "Can DMV-GC Group handle flooring as part of a larger kitchen or bathroom remodel in Potomac?",
+          "name": "Can DMV General Contracting Group handle flooring as part of a larger kitchen or bathroom remodel in Potomac?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes — and this is one of DMV-GC Group's core advantages as a full-service design-build contractor. Flooring installed as part of a kitchen remodel, bathroom renovation, or basement finishing project is coordinated with all other trades in-house — no scheduling conflict between your tile installer and your cabinet installer, no damage to new floors from subsequent tradespeople, and one project manager overseeing the full scope. Many Potomac homeowners who contact us for flooring end up folding the project into a broader kitchen or primary bathroom renovation for exactly this reason."
+            "text": "Yes — and this is one of DMV General Contracting Group's core advantages as a full-service design-build contractor. Flooring installed as part of a kitchen remodel, bathroom renovation, or basement finishing project is coordinated with all other trades in-house — no scheduling conflict between your tile installer and your cabinet installer, no damage to new floors from subsequent tradespeople, and one project manager overseeing the full scope. Many Potomac homeowners who contact us for flooring end up folding the project into a broader kitchen or primary bathroom renovation for exactly this reason."
           }
         }
       ]

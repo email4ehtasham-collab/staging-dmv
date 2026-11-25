@@ -11,19 +11,20 @@ const schemaJsonLd = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "LocalBusiness",
+      "@type": "GeneralContractor",
       "@id": "https://www.dmv-gc.com/#business",
-      "name": "DMV-GC Group",
-      "alternateName": "DMV General Contracting Group LLC",
+      "name": "DMV General Contracting Group LLC",
+      "legalName": "DMV General Contracting Group LLC",
+      "alternateName": ["DMV General Contracting Group", "DMV-GC"],
       "image": "https://www.dmv-gc.com/logo.png",
       "url": "https://www.dmv-gc.com",
-      "telephone": "+12407301292",
+      "telephone": "+1-240-730-1292",
       "email": "support@dmv-gc.com",
       "foundingDate": "2018",
       "description": "Licensed design-build general contractor serving Silver Spring, MD. Specializing in ADU construction for Silver Spring's diverse housing stock — basement ADU conversions, split-level lower-level ADUs, garage conversions, and attached in-law suites — with full Montgomery County permit and Certificate of Occupancy management.",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "11810 Grand Park Ave, Suite 500",
+        "streetAddress": "11810 Grand Park Ave #500",
         "addressLocality": "North Bethesda",
         "addressRegion": "MD",
         "postalCode": "20852",
@@ -41,7 +42,6 @@ const schemaJsonLd = {
         { "@type": "EducationalOccupationalCredential", "name": "MHIC License", "credentialCategory": "Maryland Home Improvement Contractor License" },
         { "@type": "EducationalOccupationalCredential", "name": "DLCP License", "credentialCategory": "Washington DC Department of Licensing and Consumer Protection" }
       ],
-      "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "97", "bestRating": "5" },
       "priceRange": "$$"
     },
     {
@@ -76,7 +76,7 @@ const schemaJsonLd = {
           "name": "How much does it cost to build an ADU in Silver Spring, MD?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "ADU construction in Silver Spring, MD typically costs between $60,000 and $200,000 depending on ADU type and scope. A split-level lower-level ADU conversion runs $60,000–$110,000. A basement ADU conversion costs $65,000–$120,000. A garage conversion ADU costs $60,000–$110,000. An attached in-law suite addition costs $100,000–$200,000. Silver Spring's value-oriented housing market means ADU investments here offer some of the strongest ROI percentages in Montgomery County — particularly given the Red Line rental demand. DMV-GC Group provides free in-home consultations with detailed estimates."
+            "text": "ADU construction in Silver Spring, MD typically costs between $60,000 and $200,000 depending on ADU type and scope. A split-level lower-level ADU conversion runs $60,000–$110,000. A basement ADU conversion costs $65,000–$120,000. A garage conversion ADU costs $60,000–$110,000. An attached in-law suite addition costs $100,000–$200,000. Silver Spring's value-oriented housing market means ADU investments here offer some of the strongest ROI percentages in Montgomery County — particularly given the Red Line rental demand. DMV General Contracting Group provides free in-home consultations with detailed estimates."
           }
         },
         {
@@ -84,15 +84,15 @@ const schemaJsonLd = {
           "name": "Can I convert a Silver Spring split-level lower level into an ADU?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes — and split-level lower-level ADU conversions are one of the most practical and cost-effective ADU paths in Silver Spring. Split-level lower levels are partially above grade, which typically means: natural light from existing windows, ceiling heights of 7'4\"–8'2\" that comfortably exceed the minimum, and often an existing exterior door that satisfies the separate entrance requirement. Many Silver Spring split-levels were also built with a bathroom rough-in on the lower level — if present, this significantly reduces the cost of adding a bathroom. DMV-GC Group assesses split-level ADU feasibility during every Silver Spring free consultation."
+            "text": "Yes — and split-level lower-level ADU conversions are one of the most practical and cost-effective ADU paths in Silver Spring. Split-level lower levels are partially above grade, which typically means: natural light from existing windows, ceiling heights of 7'4\"–8'2\" that comfortably exceed the minimum, and often an existing exterior door that satisfies the separate entrance requirement. Many Silver Spring split-levels were also built with a bathroom rough-in on the lower level — if present, this significantly reduces the cost of adding a bathroom. DMV General Contracting Group assesses split-level ADU feasibility during every Silver Spring free consultation."
           }
         },
         {
           "@type": "Question",
-          "name": "Does DMV-GC Group handle ADU permits in Silver Spring?",
+          "name": "Does DMV General Contracting Group handle ADU permits in Silver Spring?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. Silver Spring is an unincorporated community in Montgomery County — all ADU permits are processed through Montgomery County's Department of Permitting Services (DPS). DMV-GC Group handles all required building, electrical, and plumbing permits, plus the Certificate of Occupancy application and all required inspections. Homeowners never need to contact Montgomery County directly for any part of the ADU permit process."
+            "text": "Yes. Silver Spring is an unincorporated community in Montgomery County — all ADU permits are processed through Montgomery County's Department of Permitting Services (DPS). DMV General Contracting Group handles all required building, electrical, and plumbing permits, plus the Certificate of Occupancy application and all required inspections. Homeowners never need to contact Montgomery County directly for any part of the ADU permit process."
           }
         },
         {
@@ -108,15 +108,15 @@ const schemaJsonLd = {
           "name": "What ADU types work best in Silver Spring?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The most practical ADU types for Silver Spring's postwar housing stock are: (1) split-level lower-level conversions — partially above grade, good ceiling heights, often existing separate entrance; (2) basement ADU conversions — full below-grade basements in Silver Spring's colonials and Cape Cods; (3) garage conversions — where a detached garage exists; and (4) attached in-law suite additions — on lots with sufficient rear yard room. Detached backyard cottages are less common in Silver Spring due to more modest lot sizes than Potomac or Chevy Chase, but are feasible on larger parcels. DMV-GC Group assesses which ADU type is most feasible and cost-effective for your specific Silver Spring property."
+            "text": "The most practical ADU types for Silver Spring's postwar housing stock are: (1) split-level lower-level conversions — partially above grade, good ceiling heights, often existing separate entrance; (2) basement ADU conversions — full below-grade basements in Silver Spring's colonials and Cape Cods; (3) garage conversions — where a detached garage exists; and (4) attached in-law suite additions — on lots with sufficient rear yard room. Detached backyard cottages are less common in Silver Spring due to more modest lot sizes than Potomac or Chevy Chase, but are feasible on larger parcels. DMV General Contracting Group assesses which ADU type is most feasible and cost-effective for your specific Silver Spring property."
           }
         },
         {
           "@type": "Question",
-          "name": "Is DMV-GC Group licensed for ADU construction in Silver Spring, MD?",
+          "name": "Is DMV General Contracting Group licensed for ADU construction in Silver Spring, MD?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. DMV-GC Group holds a Maryland MHIC (Home Improvement Contractor) license — required for all home improvement and construction work in Silver Spring and Montgomery County. We are fully bonded, carry comprehensive general liability insurance and workers' compensation coverage, and provide a 1-year workmanship warranty on every ADU project completed in Silver Spring."
+            "text": "Yes. DMV General Contracting Group holds a Maryland MHIC (Home Improvement Contractor) license — required for all home improvement and construction work in Silver Spring and Montgomery County. We are fully bonded, carry comprehensive general liability insurance and workers' compensation coverage, and provide a 1-year workmanship warranty on every ADU project completed in Silver Spring."
           }
         }
       ]

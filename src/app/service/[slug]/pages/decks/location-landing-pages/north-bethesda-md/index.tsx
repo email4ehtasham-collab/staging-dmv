@@ -11,19 +11,20 @@ const schemaJsonLd = {
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "LocalBusiness",
+        "@type": "GeneralContractor",
         "@id": "https://www.dmv-gc.com/#business",
-        "name": "DMV-GC Group",
-        "alternateName": "DMV General Contracting Group LLC",
+        "name": "DMV General Contracting Group LLC",
+        "legalName": "DMV General Contracting Group LLC",
+        "alternateName": ["DMV General Contracting Group", "DMV-GC"],
         "image": "https://www.dmv-gc.com/logo.png",
         "url": "https://www.dmv-gc.com",
-        "telephone": "+12407301292",
+        "telephone": "+1-240-730-1292",
         "email": "support@dmv-gc.com",
         "foundingDate": "2018",
-        "description": "Licensed deck builder headquartered in North Bethesda, MD at 11810 Grand Park Ave. Custom deck construction across all North Bethesda neighborhoods — White Flint Farm, Luxmanor, Tilden Woods, Pike District — with elevated split-level deck expertise, Montgomery County permit management, and HOA coordination where applicable.",
+        "description": "Licensed deck builder headquartered in North Bethesda, MD at 11810 Grand Park Ave #500. Custom deck construction across all North Bethesda neighborhoods — White Flint Farm, Luxmanor, Tilden Woods, Pike District — with elevated split-level deck expertise, Montgomery County permit management, and HOA coordination where applicable.",
         "address": {
           "@type": "PostalAddress",
-          "streetAddress": "11810 Grand Park Ave, Suite 500",
+          "streetAddress": "11810 Grand Park Ave #500",
           "addressLocality": "North Bethesda",
           "addressRegion": "MD",
           "postalCode": "20852",
@@ -64,12 +65,6 @@ const schemaJsonLd = {
             "credentialCategory": "Maryland Home Improvement Contractor License"
           }
         ],
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "4.9",
-          "reviewCount": "97",
-          "bestRating": "5"
-        },
         "priceRange": "$$$"
       },
       {
@@ -92,7 +87,7 @@ const schemaJsonLd = {
           "name": "North Bethesda",
           "sameAs": "https://en.wikipedia.org/wiki/North_Bethesda,_Maryland"
         },
-        "description": "Custom deck building in North Bethesda, MD by the community's own local contractor — headquartered at 11810 Grand Park Ave. Elevated split-level decks, composite rear decks, multi-level outdoor living builds, and under-deck dry space systems across White Flint Farm, Luxmanor, Tilden Woods, and the Pike District.",
+        "description": "Custom deck building in North Bethesda, MD by the community's own local contractor — headquartered at 11810 Grand Park Ave #500. Elevated split-level decks, composite rear decks, multi-level outdoor living builds, and under-deck dry space systems across White Flint Farm, Luxmanor, Tilden Woods, and the Pike District.",
         "offers": {
           "@type": "Offer",
           "priceCurrency": "USD",
@@ -141,15 +136,15 @@ const schemaJsonLd = {
             "name": "How much does it cost to build a deck in North Bethesda, MD?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Deck construction in North Bethesda, MD typically costs between $18,000 and $92,000 depending on home type, size, material, and features. A ground-level or low-elevation deck for a ranch or townhome runs $18,000–$32,000. A composite elevated split-level deck costs $34,000–$62,000. An elevated deck with under-deck drainage system runs $44,000–$72,000. A multi-level deck with pergola and built-in features costs $55,000–$92,000. As North Bethesda's local contractor headquartered at 11810 Grand Park Ave, DMV-GC Group provides free in-home consultations with honest, itemized estimates."
+              "text": "Deck construction in North Bethesda, MD typically costs between $18,000 and $92,000 depending on home type, size, material, and features. A ground-level or low-elevation deck for a ranch or townhome runs $18,000–$32,000. A composite elevated split-level deck costs $34,000–$62,000. An elevated deck with under-deck drainage system runs $44,000–$72,000. A multi-level deck with pergola and built-in features costs $55,000–$92,000. As North Bethesda's local contractor headquartered at 11810 Grand Park Ave #500, DMV General Contracting Group provides free in-home consultations with honest, itemized estimates."
             }
           },
           {
             "@type": "Question",
-            "name": "Is DMV-GC Group based in North Bethesda?",
+            "name": "Is DMV General Contracting Group based in North Bethesda?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes. DMV-GC Group is headquartered at 11810 Grand Park Ave, Suite 500, North Bethesda, MD 20852 — in the Pike District redevelopment area near the White Flint Metro station. We are North Bethesda's local licensed deck contractor, with direct familiarity with every neighborhood's housing stock, the Montgomery County permit process, and the White Flint Metro area's property market."
+              "text": "Yes. DMV General Contracting Group is headquartered at 11810 Grand Park Ave #500, North Bethesda, MD 20852 — in the Pike District redevelopment area near the White Flint Metro station. We are North Bethesda's local licensed deck contractor, with direct familiarity with every neighborhood's housing stock, the Montgomery County permit process, and the White Flint Metro area's property market."
             }
           },
           {
@@ -157,23 +152,23 @@ const schemaJsonLd = {
             "name": "What deck type works best for North Bethesda's split-level homes?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "North Bethesda's 1960s–70s split-levels in White Flint Farm, Luxmanor, and surrounding neighborhoods have main living floors 4–6 feet above rear grade — creating a natural elevated rear deck connection from the living or dining room. An elevated composite or pressure-treated rear deck with stairs to the lower yard is the most functional configuration, often paired with an under-deck drainage system that converts the 4–6 feet of clearance below into a usable covered dry patio. DMV-GC Group has built elevated split-level decks throughout North Bethesda's established neighborhoods — minutes from our Grand Park Avenue office."
+              "text": "North Bethesda's 1960s–70s split-levels in White Flint Farm, Luxmanor, and surrounding neighborhoods have main living floors 4–6 feet above rear grade — creating a natural elevated rear deck connection from the living or dining room. An elevated composite or pressure-treated rear deck with stairs to the lower yard is the most functional configuration, often paired with an under-deck drainage system that converts the 4–6 feet of clearance below into a usable covered dry patio. DMV General Contracting Group has built elevated split-level decks throughout North Bethesda's established neighborhoods — minutes from our Grand Park Avenue office."
             }
           },
           {
             "@type": "Question",
-            "name": "Does DMV-GC Group handle Montgomery County deck permits for North Bethesda?",
+            "name": "Does DMV General Contracting Group handle Montgomery County deck permits for North Bethesda?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes. North Bethesda is an unincorporated community in Montgomery County — all deck permits go through Montgomery County DPS. DMV-GC Group files all required building permits with structural drawings and manages all county correspondence, plan review, and inspection scheduling as a standard part of every North Bethesda deck project — from our office minutes from your home."
+              "text": "Yes. North Bethesda is an unincorporated community in Montgomery County — all deck permits go through Montgomery County DPS. DMV General Contracting Group files all required building permits with structural drawings and manages all county correspondence, plan review, and inspection scheduling as a standard part of every North Bethesda deck project — from our office minutes from your home."
             }
           },
           {
             "@type": "Question",
-            "name": "Is DMV-GC Group licensed for deck building in North Bethesda, MD?",
+            "name": "Is DMV General Contracting Group licensed for deck building in North Bethesda, MD?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes. DMV-GC Group holds a Maryland MHIC license — required for all home improvement and construction work in North Bethesda and Montgomery County. We are fully bonded, carry comprehensive general liability insurance and workers' compensation coverage, and provide a 1-year workmanship warranty on every deck project. As North Bethesda's local contractor, we stand behind our work in the community where we operate every day."
+              "text": "Yes. DMV General Contracting Group holds a Maryland MHIC license — required for all home improvement and construction work in North Bethesda and Montgomery County. We are fully bonded, carry comprehensive general liability insurance and workers' compensation coverage, and provide a 1-year workmanship warranty on every deck project. As North Bethesda's local contractor, we stand behind our work in the community where we operate every day."
             }
           }
         ]

@@ -11,19 +11,20 @@ const schemaJsonLd = {
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "LocalBusiness",
+        "@type": "GeneralContractor",
         "@id": "https://www.dmv-gc.com/#business",
-        "name": "DMV-GC Group",
-        "alternateName": "DMV General Contracting Group LLC",
+        "name": "DMV General Contracting Group LLC",
+        "legalName": "DMV General Contracting Group LLC",
+        "alternateName": ["DMV General Contracting Group", "DMV-GC"],
         "image": "https://www.dmv-gc.com/logo.png",
         "url": "https://www.dmv-gc.com",
-        "telephone": "+12407301292",
+        "telephone": "+1-240-730-1292",
         "email": "support@dmv-gc.com",
         "foundingDate": "2018",
         "description": "DLCP-licensed deck builder serving Washington, DC. Custom rear yard decks for DC rowhouses — Capitol Hill, Petworth, Columbia Heights, Georgetown, Shaw, and all DC neighborhoods — with DC DOB permit expertise, HPRB historic district coordination, and English basement deck integration.",
         "address": {
           "@type": "PostalAddress",
-          "streetAddress": "11810 Grand Park Ave, Suite 500",
+          "streetAddress": "11810 Grand Park Ave #500",
           "addressLocality": "North Bethesda",
           "addressRegion": "MD",
           "postalCode": "20852",
@@ -53,12 +54,6 @@ const schemaJsonLd = {
             "credentialCategory": "Washington DC Department of Licensing and Consumer Protection"
           }
         ],
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "4.9",
-          "reviewCount": "97",
-          "bestRating": "5"
-        },
         "priceRange": "$$$$"
       },
       {
@@ -130,15 +125,15 @@ const schemaJsonLd = {
             "name": "How much does it cost to build a deck in Washington, DC?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Deck construction in Washington, DC typically costs between $22,000 and $120,000 depending on size, type, material, and features. A rear yard deck for a DC rowhouse runs $22,000–$48,000 in pressure-treated or composite. A multi-level rear yard deck with English basement integration costs $38,000–$72,000. A rooftop terrace build runs $45,000–$95,000. An Ipe hardwood rear yard deck costs $35,000–$78,000. DC's urban construction premium — logistics, DLCP permit fees, DC DOB processing — adds 15–25% over comparable Maryland suburban projects. DMV-GC Group provides free in-home consultations with detailed estimates for every DC neighborhood."
+              "text": "Deck construction in Washington, DC typically costs between $22,000 and $120,000 depending on size, type, material, and features. A rear yard deck for a DC rowhouse runs $22,000–$48,000 in pressure-treated or composite. A multi-level rear yard deck with English basement integration costs $38,000–$72,000. A rooftop terrace build runs $45,000–$95,000. An Ipe hardwood rear yard deck costs $35,000–$78,000. DC's urban construction premium — logistics, DLCP permit fees, DC DOB processing — adds 15–25% over comparable Maryland suburban projects. DMV General Contracting Group provides free in-home consultations with detailed estimates for every DC neighborhood."
             }
           },
           {
             "@type": "Question",
-            "name": "Does DMV-GC Group hold a DC DLCP license for deck building in Washington, DC?",
+            "name": "Does DMV General Contracting Group hold a DC DLCP license for deck building in Washington, DC?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes. DMV-GC Group holds a Washington DC DLCP (Department of Licensing and Consumer Protection) license — legally required for all home improvement and construction work in the District of Columbia, including deck construction. A Maryland MHIC license alone does not authorize deck work in DC. DMV-GC Group holds both MHIC (Maryland) and DLCP (DC) licenses — one of the relatively small number of contractors in the DMV area fully licensed to build decks in both jurisdictions. Before hiring any contractor for DC deck work, verify their DLCP license at DC's online licensing portal."
+              "text": "Yes. DMV General Contracting Group holds a Washington DC DLCP (Department of Licensing and Consumer Protection) license — legally required for all home improvement and construction work in the District of Columbia, including deck construction. A Maryland MHIC license alone does not authorize deck work in DC. DMV General Contracting Group holds both MHIC (Maryland) and DLCP (DC) licenses — one of the relatively small number of contractors in the DMV area fully licensed to build decks in both jurisdictions. Before hiring any contractor for DC deck work, verify their DLCP license at DC's online licensing portal."
             }
           },
           {
@@ -146,7 +141,7 @@ const schemaJsonLd = {
             "name": "Does DC historic district designation affect rear yard deck construction?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "For rear yard deck construction that does not alter the primary street-facing facade — which is the case for virtually all DC rowhouse rear decks — HPRB review is typically not required. HPRB reviews exterior changes visible from public streets, not rear yard construction. Standard DC DOB permits are filed for rear yard deck projects in DC historic districts. However, any deck modification that involves the front or side facade visible from a public street may require HPRB review or a Certificate of No Objection. DMV-GC Group assesses every DC deck project for HPRB implications during the consultation and designs to avoid modifications that would trigger historic review."
+              "text": "For rear yard deck construction that does not alter the primary street-facing facade — which is the case for virtually all DC rowhouse rear decks — HPRB review is typically not required. HPRB reviews exterior changes visible from public streets, not rear yard construction. Standard DC DOB permits are filed for rear yard deck projects in DC historic districts. However, any deck modification that involves the front or side facade visible from a public street may require HPRB review or a Certificate of No Objection. DMV General Contracting Group assesses every DC deck project for HPRB implications during the consultation and designs to avoid modifications that would trigger historic review."
             }
           },
           {
@@ -154,7 +149,7 @@ const schemaJsonLd = {
             "name": "What is the best deck design for a DC rowhouse rear yard?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "DC rowhouse rear yards are typically 15–30 feet wide and 20–40 feet deep — smaller than most suburban lots but capable of supporting a meaningful outdoor living space. A rear yard deck for a DC rowhouse is typically 200–320 sq ft, accessed from the rear of the main living floor or from the English basement level, with composite or Ipe hardwood decking, cable or wood railing, and optional pergola shade structure. Multi-level designs that incorporate both a main-floor deck and an English basement level landing can make excellent use of DC rowhouse rear yards without consuming additional footprint. DMV-GC Group designs DC rowhouse decks to maximize usable outdoor space within the specific rear yard constraints of each property."
+              "text": "DC rowhouse rear yards are typically 15–30 feet wide and 20–40 feet deep — smaller than most suburban lots but capable of supporting a meaningful outdoor living space. A rear yard deck for a DC rowhouse is typically 200–320 sq ft, accessed from the rear of the main living floor or from the English basement level, with composite or Ipe hardwood decking, cable or wood railing, and optional pergola shade structure. Multi-level designs that incorporate both a main-floor deck and an English basement level landing can make excellent use of DC rowhouse rear yards without consuming additional footprint. DMV General Contracting Group designs DC rowhouse decks to maximize usable outdoor space within the specific rear yard constraints of each property."
             }
           },
           {
@@ -162,7 +157,7 @@ const schemaJsonLd = {
             "name": "Does DC require a permit for a rear yard deck?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes. A DC Department of Buildings permit is required for any new deck in Washington, DC — attached or freestanding — that is over 30 inches above grade, larger than 200 sq ft, or attached to the home. DC DOB permit processing for decks typically takes 3–6 weeks before construction can begin. DMV-GC Group files all required DC DOB permits with our DLCP license and manages all permit correspondence, plan review, and inspection scheduling as a standard part of every DC deck project."
+              "text": "Yes. A DC Department of Buildings permit is required for any new deck in Washington, DC — attached or freestanding — that is over 30 inches above grade, larger than 200 sq ft, or attached to the home. DC DOB permit processing for decks typically takes 3–6 weeks before construction can begin. DMV General Contracting Group files all required DC DOB permits with our DLCP license and manages all permit correspondence, plan review, and inspection scheduling as a standard part of every DC deck project."
             }
           }
         ]

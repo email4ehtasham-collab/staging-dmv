@@ -11,16 +11,17 @@ const schemaJsonLd = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "LocalBusiness",
+      "@type": "GeneralContractor",
       "@id": "https://www.dmv-gc.com/#business",
-      "name": "DMV-GC Group",
-      "alternateName": "DMV General Contracting Group LLC",
+      "name": "DMV General Contracting Group LLC",
+      "legalName": "DMV General Contracting Group LLC",
+      "alternateName": ["DMV General Contracting Group", "DMV-GC"],
       "url": "https://www.dmv-gc.com",
-      "telephone": "+12407301292",
+      "telephone": "+1-240-730-1292",
       "email": "support@dmv-gc.com",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "11810 Grand Park Ave, Suite 500",
+        "streetAddress": "11810 Grand Park Ave #500",
         "addressLocality": "North Bethesda",
         "addressRegion": "MD",
         "postalCode": "20852",
@@ -41,12 +42,6 @@ const schemaJsonLd = {
           "name": "DLCP License #410526000209"
         }
       ],
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": "97",
-        "bestRating": "5"
-      },
       "priceRange": "$$$"
     },
     {
@@ -118,7 +113,7 @@ const schemaJsonLd = {
           "name": "Can the original hardwood floors in Chevy Chase's 1920s–1940s homes be refinished?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Usually yes — and refinishing is almost always the correct first recommendation. Old-growth oak, walnut, and fir in Chevy Chase's historic homes has density and character that modern lumber cannot match. DMV-GC Group checks remaining thickness before recommending refinishing. When viable, it preserves irreplaceable material at $3–$6 per square foot versus $12–$28 for premium replacement."
+            "text": "Usually yes — and refinishing is almost always the correct first recommendation. Old-growth oak, walnut, and fir in Chevy Chase's historic homes has density and character that modern lumber cannot match. DMV General Contracting Group checks remaining thickness before recommending refinishing. When viable, it preserves irreplaceable material at $3–$6 per square foot versus $12–$28 for premium replacement."
           }
         },
         {
@@ -126,7 +121,7 @@ const schemaJsonLd = {
           "name": "Does Chevy Chase have special permit requirements for flooring?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Flooring-only projects typically do not require a building permit in any of Chevy Chase's six jurisdictions. When flooring is part of a broader renovation requiring a permit, the correct authority depends on which of the six jurisdictions the property falls in: Village of Chevy Chase, Town of Chevy Chase, Section 3, Section 5, Martin's Additions, or unincorporated Montgomery County. DMV-GC Group confirms the correct jurisdiction before any permitted renovation scope begins."
+            "text": "Flooring-only projects typically do not require a building permit in any of Chevy Chase's six jurisdictions. When flooring is part of a broader renovation requiring a permit, the correct authority depends on which of the six jurisdictions the property falls in: Village of Chevy Chase, Town of Chevy Chase, Section 3, Section 5, Martin's Additions, or unincorporated Montgomery County. DMV General Contracting Group confirms the correct jurisdiction before any permitted renovation scope begins."
           }
         },
         {
@@ -134,15 +129,15 @@ const schemaJsonLd = {
           "name": "Why is an uncoupling membrane required for tile in Chevy Chase homes?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Chevy Chase's pre-1950 homes have diagonal plank subfloors that move seasonally. Tile adhered directly to this subfloor without an uncoupling membrane will crack at the board joints within a few seasonal cycles. Schlueter DITRA or equivalent membrane allows the subfloor and tile to move independently. DMV-GC Group installs it on every tile project in Chevy Chase's pre-1950 homes without exception."
+            "text": "Chevy Chase's pre-1950 homes have diagonal plank subfloors that move seasonally. Tile adhered directly to this subfloor without an uncoupling membrane will crack at the board joints within a few seasonal cycles. Schlueter DITRA or equivalent membrane allows the subfloor and tile to move independently. DMV General Contracting Group installs it on every tile project in Chevy Chase's pre-1950 homes without exception."
           }
         },
         {
           "@type": "Question",
-          "name": "Is DMV-GC Group licensed for flooring in Chevy Chase, MD?",
+          "name": "Is DMV General Contracting Group licensed for flooring in Chevy Chase, MD?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. DMV-GC Group holds Maryland MHIC license #156178, required for all home improvement work across all Chevy Chase jurisdictions. Fully bonded, insured, and backed by a 1-year workmanship warranty on every project."
+            "text": "Yes. DMV General Contracting Group holds Maryland MHIC license #156178, required for all home improvement work across all Chevy Chase jurisdictions. Fully bonded, insured, and backed by a 1-year workmanship warranty on every project."
           }
         }
       ]

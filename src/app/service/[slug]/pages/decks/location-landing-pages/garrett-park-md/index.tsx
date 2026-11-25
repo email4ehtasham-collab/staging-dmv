@@ -11,19 +11,20 @@ const schemaJsonLd = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "LocalBusiness",
+      "@type": "GeneralContractor",
       "@id": "https://www.dmv-gc.com/#business",
-      "name": "DMV-GC Group",
-      "alternateName": "DMV General Contracting Group LLC",
+      "name": "DMV General Contracting Group LLC",
+      "legalName": "DMV General Contracting Group LLC",
+      "alternateName": ["DMV General Contracting Group", "DMV-GC"],
       "image": "https://www.dmv-gc.com/logo.png",
       "url": "https://www.dmv-gc.com",
-      "telephone": "+12407301292",
+      "telephone": "+1-240-730-1292",
       "email": "support@dmv-gc.com",
       "foundingDate": "2018",
       "description": "Licensed deck builder serving Garrett Park, MD. Specializing in character-appropriate rear yard deck design for Garrett Park's National Register historic district homes — 1920s–40s bungalows, craftsman cottages, and American Foursquares — with Town of Garrett Park permit expertise.",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "11810 Grand Park Ave, Suite 500",
+        "streetAddress": "11810 Grand Park Ave #500",
         "addressLocality": "North Bethesda",
         "addressRegion": "MD",
         "postalCode": "20852",
@@ -40,7 +41,6 @@ const schemaJsonLd = {
       "hasCredential": [
         { "@type": "EducationalOccupationalCredential", "name": "MHIC License", "credentialCategory": "Maryland Home Improvement Contractor License" }
       ],
-      "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "97", "bestRating": "5" },
       "priceRange": "$$$"
     },
     {
@@ -75,7 +75,7 @@ const schemaJsonLd = {
           "name": "How much does it cost to build a deck in Garrett Park, MD?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Deck construction in Garrett Park, MD typically costs between $16,000 and $72,000 depending on size, material, and scope. A modest rear deck for a Garrett Park bungalow in pressure-treated or cedar runs $16,000–$26,000. A composite rear deck costs $22,000–$44,000. A composite deck with pergola or screened porch conversion runs $38,000–$72,000. Garrett Park's small lots constrain maximum deck footprint, but the community's distinctive character and walkable MARC Brunswick Line access make quality outdoor living investments worthwhile. DMV-GC Group provides free in-home consultations with detailed estimates."
+            "text": "Deck construction in Garrett Park, MD typically costs between $16,000 and $72,000 depending on size, material, and scope. A modest rear deck for a Garrett Park bungalow in pressure-treated or cedar runs $16,000–$26,000. A composite rear deck costs $22,000–$44,000. A composite deck with pergola or screened porch conversion runs $38,000–$72,000. Garrett Park's small lots constrain maximum deck footprint, but the community's distinctive character and walkable MARC Brunswick Line access make quality outdoor living investments worthwhile. DMV General Contracting Group provides free in-home consultations with detailed estimates."
           }
         },
         {
@@ -83,7 +83,7 @@ const schemaJsonLd = {
           "name": "Does Garrett Park have its own permit process for deck building?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. Garrett Park is an incorporated Town in Montgomery County with its own municipal government and building permit office at 4600 Oxford Street. All deck building permits for properties within the Town of Garrett Park are filed with the Town's permit office — not with Montgomery County DPS. DMV-GC Group handles the Town of Garrett Park permit process in-house for all deck projects within the town boundaries, verifying whether each address is within the town limits or in adjacent unincorporated Montgomery County before any application is filed."
+            "text": "Yes. Garrett Park is an incorporated Town in Montgomery County with its own municipal government and building permit office at 4600 Oxford Street. All deck building permits for properties within the Town of Garrett Park are filed with the Town's permit office — not with Montgomery County DPS. DMV General Contracting Group handles the Town of Garrett Park permit process in-house for all deck projects within the town boundaries, verifying whether each address is within the town limits or in adjacent unincorporated Montgomery County before any application is filed."
           }
         },
         {
@@ -91,7 +91,7 @@ const schemaJsonLd = {
           "name": "Does Garrett Park's historic district designation affect deck building?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Garrett Park is listed on the National Register of Historic Places as a historic district. For deck construction specifically: interior work and rear yard deck construction that does not alter the primary street-facing facade of the home typically proceeds with standard Town of Garrett Park building permits and does not require Maryland Historical Trust review. However, any exterior modification visible from a public street — a new opening in the front facade, significant changes to a prominent side elevation — would require historic review. DMV-GC Group assesses every Garrett Park deck project for historic district implications during the free consultation and designs rear yard decks to avoid modifications that would trigger historic review."
+            "text": "Garrett Park is listed on the National Register of Historic Places as a historic district. For deck construction specifically: interior work and rear yard deck construction that does not alter the primary street-facing facade of the home typically proceeds with standard Town of Garrett Park building permits and does not require Maryland Historical Trust review. However, any exterior modification visible from a public street — a new opening in the front facade, significant changes to a prominent side elevation — would require historic review. DMV General Contracting Group assesses every Garrett Park deck project for historic district implications during the free consultation and designs rear yard decks to avoid modifications that would trigger historic review."
           }
         },
         {
@@ -99,15 +99,15 @@ const schemaJsonLd = {
           "name": "What deck designs work best for Garrett Park's historic bungalow homes?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Garrett Park's 1920s–40s bungalows, craftsman cottages, and American Foursquares have a specific architectural vocabulary — natural materials, horizontal lines, overhanging eaves, and covered porches. The most appropriate deck designs for these homes are proportionate in scale, use warm wood tones or natural material references, and employ railing styles that complement rather than clash with the home's period character. Painted wood baluster railings, craftsman-style pergola posts, and cedar or composite in warm brown tones all read naturally on Garrett Park's homes. Cable railing and contemporary composite profiles can look incongruous on 1930s bungalows without careful design consideration. DMV-GC Group designs every Garrett Park deck with the home's architectural period in mind."
+            "text": "Garrett Park's 1920s–40s bungalows, craftsman cottages, and American Foursquares have a specific architectural vocabulary — natural materials, horizontal lines, overhanging eaves, and covered porches. The most appropriate deck designs for these homes are proportionate in scale, use warm wood tones or natural material references, and employ railing styles that complement rather than clash with the home's period character. Painted wood baluster railings, craftsman-style pergola posts, and cedar or composite in warm brown tones all read naturally on Garrett Park's homes. Cable railing and contemporary composite profiles can look incongruous on 1930s bungalows without careful design consideration. DMV General Contracting Group designs every Garrett Park deck with the home's architectural period in mind."
           }
         },
         {
           "@type": "Question",
-          "name": "Is DMV-GC Group licensed for deck building in Garrett Park, MD?",
+          "name": "Is DMV General Contracting Group licensed for deck building in Garrett Park, MD?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. DMV-GC Group holds a Maryland MHIC license — required for all home improvement and construction work in Garrett Park and Montgomery County. We handle the Town of Garrett Park permit process for properties within the town limits and Montgomery County DPS permits for adjacent unincorporated addresses. We are fully bonded, carry comprehensive general liability insurance and workers' compensation coverage, and provide a 1-year workmanship warranty on every deck project in Garrett Park."
+            "text": "Yes. DMV General Contracting Group holds a Maryland MHIC license — required for all home improvement and construction work in Garrett Park and Montgomery County. We handle the Town of Garrett Park permit process for properties within the town limits and Montgomery County DPS permits for adjacent unincorporated addresses. We are fully bonded, carry comprehensive general liability insurance and workers' compensation coverage, and provide a 1-year workmanship warranty on every deck project in Garrett Park."
           }
         }
       ]

@@ -45,19 +45,20 @@ export default function BathroomGaithersburgMD() {
                             "@context": "https://schema.org",
                             "@graph": [
                                 {
-                                    "@type": "LocalBusiness",
+                                    "@type": "GeneralContractor",
                                     "@id": "https://www.dmv-gc.com/#business",
-                                    "name": "DMV-GC Group",
-                                    "alternateName": "DMV General Contracting Group LLC",
+                                    "name": "DMV General Contracting Group LLC",
+                                    "legalName": "DMV General Contracting Group LLC",
+                                    "alternateName": ["DMV General Contracting Group", "DMV-GC"],
                                     "image": "https://www.dmv-gc.com/logo.png",
                                     "url": "https://www.dmv-gc.com",
-                                    "telephone": "+12407301292",
+                                    "telephone": "+1-240-730-1292",
                                     "email": "support@dmv-gc.com",
                                     "foundingDate": "2018",
                                     "description": "Licensed design-build general contractor serving Gaithersburg, MD and the greater Montgomery County area. Specializing in bathroom remodeling, master bath renovations, tub-to-shower conversions, basement bathroom additions, and aging-in-place remodels.",
                                     "address": {
                                         "@type": "PostalAddress",
-                                        "streetAddress": "11810 Grand Park Ave, Suite 500",
+                                        "streetAddress": "11810 Grand Park Ave #500",
                                         "addressLocality": "North Bethesda",
                                         "addressRegion": "MD",
                                         "postalCode": "20852",
@@ -80,13 +81,6 @@ export default function BathroomGaithersburgMD() {
                                         { "@type": "EducationalOccupationalCredential", "name": "MHIC License", "credentialCategory": "Maryland Home Improvement Contractor License \u2014 issued by the Maryland Home Improvement Commission" },
                                         { "@type": "EducationalOccupationalCredential", "name": "DLCP License", "credentialCategory": "Washington DC Department of Licensing and Consumer Protection \u2014 Home Improvement Contractor" }
                                     ],
-                                    "aggregateRating": {
-                                        "@type": "AggregateRating",
-                                        "ratingValue": "4.9",
-                                        "reviewCount": "97",
-                                        "bestRating": "5",
-                                        "worstRating": "1"
-                                    },
                                     "priceRange": "$$$",
                                     "openingHoursSpecification": {
                                         "@type": "OpeningHoursSpecification",
@@ -141,31 +135,31 @@ export default function BathroomGaithersburgMD() {
                                         {
                                             "@type": "Question",
                                             "name": "How much does a bathroom remodel cost in Gaithersburg, MD?",
-                                            "acceptedAnswer": { "@type": "Answer", "text": "Bathroom remodeling in Gaithersburg, MD typically costs between $8,000 and $120,000 depending on bathroom type, scope, and finishes. A powder room or half-bath refresh starts around $8,000\u2013$18,000. A hall or guest bath remodel runs $18,000\u2013$35,000. A tub-to-shower conversion runs $12,000\u2013$25,000. A primary (master) bath renovation costs $35,000\u2013$70,000, and a luxury primary bath can reach $70,000\u2013$120,000+. Adding a new basement bathroom runs $20,000\u2013$45,000. DMV-GC Group provides free in-home consultations with detailed estimates for any Gaithersburg home." }
+                                            "acceptedAnswer": { "@type": "Answer", "text": "Bathroom remodeling in Gaithersburg, MD typically costs between $8,000 and $120,000 depending on bathroom type, scope, and finishes. A powder room or half-bath refresh starts around $8,000\u2013$18,000. A hall or guest bath remodel runs $18,000\u2013$35,000. A tub-to-shower conversion runs $12,000\u2013$25,000. A primary (master) bath renovation costs $35,000\u2013$70,000, and a luxury primary bath can reach $70,000\u2013$120,000+. Adding a new basement bathroom runs $20,000\u2013$45,000. DMV General Contracting Group provides free in-home consultations with detailed estimates for any Gaithersburg home." }
                                         },
                                         {
                                             "@type": "Question",
-                                            "name": "Is DMV-GC Group licensed to do bathroom remodeling in Gaithersburg, MD?",
-                                            "acceptedAnswer": { "@type": "Answer", "text": "Yes. DMV-GC Group holds a Maryland Home Improvement Contractor (MHIC) license issued by the Maryland Home Improvement Commission \u2014 the license required to legally perform residential renovation work in Gaithersburg and throughout Maryland. We are fully bonded and insured, and provide a 1-year workmanship warranty on every bathroom remodeling project completed in Montgomery County." }
+                                            "name": "Is DMV General Contracting Group licensed to do bathroom remodeling in Gaithersburg, MD?",
+                                            "acceptedAnswer": { "@type": "Answer", "text": "Yes. DMV General Contracting Group holds a Maryland Home Improvement Contractor (MHIC) license issued by the Maryland Home Improvement Commission \u2014 the license required to legally perform residential renovation work in Gaithersburg and throughout Maryland. We are fully bonded and insured, and provide a 1-year workmanship warranty on every bathroom remodeling project completed in Montgomery County." }
                                         },
                                         {
                                             "@type": "Question",
                                             "name": "Do I need a permit to remodel a bathroom in Gaithersburg / Montgomery County?",
-                                            "acceptedAnswer": { "@type": "Answer", "text": "In most cases, yes. Any bathroom remodel that involves moving plumbing, adding or relocating electrical, or structural changes requires permits. In Gaithersburg the jurisdiction depends on location: homes inside the City of Gaithersburg permit through the City\u2019s office, while the many Gaithersburg-address homes in unincorporated areas \u2014 including much of Montgomery Village and North Potomac \u2014 permit through Montgomery County DPS. Plumbing permits go through WSSC Water in both cases. DMV-GC Group identifies the correct jurisdiction and handles every permit and inspection for you, plus any HOA approvals." }
+                                            "acceptedAnswer": { "@type": "Answer", "text": "In most cases, yes. Any bathroom remodel that involves moving plumbing, adding or relocating electrical, or structural changes requires permits. In Gaithersburg the jurisdiction depends on location: homes inside the City of Gaithersburg permit through the City\u2019s office, while the many Gaithersburg-address homes in unincorporated areas \u2014 including much of Montgomery Village and North Potomac \u2014 permit through Montgomery County DPS. Plumbing permits go through WSSC Water in both cases. DMV General Contracting Group identifies the correct jurisdiction and handles every permit and inspection for you, plus any HOA approvals." }
                                         },
                                         {
                                             "@type": "Question",
-                                            "name": "Can DMV-GC Group convert my tub to a walk-in shower?",
+                                            "name": "Can DMV General Contracting Group convert my tub to a walk-in shower?",
                                             "acceptedAnswer": { "@type": "Answer", "text": "Yes. Garden-tub and standard tub-to-shower conversions are one of the most popular bathroom projects we complete in Gaithersburg, especially in 1990s and 2000s primary baths with oversized jetted or garden tubs that rarely get used. We remove the existing tub, rebuild the wet area with proper waterproofing, and install a custom tile or low-maintenance walk-in shower \u2014 including curbless and accessible designs for aging-in-place. Most conversions are completed in 2\u20133 weeks." }
                                         },
                                         {
                                             "@type": "Question",
                                             "name": "How long does a bathroom remodel take in Gaithersburg, MD?",
-                                            "acceptedAnswer": { "@type": "Answer", "text": "Most bathroom renovations in Gaithersburg take 2\u20135 weeks from construction start to completion. A powder room refresh can be done in 1\u20132 weeks. A tub-to-shower conversion takes 2\u20133 weeks. A full primary bath renovation takes 4\u20136 weeks, and a new basement bathroom typically takes 3\u20135 weeks. Permit processing through the City of Gaithersburg or Montgomery County DPS, plus WSSC, usually adds 2\u20134 weeks before construction begins, and HOA approval may add time in planned communities. DMV-GC Group factors realistic timelines into every project plan." }
+                                            "acceptedAnswer": { "@type": "Answer", "text": "Most bathroom renovations in Gaithersburg take 2\u20135 weeks from construction start to completion. A powder room refresh can be done in 1\u20132 weeks. A tub-to-shower conversion takes 2\u20133 weeks. A full primary bath renovation takes 4\u20136 weeks, and a new basement bathroom typically takes 3\u20135 weeks. Permit processing through the City of Gaithersburg or Montgomery County DPS, plus WSSC, usually adds 2\u20134 weeks before construction begins, and HOA approval may add time in planned communities. DMV General Contracting Group factors realistic timelines into every project plan." }
                                         },
                                         {
                                             "@type": "Question",
-                                            "name": "Can DMV-GC Group add a bathroom in my basement or primary suite?",
+                                            "name": "Can DMV General Contracting Group add a bathroom in my basement or primary suite?",
                                             "acceptedAnswer": { "@type": "Answer", "text": "Yes. Adding a bathroom is a popular upgrade for Gaithersburg homes \u2014 most often a full or half bath in a finished basement, or reconfiguring a primary suite for more space. We design and build new basement bathrooms, primary-suite ensuites, and main-level powder rooms \u2014 assessing how your home is built to plan the most cost-effective plumbing rough-in, then handling drainage, ventilation, waterproofing, HOA approvals, and the full City of Gaithersburg or DPS permit process from start to finish." }
                                         }
                                     ]
