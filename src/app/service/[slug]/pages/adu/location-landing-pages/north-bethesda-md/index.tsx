@@ -574,7 +574,7 @@ export default function ADUNorthBethesdaMD() {
           <div className="internal-links">
             <h2>Explore Our Other Services in North Bethesda</h2>
             <ul>
-              <li><Link href="/service/kitchen-remodeling/north-bethesda-md">Kitchen Remodeling in North Bethesda, MD</Link></li>
+              <li>Kitchen Remodeling in North Bethesda, MD</li>
               <li><Link href="/service/bathroom-remodeling">Bathroom Remodeling in North Bethesda, MD</Link></li>
               <li><Link href="/service/basement-remodeling/north-bethesda-md">Basement Remodeling in North Bethesda, MD</Link></li>
               <li><Link href="/service/home-additions">Home Additions in North Bethesda, MD</Link></li>

@@ -796,7 +796,7 @@ export default function ADUKensingtonMD() {
               <Link href="/service/kitchen-remodeling/kensington-md">Kitchen Remodeling in Kensington, MD</Link>
             </li>
             <li>
-              <Link href="/service/bathroom-remodeling/kensington-md">Bathroom Remodeling in Kensington, MD</Link>
+              Bathroom Remodeling in Kensington, MD
             </li>
             <li>
               <Link href="/service/basement-remodeling/kensington-md">Basement Remodeling in Kensington, MD</Link>

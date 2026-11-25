@@ -599,7 +599,7 @@ export default function BasementGarrettParkMD() {
           <h2>Explore Our Other Remodeling Services in Garrett Park</h2>
           <ul>
             <li><Link href="/service/kitchen-remodeling/garrett-park-md">Kitchen Remodeling in Garrett Park, MD</Link></li>
-            <li><Link href="/service/bathroom-remodeling/kensington-md">Bathroom Remodeling Near Garrett Park, MD</Link></li>
+            <li><Link href="/service/bathroom-remodeling/garrett-park-md">Bathroom Remodeling Near Garrett Park, MD</Link></li>
             <li><Link href="/service/home-additions">Home Additions in Garrett Park, MD</Link></li>
             <li><Link href="/service/electrical-services">Electrical Services for Historic Homes in Garrett Park</Link></li>
             <li><Link href="/service/plumbing-services">Plumbing Services — Galvanized Replacement in Garrett Park</Link></li>

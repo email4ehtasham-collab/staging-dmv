@@ -244,7 +244,7 @@ const LaurelMD = () => {
                 <h2>Explore Our Other Services in Laurel, MD</h2>
                 <ul className="related-links">
                     <li><Link href="/service/decks/laurel-md">Deck Building in Laurel, MD</Link></li>
-                    <li><Link href="/service/roofing/laurel-md">Roofing Services in Laurel, MD</Link></li>
+                    <li>Roofing Services in Laurel, MD</li>
                     <li><Link href="/service/home-additions/laurel-md">Home Additions in Laurel, MD</Link></li>
                     <li><Link href="/service/design-build/laurel-md">Design-Build Contractor in Laurel, MD</Link></li>
                     <li><Link href="/service/siding-installation/laurel-md">Siding Installation in Laurel, MD</Link></li>

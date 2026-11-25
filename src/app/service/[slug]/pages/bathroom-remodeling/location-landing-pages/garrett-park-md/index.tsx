@@ -355,7 +355,7 @@ export default function BathroomGarrettParkMD() {
 
                 <div className="nearby-box">
                     <h3>Also serving Kensington, MD &mdash; directly adjacent to Garrett Park</h3>
-                    <p>DMV-GC Group completes bathroom renovations throughout Kensington, MD, which borders Garrett Park to the south. Like Garrett Park, the Town of Kensington pairs older bungalows and Victorians with its own local historic district &mdash; calling for a contractor who understands both Maryland permitting and careful, period-sensitive work in older homes. Our team holds the proper MHIC license and brings the same design-build process and 1-year warranty to every project. <Link href="/service/bathroom-remodeling/kensington-md">View our Kensington, MD bathroom remodeling page &rarr;</Link></p>
+                    <p>DMV-GC Group completes bathroom renovations throughout Kensington, MD, which borders Garrett Park to the south. Like Garrett Park, the Town of Kensington pairs older bungalows and Victorians with its own local historic district &mdash; calling for a contractor who understands both Maryland permitting and careful, period-sensitive work in older homes. Our team holds the proper MHIC license and brings the same design-build process and 1-year warranty to every project.</p>
                 </div>
 
                 {/* FAQ */}

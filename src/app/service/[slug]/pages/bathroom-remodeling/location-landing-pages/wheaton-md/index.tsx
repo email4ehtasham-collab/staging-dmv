@@ -352,7 +352,7 @@ export default function BathroomWheatonMD() {
 
                 <div className="nearby-box">
                     <h3>Also serving Kensington, MD &mdash; directly adjacent to Wheaton</h3>
-                    <p>DMV-GC Group completes bathroom renovations throughout Kensington, MD, which borders Wheaton to the southwest. The Town of Kensington blends older bungalows and Victorians within its local historic district alongside post-war homes &mdash; calling for a contractor who understands both Maryland permitting and careful work in older homes. Our team holds the proper MHIC license and brings the same design-build process and 1-year warranty to every project. <Link href="/service/bathroom-remodeling/kensington-md">View our Kensington, MD bathroom remodeling page &rarr;</Link></p>
+                    <p>DMV-GC Group completes bathroom renovations throughout Kensington, MD, which borders Wheaton to the southwest. The Town of Kensington blends older bungalows and Victorians within its local historic district alongside post-war homes &mdash; calling for a contractor who understands both Maryland permitting and careful work in older homes. Our team holds the proper MHIC license and brings the same design-build process and 1-year warranty to every project.</p>
                 </div>
 
                 {/* FAQ */}

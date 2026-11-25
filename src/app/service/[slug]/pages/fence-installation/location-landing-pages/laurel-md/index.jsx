@@ -266,7 +266,7 @@ const LaurelMD = () => {
                         <h2>Explore Our Other Services in Laurel, MD</h2>
                         <ul>
                             <li><Link href="/service/home-additions/laurel-md">Home Additions in Laurel, MD</Link></li>
-                            <li><Link href="/service/kitchen-remodeling/laurel-md">Kitchen Remodeling in Laurel, MD</Link></li>
+                            <li>Kitchen Remodeling in Laurel, MD</li>
                             <li><Link href="/service/bathroom-remodeling/laurel-md">Bathroom Remodeling in Laurel, MD</Link></li>
                             <li><Link href="/service/basement-remodeling/laurel-md">Basement Remodeling in Laurel, MD</Link></li>
                             <li><Link href="/service/design-build/laurel-md">Design-Build Contractor in Laurel, MD</Link></li>

@@ -995,9 +995,7 @@ export default function DecksNorthBethesdaMD() {
             </h2>
             <ul>
               <li>
-                <Link href="/service/kitchen-remodeling/north-bethesda-md">
-                  Kitchen Remodeling in North Bethesda, MD
-                </Link>
+                Kitchen Remodeling in North Bethesda, MD
               </li>
               <li>
                 <Link href="/service/bathroom-remodeling">

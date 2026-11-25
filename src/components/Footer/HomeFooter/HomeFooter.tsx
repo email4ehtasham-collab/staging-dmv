@@ -203,8 +203,6 @@ export default function HomeFooter() {
         <div className={styles.bottom}>
           <p>&copy; 2026 DMV General Contracting Group LLC. All rights reserved.</p>
           <div className={styles.legalLinks}>
-            <Link href="/license">Terms Conditions</Link>
-            <Link href="/license">Privacy Policy</Link>
           </div>
         </div>
       </Container>

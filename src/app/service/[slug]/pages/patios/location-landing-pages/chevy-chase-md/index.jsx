@@ -234,7 +234,7 @@ const ChevyChaseMD = () => {
 
                 <h2>Explore Our Other Services in Chevy Chase, MD</h2>
                 <ul className="related-links">
-                    <li><Link href="/service/decks/chevy-chase-md">Deck Building in Chevy Chase, MD</Link></li>
+                    <li>Deck Building in Chevy Chase, MD</li>
                     <li><Link href="/service/roofing/chevy-chase-md">Roofing Services in Chevy Chase, MD</Link></li>
                     <li><Link href="/service/home-additions/chevy-chase-md">Home Additions in Chevy Chase, MD</Link></li>
                     <li><Link href="/service/design-build/chevy-chase-md">Design-Build Contractor in Chevy Chase, MD</Link></li>

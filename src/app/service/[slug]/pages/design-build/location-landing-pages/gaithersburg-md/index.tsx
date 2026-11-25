@@ -200,7 +200,7 @@ const GaithersburgMD = () => {
 
                 <div className="nearby-box">
                     <h3>Also serving Germantown, MD — directly north of Gaithersburg along I-270</h3>
-                    <p>Germantown's established communities share Gaithersburg's I-270 corridor location and renovation opportunity. DMV-GC Group brings the same design-build execution capability north along the I-270 corridor. <Link href="/service/design-build/germantown-md">View our Germantown design-build page →</Link></p>
+                    <p>Germantown's established communities share Gaithersburg's I-270 corridor location and renovation opportunity. DMV-GC Group brings the same design-build execution capability north along the I-270 corridor.</p>
                 </div>
 
                 <h2>Frequently Asked Questions — Design-Build in Gaithersburg, MD</h2>

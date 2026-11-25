@@ -269,7 +269,7 @@ const GarrettParkMD = () => {
                             <li><Link href="/service/kitchen-remodeling/garrett-park-md">Kitchen Remodeling in Garrett Park, MD</Link></li>
                             <li><Link href="/service/bathroom-remodeling/garrett-park-md">Bathroom Remodeling in Garrett Park, MD</Link></li>
                             <li><Link href="/service/basement-remodeling/garrett-park-md">Basement Remodeling in Garrett Park, MD</Link></li>
-                            <li><Link href="/service/design-build/garrett-park-md">Design-Build Contractor in Garrett Park, MD</Link></li>
+                            <li>Design-Build Contractor in Garrett Park, MD</li>
                             <li><Link href="/service/decks/garrett-park-md">Decks & Porches in Garrett Park, MD</Link></li>
                             <li><Link href="/service/concrete/garrett-park-md">Concrete Services in Garrett Park, MD</Link></li>
                             <li><Link href="/service/siding-installation/garrett-park-md">Siding Installation in Garrett Park, MD</Link></li>

@@ -247,7 +247,7 @@ const NorthBethesdaMD = () => {
                     <li><Link href="/service/roofing/north-bethesda-md">Roofing Services in North Bethesda, MD</Link></li>
                     <li><Link href="/service/home-additions/north-bethesda-md">Home Additions in North Bethesda, MD</Link></li>
                     <li><Link href="/service/design-build/north-bethesda-md">Design-Build Contractor in North Bethesda, MD</Link></li>
-                    <li><Link href="/service/siding-installation/north-bethesda-md">Siding Installation in North Bethesda, MD</Link></li>
+                    <li>Siding Installation in North Bethesda, MD</li>
                     <li><Link href="/service/electrical-services/north-bethesda-md">Electrical Services in North Bethesda, MD</Link></li>
                 </ul>
 

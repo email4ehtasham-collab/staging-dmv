@@ -220,7 +220,7 @@ const ChevyChaseMD = () => {
                         <h2>Explore Our Other Services in Chevy Chase</h2>
                         <ul>
                             <li><Link href="/service/fence-installation/chevy-chase-md">Fence Installation in Chevy Chase, MD</Link></li>
-                            <li><Link href="/service/decks/chevy-chase-md">Decks & Porches in Chevy Chase, MD</Link></li>
+                            <li>Decks & Porches in Chevy Chase, MD</li>
                             <li><Link href="/service/siding-installation/chevy-chase-md">Siding Installation in Chevy Chase, MD</Link></li>
                             <li><Link href="/service/kitchen-remodeling/chevy-chase-md">Kitchen Remodeling in Chevy Chase, MD</Link></li>
                             <li><Link href="/service/bathroom-remodeling/chevy-chase-md">Bathroom Remodeling in Chevy Chase, MD</Link></li>

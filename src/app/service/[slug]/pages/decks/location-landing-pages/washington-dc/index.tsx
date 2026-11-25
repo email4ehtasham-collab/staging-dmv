@@ -1064,9 +1064,6 @@ export default function DecksWashingtonDC() {
             </h3>
             <p>
               DMV-GC Group builds custom decks throughout Chevy Chase, MD — immediately north of DC, sharing the Connecticut Avenue corridor. Chevy Chase&apos;s Colonial Revival homes and multi-village permit structure are served by the same licensed design-build team with premium material expertise.
-              <Link href="/service/decks/chevy-chase-md">
-                View our Chevy Chase deck page &rarr;
-              </Link>
             </p>
           </div>
           <h2>

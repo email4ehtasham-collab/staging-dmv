@@ -283,7 +283,7 @@ const ChevyChaseMD = () => {
                             <li><Link href="/service/basement-remodeling/chevy-chase-md">Basement Remodeling in Chevy Chase, MD</Link></li>
                             <li><Link href="/service/home-additions/chevy-chase-md">Home Additions in Chevy Chase, MD</Link></li>
                             <li><Link href="/service/design-build/chevy-chase-md">Design-Build Contractor in Chevy Chase, MD</Link></li>
-                            <li><Link href="/service/plumbing-services/chevy-chase-md">Plumbing & Electrical Services in Chevy Chase, MD</Link></li>
+                            <li>Plumbing & Electrical Services in Chevy Chase, MD</li>
                         </ul>
                     </div>
 

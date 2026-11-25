@@ -218,7 +218,7 @@ const PotomacMD = () => {
 
                 <div className="nearby-box">
                     <h3>Also serving Bethesda, MD — directly east of Potomac along the River Road corridor</h3>
-                    <p>Bethesda's luxury homes share Potomac's high-value renovation requirements. DMV-GC Group brings the same design-build execution capability to Bethesda estate properties. <Link href="/service/design-build/bethesda-md">View our Bethesda design-build page →</Link></p>
+                    <p>Bethesda's luxury homes share Potomac's high-value renovation requirements. DMV-GC Group brings the same design-build execution capability to Bethesda estate properties.</p>
                 </div>
 
                 <h2>Frequently Asked Questions — Design-Build in Potomac, MD</h2>

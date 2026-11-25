@@ -342,11 +342,11 @@ const HardscapingBethesdaMD = () => {
                     <h2>Explore Our Other Services in Bethesda, MD</h2>
                     <ul>
                         <li><Link href="/service/patios/bethesda-md">Patio Installation in Bethesda, MD</Link></li>
-                        <li><Link href="/service/fence-installation/bethesda-md">Fence Installation in Bethesda, MD</Link></li>
-                        <li><Link href="/service/decks/bethesda-md">Deck Building in Bethesda, MD</Link></li>
+                        <li>Fence Installation in Bethesda, MD</li>
+                        <li>Deck Building in Bethesda, MD</li>
                         <li><Link href="/service/home-additions/bethesda-md">Home Additions in Bethesda, MD</Link></li>
-                        <li><Link href="/service/design-build/bethesda-md">Design-Build Contractor in Bethesda, MD</Link></li>
-                        <li><Link href="/service/concrete/bethesda-md">Concrete Services in Bethesda, MD</Link></li>
+                        <li>Design-Build Contractor in Bethesda, MD</li>
+                        <li>Concrete Services in Bethesda, MD</li>
                     </ul>
                 </div>
 

@@ -55,7 +55,7 @@ export default function ServiceAreas() {
 
             <div className={styles.district}>
               <p>
-                <strong>In the District, we work across <Link href="/service-area/washington-dc" className="text-secondary">Washington, DC</Link>.</strong> From rowhouse kitchens to condo bathrooms and garage ADUs, we manage the permits, inspections and building rules that come with DC projects.
+                <strong>In the District, we work across Washington, DC.</strong> From rowhouse kitchens to condo bathrooms and garage ADUs, we manage the permits, inspections and building rules that come with DC projects.
               </p>
               <div className={styles.company}>
                 <span>DMV General Contracting Group LLC</span>

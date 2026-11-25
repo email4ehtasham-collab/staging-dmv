@@ -333,7 +333,7 @@ const GarrettParkMD = () => {
                         <li><Link href="/service/adu/garrett-park-md">ADU Construction in Garrett Park, MD</Link></li>
                         <li><Link href="/service/decks/garrett-park-md">Deck Building in Garrett Park, MD</Link></li>
                         <li><Link href="/service/flooring-remodeling/garrett-park-md">Flooring Installation in Garrett Park, MD</Link></li>
-                        <li><Link href="/service/design-build/garrett-park-md">Design-Build Contractor in Garrett Park, MD</Link></li>
+                        <li>Design-Build Contractor in Garrett Park, MD</li>
                         <li><Link href="/service/roofing">Roofing in Garrett Park, MD</Link></li>
                     </ul>
                 </div>

@@ -508,7 +508,7 @@ export default function CarpetInstallation({ data }) {
                     <div className="cta-banner">
                         <h2>Get a Free Carpet Estimate for Your Bethesda Home</h2>
                         <p>We'll visit your home, measure every room, help you choose the right carpet and padding, and provide an exact quote — at no cost and no obligation.</p>
-                        <Link href="/contact" className="cta-btn">Schedule Free Carpet Consultation →</Link>
+                        <Link href="/contact-us" className="cta-btn">Schedule Free Carpet Consultation →</Link>
                     </div>
 
                     <h2>Why Bethesda Homeowners Choose DMV General Contracting Group for Carpet Installation</h2>

@@ -332,7 +332,7 @@ const WashingtonDC = () => {
                         <li><Link href="/service/adu/washington-dc">ADU Construction in Washington, DC</Link></li>
                         <li><Link href="/service/decks/washington-dc">Deck Building in Washington, DC</Link></li>
                         <li><Link href="/service/flooring-remodeling/washington-dc">Flooring Installation in Washington, DC</Link></li>
-                        <li><Link href="/service/design-build/washington-dc">Design-Build Contractor in Washington, DC</Link></li>
+                        <li>Design-Build Contractor in Washington, DC</li>
                         <li><Link href="/service/roofing">Roofing in Washington, DC</Link></li>
                     </ul>
                 </div>

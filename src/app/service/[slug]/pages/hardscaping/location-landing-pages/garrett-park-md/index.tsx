@@ -369,7 +369,7 @@ const HardscapingGarrettParkMD = () => {
                         <li><Link href="/service/patios/garrett-park-md">Patio Installation in Garrett Park, MD</Link></li>
                         <li><Link href="/service/roofing/garrett-park-md">Roofing Services in Garrett Park, MD</Link></li>
                         <li><Link href="/service/home-additions/garrett-park-md">Home Additions in Garrett Park, MD</Link></li>
-                        <li><Link href="/service/design-build/garrett-park-md">Design-Build Contractor in Garrett Park, MD</Link></li>
+                        <li>Design-Build Contractor in Garrett Park, MD</li>
                         <li><Link href="/service/siding-installation/garrett-park-md">Siding Installation in Garrett Park, MD</Link></li>
                         <li><Link href="/service/electrical-services/garrett-park-md">Electrical Services in Garrett Park, MD</Link></li>
                     </ul>

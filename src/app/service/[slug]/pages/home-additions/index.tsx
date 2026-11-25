@@ -269,7 +269,6 @@ const areaLinks = [
     { label: "Home additions in Bethesda", href: "/service/home-additions/bethesda-md" },
     { label: "Home additions in North Bethesda", href: "/service/home-additions/north-bethesda-md" },
     { label: "Home additions in Rockville", href: "/service/home-additions/rockville-md" },
-    { label: "Home additions in Kensington", href: "/service/home-additions/kensington-md" },
     { label: "Home additions in Potomac", href: "/service/home-additions/potomac-md" },
     { label: "Home additions in Wheaton", href: "/service/home-additions/wheaton-md" },
     { label: "Home additions in Silver Spring", href: "/service/home-additions/silver-spring-md" },

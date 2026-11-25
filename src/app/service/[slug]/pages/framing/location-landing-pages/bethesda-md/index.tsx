@@ -196,11 +196,11 @@ const FramingBethesdaMD = () => {
     ];
 
     const otherServices = [
-        { href: "/service/drywall/bethesda-md", label: "Drywall Services in Bethesda, MD" },
+        { label: "Drywall Services in Bethesda, MD" },
         { href: "/service/home-additions/bethesda-md", label: "Home Additions in Bethesda, MD" },
         { href: "/service/basement-remodeling/bethesda-md", label: "Basement Remodeling in Bethesda, MD" },
-        { href: "/service/design-build/bethesda-md", label: "Design-Build Contractor in Bethesda, MD" },
-        { href: "/service/electrical-services/bethesda-md", label: "Electrical Services in Bethesda, MD" },
+        { label: "Design-Build Contractor in Bethesda, MD" },
+        { label: "Electrical Services in Bethesda, MD" },
         { href: "/service/kitchen-remodeling/bethesda-md", label: "Kitchen Remodeling in Bethesda, MD" }
     ];
 
@@ -414,7 +414,7 @@ const FramingBethesdaMD = () => {
                     <h2>Explore Our Other Services in Bethesda, MD</h2>
                     <ul>
                         {otherServices.map(service => (
-                            <li key={service.href}><Link href={service.href}>{service.label}</Link></li>
+                            <li key={service.label}>{service.href ? <Link href={service.href}>{service.label}</Link> : service.label}</li>
                         ))}
                     </ul>
                 </div>

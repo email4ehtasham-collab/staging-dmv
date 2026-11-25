@@ -350,7 +350,7 @@ export default function JunkRemovalKensingtonMD() {
                 <ul className="related-links">
                     <li><Link href="/service/basement-remodeling/kensington-md">Basement Remodeling in Kensington, MD</Link></li>
                     <li><Link href="/service/kitchen-remodeling/kensington-md">Kitchen Remodeling in Kensington, MD</Link></li>
-                    <li><Link href="/service/home-additions/kensington-md">Home Additions in Kensington, MD</Link></li>
+                    <li>Home Additions in Kensington, MD</li>
                     <li><Link href="/service/design-build/kensington-md">Design-Build Contractor in Kensington, MD</Link></li>
                     <li><Link href="/service/patios/kensington-md">Patio Installation in Kensington, MD</Link></li>
                     <li><Link href="/service/electrical-services/kensington-md">Electrical Services in Kensington, MD</Link></li>

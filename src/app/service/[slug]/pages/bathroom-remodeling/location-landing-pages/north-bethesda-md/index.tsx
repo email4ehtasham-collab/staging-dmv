@@ -466,7 +466,7 @@ export default function BathroomNorthBethesdaMD() {
                     <h2>Explore Our Other Remodeling Services in North Bethesda, MD</h2>
                     <p>DMV-GC Group offers a complete range of home renovation services for North Bethesda homes and condos:</p>
                     <ul>
-                        <li><Link href="/service/kitchen-remodeling/north-bethesda-md">Kitchen Remodeling in North Bethesda, MD</Link></li>
+                        <li>Kitchen Remodeling in North Bethesda, MD</li>
                         <li><Link href="/service/basement-remodeling">Basement Finishing &amp; Remodeling in North Bethesda, MD</Link></li>
                         <li><Link href="/service/home-additions">Home Additions in North Bethesda, MD</Link></li>
                         <li><Link href="/service/design-build">Design-Build Contractor in North Bethesda, MD</Link></li>

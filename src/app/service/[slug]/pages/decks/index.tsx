@@ -579,7 +579,7 @@ export default function Decks({ data }) {
                     <p>DMV General Contracting Group offers a full range of outdoor and home remodeling services across Bethesda and the DMV area:</p>
                     <ul style={{margin: '12px 0 24px 20px', color: '#1a6b9a', fontSize: '15px', lineHeight: 2}}>
                         <li><Link href="/service/patios" style={{color: '#1a6b9a'}}>Patio Installation in Bethesda, MD</Link></li>
-                        <li><Link href="/service/fencing" style={{color: '#1a6b9a'}}>Fence Installation in Bethesda, MD</Link></li>
+                        <li><Link href="/service/fence-installation" style={{color: '#1a6b9a'}}>Fence Installation in Bethesda, MD</Link></li>
                         <li><Link href="/service/home-additions" style={{color: '#1a6b9a'}}>Home Additions in Bethesda, MD</Link></li>
                         <li><Link href="/service/basement-remodeling" style={{color: '#1a6b9a'}}>Basement Remodeling in Bethesda, MD</Link></li>
                         <li><Link href="/service/kitchen-remodeling" style={{color: '#1a6b9a'}}>Kitchen Remodeling in Bethesda, MD</Link></li>

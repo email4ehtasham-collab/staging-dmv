@@ -377,11 +377,11 @@ const NorthBethesdaMD = () => {
                         <ul>
                             <li><Link href="/service/home-additions/north-bethesda-md">Home Additions in North Bethesda, MD</Link></li>
                             <li><Link href="/service/design-build/north-bethesda-md">Design-Build Contractor in North Bethesda, MD</Link></li>
-                            <li><Link href="/service/kitchen-remodeling/north-bethesda-md">Kitchen Remodeling in North Bethesda, MD</Link></li>
+                            <li>Kitchen Remodeling in North Bethesda, MD</li>
                             <li><Link href="/service/bathroom-remodeling/north-bethesda-md">Bathroom Remodeling in North Bethesda, MD</Link></li>
-                            <li><Link href="/service/siding-installation/north-bethesda-md">Siding Installation in North Bethesda, MD</Link></li>
+                            <li>Siding Installation in North Bethesda, MD</li>
                             <li><Link href="/service/flooring-remodeling/north-bethesda-md">Flooring Installation in North Bethesda, MD</Link></li>
-                            <li><Link href="/service/carpet-installation/north-bethesda-md">Carpet Installation in North Bethesda, MD</Link></li>
+                            <li>Carpet Installation in North Bethesda, MD</li>
                             <li><Link href="/service/plumbing-services/north-bethesda-md">Plumbing Services in North Bethesda, MD</Link></li>
                         </ul>
                     </div>

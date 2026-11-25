@@ -618,7 +618,7 @@ export default function BasementCabinJohnMD() {
             <li><Link href="/service/home-additions">Home Additions in Cabin John, MD</Link></li>
             <li><Link href="/service/design-build">Design-Build Contractor in Cabin John, MD</Link></li>
             <li><Link href="/service/flooring-remodeling">Flooring Installation in Cabin John, MD</Link></li>
-            <li><Link href="/service/deck-building">Deck Building in Cabin John, MD</Link></li>
+            <li><Link href="/service/decks/cabin-john-md">Deck Building in Cabin John, MD</Link></li>
           </ul>
         </div>
 

@@ -265,9 +265,9 @@ const KensingtonMD = () => {
                     <div className="internal-links">
                         <h2>Explore Our Other Services in Kensington, MD</h2>
                         <ul>
-                            <li><Link href="/service/home-additions/kensington-md">Home Additions in Kensington, MD</Link></li>
+                            <li>Home Additions in Kensington, MD</li>
                             <li><Link href="/service/kitchen-remodeling/kensington-md">Kitchen Remodeling in Kensington, MD</Link></li>
-                            <li><Link href="/service/bathroom-remodeling/kensington-md">Bathroom Remodeling in Kensington, MD</Link></li>
+                            <li>Bathroom Remodeling in Kensington, MD</li>
                             <li><Link href="/service/basement-remodeling/kensington-md">Basement Remodeling in Kensington, MD</Link></li>
                             <li><Link href="/service/design-build/kensington-md">Design-Build Contractor in Kensington, MD</Link></li>
                             <li><Link href="/service/decks/kensington-md">Decks & Porches in Kensington, MD</Link></li>

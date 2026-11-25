@@ -344,7 +344,6 @@ const timelineWeeks = ["0", "2", "4", "6", "8", "10", "12", "14 wks"];
 
 const areaLinks = [
     { label: "Kitchen remodeling in Bethesda", href: "/service/kitchen-remodeling/bethesda-md" },
-    { label: "Kitchen remodeling in North Bethesda", href: "/service/kitchen-remodeling/north-bethesda-md" },
     { label: "Kitchen remodeling in Rockville", href: "/service/kitchen-remodeling/rockville-md" },
     { label: "Kitchen remodeling in Kensington", href: "/service/kitchen-remodeling/kensington-md" },
     { label: "Kitchen remodeling in Potomac", href: "/service/kitchen-remodeling/potomac-md" },
@@ -354,7 +353,6 @@ const areaLinks = [
     { label: "Kitchen remodeling in Garrett Park", href: "/service/kitchen-remodeling/garrett-park-md" },
     { label: "Kitchen remodeling in Chevy Chase", href: "/service/kitchen-remodeling/chevy-chase-md" },
     { label: "Kitchen remodeling in Cabin John", href: "/service/kitchen-remodeling/cabin-john-md" },
-    { label: "Kitchen remodeling in Laurel", href: "/service/kitchen-remodeling/laurel-md" },
     { label: "Kitchen remodeling in Washington, DC", href: "/service/kitchen-remodeling/washington-dc" },
 ];
 

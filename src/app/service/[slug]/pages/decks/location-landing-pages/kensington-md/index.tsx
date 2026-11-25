@@ -549,7 +549,7 @@ export default function DecksKensingtonMD() {
             <h2>Explore Our Other Services in Kensington</h2>
             <ul>
               <li><Link href="/service/kitchen-remodeling">Kitchen Remodeling in Kensington, MD</Link></li>
-              <li><Link href="/service/bathroom-remodeling/kensington-md">Bathroom Remodeling in Kensington, MD</Link></li>
+              <li>Bathroom Remodeling in Kensington, MD</li>
               <li><Link href="/service/basement-remodeling/kensington-md">Basement Remodeling in Kensington, MD</Link></li>
               <li><Link href="/service/adu/kensington-md">ADU Construction in Kensington, MD</Link></li>
               <li><Link href="/service/home-additions">Home Additions in Kensington, MD</Link></li>

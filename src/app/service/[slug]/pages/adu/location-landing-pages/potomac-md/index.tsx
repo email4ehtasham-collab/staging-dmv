@@ -561,7 +561,7 @@ export default function ADUPotomacMD() {
               <li><Link href="/service/basement-remodeling/potomac-md">Basement Remodeling in Potomac, MD</Link></li>
               <li><Link href="/service/home-additions">Home Additions in Potomac, MD</Link></li>
               <li><Link href="/service/design-build">Design-Build Contractor in Potomac, MD</Link></li>
-              <li><Link href="/service/deck-building">Deck Building in Potomac, MD</Link></li>
+              <li><Link href="/service/decks/potomac-md">Deck Building in Potomac, MD</Link></li>
             </ul>
           </div>
 
