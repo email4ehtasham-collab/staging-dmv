@@ -3,6 +3,8 @@ import type { ReactNode } from "react";
 import Badge from "@/components/Common/Badge";
 import Button from "@/components/Common/Button";
 import Container from "@/components/Common/Container";
+import ServiceHeroImage from "@/components/ServiceHero/ServiceHeroImage";
+import { getFallbackHeroImage } from "@/components/ServiceHero/resolveServiceHeroImage";
 import styles from "./service-area.module.scss";
 
 export type ServiceAreaFact = {
@@ -20,6 +22,8 @@ type ServiceAreaPageProps = {
   factsTitle: string;
   factsSubtitle: string;
   facts: ServiceAreaFact[];
+  heroImage?: string;
+  heroImageAlt?: string;
   children?: ReactNode;
 };
 
@@ -95,8 +99,14 @@ export default function ServiceAreaPage({
   factsTitle,
   factsSubtitle,
   facts,
+  heroImage,
+  heroImageAlt,
   children,
 }: ServiceAreaPageProps) {
+  const fallbackHero = getFallbackHeroImage();
+  const heroSrc = heroImage || fallbackHero.src;
+  const heroAlt = heroImageAlt || fallbackHero.alt;
+
   return (
     <main className={styles.page}>
       <section className={styles.hero} aria-labelledby="service-area-title">
@@ -150,30 +160,36 @@ export default function ServiceAreaPage({
               </div>
             </div>
 
-            <aside className={styles.factsCard} aria-labelledby="facts-title">
-              <div className={styles.factsHeader}>
-                <span className={styles.factsIcon}>
-                  <ClipboardIcon />
-                </span>
-                <div>
-                  <h2 id="facts-title">{factsTitle}</h2>
-                  <p>{factsSubtitle}</p>
-                </div>
-              </div>
-
-              <ul className={styles.factsList}>
-                {facts.map((fact) => (
-                  <li key={fact.label}>
-                    <span className={styles.factLabel}>{fact.label}</span>
-                    <span className={styles.factValue}>
-                      {fact.label.toLowerCase().includes("google") ? <StarIcon /> : null}
-                      {fact.value}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-            </aside>
+            <ServiceHeroImage src={heroSrc} alt={heroAlt} />
           </div>
+        </Container>
+      </section>
+
+      <section className={styles.factsSection} aria-label={factsTitle}>
+        <Container>
+          <aside className={styles.factsCard} aria-labelledby="facts-title">
+            <div className={styles.factsHeader}>
+              <span className={styles.factsIcon}>
+                <ClipboardIcon />
+              </span>
+              <div>
+                <h2 id="facts-title">{factsTitle}</h2>
+                <p>{factsSubtitle}</p>
+              </div>
+            </div>
+
+            <ul className={styles.factsList}>
+              {facts.map((fact) => (
+                <li key={fact.label}>
+                  <span className={styles.factLabel}>{fact.label}</span>
+                  <span className={styles.factValue}>
+                    {fact.label.toLowerCase().includes("google") ? <StarIcon /> : null}
+                    {fact.value}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </aside>
         </Container>
       </section>
 

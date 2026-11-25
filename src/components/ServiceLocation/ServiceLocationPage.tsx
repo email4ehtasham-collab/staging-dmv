@@ -3,6 +3,8 @@ import type { ReactNode } from "react";
 import Badge from "@/components/Common/Badge";
 import Button from "@/components/Common/Button";
 import Container from "@/components/Common/Container";
+import ServiceHeroImage from "@/components/ServiceHero/ServiceHeroImage";
+import { getServiceHeroImage } from "@/components/ServiceHero/resolveServiceHeroImage";
 import type { ServiceLocationHeroData } from "./types";
 import styles from "./service-location.module.scss";
 
@@ -41,6 +43,8 @@ export default function ServiceLocationPage({
   facts,
   children,
 }: ServiceLocationPageProps) {
+  const heroImage = getServiceHeroImage(serviceHref);
+
   return (
     <main className={styles.page}>
       <section className={styles.hero} aria-labelledby="service-location-title">
@@ -90,34 +94,40 @@ export default function ServiceLocationPage({
               </div>
             </div>
 
-            <aside className={styles.factsCard} aria-labelledby="service-location-facts-title">
-              <h2 id="service-location-facts-title" className={styles.factsTitle}>
-                {factsTitle}
-              </h2>
-
-              <ul className={styles.factsList}>
-                {facts.map((fact) => (
-                  <li key={fact.label}>
-                    <span className={styles.factLabel}>{fact.label}</span>
-                    <span className={styles.factValue}>{fact.value}</span>
-                    {fact.note ? <span className={styles.factNote}>{fact.note}</span> : null}
-                  </li>
-                ))}
-              </ul>
-
-              <div className={styles.factsCta}>
-                <p>{factsCtaText}</p>
-                <Button
-                  href="/contact-us"
-                  variant="secondary"
-                  data-estimate-trigger
-                  className={styles.factsButton}
-                >
-                  {factsCtaLabel}
-                </Button>
-              </div>
-            </aside>
+            <ServiceHeroImage src={heroImage.src} alt={heroImage.alt} />
           </div>
+        </Container>
+      </section>
+
+      <section className={styles.factsSection} aria-label={factsTitle}>
+        <Container>
+          <aside className={styles.factsCard} aria-labelledby="service-location-facts-title">
+            <h2 id="service-location-facts-title" className={styles.factsTitle}>
+              {factsTitle}
+            </h2>
+
+            <ul className={styles.factsList}>
+              {facts.map((fact) => (
+                <li key={fact.label}>
+                  <span className={styles.factLabel}>{fact.label}</span>
+                  <span className={styles.factValue}>{fact.value}</span>
+                  {fact.note ? <span className={styles.factNote}>{fact.note}</span> : null}
+                </li>
+              ))}
+            </ul>
+
+            <div className={styles.factsCta}>
+              <p>{factsCtaText}</p>
+              <Button
+                href="/contact-us"
+                variant="secondary"
+                data-estimate-trigger
+                className={styles.factsButton}
+              >
+                {factsCtaLabel}
+              </Button>
+            </div>
+          </aside>
         </Container>
       </section>
 

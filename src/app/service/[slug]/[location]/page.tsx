@@ -4,6 +4,8 @@ import ServiceData from "@/data/services/ServiceData";
 import locationMetadata from "@/data/services/locationMetadata";
 import getDynamicLocationComponent, { getLocationStaticParams } from "../../getDynamicLocationComponent";
 
+export const dynamicParams = false;
+
 export function generateStaticParams() {
     return getLocationStaticParams();
 }

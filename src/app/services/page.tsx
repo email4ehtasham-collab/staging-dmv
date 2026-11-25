@@ -7,6 +7,8 @@ import Container from "@/components/Common/Container";
 import NavitemActive from "@/components/Common/NavitemActive";
 import ResponsiveImage from "@/components/Common/ResponsiveImage";
 import SectionHeading from "@/components/Common/SectionHeading";
+import ServiceHeroImage from "@/components/ServiceHero/ServiceHeroImage";
+import { getFallbackHeroImage } from "@/components/ServiceHero/resolveServiceHeroImage";
 import Estimate from "@/components/Home/Estimate/Estimate";
 import RecentProjects from "@/components/Home/RecentProjects/RecentProjects";
 import locationStyles from "@/components/ServiceLocation/service-location.module.scss";
@@ -18,7 +20,7 @@ export const metadata: Metadata = {
   description:
     "All remodeling and construction services from DMV General Contracting in Maryland and DC, from kitchens and ADUs to roofing and decks.",
   alternates: {
-    canonical: "https://dmv-gc.com/services",
+    canonical: "/services",
   },
 };
 
@@ -404,6 +406,8 @@ function ServiceGrid({ items }: { items: ServiceItem[] }) {
 }
 
 export default function ServicesPage() {
+  const heroImage = getFallbackHeroImage();
+
   return (
     <main className={locationStyles.page}>
       <NavitemActive nav="service" />
@@ -452,26 +456,32 @@ export default function ServicesPage() {
               </div>
             </div>
 
-            <aside className={locationStyles.factsCard} aria-labelledby="services-facts-title">
-              <h2 id="services-facts-title" className={locationStyles.factsTitle}>
-                The services below are grouped into six categories:
-              </h2>
-              <ul className={locationStyles.factsList}>
-                <li><span className={locationStyles.factValue}>Remodeling</span></li>
-                <li><span className={locationStyles.factValue}>Interior structure</span></li>
-                <li><span className={locationStyles.factValue}>Home systems</span></li>
-                <li><span className={locationStyles.factValue}>Exterior</span></li>
-                <li><span className={locationStyles.factValue}>Outdoor living</span></li>
-                <li><span className={locationStyles.factValue}>Property services</span></li>
-              </ul>
-              <div className={locationStyles.factsCta}>
-                <p>Not sure which service fits? Get a free estimate and we will scope it with you.</p>
-                <Button href="/contact-us" variant="secondary" data-estimate-trigger className={locationStyles.factsButton}>
-                  Get a free estimate
-                </Button>
-              </div>
-            </aside>
+            <ServiceHeroImage src={heroImage.src} alt={heroImage.alt} />
           </div>
+        </Container>
+      </section>
+
+      <section className={locationStyles.factsSection} aria-label="Services overview">
+        <Container>
+          <aside className={locationStyles.factsCard} aria-labelledby="services-facts-title">
+            <h2 id="services-facts-title" className={locationStyles.factsTitle}>
+              The services below are grouped into six categories:
+            </h2>
+            <ul className={locationStyles.factsList}>
+              <li><span className={locationStyles.factValue}>Remodeling</span></li>
+              <li><span className={locationStyles.factValue}>Interior structure</span></li>
+              <li><span className={locationStyles.factValue}>Home systems</span></li>
+              <li><span className={locationStyles.factValue}>Exterior</span></li>
+              <li><span className={locationStyles.factValue}>Outdoor living</span></li>
+              <li><span className={locationStyles.factValue}>Property services</span></li>
+            </ul>
+            <div className={locationStyles.factsCta}>
+              <p>Not sure which service fits? Get a free estimate and we will scope it with you.</p>
+              <Button href="/contact-us" variant="secondary" data-estimate-trigger className={locationStyles.factsButton}>
+                Get a free estimate
+              </Button>
+            </div>
+          </aside>
         </Container>
       </section>
 
