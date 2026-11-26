@@ -378,6 +378,14 @@ const areas = [
   { label: "General contractor in Laurel", href: "/service/design-build/laurel-md" },
 ];
 
+function PhoneIcon() {
+  return (
+    <svg viewBox="0 0 16 16" fill="none" aria-hidden="true" focusable="false" className={`${styles.buttonIcon} ${styles.phoneIcon}`}>
+      <path d="M5 2.6 6.7 4.2c.2.2.3.5.2.8l-.5 1.4c.8 1.3 1.9 2.4 3.2 3.2L11 9.1c.3-.1.6 0 .8.2l1.6 1.7c.2.2.2.6 0 .8l-1.1 1.1c-.5.5-1.2.7-1.9.6C6.6 13 3 9.4 2.6 5.6c-.1-.7.1-1.4.6-1.9l1.1-1.1c.2-.2.6-.2.8 0Z" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
 function ServiceGrid({ items }: { items: ServiceItem[] }) {
   return (
     <div className={styles.serviceGrid}>
@@ -450,9 +458,9 @@ export default function ServicesPage() {
                 <Button href="/contact-us" data-estimate-trigger>
                   Get a free estimate
                 </Button>
-                <a className={locationStyles.phoneLink} href="tel:+12407301292">
+                <Button href="tel:+12407301292" variant="secondary" icon={<PhoneIcon />} iconPosition="left">
                   +1 240-730-1292
-                </a>
+                </Button>
               </div>
             </div>
 

@@ -1,29 +1,10 @@
-import Image from "next/image";
 import Link from "next/link";
 import Badge from "@/components/Common/Badge";
 import Button from "@/components/Common/Button";
 import Container from "@/components/Common/Container";
 import SectionHeading from "@/components/Common/SectionHeading";
+import GoogleReviewsSlider from "./GoogleReviewsSlider";
 import styles from "./client-reviews.module.scss";
-
-const reviews = [
-  {
-    quote: "DMV GC transformed our outdated kitchen into a modern masterpiece. Our project manager kept us updated daily and stuck strictly to the timeline and original estimate.",
-    name: "Michael R.",
-    project: "Kitchen Remodel",
-    location: "Bethesda, MD",
-    image: "/images/home/kitchen-remodel-bethesda-md-condo.webp",
-    alt: "Remodeled condo kitchen with white cabinets and tall pantry storage in Bethesda, MD",
-  },
-  {
-    quote: "Handling permits in DC can be a nightmare, but the DMV GC team handled everything seamlessly. Their crew was respectful, clean, and delivered top-tier quality.",
-    name: "Sarah L.",
-    project: "Bathroom Remodel",
-    location: "Washington, DC",
-    image: "/images/home/walk-in-shower-bathroom-remodel-washington-dc.webp",
-    alt: "Walk-in shower with marble hexagon floor tile in a Washington, DC bathroom remodel",
-  },
-];
 
 function StarIcon() {
   return (
@@ -53,29 +34,9 @@ export default function ClientReviews() {
         </div>
 
         <div className={styles.grid}>
-          {reviews.map((review) => (
-            <article key={review.name} className={styles.card}>
-              <div className={styles.media}>
-                <Image
-                  src={review.image}
-                  alt={review.alt}
-                  fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 345px"
-                  className={styles.image}
-                />
-              </div>
-              <div className={styles.body}>
-                <div className={styles.stars} aria-label="5 out of 5 stars">
-                  {Array.from({ length: 5 }).map((_, index) => (
-                    <StarIcon key={index} />
-                  ))}
-                </div>
-                <blockquote className={styles.quote}>&ldquo;{review.quote}&rdquo;</blockquote>
-                <p className={styles.name}>{review.name}</p>
-                <p className={styles.meta}>{review.location} &middot; {review.project}</p>
-              </div>
-            </article>
-          ))}
+          <div className={styles.reviewsSlider}>
+            <GoogleReviewsSlider />
+          </div>
 
           <article className={styles.storiesCard}>
             <div className={styles.storiesIcon} aria-hidden="true">
