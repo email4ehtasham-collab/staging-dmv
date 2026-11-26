@@ -13,10 +13,6 @@ Disallow: /admin/
 Disallow: /admin
 Disallow: /wp-admin/
 Disallow: /wp-admin
-Disallow: /s_dashboard
-Disallow: /dashboard_login
-Disallow: /seo-dashboard
-Disallow: /_next/static/
 Disallow: /api/
 Disallow: /api
 

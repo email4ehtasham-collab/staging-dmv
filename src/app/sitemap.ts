@@ -13,11 +13,12 @@ const SITE_URL = "https://www.dmv-gc.com";
 const APP_DIR = path.join(process.cwd(), "src", "app");
 const SERVICE_PAGES_DIR = path.join(APP_DIR, "service", "[slug]", "pages");
 const LOCATION_DIR_NAME = "location-landing-pages";
+const SERVICE_AREA_DIR = path.join(APP_DIR, "service-area");
 
 const PAGE_FILES = ["page.tsx", "page.jsx", "page.ts", "page.js"];
 const INDEX_FILES = ["index.tsx", "index.jsx"];
 
-const EXCLUDED_ROUTES = new Set(["dashboard_login", "s_dashboard"]);
+const EXCLUDED_ROUTES = new Set(["dashboard_login", "s_dashboard", "seo-dashboard", "seo_login"]);
 
 const STATIC_META: Record<
   string,
@@ -116,9 +117,33 @@ function getLocationPages(): MetadataRoute.Sitemap {
   return entries;
 }
 
+function getServiceAreaPages(): MetadataRoute.Sitemap {
+  const entries: MetadataRoute.Sitemap = [];
+
+  if (!fs.existsSync(SERVICE_AREA_DIR)) return entries;
+
+  for (const area of fs.readdirSync(SERVICE_AREA_DIR, { withFileTypes: true })) {
+    if (!area.isDirectory()) continue;
+    if (area.name.startsWith("[") || area.name.startsWith("(")) continue;
+
+    const pageFile = firstExistingFile(path.join(SERVICE_AREA_DIR, area.name), PAGE_FILES);
+    if (!pageFile) continue;
+
+    entries.push({
+      url: `${SITE_URL}/service-area/${area.name}`,
+      lastModified: mtimeOf(pageFile),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    });
+  }
+
+  return entries;
+}
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const entries: MetadataRoute.Sitemap = [
     ...getStaticPages(),
+    ...getServiceAreaPages(),
     ...getLocationPages(),
   ];
 
