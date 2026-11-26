@@ -12,16 +12,16 @@ const reviews = [
     name: "Michael R.",
     project: "Kitchen Remodel",
     location: "Bethesda, MD",
-    image: "/images/projects-galary/calvert-st-kitchen/1.webp",
-    alt: "Completed kitchen remodel in Bethesda, Maryland",
+    image: "/images/home/kitchen-remodel-bethesda-md-condo.webp",
+    alt: "Remodeled condo kitchen with white cabinets and tall pantry storage in Bethesda, MD",
   },
   {
     quote: "Handling permits in DC can be a nightmare, but the DMV GC team handled everything seamlessly. Their crew was respectful, clean, and delivered top-tier quality.",
     name: "Sarah L.",
     project: "Bathroom Remodel",
     location: "Washington, DC",
-    image: "/images/services/bathroom.webp",
-    alt: "Completed bathroom remodel in Washington, DC",
+    image: "/images/home/walk-in-shower-bathroom-remodel-washington-dc.webp",
+    alt: "Walk-in shower with marble hexagon floor tile in a Washington, DC bathroom remodel",
   },
 ];
 
@@ -45,7 +45,7 @@ export default function ClientReviews() {
             title="What Our Clients Say"
             text={
               <>
-                Our clients rate us 4.9 out of 5 on Google. You can read every review on our <Link href="https://www.google.com/maps/place/DMV+General+Contracting+Group+LLC/@39.0493761,-77.1200241,17z/data=!3m1!4b1!4m6!3m5!1s0x158dd0ef2148a11:0xceda33050d2dcdfb!8m2!3d39.049372!4d-77.1174492!16s%2Fg%2F11v3gbzc44?hl=en&entry=ttu&g_ep=EgoyMDI2MTEwMS4wIKXMDSoASAFQAw%3D%3D">Google Business Profile</Link> and more client stories on our{" "}
+                Our clients rate us <strong>4.9 out of 5 on Google</strong>. You can read every review on our <Link href="https://www.google.com/maps/place/DMV+General+Contracting+Group+LLC/@39.0493761,-77.1200241,17z/data=!3m1!4b1!4m6!3m5!1s0x158dd0ef2148a11:0xceda33050d2dcdfb!8m2!3d39.049372!4d-77.1174492!16s%2Fg%2F11v3gbzc44?hl=en&entry=ttu&g_ep=EgoyMDI2MTEwMS4wIKXMDSoASAFQAw%3D%3D">Google Business Profile</Link> and more client stories on our{" "}
                 <Link href="/testimonials">client reviews page</Link>.
               </>
             }

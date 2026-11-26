@@ -11,22 +11,22 @@ const posts = [
     category: "Permits",
     title: "Remodeling Permits in Montgomery County and DC",
     text: "Everything homeowners in Montgomery County and DC need to know before filing.",
-    image: "/images/banner-v3.webp",
-    alt: "Home renovation permit planning in Maryland",
+    image: "/images/home/permitted-screened-porch-addition-chevy-chase-md.webp",
+    alt: "Inside a permitted screened porch addition in Chevy Chase, MD",
   },
   {
     category: "Costs",
     title: "What Maryland Remodeling Really Costs in 2026",
     text: "What Maryland remodeling really costs in 2026, line by line.",
-    image: "/images/services/kitchen.webp",
-    alt: "Kitchen remodel cost planning in Maryland",
+    image: "/images/home/bathroom-remodel-chevy-chase-md.webp",
+    alt: "Tub and tiled shower after a bathroom remodel in Chevy Chase, MD",
   },
   {
     category: "ADUs",
     title: "ADU Zoning, Rental Rules and Permits",
     text: "ADU zoning, rental rules and permits in Montgomery County and DC.",
-    image: "/images/services/additions.webp",
-    alt: "Accessory dwelling unit construction in Maryland",
+    image: "/images/home/adu-side-yard-path-northwest-washington-dc.webp",
+    alt: "Fenced side path leading to a new ADU in Northwest Washington, DC",
   },
 ];
 

@@ -16,7 +16,7 @@ export default function CtaBanner() {
             tone="inverse"
             eyebrow={<Badge className={styles.badge}>Free Consultation</Badge>}
             title="Planning a Home Renovation or Upgrade?"
-            text="Speak directly with our project managers & architectural designers today for a complimentary estimate."
+            text={<>Speak directly with our <strong>project managers &amp; architectural designers</strong> today for a <strong>complimentary estimate</strong>.</>}
           />
 
           <div className={styles.actions}>

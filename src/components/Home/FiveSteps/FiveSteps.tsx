@@ -4,36 +4,38 @@ import Container from "@/components/Common/Container";
 import SectionHeading from "@/components/Common/SectionHeading";
 import styles from "./five-steps.module.scss";
 
+import type { ReactNode } from "react";
+
 const defaultSteps = [
   {
     number: "01",
     title: "Meet",
     side: "left",
-    text: "Start with a free in-home consultation. We look at the space, listen to what you want and talk through your budget and timing.",
+    text: <>Start with a <strong>free in-home consultation</strong>. We look at the space, listen to what you want and talk through your <strong>budget and timing</strong>.</>,
   },
   {
     number: "02",
     title: "Design",
     side: "right",
-    text: "We draw the layout, help you pick materials and finishes, and write a scope that lists exactly what is included. You approve the design and a written estimate before anything is ordered.",
+    text: <>We draw the layout, help you pick <strong>materials and finishes</strong>, and write a <strong>scope</strong> that lists exactly what is included. You approve the design and a <strong>written estimate</strong> before anything is ordered.</>,
   },
   {
     number: "03",
     title: "Permit",
     side: "left",
-    text: "We prepare the permit drawings, file the application and track it until the permit is issued.",
+    text: <>We prepare the <strong>permit drawings</strong>, file the application and track it until the <strong>permit is issued</strong>.</>,
   },
   {
     number: "04",
     title: "Build",
     side: "right",
-    text: "One project lead runs the site, coordinates every trade and sends you an update each week.",
+    text: <><strong>One project lead</strong> runs the site, coordinates every trade and sends you an <strong>update each week</strong>.</>,
   },
   {
     number: "05",
     title: "Inspect and hand over",
     side: "left",
-    text: "We pass the final inspection, walk the finished space with you, close out the punch list and start your 1-year warranty.",
+    text: <>We pass the <strong>final inspection</strong>, walk the finished space with you, close out the <strong>punch list</strong> and start your <strong>1-year warranty</strong>.</>,
   },
 ] as const;
 
@@ -41,7 +43,7 @@ type ProcessStep = {
   number: string;
   title: string;
   side: "left" | "right";
-  text: string;
+  text: ReactNode;
 };
 
 type ProcessDuration = {

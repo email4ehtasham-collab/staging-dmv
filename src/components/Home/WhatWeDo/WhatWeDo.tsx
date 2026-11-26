@@ -8,22 +8,22 @@ const jobs = [
   {
     number: "01",
     title: "Plan and design",
-    text: "Our in-house architecture and engineering team turns your goals into drawings and a written scope before any demolition starts.",
+    text: <>Our <strong>in-house architecture and engineering</strong> team turns your goals into <strong>drawings and a written scope</strong> before any demolition starts.</>,
   },
   {
     number: "02",
     title: "Permits and inspections",
-    text: "We file the applications, answer the reviewers' comments and book every inspection with the county, the city or DC.",
+    text: <>We <strong>file the applications</strong>, answer the reviewers&apos; comments and <strong>book every inspection</strong> with the county, the city or DC.</>,
   },
   {
     number: "03",
     title: "Trades and schedule",
-    text: "We line up carpenters, electricians, plumbers and HVAC technicians in the right order, so no trade sits waiting on another.",
+    text: <>We line up <strong>carpenters, electricians, plumbers and HVAC technicians</strong> in the right order, so no trade sits waiting on another.</>,
   },
   {
     number: "04",
     title: "Quality and handover",
-    text: "We check each stage against the plans and the building code, walk the finished space with you and start your warranty.",
+    text: <>We check each stage against the plans and the <strong>building code</strong>, walk the finished space with you and start your <strong>warranty</strong>.</>,
   },
 ];
 
@@ -52,7 +52,7 @@ export default function WhatWeDo() {
                 <a href="https://en.wikipedia.org/wiki/General_contractor" target="_blank" rel="noopener noreferrer">
                   general contractor
                 </a>{" "}
-                is a licensed builder who runs a home remodel from start to finish: design, permits, trades, schedule, inspections and the final walkthrough. Instead of hiring a plumber, an electrician, a framer and a tile setter one at a time, you sign one contract and deal with one company.
+                is a <strong>licensed builder</strong> who runs a home remodel from start to finish: design, permits, trades, schedule, inspections and the final walkthrough. Instead of hiring a plumber, an electrician, a framer and a tile setter one at a time, you sign <strong>one contract</strong> and deal with <strong>one company</strong>.
               </>
             }
           />

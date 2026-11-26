@@ -39,7 +39,7 @@ export default function HeroBanner() {
             Licensed Maryland General Contractor for Home Remodels <span className={styles.highlight}> From Design To Completion</span>
           </h1>
           <p className={styles.lede}>
-            DMV General Contracting Group is a licensed residential general contractor in Maryland and Washington, DC, with 35 years of experience in home remodeling. We design, permit and build kitchens, bathrooms, basements, ADUs, additions and whole-home renovations under one contract, so you never have to hire and schedule separate trades yourself.
+            DMV General Contracting Group is a <strong>licensed residential general contractor in Maryland and Washington, DC</strong>, with <strong>35 years of experience</strong> in home remodeling. We design, permit and build kitchens, bathrooms, basements, ADUs, additions and whole-home renovations under <strong>one contract</strong>, so you never have to hire and schedule separate trades yourself.
           </p>
           <div className={styles.actions}>
             <Button href="/contact-us" data-estimate-trigger icon={<ArrowIcon />}>
@@ -50,15 +50,15 @@ export default function HeroBanner() {
             </Button>
           </div>
           <p className={styles.note}>
-            We follow the building codes and permit rules of every area we work in, from Montgomery County DPS in Bethesda, Potomac and Silver Spring to the City of Rockville, the City of Gaithersburg, Laurel and the DC Department of Buildings.
+            We follow the building codes and permit rules of every area we work in, from <strong>Montgomery County DPS</strong> in Bethesda, Potomac and Silver Spring to the <strong>City of Rockville</strong>, the <strong>City of Gaithersburg</strong>, Laurel and the <strong>DC Department of Buildings</strong>.
           </p>
         </div>
 
         <div className={styles.media}>
           <div className={styles.mediaFrame}>
             <Image
-              src="/images/banner-kitchen.webp"
-              alt="Custom open-concept kitchen remodel in Bethesda"
+              src="/images/home/open-concept-kitchen-remodel-washington-dc-condo.webp"
+              alt="Open-concept condo kitchen with a navy island, remodeled in Washington, DC by DMV General Contracting Group"
               fill
               priority
               loading="eager"

@@ -1,4 +1,5 @@
-﻿import Link from "next/link";
+﻿import type { ReactNode } from "react";
+import Link from "next/link";
 import Badge from "@/components/Common/Badge";
 import Button from "@/components/Common/Button";
 import Container from "@/components/Common/Container";
@@ -25,7 +26,7 @@ export type ServiceCardOverride = Partial<Omit<ServiceCardData, "slug">> & Pick<
 type ServicesProps = {
   eyebrow?: string;
   title?: string;
-  text?: string;
+  text?: ReactNode;
   align?: "left" | "center";
   serviceOverrides?: ServiceCardOverride[];
   serviceOrder?: string[];

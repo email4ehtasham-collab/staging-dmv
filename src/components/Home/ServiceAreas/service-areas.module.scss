@@ -32,6 +32,7 @@
 
 .areas li {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   min-height: 36px;
   padding: 7px var(--dmv-space-4);
@@ -51,6 +52,16 @@
 .areaLink:hover {
   color: var(--dmv-color-brand-dark);
   text-decoration: underline;
+}
+
+.zips {
+  flex-basis: 100%;
+  margin-top: 2px;
+  padding-left: calc(6px + var(--dmv-space-2));
+  color: var(--dmv-color-heading);
+  font-size: 12px;
+  font-weight: var(--dmv-weight-semibold);
+  line-height: 1.4;
 }
 
 .dot {
@@ -156,6 +167,13 @@
   line-height: var(--dmv-line-normal);
 }
 
+.officeCard address a {
+  display: inline;
+  margin-top: 0;
+  color: var(--dmv-color-inverse);
+  font-weight: inherit;
+}
+
 .officeCard a {
   display: inline-flex;
   margin-top: var(--dmv-space-4);
@@ -167,6 +185,24 @@
 
 .officeCard a:hover {
   color: var(--dmv-color-inverse);
+}
+
+.mapVisual {
+  min-width: 0;
+}
+
+.areaMap {
+  display: block;
+  width: 100%;
+  height: 440px;
+  border: 0;
+  border-radius: var(--dmv-radius-lg);
+  background: var(--dmv-color-surface-soft);
+}
+
+.officeCardStatic {
+  position: static;
+  margin-top: var(--dmv-space-4);
 }
 
 @media (max-width: 1200px) {
@@ -203,6 +239,10 @@
 @media (max-width: 560px) {
   .areas {
     grid-template-columns: 1fr;
+  }
+
+  .areaMap {
+    height: 360px;
   }
 
   .visual {
