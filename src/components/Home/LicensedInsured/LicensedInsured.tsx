@@ -11,37 +11,37 @@ const homeReasons = [
     icon: "verified" as IconName,
     label: "Verified",
     title: "Licensed in Maryland and DC",
-    text: "We hold Maryland Home Improvement Commission (MHIC) license #156178 and DC Department of Licensing and Consumer Protection (DLCP) license #410526000209. In Maryland, only MHIC-licensed contractors may sign home improvement contracts with homeowners, and doing this work without a license is a crime. You can check our number, or any contractor's, in the Maryland Department of Labor's MHIC license search.",
+    text: <>We hold <strong>Maryland Home Improvement Commission (MHIC) license #156178</strong> and <strong>DC Department of Licensing and Consumer Protection (DLCP) license #410526000209</strong>. In Maryland, only MHIC-licensed contractors may sign home improvement contracts with homeowners, and doing this work without a license is a crime. You can check our number, or any contractor&apos;s, in the <strong>Maryland Department of Labor&apos;s MHIC license search</strong>.</>,
   },
   {
     icon: "protected" as IconName,
     label: "Protected",
     title: "Insured and Covered by the Guaranty Fund",
-    text: "We carry the general liability insurance that the MHIC requires of every licensed home improvement contractor. Because we are licensed, our clients can also file a claim with the Maryland Home Improvement Guaranty Fund if work goes wrong. The fund does not cover work by unlicensed contractors.",
+    text: <>We carry the <strong>general liability insurance</strong> that the MHIC requires of every licensed home improvement contractor. Because we are licensed, our clients can also file a claim with the <strong>Maryland Home Improvement Guaranty Fund</strong> if work goes wrong. The fund does not cover work by unlicensed contractors.</>,
   },
   {
     icon: "experience" as IconName,
     label: "Experience",
     title: "35 Years of Experience",
-    text: "Our team brings 35 years of residential construction experience to every project, from a small bathroom update to a second-story addition.",
+    text: <>Our team brings <strong>35 years of residential construction experience</strong> to every project, from a small bathroom update to a second-story addition.</>,
   },
   {
     icon: "compliance" as IconName,
     label: "Compliance",
     title: "We Follow the Rules of Every Area We Work In",
-    text: "We know which office issues permits in each community we serve, and we design to the local zoning, historic district and HOA rules before we file. That keeps inspections on schedule and avoids redesigns halfway through a project.",
+    text: <>We know which office issues permits in each community we serve, and we design to the local <strong>zoning, historic district and HOA rules</strong> before we file. That keeps inspections on schedule and avoids redesigns halfway through a project.</>,
   },
   {
     icon: "fairness" as IconName,
     label: "Fairness",
     title: "Fair Contracts and Written Estimates",
-    text: "Every contract shows our license number, as Maryland law requires, and the deposit at signing is never more than one-third of the contract price, the legal limit for home improvement contracts in Maryland. You approve a written estimate before any work starts.",
+    text: <>Every contract shows our <strong>license number</strong>, as Maryland law requires, and the deposit at signing is never more than <strong>one-third of the contract price</strong>, the legal limit for home improvement contracts in Maryland. You approve a <strong>written estimate</strong> before any work starts.</>,
   },
   {
     icon: "warranty" as IconName,
     label: "Warranty",
     title: "1-Year Warranty and No Minimum Project Size",
-    text: "Every project we build comes with a 1-year warranty. There is no minimum job size, so a single-room update gets the same care as a whole-home renovation.",
+    text: <>Every project we build comes with a <strong>1-year warranty</strong>. There is <strong>no minimum job size</strong>, so a single-room update gets the same care as a whole-home renovation.</>,
   },
 ];
 

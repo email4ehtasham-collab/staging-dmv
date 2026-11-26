@@ -2,37 +2,38 @@ import Badge from "@/components/Common/Badge";
 import Button from "@/components/Common/Button";
 import Container from "@/components/Common/Container";
 import SectionHeading from "@/components/Common/SectionHeading";
+import type { ReactNode } from "react";
 import styles from "./home-faq.module.scss";
 
 type Faq = {
   question: string;
-  answer: string;
+  answer: ReactNode;
 };
 
 const homeFaqs: Faq[] = [
   {
     question: "Are you licensed in Maryland and DC?",
-    answer: "Yes. We hold Maryland Home Improvement Commission license #156178 and DC Department of Licensing and Consumer Protection license #410526000209.",
+    answer: <>Yes. We hold <strong>Maryland Home Improvement Commission license #156178</strong> and <strong>DC Department of Licensing and Consumer Protection license #410526000209</strong>.</>,
   },
   {
     question: "Which areas do you serve?",
-    answer: "We serve Washington, DC and 12 Maryland communities: Bethesda, North Bethesda, Rockville, Potomac, Chevy Chase, Gaithersburg, Kensington, Silver Spring, Wheaton, Garrett Park, Cabin John and Laurel.",
+    answer: <>We serve <strong>Washington, DC</strong> and <strong>12 Maryland communities</strong>: Bethesda, North Bethesda, Rockville, Potomac, Chevy Chase, Gaithersburg, Kensington, Silver Spring, Wheaton, Garrett Park, Cabin John and Laurel.</>,
   },
   {
     question: "Do you handle permits?",
-    answer: "Yes. We prepare the drawings, file the applications, track them and book the inspections with Montgomery County DPS, WSSC Water, the City of Rockville, the City of Gaithersburg, the City of Laurel, Prince George's County DPIE and the DC Department of Buildings.",
+    answer: <>Yes. We prepare the drawings, file the applications, track them and book the inspections with <strong>Montgomery County DPS</strong>, <strong>WSSC Water</strong>, the <strong>City of Rockville</strong>, the <strong>City of Gaithersburg</strong>, the <strong>City of Laurel</strong>, <strong>Prince George&apos;s County DPIE</strong> and the <strong>DC Department of Buildings</strong>.</>,
   },
   {
     question: "Are you a general contractor or a design-build firm?",
-    answer: "Both. We can build from plans your architect has already drawn, or we can design and build your project under one contract.",
+    answer: <><strong>Both.</strong> We can build from plans your architect has already drawn, or we can <strong>design and build</strong> your project under <strong>one contract</strong>.</>,
   },
   {
     question: "What is your minimum project size?",
-    answer: "There is none. We take on single-room updates as well as additions and whole-home renovations.",
+    answer: <><strong>There is none.</strong> We take on single-room updates as well as additions and whole-home renovations.</>,
   },
   {
     question: "How do I check a contractor's license in Maryland?",
-    answer: "Search the contractor's name or license number in the Maryland Department of Labor's online MHIC license search. The result shows whether the license is active. If a contractor can't give you a number, don't sign.",
+    answer: <>Search the contractor&apos;s name or license number in the <strong>Maryland Department of Labor&apos;s online MHIC license search</strong>. The result shows whether the license is active. If a contractor can&apos;t give you a number, don&apos;t sign.</>,
   },
 ];
 

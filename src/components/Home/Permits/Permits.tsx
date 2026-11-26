@@ -294,7 +294,7 @@ export default function Permits({ variant = "home" }: PermitsProps) {
                     ? "Yes, if the work changes walls, wiring or plumbing. The Montgomery County Department of Permitting Services lists cabinet installs and floor coverings as work that needs no permit. In Maryland and DC, the permit office depends on your address:"
                     : isBathroom
                       ? "Yes, once you move or add plumbing, change walls or add circuits. Plumbing appears on the Montgomery County Department of Permitting Services permit-required list, with a note to contact WSSC Water. Which agency signs off on a Maryland or DC bathroom depends on the jurisdiction:"
-                      : "We apply for and manage every permit your project needs. Who issues it depends on where you live, and in Maryland the plumbing and gas permit often comes from a different office than the building permit."
+                      : <>We apply for and <strong>manage every permit</strong> your project needs. Who issues it depends on where you live, and in Maryland the <strong>plumbing and gas permit</strong> often comes from a different office than the <strong>building permit</strong>.</>
             }
           />
         </div>

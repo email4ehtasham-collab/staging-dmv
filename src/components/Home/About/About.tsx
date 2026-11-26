@@ -37,8 +37,8 @@ export default function About() {
       <Container className={styles.inner}>
         <div className={styles.media}>
           <Image
-            src="/videos/dmv-video-poster.jpg"
-            alt="The DMV General Contracting Group design and build team"
+            src="/images/home/dmv-general-contracting-company-introduction-video.jpg"
+            alt="Company introduction video from DMV General Contracting Group, a licensed Maryland general contractor"
             fill
             sizes="(max-width: 1024px) 100vw, 698px"
             className={styles.mediaImage}
@@ -55,13 +55,13 @@ export default function About() {
           />
           <div className={styles.paragraphs}>
             <p>
-              DMV General Contracting Group LLC is a design-build general contractor based in North Bethesda, Maryland. Our team brings 35 years of experience in residential construction to every kitchen, bathroom, basement, ADU, addition and whole-home renovation we take on.
+              DMV General Contracting Group LLC is a <strong>design-build general contractor</strong> based in <strong>North Bethesda, Maryland</strong>. Our team brings <strong>35 years of experience</strong> in residential construction to every kitchen, bathroom, basement, ADU, addition and whole-home renovation we take on.
             </p>
             <p>
-              We keep architecture, engineering, permitting, electrical, plumbing and HVAC in-house, so the people who design your project are the same team that builds it. We are licensed by the Maryland Home Improvement Commission <span className={styles.inlineLink}> (MHIC #156178) </span> and the DC Department of Licensing and Consumer Protection <span className={styles.inlineLink}> (DLCP #410526000209), </span> and we carry general liability insurance.
+              We keep <strong>architecture, engineering, permitting, electrical, plumbing and HVAC in-house</strong>, so the people who design your project are the same team that builds it. We are licensed by the <strong>Maryland Home Improvement Commission</strong> <span className={styles.inlineLink}> (MHIC #156178) </span> and the <strong>DC Department of Licensing and Consumer Protection</strong> <span className={styles.inlineLink}> (DLCP #410526000209), </span> and we carry <strong>general liability insurance</strong>.
             </p>
             <p>
-              Homeowners rate us 4.9 out of 5 on Google. Every project comes with a 1-year warranty, and you can call us 7 days a week at <a href="tel:+12407301292" className={styles.inlineLink}>+1 240-730-1292</a>.
+              Homeowners rate us <strong>4.9 out of 5 on Google</strong>. Every project comes with a <strong>1-year warranty</strong>, and you can call us <strong>7 days a week</strong> at <a href="tel:+12407301292" className={styles.inlineLink}>+1 240-730-1292</a>.
             </p>
           </div>
 

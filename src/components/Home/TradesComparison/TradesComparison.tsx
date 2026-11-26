@@ -47,7 +47,7 @@ export default function TradesComparison() {
             align="center"
             eyebrow={<Badge>One Contractor vs Separate Trades</Badge>}
             title="Why Hire One General Contractor Instead of Separate Trades?"
-            text="For any remodel that touches more than one trade or needs a permit, one general contractor is simpler: one contract, one schedule and one party responsible for the result."
+            text={<>For any remodel that touches more than one trade or needs a permit, <strong>one general contractor</strong> is simpler: <strong>one contract</strong>, <strong>one schedule</strong> and <strong>one party responsible</strong> for the result.</>}
           />
         </div>
 
@@ -80,7 +80,7 @@ export default function TradesComparison() {
         <div className={styles.note}>
           <InfoIcon />
           <p>
-            A contractor and a general contractor are not always the same thing. A contractor can be a single trade, such as a plumber or an electrician. A general contractor holds the main contract with you and hires and manages all of the trades on the job.
+            A contractor and a general contractor are not always the same thing. A <strong>contractor</strong> can be a single trade, such as a plumber or an electrician. A <strong>general contractor</strong> holds the <strong>main contract</strong> with you and hires and manages all of the trades on the job.
           </p>
         </div>
       </Container>
