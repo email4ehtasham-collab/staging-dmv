@@ -245,13 +245,13 @@ const NorthBethesdaMD = () => {
                         <h2>Explore Our Other Services in North Bethesda, MD</h2>
                         <ul>
                             <li><Link href="/service/home-additions/north-bethesda-md">Home Additions in North Bethesda, MD</Link></li>
-                            <li><Link href="/service/kitchen-remodeling/north-bethesda-md">Kitchen Remodeling in North Bethesda, MD</Link></li>
+                            <li>Kitchen Remodeling in North Bethesda, MD</li>
                             <li><Link href="/service/bathroom-remodeling/north-bethesda-md">Bathroom Remodeling in North Bethesda, MD</Link></li>
                             <li><Link href="/service/basement-remodeling/north-bethesda-md">Basement Remodeling in North Bethesda, MD</Link></li>
                             <li><Link href="/service/design-build/north-bethesda-md">Design-Build Contractor in North Bethesda, MD</Link></li>
                             <li><Link href="/service/electrical-services/north-bethesda-md">Electrical Services in North Bethesda, MD</Link></li>
                             <li><Link href="/service/plumbing-services/north-bethesda-md">Plumbing Services in North Bethesda, MD</Link></li>
-                            <li><Link href="/service/siding-installation/north-bethesda-md">Siding Installation in North Bethesda, MD</Link></li>
+                            <li>Siding Installation in North Bethesda, MD</li>
                         </ul>
                     </div>
 

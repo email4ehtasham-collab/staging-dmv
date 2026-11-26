@@ -24,7 +24,7 @@ export default function CtaBanner() {
               Get Free Estimate
             </Button>
             <Button href="tel:+12407301292" variant="secondary" className={styles.phoneButton}>
-              (240) 730-1292
+              +1 240-730-1292
             </Button>
           </div>
         </div>

@@ -11,16 +11,17 @@ const schemaJsonLd = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "LocalBusiness",
+      "@type": "GeneralContractor",
       "@id": "https://www.dmv-gc.com/#business",
-      "name": "DMV-GC Group",
-      "alternateName": "DMV General Contracting Group LLC",
+      "name": "DMV General Contracting Group LLC",
+      "legalName": "DMV General Contracting Group LLC",
+      "alternateName": ["DMV General Contracting Group", "DMV-GC"],
       "url": "https://www.dmv-gc.com",
-      "telephone": "+12407301292",
+      "telephone": "+1-240-730-1292",
       "email": "support@dmv-gc.com",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "11810 Grand Park Ave, Suite 500",
+        "streetAddress": "11810 Grand Park Ave #500",
         "addressLocality": "North Bethesda",
         "addressRegion": "MD",
         "postalCode": "20852",
@@ -41,12 +42,6 @@ const schemaJsonLd = {
           "name": "DLCP License #410526000209"
         }
       ],
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": "97",
-        "bestRating": "5"
-      },
       "priceRange": "$$$"
     },
     {
@@ -110,15 +105,15 @@ const schemaJsonLd = {
           "name": "How much does flooring installation cost in Laurel, MD?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Flooring installation in Laurel, MD typically costs $3–$18 per square foot installed. Hardwood refinishing for Laurel's 1960s–80s colonials and split-levels costs $3–$6 per square foot. Wide-plank white oak installation runs $10–$18 per square foot. LVP for split-level lower levels and kitchens costs $5–$10 per square foot — the most critical zone in Laurel's split-level-dominant housing. Porcelain tile costs $8–$18 per square foot. A typical Laurel whole-home flooring package for a 1970s colonial or split-level runs $12,000–$26,000. DMV-GC Group provides free in-home estimates for all Laurel neighborhoods."
+            "text": "Flooring installation in Laurel, MD typically costs $3–$18 per square foot installed. Hardwood refinishing for Laurel's 1960s–80s colonials and split-levels costs $3–$6 per square foot. Wide-plank white oak installation runs $10–$18 per square foot. LVP for split-level lower levels and kitchens costs $5–$10 per square foot — the most critical zone in Laurel's split-level-dominant housing. Porcelain tile costs $8–$18 per square foot. A typical Laurel whole-home flooring package for a 1970s colonial or split-level runs $12,000–$26,000. DMV General Contracting Group provides free in-home estimates for all Laurel neighborhoods."
           }
         },
         {
           "@type": "Question",
-          "name": "Does DMV-GC Group serve all three Laurel permit jurisdictions?",
+          "name": "Does DMV General Contracting Group serve all three Laurel permit jurisdictions?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. Laurel, MD has three distinct permit jurisdictions depending on where the property is located: the City of Laurel (permit office at 8103 Sandy Spring Road) for incorporated city addresses; Montgomery County DPS (2425 Reedie Drive, Wheaton) for West Laurel and Montpelier; and Prince George's County DPS for Laurel Lakes, Russett, and other PG County Laurel addresses. DMV-GC Group identifies the correct jurisdiction for every Laurel project before any renovation scope requiring a permit begins. Flooring-only projects typically do not require a building permit in any of the three jurisdictions."
+            "text": "Yes. Laurel, MD has three distinct permit jurisdictions depending on where the property is located: the City of Laurel (permit office at 8103 Sandy Spring Road) for incorporated city addresses; Montgomery County DPS (2425 Reedie Drive, Wheaton) for West Laurel and Montpelier; and Prince George's County DPS for Laurel Lakes, Russett, and other PG County Laurel addresses. DMV General Contracting Group identifies the correct jurisdiction for every Laurel project before any renovation scope requiring a permit begins. Flooring-only projects typically do not require a building permit in any of the three jurisdictions."
           }
         },
         {
@@ -131,10 +126,10 @@ const schemaJsonLd = {
         },
         {
           "@type": "Question",
-          "name": "Is DMV-GC Group licensed for flooring in Laurel, MD?",
+          "name": "Is DMV General Contracting Group licensed for flooring in Laurel, MD?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. DMV-GC Group holds Maryland MHIC license #156178 — required for all home improvement work in Laurel across all three jurisdictions (City of Laurel, Montgomery County, and Prince George's County). We are fully bonded, carry comprehensive general liability insurance and workers' compensation coverage, and provide a 1-year workmanship warranty on every Laurel flooring project."
+            "text": "Yes. DMV General Contracting Group holds Maryland MHIC license #156178 — required for all home improvement work in Laurel across all three jurisdictions (City of Laurel, Montgomery County, and Prince George's County). We are fully bonded, carry comprehensive general liability insurance and workers' compensation coverage, and provide a 1-year workmanship warranty on every Laurel flooring project."
           }
         }
       ]
@@ -506,7 +501,7 @@ const LaurelMD = () => {
         <div className="internal-links">
           <h2>Explore Our Other Services in Laurel, MD</h2>
           <ul>
-            <li><Link href="/service/kitchen-remodeling/laurel-md">Kitchen Remodeling in Laurel, MD</Link></li>
+            <li>Kitchen Remodeling in Laurel, MD</li>
             <li><Link href="/service/bathroom-remodeling/laurel-md">Bathroom Remodeling in Laurel, MD</Link></li>
             <li><Link href="/service/basement-remodeling/laurel-md">Basement Remodeling in Laurel, MD</Link></li>
             <li><Link href="/service/adu/laurel-md">ADU Construction in Laurel, MD</Link></li>

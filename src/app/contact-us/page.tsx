@@ -57,7 +57,7 @@ function ContactPage() {
 							</div>
 							<div className='mb-3'>
 								<h4>Office Address</h4>
-								<p>11810 Grand Park Ave. Suite 500 North Bethesda, MD 20852</p>
+								<p>11810 Grand Park Ave #500, North Bethesda, MD 20852</p>
 							</div>
 						</div>
 					</div>

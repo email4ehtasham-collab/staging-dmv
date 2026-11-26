@@ -11,16 +11,17 @@ const schemaJsonLd = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "LocalBusiness",
+      "@type": "GeneralContractor",
       "@id": "https://www.dmv-gc.com/#business",
-      "name": "DMV-GC Group",
-      "alternateName": "DMV General Contracting Group LLC",
+      "name": "DMV General Contracting Group LLC",
+      "legalName": "DMV General Contracting Group LLC",
+      "alternateName": ["DMV General Contracting Group", "DMV-GC"],
       "url": "https://www.dmv-gc.com",
-      "telephone": "+12407301292",
+      "telephone": "+1-240-730-1292",
       "email": "support@dmv-gc.com",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "11810 Grand Park Ave, Suite 500",
+        "streetAddress": "11810 Grand Park Ave #500",
         "addressLocality": "North Bethesda",
         "addressRegion": "MD",
         "postalCode": "20852",
@@ -41,12 +42,6 @@ const schemaJsonLd = {
           "name": "DLCP License #410526000209"
         }
       ],
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": "97",
-        "bestRating": "5"
-      },
       "priceRange": "$$$"
     },
     {
@@ -126,15 +121,15 @@ const schemaJsonLd = {
           "name": "Do North Bethesda condo HOAs allow new flooring installation?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Most do, but require acoustic underlayment beneath hard flooring. The specific requirement varies by building — minimum IIC rating, specific product, or prior written approval. Standard 1mm foam does not meet most North Bethesda condo minimums. DMV-GC Group obtains and reviews the building's flooring rules before any materials are ordered and specifies the correct acoustic underlayment product with published tested assembly ratings."
+            "text": "Most do, but require acoustic underlayment beneath hard flooring. The specific requirement varies by building — minimum IIC rating, specific product, or prior written approval. Standard 1mm foam does not meet most North Bethesda condo minimums. DMV General Contracting Group obtains and reviews the building's flooring rules before any materials are ordered and specifies the correct acoustic underlayment product with published tested assembly ratings."
           }
         },
         {
           "@type": "Question",
-          "name": "Is DMV-GC Group licensed for flooring in North Bethesda, MD?",
+          "name": "Is DMV General Contracting Group licensed for flooring in North Bethesda, MD?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. DMV-GC Group holds Maryland MHIC license #156178 and is headquartered at 11810 Grand Park Ave, Suite 500 — in North Bethesda. Fully bonded, insured, and backed by a 1-year workmanship warranty on every project."
+            "text": "Yes. DMV General Contracting Group holds Maryland MHIC license #156178 and is headquartered at 11810 Grand Park Ave #500 — in North Bethesda. Fully bonded, insured, and backed by a 1-year workmanship warranty on every project."
           }
         }
       ]
@@ -534,7 +529,7 @@ const NorthBethesdaMD = () => {
         <div className="internal-links">
           <h2>Explore Our Other Services in North Bethesda, MD</h2>
           <ul>
-            <li><Link href="/service/kitchen-remodeling/north-bethesda-md">Kitchen Remodeling in North Bethesda, MD</Link></li>
+            <li>Kitchen Remodeling in North Bethesda, MD</li>
             <li><Link href="/service/bathroom-remodeling/north-bethesda-md">Bathroom Remodeling in North Bethesda, MD</Link></li>
             <li><Link href="/service/basement-remodeling/north-bethesda-md">Basement Remodeling in North Bethesda, MD</Link></li>
             <li><Link href="/service/adu/north-bethesda-md">ADU Construction in North Bethesda, MD</Link></li>

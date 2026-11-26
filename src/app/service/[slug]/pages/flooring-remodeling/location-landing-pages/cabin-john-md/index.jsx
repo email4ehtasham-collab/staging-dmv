@@ -11,16 +11,17 @@ const schemaJsonLd = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "LocalBusiness",
+      "@type": "GeneralContractor",
       "@id": "https://www.dmv-gc.com/#business",
-      "name": "DMV-GC Group",
-      "alternateName": "DMV General Contracting Group LLC",
+      "name": "DMV General Contracting Group LLC",
+      "legalName": "DMV General Contracting Group LLC",
+      "alternateName": ["DMV General Contracting Group", "DMV-GC"],
       "url": "https://www.dmv-gc.com",
-      "telephone": "+12407301292",
+      "telephone": "+1-240-730-1292",
       "email": "support@dmv-gc.com",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "11810 Grand Park Ave, Suite 500",
+        "streetAddress": "11810 Grand Park Ave #500",
         "addressLocality": "North Bethesda",
         "addressRegion": "MD",
         "postalCode": "20852",
@@ -41,12 +42,6 @@ const schemaJsonLd = {
           "name": "DLCP License #410526000209"
         }
       ],
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": "97",
-        "bestRating": "5"
-      },
       "priceRange": "$$$"
     },
     {
@@ -110,7 +105,7 @@ const schemaJsonLd = {
           "name": "How much does flooring installation cost in Cabin John, MD?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Flooring installation in Cabin John, MD typically costs $3–$18 per square foot installed. Hardwood refinishing for Cabin John's 1950s–70s single-family homes costs $3–$6 per square foot. Wide-plank white oak installation runs $10–$18 per square foot. LVP for split-level lower levels and kitchens costs $5–$10 per square foot. Porcelain tile with uncoupling membrane for older subfloors runs $10–$20 per square foot. Crawlspace moisture assessment is included in DMV-GC Group's free in-home consultation for every Cabin John project before any first-floor hardwood is specified."
+            "text": "Flooring installation in Cabin John, MD typically costs $3–$18 per square foot installed. Hardwood refinishing for Cabin John's 1950s–70s single-family homes costs $3–$6 per square foot. Wide-plank white oak installation runs $10–$18 per square foot. LVP for split-level lower levels and kitchens costs $5–$10 per square foot. Porcelain tile with uncoupling membrane for older subfloors runs $10–$20 per square foot. Crawlspace moisture assessment is included in DMV General Contracting Group's free in-home consultation for every Cabin John project before any first-floor hardwood is specified."
           }
         },
         {
@@ -118,7 +113,7 @@ const schemaJsonLd = {
           "name": "Why is crawlspace moisture assessment so important for Cabin John flooring?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Cabin John's heavily wooded lots adjacent to the C&O Canal National Historical Park and Cabin John Creek create crawlspace humidity conditions that are among the most elevated in Montgomery County. Deep shade from mature tree canopy limits solar drying of the ground surface, and Cabin John Creek's proximity raises ambient humidity in the lowest parts of the community. Solid hardwood installed on the first floor of a Cabin John home with elevated crawlspace moisture will cup, buckle, and squeak regardless of installation quality. DMV-GC Group tests or assesses crawlspace moisture before specifying any first-floor hardwood in Cabin John, and recommends engineered hardwood or LVP where elevated moisture conditions are confirmed."
+            "text": "Cabin John's heavily wooded lots adjacent to the C&O Canal National Historical Park and Cabin John Creek create crawlspace humidity conditions that are among the most elevated in Montgomery County. Deep shade from mature tree canopy limits solar drying of the ground surface, and Cabin John Creek's proximity raises ambient humidity in the lowest parts of the community. Solid hardwood installed on the first floor of a Cabin John home with elevated crawlspace moisture will cup, buckle, and squeak regardless of installation quality. DMV General Contracting Group tests or assesses crawlspace moisture before specifying any first-floor hardwood in Cabin John, and recommends engineered hardwood or LVP where elevated moisture conditions are confirmed."
           }
         },
         {
@@ -126,15 +121,15 @@ const schemaJsonLd = {
           "name": "Can the original hardwood in Cabin John's 1950s–1970s homes be refinished?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Often yes — Cabin John's postwar single-family homes frequently have original 2.25-inch or 3-inch strip oak or fir hardwood that has been protected under carpet and retains sufficient thickness for refinishing. DMV-GC Group checks remaining thickness before recommending refinishing and addresses any squeak sources before sanding begins. Where crawlspace moisture is manageable, refinishing at $3–$6 per square foot is far more cost-effective than new hardwood replacement at $10–$18 per square foot."
+            "text": "Often yes — Cabin John's postwar single-family homes frequently have original 2.25-inch or 3-inch strip oak or fir hardwood that has been protected under carpet and retains sufficient thickness for refinishing. DMV General Contracting Group checks remaining thickness before recommending refinishing and addresses any squeak sources before sanding begins. Where crawlspace moisture is manageable, refinishing at $3–$6 per square foot is far more cost-effective than new hardwood replacement at $10–$18 per square foot."
           }
         },
         {
           "@type": "Question",
-          "name": "Is DMV-GC Group licensed for flooring in Cabin John, MD?",
+          "name": "Is DMV General Contracting Group licensed for flooring in Cabin John, MD?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. DMV-GC Group holds Maryland MHIC license #156178 — required for all home improvement work in Cabin John, which falls within unincorporated Montgomery County and is served by Montgomery County DPS at 2425 Reedie Drive, Wheaton, for any renovation scope requiring a building permit. We are fully bonded, carry comprehensive general liability insurance and workers' compensation coverage, and provide a 1-year workmanship warranty on every Cabin John flooring project."
+            "text": "Yes. DMV General Contracting Group holds Maryland MHIC license #156178 — required for all home improvement work in Cabin John, which falls within unincorporated Montgomery County and is served by Montgomery County DPS at 2425 Reedie Drive, Wheaton, for any renovation scope requiring a building permit. We are fully bonded, carry comprehensive general liability insurance and workers' compensation coverage, and provide a 1-year workmanship warranty on every Cabin John flooring project."
           }
         }
       ]

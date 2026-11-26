@@ -89,7 +89,7 @@ export default function ServiceLocationPage({
                   Book a Free In-Home Consultation
                 </Button>
                 <a className={styles.phoneLink} href="tel:+12407301292">
-                  (240) 730-1292
+                  +1 240-730-1292
                 </a>
               </div>
             </div>

@@ -11,19 +11,20 @@ const schemaJsonLd = {
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "LocalBusiness",
+        "@type": "GeneralContractor",
         "@id": "https://www.dmv-gc.com/#business",
-        "name": "DMV-GC Group",
-        "alternateName": "DMV General Contracting Group LLC",
+        "name": "DMV General Contracting Group LLC",
+        "legalName": "DMV General Contracting Group LLC",
+        "alternateName": ["DMV General Contracting Group", "DMV-GC"],
         "image": "https://www.dmv-gc.com/logo.png",
         "url": "https://www.dmv-gc.com",
-        "telephone": "+12407301292",
+        "telephone": "+1-240-730-1292",
         "email": "support@dmv-gc.com",
         "foundingDate": "2018",
         "description": "Licensed deck builder serving Cabin John, MD. Specializing in walkout basement deck conversions, elevated rear decks, and multi-level outdoor living builds for Cabin John's wooded, sloped-lot homes — with tree-aware construction, Montgomery County permit management, and design that connects the home to Cabin John's extraordinary natural setting.",
         "address": {
           "@type": "PostalAddress",
-          "streetAddress": "11810 Grand Park Ave, Suite 500",
+          "streetAddress": "11810 Grand Park Ave #500",
           "addressLocality": "North Bethesda",
           "addressRegion": "MD",
           "postalCode": "20852",
@@ -64,12 +65,6 @@ const schemaJsonLd = {
             "credentialCategory": "Maryland Home Improvement Contractor License"
           }
         ],
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "4.9",
-          "reviewCount": "97",
-          "bestRating": "5"
-        },
         "priceRange": "$$$"
       },
       {
@@ -141,7 +136,7 @@ const schemaJsonLd = {
             "name": "How much does it cost to build a deck in Cabin John, MD?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Deck construction in Cabin John, MD typically costs between $28,000 and $110,000 depending on deck type, terrain, and scope. A walkout basement deck accessed from an existing rear door runs $28,000–$55,000. An elevated rear deck on a sloped lot costs $36,000–$68,000. A multi-level deck with rear terrace integration runs $52,000–$88,000. A full outdoor living build with pergola and outdoor kitchen on a larger Cabin John property can reach $70,000–$110,000. Site conditions — slope, tree proximity, terrain — vary more in Cabin John than in flat suburban communities and affect cost accordingly. DMV-GC Group visits every property before any estimate is prepared."
+              "text": "Deck construction in Cabin John, MD typically costs between $28,000 and $110,000 depending on deck type, terrain, and scope. A walkout basement deck accessed from an existing rear door runs $28,000–$55,000. An elevated rear deck on a sloped lot costs $36,000–$68,000. A multi-level deck with rear terrace integration runs $52,000–$88,000. A full outdoor living build with pergola and outdoor kitchen on a larger Cabin John property can reach $70,000–$110,000. Site conditions — slope, tree proximity, terrain — vary more in Cabin John than in flat suburban communities and affect cost accordingly. DMV General Contracting Group visits every property before any estimate is prepared."
             }
           },
           {
@@ -149,7 +144,7 @@ const schemaJsonLd = {
             "name": "How does tree protection affect deck construction in Cabin John?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Significantly. Cabin John's mature tree canopy is the community's defining characteristic and is protected under Montgomery County's Forest Conservation Law. Any deck footing installation, post hole drilling, or other excavation near significant trees must be assessed for proximity to the tree's Critical Root Zone — approximately 1 foot of radius per inch of trunk diameter. DMV-GC Group identifies all significant trees near any proposed deck footings before design is finalized, and uses extended joist spans to jump root zones where possible rather than relocating or removing footings from optimal structural positions."
+              "text": "Significantly. Cabin John's mature tree canopy is the community's defining characteristic and is protected under Montgomery County's Forest Conservation Law. Any deck footing installation, post hole drilling, or other excavation near significant trees must be assessed for proximity to the tree's Critical Root Zone — approximately 1 foot of radius per inch of trunk diameter. DMV General Contracting Group identifies all significant trees near any proposed deck footings before design is finalized, and uses extended joist spans to jump root zones where possible rather than relocating or removing footings from optimal structural positions."
             }
           },
           {
@@ -162,18 +157,18 @@ const schemaJsonLd = {
           },
           {
             "@type": "Question",
-            "name": "Does DMV-GC Group handle Montgomery County deck permits for Cabin John?",
+            "name": "Does DMV General Contracting Group handle Montgomery County deck permits for Cabin John?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes. Cabin John is in unincorporated Montgomery County — all deck permits go through Montgomery County DPS. DMV-GC Group files all required building permits with structural drawings and manages all county correspondence, plan review, and inspection scheduling as a standard part of every Cabin John deck project. Significant trees near proposed construction are documented on permit drawings as required under Montgomery County's Forest Conservation Law."
+              "text": "Yes. Cabin John is in unincorporated Montgomery County — all deck permits go through Montgomery County DPS. DMV General Contracting Group files all required building permits with structural drawings and manages all county correspondence, plan review, and inspection scheduling as a standard part of every Cabin John deck project. Significant trees near proposed construction are documented on permit drawings as required under Montgomery County's Forest Conservation Law."
             }
           },
           {
             "@type": "Question",
-            "name": "Is DMV-GC Group licensed for deck building in Cabin John, MD?",
+            "name": "Is DMV General Contracting Group licensed for deck building in Cabin John, MD?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes. DMV-GC Group holds a Maryland MHIC license — required for all home improvement and construction work in Cabin John and Montgomery County. We are fully bonded, carry comprehensive general liability insurance and workers' compensation coverage, and provide a 1-year workmanship warranty on every deck project in Cabin John."
+              "text": "Yes. DMV General Contracting Group holds a Maryland MHIC license — required for all home improvement and construction work in Cabin John and Montgomery County. We are fully bonded, carry comprehensive general liability insurance and workers' compensation coverage, and provide a 1-year workmanship warranty on every deck project in Cabin John."
             }
           }
         ]

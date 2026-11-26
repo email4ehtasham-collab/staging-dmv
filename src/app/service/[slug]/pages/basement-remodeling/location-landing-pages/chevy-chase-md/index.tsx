@@ -11,19 +11,20 @@ const schemaJsonLd = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "LocalBusiness",
+      "@type": "GeneralContractor",
       "@id": "https://www.dmv-gc.com/#business",
-      "name": "DMV-GC Group",
-      "alternateName": "DMV General Contracting Group LLC",
+      "name": "DMV General Contracting Group LLC",
+      "legalName": "DMV General Contracting Group LLC",
+      "alternateName": ["DMV General Contracting Group", "DMV-GC"],
       "image": "https://www.dmv-gc.com/logo.png",
       "url": "https://www.dmv-gc.com",
-      "telephone": "+12407301292",
+      "telephone": "+1-240-730-1292",
       "email": "support@dmv-gc.com",
       "foundingDate": "2018",
       "description": "Licensed design-build general contractor serving Chevy Chase, MD. Specializing in luxury basement remodeling for Chevy Chase's Colonial Revival, Tudor, and historic homes across all incorporated villages — wine cellars, home theaters, guest suites, and full luxury finishing.",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "11810 Grand Park Ave, Suite 500",
+        "streetAddress": "11810 Grand Park Ave #500",
         "addressLocality": "North Bethesda",
         "addressRegion": "MD",
         "postalCode": "20852",
@@ -41,7 +42,6 @@ const schemaJsonLd = {
         { "@type": "EducationalOccupationalCredential", "name": "MHIC License", "credentialCategory": "Maryland Home Improvement Contractor License" },
         { "@type": "EducationalOccupationalCredential", "name": "DLCP License", "credentialCategory": "Washington DC Department of Licensing and Consumer Protection" }
       ],
-      "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "97", "bestRating": "5" },
       "priceRange": "$$$$"
     },
     {
@@ -75,7 +75,7 @@ const schemaJsonLd = {
           "name": "How much does basement remodeling cost in Chevy Chase, MD?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Basement remodeling in Chevy Chase, MD typically costs between $45,000 and $220,000+ depending on scope, basement size, and finish level. A standard basement finishing runs $45,000–$80,000. A mid-range basement with home theater or wine cellar and guest suite runs $80,000–$140,000. A full luxury basement renovation with home theater, wine cellar, guest suite, and custom finishes can reach $150,000–$220,000+. Chevy Chase's older Colonial Revival and Tudor homes often have basements with lower ceiling heights and older systems requiring assessment before renovation. DMV-GC Group provides free in-home consultations with detailed estimates."
+            "text": "Basement remodeling in Chevy Chase, MD typically costs between $45,000 and $220,000+ depending on scope, basement size, and finish level. A standard basement finishing runs $45,000–$80,000. A mid-range basement with home theater or wine cellar and guest suite runs $80,000–$140,000. A full luxury basement renovation with home theater, wine cellar, guest suite, and custom finishes can reach $150,000–$220,000+. Chevy Chase's older Colonial Revival and Tudor homes often have basements with lower ceiling heights and older systems requiring assessment before renovation. DMV General Contracting Group provides free in-home consultations with detailed estimates."
           }
         },
         {
@@ -83,23 +83,23 @@ const schemaJsonLd = {
           "name": "Which village in Chevy Chase issues permits for basement remodeling?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "It depends on which Chevy Chase village or jurisdiction your property is in. Chevy Chase Village (the incorporated village along Connecticut Avenue) has its own permit process through the Village Manager's office. Properties in Chevy Chase View, Chevy Chase Section 3, Chevy Chase Section 5, and Martin's Additions are incorporated towns with their own permit authorities. Properties in unincorporated Chevy Chase use Montgomery County DPS. DMV-GC Group verifies the exact permit jurisdiction for every Chevy Chase address before filing anything — the 'Chevy Chase, MD' address alone does not determine jurisdiction."
+            "text": "It depends on which Chevy Chase village or jurisdiction your property is in. Chevy Chase Village (the incorporated village along Connecticut Avenue) has its own permit process through the Village Manager's office. Properties in Chevy Chase View, Chevy Chase Section 3, Chevy Chase Section 5, and Martin's Additions are incorporated towns with their own permit authorities. Properties in unincorporated Chevy Chase use Montgomery County DPS. DMV General Contracting Group verifies the exact permit jurisdiction for every Chevy Chase address before filing anything — the 'Chevy Chase, MD' address alone does not determine jurisdiction."
           }
         },
         {
           "@type": "Question",
-          "name": "Can DMV-GC Group build a wine cellar in a Chevy Chase basement?",
+          "name": "Can DMV General Contracting Group build a wine cellar in a Chevy Chase basement?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. Custom wine cellars are one of the most requested basement features in Chevy Chase's larger Colonial Revival and Tudor homes. A properly built wine cellar requires dedicated climate control (55°F, 60–70% humidity), continuous vapor barrier, minimum R-19 insulation, UV-filtered LED lighting, a solid-core insulated door, and racking designed for the collection. DMV-GC Group designs and builds all components in-house."
+            "text": "Yes. Custom wine cellars are one of the most requested basement features in Chevy Chase's larger Colonial Revival and Tudor homes. A properly built wine cellar requires dedicated climate control (55°F, 60–70% humidity), continuous vapor barrier, minimum R-19 insulation, UV-filtered LED lighting, a solid-core insulated door, and racking designed for the collection. DMV General Contracting Group designs and builds all components in-house."
           }
         },
         {
           "@type": "Question",
-          "name": "Does DMV-GC Group build home theaters in Chevy Chase basements?",
+          "name": "Does DMV General Contracting Group build home theaters in Chevy Chase basements?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. Dedicated home theaters with acoustic treatment, 4K projection, Dolby Atmos surround sound, tiered seating platforms, and blackout shades are among the most popular basement projects in Chevy Chase's larger Colonial Revival homes. DMV-GC Group designs and builds complete home theater rooms — from acoustic framing through AV equipment installation and finish work."
+            "text": "Yes. Dedicated home theaters with acoustic treatment, 4K projection, Dolby Atmos surround sound, tiered seating platforms, and blackout shades are among the most popular basement projects in Chevy Chase's larger Colonial Revival homes. DMV General Contracting Group designs and builds complete home theater rooms — from acoustic framing through AV equipment installation and finish work."
           }
         },
         {
@@ -107,15 +107,15 @@ const schemaJsonLd = {
           "name": "How does Chevy Chase's multi-village structure affect basement renovation permits?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Chevy Chase is not a single jurisdiction — it is a collection of incorporated villages, unincorporated communities, and areas that straddle the Maryland-DC border, each with its own permit authority. Chevy Chase Village, Martin's Additions, Chevy Chase Section 3, and Chevy Chase Section 5 are all separately incorporated with their own governments. Unincorporated areas use Montgomery County DPS. A contractor who assumes all Chevy Chase addresses use one permit process will file with the wrong authority for many properties. DMV-GC Group verifies the correct permit jurisdiction for every Chevy Chase address using parcel boundary data."
+            "text": "Chevy Chase is not a single jurisdiction — it is a collection of incorporated villages, unincorporated communities, and areas that straddle the Maryland-DC border, each with its own permit authority. Chevy Chase Village, Martin's Additions, Chevy Chase Section 3, and Chevy Chase Section 5 are all separately incorporated with their own governments. Unincorporated areas use Montgomery County DPS. A contractor who assumes all Chevy Chase addresses use one permit process will file with the wrong authority for many properties. DMV General Contracting Group verifies the correct permit jurisdiction for every Chevy Chase address using parcel boundary data."
           }
         },
         {
           "@type": "Question",
-          "name": "Is DMV-GC Group licensed for basement remodeling in Chevy Chase, MD?",
+          "name": "Is DMV General Contracting Group licensed for basement remodeling in Chevy Chase, MD?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. DMV-GC Group holds a Maryland MHIC (Home Improvement Contractor) license and a Washington DC DLCP license — relevant for Chevy Chase properties that may straddle or be adjacent to the DC border. We are fully bonded, carry comprehensive general liability insurance and workers' compensation coverage, and provide a 1-year workmanship warranty on every basement remodeling project completed in Chevy Chase."
+            "text": "Yes. DMV General Contracting Group holds a Maryland MHIC (Home Improvement Contractor) license and a Washington DC DLCP license — relevant for Chevy Chase properties that may straddle or be adjacent to the DC border. We are fully bonded, carry comprehensive general liability insurance and workers' compensation coverage, and provide a 1-year workmanship warranty on every basement remodeling project completed in Chevy Chase."
           }
         }
       ]

@@ -147,7 +147,7 @@ const WashingtonDC = () => {
                 <div className="internal-links">
                     <h2>Explore Our Other Services in Washington, DC</h2>
                     <ul>
-                        <li><Link href="/service/design-build/washington-dc">Design-Build Contractor in Washington, DC</Link></li>
+                        <li>Design-Build Contractor in Washington, DC</li>
                         <li><Link href="/service/adu/washington-dc">ADU Construction in Washington, DC</Link></li>
                         <li><Link href="/service/kitchen-remodeling/washington-dc">Kitchen Remodeling in Washington, DC</Link></li>
                         <li><Link href="/service/basement-remodeling/washington-dc">Basement Remodeling in Washington, DC</Link></li>

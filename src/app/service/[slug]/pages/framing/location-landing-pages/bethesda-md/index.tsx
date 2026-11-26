@@ -196,11 +196,11 @@ const FramingBethesdaMD = () => {
     ];
 
     const otherServices = [
-        { href: "/service/drywall/bethesda-md", label: "Drywall Services in Bethesda, MD" },
+        { label: "Drywall Services in Bethesda, MD" },
         { href: "/service/home-additions/bethesda-md", label: "Home Additions in Bethesda, MD" },
         { href: "/service/basement-remodeling/bethesda-md", label: "Basement Remodeling in Bethesda, MD" },
-        { href: "/service/design-build/bethesda-md", label: "Design-Build Contractor in Bethesda, MD" },
-        { href: "/service/electrical-services/bethesda-md", label: "Electrical Services in Bethesda, MD" },
+        { label: "Design-Build Contractor in Bethesda, MD" },
+        { label: "Electrical Services in Bethesda, MD" },
         { href: "/service/kitchen-remodeling/bethesda-md", label: "Kitchen Remodeling in Bethesda, MD" }
     ];
 
@@ -215,28 +215,29 @@ const FramingBethesdaMD = () => {
                             "@context": "https://schema.org",
                             "@graph": [
                                 {
-                                    "@type": "LocalBusiness",
+                                    "@type": "GeneralContractor",
                                     "@id": "https://www.dmv-gc.com/#business",
                                     "name": "DMV General Contracting Group LLC",
+                                    "legalName": "DMV General Contracting Group LLC",
+                                    "alternateName": ["DMV General Contracting Group", "DMV-GC"],
                                     "url": "https://www.dmv-gc.com/",
                                     "telephone": "+1-240-730-1292",
                                     "email": "support@dmv-gc.com",
                                     "description": "Professional structural framing contractor serving Bethesda, MD. Home additions, second-story additions, room conversions, basement finishing, garage conversions, and whole-home remodels. MoCo DPS permits managed in-house. MHIC #156178.",
                                     "address": {
                                         "@type": "PostalAddress",
-                                        "streetAddress": "11810 Grand Park Ave. Suite 500",
+                                        "streetAddress": "11810 Grand Park Ave #500",
                                         "addressLocality": "North Bethesda",
                                         "addressRegion": "MD",
                                         "postalCode": "20852",
                                         "addressCountry": "US"
                                     },
-                                    "areaServed": { "@type": "City", "name": "Bethesda" },
-                                    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "97" }
+                                    "areaServed": { "@type": "City", "name": "Bethesda" }
                                 },
                                 {
                                     "@type": "Service",
                                     "name": "Framing Services in Bethesda, MD",
-                                    "provider": { "@type": "LocalBusiness", "name": "DMV General Contracting Group LLC", "telephone": "+1-240-730-1292", "url": "https://www.dmv-gc.com/" },
+                                    "provider": { "@type": "GeneralContractor", "name": "DMV General Contracting Group LLC", "telephone": "+1-240-730-1292", "url": "https://www.dmv-gc.com/" },
                                     "areaServed": { "@type": "City", "name": "Bethesda" },
                                     "serviceType": "Structural Framing, Home Addition Framing, Second-Story Addition, Room Conversion, Basement Framing, Garage Conversion, Wall Framing"
                                 },
@@ -413,7 +414,7 @@ const FramingBethesdaMD = () => {
                     <h2>Explore Our Other Services in Bethesda, MD</h2>
                     <ul>
                         {otherServices.map(service => (
-                            <li key={service.href}><Link href={service.href}>{service.label}</Link></li>
+                            <li key={service.label}>{service.href ? <Link href={service.href}>{service.label}</Link> : service.label}</li>
                         ))}
                     </ul>
                 </div>

@@ -354,7 +354,7 @@ const ChevyChaseMD = () => {
                         <li><Link href="/service/bathroom-remodeling/chevy-chase-md">Bathroom Remodeling in Chevy Chase, MD</Link></li>
                         <li><Link href="/service/basement-remodeling/chevy-chase-md">Basement Remodeling in Chevy Chase, MD</Link></li>
                         <li><Link href="/service/adu/chevy-chase-md">ADU Construction in Chevy Chase, MD</Link></li>
-                        <li><Link href="/service/decks/chevy-chase-md">Deck Building in Chevy Chase, MD</Link></li>
+                        <li>Deck Building in Chevy Chase, MD</li>
                         <li><Link href="/service/flooring-remodeling/chevy-chase-md">Flooring Installation in Chevy Chase, MD</Link></li>
                         <li><Link href="/service/home-additions">Home Additions in Chevy Chase, MD</Link></li>
                     </ul>

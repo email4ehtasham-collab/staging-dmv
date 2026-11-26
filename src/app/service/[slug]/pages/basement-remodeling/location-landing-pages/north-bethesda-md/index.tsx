@@ -12,19 +12,20 @@ const schemaJsonLd = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "LocalBusiness",
+      "@type": "GeneralContractor",
       "@id": "https://www.dmv-gc.com/#business",
-      "name": "DMV-GC Group",
-      "alternateName": "DMV General Contracting Group LLC",
+      "name": "DMV General Contracting Group LLC",
+      "legalName": "DMV General Contracting Group LLC",
+      "alternateName": ["DMV General Contracting Group", "DMV-GC"],
       "image": "https://www.dmv-gc.com/logo.png",
       "url": "https://www.dmv-gc.com",
-      "telephone": "+12407301292",
+      "telephone": "+1-240-730-1292",
       "email": "support@dmv-gc.com",
       "foundingDate": "2018",
-      "description": "Licensed design-build general contractor headquartered in North Bethesda, MD at 11810 Grand Park Ave, Suite 500. Specializing in basement remodeling across North Bethesda's diverse housing stock — established single-family homes, townhomes in Pike District and White Flint, and newer construction throughout the I-270 corridor.",
+      "description": "Licensed design-build general contractor headquartered in North Bethesda, MD at 11810 Grand Park Ave #500. Specializing in basement remodeling across North Bethesda's diverse housing stock — established single-family homes, townhomes in Pike District and White Flint, and newer construction throughout the I-270 corridor.",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "11810 Grand Park Ave, Suite 500",
+        "streetAddress": "11810 Grand Park Ave #500",
         "addressLocality": "North Bethesda",
         "addressRegion": "MD",
         "postalCode": "20852",
@@ -42,7 +43,6 @@ const schemaJsonLd = {
         { "@type": "EducationalOccupationalCredential", "name": "MHIC License", "credentialCategory": "Maryland Home Improvement Contractor License" },
         { "@type": "EducationalOccupationalCredential", "name": "DLCP License", "credentialCategory": "Washington DC Department of Licensing and Consumer Protection" }
       ],
-      "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "97", "bestRating": "5" },
       "priceRange": "$$$"
     },
     {
@@ -76,47 +76,47 @@ const schemaJsonLd = {
           "name": "How much does basement remodeling cost in North Bethesda, MD?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Basement remodeling in North Bethesda, MD typically costs between $22,000 and $130,000 depending on scope, home type, and finish level. A townhome basement finishing (Pike District, White Flint) runs $22,000–$42,000. A full single-family basement finishing costs $32,000–$65,000. A mid-range renovation with bathroom and home office runs $45,000–$80,000. A full ADU conversion with egress windows, separate entrance, kitchen, and bathroom typically costs $68,000–$115,000. North Bethesda's diverse housing stock means renovation scope and cost vary significantly by home type and neighborhood. DMV-GC Group provides free in-home consultations with detailed estimates."
+            "text": "Basement remodeling in North Bethesda, MD typically costs between $22,000 and $130,000 depending on scope, home type, and finish level. A townhome basement finishing (Pike District, White Flint) runs $22,000–$42,000. A full single-family basement finishing costs $32,000–$65,000. A mid-range renovation with bathroom and home office runs $45,000–$80,000. A full ADU conversion with egress windows, separate entrance, kitchen, and bathroom typically costs $68,000–$115,000. North Bethesda's diverse housing stock means renovation scope and cost vary significantly by home type and neighborhood. DMV General Contracting Group provides free in-home consultations with detailed estimates."
           }
         },
         {
           "@type": "Question",
-          "name": "Is DMV-GC Group based in North Bethesda?",
+          "name": "Is DMV General Contracting Group based in North Bethesda?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. DMV-GC Group is headquartered at 11810 Grand Park Ave, Suite 500, North Bethesda, MD 20852 — in the heart of the Pike District redevelopment area. We are North Bethesda's local licensed design-build contractor, serving the community from an office that is minutes from every North Bethesda neighborhood we serve. This means faster response times, direct familiarity with local neighborhoods and housing stock, and a team that is genuinely invested in the community."
+            "text": "Yes. DMV General Contracting Group is headquartered at 11810 Grand Park Ave #500, North Bethesda, MD 20852 — in the heart of the Pike District redevelopment area. We are North Bethesda's local licensed design-build contractor, serving the community from an office that is minutes from every North Bethesda neighborhood we serve. This means faster response times, direct familiarity with local neighborhoods and housing stock, and a team that is genuinely invested in the community."
           }
         },
         {
           "@type": "Question",
-          "name": "Does DMV-GC Group handle permits for basement remodeling in North Bethesda?",
+          "name": "Does DMV General Contracting Group handle permits for basement remodeling in North Bethesda?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. North Bethesda is an unincorporated community in Montgomery County — all basement remodeling permits are processed through Montgomery County's Department of Permitting Services (DPS). DMV-GC Group's in-house permit team handles all required building, electrical, and plumbing permits and manages all county correspondence and inspection scheduling. For ADU projects, we also manage the Certificate of Occupancy process."
+            "text": "Yes. North Bethesda is an unincorporated community in Montgomery County — all basement remodeling permits are processed through Montgomery County's Department of Permitting Services (DPS). DMV General Contracting Group's in-house permit team handles all required building, electrical, and plumbing permits and manages all county correspondence and inspection scheduling. For ADU projects, we also manage the Certificate of Occupancy process."
           }
         },
         {
           "@type": "Question",
-          "name": "Can DMV-GC Group convert a North Bethesda basement into a legal ADU?",
+          "name": "Can DMV General Contracting Group convert a North Bethesda basement into a legal ADU?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. ADU basement conversions are popular in North Bethesda given the area's White Flint Metro access and strong rental demand. A legal basement ADU in Montgomery County requires egress windows in sleeping areas, a separate entrance, a full kitchen or kitchenette, a full bathroom, fire-rated separation, and a Certificate of Occupancy. DMV-GC Group designs, builds, and permits complete ADU conversions in North Bethesda — managing all Montgomery County permits and the COO process in-house."
+            "text": "Yes. ADU basement conversions are popular in North Bethesda given the area's White Flint Metro access and strong rental demand. A legal basement ADU in Montgomery County requires egress windows in sleeping areas, a separate entrance, a full kitchen or kitchenette, a full bathroom, fire-rated separation, and a Certificate of Occupancy. DMV General Contracting Group designs, builds, and permits complete ADU conversions in North Bethesda — managing all Montgomery County permits and the COO process in-house."
           }
         },
         {
           "@type": "Question",
-          "name": "Does DMV-GC Group finish townhome basements in North Bethesda's Pike District?",
+          "name": "Does DMV General Contracting Group finish townhome basements in North Bethesda's Pike District?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. Townhome basement finishing in Pike District and White Flint is one of our most common North Bethesda project types. Townhome lower levels in these communities typically measure 400–650 sq ft — smart layout design maximizes the usable space for a home office, recreation room, or guest suite with egress window and bathroom. Many Pike District townhomes also have HOA guidelines covering contractor access and work hours, which DMV-GC Group coordinates as a standard part of every applicable project."
+            "text": "Yes. Townhome basement finishing in Pike District and White Flint is one of our most common North Bethesda project types. Townhome lower levels in these communities typically measure 400–650 sq ft — smart layout design maximizes the usable space for a home office, recreation room, or guest suite with egress window and bathroom. Many Pike District townhomes also have HOA guidelines covering contractor access and work hours, which DMV General Contracting Group coordinates as a standard part of every applicable project."
           }
         },
         {
           "@type": "Question",
-          "name": "Is DMV-GC Group licensed for basement remodeling in North Bethesda, MD?",
+          "name": "Is DMV General Contracting Group licensed for basement remodeling in North Bethesda, MD?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. DMV-GC Group holds a Maryland MHIC (Home Improvement Contractor) license — required for all home renovation work in North Bethesda and Montgomery County. We are fully bonded, carry comprehensive general liability insurance and workers' compensation coverage, and provide a 1-year workmanship warranty on every basement remodeling project completed in North Bethesda."
+            "text": "Yes. DMV General Contracting Group holds a Maryland MHIC (Home Improvement Contractor) license — required for all home renovation work in North Bethesda and Montgomery County. We are fully bonded, carry comprehensive general liability insurance and workers' compensation coverage, and provide a 1-year workmanship warranty on every basement remodeling project completed in North Bethesda."
           }
         }
       ]
@@ -607,7 +607,7 @@ export default function BasementNorthBethesdaMD() {
         <div className="internal-links">
           <h2>Explore Our Other Remodeling Services in North Bethesda</h2>
           <ul>
-            <li><Link href="/service/kitchen-remodeling/north-bethesda-md">Kitchen Remodeling in North Bethesda, MD</Link></li>
+            <li>Kitchen Remodeling in North Bethesda, MD</li>
             <li><Link href="/service/bathroom-remodeling">Bathroom Remodeling in North Bethesda, MD</Link></li>
             <li><Link href="/service/home-additions">Home Additions in North Bethesda, MD</Link></li>
             <li><Link href="/service/adu">ADU Construction in North Bethesda, MD</Link></li>

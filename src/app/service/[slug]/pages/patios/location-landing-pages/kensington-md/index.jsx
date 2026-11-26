@@ -205,7 +205,7 @@ const KensingtonMD = () => {
                 <ul className="related-links">
                     <li><Link href="/service/decks/kensington-md">Deck Building in Kensington, MD</Link></li>
                     <li><Link href="/service/fence-installation/kensington-md">Fence Installation in Kensington, MD</Link></li>
-                    <li><Link href="/service/home-additions/kensington-md">Home Additions in Kensington, MD</Link></li>
+                    <li>Home Additions in Kensington, MD</li>
                     <li><Link href="/service/design-build/kensington-md">Design-Build Contractor in Kensington, MD</Link></li>
                     <li><Link href="/service/electrical-services/kensington-md">Electrical Services in Kensington, MD</Link></li>
                     <li><Link href="/service/concrete/kensington-md">Concrete Services in Kensington, MD</Link></li>

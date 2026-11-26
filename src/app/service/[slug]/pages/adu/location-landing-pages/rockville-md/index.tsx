@@ -11,19 +11,20 @@ const schemaJsonLd = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "LocalBusiness",
+      "@type": "GeneralContractor",
       "@id": "https://www.dmv-gc.com/#business",
-      "name": "DMV-GC Group",
-      "alternateName": "DMV General Contracting Group LLC",
+      "name": "DMV General Contracting Group LLC",
+      "legalName": "DMV General Contracting Group LLC",
+      "alternateName": ["DMV General Contracting Group", "DMV-GC"],
       "image": "https://www.dmv-gc.com/logo.png",
       "url": "https://www.dmv-gc.com",
-      "telephone": "+12407301292",
+      "telephone": "+1-240-730-1292",
       "email": "support@dmv-gc.com",
       "foundingDate": "2018",
       "description": "Licensed design-build general contractor serving Rockville, MD. Specializing in ADU construction across Rockville's diverse housing — basement ADUs, garage conversions, and in-law suite additions — with City of Rockville and Montgomery County permit expertise and HOA coordination for King Farm, Fallsgrove, and Congressional.",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "11810 Grand Park Ave, Suite 500",
+        "streetAddress": "11810 Grand Park Ave #500",
         "addressLocality": "North Bethesda",
         "addressRegion": "MD",
         "postalCode": "20852",
@@ -41,7 +42,6 @@ const schemaJsonLd = {
         { "@type": "EducationalOccupationalCredential", "name": "MHIC License", "credentialCategory": "Maryland Home Improvement Contractor License" },
         { "@type": "EducationalOccupationalCredential", "name": "DLCP License", "credentialCategory": "Washington DC Department of Licensing and Consumer Protection" }
       ],
-      "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "97", "bestRating": "5" },
       "priceRange": "$$"
     },
     {
@@ -76,7 +76,7 @@ const schemaJsonLd = {
           "name": "How much does it cost to build an ADU in Rockville, MD?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "ADU construction in Rockville, MD typically costs between $58,000 and $205,000 depending on ADU type, neighborhood, and HOA requirements. A basement ADU conversion runs $62,000–$118,000. A garage conversion ADU costs $58,000–$108,000. An attached in-law suite addition costs $98,000–$205,000. Newer construction neighborhoods like King Farm and Fallsgrove have basement rough-ins and higher ceiling heights that can reduce costs versus older stock. DMV-GC Group provides free in-home consultations with detailed estimates."
+            "text": "ADU construction in Rockville, MD typically costs between $58,000 and $205,000 depending on ADU type, neighborhood, and HOA requirements. A basement ADU conversion runs $62,000–$118,000. A garage conversion ADU costs $58,000–$108,000. An attached in-law suite addition costs $98,000–$205,000. Newer construction neighborhoods like King Farm and Fallsgrove have basement rough-ins and higher ceiling heights that can reduce costs versus older stock. DMV General Contracting Group provides free in-home consultations with detailed estimates."
           }
         },
         {
@@ -84,7 +84,7 @@ const schemaJsonLd = {
           "name": "Does Rockville use City permits or Montgomery County permits for ADU construction?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "It depends on your property's location. The City of Rockville is an incorporated municipality with its own Department of Community Development that issues building permits for properties within the city limits — including King Farm, Fallsgrove, West End, and Twinbrook neighborhoods. Properties in unincorporated areas with Rockville mailing addresses — including parts of Congressional, some areas north of Rockville Pike, and others — require Montgomery County DPS permits instead. DMV-GC Group verifies the correct permit authority for every Rockville address using parcel boundary data before filing any application."
+            "text": "It depends on your property's location. The City of Rockville is an incorporated municipality with its own Department of Community Development that issues building permits for properties within the city limits — including King Farm, Fallsgrove, West End, and Twinbrook neighborhoods. Properties in unincorporated areas with Rockville mailing addresses — including parts of Congressional, some areas north of Rockville Pike, and others — require Montgomery County DPS permits instead. DMV General Contracting Group verifies the correct permit authority for every Rockville address using parcel boundary data before filing any application."
           }
         },
         {
@@ -92,7 +92,7 @@ const schemaJsonLd = {
           "name": "Can I build an ADU in King Farm or Fallsgrove?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. King Farm and Fallsgrove are within the City of Rockville — so City permits apply. Both communities also have active HOAs with Architectural Review Committees that must approve exterior modifications before city permits are filed. Basement ADUs with no exterior impact typically do not require ARC review. Any new entrance, egress window opening, garage conversion, or addition affecting the home's exterior requires ARC approval first. DMV-GC Group prepares all required ARC documentation and manages the review process as a standard part of King Farm and Fallsgrove ADU projects. Both communities have newer construction with higher ceilings and often existing rough-ins — making basement ADUs here particularly practical."
+            "text": "Yes. King Farm and Fallsgrove are within the City of Rockville — so City permits apply. Both communities also have active HOAs with Architectural Review Committees that must approve exterior modifications before city permits are filed. Basement ADUs with no exterior impact typically do not require ARC review. Any new entrance, egress window opening, garage conversion, or addition affecting the home's exterior requires ARC approval first. DMV General Contracting Group prepares all required ARC documentation and manages the review process as a standard part of King Farm and Fallsgrove ADU projects. Both communities have newer construction with higher ceilings and often existing rough-ins — making basement ADUs here particularly practical."
           }
         },
         {
@@ -100,23 +100,23 @@ const schemaJsonLd = {
           "name": "What ADU types work best in Rockville?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The most practical ADU types across Rockville's diverse housing stock are: basement ADU conversions (most common across all Rockville neighborhoods); garage conversions (where a detached or attached garage exists); and attached in-law suite additions (on lots with sufficient rear yard room). Newer communities like King Farm and Fallsgrove have 8'–9' basement ceilings and often existing plumbing rough-ins — making basement ADUs particularly cost-effective here. Older neighborhoods like West End and Twinbrook have solid basements but may have older systems requiring assessment. DMV-GC Group evaluates which ADU type is most practical for your specific Rockville property during the free consultation."
+            "text": "The most practical ADU types across Rockville's diverse housing stock are: basement ADU conversions (most common across all Rockville neighborhoods); garage conversions (where a detached or attached garage exists); and attached in-law suite additions (on lots with sufficient rear yard room). Newer communities like King Farm and Fallsgrove have 8'–9' basement ceilings and often existing plumbing rough-ins — making basement ADUs particularly cost-effective here. Older neighborhoods like West End and Twinbrook have solid basements but may have older systems requiring assessment. DMV General Contracting Group evaluates which ADU type is most practical for your specific Rockville property during the free consultation."
           }
         },
         {
           "@type": "Question",
-          "name": "Does DMV-GC Group handle HOA coordination for King Farm and Fallsgrove ADU projects?",
+          "name": "Does DMV General Contracting Group handle HOA coordination for King Farm and Fallsgrove ADU projects?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. DMV-GC Group handles all HOA coordination for King Farm, Fallsgrove, Congressional, and any other Rockville HOA community — including ARC documentation preparation, submission, and review management. We design all ADU additions to be compatible with each community's architectural character before ARC submission, minimizing revision requests. HOA review and city permit processing run concurrently wherever possible to minimize total project timeline."
+            "text": "Yes. DMV General Contracting Group handles all HOA coordination for King Farm, Fallsgrove, Congressional, and any other Rockville HOA community — including ARC documentation preparation, submission, and review management. We design all ADU additions to be compatible with each community's architectural character before ARC submission, minimizing revision requests. HOA review and city permit processing run concurrently wherever possible to minimize total project timeline."
           }
         },
         {
           "@type": "Question",
-          "name": "Is DMV-GC Group licensed for ADU construction in Rockville, MD?",
+          "name": "Is DMV General Contracting Group licensed for ADU construction in Rockville, MD?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. DMV-GC Group holds a Maryland MHIC license — required for all home improvement and construction work in Rockville. We are fully bonded, carry comprehensive general liability insurance and workers' compensation coverage, and provide a 1-year workmanship warranty on every ADU project completed in Rockville."
+            "text": "Yes. DMV General Contracting Group holds a Maryland MHIC license — required for all home improvement and construction work in Rockville. We are fully bonded, carry comprehensive general liability insurance and workers' compensation coverage, and provide a 1-year workmanship warranty on every ADU project completed in Rockville."
           }
         }
       ]

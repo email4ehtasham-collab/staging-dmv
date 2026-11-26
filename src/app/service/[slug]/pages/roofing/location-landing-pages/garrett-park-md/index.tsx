@@ -80,16 +80,18 @@ const RoofingGarrettParkMD = () => {
                             "@context": "https://schema.org",
                             "@graph": [
                                 {
-                                    "@type": "LocalBusiness",
+                                    "@type": "GeneralContractor",
                                     "@id": "https://www.dmv-gc.com/#business",
                                     "name": "DMV General Contracting Group LLC",
+                                    "legalName": "DMV General Contracting Group LLC",
+                                    "alternateName": ["DMV General Contracting Group", "DMV-GC"],
                                     "url": "https://www.dmv-gc.com/",
                                     "telephone": "+1-240-730-1292",
                                     "email": "support@dmv-gc.com",
                                     "description": "Licensed and insured general contractor providing residential roofing inspection, repair, replacement, emergency roofing and maintenance services in Garrett Park, Maryland — a National Register Historic District. Town of Garrett Park permit office at 4600 Oxford Street.",
                                     "address": {
                                         "@type": "PostalAddress",
-                                        "streetAddress": "11810 Grand Park Ave. Suite 500",
+                                        "streetAddress": "11810 Grand Park Ave #500",
                                         "addressLocality": "North Bethesda",
                                         "addressRegion": "MD",
                                         "postalCode": "20852",
@@ -100,7 +102,7 @@ const RoofingGarrettParkMD = () => {
                                 {
                                     "@type": "Service",
                                     "name": "Roofing Services in Garrett Park, MD",
-                                    "provider": { "@type": "LocalBusiness", "name": "DMV General Contracting Group LLC", "telephone": "+1-240-730-1292", "url": "https://www.dmv-gc.com/" },
+                                    "provider": { "@type": "GeneralContractor", "name": "DMV General Contracting Group LLC", "telephone": "+1-240-730-1292", "url": "https://www.dmv-gc.com/" },
                                     "areaServed": { "@type": "City", "name": "Garrett Park" },
                                     "serviceType": "Residential Roof Inspection, Repair, Replacement, Emergency Roofing and Maintenance"
                                 },
@@ -335,7 +337,7 @@ const RoofingGarrettParkMD = () => {
                         <li><Link href="/service/electrical-services/garrett-park-md">Electrical Services in Garrett Park, MD</Link></li>
                         <li><Link href="/service/kitchen-remodeling/garrett-park-md">Kitchen Remodeling in Garrett Park, MD</Link></li>
                         <li><Link href="/service/bathroom-remodeling/garrett-park-md">Bathroom Remodeling in Garrett Park, MD</Link></li>
-                        <li><Link href="/service/design-build/garrett-park-md">Design-Build Contractor in Garrett Park, MD</Link></li>
+                        <li>Design-Build Contractor in Garrett Park, MD</li>
                     </ul>
                 </div>
 

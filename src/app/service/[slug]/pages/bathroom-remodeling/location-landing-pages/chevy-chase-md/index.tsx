@@ -396,19 +396,20 @@ export default function BathroomChevyChaseMD() {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "LocalBusiness",
+      "@type": "GeneralContractor",
       "@id": "https://www.dmv-gc.com/#business",
-      "name": "DMV-GC Group",
-      "alternateName": "DMV General Contracting Group LLC",
+      "name": "DMV General Contracting Group LLC",
+      "legalName": "DMV General Contracting Group LLC",
+      "alternateName": ["DMV General Contracting Group", "DMV-GC"],
       "image": "https://www.dmv-gc.com/logo.png",
       "url": "https://www.dmv-gc.com",
-      "telephone": "+12407301292",
+      "telephone": "+1-240-730-1292",
       "email": "support@dmv-gc.com",
       "foundingDate": "2018",
       "description": "Licensed design-build general contractor serving Chevy Chase, MD and the greater Montgomery County area. Specializing in bathroom remodeling, master bath renovations, tub-to-shower conversions, basement bathroom additions, and aging-in-place remodels.",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "11810 Grand Park Ave, Suite 500",
+        "streetAddress": "11810 Grand Park Ave #500",
         "addressLocality": "North Bethesda",
         "addressRegion": "MD",
         "postalCode": "20852",
@@ -444,13 +445,6 @@ export default function BathroomChevyChaseMD() {
           "credentialCategory": "Washington DC Department of Licensing and Consumer Protection \u2014 Home Improvement Contractor"
         }
       ],
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": "97",
-        "bestRating": "5",
-        "worstRating": "1"
-      },
       "priceRange": "$$$",
       "openingHoursSpecification": {
         "@type": "OpeningHoursSpecification",
@@ -511,15 +505,15 @@ export default function BathroomChevyChaseMD() {
           "name": "How much does a bathroom remodel cost in Chevy Chase, MD?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Bathroom remodeling in Chevy Chase, MD typically costs between $8,000 and $120,000 depending on bathroom type, scope, and finishes. A powder room or half-bath refresh starts around $8,000\u2013$18,000. A hall or guest bath remodel runs $18,000\u2013$35,000. A tub-to-shower conversion runs $12,000\u2013$25,000. A primary (master) bath renovation costs $35,000\u2013$70,000, and a luxury primary bath can reach $70,000\u2013$120,000+. Adding a new basement bathroom runs $20,000\u2013$45,000. DMV-GC Group provides free in-home consultations with detailed estimates for any Chevy Chase home."
+            "text": "Bathroom remodeling in Chevy Chase, MD typically costs between $8,000 and $120,000 depending on bathroom type, scope, and finishes. A powder room or half-bath refresh starts around $8,000\u2013$18,000. A hall or guest bath remodel runs $18,000\u2013$35,000. A tub-to-shower conversion runs $12,000\u2013$25,000. A primary (master) bath renovation costs $35,000\u2013$70,000, and a luxury primary bath can reach $70,000\u2013$120,000+. Adding a new basement bathroom runs $20,000\u2013$45,000. DMV General Contracting Group provides free in-home consultations with detailed estimates for any Chevy Chase home."
           }
         },
         {
           "@type": "Question",
-          "name": "Is DMV-GC Group licensed to do bathroom remodeling in Chevy Chase, MD?",
+          "name": "Is DMV General Contracting Group licensed to do bathroom remodeling in Chevy Chase, MD?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. DMV-GC Group holds a Maryland Home Improvement Contractor (MHIC) license issued by the Maryland Home Improvement Commission \u2014 the license required to legally perform residential renovation work in Chevy Chase and throughout Maryland. We are fully bonded and insured, and provide a 1-year workmanship warranty on every bathroom remodeling project completed in Montgomery County."
+            "text": "Yes. DMV General Contracting Group holds a Maryland Home Improvement Contractor (MHIC) license issued by the Maryland Home Improvement Commission \u2014 the license required to legally perform residential renovation work in Chevy Chase and throughout Maryland. We are fully bonded and insured, and provide a 1-year workmanship warranty on every bathroom remodeling project completed in Montgomery County."
           }
         },
         {
@@ -532,7 +526,7 @@ export default function BathroomChevyChaseMD() {
         },
         {
           "@type": "Question",
-          "name": "Can DMV-GC Group convert my tub to a walk-in shower?",
+          "name": "Can DMV General Contracting Group convert my tub to a walk-in shower?",
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Yes. Tub-to-shower conversions are a popular project in Chevy Chase's older homes, where original or retrofitted bathrooms often have tubs that are rarely used. We remove the existing tub, rebuild the wet area with proper waterproofing, and install a custom tile or low-maintenance walk-in shower \u2014 including high-end frameless-glass, curbless, and accessible designs for aging-in-place \u2014 while respecting the character and scale of these early-1900s homes. Most conversions are completed in 2\u20133 weeks."
@@ -543,12 +537,12 @@ export default function BathroomChevyChaseMD() {
           "name": "How long does a bathroom remodel take in Chevy Chase, MD?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Most bathroom renovations in Chevy Chase take 2\u20135 weeks from construction start to completion. A powder room refresh can be done in 1\u20132 weeks. A tub-to-shower conversion takes 2\u20133 weeks. A full primary bath renovation takes 4\u20136 weeks, and a new basement bathroom typically takes 3\u20135 weeks. Permit processing through Montgomery County DPS and WSSC usually adds 2\u20134 weeks before construction begins. DMV-GC Group factors realistic timelines into every project plan."
+            "text": "Most bathroom renovations in Chevy Chase take 2\u20135 weeks from construction start to completion. A powder room refresh can be done in 1\u20132 weeks. A tub-to-shower conversion takes 2\u20133 weeks. A full primary bath renovation takes 4\u20136 weeks, and a new basement bathroom typically takes 3\u20135 weeks. Permit processing through Montgomery County DPS and WSSC usually adds 2\u20134 weeks before construction begins. DMV General Contracting Group factors realistic timelines into every project plan."
           }
         },
         {
           "@type": "Question",
-          "name": "Can DMV-GC Group add a bathroom in my basement or primary suite?",
+          "name": "Can DMV General Contracting Group add a bathroom in my basement or primary suite?",
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Yes. Adding a bathroom is a high-value upgrade for Chevy Chase homes \u2014 many of the area's large early-1900s houses were built with few bathrooms relative to their size, so adding a primary-suite ensuite, a main-level powder room, or a basement bath makes them far more livable. We assess how the older home is built before planning the most efficient plumbing rough-in, then handle drainage, ventilation, waterproofing, the full Montgomery County DPS and WSSC permit process, and any village or town review that applies."

@@ -11,20 +11,21 @@ const schemaJsonLd = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "LocalBusiness",
+      "@type": "GeneralContractor",
       "@id": "https://www.dmv-gc.com/#business",
-      name: "DMV-GC Group",
-      alternateName: "DMV General Contracting Group LLC",
+      name: "DMV General Contracting Group LLC",
+      legalName: "DMV General Contracting Group LLC",
+      alternateName: ["DMV General Contracting Group", "DMV-GC"],
       image: "https://www.dmv-gc.com/logo.png",
       url: "https://www.dmv-gc.com",
-      telephone: "+12407301292",
+      telephone: "+1-240-730-1292",
       email: "support@dmv-gc.com",
       foundingDate: "2018",
       description:
         "Licensed design-build general contractor serving Chevy Chase, MD. Specializing in ADU construction for Chevy Chase's Colonial Revival and historic homes across all five incorporated villages and unincorporated sections — basement ADU conversions, garage conversions, and in-law suite additions — with multi-jurisdiction permit expertise.",
       address: {
         "@type": "PostalAddress",
-        streetAddress: "11810 Grand Park Ave, Suite 500",
+        streetAddress: "11810 Grand Park Ave #500",
         addressLocality: "North Bethesda",
         addressRegion: "MD",
         postalCode: "20852",
@@ -50,7 +51,6 @@ const schemaJsonLd = {
           credentialCategory: "Washington DC Department of Licensing and Consumer Protection",
         },
       ],
-      aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", reviewCount: "97", bestRating: "5" },
       priceRange: "$$$$",
     },
     {
@@ -91,7 +91,7 @@ const schemaJsonLd = {
           name: "How much does it cost to build an ADU in Chevy Chase, MD?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "ADU construction in Chevy Chase, MD typically costs between $80,000 and $280,000 depending on ADU type, village jurisdiction, and finish level. A basement ADU conversion runs $85,000–$145,000. A garage or carriage house conversion costs $80,000–$145,000. An attached in-law suite addition costs $130,000–$280,000. Chevy Chase's premium real estate market and historic Colonial Revival homes — many dating to the 1900s–1930s — add construction complexity compared to newer suburban markets. DMV-GC Group provides free in-home consultations with detailed, honest estimates.",
+            text: "ADU construction in Chevy Chase, MD typically costs between $80,000 and $280,000 depending on ADU type, village jurisdiction, and finish level. A basement ADU conversion runs $85,000–$145,000. A garage or carriage house conversion costs $80,000–$145,000. An attached in-law suite addition costs $130,000–$280,000. Chevy Chase's premium real estate market and historic Colonial Revival homes — many dating to the 1900s–1930s — add construction complexity compared to newer suburban markets. DMV General Contracting Group provides free in-home consultations with detailed, honest estimates.",
           },
         },
         {
@@ -99,7 +99,7 @@ const schemaJsonLd = {
           name: "How many permit jurisdictions does Chevy Chase, MD have?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Chevy Chase, Maryland has up to six different permit jurisdictions depending on which part of the community your property is in. The five incorporated villages — Chevy Chase Village, Town of Chevy Chase, Village of Chevy Chase Section 3, Village of Chevy Chase Section 5, and Village of Martin's Additions — each have their own Town or Village government that issues building permits. Unincorporated Chevy Chase (including Chevy Chase View and other areas) uses Montgomery County DPS permits. DMV-GC Group verifies the exact permit jurisdiction for every Chevy Chase address using parcel boundary data before any application is filed.",
+            text: "Chevy Chase, Maryland has up to six different permit jurisdictions depending on which part of the community your property is in. The five incorporated villages — Chevy Chase Village, Town of Chevy Chase, Village of Chevy Chase Section 3, Village of Chevy Chase Section 5, and Village of Martin's Additions — each have their own Town or Village government that issues building permits. Unincorporated Chevy Chase (including Chevy Chase View and other areas) uses Montgomery County DPS permits. DMV General Contracting Group verifies the exact permit jurisdiction for every Chevy Chase address using parcel boundary data before any application is filed.",
           },
         },
         {
@@ -107,7 +107,7 @@ const schemaJsonLd = {
           name: "Can I build an ADU in Chevy Chase Village?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Yes. Chevy Chase Village — the largest and most prominent of the five incorporated villages — has its own permit process through the Village of Chevy Chase Village government. ADU construction within Chevy Chase Village requires Village permits, not Montgomery County DPS permits. The Village's review process considers the design and exterior impact of any new construction or modification, with sensitivity to the Colonial Revival and Tudor character of the neighborhood's historic homes. Interior basement ADUs with no exterior modification typically have a more straightforward Village review. DMV-GC Group handles the complete Chevy Chase Village ADU permit process in-house.",
+            text: "Yes. Chevy Chase Village — the largest and most prominent of the five incorporated villages — has its own permit process through the Village of Chevy Chase Village government. ADU construction within Chevy Chase Village requires Village permits, not Montgomery County DPS permits. The Village's review process considers the design and exterior impact of any new construction or modification, with sensitivity to the Colonial Revival and Tudor character of the neighborhood's historic homes. Interior basement ADUs with no exterior modification typically have a more straightforward Village review. DMV General Contracting Group handles the complete Chevy Chase Village ADU permit process in-house.",
           },
         },
         {
@@ -115,23 +115,23 @@ const schemaJsonLd = {
           name: "What ADU types work best in Chevy Chase's historic Colonial Revival homes?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "The most practical ADU types for Chevy Chase's 1900s–1930s Colonial Revival and Tudor homes are basement conversions and garage or carriage house conversions. Both types use existing structure without adding new building footprint — important on Chevy Chase's typically modest lot sizes and in the context of historic home character preservation. Basement ADUs with no exterior modification have minimal historic impact. Garage/carriage house conversions at the rear of the property also have lower street-facing impact than front-facing modifications. Attached in-law suite additions are feasible on some Chevy Chase properties with sufficient rear yard depth. DMV-GC Group assesses all options during the free consultation.",
+            text: "The most practical ADU types for Chevy Chase's 1900s–1930s Colonial Revival and Tudor homes are basement conversions and garage or carriage house conversions. Both types use existing structure without adding new building footprint — important on Chevy Chase's typically modest lot sizes and in the context of historic home character preservation. Basement ADUs with no exterior modification have minimal historic impact. Garage/carriage house conversions at the rear of the property also have lower street-facing impact than front-facing modifications. Attached in-law suite additions are feasible on some Chevy Chase properties with sufficient rear yard depth. DMV General Contracting Group assesses all options during the free consultation.",
           },
         },
         {
           "@type": "Question",
-          name: "Does DMV-GC Group have experience with Chevy Chase's historic homes?",
+          name: "Does DMV General Contracting Group have experience with Chevy Chase's historic homes?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Yes. DMV-GC Group has completed renovation projects throughout Chevy Chase's Colonial Revival and Tudor neighborhoods — including kitchen, bathroom, and basement renovations in homes dating to the 1900s–1930s. We understand the specific construction characteristics of this era: plaster walls, older foundation types, narrower framing bays, galvanized plumbing in pre-1950 homes, and ceiling height variations in below-grade spaces. These factors are assessed honestly during the free consultation and factored into every Chevy Chase estimate before construction begins.",
+            text: "Yes. DMV General Contracting Group has completed renovation projects throughout Chevy Chase's Colonial Revival and Tudor neighborhoods — including kitchen, bathroom, and basement renovations in homes dating to the 1900s–1930s. We understand the specific construction characteristics of this era: plaster walls, older foundation types, narrower framing bays, galvanized plumbing in pre-1950 homes, and ceiling height variations in below-grade spaces. These factors are assessed honestly during the free consultation and factored into every Chevy Chase estimate before construction begins.",
           },
         },
         {
           "@type": "Question",
-          name: "Is DMV-GC Group licensed for ADU construction in Chevy Chase, MD?",
+          name: "Is DMV General Contracting Group licensed for ADU construction in Chevy Chase, MD?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Yes. DMV-GC Group holds a Maryland MHIC license — required for all home improvement and construction work in Chevy Chase. We are fully bonded, carry comprehensive general liability insurance and workers' compensation coverage, and provide a 1-year workmanship warranty on every ADU project completed in Chevy Chase.",
+            text: "Yes. DMV General Contracting Group holds a Maryland MHIC license — required for all home improvement and construction work in Chevy Chase. We are fully bonded, carry comprehensive general liability insurance and workers' compensation coverage, and provide a 1-year workmanship warranty on every ADU project completed in Chevy Chase.",
           },
         },
       ],

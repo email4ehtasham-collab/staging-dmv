@@ -44,7 +44,7 @@ export default function TopBar() {
         </div>
         <Link href="tel:+12407301292" className={styles.phone}>
           <PhoneIcon />
-          <span>(240) 730-1292</span>
+          <span>+1 240-730-1292</span>
         </Link>
       </Container>
     </div>

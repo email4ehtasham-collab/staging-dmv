@@ -75,16 +75,18 @@ const HardscapingBethesdaMD = () => {
                             "@context": "https://schema.org",
                             "@graph": [
                                 {
-                                    "@type": "LocalBusiness",
+                                    "@type": "GeneralContractor",
                                     "@id": "https://www.dmv-gc.com/#business",
                                     "name": "DMV General Contracting Group LLC",
+                                    "legalName": "DMV General Contracting Group LLC",
+                                    "alternateName": ["DMV General Contracting Group", "DMV-GC"],
                                     "url": "https://www.dmv-gc.com/",
                                     "telephone": "+1-240-730-1292",
                                     "email": "support@dmv-gc.com",
                                     "description": "Professional hardscaping contractor serving Bethesda, MD. Custom patios, walkways, retaining walls, driveways, and outdoor kitchens for Bethesda's upscale colonials and established neighborhoods. MoCo DPS permits managed in-house. Natural stone specialists. MHIC #156178.",
                                     "address": {
                                         "@type": "PostalAddress",
-                                        "streetAddress": "11810 Grand Park Ave. Suite 500",
+                                        "streetAddress": "11810 Grand Park Ave #500",
                                         "addressLocality": "North Bethesda",
                                         "addressRegion": "MD",
                                         "postalCode": "20852",
@@ -95,7 +97,7 @@ const HardscapingBethesdaMD = () => {
                                 {
                                     "@type": "Service",
                                     "name": "Hardscaping Services in Bethesda, MD",
-                                    "provider": { "@type": "LocalBusiness", "name": "DMV General Contracting Group LLC", "telephone": "+1-240-730-1292", "url": "https://www.dmv-gc.com/" },
+                                    "provider": { "@type": "GeneralContractor", "name": "DMV General Contracting Group LLC", "telephone": "+1-240-730-1292", "url": "https://www.dmv-gc.com/" },
                                     "areaServed": { "@type": "City", "name": "Bethesda" },
                                     "serviceType": "Hardscaping, Patio Installation, Walkways, Retaining Walls, Driveway Paving, Outdoor Kitchen, Outdoor Living"
                                 },
@@ -340,11 +342,11 @@ const HardscapingBethesdaMD = () => {
                     <h2>Explore Our Other Services in Bethesda, MD</h2>
                     <ul>
                         <li><Link href="/service/patios/bethesda-md">Patio Installation in Bethesda, MD</Link></li>
-                        <li><Link href="/service/fence-installation/bethesda-md">Fence Installation in Bethesda, MD</Link></li>
-                        <li><Link href="/service/decks/bethesda-md">Deck Building in Bethesda, MD</Link></li>
+                        <li>Fence Installation in Bethesda, MD</li>
+                        <li>Deck Building in Bethesda, MD</li>
                         <li><Link href="/service/home-additions/bethesda-md">Home Additions in Bethesda, MD</Link></li>
-                        <li><Link href="/service/design-build/bethesda-md">Design-Build Contractor in Bethesda, MD</Link></li>
-                        <li><Link href="/service/concrete/bethesda-md">Concrete Services in Bethesda, MD</Link></li>
+                        <li>Design-Build Contractor in Bethesda, MD</li>
+                        <li>Concrete Services in Bethesda, MD</li>
                     </ul>
                 </div>
 

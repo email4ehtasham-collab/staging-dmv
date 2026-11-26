@@ -11,19 +11,20 @@ const schemaJsonLd = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "LocalBusiness",
+      "@type": "GeneralContractor",
       "@id": "https://www.dmv-gc.com/#business",
-      "name": "DMV-GC Group",
-      "alternateName": "DMV General Contracting Group LLC",
+      "name": "DMV General Contracting Group LLC",
+      "legalName": "DMV General Contracting Group LLC",
+      "alternateName": ["DMV General Contracting Group", "DMV-GC"],
       "image": "https://www.dmv-gc.com/logo.png",
       "url": "https://www.dmv-gc.com",
-      "telephone": "+12407301292",
+      "telephone": "+1-240-730-1292",
       "email": "support@dmv-gc.com",
       "foundingDate": "2018",
       "description": "Licensed design-build general contractor serving Wheaton, MD. Specializing in ADU construction for Wheaton's diverse postwar housing stock — basement ADU conversions, split-level lower-level ADUs, and garage conversions — with full Montgomery County permit and Certificate of Occupancy management.",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "11810 Grand Park Ave, Suite 500",
+        "streetAddress": "11810 Grand Park Ave #500",
         "addressLocality": "North Bethesda",
         "addressRegion": "MD",
         "postalCode": "20852",
@@ -41,7 +42,6 @@ const schemaJsonLd = {
         { "@type": "EducationalOccupationalCredential", "name": "MHIC License", "credentialCategory": "Maryland Home Improvement Contractor License" },
         { "@type": "EducationalOccupationalCredential", "name": "DLCP License", "credentialCategory": "Washington DC Department of Licensing and Consumer Protection" }
       ],
-      "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "97", "bestRating": "5" },
       "priceRange": "$$"
     },
     {
@@ -76,7 +76,7 @@ const schemaJsonLd = {
           "name": "How much does it cost to build an ADU in Wheaton, MD?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "ADU construction in Wheaton, MD typically costs between $55,000 and $190,000 depending on ADU type and scope. A split-level lower-level ADU conversion runs $55,000\u2013$100,000. A basement ADU conversion costs $60,000\u2013$115,000. A garage conversion ADU costs $58,000\u2013$105,000. An attached in-law suite addition costs $95,000\u2013$190,000. Wheaton's value-oriented market means ADU investments here offer some of the strongest ROI percentages in Montgomery County — particularly given dual transit access from the Metro and Purple Line. DMV-GC Group provides free in-home consultations with detailed estimates."
+            "text": "ADU construction in Wheaton, MD typically costs between $55,000 and $190,000 depending on ADU type and scope. A split-level lower-level ADU conversion runs $55,000\u2013$100,000. A basement ADU conversion costs $60,000\u2013$115,000. A garage conversion ADU costs $58,000\u2013$105,000. An attached in-law suite addition costs $95,000\u2013$190,000. Wheaton's value-oriented market means ADU investments here offer some of the strongest ROI percentages in Montgomery County — particularly given dual transit access from the Metro and Purple Line. DMV General Contracting Group provides free in-home consultations with detailed estimates."
           }
         },
         {
@@ -92,15 +92,15 @@ const schemaJsonLd = {
           "name": "Can I convert a Wheaton split-level lower level into an ADU?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes — split-level lower-level conversions are the most common and cost-effective ADU type in Wheaton. Like Silver Spring, Wheaton has a high concentration of postwar split-levels where the lower level is partially above grade, naturally lit, and often has an existing side entrance. These features reduce the cost and complexity of ADU conversion compared to fully below-grade basements. Many Wheaton split-levels were also built with lower-level half baths or laundry rough-ins that further reduce bathroom addition costs. DMV-GC Group assesses your specific split-level during the free consultation."
+            "text": "Yes — split-level lower-level conversions are the most common and cost-effective ADU type in Wheaton. Like Silver Spring, Wheaton has a high concentration of postwar split-levels where the lower level is partially above grade, naturally lit, and often has an existing side entrance. These features reduce the cost and complexity of ADU conversion compared to fully below-grade basements. Many Wheaton split-levels were also built with lower-level half baths or laundry rough-ins that further reduce bathroom addition costs. DMV General Contracting Group assesses your specific split-level during the free consultation."
           }
         },
         {
           "@type": "Question",
-          "name": "Does DMV-GC Group handle ADU permits in Wheaton?",
+          "name": "Does DMV General Contracting Group handle ADU permits in Wheaton?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. Wheaton is an unincorporated community in Montgomery County — all ADU permits are processed through Montgomery County's Department of Permitting Services (DPS). DMV-GC Group handles all required building, electrical, and plumbing permits, plus the Certificate of Occupancy application and all required inspections. Homeowners never need to contact Montgomery County directly for any part of the ADU permit process."
+            "text": "Yes. Wheaton is an unincorporated community in Montgomery County — all ADU permits are processed through Montgomery County's Department of Permitting Services (DPS). DMV General Contracting Group handles all required building, electrical, and plumbing permits, plus the Certificate of Occupancy application and all required inspections. Homeowners never need to contact Montgomery County directly for any part of the ADU permit process."
           }
         },
         {
@@ -108,15 +108,15 @@ const schemaJsonLd = {
           "name": "What ADU types work best in Wheaton's concrete block foundation homes?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Wheaton's 1950s\u20131960s construction includes many homes with concrete block foundations — which require a different moisture management approach than poured concrete. Before finishing a concrete block basement as an ADU, DMV-GC Group assesses the foundation for moisture infiltration through the block and recommends appropriate interior waterproofing. With proper moisture management, concrete block basement ADUs are fully feasible and perform well long-term. Alternatively, split-level lower-level ADUs — which are partially above grade and inherently less moisture-prone — are often the more straightforward option in Wheaton's older housing stock."
+            "text": "Wheaton's 1950s\u20131960s construction includes many homes with concrete block foundations — which require a different moisture management approach than poured concrete. Before finishing a concrete block basement as an ADU, DMV General Contracting Group assesses the foundation for moisture infiltration through the block and recommends appropriate interior waterproofing. With proper moisture management, concrete block basement ADUs are fully feasible and perform well long-term. Alternatively, split-level lower-level ADUs — which are partially above grade and inherently less moisture-prone — are often the more straightforward option in Wheaton's older housing stock."
           }
         },
         {
           "@type": "Question",
-          "name": "Is DMV-GC Group licensed for ADU construction in Wheaton, MD?",
+          "name": "Is DMV General Contracting Group licensed for ADU construction in Wheaton, MD?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. DMV-GC Group holds a Maryland MHIC (Home Improvement Contractor) license — required for all home improvement and construction work in Wheaton and Montgomery County. We are fully bonded, carry comprehensive general liability insurance and workers' compensation coverage, and provide a 1-year workmanship warranty on every ADU project completed in Wheaton."
+            "text": "Yes. DMV General Contracting Group holds a Maryland MHIC (Home Improvement Contractor) license — required for all home improvement and construction work in Wheaton and Montgomery County. We are fully bonded, carry comprehensive general liability insurance and workers' compensation coverage, and provide a 1-year workmanship warranty on every ADU project completed in Wheaton."
           }
         }
       ]

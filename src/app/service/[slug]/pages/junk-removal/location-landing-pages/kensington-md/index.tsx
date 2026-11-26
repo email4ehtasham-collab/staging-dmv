@@ -11,19 +11,20 @@ const schemaJsonLd = {
     "@context": "https://schema.org",
     "@graph": [
         {
-            "@type": "LocalBusiness",
+            "@type": "GeneralContractor",
             "@id": "https://www.dmv-gc.com/#business",
-            "name": "DMV-GC Group",
-            "alternateName": "DMV General Contracting Group LLC",
+            "name": "DMV General Contracting Group LLC",
+            "legalName": "DMV General Contracting Group LLC",
+            "alternateName": ["DMV General Contracting Group", "DMV-GC"],
             "image": "https://www.dmv-gc.com/logo.png",
             "url": "https://www.dmv-gc.com",
-            "telephone": "+12407301292",
+            "telephone": "+1-240-730-1292",
             "email": "support@dmv-gc.com",
             "foundingDate": "2018",
             "description": "Licensed Maryland general contractor providing professional junk removal in Kensington, MD. Pre-1950 home renovation debris removal, residential cleanouts, estate cleanouts, and bulk item pickup for Kensington's established bungalows, foursquares and colonials. EPA RRP awareness. MHIC #156178.",
             "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "11810 Grand Park Ave, Suite 500",
+                "streetAddress": "11810 Grand Park Ave #500",
                 "addressLocality": "North Bethesda",
                 "addressRegion": "MD",
                 "postalCode": "20852",
@@ -57,13 +58,6 @@ const schemaJsonLd = {
                     "credentialCategory": "Washington DC Department of Licensing and Consumer Protection — Home Improvement Contractor #410526000209"
                 }
             ],
-            "aggregateRating": {
-                "@type": "AggregateRating",
-                "ratingValue": "4.9",
-                "reviewCount": "97",
-                "bestRating": "5",
-                "worstRating": "1"
-            },
             "priceRange": "$$",
             "openingHoursSpecification": {
                 "@type": "OpeningHoursSpecification",
@@ -356,7 +350,7 @@ export default function JunkRemovalKensingtonMD() {
                 <ul className="related-links">
                     <li><Link href="/service/basement-remodeling/kensington-md">Basement Remodeling in Kensington, MD</Link></li>
                     <li><Link href="/service/kitchen-remodeling/kensington-md">Kitchen Remodeling in Kensington, MD</Link></li>
-                    <li><Link href="/service/home-additions/kensington-md">Home Additions in Kensington, MD</Link></li>
+                    <li>Home Additions in Kensington, MD</li>
                     <li><Link href="/service/design-build/kensington-md">Design-Build Contractor in Kensington, MD</Link></li>
                     <li><Link href="/service/patios/kensington-md">Patio Installation in Kensington, MD</Link></li>
                     <li><Link href="/service/electrical-services/kensington-md">Electrical Services in Kensington, MD</Link></li>

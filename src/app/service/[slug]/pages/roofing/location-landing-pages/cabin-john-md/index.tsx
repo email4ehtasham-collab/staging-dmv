@@ -75,16 +75,18 @@ const RoofingCabinJohnMD = () => {
                             "@context": "https://schema.org",
                             "@graph": [
                                 {
-                                    "@type": "LocalBusiness",
+                                    "@type": "GeneralContractor",
                                     "@id": "https://www.dmv-gc.com/#business",
                                     "name": "DMV General Contracting Group LLC",
+                                    "legalName": "DMV General Contracting Group LLC",
+                                    "alternateName": ["DMV General Contracting Group", "DMV-GC"],
                                     "url": "https://www.dmv-gc.com/",
                                     "telephone": "+1-240-730-1292",
                                     "email": "support@dmv-gc.com",
                                     "description": "Licensed and insured general contractor providing residential roofing inspection, repair, replacement and emergency roofing in Cabin John, MD. C&O Canal and Cabin John Creek proximity creates elevated moisture and heavy shade conditions that accelerate shingle and flashing deterioration faster than anywhere else in Montgomery County. MoCo DPS permit experts.",
                                     "address": {
                                         "@type": "PostalAddress",
-                                        "streetAddress": "11810 Grand Park Ave. Suite 500",
+                                        "streetAddress": "11810 Grand Park Ave #500",
                                         "addressLocality": "North Bethesda",
                                         "addressRegion": "MD",
                                         "postalCode": "20852",
@@ -95,7 +97,7 @@ const RoofingCabinJohnMD = () => {
                                 {
                                     "@type": "Service",
                                     "name": "Roofing Services in Cabin John, MD",
-                                    "provider": { "@type": "LocalBusiness", "name": "DMV General Contracting Group LLC", "telephone": "+1-240-730-1292", "url": "https://www.dmv-gc.com/" },
+                                    "provider": { "@type": "GeneralContractor", "name": "DMV General Contracting Group LLC", "telephone": "+1-240-730-1292", "url": "https://www.dmv-gc.com/" },
                                     "areaServed": { "@type": "City", "name": "Cabin John" },
                                     "serviceType": "Residential Roof Inspection, Repair, Replacement, Emergency Roofing and Maintenance"
                                 },

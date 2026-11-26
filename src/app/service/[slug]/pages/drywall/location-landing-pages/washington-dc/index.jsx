@@ -282,7 +282,7 @@ const WashingtonDC = () => {
                             <li><Link href="/service/bathroom-remodeling/washington-dc">Bathroom Remodeling in Washington, DC, MD</Link></li>
                             <li><Link href="/service/basement-remodeling/washington-dc">Basement Remodeling in Washington, DC, MD</Link></li>
                             <li><Link href="/service/home-additions/washington-dc">Home Additions in Washington, DC, MD</Link></li>
-                            <li><Link href="/service/design-build/washington-dc">Design-Build Contractor in Washington, DC, MD</Link></li>
+                            <li>Design-Build Contractor in Washington, DC, MD</li>
                             <li><Link href="/service/plumbing-services/washington-dc">Plumbing & Electrical Services in Washington, DC, MD</Link></li>
                         </ul>
                     </div>

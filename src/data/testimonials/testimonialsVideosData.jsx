@@ -45,15 +45,6 @@ export default [
         slug: 'colin-nicole-merging-two-units'
     },
 	{
-        id: 10,
-        thumbnail: '/images/projects-galary/calvert-st-kitchen/1.webp',
-        videoUrl: 'https://www.youtube.com/embed/CofpFTG1QQs',
-		video_type: 'project',
-		projectLink: '/project/luxury-master-bath-entry-powder-room-transformation',
-		title: 'Luxury Master Bath & Entry Powder Room Transformation',
-        slug: 'luxury-master-bath-entry-powder-room-transformation'
-    },
-	{
 		id: 13,
 		thumbnail: '/images/video-thumbnails/reviews/dc-townhome-v2.webp',
 		videoUrl: 'https://www.youtube.com/embed/nK91OAuS91I',

@@ -144,7 +144,7 @@ const GarrettParkMD = () => {
                 <div className="internal-links">
                     <h2>Explore Our Other Services in Garrett Park, MD</h2>
                     <ul>
-                        <li><Link href="/service/design-build/garrett-park-md">Design-Build Contractor in Garrett Park, MD</Link></li>
+                        <li>Design-Build Contractor in Garrett Park, MD</li>
                         <li><Link href="/service/adu/garrett-park-md">ADU Construction in Garrett Park, MD</Link></li>
                         <li><Link href="/service/kitchen-remodeling/garrett-park-md">Kitchen Remodeling in Garrett Park, MD</Link></li>
                         <li><Link href="/service/basement-remodeling/garrett-park-md">Basement Remodeling in Garrett Park, MD</Link></li>

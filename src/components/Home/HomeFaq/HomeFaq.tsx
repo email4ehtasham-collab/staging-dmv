@@ -158,7 +158,7 @@ export default function HomeFaq({
                 Book a Call
               </Button>
               <a className={styles.phone} href="tel:+12407301292">
-                (240) 730-1292
+                +1 240-730-1292
               </a>
             </div>
           </div>

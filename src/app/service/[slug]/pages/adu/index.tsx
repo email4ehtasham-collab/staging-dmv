@@ -390,10 +390,10 @@ export default function Adu({ data }: { data?: AduService }) {
                             <h1 className={styles.heroTitle}>Accessory Dwelling Unit (ADU) Builder in <span>Maryland &amp; Washington, DC</span></h1>
                             <p className={styles.heroText}>Accessory dwelling units are allowed by right on single-family lots in Montgomery County. DC has allowed them in most residential zones since 2016. As an ADU builder in Maryland and Washington, DC, DMV General Contracting Group checks your lot, designs the unit, files the permits and builds it under one contract. Most new ADUs cost $150,000 to $300,000.</p>
                             <p className={styles.heroText}>MHIC #156178 · DC DLCP #410526000209 · 4.9 out of 5 on Google · 1-year workmanship warranty</p>
-                            <p className={styles.heroText}>Request a free ADU feasibility check, or call (240) 730-1292 any day.</p>
+                            <p className={styles.heroText}>Request a free ADU feasibility check, or call +1 240-730-1292 any day.</p>
                             <div className={styles.heroActions}>
                                 <Button href="#estimate" icon={<ArrowIcon />}>Request a Free ADU Feasibility Check</Button>
-                                <Button href="tel:+12407301292" variant="secondary">(240) 730-1292</Button>
+                                <Button href="tel:+12407301292" variant="secondary">+1 240-730-1292</Button>
                             </div>
                             <div className={styles.trustRow}>
                                 <div className={styles.trustItem}><Stars /><span><strong>4.9</strong> on Google</span></div>
@@ -634,7 +634,7 @@ export default function Adu({ data }: { data?: AduService }) {
             <InHomeConsultation
                 id="adu-estimate-cta"
                 headingId="adu-estimate-cta-title"
-                title="Request a free ADU feasibility check, or call (240) 730-1292 any day."
+                title="Request a free ADU feasibility check, or call +1 240-730-1292 any day."
                 text="As an ADU builder in Maryland and Washington, DC, we review zoning, design the unit and handle every license and permit."
                 ctaLabel="Request a free ADU feasibility check"
             />

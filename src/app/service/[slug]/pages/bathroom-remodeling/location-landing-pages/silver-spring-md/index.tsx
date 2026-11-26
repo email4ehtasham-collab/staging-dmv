@@ -352,7 +352,7 @@ export default function BathroomSilverSpringMD() {
 
                 <div className="nearby-box">
                     <h3>Also serving Takoma Park, MD &mdash; directly adjacent to Silver Spring</h3>
-                    <p>DMV-GC Group completes bathroom renovations throughout Takoma Park, MD, which borders Silver Spring directly. Takoma Park&apos;s older bungalows and Victorians &mdash; and its local historic district &mdash; call for a contractor who understands both Maryland permitting and careful work in century-old homes. Our team holds the proper MHIC license and brings the same design-build process and 1-year warranty to every project. <Link href="/service/bathroom-remodeling/takoma-park-md">View our Takoma Park, MD bathroom remodeling page &rarr;</Link></p>
+                    <p>DMV-GC Group completes bathroom renovations throughout Takoma Park, MD, which borders Silver Spring directly. Takoma Park&apos;s older bungalows and Victorians &mdash; and its local historic district &mdash; call for a contractor who understands both Maryland permitting and careful work in century-old homes. Our team holds the proper MHIC license and brings the same design-build process and 1-year warranty to every project.</p>
                 </div>
 
                 {/* FAQ */}

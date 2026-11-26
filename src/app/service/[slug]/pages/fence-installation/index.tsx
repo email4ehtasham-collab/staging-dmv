@@ -688,7 +688,7 @@ export default function FenceInstallation({ data }) {
                         <li><Link href="/service/patios" style={{ color: '#1a6b9a' }}>Patio Installation in Bethesda, MD</Link></li>
                         <li><Link href="/service/home-additions" style={{ color: '#1a6b9a' }}>Home Additions in Bethesda, MD</Link></li>
                         <li><Link href="/service/adu" style={{ color: '#1a6b9a' }}>ADU Construction in Bethesda, MD</Link></li>
-                        <li><Link href="/service/siding" style={{ color: '#1a6b9a' }}>Siding Installation in Bethesda, MD</Link></li>
+                        <li><Link href="/service/siding-installation" style={{ color: '#1a6b9a' }}>Siding Installation in Bethesda, MD</Link></li>
                     </ul>
 
                     <div className="cta-banner">

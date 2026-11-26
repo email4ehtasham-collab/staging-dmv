@@ -11,20 +11,21 @@ const schemaJsonLd = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "LocalBusiness",
+      "@type": "GeneralContractor",
       "@id": "https://www.dmv-gc.com/#business",
-      name: "DMV-GC Group",
-      alternateName: "DMV General Contracting Group LLC",
+      name: "DMV General Contracting Group LLC",
+      legalName: "DMV General Contracting Group LLC",
+      alternateName: ["DMV General Contracting Group", "DMV-GC"],
       image: "https://www.dmv-gc.com/logo.png",
       url: "https://www.dmv-gc.com",
-      telephone: "+12407301292",
+      telephone: "+1-240-730-1292",
       email: "support@dmv-gc.com",
       foundingDate: "2018",
       description:
         "Licensed design-build general contractor serving Garrett Park, MD. Specializing in ADU construction for Garrett Park's National Register Historic District Victorian and Craftsman homes — basement ADU conversions and garage conversions — with Town of Garrett Park permit expertise and historic home construction experience.",
       address: {
         "@type": "PostalAddress",
-        streetAddress: "11810 Grand Park Ave, Suite 500",
+        streetAddress: "11810 Grand Park Ave #500",
         addressLocality: "North Bethesda",
         addressRegion: "MD",
         postalCode: "20852",
@@ -50,7 +51,6 @@ const schemaJsonLd = {
           credentialCategory: "Washington DC Department of Licensing and Consumer Protection",
         },
       ],
-      aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", reviewCount: "97", bestRating: "5" },
       priceRange: "$$$",
     },
     {
@@ -91,7 +91,7 @@ const schemaJsonLd = {
           name: "How much does it cost to build an ADU in Garrett Park, MD?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "ADU construction in Garrett Park, MD typically costs between $68,000 and $210,000 depending on ADU type and scope. A basement ADU conversion runs $75,000–$135,000. A garage conversion ADU costs $68,000–$125,000. An attached in-law suite addition costs $110,000–$210,000. Garrett Park's historic Victorian homes add specific construction considerations — older systems, stone or block foundations, ceiling height constraints — that can add 10–20% to project cost compared to newer suburban construction. DMV-GC Group provides free in-home consultations with honest, detailed estimates that account for these site-specific factors.",
+            text: "ADU construction in Garrett Park, MD typically costs between $68,000 and $210,000 depending on ADU type and scope. A basement ADU conversion runs $75,000–$135,000. A garage conversion ADU costs $68,000–$125,000. An attached in-law suite addition costs $110,000–$210,000. Garrett Park's historic Victorian homes add specific construction considerations — older systems, stone or block foundations, ceiling height constraints — that can add 10–20% to project cost compared to newer suburban construction. DMV General Contracting Group provides free in-home consultations with honest, detailed estimates that account for these site-specific factors.",
           },
         },
         {
@@ -99,7 +99,7 @@ const schemaJsonLd = {
           name: "Does the Town of Garrett Park have its own ADU permit process?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Yes. Garrett Park is an incorporated town within Montgomery County, and all construction permits for properties within the town limits must be obtained from the Town of Garrett Park — not from Montgomery County's Department of Permitting Services. The Town has its own plan review and inspection process. DMV-GC Group handles the complete Town of Garrett Park ADU permit process in-house, including all plan preparation, submission, and inspection scheduling. We also verify jurisdiction for every Garrett Park address since a small number of properties near the town boundary use MoCo permits instead.",
+            text: "Yes. Garrett Park is an incorporated town within Montgomery County, and all construction permits for properties within the town limits must be obtained from the Town of Garrett Park — not from Montgomery County's Department of Permitting Services. The Town has its own plan review and inspection process. DMV General Contracting Group handles the complete Town of Garrett Park ADU permit process in-house, including all plan preparation, submission, and inspection scheduling. We also verify jurisdiction for every Garrett Park address since a small number of properties near the town boundary use MoCo permits instead.",
           },
         },
         {
@@ -107,7 +107,7 @@ const schemaJsonLd = {
           name: "Is Garrett Park a historic district? Does that affect ADU construction?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Yes. The Town of Garrett Park is listed on the National Register of Historic Places as a historic district — one of the few entire towns in Maryland to hold this designation. For interior ADU work — finishing a basement, converting an existing garage interior — the National Register designation does not add federal review requirements, as the National Register does not restrict private property owners' interior modifications. However, any exterior modification visible from a public street — new egress window openings in the front facade, exterior door changes — may require review under Maryland's historic preservation framework. DMV-GC Group assesses every Garrett Park ADU project for historic district implications during the consultation and designs exterior modifications to be sensitive to and compatible with the Victorian and Craftsman character of Garrett Park's historic homes.",
+            text: "Yes. The Town of Garrett Park is listed on the National Register of Historic Places as a historic district — one of the few entire towns in Maryland to hold this designation. For interior ADU work — finishing a basement, converting an existing garage interior — the National Register designation does not add federal review requirements, as the National Register does not restrict private property owners' interior modifications. However, any exterior modification visible from a public street — new egress window openings in the front facade, exterior door changes — may require review under Maryland's historic preservation framework. DMV General Contracting Group assesses every Garrett Park ADU project for historic district implications during the consultation and designs exterior modifications to be sensitive to and compatible with the Victorian and Craftsman character of Garrett Park's historic homes.",
           },
         },
         {
@@ -115,23 +115,23 @@ const schemaJsonLd = {
           name: "What ADU types work best in Garrett Park's small historic lots?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Given Garrett Park's small lot sizes — many between 5,000 and 9,000 sq ft — the most practical ADU types are basement conversions and garage conversions, since both use existing structure without adding new building footprint. Attached in-law suite additions are feasible on some of Garrett Park's larger parcels but require setback compliance assessment. Detached backyard cottages are the least common ADU type in Garrett Park due to lot size and setback constraints. DMV-GC Group confirms what is feasible on your specific Garrett Park property during the free consultation.",
+            text: "Given Garrett Park's small lot sizes — many between 5,000 and 9,000 sq ft — the most practical ADU types are basement conversions and garage conversions, since both use existing structure without adding new building footprint. Attached in-law suite additions are feasible on some of Garrett Park's larger parcels but require setback compliance assessment. Detached backyard cottages are the least common ADU type in Garrett Park due to lot size and setback constraints. DMV General Contracting Group confirms what is feasible on your specific Garrett Park property during the free consultation.",
           },
         },
         {
           "@type": "Question",
-          name: "Does DMV-GC Group have experience with Garrett Park's Victorian and Craftsman homes?",
+          name: "Does DMV General Contracting Group have experience with Garrett Park's Victorian and Craftsman homes?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Yes. DMV-GC Group has completed renovation projects in Garrett Park and neighboring Kensington — both communities with concentrations of late 19th and early 20th century Victorian, Queen Anne, and Craftsman homes. We understand the specific construction characteristics of these homes: stone and rubble foundations, narrow framing bays, galvanized plumbing, knob-and-tube or early panel electrical, and ceiling height variations in below-grade spaces. These factors are assessed honestly during the free consultation and factored into every estimate before construction begins.",
+            text: "Yes. DMV General Contracting Group has completed renovation projects in Garrett Park and neighboring Kensington — both communities with concentrations of late 19th and early 20th century Victorian, Queen Anne, and Craftsman homes. We understand the specific construction characteristics of these homes: stone and rubble foundations, narrow framing bays, galvanized plumbing, knob-and-tube or early panel electrical, and ceiling height variations in below-grade spaces. These factors are assessed honestly during the free consultation and factored into every estimate before construction begins.",
           },
         },
         {
           "@type": "Question",
-          name: "Is DMV-GC Group licensed for ADU construction in Garrett Park, MD?",
+          name: "Is DMV General Contracting Group licensed for ADU construction in Garrett Park, MD?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Yes. DMV-GC Group holds a Maryland MHIC (Home Improvement Contractor) license — required for all home improvement and construction work in Garrett Park. We are fully bonded, carry comprehensive general liability insurance and workers' compensation coverage, and provide a 1-year workmanship warranty on every ADU project completed in Garrett Park.",
+            text: "Yes. DMV General Contracting Group holds a Maryland MHIC (Home Improvement Contractor) license — required for all home improvement and construction work in Garrett Park. We are fully bonded, carry comprehensive general liability insurance and workers' compensation coverage, and provide a 1-year workmanship warranty on every ADU project completed in Garrett Park.",
           },
         },
       ],

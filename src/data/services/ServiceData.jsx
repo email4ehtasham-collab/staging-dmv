@@ -16,15 +16,17 @@ const ServiceData = [
             "@context": "https://schema.org",
             "@graph": [
                 {
-                "@type": "LocalBusiness",
-                "name": "DMV General Contracting Group",
+                "@type": "GeneralContractor",
+                "name": "DMV General Contracting Group LLC",
+                "legalName": "DMV General Contracting Group LLC",
+                "alternateName": ["DMV General Contracting Group", "DMV-GC"],
                 "image": "https://www.dmv-gc.com/logo.png",
                 "url": "https://www.dmv-gc.com",
-                "telephone": "240-730-1292",
+                "telephone": "+1-240-730-1292",
                 "email": "support@dmv-gc.com",
                 "address": {
                     "@type": "PostalAddress",
-                    "streetAddress": "11810 Grand Park Ave, Suite 500",
+                    "streetAddress": "11810 Grand Park Ave #500",
                     "addressLocality": "North Bethesda",
                     "addressRegion": "MD",
                     "postalCode": "20852",
@@ -41,11 +43,6 @@ const ServiceData = [
                     "Gaithersburg", "Garrett Park", "Cabin John", "Washington DC", "Laurel"
                 ],
                 "priceRange": "$$$$",
-                "aggregateRating": {
-                    "@type": "AggregateRating",
-                    "ratingValue": "4.9",
-                    "reviewCount": "97"
-                },
                 "openingHoursSpecification": {
                     "@type": "OpeningHoursSpecification",
                     "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
@@ -57,8 +54,8 @@ const ServiceData = [
                 "@type": "Service",
                 "serviceType": "Kitchen Remodeling",
                 "provider": {
-                    "@type": "LocalBusiness",
-                    "name": "DMV General Contracting Group"
+                    "@type": "GeneralContractor",
+                    "name": "DMV General Contracting Group LLC"
                 },
                 "areaServed": {
                     "@type": "City",
@@ -170,15 +167,17 @@ const ServiceData = [
             "@context": "https://schema.org",
             "@graph": [
                 {
-                "@type": "LocalBusiness",
-                "name": "DMV General Contracting Group",
+                "@type": "GeneralContractor",
+                "name": "DMV General Contracting Group LLC",
+                "legalName": "DMV General Contracting Group LLC",
+                "alternateName": ["DMV General Contracting Group", "DMV-GC"],
                 "image": "https://www.dmv-gc.com/logo.png",
                 "url": "https://www.dmv-gc.com",
-                "telephone": "240-730-1292",
+                "telephone": "+1-240-730-1292",
                 "email": "support@dmv-gc.com",
                 "address": {
                     "@type": "PostalAddress",
-                    "streetAddress": "11810 Grand Park Ave, Suite 500",
+                    "streetAddress": "11810 Grand Park Ave #500",
                     "addressLocality": "North Bethesda",
                     "addressRegion": "MD",
                     "postalCode": "20852",
@@ -195,11 +194,6 @@ const ServiceData = [
                     "Gaithersburg", "Garrett Park", "Cabin John", "Washington DC", "Laurel"
                 ],
                 "priceRange": "$$$$",
-                "aggregateRating": {
-                    "@type": "AggregateRating",
-                    "ratingValue": "4.9",
-                    "reviewCount": "97"
-                },
                 "openingHoursSpecification": {
                     "@type": "OpeningHoursSpecification",
                     "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
@@ -211,8 +205,8 @@ const ServiceData = [
                 "@type": "Service",
                 "serviceType": "Bathroom Remodeling",
                 "provider": {
-                    "@type": "LocalBusiness",
-                    "name": "DMV General Contracting Group"
+                    "@type": "GeneralContractor",
+                    "name": "DMV General Contracting Group LLC"
                 },
                 "areaServed": {
                     "@type": "AdministrativeArea",
@@ -322,15 +316,17 @@ const ServiceData = [
             "@context": "https://schema.org",
             "@graph": [
                 {
-                "@type": "LocalBusiness",
-                "name": "DMV General Contracting Group",
+                "@type": "GeneralContractor",
+                "name": "DMV General Contracting Group LLC",
+                "legalName": "DMV General Contracting Group LLC",
+                "alternateName": ["DMV General Contracting Group", "DMV-GC"],
                 "image": "https://www.dmv-gc.com/logo.png",
                 "url": "https://www.dmv-gc.com",
-                "telephone": "240-730-1292",
+                "telephone": "+1-240-730-1292",
                 "email": "support@dmv-gc.com",
                 "address": {
                     "@type": "PostalAddress",
-                    "streetAddress": "11810 Grand Park Ave, Suite 500",
+                    "streetAddress": "11810 Grand Park Ave #500",
                     "addressLocality": "North Bethesda",
                     "addressRegion": "MD",
                     "postalCode": "20852",
@@ -347,11 +343,6 @@ const ServiceData = [
                     "Gaithersburg","Garrett Park","Cabin John","Washington DC","Laurel"
                 ],
                 "priceRange": "$$$$",
-                "aggregateRating": {
-                    "@type": "AggregateRating",
-                    "ratingValue": "4.9",
-                    "reviewCount": "97"
-                },
                 "openingHoursSpecification": {
                     "@type": "OpeningHoursSpecification",
                     "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
@@ -363,8 +354,8 @@ const ServiceData = [
                 "@type": "Service",
                 "serviceType": "Basement Remodeling",
                 "provider": {
-                    "@type": "LocalBusiness",
-                    "name": "DMV General Contracting Group"
+                    "@type": "GeneralContractor",
+                    "name": "DMV General Contracting Group LLC"
                 },
                 "areaServed": {
                     "@type": "City",
@@ -503,15 +494,17 @@ const ServiceData = [
             "@context": "https://schema.org",
             "@graph": [
                 {
-                "@type": "LocalBusiness",
-                "name": "DMV General Contracting Group",
+                "@type": "GeneralContractor",
+                "name": "DMV General Contracting Group LLC",
+                "legalName": "DMV General Contracting Group LLC",
+                "alternateName": ["DMV General Contracting Group", "DMV-GC"],
                 "image": "https://www.dmv-gc.com/logo.png",
                 "url": "https://www.dmv-gc.com",
-                "telephone": "240-730-1292",
+                "telephone": "+1-240-730-1292",
                 "email": "support@dmv-gc.com",
                 "address": {
                     "@type": "PostalAddress",
-                    "streetAddress": "11810 Grand Park Ave, Suite 500",
+                    "streetAddress": "11810 Grand Park Ave #500",
                     "addressLocality": "North Bethesda",
                     "addressRegion": "MD",
                     "postalCode": "20852",
@@ -527,20 +520,15 @@ const ServiceData = [
                     "Rockville","Kensington","Silver Spring","Wheaton",
                     "Gaithersburg","Garrett Park","Cabin John","Washington DC","Laurel"
                 ],
-                "priceRange": "$$$$",
-                "aggregateRating": {
-                    "@type": "AggregateRating",
-                    "ratingValue": "4.9",
-                    "reviewCount": "97"
-                }
+                "priceRange": "$$$$"
                 },
                 {
                 "@type": "Service",
                 "serviceType": "ADU Construction",
                 "alternateName": ["Accessory Dwelling Unit", "In-Law Suite", "Granny Flat", "Garage Conversion"],
                 "provider": {
-                    "@type": "LocalBusiness",
-                    "name": "DMV General Contracting Group"
+                    "@type": "GeneralContractor",
+                    "name": "DMV General Contracting Group LLC"
                 },
                 "areaServed": {
                     "@type": "City",
@@ -636,15 +624,17 @@ const ServiceData = [
             "@context": "https://schema.org",
             "@graph": [
                 {
-                "@type": "LocalBusiness",
-                "name": "DMV General Contracting Group",
+                "@type": "GeneralContractor",
+                "name": "DMV General Contracting Group LLC",
+                "legalName": "DMV General Contracting Group LLC",
+                "alternateName": ["DMV General Contracting Group", "DMV-GC"],
                 "image": "https://www.dmv-gc.com/logo.png",
                 "url": "https://www.dmv-gc.com",
-                "telephone": "240-730-1292",
+                "telephone": "+1-240-730-1292",
                 "email": "support@dmv-gc.com",
                 "address": {
                     "@type": "PostalAddress",
-                    "streetAddress": "11810 Grand Park Ave, Suite 500",
+                    "streetAddress": "11810 Grand Park Ave #500",
                     "addressLocality": "North Bethesda",
                     "addressRegion": "MD",
                     "postalCode": "20852",
@@ -660,20 +650,15 @@ const ServiceData = [
                     "Rockville","Kensington","Silver Spring","Wheaton",
                     "Gaithersburg","Garrett Park","Cabin John","Washington DC","Laurel"
                 ],
-                "priceRange": "$$$$",
-                "aggregateRating": {
-                    "@type": "AggregateRating",
-                    "ratingValue": "4.9",
-                    "reviewCount": "97"
-                }
+                "priceRange": "$$$$"
                 },
                 {
                 "@type": "Service",
                 "serviceType": "Deck Building and Installation",
                 "alternateName": ["Deck Construction", "Composite Deck", "Trex Deck Installation", "Wood Deck Builder", "Custom Deck Builder"],
                 "provider": {
-                    "@type": "LocalBusiness",
-                    "name": "DMV General Contracting Group"
+                    "@type": "GeneralContractor",
+                    "name": "DMV General Contracting Group LLC"
                 },
                 "areaServed": {
                     "@type": "City",
@@ -778,15 +763,17 @@ const ServiceData = [
             "@context": "https://schema.org",
             "@graph": [
                 {
-                "@type": "LocalBusiness",
-                "name": "DMV General Contracting Group",
+                "@type": "GeneralContractor",
+                "name": "DMV General Contracting Group LLC",
+                "legalName": "DMV General Contracting Group LLC",
+                "alternateName": ["DMV General Contracting Group", "DMV-GC"],
                 "image": "https://www.dmv-gc.com/logo.png",
                 "url": "https://www.dmv-gc.com",
-                "telephone": "240-730-1292",
+                "telephone": "+1-240-730-1292",
                 "email": "support@dmv-gc.com",
                 "address": {
                     "@type": "PostalAddress",
-                    "streetAddress": "11810 Grand Park Ave, Suite 500",
+                    "streetAddress": "11810 Grand Park Ave #500",
                     "addressLocality": "North Bethesda",
                     "addressRegion": "MD",
                     "postalCode": "20852",
@@ -802,12 +789,7 @@ const ServiceData = [
                     "Rockville","Kensington","Silver Spring","Wheaton",
                     "Gaithersburg","Garrett Park","Cabin John","Washington DC","Laurel"
                 ],
-                "priceRange": "$$$$",
-                "aggregateRating": {
-                    "@type": "AggregateRating",
-                    "ratingValue": "4.9",
-                    "reviewCount": "97"
-                }
+                "priceRange": "$$$$"
                 },
                 {
                 "@type": "Service",
@@ -817,8 +799,8 @@ const ServiceData = [
                     "Floor Refinishing","Flooring Contractor","Floor Replacement"
                 ],
                 "provider": {
-                    "@type": "LocalBusiness",
-                    "name": "DMV General Contracting Group"
+                    "@type": "GeneralContractor",
+                    "name": "DMV General Contracting Group LLC"
                 },
                 "areaServed": {
                     "@type": "City",
@@ -923,15 +905,17 @@ const ServiceData = [
             "@context": "https://schema.org",
             "@graph": [
                 {
-                "@type": "LocalBusiness",
-                "name": "DMV General Contracting Group",
+                "@type": "GeneralContractor",
+                "name": "DMV General Contracting Group LLC",
+                "legalName": "DMV General Contracting Group LLC",
+                "alternateName": ["DMV General Contracting Group", "DMV-GC"],
                 "image": "https://www.dmv-gc.com/logo.png",
                 "url": "https://www.dmv-gc.com",
-                "telephone": "240-730-1292",
+                "telephone": "+1-240-730-1292",
                 "email": "support@dmv-gc.com",
                 "address": {
                     "@type": "PostalAddress",
-                    "streetAddress": "11810 Grand Park Ave, Suite 500",
+                    "streetAddress": "11810 Grand Park Ave #500",
                     "addressLocality": "North Bethesda",
                     "addressRegion": "MD",
                     "postalCode": "20852",
@@ -947,12 +931,7 @@ const ServiceData = [
                     "Rockville","Kensington","Silver Spring","Wheaton",
                     "Gaithersburg","Garrett Park","Cabin John","Washington DC","Laurel"
                 ],
-                "priceRange": "$$$$",
-                "aggregateRating": {
-                    "@type": "AggregateRating",
-                    "ratingValue": "4.9",
-                    "reviewCount": "97"
-                }
+                "priceRange": "$$$$"
                 },
                 {
                 "@type": "Service",
@@ -963,8 +942,8 @@ const ServiceData = [
                     "Full Service Remodeling Contractor"
                 ],
                 "provider": {
-                    "@type": "LocalBusiness",
-                    "name": "DMV General Contracting Group"
+                    "@type": "GeneralContractor",
+                    "name": "DMV General Contracting Group LLC"
                 },
                 "areaServed": {
                     "@type": "City",
@@ -1073,15 +1052,17 @@ const ServiceData = [
             "@context": "https://schema.org",
             "@graph": [
                 {
-                "@type": "LocalBusiness",
-                "name": "DMV General Contracting Group",
+                "@type": "GeneralContractor",
+                "name": "DMV General Contracting Group LLC",
+                "legalName": "DMV General Contracting Group LLC",
+                "alternateName": ["DMV General Contracting Group", "DMV-GC"],
                 "image": "https://www.dmv-gc.com/logo.png",
                 "url": "https://www.dmv-gc.com",
-                "telephone": "240-730-1292",
+                "telephone": "+1-240-730-1292",
                 "email": "support@dmv-gc.com",
                 "address": {
                     "@type": "PostalAddress",
-                    "streetAddress": "11810 Grand Park Ave, Suite 500",
+                    "streetAddress": "11810 Grand Park Ave #500",
                     "addressLocality": "North Bethesda",
                     "addressRegion": "MD",
                     "postalCode": "20852",
@@ -1097,12 +1078,7 @@ const ServiceData = [
                     "Rockville","Kensington","Silver Spring","Wheaton",
                     "Gaithersburg","Garrett Park","Cabin John","Washington DC","Laurel"
                 ],
-                "priceRange": "$$$$",
-                "aggregateRating": {
-                    "@type": "AggregateRating",
-                    "ratingValue": "4.9",
-                    "reviewCount": "97"
-                }
+                "priceRange": "$$$$"
                 },
                 {
                 "@type": "Service",
@@ -1112,8 +1088,8 @@ const ServiceData = [
                     "Wood Siding Replacement","Siding Contractor","Exterior Siding"
                 ],
                 "provider": {
-                    "@type": "LocalBusiness",
-                    "name": "DMV General Contracting Group"
+                    "@type": "GeneralContractor",
+                    "name": "DMV General Contracting Group LLC"
                 },
                 "areaServed": {
                     "@type": "City",
@@ -1218,15 +1194,17 @@ const ServiceData = [
             "@context": "https://schema.org",
             "@graph": [
                 {
-                "@type": "LocalBusiness",
-                "name": "DMV General Contracting Group",
+                "@type": "GeneralContractor",
+                "name": "DMV General Contracting Group LLC",
+                "legalName": "DMV General Contracting Group LLC",
+                "alternateName": ["DMV General Contracting Group", "DMV-GC"],
                 "image": "https://www.dmv-gc.com/logo.png",
                 "url": "https://www.dmv-gc.com",
-                "telephone": "240-730-1292",
+                "telephone": "+1-240-730-1292",
                 "email": "support@dmv-gc.com",
                 "address": {
                     "@type": "PostalAddress",
-                    "streetAddress": "11810 Grand Park Ave, Suite 500",
+                    "streetAddress": "11810 Grand Park Ave #500",
                     "addressLocality": "North Bethesda",
                     "addressRegion": "MD",
                     "postalCode": "20852",
@@ -1242,12 +1220,7 @@ const ServiceData = [
                     "Rockville","Kensington","Silver Spring","Wheaton",
                     "Gaithersburg","Garrett Park","Cabin John","Washington DC","Laurel"
                 ],
-                "priceRange": "$$$$",
-                "aggregateRating": {
-                    "@type": "AggregateRating",
-                    "ratingValue": "4.9",
-                    "reviewCount": "97"
-                }
+                "priceRange": "$$$$"
                 },
                 {
                 "@type": "Service",
@@ -1258,8 +1231,8 @@ const ServiceData = [
                     "Wall to Wall Carpet","Carpet Flooring Contractor"
                 ],
                 "provider": {
-                    "@type": "LocalBusiness",
-                    "name": "DMV General Contracting Group"
+                    "@type": "GeneralContractor",
+                    "name": "DMV General Contracting Group LLC"
                 },
                 "areaServed": {
                     "@type": "City",
@@ -1364,15 +1337,17 @@ const ServiceData = [
             "@context": "https://schema.org",
             "@graph": [
                 {
-                "@type": "LocalBusiness",
-                "name": "DMV General Contracting Group",
+                "@type": "GeneralContractor",
+                "name": "DMV General Contracting Group LLC",
+                "legalName": "DMV General Contracting Group LLC",
+                "alternateName": ["DMV General Contracting Group", "DMV-GC"],
                 "image": "https://www.dmv-gc.com/logo.png",
                 "url": "https://www.dmv-gc.com",
-                "telephone": "240-730-1292",
+                "telephone": "+1-240-730-1292",
                 "email": "support@dmv-gc.com",
                 "address": {
                     "@type": "PostalAddress",
-                    "streetAddress": "11810 Grand Park Ave, Suite 500",
+                    "streetAddress": "11810 Grand Park Ave #500",
                     "addressLocality": "North Bethesda",
                     "addressRegion": "MD",
                     "postalCode": "20852",
@@ -1388,12 +1363,7 @@ const ServiceData = [
                     "Rockville","Kensington","Silver Spring","Wheaton",
                     "Gaithersburg","Garrett Park","Cabin John","Washington DC","Laurel"
                 ],
-                "priceRange": "$$$$",
-                "aggregateRating": {
-                    "@type": "AggregateRating",
-                    "ratingValue": "4.9",
-                    "reviewCount": "97"
-                }
+                "priceRange": "$$$$"
                 },
                 {
                 "@type": "Service",
@@ -1404,8 +1374,8 @@ const ServiceData = [
                     "House Addition Contractor"
                 ],
                 "provider": {
-                    "@type": "LocalBusiness",
-                    "name": "DMV General Contracting Group"
+                    "@type": "GeneralContractor",
+                    "name": "DMV General Contracting Group LLC"
                 },
                 "areaServed": {
                     "@type": "City",
@@ -1510,15 +1480,17 @@ const ServiceData = [
             "@context": "https://schema.org",
             "@graph": [
                 {
-                "@type": "LocalBusiness",
-                "name": "DMV General Contracting Group",
+                "@type": "GeneralContractor",
+                "name": "DMV General Contracting Group LLC",
+                "legalName": "DMV General Contracting Group LLC",
+                "alternateName": ["DMV General Contracting Group", "DMV-GC"],
                 "image": "https://www.dmv-gc.com/logo.png",
                 "url": "https://www.dmv-gc.com",
-                "telephone": "240-730-1292",
+                "telephone": "+1-240-730-1292",
                 "email": "support@dmv-gc.com",
                 "address": {
                     "@type": "PostalAddress",
-                    "streetAddress": "11810 Grand Park Ave, Suite 500",
+                    "streetAddress": "11810 Grand Park Ave #500",
                     "addressLocality": "North Bethesda",
                     "addressRegion": "MD",
                     "postalCode": "20852",
@@ -1534,12 +1506,7 @@ const ServiceData = [
                     "Rockville","Kensington","Silver Spring","Wheaton",
                     "Gaithersburg","Garrett Park","Cabin John","Washington DC","Laurel"
                 ],
-                "priceRange": "$$$$",
-                "aggregateRating": {
-                    "@type": "AggregateRating",
-                    "ratingValue": "4.9",
-                    "reviewCount": "97"
-                }
+                "priceRange": "$$$$"
                 },
                 {
                 "@type": "Service",
@@ -1550,8 +1517,8 @@ const ServiceData = [
                     "Smart Home Electrical","Generator Installation"
                 ],
                 "provider": {
-                    "@type": "LocalBusiness",
-                    "name": "DMV General Contracting Group"
+                    "@type": "GeneralContractor",
+                    "name": "DMV General Contracting Group LLC"
                 },
                 "areaServed": {
                     "@type": "City",
@@ -1656,15 +1623,17 @@ const ServiceData = [
             "@context": "https://schema.org",
             "@graph": [
                 {
-                "@type": "LocalBusiness",
-                "name": "DMV General Contracting Group",
+                "@type": "GeneralContractor",
+                "name": "DMV General Contracting Group LLC",
+                "legalName": "DMV General Contracting Group LLC",
+                "alternateName": ["DMV General Contracting Group", "DMV-GC"],
                 "image": "https://www.dmv-gc.com/logo.png",
                 "url": "https://www.dmv-gc.com",
-                "telephone": "240-730-1292",
+                "telephone": "+1-240-730-1292",
                 "email": "support@dmv-gc.com",
                 "address": {
                     "@type": "PostalAddress",
-                    "streetAddress": "11810 Grand Park Ave, Suite 500",
+                    "streetAddress": "11810 Grand Park Ave #500",
                     "addressLocality": "North Bethesda",
                     "addressRegion": "MD",
                     "postalCode": "20852",
@@ -1680,12 +1649,7 @@ const ServiceData = [
                     "Rockville","Kensington","Silver Spring","Wheaton",
                     "Gaithersburg","Garrett Park","Cabin John","Washington DC","Laurel"
                 ],
-                "priceRange": "$$$$",
-                "aggregateRating": {
-                    "@type": "AggregateRating",
-                    "ratingValue": "4.9",
-                    "reviewCount": "97"
-                }
+                "priceRange": "$$$$"
                 },
                 {
                 "@type": "Service",
@@ -1696,8 +1660,8 @@ const ServiceData = [
                     "Sump Pump Installation","Plumbing Contractor"
                 ],
                 "provider": {
-                    "@type": "LocalBusiness",
-                    "name": "DMV General Contracting Group"
+                    "@type": "GeneralContractor",
+                    "name": "DMV General Contracting Group LLC"
                 },
                 "areaServed": {
                     "@type": "City",
@@ -1802,15 +1766,17 @@ const ServiceData = [
             "@context": "https://schema.org",
             "@graph": [
                 {
-                "@type": "LocalBusiness",
-                "name": "DMV General Contracting Group",
+                "@type": "GeneralContractor",
+                "name": "DMV General Contracting Group LLC",
+                "legalName": "DMV General Contracting Group LLC",
+                "alternateName": ["DMV General Contracting Group", "DMV-GC"],
                 "image": "https://www.dmv-gc.com/logo.png",
                 "url": "https://www.dmv-gc.com",
-                "telephone": "240-730-1292",
+                "telephone": "+1-240-730-1292",
                 "email": "support@dmv-gc.com",
                 "address": {
                     "@type": "PostalAddress",
-                    "streetAddress": "11810 Grand Park Ave, Suite 500",
+                    "streetAddress": "11810 Grand Park Ave #500",
                     "addressLocality": "North Bethesda",
                     "addressRegion": "MD",
                     "postalCode": "20852",
@@ -1826,12 +1792,7 @@ const ServiceData = [
                     "Rockville","Kensington","Silver Spring","Wheaton",
                     "Gaithersburg","Garrett Park","Cabin John","Washington DC","Laurel"
                 ],
-                "priceRange": "$$$$",
-                "aggregateRating": {
-                    "@type": "AggregateRating",
-                    "ratingValue": "4.9",
-                    "reviewCount": "97"
-                }
+                "priceRange": "$$$$"
                 },
                 {
                 "@type": "Service",
@@ -1842,8 +1803,8 @@ const ServiceData = [
                     "Plaster Repair","Ceiling Drywall"
                 ],
                 "provider": {
-                    "@type": "LocalBusiness",
-                    "name": "DMV General Contracting Group"
+                    "@type": "GeneralContractor",
+                    "name": "DMV General Contracting Group LLC"
                 },
                 "areaServed": {
                     "@type": "City",
@@ -1948,15 +1909,17 @@ const ServiceData = [
             "@context": "https://schema.org",
             "@graph": [
                 {
-                "@type": "LocalBusiness",
-                "name": "DMV General Contracting Group",
+                "@type": "GeneralContractor",
+                "name": "DMV General Contracting Group LLC",
+                "legalName": "DMV General Contracting Group LLC",
+                "alternateName": ["DMV General Contracting Group", "DMV-GC"],
                 "image": "https://www.dmv-gc.com/logo.png",
                 "url": "https://www.dmv-gc.com",
-                "telephone": "240-730-1292",
+                "telephone": "+1-240-730-1292",
                 "email": "support@dmv-gc.com",
                 "address": {
                     "@type": "PostalAddress",
-                    "streetAddress": "11810 Grand Park Ave, Suite 500",
+                    "streetAddress": "11810 Grand Park Ave #500",
                     "addressLocality": "North Bethesda",
                     "addressRegion": "MD",
                     "postalCode": "20852",
@@ -1972,12 +1935,7 @@ const ServiceData = [
                     "Rockville","Kensington","Silver Spring","Wheaton",
                     "Gaithersburg","Garrett Park","Cabin John","Washington DC","Laurel"
                 ],
-                "priceRange": "$$$$",
-                "aggregateRating": {
-                    "@type": "AggregateRating",
-                    "ratingValue": "4.9",
-                    "reviewCount": "97"
-                }
+                "priceRange": "$$$$"
                 },
                 {
                 "@type": "Service",
@@ -1988,8 +1946,8 @@ const ServiceData = [
                     "Fence Replacement","Fence Repair"
                 ],
                 "provider": {
-                    "@type": "LocalBusiness",
-                    "name": "DMV General Contracting Group"
+                    "@type": "GeneralContractor",
+                    "name": "DMV General Contracting Group LLC"
                 },
                 "areaServed": {
                     "@type": "City",
@@ -2094,15 +2052,17 @@ const ServiceData = [
             "@context": "https://schema.org",
             "@graph": [
                 {
-                "@type": "LocalBusiness",
-                "name": "DMV General Contracting Group",
+                "@type": "GeneralContractor",
+                "name": "DMV General Contracting Group LLC",
+                "legalName": "DMV General Contracting Group LLC",
+                "alternateName": ["DMV General Contracting Group", "DMV-GC"],
                 "image": "https://www.dmv-gc.com/logo.png",
                 "url": "https://www.dmv-gc.com",
-                "telephone": "240-730-1292",
+                "telephone": "+1-240-730-1292",
                 "email": "support@dmv-gc.com",
                 "address": {
                     "@type": "PostalAddress",
-                    "streetAddress": "11810 Grand Park Ave, Suite 500",
+                    "streetAddress": "11810 Grand Park Ave #500",
                     "addressLocality": "North Bethesda",
                     "addressRegion": "MD",
                     "postalCode": "20852",
@@ -2118,12 +2078,7 @@ const ServiceData = [
                     "Rockville","Kensington","Silver Spring","Wheaton",
                     "Gaithersburg","Garrett Park","Cabin John","Washington DC","Laurel"
                 ],
-                "priceRange": "$$$$",
-                "aggregateRating": {
-                    "@type": "AggregateRating",
-                    "ratingValue": "4.9",
-                    "reviewCount": "97"
-                }
+                "priceRange": "$$$$"
                 },
                 {
                 "@type": "Service",
@@ -2134,8 +2089,8 @@ const ServiceData = [
                     "Exposed Aggregate Concrete","Foundation Concrete"
                 ],
                 "provider": {
-                    "@type": "LocalBusiness",
-                    "name": "DMV General Contracting Group"
+                    "@type": "GeneralContractor",
+                    "name": "DMV General Contracting Group LLC"
                 },
                 "areaServed": {
                     "@type": "City",
