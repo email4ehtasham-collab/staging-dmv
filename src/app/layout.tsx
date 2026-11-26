@@ -13,26 +13,29 @@ import "slick-carousel/slick/slick-theme.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../main.scss";
 
+// Site-wide business details for Google. Facts must match the Google Business
+// Profile exactly. Never add ratings or review counts here (no aggregateRating).
 const schemaData = {
-		"@context": "https://schema.org",
-		"@graph": [
-			{
-			"@type": ["LocalBusiness", "HomeAndConstructionBusiness"],
+	"@context": "https://schema.org",
+	"@graph": [
+		{
+			"@type": "GeneralContractor",
 			"@id": "https://www.dmv-gc.com/#business",
-			"name": "DMV General Contracting Group",
-			"alternateName": "DMV General Contracting Group LLC",
-			"description": "Licensed design-build home remodeling contractor in North Bethesda, MD. Specializing in kitchen remodeling, bathroom renovation, basement finishing, home additions, and ADU construction across Bethesda, Potomac, Chevy Chase, and the greater DMV area.",
-			"url": "https://www.dmv-gc.com",
+			"name": "DMV General Contracting Group LLC",
+			"legalName": "DMV General Contracting Group LLC",
+			"alternateName": ["DMV General Contracting Group", "DMV-GC"],
+			"description": "Licensed design-build home remodeling contractor in North Bethesda, MD, serving Montgomery County, Laurel and Washington, DC: kitchens, bathrooms, basements, home additions, ADUs and whole-home renovations.",
+			"url": "https://www.dmv-gc.com/",
 			"logo": {
 				"@type": "ImageObject",
-				"url": "https://www.dmv-gc.com/logo.png"
+				"url": "https://www.dmv-gc.com/images/logo.png"
 			},
-			"image": "https://www.dmv-gc.com/og-image.jpg",
-			"telephone": "+12407301292",
+			"image": "https://www.dmv-gc.com/images/banner-kitchen.jpg",
+			"telephone": "+1-240-730-1292",
 			"email": "support@dmv-gc.com",
 			"address": {
 				"@type": "PostalAddress",
-				"streetAddress": "11810 Grand Park Ave, Suite 500",
+				"streetAddress": "11810 Grand Park Ave #500",
 				"addressLocality": "North Bethesda",
 				"addressRegion": "MD",
 				"postalCode": "20852",
@@ -40,9 +43,10 @@ const schemaData = {
 			},
 			"geo": {
 				"@type": "GeoCoordinates",
-				"latitude": 39.0458,
-				"longitude": -77.1139
+				"latitude": 39.049372,
+				"longitude": -77.1174492
 			},
+			"hasMap": "https://www.google.com/maps?cid=14905282013525036539",
 			"areaServed": [
 				{ "@type": "City", "name": "Bethesda", "addressRegion": "MD" },
 				{ "@type": "City", "name": "North Bethesda", "addressRegion": "MD" },
@@ -59,71 +63,51 @@ const schemaData = {
 				{ "@type": "City", "name": "Washington", "addressRegion": "DC" }
 			],
 			"priceRange": "$$$$",
-			"currenciesAccepted": "USD",
-			"paymentAccepted": "Cash, Check, Credit Card, Financing",
-			"openingHoursSpecification": {
-				"@type": "OpeningHoursSpecification",
-				"dayOfWeek": [
-				"Monday","Tuesday","Wednesday",
-				"Thursday","Friday","Saturday","Sunday"
-				],
-				"opens": "08:00",
-				"closes": "20:00"
-			},
-			"aggregateRating": {
-				"@type": "AggregateRating",
-				"ratingValue": "4.9",
-				"reviewCount": "97",
-				"bestRating": "5",
-				"worstRating": "1"
-			},
+			"openingHoursSpecification": [
+				{
+					"@type": "OpeningHoursSpecification",
+					"dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+					"opens": "07:00",
+					"closes": "17:00"
+				},
+				{
+					"@type": "OpeningHoursSpecification",
+					"dayOfWeek": "Sunday",
+					"opens": "09:00",
+					"closes": "17:00"
+				}
+			],
 			"hasOfferCatalog": {
 				"@type": "OfferCatalog",
 				"name": "Home Remodeling Services",
 				"itemListElement": [
-				{ "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Kitchen Remodeling" } },
-				{ "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Bathroom Remodeling" } },
-				{ "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Basement Finishing" } },
-				{ "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Home Additions" } },
-				{ "@type": "Offer", "itemOffered": { "@type": "Service", "name": "ADU Construction" } },
-				{ "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Design Build" } },
-				{ "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Roofing & Siding" } },
-				{ "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Electrical, Plumbing & HVAC" } }
+					{ "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Kitchen Remodeling" } },
+					{ "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Bathroom Remodeling" } },
+					{ "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Basement Remodeling" } },
+					{ "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Home Additions" } },
+					{ "@type": "Offer", "itemOffered": { "@type": "Service", "name": "ADU Construction" } },
+					{ "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Design-Build" } },
+					{ "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Whole-Home Renovation" } }
 				]
 			},
 			"sameAs": [
-				"https://www.facebook.com/dmvgcgroup",
-				"https://www.instagram.com/dmvgcgroup",
-				"https://www.houzz.com/dmv-gc-group",
-				"https://www.bbb.org/dmv-gc-group"
-			],
-			"founder": {
-				"@type": "Person",
-				"name": "DMV General Contracting Group Founder"
-			},
-			"legalName": "DMV General Contracting Group LLC",
-			"slogan": "Renovation Done Right, From Design To Completion"
-			},
-			{
+				"https://www.google.com/maps?cid=14905282013525036539",
+				"https://www.facebook.com/DMVGCGroupLLC",
+				"https://www.instagram.com/dmvgcgroupllc",
+				"https://www.linkedin.com/company/104760932"
+			]
+		},
+		{
 			"@type": "WebSite",
 			"@id": "https://www.dmv-gc.com/#website",
-			"url": "https://www.dmv-gc.com",
+			"url": "https://www.dmv-gc.com/",
 			"name": "DMV General Contracting Group",
-			"description": "Licensed home remodeling contractor in Bethesda, MD",
 			"publisher": {
 				"@id": "https://www.dmv-gc.com/#business"
-			},
-			"potentialAction": {
-				"@type": "SearchAction",
-				"target": {
-				"@type": "EntryPoint",
-				"urlTemplate": "https://www.dmv-gc.com/?s={search_term_string}"
-				},
-				"query-input": "required name=search_term_string"
 			}
-			}
-		]
-	};
+		}
+	]
+};
 
 export const metadata: Metadata = {
     metadataBase: new URL("https://www.dmv-gc.com"),
@@ -211,7 +195,7 @@ export default function RootLayout({
                         `,
                     }}
                 />
-                <Script id="schema-org" type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(schemaData),}} />
+                <script id="schema-org" type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(schemaData),}} />
 
                 <noscript>
                     <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5SS4XJDV" height="0" width="0" style={{ display: "none", visibility: "hidden" }}></iframe>

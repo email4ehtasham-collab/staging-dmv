@@ -1,0 +1,6 @@
+{
+  "redirects": [
+    { "source": "/service/landscaping", "destination": "/service/hardscaping", "permanent": true },
+    { "source": "/service/landscaping/:path*", "destination": "/service/hardscaping", "permanent": true }
+  ]
+}
