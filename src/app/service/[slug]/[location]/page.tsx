@@ -5,6 +5,8 @@ import locationMetadata from "@/data/services/locationMetadata";
 import getDynamicLocationComponent, { getLocationStaticParams } from "../../getDynamicLocationComponent";
 import PageSchema from "@/components/Schema/PageSchema";
 
+export const dynamicParams = false;
+
 export function generateStaticParams() {
     return getLocationStaticParams();
 }

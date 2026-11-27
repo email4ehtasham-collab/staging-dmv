@@ -10,12 +10,12 @@ import styles from "./main-header.module.scss";
 const navItems: { label: string; href: string; active?: boolean }[] = [
   { label: "Services", href: "/services"},
   // { label: "Home", href: "/", active: true },
-  { label: "Process", href: "#process" },
-  { label: "Permits", href: "#permits" },
-  { label: "Pricing", href: "#cost" },
+  { label: "Process", href: "/#process" },
+  { label: "Permits", href: "/#permits" },
+  { label: "Pricing", href: "/#cost" },
   { label: "Projects", href: "/projects" },
-  { label: "Reviews", href: "#reviews" },
-  { label: "Areas", href: "#areas" },
+  { label: "Reviews", href: "/#reviews" },
+  { label: "Areas", href: "/#areas" },
   { label: "Testimonials", href: "/testimonials" },
 ];
 

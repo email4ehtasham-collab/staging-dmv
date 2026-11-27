@@ -13,6 +13,25 @@ import type {
   SiteSettings,
 } from "./types";
 
+const CANONICAL_HOST = "www.dmv-gc.com";
+
+function normalizeCanonical(value: string): string {
+  if (!/^https?:\/\//i.test(value)) return value;
+
+  try {
+    const url = new URL(value);
+    if (url.hostname === "dmv-gc.com" || url.hostname === CANONICAL_HOST) {
+      url.protocol = "https:";
+      url.hostname = CANONICAL_HOST;
+      return url.toString();
+    }
+  } catch {
+    return value;
+  }
+
+  return value;
+}
+
 export function resolveFromOverride(
   record: PageRecord,
   override: PageSeoOverride | null
@@ -81,15 +100,17 @@ export function toMetadata(
   seo: ResolvedPageSeo,
   canonicalPath: string
 ): Metadata {
+  const canonical = normalizeCanonical(seo.canonical ?? canonicalPath);
+
   return {
     title: seo.title,
     description: seo.description,
     robots: robotsFor(seo.noindex),
-    alternates: { canonical: seo.canonical ?? canonicalPath },
+    alternates: { canonical },
     openGraph: {
       title: seo.ogTitle ?? seo.title,
       description: seo.ogDescription ?? seo.description,
-      url: seo.canonical ?? canonicalPath,
+      url: canonical,
       ...(seo.ogImage ? { images: [{ url: seo.ogImage }] } : {}),
     },
     twitter: {

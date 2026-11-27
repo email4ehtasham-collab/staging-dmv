@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
+import { GOOGLE_REVIEWS_EMBED_ID } from "./googleReviewsFeed";
 import styles from "./widgetstyle.module.scss"; 
 
 export default function GoogleReviewsWidget() {
@@ -64,7 +65,7 @@ export default function GoogleReviewsWidget() {
     </head>
     <body>
       <div id="widget-wrapper">
-        <div class="sk-ww-google-reviews" data-embed-id="25669158"></div>
+        <div class="sk-ww-google-reviews" data-embed-id="${GOOGLE_REVIEWS_EMBED_ID}"></div>
       </div>
 
       <script src="https://widgets.sociablekit.com/google-reviews/widget.js" defer></script>

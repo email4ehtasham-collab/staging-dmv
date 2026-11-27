@@ -78,6 +78,110 @@
   line-height: var(--dmv-line-normal);
 }
 
+.reviewsSlider {
+  grid-column: span 2;
+  min-width: 0;
+}
+
+.reviewsSlider :global(.slick-arrow) {
+  --size: 40px;
+  top: 50%;
+  bottom: auto;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+.reviewsSlider :global(.slick-arrow.slick-prev) {
+  left: -18px;
+}
+
+.reviewsSlider :global(.slick-arrow.slick-next) {
+  right: -18px;
+  left: auto;
+}
+
+.reviewsSlider :global(.slick-arrow:hover),
+.reviewsSlider :global(.slick-arrow:focus) {
+  color: #fff;
+  background: var(--content-color);
+}
+
+.reviewsSlider :global(.slick-dots) {
+  position: static;
+  bottom: auto;
+  margin-top: var(--dmv-space-4);
+}
+
+.slide {
+  padding-inline: 8px;
+  height: 100%;
+}
+
+.slide .card {
+  height: 100%;
+}
+
+.sliderFallback {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--dmv-space-4);
+}
+
+.reviewTop {
+  display: flex;
+  align-items: center;
+  gap: var(--dmv-space-3);
+}
+
+.avatar, .avatarFallback {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.avatarFallback {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--dmv-color-brand-wash);
+  color: var(--dmv-color-brand);
+  font-weight: var(--dmv-weight-semibold);
+}
+
+.reviewerName {
+  color: var(--dmv-color-heading);
+  font-size: var(--dmv-font-size-sm);
+  font-weight: var(--dmv-weight-semibold);
+}
+
+.readMore {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  align-self: flex-start;
+  margin-top: auto;
+  padding: 0;
+  background: transparent;
+  color: var(--dmv-color-brand);
+  font-size: 13px;
+  font-weight: var(--dmv-weight-semibold);
+  text-decoration: underline;
+}
+
+.readMore svg {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  color: inherit;
+}
+
+.readMore:hover, .readMore:focus {
+  color: var(--dmv-color-brand-dark);
+  background: transparent;
+}
+
 .storiesCard {
   justify-content: center;
   padding: var(--dmv-space-6);
@@ -178,7 +282,6 @@
   width: 100%;
   margin-top: auto;
   padding-inline: var(--dmv-space-4);
-  color: var(--dmv-color-heading);
   white-space: normal;
 }
 
@@ -200,6 +303,14 @@
 
   .media {
     height: 220px;
+  }
+
+  .reviewsSlider {
+    grid-column: span 1;
+  }
+
+  .sliderFallback {
+    grid-template-columns: 1fr;
   }
 }
 

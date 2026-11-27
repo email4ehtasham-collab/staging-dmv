@@ -124,7 +124,7 @@ const KensingtonMD = () => {
             <div className="author-creds">
               <span className="cred">MD Licensed Contractor</span>
               <span className="cred">In-House Installation Crews</span>
-              <span className="cred">MHIC #133211</span>
+              <span className="cred">MHIC #156178</span>
               <span className="cred">4.9★ Google Rating</span>
             </div>
           </div>

@@ -153,7 +153,7 @@ export default function HomeFooter() {
               <a href="https://www.facebook.com/DMVGCGroupLLC" target="_blank" rel="noopener noreferrer" aria-label="DMV GC on Facebook">
                 <FacebookIcon />
               </a>
-              <a href="https://www.linkedin.com/company/104760932/admin/dashboard" target="_blank" rel="noopener noreferrer" aria-label="DMV GC on LinkedIn">
+              <a href="https://www.linkedin.com/in/gustavo-dmv" target="_blank" rel="noopener noreferrer" aria-label="DMV GC on LinkedIn">
                 <LinkedInIcon />
               </a>
               <a href="https://www.instagram.com/dmvgcgroupllc" target="_blank" rel="noopener noreferrer" aria-label="DMV GC on Instagram">

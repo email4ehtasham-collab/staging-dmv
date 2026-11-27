@@ -124,6 +124,27 @@
   color: var(--dmv-color-brand);
 }
 
+.factsSection {
+  padding-block: 0;
+  border-bottom: 0;
+  background: var(--dmv-color-dark-blue);
+}
+
+.factsSection .factsCard {
+  display: grid;
+  grid-template-columns: minmax(180px, 0.7fr) minmax(0, 2fr) auto;
+  align-items: center;
+  gap: var(--dmv-space-8);
+  width: 100%;
+  max-width: none;
+  margin-inline: 0;
+  padding: var(--dmv-space-6) 0;
+  border: 0;
+  border-radius: 0;
+  background: var(--dmv-color-dark-blue);
+  box-shadow: none;
+}
+
 .factsCard {
   padding: var(--dmv-space-8);
   border: var(--dmv-border-width) solid var(--dmv-color-border-card);
@@ -541,5 +562,99 @@
 
   .factsCard {
     padding: var(--dmv-space-5);
+  }
+}
+
+.factsSection .factsTitle {
+  padding-bottom: 0;
+  border-bottom: 0;
+  color: var(--dmv-color-inverse);
+}
+
+.factsSection .factsList {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0;
+  margin-top: 0;
+}
+
+.factsSection .factsList li {
+  padding-inline: var(--dmv-space-5);
+  border-left: var(--dmv-border-width) solid rgba(255, 255, 255, 0.14);
+}
+
+.factsSection .factsList li:first-child {
+  padding-left: 0;
+  border-left: 0;
+}
+
+.factsSection .factLabel {
+  color: rgba(255, 255, 255, 0.62);
+}
+
+.factsSection .factValue {
+  color: var(--dmv-color-inverse);
+}
+
+.factsSection .factNote {
+  color: rgba(255, 255, 255, 0.68);
+}
+
+.factsSection .factsCta {
+  width: 260px;
+  margin-top: 0;
+  border-color: rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.factsSection .factsCta p {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+@media (max-width: 1100px) {
+  .factsSection .factsCard {
+    grid-template-columns: 1fr auto;
+    gap: var(--dmv-space-6);
+  }
+
+  .factsSection .factsTitle {
+    grid-column: 1 / -1;
+  }
+
+  .factsSection .factsList {
+    grid-column: 1;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: var(--dmv-space-5);
+  }
+
+  .factsSection .factsCta {
+    grid-column: 2;
+  }
+}
+
+@media (max-width: 640px) {
+  .factsSection .factsCard {
+    grid-template-columns: 1fr;
+    padding-block: var(--dmv-space-5);
+  }
+
+  .factsSection .factsList {
+    grid-column: 1;
+    grid-template-columns: 1fr;
+  }
+
+  .factsSection .factsList li {
+    padding: var(--dmv-space-3) 0;
+    border-top: var(--dmv-border-width) solid rgba(255, 255, 255, 0.14);
+    border-left: 0;
+  }
+
+  .factsSection .factsList li:first-child {
+    border-top: 0;
+  }
+
+  .factsSection .factsCta {
+    grid-column: 1;
+    width: 100%;
   }
 }

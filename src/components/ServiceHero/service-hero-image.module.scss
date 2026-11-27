@@ -1,0 +1,128 @@
+.heroMedia {
+  position: relative;
+  width: 100%;
+  max-width: 699px;
+  justify-self: end;
+}
+
+.mediaFrame {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  border: 4px solid var(--dmv-color-surface);
+  border-radius: var(--dmv-radius-xl);
+  background: var(--dmv-color-heading);
+  box-shadow: var(--dmv-shadow-card);
+}
+
+.heroImage {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mediaOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.2) 0%, rgba(15, 23, 42, 0.9) 100%);
+  pointer-events: none;
+}
+
+.reviewCard {
+  position: absolute;
+  top: var(--dmv-space-7);
+  right: calc(24px * -1);
+  width: 267px;
+  padding: var(--dmv-space-4) var(--dmv-space-5);
+  border: var(--dmv-border-width) solid var(--dmv-color-border-card);
+  border-radius: var(--dmv-radius-sm);
+  background: var(--dmv-color-surface);
+  box-shadow: var(--dmv-shadow-card);
+}
+
+.reviewTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--dmv-space-3);
+}
+
+.rating {
+  color: var(--dmv-color-ink);
+  font-size: 36px;
+  font-weight: var(--dmv-weight-bold);
+  line-height: var(--dmv-line-tight);
+}
+
+.stars {
+  display: inline-flex;
+  gap: var(--dmv-space-1);
+  color: #ffb020;
+}
+
+.star {
+  width: 14px;
+  height: 14px;
+}
+
+.reviewText {
+  margin-top: var(--dmv-space-3);
+  color: #5b6a82;
+  font-size: 14px;
+  line-height: var(--dmv-line-snug);
+}
+
+.reviewLink {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--dmv-space-2);
+  margin-top: var(--dmv-space-3);
+  color: var(--dmv-color-ink);
+  font-size: var(--dmv-font-size-sm);
+  font-weight: var(--dmv-weight-semibold);
+  line-height: var(--dmv-line-snug);
+  text-decoration: none;
+}
+
+.reviewLink:hover {
+  color: var(--dmv-color-brand);
+}
+
+.arrowIcon {
+  width: 14px;
+  height: 14px;
+  flex: none;
+}
+
+@media (max-width: 1024px) {
+  .heroMedia {
+    max-width: none;
+    justify-self: stretch;
+  }
+
+  .reviewCard {
+    right: var(--dmv-space-5);
+  }
+}
+
+@media (max-width: 768px) {
+  .heroMedia {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .reviewCard {
+    position: relative;
+    top: auto;
+    right: auto;
+    width: 100%;
+    margin-top: var(--dmv-space-5);
+  }
+}
+
+@media (max-width: 560px) {
+  .mediaFrame {
+    aspect-ratio: 16 / 10;
+  }
+}
