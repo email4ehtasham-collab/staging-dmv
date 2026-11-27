@@ -3,7 +3,7 @@ import bethesdaBasementContent from "./content";
 
 /** Bolds the direct answer (the first sentence) of each FAQ answer. */
 function BoldFirstSentence({ text }: { text: string }) {
-    const match = text.match(/^(.+?[.!?])\s+(.*)$/s);
+    const match = text.match(/^([\s\S]+?[.!?])\s+([\s\S]*)$/);
     if (!match) return <strong>{text}</strong>;
     return (
         <>
