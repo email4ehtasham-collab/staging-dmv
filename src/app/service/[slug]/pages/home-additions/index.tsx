@@ -14,6 +14,8 @@ import InHomeConsultation from "@/components/Home/InHomeConsultation/InHomeConsu
 import LicensedInsured from "@/components/Home/LicensedInsured/LicensedInsured";
 import Permits from "@/components/Home/Permits/Permits";
 import RecentProjects from "@/components/Home/RecentProjects/RecentProjects";
+import type { ProjectCardData } from "@/components/Home/RecentProjects/ProjectCard";
+import { GOOGLE_BUSINESS_PROFILE_URL } from "@/data/home/homePageMedia";
 import styles from "./style.module.scss";
 
 type AdditionService = {
@@ -264,19 +266,43 @@ const relatedWorkItems: RelatedWorkItem[] = [
     },
 ];
 
-const areaLinks = [
-    { label: "Home additions in Washington, DC", href: "/service/home-additions/washington-dc" },
-    { label: "Home additions in Bethesda", href: "/service/home-additions/bethesda-md" },
-    { label: "Home additions in North Bethesda", href: "/service/home-additions/north-bethesda-md" },
-    { label: "Home additions in Rockville", href: "/service/home-additions/rockville-md" },
-    { label: "Home additions in Potomac", href: "/service/home-additions/potomac-md" },
-    { label: "Home additions in Wheaton", href: "/service/home-additions/wheaton-md" },
-    { label: "Home additions in Silver Spring", href: "/service/home-additions/silver-spring-md" },
-    { label: "Home additions in Gaithersburg", href: "/service/home-additions/gaithersburg-md" },
-    { label: "Home additions in Garrett Park", href: "/service/home-additions/garrett-park-md" },
-    { label: "Home additions in Chevy Chase", href: "/service/home-additions/chevy-chase-md" },
-    { label: "Home additions in Cabin John", href: "/service/home-additions/cabin-john-md" },
-    { label: "Home additions in Laurel", href: "/service/home-additions/laurel-md" },
+// Home additions hub areas: 11 Montgomery County communities, Laurel and DC, with zip codes.
+// Kensington has no home additions page yet, so it is listed without a link.
+const areaLinks: { label: string; zips: string; href?: string; wide?: boolean }[] = [
+    { label: "Bethesda", zips: "20814, 20816, 20817", href: "/service/home-additions/bethesda-md" },
+    { label: "North Bethesda", zips: "20852", href: "/service/home-additions/north-bethesda-md" },
+    { label: "Rockville", zips: "20850, 20851, 20852, 20853", href: "/service/home-additions/rockville-md" },
+    { label: "Potomac", zips: "20854", href: "/service/home-additions/potomac-md" },
+    { label: "Chevy Chase", zips: "20815", href: "/service/home-additions/chevy-chase-md" },
+    { label: "Gaithersburg", zips: "20877, 20878, 20879, 20882", href: "/service/home-additions/gaithersburg-md" },
+    { label: "Kensington", zips: "20895" },
+    { label: "Silver Spring", zips: "20901, 20902, 20903, 20904, 20905, 20906, 20910", href: "/service/home-additions/silver-spring-md" },
+    { label: "Wheaton", zips: "20902, 20906", href: "/service/home-additions/wheaton-md" },
+    { label: "Garrett Park", zips: "20896", href: "/service/home-additions/garrett-park-md" },
+    { label: "Cabin John", zips: "20818", href: "/service/home-additions/cabin-john-md" },
+    { label: "Laurel", zips: "20707, 20708, 20723, 20724", href: "/service/home-additions/laurel-md" },
+    { label: "DC", zips: "20001, 20002, 20003, 20004, 20005, 20006, 20007, 20008, 20009, 20010, 20011, 20012, 20015, 20016, 20017, 20018, 20019, 20020, 20024, 20032, 20036, 20037", href: "/service/home-additions/washington-dc", wide: true },
+];
+
+const SERVICE_AREA_MAP_EMBED_URL =
+    "https://www.google.com/maps/d/u/0/embed?mid=18yZmZjXwVotzSHlIUaeEYMgoXUZnUI0&ehbc=2E312F&noprof=1";
+
+// Home-additions-hub-only image copies (public/images/home-additions/), each used once on this page.
+// Both come from our Chevy Chase porch addition. EXIF GPS points to the Google Business Profile pin.
+const additionHeroImage = {
+    src: "/images/home-additions/home-additions-maryland-chevy-chase-porch-over-garage.webp",
+    alt: "Home additions in Montgomery County, Maryland: screened porch addition built above a garage in Chevy Chase",
+};
+
+const additionProjects: ProjectCardData[] = [
+    {
+        title: "Screened Porch Addition Above Garage",
+        location: "Chevy Chase, Maryland",
+        text: "We transformed the garage area into a functional porch, managing every step from permits to final inspection.",
+        href: "/project/robert-b-porch-addition-over-garage",
+        image: "/images/home-additions/chevy-chase-screened-porch-addition-interior.webp",
+        imageAlt: "Inside the screened porch addition above a garage in Chevy Chase, MD, with a ceiling fan and white railings",
+    },
 ];
 
 const additionFaqs: Faq[] = [
@@ -397,9 +423,10 @@ function Stars() {
     );
 }
 
-export default function HomeAdditions({ data }: { data?: AdditionService }) {
-    const heroImage = data?.image?.replace(/^\./, "") || "/images/services/additions.webp";
-    const heroAlt = data?.imageAlt || "Home additions in Maryland and Washington, DC";
+export default function HomeAdditions(_props: { data?: AdditionService }) {
+    // The hub uses its own hero copy; data.image stays for the services listing.
+    const heroImage = additionHeroImage.src;
+    const heroAlt = additionHeroImage.alt;
 
     return (
         <main className={`page-wrapper ${styles.page}`}>
@@ -418,16 +445,13 @@ export default function HomeAdditions({ data }: { data?: AdditionService }) {
                     <div className={styles.heroGrid}>
                         <div className={styles.heroContent}>
                             <h1 className={styles.heroTitle}>
-                                Home Additions in <span>Maryland &amp; Washington, DC</span>
+                                Maryland Home Additions: <span>More Space Without Moving</span>
                             </h1>
 
                             <p className={styles.heroText}>
-                                Growing households gain room without moving when DMV General Contracting Group builds their home additions in Maryland and Washington, DC. One contract covers the zoning check, structural engineering, permits and construction. Most additions cost $200 to $400 per square foot finished.
+                                Growing households gain room without moving when DMV General Contracting Group builds their <strong>home additions in Maryland</strong>, across <strong>Montgomery County</strong>, <strong>Laurel</strong> and <strong>DC</strong>. One contract covers the <strong>zoning check</strong>, <strong>structural engineering</strong>, <strong>permits</strong> and <strong>construction</strong>. Most additions cost $200 to $400 per square foot finished.
                             </p>
 
-                            <p className={styles.heroText}>
-                                MHIC #156178 · DC DLCP #410526000209 · 4.9 out of 5 on Google · 1-year workmanship warranty
-                            </p>
 
                             <div className={styles.heroActions}>
                                 <Button href="#estimate" icon={<ArrowIcon />}>
@@ -469,11 +493,11 @@ export default function HomeAdditions({ data }: { data?: AdditionService }) {
                                 <div className={styles.mediaOverlay} />
                                 <div className={styles.heroFeatured}>
                                     <Badge variant="accent" className="nostars">
-                                        Case Studies &amp; Projects
+                                        Featured project
                                     </Badge>
-                                    <p className={styles.heroFeaturedTitle}>Home Addition Projects</p>
+                                    <p className={styles.heroFeaturedTitle}>Screened porch addition above a garage in Chevy Chase</p>
                                     <p className={styles.heroFeaturedMeta}>
-                                        Finished rooms we have added to existing homes appear in our remodeling projects gallery.
+                                        Framing, concrete, roofing and electrical, from permits to final inspection.
                                     </p>
                                 </div>
                             </div>
@@ -517,7 +541,9 @@ export default function HomeAdditions({ data }: { data?: AdditionService }) {
                         <SectionHeading
                             id="addition-facts-title"
                             align="center"
-                            title="These five facts frame most Maryland and DC addition projects:"
+                            eyebrow={<Badge>At a glance</Badge>}
+                            title="Home Additions at a Glance"
+                            text="These five facts frame most Maryland and DC addition projects:"
                         />
                     </div>
                     <div className={styles.contentTableWrap}>
@@ -547,7 +573,7 @@ export default function HomeAdditions({ data }: { data?: AdditionService }) {
                                 </tr>
                                 <tr>
                                     <th scope="row">Service area</th>
-                                    <td>Montgomery County, Laurel and Washington, DC</td>
+                                    <td>Montgomery County, Laurel and DC</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -558,6 +584,7 @@ export default function HomeAdditions({ data }: { data?: AdditionService }) {
             <InHomeConsultation
                 id="addition-estimate-cta"
                 headingId="addition-estimate-cta-title"
+                titleAs="strong"
                 title="Get a free addition estimate, and we will walk your lot and tell you what zoning allows."
                 text=""
                 ctaLabel="Get a free addition estimate"
@@ -571,7 +598,11 @@ export default function HomeAdditions({ data }: { data?: AdditionService }) {
                             align="center"
                             eyebrow={<Badge>Services</Badge>}
                             title="Types of Home Additions We Build"
-                            text="Eight addition types come from our team, a licensed general contractor in Maryland. Lot shape, budget and daily routine point to the right one:"
+                            text={
+                                <>
+                                    Eight addition types come from our team, a licensed <strong>room addition contractor</strong> in <strong>Maryland</strong>. <strong>Lot shape</strong>, <strong>budget</strong> and <strong>daily routine</strong> point to the right one:
+                                </>
+                            }
                         />
                     </div>
 
@@ -811,7 +842,7 @@ export default function HomeAdditions({ data }: { data?: AdditionService }) {
             <LicensedInsured variant="home-additions" />
 
             <RecentProjects
-                serviceType="home-additions"
+                projects={additionProjects}
                 eyebrow="Case Studies & Projects"
                 title="Home Addition Projects"
                 text="Finished rooms we have added to existing homes appear in our remodeling projects gallery."
@@ -862,26 +893,82 @@ export default function HomeAdditions({ data }: { data?: AdditionService }) {
                 <Container>
                     <div className={styles.areasLayout}>
                         <div className={styles.areasHeader}>
-                            <Badge>Area we serve</Badge>
-                            <h2 id="areas-title">Home Additions in Washington, DC and Montgomery County</h2>
+                            <Badge>Areas We Serve</Badge>
+                            <h2 id="areas-title">
+                                Home Additions in Montgomery County, MD
+                            </h2>
                             <p>
-                                Addition crews from our office serve the District, Laurel and every Montgomery County town. DC rowhouse additions face a 35-foot height limit and historic review in many neighborhoods. Choose your area for its setbacks and permit office:
+                                Our <strong>home additions in Montgomery County</strong> cover{" "}
+                                <strong>11 communities</strong>, plus <strong>Laurel</strong> and <strong>DC</strong>,
+                                from our <strong>North Bethesda</strong> office. DC rowhouse additions face a 35-foot
+                                height limit and historic review in many neighborhoods. All 13 areas are listed with
+                                their zip codes:
                             </p>
+                            <span className={styles.areasCount}>13 service areas</span>
                         </div>
+
                         <div className={styles.areasGrid}>
-                            {areaLinks.map((area, index) => (
-                                <Link href={area.href} className={styles.areaCard} key={area.href}>
+                            {areaLinks.map((area, index) => {
+                                const number = (
                                     <span className={styles.areaNumber}>
                                         {String(index + 1).padStart(2, "0")}
                                     </span>
-                                    <span className={styles.areaLabel}>{area.label}</span>
-                                    <ArrowIcon className={styles.areaArrow} />
-                                </Link>
-                            ))}
+                                );
+                                const text = (
+                                    <span className={styles.areaText}>
+                                        <span className={styles.areaLabel}>{area.label}</span>
+                                        <strong className={styles.areaZips}>{area.zips}</strong>
+                                    </span>
+                                );
+                                const wide = area.wide ? ` ${styles.areaCardWide}` : "";
+
+                                return area.href ? (
+                                    <Link href={area.href} className={`${styles.areaCard}${wide}`} key={area.label}>
+                                        {number}
+                                        {text}
+                                        <ArrowIcon className={styles.areaArrow} />
+                                    </Link>
+                                ) : (
+                                    <div className={`${styles.areaCard} ${styles.areaCardStatic}${wide}`} key={area.label}>
+                                        {number}
+                                        {text}
+                                    </div>
+                                );
+                            })}
                         </div>
                     </div>
+
                     <div className={styles.areasNote}>
-                        <p>Each area page covers its permit office, lot sizes and typical addition types.</p>
+                        <p>
+                            Each area page covers its <strong>permit office</strong>, <strong>lot sizes</strong> and typical addition types.
+                        </p>
+                    </div>
+
+                    <div className={styles.areasMap}>
+                        <iframe
+                            src={SERVICE_AREA_MAP_EMBED_URL}
+                            title="DMV General Contracting Group LLC | Home Additions in Montgomery County, Maryland"
+                            className={styles.areasMapFrame}
+                            loading="lazy"
+                            referrerPolicy="no-referrer-when-downgrade"
+                            allowFullScreen
+                        />
+                        <div className={styles.areasNap}>
+                            <h3>Our North Bethesda Office</h3>
+                            <Link href={GOOGLE_BUSINESS_PROFILE_URL} target="_blank" rel="noopener noreferrer">
+                                <strong>DMV General Contracting Group LLC</strong>
+                            </Link>
+                            <address>
+                                <Link href={GOOGLE_BUSINESS_PROFILE_URL} target="_blank" rel="noopener noreferrer">
+                                    11810 Grand Park Ave #500, North Bethesda, MD 20852
+                                </Link>
+                            </address>
+                            <span><strong>Phone: </strong><a href="tel:+12407301292">+1 240-730-1292</a></span>
+                            <span>Open 7 days a week</span>
+                            <Button href="#estimate" icon={<ArrowIcon />}>
+                                Get a Free Addition Estimate
+                            </Button>
+                        </div>
                     </div>
                 </Container>
             </section>

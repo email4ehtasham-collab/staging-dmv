@@ -17,7 +17,7 @@ const homeFaqs: Faq[] = [
   },
   {
     question: "Which areas do you serve?",
-    answer: <>We serve <strong>Washington, DC</strong> and <strong>12 Maryland communities</strong>: Bethesda, North Bethesda, Rockville, Potomac, Chevy Chase, Gaithersburg, Kensington, Silver Spring, Wheaton, Garrett Park, Cabin John and Laurel.</>,
+    answer: <>We serve <strong>DC</strong> and <strong>12 Maryland communities</strong>: Bethesda, North Bethesda, Rockville, Potomac, Chevy Chase, Gaithersburg, Kensington, Silver Spring, Wheaton, Garrett Park, Cabin John and Laurel.</>,
   },
   {
     question: "Do you handle permits?",

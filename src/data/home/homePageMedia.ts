@@ -11,8 +11,8 @@ export const GOOGLE_BUSINESS_PROFILE_URL =
 export const homeServiceOverrides: ServiceCardOverride[] = [
   {
     slug: "kitchen-remodeling",
-    image: "/images/home/kitchen-remodeling-galley-kitchen-washington-dc.webp",
-    imageAlt: "Kitchen remodeling: galley kitchen with blue lower cabinets and white uppers in Washington, DC",
+    image: "/images/home/kitchen-remodeling-galley-kitchen-dc.webp",
+    imageAlt: "Kitchen remodeling: galley kitchen with blue lower cabinets and white uppers in DC",
   },
   {
     slug: "bathroom-remodeling",
@@ -48,20 +48,20 @@ export const homeServiceOverrides: ServiceCardOverride[] = [
 
 const homeProjectImages: Record<string, { image: string; imageAlt: string }> = {
   "dc-townhome-kitchen-first-floor-renovation": {
-    image: "/images/home/townhome-kitchen-renovation-washington-dc.webp",
-    imageAlt: "Townhome kitchen with white cabinets and a wood island after a first-floor renovation in Washington, DC",
+    image: "/images/home/townhome-kitchen-renovation-dc.webp",
+    imageAlt: "Townhome kitchen with white cabinets and a wood island after a first-floor renovation in DC",
   },
   "primary-bathroom-powder-room-renovation-glover-park": {
     image: "/images/home/primary-bathroom-renovation-glover-park-dc.webp",
-    imageAlt: "Primary bathroom with a double vanity and glass shower in Glover Park, Washington, DC",
+    imageAlt: "Primary bathroom with a double vanity and glass shower in Glover Park, DC",
   },
   "townhouse-renovation-silver-spring": {
     image: "/images/home/townhouse-renovation-silver-spring-md.webp",
     imageAlt: "Open first floor and new kitchen after a complete townhouse renovation in Silver Spring, MD",
   },
   "nw-dc-adu-construction": {
-    image: "/images/home/adu-construction-northwest-washington-dc.webp",
-    imageAlt: "Two-story ADU built behind a rowhouse in Northwest Washington, DC",
+    image: "/images/home/adu-construction-northwest-dc.webp",
+    imageAlt: "Two-story ADU built behind a rowhouse in Northwest DC",
   },
   "bethesda-condo-full-renovation": {
     image: "/images/home/condo-kitchen-renovation-bethesda-md.webp",
@@ -82,6 +82,12 @@ type ProjectSource = {
   topdesc?: string;
 };
 
+// Homepage copy says "DC", never "Washington, DC": /service-area/washington-dc owns that keyword.
+// The shared project data is left as is; only the homepage cards are rewritten.
+function toDC(text = "") {
+  return text.replace(/Washington,?\s*D\.?C(?![A-Za-z])/g, "DC");
+}
+
 // Same card text as the RecentProjects default; only the image and alt differ.
 function createSummary(text = "", maxLength = 155) {
   const normalized = text.replace(/\s+/g, " ").trim();
@@ -99,9 +105,9 @@ export const homeRecentProjects: ProjectCardData[] = Object.keys(homeProjectImag
   .map((project) => {
     const [categoryTitle, categoryLocation] = project.category.split("|").map((part) => part.trim());
     return {
-      title: categoryTitle || project.titles?.[0] || project.client || "Recent Project",
-      location: categoryLocation || "Maryland & Washington, DC",
-      text: createSummary(project.description || project.topdesc),
+      title: toDC(categoryTitle || project.titles?.[0] || project.client || "Recent Project"),
+      location: toDC(categoryLocation) || "Maryland & DC",
+      text: toDC(createSummary(project.description || project.topdesc)),
       href: `/project/${project.slug}`,
       ...homeProjectImages[project.slug],
     };

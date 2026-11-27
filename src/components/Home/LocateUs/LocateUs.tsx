@@ -6,7 +6,7 @@ import { GOOGLE_BUSINESS_PROFILE_URL } from "@/data/home/homePageMedia";
 import styles from "./locate-us.module.scss";
 
 const MY_MAPS_EMBED_URL =
-  "https://www.google.com/maps/d/u/0/embed?mid=14K4I-pr3k4OBWe-bVzHUcLC4edyEKd8&ehbc=2E312F&noprof=1";
+  "https://www.google.com/maps/d/embed?mid=1pJKlMjmSjlmkxDiFrfqdFmfT2zcq5T0&ehbc=2E312F&noprof=1";
 
 export default function LocateUs() {
   return (
@@ -26,7 +26,7 @@ export default function LocateUs() {
                   <strong>North Bethesda Metro station</strong> on the <strong>Red Line</strong> is 0.4 miles away, about
                   an 8-minute walk. From here, our <strong>Maryland general contractor</strong> team drives to homes in{" "}
                   <strong>Bethesda</strong>, <strong>Rockville</strong>, <strong>Potomac</strong> and{" "}
-                  <strong>Washington, DC</strong> for free in-home consultations.
+                  <strong>DC</strong> for free in-home consultations.
                 </>
               }
             />
@@ -52,12 +52,12 @@ export default function LocateUs() {
             <div className={styles.route}>
               <h3>Driving from Reagan National Airport (DCA)</h3>
               <p>
-                From <strong>Ronald Reagan Washington National Airport (DCA)</strong>, the drive is about{" "}
+                From <strong>Reagan National Airport (DCA)</strong>, the drive is about{" "}
                 <strong>22 miles</strong> and takes about <strong>30 minutes</strong> in usual traffic. Follow these 5 steps:
               </p>
               <ol>
                 <li>
-                  Leave the airport on the ramp to the <strong>George Washington Memorial Parkway</strong> north.
+                  Leave the airport on the ramp to the <strong>GW Parkway</strong> north.
                 </li>
                 <li>
                   Stay on the parkway for about 12 miles, then take the exit for <strong>I-495 North</strong> toward Maryland.

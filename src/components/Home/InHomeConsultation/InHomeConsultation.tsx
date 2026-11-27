@@ -20,6 +20,8 @@ type InHomeConsultationProps = {
   id?: string;
   headingId?: string;
   title?: string;
+  /** "strong" renders the title as bold text instead of an H2 (for long CTA sentences). */
+  titleAs?: "h2" | "strong";
   text?: string;
   ctaLabel?: string;
 };
@@ -28,6 +30,7 @@ export default function InHomeConsultation({
   id = "consultation",
   headingId = "consultation-title",
   title = "Start With A Free In-Home Consultation.",
+  titleAs = "h2",
   text = "We look at the space, listen to what you want and talk through your budget and timing. You get a free written estimate afterward.",
   ctaLabel = "Get a Free Estimate",
 }: InHomeConsultationProps = {}) {
@@ -36,9 +39,15 @@ export default function InHomeConsultation({
       <Container>
         <div className={styles.inner}>
           <div className={styles.copy}>
-            <h2 id={headingId} className={styles.title}>
-              {title}
-            </h2>
+            {titleAs === "strong" ? (
+              <strong id={headingId} className={`${styles.title} ${styles.titleStrong}`}>
+                {title}
+              </strong>
+            ) : (
+              <h2 id={headingId} className={styles.title}>
+                {title}
+              </h2>
+            )}
             <p className={styles.text}>{text}</p>
           </div>
 

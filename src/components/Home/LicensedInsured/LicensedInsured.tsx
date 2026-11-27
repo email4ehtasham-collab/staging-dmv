@@ -527,7 +527,7 @@ export default function LicensedInsured({ variant = "home" }: LicensedInsuredPro
                         ? "Why Homeowners Choose Us for Their Kitchen Remodel"
                         : isBethesda
                           ? "Why Bethesda Homeowners Hire Us"
-                          : "Licensed and Insured in Maryland and Washington, DC"
+                          : "Licensed and Insured in Maryland and DC"
               }
               text={
                 isBethesdaAddition
@@ -550,7 +550,7 @@ export default function LicensedInsured({ variant = "home" }: LicensedInsuredPro
                         ? "Homeowners in Maryland and DC pick us for kitchen remodeling for five reasons:"
                         : isBethesda
                           ? "Five things set us apart for Bethesda owners:"
-                          : "Hiring a contractor to work inside your home is a big decision. These are the reasons homeowners in Maryland and Washington, DC choose us:"
+                          : "Hiring a contractor to work inside your home is a big decision. These are the reasons homeowners in Maryland and DC choose us:"
               }
             />
           </div>

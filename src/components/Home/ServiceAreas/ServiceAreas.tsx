@@ -1,4 +1,5 @@
-﻿import Link from "next/link";
+﻿import type { ReactNode } from "react";
+import Link from "next/link";
 import Badge from "@/components/Common/Badge";
 import Container from "@/components/Common/Container";
 import SectionHeading from "@/components/Common/SectionHeading";
@@ -9,7 +10,7 @@ const SERVICE_AREA_MAP_EMBED_URL =
   "https://www.google.com/maps/d/u/0/embed?mid=18yZmZjXwVotzSHlIUaeEYMgoXUZnUI0&ehbc=2E312F&noprof=1";
 
 const areas = [
-  { name: "Bethesda", zips: "20814, 20816, 20817" },
+  { name: "Bethesda", zips: "20814, 20816, 20817", href: "/service-area/bethesda-md" },
   { name: "North Bethesda", zips: "20852" },
   { name: "Rockville", zips: "20850, 20851, 20852, 20853" },
   { name: "Potomac", zips: "20854" },
@@ -21,9 +22,38 @@ const areas = [
   { name: "Garrett Park", zips: "20896" },
   { name: "Cabin John", zips: "20818" },
   { name: "Laurel", zips: "20707, 20708, 20723, 20724" },
+  // DC spans the full row: it has 22 residential zip codes.
+  { name: "DC", zips: "20001, 20002, 20003, 20004, 20005, 20006, 20007, 20008, 20009, 20010, 20011, 20012, 20015, 20016, 20017, 20018, 20019, 20020, 20024, 20032, 20036, 20037", href: "/service-area/washington-dc", wide: true },
 ];
 
-export default function ServiceAreas() {
+// Homepage wording. Other pages (e.g. /services) pass their own heading and copy
+// so the same area list and map don't repeat the homepage text word for word.
+const DEFAULT_TITLE = "General Contractor Serving Maryland and DC";
+const DEFAULT_TEXT = (
+  <>
+    We serve <strong>DC</strong> and <strong>12 Maryland communities</strong> from our <strong>North Bethesda</strong> office near <strong>Pike & Rose</strong>. Most of our Maryland work is in <Link target="_blank" href="https://en.wikipedia.org/wiki/Montgomery_County,_Maryland">Montgomery County</Link>, and we also work in <strong>Laurel</strong>. In DC, many of our projects are <strong>rowhouses, townhomes and condos</strong>, where party walls, English basements and condo board rules shape the plan.
+  </>
+);
+const DEFAULT_DISTRICT_TEXT = (
+  <>
+    <strong>In DC, we work across the District.</strong> From rowhouse kitchens to condo bathrooms and garage ADUs, we manage the permits, inspections and building rules that come with DC projects. Our <Link href="/service-area/washington-dc">DC general contractor</Link> page covers the details.
+  </>
+);
+const DEFAULT_MAP_TITLE = "DMV General Contracting Group LLC | General Contractor Service Areas in Maryland and DC";
+
+type ServiceAreasProps = {
+  title?: string;
+  text?: ReactNode;
+  districtText?: ReactNode;
+  mapTitle?: string;
+};
+
+export default function ServiceAreas({
+  title = DEFAULT_TITLE,
+  text = DEFAULT_TEXT,
+  districtText = DEFAULT_DISTRICT_TEXT,
+  mapTitle = DEFAULT_MAP_TITLE,
+}: ServiceAreasProps = {}) {
   return (
     <section id="areas" className={styles.section} aria-labelledby="areas-title">
       <Container>
@@ -32,21 +62,17 @@ export default function ServiceAreas() {
             <SectionHeading
               id="areas-title"
               eyebrow={<Badge>Areas We Serve</Badge>}
-              title="General Contractor for Washington, DC and Montgomery County, MD"
-              text={
-                <>
-                  We serve <strong>Washington, DC</strong> and <strong>12 Maryland communities</strong> from our <strong>North Bethesda</strong> office near <strong>Pike & Rose</strong>. Most of our Maryland work is in <Link target="_blank" href="https://en.wikipedia.org/wiki/Montgomery_County,_Maryland">Montgomery County</Link>, and we also work in <strong>Laurel</strong>. In Washington, DC, many of our projects are <strong>rowhouses, townhomes and condos</strong>, where party walls, English basements and condo board rules shape the plan.
-                </>
-              }
+              title={title}
+              text={text}
             />
-            <p className={styles.label}>These are the 12 Maryland communities we serve most often, with their zip codes:</p>
+            <p className={styles.label}>These are DC and the 12 Maryland communities we serve most often, with their zip codes:</p>
 
-            <ul className={styles.areas} aria-label="Maryland service areas">
+            <ul className={styles.areas} aria-label="Service areas in Maryland and DC">
               {areas.map((area) => (
-                <li key={area.name}>
+                <li key={area.name} className={area.wide ? styles.areaWide : undefined}>
                   <span className={styles.dot} aria-hidden="true" />
-                  {area.name === "Bethesda" ? (
-                    <Link href="/service-area/bethesda-md" className={styles.areaLink}>
+                  {area.href ? (
+                    <Link href={area.href} className={styles.areaLink}>
                       {area.name}
                     </Link>
                   ) : (
@@ -58,9 +84,7 @@ export default function ServiceAreas() {
             </ul>
 
             <div className={styles.district}>
-              <p>
-                <strong>In the District, we work across Washington, DC.</strong> From rowhouse kitchens to condo bathrooms and garage ADUs, we manage the permits, inspections and building rules that come with DC projects. Our DC zip codes are <strong>20001 to 20012</strong>, <strong>20015 to 20020</strong>, <strong>20024</strong>, <strong>20032</strong>, <strong>20036</strong> and <strong>20037</strong>.
-              </p>
+              <p>{districtText}</p>
               <div className={styles.company}>
                 <span><Link href={GOOGLE_BUSINESS_PROFILE_URL} target="_blank" rel="noopener noreferrer">DMV General Contracting Group LLC</Link></span>
                 <span><strong>Phone: </strong><a href="tel:+12407301292">+1 240-730-1292</a></span>
@@ -74,7 +98,7 @@ export default function ServiceAreas() {
           <div className={styles.mapVisual}>
             <iframe
               src={SERVICE_AREA_MAP_EMBED_URL}
-              title="DMV General Contracting Group LLC | General Contractor Service Areas in Montgomery County, MD and Washington, DC"
+              title={mapTitle}
               className={styles.areaMap}
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"

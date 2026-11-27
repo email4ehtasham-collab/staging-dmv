@@ -239,22 +239,22 @@ export default function Estimate({ variant = "home" }: { variant?: EstimateVaria
                   : isBethesdaAddition
                   ? "A Bethesda addition starts with a look at your lot and a plan for the traffic and noise that come with construction. We check zoning first, price every line of the work in writing, and keep one crew and one schedule from demolition to the final county inspection."
                   : isAddition
-                  ? "Home additions in Maryland and Washington, DC start with zoning. DMV General Contracting Group handles zoning, engineering and permits in-house, so your project keeps moving from the first sketch."
+                  ? "Home additions in Maryland and DC start with zoning. DMV General Contracting Group handles zoning, engineering and permits in-house, so your project keeps moving from the first sketch."
                   : isAdu
-                    ? "Whether your lot can take a second home is the first question we answer. As an ADU builder in Maryland and Washington, DC, we review zoning, design the unit and handle every license and permit."
+                    ? "Whether your lot can take a second home is the first question we answer. As an ADU builder in Maryland and DC, we review zoning, design the unit and handle every license and permit."
                   : isBethesdaBasement
                     ? "Our licensed team handles basement remodeling and basement finishing in Bethesda, MD, making sure the space is dry and the egress is legal before the first wall goes up. Book a free assessment to find out what your basement can become."
                   : isBasement
-                    ? "Finishing costs $30 to $85 per square foot, against $200 to $400 for an addition. Bare concrete becomes finished rooms with DMV General Contracting Group, your crew for basement remodeling and finishing across Maryland and Washington, DC."
+                    ? "Finishing costs $30 to $85 per square foot, against $200 to $400 for an addition. Bare concrete becomes finished rooms with DMV General Contracting Group, your crew for basement remodeling and finishing across Maryland and DC."
                   : isBethesdaKitchen
                     ? "When you are ready for kitchen remodeling in Bethesda, MD, our licensed design-build team handles design, permits and construction so the budget and schedule hold. Book a free in-home consultation to see what your kitchen could become."
                     : isBethesdaBathroom
                       ? "From a powder room to a full primary suite, our licensed team handles bathroom remodeling in Bethesda, MD with waterproofing done right and permits filed on your behalf. The first step is an in-home visit at no charge."
                       : isBathroom
-                        ? "Your next shower, vanity and tile job is a single call to DMV General Contracting Group, handling bathroom remodeling in Maryland and Washington, DC. One contract covers waterproofing, permits and the build."
+                        ? "Your next shower, vanity and tile job is a single call to DMV General Contracting Group, handling bathroom remodeling in Maryland and DC. One contract covers waterproofing, permits and the build."
                         : isKitchen
-                          ? "A new kitchen is one call away for homeowners seeking kitchen remodeling in Maryland and Washington, DC. DMV General Contracting Group designs, permits and builds it under one license-backed contract. It starts with a no-cost visit to measure your kitchen."
-                          : "DMV General Contracting Group is a licensed residential general contractor serving Maryland and Washington, DC, with design-build service from the first drawing to the final inspection. Tell us about your kitchen, bathroom, basement, ADU or addition, and we will set up your free in-home consultation."
+                          ? "A new kitchen is one call away for homeowners seeking kitchen remodeling in Maryland and DC. DMV General Contracting Group designs, permits and builds it under one license-backed contract. It starts with a no-cost visit to measure your kitchen."
+                          : "DMV General Contracting Group is a licensed residential general contractor serving Maryland and DC, with design-build service from the first drawing to the final inspection. Tell us about your kitchen, bathroom, basement, ADU or addition, and we will set up your free in-home consultation."
               }
             />
 

@@ -14,6 +14,7 @@ import HomeFaq from "@/components/Home/HomeFaq/HomeFaq";
 import InHomeConsultation from "@/components/Home/InHomeConsultation/InHomeConsultation";
 import LicensedInsured from "@/components/Home/LicensedInsured/LicensedInsured";
 import Permits from "@/components/Home/Permits/Permits";
+import { GOOGLE_BUSINESS_PROFILE_URL } from "@/data/home/homePageMedia";
 import styles from "../kitchen-remodeling/style.module.scss";
 import extras from "./basement-extras.module.scss";
 
@@ -289,21 +290,32 @@ const relatedWorkItems: RelatedWorkItem[] = [
     },
 ];
 
-const areaLinks: { label: string; href?: string }[] = [
-    { label: "Basement remodeling in Bethesda", href: "/service/basement-remodeling/bethesda-md" },
-    { label: "Basement remodeling in North Bethesda", href: "/service/basement-remodeling/north-bethesda-md" },
-    { label: "Basement remodeling in Rockville", href: "/service/basement-remodeling/rockville-md" },
-    { label: "Basement remodeling in Kensington", href: "/service/basement-remodeling/kensington-md" },
-    { label: "Basement remodeling in Potomac", href: "/service/basement-remodeling/potomac-md" },
-    { label: "Basement remodeling in Wheaton", href: "/service/basement-remodeling/wheaton-md" },
-    { label: "Basement remodeling in Silver Spring", href: "/service/basement-remodeling/silver-spring-md" },
-    { label: "Basement remodeling in Gaithersburg", href: "/service/basement-remodeling/gaithersburg-md" },
-    { label: "Basement remodeling in Garrett Park", href: "/service/basement-remodeling/garrett-park-md" },
-    { label: "Basement remodeling in Chevy Chase", href: "/service/basement-remodeling/chevy-chase-md" },
-    { label: "Basement remodeling in Cabin John", href: "/service/basement-remodeling/cabin-john-md" },
-    { label: "Basement remodeling in Laurel", href: "/service/basement-remodeling/laurel-md" },
-    { label: "Basement remodeling in Washington, DC", href: "/service/basement-remodeling/washington-dc" },
+// Basement hub areas: 11 Montgomery County communities, Laurel and DC, with zip codes.
+const areaLinks: { label: string; zips: string; href?: string; wide?: boolean }[] = [
+    { label: "Bethesda", zips: "20814, 20816, 20817", href: "/service/basement-remodeling/bethesda-md" },
+    { label: "North Bethesda", zips: "20852", href: "/service/basement-remodeling/north-bethesda-md" },
+    { label: "Rockville", zips: "20850, 20851, 20852, 20853", href: "/service/basement-remodeling/rockville-md" },
+    { label: "Potomac", zips: "20854", href: "/service/basement-remodeling/potomac-md" },
+    { label: "Chevy Chase", zips: "20815", href: "/service/basement-remodeling/chevy-chase-md" },
+    { label: "Gaithersburg", zips: "20877, 20878, 20879, 20882", href: "/service/basement-remodeling/gaithersburg-md" },
+    { label: "Kensington", zips: "20895", href: "/service/basement-remodeling/kensington-md" },
+    { label: "Silver Spring", zips: "20901, 20902, 20903, 20904, 20905, 20906, 20910", href: "/service/basement-remodeling/silver-spring-md" },
+    { label: "Wheaton", zips: "20902, 20906", href: "/service/basement-remodeling/wheaton-md" },
+    { label: "Garrett Park", zips: "20896", href: "/service/basement-remodeling/garrett-park-md" },
+    { label: "Cabin John", zips: "20818", href: "/service/basement-remodeling/cabin-john-md" },
+    { label: "Laurel", zips: "20707, 20708, 20723, 20724", href: "/service/basement-remodeling/laurel-md" },
+    { label: "DC", zips: "20001, 20002, 20003, 20004, 20005, 20006, 20007, 20008, 20009, 20010, 20011, 20012, 20015, 20016, 20017, 20018, 20019, 20020, 20024, 20032, 20036, 20037", href: "/service/basement-remodeling/washington-dc", wide: true },
 ];
+
+const SERVICE_AREA_MAP_EMBED_URL =
+    "https://www.google.com/maps/d/u/0/embed?mid=18yZmZjXwVotzSHlIUaeEYMgoXUZnUI0&ehbc=2E312F&noprof=1";
+
+// Basement-hub-only image copies (public/images/basement-remodeling/), each used once on this page.
+// EXIF GPS points to the Google Business Profile pin.
+const basementHeroImage = {
+    src: "/images/basement-remodeling/basement-remodeling-family-room-kitchenette.webp",
+    alt: "Basement remodeling: finished basement family room with a sectional sofa, a fireplace wall and a kitchenette",
+};
 
 const basementFaqs = [
     {
@@ -421,10 +433,11 @@ function ProcessAlertIcon({ className }: { className?: string }) {
     );
 }
 
-export default function BasementRemodeling({ data }: { data?: BasementService }) {
+export default function BasementRemodeling(_props: { data?: BasementService }) {
     const [timelineFilter, setTimelineFilter] = useState<TimelineFilter>("planning");
-    const heroImage = data?.image?.replace(/^\./, "") || "/images/services/basement-remodeling.webp";
-    const heroAlt = data?.imageAlt || "Basement remodeling and finishing in Maryland and Washington, DC";
+    // The hub uses its own hero copy; data.image stays for the services listing.
+    const heroImage = basementHeroImage.src;
+    const heroAlt = basementHeroImage.alt;
 
     return (
         <main className={`page-wrapper ${styles.page}`}>
@@ -442,14 +455,14 @@ export default function BasementRemodeling({ data }: { data?: BasementService })
 
                     <div className={styles.heroGrid}>
                         <div className={styles.heroContent}>
-                            <Badge className="nostars">Basement Remodeling · Maryland &amp; DC</Badge>
+                            <Badge className="nostars">Basement Remodeling · Maryland</Badge>
 
                             <h1 className={styles.heroTitle}>
-                                Basement Remodeling &amp; Finishing in <span>Maryland &amp; Washington, DC</span>
+                                Maryland Basement Remodeling <span>That Stays Dry and Legal</span>
                             </h1>
 
                             <p className={styles.heroText}>
-                                Basement remodeling in Maryland and Washington, DC starts with a moisture test at DMV General Contracting Group. After that, our licensed team designs, permits and finishes the space on a single contract. With 35 years in residential building behind our crew, we know how a below-grade room behaves through a Maryland summer and a wet spring.
+                                <strong>Basement remodeling in Maryland</strong> starts with a <strong>moisture test</strong> at DMV General Contracting Group, for homes across <strong>Montgomery County</strong>, <strong>Laurel</strong> and <strong>DC</strong>. After that, our licensed team <strong>designs</strong>, <strong>permits</strong> and <strong>finishes</strong> the space on a <strong>single contract</strong>. With 35 years in residential building behind our crew, we know how a below-grade room behaves through a Maryland summer and a wet spring.
                             </p>
 
                             <div className={styles.heroActions}>
@@ -551,13 +564,17 @@ export default function BasementRemodeling({ data }: { data?: BasementService })
                                     Basement Finishing vs Basement Remodeling: <span>What&apos;s the Difference?</span>
                                 </>
                             }
-                            text="Basement finishing turns bare concrete into living space with insulation, framing, drywall, flooring, lighting and HVAC. Basement remodeling updates a basement that is already finished, often with a new layout or a bathroom. Our licensed general contractor in Maryland team does both, and this table compares them for Maryland homes:"
+                            text={
+                                <>
+                                    Basement finishing turns bare concrete into living space with insulation, framing, drywall, flooring, lighting and HVAC. Basement remodeling, also called <strong>basement renovation</strong>, updates a basement that is already finished, often with a new layout or a bathroom. Our licensed general contractor in Maryland team does both, and this table compares them for Maryland homes:
+                                </>
+                            }
                         />
                     </div>
 
                     <div className={extras.comparisonGrid}>
                         <article className={extras.comparisonCard}>
-                            <h2 className="h3">Basement finishing</h2>
+                            <h3>Basement finishing</h3>
                             <div className={extras.comparisonRow}>
                                 <strong>Starting point</strong>
                                 <span>Bare concrete walls and floor, exposed joists</span>
@@ -615,7 +632,11 @@ export default function BasementRemodeling({ data }: { data?: BasementService })
                                     What Can a <span>Finished Basement</span> Become?
                                 </>
                             }
-                            text="Maryland homeowners use finished basements for eight main purposes, and we have built each of them:"
+                            text={
+                                <>
+                                    Our <strong>basement finishing in Maryland</strong> covers <strong>eight main uses</strong>, and we have built each of them:
+                                </>
+                            }
                         />
                     </div>
 
@@ -651,7 +672,7 @@ export default function BasementRemodeling({ data }: { data?: BasementService })
                                     Before You Finish: Moisture, Radon, Ceiling Height <span>and Egress</span>
                                 </>
                             }
-                            text="Six conditions decide whether a basement can be finished, and we check each one at the first visit:"
+                            text={<>Six conditions decide whether a basement can be finished or a <strong>basement renovation</strong> can go ahead, and we check each one at the first visit:</>}
                         />
                     </div>
 
@@ -659,8 +680,8 @@ export default function BasementRemodeling({ data }: { data?: BasementService })
                         <figure className={styles.designMedia}>
                             <div className={styles.designImageWrap}>
                                 <Image
-                                    src="/images/projects-galary/basement-after.webp"
-                                    alt="Finished basement remodeling project"
+                                    src="/images/basement-remodeling/silver-spring-townhouse-oak-stairs.webp"
+                                    alt="New oak stairs with black iron balusters in a Silver Spring, MD townhouse renovation that included a finished basement"
                                     fill
                                     sizes="(max-width: 1024px) 100vw, 46vw"
                                     className={styles.designImage}
@@ -705,7 +726,11 @@ export default function BasementRemodeling({ data }: { data?: BasementService })
                                     How Much Does It Cost to Finish a Basement <span>in Maryland?</span>
                                 </>
                             }
-                            text="Finishing a basement in Maryland costs $30 to $85 per square foot, or about $30,000 to $90,000 for most projects. Premium finishes reach $85 to $110 or more per square foot. Maryland basement pricing falls into three finish levels:"
+                            text={
+                                <>
+                                    <strong>Finishing a basement in Maryland</strong> costs <strong>$30 to $85 per square foot</strong>, or about <strong>$30,000 to $90,000</strong> for most projects. Premium finishes reach $85 to $110 or more per square foot. This table shows the three Maryland basement finish levels:
+                                </>
+                            }
                         />
                     </div>
 
@@ -714,32 +739,66 @@ export default function BasementRemodeling({ data }: { data?: BasementService })
                         <strong>$30–$85 per sq ft</strong>
                     </div>
 
-                    <div className={styles.pricingGrid}>
-                        {budgetTiers.map((tier) => (
-                            <article className={styles.tierCard} key={tier.tier}>
-                                <span className={styles.tierLevel}>{tier.tier}</span>
-                                <h3 className={styles.tierTitle}>{tier.title}</h3>
-                                <div className={styles.tierPrice}>
-                                    <strong>{tier.price}</strong>
-                                </div>
-                                <p className={styles.tierText}>{tier.text}</p>
-                            </article>
-                        ))}
+                    <div className={styles.priceTableWrap}>
+                        <table className={styles.priceTable}>
+                            <caption className="visually-hidden">Maryland basement finishing cost by finish level</caption>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Finish level</th>
+                                    <th scope="col">Cost per sq ft</th>
+                                    <th scope="col">What it covers</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {budgetTiers.map((tier) => (
+                                    <tr key={tier.tier}>
+                                        <th scope="row" data-label="Finish level">
+                                            <span className={styles.priceTableTag}>{tier.tier}</span>
+                                            {tier.title}
+                                        </th>
+                                        <td data-label="Cost per sq ft" className={styles.priceTableCost}>
+                                            <strong>{tier.price}</strong>
+                                        </td>
+                                        <td data-label="What it covers">{tier.text}</td>
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
                     </div>
 
                     <div className={styles.budgetCheck}>
                         <div className={styles.budgetCheckHead}>
                             <h3>How Much Does It Cost to Finish a 1,000 sq ft Basement?</h3>
+                            <p>
+                                <strong>About $30,000 to $85,000</strong> at basic to mid-range finishes. This table shows typical Maryland totals by basement size:
+                            </p>
                         </div>
 
-                        <div className={styles.amountGrid}>
-                            {budgetScenarios.map((scenario) => (
-                                <article className={styles.amountCard} key={scenario.amount}>
-                                    <strong>{scenario.amount}</strong>
-                                    <p>{scenario.text}</p>
-                                </article>
-                            ))}
+                        <div className={`${styles.priceTableWrap} ${styles.amountTableWrap}`}>
+                            <table className={styles.priceTable}>
+                                <caption className="visually-hidden">Maryland basement finishing cost by basement size</caption>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Basement size</th>
+                                        <th scope="col">Typical total</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {budgetScenarios.map((scenario) => (
+                                        <tr key={scenario.amount}>
+                                            <th scope="row" data-label="Basement size" className={styles.priceTableCost}>
+                                                <strong>{scenario.amount}</strong>
+                                            </th>
+                                            <td data-label="Typical total">{scenario.text}</td>
+                                        </tr>
+                                    ))}
+                                </tbody>
+                            </table>
                         </div>
+
+                        <p className={styles.costNote}>
+                            A bathroom, kitchenette, egress window or waterproofing moves either size toward the top of its range.
+                        </p>
                     </div>
 
                     <div className={extras.infoPanel}>
@@ -779,15 +838,15 @@ export default function BasementRemodeling({ data }: { data?: BasementService })
                         <SectionHeading
                             id="dc-basements-title"
                             align="center"
-                            eyebrow={<Badge>Washington, DC basements</Badge>}
+                            eyebrow={<Badge>Rowhouse basements</Badge>}
                             title={
                                 <>
-                                    Basement Remodeling in Washington, <span>DC Rowhouses</span>
+                                    Rowhouse Basements: <span>Underpinning and English Basements</span>
                                 </>
                             }
                             text={
                                 <>
-                                    Basement remodeling in Washington, DC differs because the city&apos;s rowhouses often have English basements. These half-sunken levels have low ceilings, shared party walls and frequently their own street door. Two projects come up most:
+                                    Rowhouse basements in <strong>DC</strong> work differently because many are <strong>English basements</strong>. These half-sunken levels have low ceilings, shared party walls and frequently their own street door. Two projects come up most:
                                 </>
                             }
                         />
@@ -811,7 +870,7 @@ export default function BasementRemodeling({ data }: { data?: BasementService })
 
                     <p className={styles.costNote}>
                         Our page on{" "}
-                        <Link href="/service/basement-remodeling/washington-dc">basement remodeling in Washington, DC</Link>{" "}
+                        <Link href="/service/basement-remodeling/washington-dc">basement remodeling in DC</Link>{" "}
                         covers rowhouse projects in more detail.
                     </p>
                 </Container>
@@ -994,14 +1053,15 @@ export default function BasementRemodeling({ data }: { data?: BasementService })
             <BethesdaProjectsReviews
                 project={{
                     badgeLabel: "Case Studies & Projects",
-                    location: "Maryland & Washington, DC",
-                    image: "/images/services/basement-remodeling.webp",
-                    imageAlt: "Finished basement remodeling project",
+                    location: "Silver Spring, Maryland",
+                    image: "/images/basement-remodeling/silver-spring-townhouse-stair-handrail.webp",
+                    imageAlt: "Oak stair treads and a handrail in a Silver Spring, MD townhouse renovation that included a finished basement",
                     title: "Basement Remodeling Projects",
-                    text: "Finished basements and other jobs by our team are on our remodeling projects page, with photos of each room.",
-                    primaryLabel: "Browse remodeling projects",
-                    primaryHref: "/projects",
-                    secondaryLabel: "",
+                    text: "This Silver Spring townhouse renovation included a fully finished basement with a new bathroom. More finished basements and other jobs are on our remodeling projects page.",
+                    primaryLabel: "See the Silver Spring project",
+                    primaryHref: "/project/townhouse-renovation-silver-spring",
+                    secondaryLabel: "Browse remodeling projects",
+                    secondaryHref: "/projects",
                 }}
                 reviews={{
                     badgeLabel: "Testimonials",
@@ -1051,42 +1111,81 @@ export default function BasementRemodeling({ data }: { data?: BasementService })
                 <Container>
                     <div className={styles.areasLayout}>
                         <div className={styles.areasHeader}>
-                            <Badge>Area we serve</Badge>
+                            <Badge>Areas We Serve</Badge>
                             <h2 id="areas-title">
-                                Basement Remodeling Across Montgomery County, Laurel and DC
+                                Basement Remodeling in Montgomery County, MD
                             </h2>
                             <p>
-                                From Laurel down to the District and through all of Montgomery County, our basement crews take jobs. Pick one of these 13 communities for its housing, soil and permit rules:
+                                Our <strong>basement remodeling in Montgomery County</strong> covers{" "}
+                                <strong>11 communities</strong>, plus <strong>Laurel</strong> and <strong>DC</strong>,
+                                from our <strong>North Bethesda</strong> office. Each town&apos;s page covers its housing,
+                                soil and permit rules. All 13 areas are listed with their zip codes:
                             </p>
                             <span className={styles.areasCount}>13 service areas</span>
                         </div>
 
                         <div className={styles.areasGrid}>
-                            {areaLinks.map((area, index) =>
-                                area.href ? (
-                                    <Link href={area.href} className={styles.areaCard} key={area.label}>
-                                        <span className={styles.areaNumber}>
-                                            {String(index + 1).padStart(2, "0")}
-                                        </span>
+                            {areaLinks.map((area, index) => {
+                                const number = (
+                                    <span className={styles.areaNumber}>
+                                        {String(index + 1).padStart(2, "0")}
+                                    </span>
+                                );
+                                const text = (
+                                    <span className={styles.areaText}>
                                         <span className={styles.areaLabel}>{area.label}</span>
+                                        <strong className={styles.areaZips}>{area.zips}</strong>
+                                    </span>
+                                );
+                                const wide = area.wide ? ` ${styles.areaCardWide}` : "";
+
+                                return area.href ? (
+                                    <Link href={area.href} className={`${styles.areaCard}${wide}`} key={area.label}>
+                                        {number}
+                                        {text}
                                         <ArrowIcon className={styles.areaArrow} />
                                     </Link>
                                 ) : (
-                                    <span className={styles.areaCard} key={area.label}>
-                                        <span className={styles.areaNumber}>
-                                            {String(index + 1).padStart(2, "0")}
-                                        </span>
-                                        <span className={styles.areaLabel}>{area.label}</span>
-                                    </span>
-                                ),
-                            )}
+                                    <div className={`${styles.areaCard} ${styles.areaCardStatic}${wide}`} key={area.label}>
+                                        {number}
+                                        {text}
+                                    </div>
+                                );
+                            })}
                         </div>
                     </div>
 
                     <div className={styles.areasNote}>
                         <p>
-                            Older Montgomery County homes often have full basements with low ductwork. Newer houses tend to have taller walk-out basements that are easier to finish.
+                            Older <strong>Montgomery County</strong> homes often have full basements with low ductwork. Newer houses tend to have taller walk-out basements that are easier to finish.
                         </p>
+                    </div>
+
+                    <div className={styles.areasMap}>
+                        <iframe
+                            src={SERVICE_AREA_MAP_EMBED_URL}
+                            title="DMV General Contracting Group LLC | Basement Remodeling in Montgomery County, Maryland"
+                            className={styles.areasMapFrame}
+                            loading="lazy"
+                            referrerPolicy="no-referrer-when-downgrade"
+                            allowFullScreen
+                        />
+                        <div className={styles.areasNap}>
+                            <h3>Our North Bethesda Office</h3>
+                            <Link href={GOOGLE_BUSINESS_PROFILE_URL} target="_blank" rel="noopener noreferrer">
+                                <strong>DMV General Contracting Group LLC</strong>
+                            </Link>
+                            <address>
+                                <Link href={GOOGLE_BUSINESS_PROFILE_URL} target="_blank" rel="noopener noreferrer">
+                                    11810 Grand Park Ave #500, North Bethesda, MD 20852
+                                </Link>
+                            </address>
+                            <span><strong>Phone: </strong><a href="tel:+12407301292">+1 240-730-1292</a></span>
+                            <span>Open 7 days a week</span>
+                            <Button href="#estimate" icon={<ArrowIcon />}>
+                                Book a Free Basement Estimate
+                            </Button>
+                        </div>
                     </div>
                 </Container>
             </section>

@@ -25,8 +25,8 @@ const posts = [
     category: "ADUs",
     title: "ADU Zoning, Rental Rules and Permits",
     text: "ADU zoning, rental rules and permits in Montgomery County and DC.",
-    image: "/images/home/adu-side-yard-path-northwest-washington-dc.webp",
-    alt: "Fenced side path leading to a new ADU in Northwest Washington, DC",
+    image: "/images/home/adu-side-yard-path-northwest-dc.webp",
+    alt: "Fenced side path leading to a new ADU in Northwest DC",
   },
 ];
 

@@ -19,9 +19,9 @@ const reviews = [
     quote: "Handling permits in DC can be a nightmare, but the DMV GC team handled everything seamlessly. Their crew was respectful, clean, and delivered top-tier quality.",
     name: "Sarah L.",
     project: "Bathroom Remodel",
-    location: "Washington, DC",
-    image: "/images/home/walk-in-shower-bathroom-remodel-washington-dc.webp",
-    alt: "Walk-in shower with marble hexagon floor tile in a Washington, DC bathroom remodel",
+    location: "DC",
+    image: "/images/home/walk-in-shower-bathroom-remodel-dc.webp",
+    alt: "Walk-in shower with marble hexagon floor tile in a DC bathroom remodel",
   },
 ];
 
