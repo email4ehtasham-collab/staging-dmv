@@ -8,152 +8,36 @@ import { useEffect } from "react";
 import { Accordion } from "react-bootstrap";
 import { useMyContext } from "@/hooks/context";
 
-const schemaJsonLd = {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "GeneralContractor",
-      "@id": "https://www.dmv-gc.com/#business",
-      "name": "DMV General Contracting Group LLC",
-      "legalName": "DMV General Contracting Group LLC",
-      "alternateName": ["DMV General Contracting Group", "DMV-GC"],
-      "image": "https://www.dmv-gc.com/logo.png",
-      "url": "https://www.dmv-gc.com",
-      "telephone": "+1-240-730-1292",
-      "email": "support@dmv-gc.com",
-      "foundingDate": "2018",
-      "description": "Licensed design-build general contractor serving Cabin John, MD. Specializing in basement remodeling for Cabin John's wooded, sloped-lot homes — walkout basement finishing, daylight basement conversions, natural light design, and guest suites that honor the wooded character of Cabin John's unique landscape.",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "11810 Grand Park Ave #500",
-        "addressLocality": "North Bethesda",
-        "addressRegion": "MD",
-        "postalCode": "20852",
-        "addressCountry": "US"
-      },
-      "geo": { "@type": "GeoCoordinates", "latitude": 39.0458, "longitude": -77.1139 },
-      "areaServed": [
-        { "@type": "City", "name": "Cabin John", "sameAs": "https://en.wikipedia.org/wiki/Cabin_John,_Maryland" },
-        { "@type": "City", "name": "Bethesda" },
-        { "@type": "City", "name": "Potomac" },
-        { "@type": "City", "name": "North Bethesda" },
-        { "@type": "City", "name": "Chevy Chase" }
-      ],
-      "hasCredential": [
-        { "@type": "EducationalOccupationalCredential", "name": "MHIC License", "credentialCategory": "Maryland Home Improvement Contractor License" },
-        { "@type": "EducationalOccupationalCredential", "name": "DLCP License", "credentialCategory": "Washington DC Department of Licensing and Consumer Protection" }
-      ],
-      "priceRange": "$$$"
-    },
-    {
-      "@type": "Service",
-      "@id": "https://www.dmv-gc.com/service/basement-remodeling/cabin-john-md#service",
-      "serviceType": "Basement Remodeling",
-      "name": "Basement Remodeling in Cabin John, MD",
-      "provider": { "@id": "https://www.dmv-gc.com/#business" },
-      "areaServed": { "@type": "City", "name": "Cabin John", "sameAs": "https://en.wikipedia.org/wiki/Cabin_John,_Maryland" },
-      "description": "Full-service basement remodeling in Cabin John, MD. Walkout basement finishing, daylight basement conversions, natural light design, guest suites, home offices, and family rooms — designed for Cabin John's wooded, sloped terrain and built with Montgomery County permits by a licensed design-build team.",
-      "offers": {
-        "@type": "Offer",
-        "priceCurrency": "USD",
-        "priceSpecification": { "@type": "PriceSpecification", "minPrice": "30000", "maxPrice": "130000", "priceCurrency": "USD" }
-      }
-    },
-    {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.dmv-gc.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.dmv-gc.com/services" },
-        { "@type": "ListItem", "position": 3, "name": "Basement Remodeling", "item": "https://www.dmv-gc.com/service/basement-remodeling" },
-        { "@type": "ListItem", "position": 4, "name": "Cabin John, MD", "item": "https://www.dmv-gc.com/service/basement-remodeling/cabin-john-md" }
-      ]
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "How much does basement remodeling cost in Cabin John, MD?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Basement remodeling in Cabin John, MD typically costs between $30,000 and $130,000 depending on scope, basement type, and finish level. A walkout or daylight basement finishing runs $30,000–$60,000. A mid-range basement with bathroom and home office runs $50,000–$85,000. A full walkout basement renovation with guest suite and luxury finishes can reach $85,000–$130,000. Cabin John's sloped-lot terrain means many homes have walkout or daylight basements that are naturally brighter and more practical to finish than fully below-grade spaces. DMV General Contracting Group provides free in-home consultations with detailed estimates."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is a walkout basement and are they common in Cabin John?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "A walkout basement is a basement level where one or more walls are fully above grade — typically on the downhill side of a sloped lot — allowing a full-height exterior door and windows at grade level. Cabin John's terrain along the Potomac River palisades and MacArthur Boulevard creates natural elevation changes that result in a high proportion of walkout and daylight basements relative to other Montgomery County communities. These basements are among the most practical and valuable to finish because they have natural light, full-height access, and feel like a proper living level rather than a basement."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Does tree protection affect basement remodeling in Cabin John?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Potentially, yes. Montgomery County's Forest Conservation Law and Tree Canopy regulations protect significant trees on residential properties. Cabin John's heavily wooded character means many properties have large trees within the critical root zone of the foundation. Any excavation near the foundation — for egress window installation, exterior drainage work, or foundation waterproofing — must be assessed for proximity to protected trees. DMV General Contracting Group identifies significant trees near proposed excavation areas during the consultation and plans all exterior work to avoid critical root zones."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Does DMV General Contracting Group handle permits for basement remodeling in Cabin John?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. Cabin John is an unincorporated community in Montgomery County — all basement remodeling permits are processed through Montgomery County's Department of Permitting Services (DPS). DMV General Contracting Group handles all required building, electrical, and plumbing permits and manages all county correspondence and inspection scheduling. For ADU projects, we also manage the Certificate of Occupancy process."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How do I maximize natural light in a Cabin John basement?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Cabin John's sloped lots give many homes a natural advantage: walkout and daylight basements already have above-grade walls with full-height windows. For fully below-grade portions, the most effective strategies are egress window enlargement (where structurally and arboriculturally feasible), light-well construction on the rear or side walls away from trees, and interior design choices — light-reflective finishes, high-CRI LED lighting, and strategic mirror placement. DMV General Contracting Group's design team assesses the natural light potential of every Cabin John basement during the consultation."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is DMV General Contracting Group licensed for basement remodeling in Cabin John, MD?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. DMV General Contracting Group holds a Maryland MHIC (Home Improvement Contractor) license — required for all home renovation work in Cabin John and Montgomery County. We are fully bonded, carry comprehensive general liability insurance and workers' compensation coverage, and provide a 1-year workmanship warranty on every basement remodeling project completed in Cabin John."
-          }
-        }
-      ]
-    }
-  ]
-};
-
 const faqData = [
   {
     eventKey: "0",
     question: "How much does basement remodeling cost in Cabin John, MD?",
-    answer: "Basement remodeling in Cabin John typically costs $30,000&ndash;$130,000 depending on basement type and scope. A walkout basement finishing runs $30,000&ndash;$60,000. Converting a daylight basement to walkout and finishing costs $38,000&ndash;$70,000. A below-grade basement finishing with light strategy costs $32,000&ndash;$62,000. A full walkout renovation with guest suite and premium finishes can reach $85,000&ndash;$130,000. Site conditions &mdash; tree proximity, drainage, terrain slope &mdash; affect scope and cost more in Cabin John than in flat suburban communities. DMV-GC Group visits every property before any estimate is prepared."
+    answer: "Basement remodeling in Cabin John typically costs $30,000&ndash;$130,000 depending on basement type and scope. A walkout basement finishing runs $30,000&ndash;$60,000. Converting a daylight basement to walkout and finishing costs $38,000&ndash;$70,000. A below-grade basement finishing with light strategy costs $32,000&ndash;$62,000. A full walkout renovation with guest suite and premium finishes can reach $85,000&ndash;$130,000. Site conditions &mdash; tree proximity, drainage, terrain slope &mdash; affect scope and cost more in Cabin John than in flat suburban communities. DMV General Contracting Group visits every property before any estimate is prepared."
   },
   {
     eventKey: "1",
     question: "Does my Cabin John home have a walkout basement?",
-    answer: "Many do &mdash; Cabin John&apos;s sloped terrain along the Potomac River palisades means a higher proportion of homes here have walkout or daylight basements than in flatter Montgomery County communities. If your home sits on a sloped lot and the rear yard is significantly lower than the front, you likely have at least a daylight basement &mdash; and possibly a full walkout. DMV-GC Group assesses the exact configuration of your basement during the free in-home consultation."
+    answer: "Many do &mdash; Cabin John&apos;s sloped terrain along the Potomac River palisades means a higher proportion of homes here have walkout or daylight basements than in flatter Montgomery County communities. If your home sits on a sloped lot and the rear yard is significantly lower than the front, you likely have at least a daylight basement &mdash; and possibly a full walkout. DMV General Contracting Group assesses the exact configuration of your basement during the free in-home consultation."
   },
   {
     eventKey: "2",
     question: "Does tree protection affect basement remodeling in Cabin John?",
-    answer: "Yes, potentially. Montgomery County&apos;s Forest Conservation Law protects significant trees, and the physical reality of tree root systems means excavation within the critical root zone can damage trees. DMV-GC Group identifies significant trees near all proposed excavation areas &mdash; egress windows, drainage work, exterior door additions &mdash; and designs all exterior work to avoid root zone conflicts. Where a preferred location conflicts with a significant tree, we present alternative locations and approaches before proceeding."
+    answer: "Yes, potentially. Montgomery County&apos;s Forest Conservation Law protects significant trees, and the physical reality of tree root systems means excavation within the critical root zone can damage trees. DMV General Contracting Group identifies significant trees near all proposed excavation areas &mdash; egress windows, drainage work, exterior door additions &mdash; and designs all exterior work to avoid root zone conflicts. Where a preferred location conflicts with a significant tree, we present alternative locations and approaches before proceeding."
   },
   {
     eventKey: "3",
     question: "How can I get more natural light in my Cabin John basement?",
-    answer: "The most impactful options are: (1) converting a daylight basement to walkout by cutting a new exterior door in an above-grade section of the rear or side wall; (2) installing light wells on side walls that have partial above-grade exposure &mdash; often further from tree root zones than rear walls; and (3) high-quality LED lighting at 90+ CRI with layered light sources for areas where natural light is genuinely limited. Interior finish choices also matter significantly &mdash; light-colored walls and reflective finishes multiply the effect of available light. DMV-GC Group assesses the natural light potential of every Cabin John basement during consultation."
+    answer: "The most impactful options are: (1) converting a daylight basement to walkout by cutting a new exterior door in an above-grade section of the rear or side wall; (2) installing light wells on side walls that have partial above-grade exposure &mdash; often further from tree root zones than rear walls; and (3) high-quality LED lighting at 90+ CRI with layered light sources for areas where natural light is genuinely limited. Interior finish choices also matter significantly &mdash; light-colored walls and reflective finishes multiply the effect of available light. DMV General Contracting Group assesses the natural light potential of every Cabin John basement during consultation."
   },
   {
     eventKey: "4",
-    question: "Does DMV-GC Group handle permits for basement remodeling in Cabin John?",
-    answer: "Yes. Cabin John is an unincorporated community in Montgomery County &mdash; all basement remodeling permits go through Montgomery County DPS. DMV-GC Group handles all required building, electrical, and plumbing permits, manages all county correspondence, and schedules all required inspections. For projects near significant trees, we document tree locations on permit drawings as required by county regulations."
+    question: "Does DMV General Contracting Group handle permits for basement remodeling in Cabin John?",
+    answer: "Yes. Cabin John is an unincorporated community in Montgomery County &mdash; all basement remodeling permits go through Montgomery County DPS. DMV General Contracting Group handles all required building, electrical, and plumbing permits, manages all county correspondence, and schedules all required inspections. For projects near significant trees, we document tree locations on permit drawings as required by county regulations."
   },
   {
     eventKey: "5",
-    question: "Is DMV-GC Group licensed for basement remodeling in Cabin John, MD?",
-    answer: "Yes. DMV-GC Group holds a Maryland MHIC (Home Improvement Contractor) license &mdash; required for all home renovation work in Cabin John and Montgomery County. We employ licensed plumbers and electricians in-house, are fully bonded, carry comprehensive general liability insurance and workers&apos; compensation coverage, and provide a 1-year workmanship warranty on every basement project in Cabin John."
+    question: "Is DMV General Contracting Group licensed for basement remodeling in Cabin John, MD?",
+    answer: "Yes. DMV General Contracting Group holds a Maryland MHIC (Home Improvement Contractor) license &mdash; required for all home renovation work in Cabin John and Montgomery County. We employ licensed plumbers and electricians in-house, are fully bonded, carry comprehensive general liability insurance and workers&apos; compensation coverage, and provide a 1-year workmanship warranty on every basement project in Cabin John."
   }
 ];
 
@@ -631,10 +515,6 @@ export default function BasementCabinJohnMD() {
         </div>
 
         {/* SCHEMA JSON-LD */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaJsonLd) }}
-        />
       </div>
     </div>
   );

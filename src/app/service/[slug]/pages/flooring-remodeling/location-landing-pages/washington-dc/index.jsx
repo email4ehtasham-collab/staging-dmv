@@ -7,144 +7,6 @@ import { useMyContext } from "@/hooks/context";
 import "../city-service-style.scss";
 import "./style.scss";
 
-const schemaJsonLd = {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "GeneralContractor",
-      "@id": "https://www.dmv-gc.com/#business",
-      "name": "DMV General Contracting Group LLC",
-      "legalName": "DMV General Contracting Group LLC",
-      "alternateName": ["DMV General Contracting Group", "DMV-GC"],
-      "url": "https://www.dmv-gc.com",
-      "telephone": "+1-240-730-1292",
-      "email": "support@dmv-gc.com",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "11810 Grand Park Ave #500",
-        "addressLocality": "North Bethesda",
-        "addressRegion": "MD",
-        "postalCode": "20852",
-        "addressCountry": "US"
-      },
-      "areaServed": {
-        "@type": "City",
-        "name": "Washington",
-        "sameAs": "https://en.wikipedia.org/wiki/Washington,_D.C."
-      },
-      "hasCredential": [
-        {
-          "@type": "EducationalOccupationalCredential",
-          "name": "MHIC License #156178"
-        },
-        {
-          "@type": "EducationalOccupationalCredential",
-          "name": "DLCP License #410526000209"
-        }
-      ],
-      "priceRange": "$$$"
-    },
-    {
-      "@type": "Service",
-      "name": "Flooring Installation in Washington, DC",
-      "serviceType": "Flooring Installation",
-      "provider": {
-        "@id": "https://www.dmv-gc.com/#business"
-      },
-      "areaServed": {
-        "@type": "City",
-        "name": "Washington"
-      },
-      "description": "Full-service flooring installation and replacement in Washington, DC. Original hardwood refinishing for Georgetown, Capitol Hill, and Logan Circle rowhouses; LVP and engineered hardwood for DC condos and co-ops on concrete slab; porcelain and natural stone tile throughout — DLCP licensed, HPRB-aware for historic district exterior scope.",
-      "offers": {
-        "@type": "Offer",
-        "priceCurrency": "USD",
-        "priceSpecification": {
-          "@type": "PriceSpecification",
-          "minPrice": "3",
-          "maxPrice": "32",
-          "priceCurrency": "USD",
-          "unitCode": "SQFT"
-        }
-      }
-    },
-    {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://www.dmv-gc.com/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Services",
-          "item": "https://www.dmv-gc.com/services"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Flooring",
-          "item": "https://www.dmv-gc.com/service/flooring-remodeling"
-        },
-        {
-          "@type": "ListItem",
-          "position": 4,
-          "name": "Washington, DC",
-          "item": "https://www.dmv-gc.com/service/flooring-remodeling/washington-dc"
-        }
-      ]
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "How much does flooring installation cost in Washington, DC?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Flooring installation in Washington, DC typically costs $3–$32 per square foot installed. Original hardwood refinishing for Georgetown, Capitol Hill, and Logan Circle rowhouses costs $3–$6 per square foot. Wide-plank white oak installation runs $10–$18 per square foot. Engineered hardwood glue-down on concrete condo slab runs $8–$16 per square foot. Premium LVP with acoustic underlayment for DC condos and co-ops runs $6–$12 per square foot. Large-format porcelain tile costs $8–$18 per square foot. Carrara marble for Dupont Circle or Georgetown primary bathrooms runs $18–$32 per square foot. Whole-rowhouse flooring projects in DC's historic neighborhoods typically run $15,000–$40,000. Whole-unit condo replacement runs $8,000–$20,000."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Does DMV General Contracting Group hold a DC contractor license for flooring work?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. DMV General Contracting Group holds a DLCP (DC Department of Licensing and Consumer Protection) license #410526000209 — required for all home improvement contracting work in Washington, DC. We also hold Maryland MHIC license #156178. We are fully licensed in both jurisdictions, bonded, and insured, making us one of the few flooring contractors in the DMV region who can serve both DC and Maryland clients under valid jurisdiction-specific licenses."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Does Flooring installation in Washington, DC require HPRB approval?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "No — interior flooring is not reviewed by the Historic Preservation Review Board (HPRB) or any DC historic preservation authority. HPRB reviews exterior changes to properties in DC's historic districts and individual landmark buildings. Interior renovations, including flooring of any type, are not subject to historic review. However, when flooring is part of a broader renovation that includes exterior scope — such as a rear addition, window replacement, or facade modification — those exterior components require HPRB review if the property is in a historic district or is an individual DC landmark. DMV General Contracting Group holds the DLCP license required for all DC renovation work and understands when broader project scope requires HPRB coordination."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can I install solid hardwood floors in a Washington, DC condo?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "It depends on the building type. DC's mid-rise and high-rise condo and co-op buildings have concrete slab subfloors — solid hardwood nail-down is not possible on concrete. The correct specification for DC condo slab construction is engineered hardwood glue-down or premium LVP floated with acoustic underlayment. DC's historic rowhouse conversions to condo units may have wood subfloors if the original joists and flooring were retained — in these cases, solid hardwood may be viable above grade. DMV General Contracting Group confirms subfloor type at the consultation before any material is specified."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What flooring is best for Washington, DC rowhouses?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Original hardwood refinishing is almost always the right first recommendation for DC rowhouses in Georgetown, Capitol Hill, Logan Circle, Dupont Circle, and similar historic neighborhoods. DC rowhouses built between 1880 and 1940 frequently have original heart pine, oak, or fir strip hardwood that has survived under carpet and retains sufficient thickness for refinishing. These floors carry the authentic material character of DC's historic neighborhoods. DMV General Contracting Group checks remaining thickness, assesses crawlspace or basement moisture conditions, addresses squeak sources, and refinishes at $3–$6 per square foot — a fraction of the $10–$18 per square foot cost of new hardwood installation."
-          }
-        }
-      ]
-    }
-  ]
-};
-
 const WashingtonDC = () => {
   const { setActiveMenuItem } = useMyContext();
 
@@ -158,28 +20,26 @@ const WashingtonDC = () => {
       answer: `Flooring in Washington, DC typically costs $3–$32 per square foot depending on material and housing type. Heart pine or oak refinishing for DC rowhouses costs $3–$6 per square foot — a typical three-story Capitol Hill rowhouse with 2,000 sq ft of original hardwood runs $6,000–$12,000. Wide-plank white oak new installation runs $10–$18 per square foot. Engineered hardwood glue-down for condo slab runs $8–$16 per square foot. Premium LVP with acoustic underlayment for DC condos runs $6–$12 per square foot. Period hex or subway tile with uncoupling membrane for rowhouse bathrooms runs $14–$28 per square foot. Carrara or Calacatta marble for premium DC bathrooms runs $20–$32 per square foot. A typical Capitol Hill or Logan Circle rowhouse whole-floor project runs $12,000–$28,000. A typical Navy Yard or NoMa condo replacement runs $8,000–$20,000.`
     },
     {
-      question: "Does DMV-GC Group hold a DC contractor license?",
-      answer: `Yes. DMV-GC Group holds DLCP (DC Department of Licensing and Consumer Protection) license #410526000209 — the license required for all home improvement contracting work in Washington, DC. Maryland MHIC license is not valid for work performed in DC. We also hold Maryland MHIC license #156178, making us one of the few flooring contractors in the DMV who can legally serve both DC and Maryland clients under valid jurisdiction-specific licenses.`
+      question: "Does DMV General Contracting Group hold a DC contractor license?",
+      answer: `Yes. DMV General Contracting Group holds DLCP (DC Department of Licensing and Consumer Protection) license #410526000209 — the license required for all home improvement contracting work in Washington, DC. Maryland MHIC license is not valid for work performed in DC. We also hold Maryland MHIC license #156178, making us one of the few flooring contractors in the DMV who can legally serve both DC and Maryland clients under valid jurisdiction-specific licenses.`
     },
     {
       question: "Does flooring installation in a DC historic district require HPRB approval?",
-      answer: `No. The Historic Preservation Review Board reviews exterior changes to properties in DC's historic districts and individual landmarks — not interior renovations. Interior flooring of any type can be installed without any historic preservation review or approval. When flooring is part of a broader renovation that includes exterior scope in a historic district — a rear addition, facade modification, or window replacement — that exterior scope requires HPRB review. DMV-GC Group identifies at the consultation whether broader project scope requires HPRB coordination and handles that process when it does.`
+      answer: `No. The Historic Preservation Review Board reviews exterior changes to properties in DC's historic districts and individual landmarks — not interior renovations. Interior flooring of any type can be installed without any historic preservation review or approval. When flooring is part of a broader renovation that includes exterior scope in a historic district — a rear addition, facade modification, or window replacement — that exterior scope requires HPRB review. DMV General Contracting Group identifies at the consultation whether broader project scope requires HPRB coordination and handles that process when it does.`
     },
     {
       question: "What is heart pine and why is it important for DC rowhouse floors?",
-      answer: `Heart pine — longleaf pine — was the dominant flooring material in DC rowhouses built between approximately 1880 and 1930. Grown over 200+ years in the longleaf pine forests of the American South before those forests were largely cleared, longleaf heart pine is harder than red oak and has a warm amber color that deepens with age. DC rowhouse heart pine floors that have survived under carpet for 50–80 years are made from a material that is no longer commercially available. When these floors are viable for refinishing — which is often, given how long they were protected under carpet — restoring them preserves genuinely irreplaceable material at $3–$6 per square foot. DMV-GC Group identifies heart pine versus oak during the consultation and calibrates the sanding and finishing approach accordingly.`
+      answer: `Heart pine — longleaf pine — was the dominant flooring material in DC rowhouses built between approximately 1880 and 1930. Grown over 200+ years in the longleaf pine forests of the American South before those forests were largely cleared, longleaf heart pine is harder than red oak and has a warm amber color that deepens with age. DC rowhouse heart pine floors that have survived under carpet for 50–80 years are made from a material that is no longer commercially available. When these floors are viable for refinishing — which is often, given how long they were protected under carpet — restoring them preserves genuinely irreplaceable material at $3–$6 per square foot. DMV General Contracting Group identifies heart pine versus oak during the consultation and calibrates the sanding and finishing approach accordingly.`
     },
     {
-      question: "How does DMV-GC Group handle DC co-op board pre-approval for flooring projects?",
-      answer: `DC co-op board pre-approval for renovation work typically requires a submission package including the contractor's DLCP license, proof of insurance, a description of project scope, material specifications, and an acoustic underlayment specification sheet for hard flooring installations. The approval timeline in DC's older co-op buildings can be 2–6 weeks. DMV-GC Group prepares and submits the full pre-approval package, builds the approval timeline into the project schedule, and manages follow-up with the co-op board until approval is received. Homeowners are not required to navigate the co-op board process themselves — we handle it entirely as part of the project scope.`
+      question: "How does DMV General Contracting Group handle DC co-op board pre-approval for flooring projects?",
+      answer: `DC co-op board pre-approval for renovation work typically requires a submission package including the contractor's DLCP license, proof of insurance, a description of project scope, material specifications, and an acoustic underlayment specification sheet for hard flooring installations. The approval timeline in DC's older co-op buildings can be 2–6 weeks. DMV General Contracting Group prepares and submits the full pre-approval package, builds the approval timeline into the project schedule, and manages follow-up with the co-op board until approval is received. Homeowners are not required to navigate the co-op board process themselves — we handle it entirely as part of the project scope.`
     }
   ];
 
   return (
     <div className="city-service-detail-page flooring-washington-dc">
       <div className="container">
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaJsonLd) }} />
-
         <nav className="breadcrumb" aria-label="Breadcrumb">
           <Link href="/">Home</Link><span>›</span><Link href="/services">Services</Link><span>›</span><Link href="/service/flooring-remodeling">Flooring Installation</Link><span>›</span>Washington, DC
         </nav>

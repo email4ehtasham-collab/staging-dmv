@@ -7,103 +7,6 @@ import { useMyContext } from "@/hooks/context";
 import "../city-service-style.scss";
 import "./style.scss";
 
-const schemaJsonLd = {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "GeneralContractor",
-      "@id": "https://www.dmv-gc.com/#business",
-      "name": "DMV General Contracting Group LLC",
-      "legalName": "DMV General Contracting Group LLC",
-      "alternateName": ["DMV General Contracting Group", "DMV-GC"],
-      "url": "https://www.dmv-gc.com",
-      "telephone": "+1-240-730-1292",
-      "email": "support@dmv-gc.com",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "11810 Grand Park Ave #500",
-        "addressLocality": "North Bethesda",
-        "addressRegion": "MD",
-        "postalCode": "20852",
-        "addressCountry": "US"
-      },
-      "areaServed": { "@type": "City", "name": "Silver Spring", "sameAs": "https://en.wikipedia.org/wiki/Silver_Spring,_Maryland" },
-      "hasCredential": [
-        { "@type": "EducationalOccupationalCredential", "name": "MHIC License #156178" },
-        { "@type": "EducationalOccupationalCredential", "name": "DLCP License #410526000209" }
-      ],
-      "priceRange": "$$$"
-    },
-    {
-      "@type": "Service",
-      "name": "Flooring Installation in Silver Spring, MD",
-      "serviceType": "Flooring Installation",
-      "provider": { "@id": "https://www.dmv-gc.com/#business" },
-      "areaServed": { "@type": "City", "name": "Silver Spring" },
-      "description": "Full-service flooring installation, refinishing, and replacement in Silver Spring, MD. Hardwood refinishing for postwar colonials, LVP for split-level lower levels and kitchens, porcelain tile for bathrooms, and whole-home flooring replacement across Four Corners, Woodside, Wheaton Hills, Sligo Creek, and all Silver Spring neighborhoods.",
-      "offers": {
-        "@type": "Offer",
-        "priceCurrency": "USD",
-        "priceSpecification": { "@type": "PriceSpecification", "minPrice": "4", "maxPrice": "18", "priceCurrency": "USD", "unitCode": "SQFT" }
-      }
-    },
-    {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.dmv-gc.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.dmv-gc.com/services" },
-        { "@type": "ListItem", "position": 3, "name": "Flooring", "item": "https://www.dmv-gc.com/service/flooring-remodeling" },
-        { "@type": "ListItem", "position": 4, "name": "Silver Spring, MD", "item": "https://www.dmv-gc.com/service/flooring-remodeling/silver-spring-md" }
-      ]
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "How much does flooring installation cost in Silver Spring, MD?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Flooring installation in Silver Spring, MD typically costs $4–$18 per square foot installed depending on material. Hardwood refinishing costs $3–$6 per square foot. New hardwood installation runs $8–$15 per square foot. LVP installation costs $5–$10 per square foot. Porcelain tile costs $8–$18 per square foot. Silver Spring's diverse housing — postwar colonials and split-levels in Four Corners and Woodside, 1960s–70s ranches near the DC line, newer townhomes in downtown Silver Spring — means subfloor conditions vary widely. DMV General Contracting Group assesses subfloor condition during the free in-home consultation and includes all required prep in the itemized estimate."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is the best flooring for Silver Spring's split-level homes?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Silver Spring's 1950s–70s split-levels present a two-zone flooring challenge. The upper main level — living room, dining room, bedrooms — is typically above-grade and suitable for hardwood or engineered hardwood where original floors are present, or LVP where hardwood is absent or damaged. The lower level — family room, laundry, often converted to an ADU — is at or below grade and requires LVP or other moisture-tolerant flooring rather than solid hardwood. DMV General Contracting Group recommends hardwood or engineered hardwood on the upper level and premium LVP on the lower level for Silver Spring split-levels — matching the visual warmth of the upper floor without the moisture risk below grade."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can DMV General Contracting Group refinish original hardwood in Silver Spring's postwar homes?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes — and for Silver Spring's 1940s–60s colonials and split-levels with original strip hardwood, refinishing is often the right first choice. Original oak strip floors in Silver Spring's Four Corners and Woodside colonials are typically 2.25-inch strip that has genuine thickness remaining for sanding. DMV General Contracting Group checks remaining thickness above the tongue before recommending refinishing. When viable, refinishing costs $3–$6 per square foot versus $8–$15 for new hardwood — and preserves the original floor that is part of the home's postwar character."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is LVP a good flooring choice for Silver Spring homes?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes — particularly for Silver Spring's split-level lower levels, kitchens, bathrooms, and any below-grade finished spaces. LVP is 100% waterproof, handles Silver Spring's seasonal humidity swings without cupping or buckling, and is available in highly realistic wood looks that complement adjacent hardwood on upper levels. For Silver Spring families with active households, LVP is often the most practical whole-floor choice for the main living level as well. Premium LVP brands — Shaw, COREtec, Karndean — are genuinely difficult to distinguish from hardwood at casual inspection."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is DMV General Contracting Group licensed for flooring installation in Silver Spring, MD?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. DMV General Contracting Group holds a Maryland MHIC license (#156178) — required for all home improvement work in Silver Spring and Montgomery County. We are fully bonded, carry comprehensive general liability insurance and workers' compensation coverage, and provide a 1-year workmanship warranty on every Silver Spring flooring project."
-          }
-        }
-      ]
-    }
-  ]
-};
-
 const SilverSpringMD = () => {
   const { setActiveMenuItem } = useMyContext();
 
@@ -114,7 +17,7 @@ const SilverSpringMD = () => {
   const faqData = [
     {
       question: "How much does flooring installation cost in Silver Spring, MD?",
-      answer: "Flooring in Silver Spring typically costs $3–$18 per square foot depending on material and zone. Hardwood refinishing costs $3–$6 per square foot. New hardwood installation runs $8–$15 per square foot. Premium LVP for lower levels costs $5–$10 per square foot. Porcelain tile runs $8–$18 per square foot. A typical Silver Spring split-level whole-home flooring package — hardwood refinishing or new hardwood upstairs, premium LVP downstairs, tile in bathrooms — runs $12,000–$28,000 for a 1,500–2,000 sq ft home. DMV-GC Group provides free, itemized zone-by-zone estimates."
+      answer: "Flooring in Silver Spring typically costs $3–$18 per square foot depending on material and zone. Hardwood refinishing costs $3–$6 per square foot. New hardwood installation runs $8–$15 per square foot. Premium LVP for lower levels costs $5–$10 per square foot. Porcelain tile runs $8–$18 per square foot. A typical Silver Spring split-level whole-home flooring package — hardwood refinishing or new hardwood upstairs, premium LVP downstairs, tile in bathrooms — runs $12,000–$28,000 for a 1,500–2,000 sq ft home. DMV General Contracting Group provides free, itemized zone-by-zone estimates."
     },
     {
       question: "Why can't I install solid hardwood on the lower level of my Silver Spring split-level?",
@@ -122,23 +25,21 @@ const SilverSpringMD = () => {
     },
     {
       question: "Can my original hardwood floors in Silver Spring be refinished?",
-      answer: "Often yes — Silver Spring's Four Corners and Woodside colonials from the 1940s–60s frequently have original 2.25-inch oak strip flooring that has sufficient remaining thickness for refinishing. DMV-GC Group checks remaining thickness above the tongue during the free consultation. If viable, refinishing costs $3–$6 per square foot versus $8–$15 for replacement — and preserves the original floor that is part of the home's postwar character. We always recommend refinishing when the floor is structurally viable."
+      answer: "Often yes — Silver Spring's Four Corners and Woodside colonials from the 1940s–60s frequently have original 2.25-inch oak strip flooring that has sufficient remaining thickness for refinishing. DMV General Contracting Group checks remaining thickness above the tongue during the free consultation. If viable, refinishing costs $3–$6 per square foot versus $8–$15 for replacement — and preserves the original floor that is part of the home's postwar character. We always recommend refinishing when the floor is structurally viable."
     },
     {
-      question: "What LVP brand does DMV-GC Group recommend for Silver Spring lower levels?",
-      answer: "DMV-GC Group works with several premium LVP brands depending on project requirements and budget: COREtec and Shaw Floorté for maximum core rigidity and realistic appearance; Karndean for a premium design range; LifeProof (Home Depot commercial grade) for budget-conscious projects that still require commercial-grade durability. All are 100% waterproof with wear layers of 12mil or greater. We specify the product tier appropriate to each project — ADU rental units get a more durable wear layer than a homeowner's primary residence lower level that sees lighter traffic."
+      question: "What LVP brand does DMV General Contracting Group recommend for Silver Spring lower levels?",
+      answer: "DMV General Contracting Group works with several premium LVP brands depending on project requirements and budget: COREtec and Shaw Floorté for maximum core rigidity and realistic appearance; Karndean for a premium design range; LifeProof (Home Depot commercial grade) for budget-conscious projects that still require commercial-grade durability. All are 100% waterproof with wear layers of 12mil or greater. We specify the product tier appropriate to each project — ADU rental units get a more durable wear layer than a homeowner's primary residence lower level that sees lighter traffic."
     },
     {
-      question: "Is DMV-GC Group licensed for flooring in Silver Spring, MD?",
-      answer: "Yes. DMV-GC Group holds Maryland MHIC license #156178 — required for all home improvement work in Silver Spring and Montgomery County. We are fully bonded, carry comprehensive general liability insurance and workers' compensation coverage, and provide a 1-year workmanship warranty on every Silver Spring flooring project."
+      question: "Is DMV General Contracting Group licensed for flooring in Silver Spring, MD?",
+      answer: "Yes. DMV General Contracting Group holds Maryland MHIC license #156178 — required for all home improvement work in Silver Spring and Montgomery County. We are fully bonded, carry comprehensive general liability insurance and workers' compensation coverage, and provide a 1-year workmanship warranty on every Silver Spring flooring project."
     }
   ];
 
   return (
     <div className="city-service-detail-page flooring-silver-spring-md">
       <div className="container">
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaJsonLd) }} />
-
         <nav className="breadcrumb">
           <Link href="/">Home</Link><span>›</span>
           <Link href="/services">Services</Link><span>›</span>

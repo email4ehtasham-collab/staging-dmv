@@ -17,27 +17,27 @@ const ChevyChaseMD = () => {
     const faqData = [
         {
             question: "How much does a kitchen remodel cost in Chevy Chase, MD?",
-            answer: "Kitchen remodeling in Chevy Chase, MD typically costs between $50,000 and $200,000+ depending on home size, scope, and finish level. A mid-range remodel runs $60,000–$100,000. A full luxury renovation with custom cabinetry, premium appliances, and natural stone surfaces ranges from $120,000 to $200,000+. Chevy Chase's high property values mean kitchen renovations here typically involve premium materials and finishes that align with the quality of the home. DMV-GC Group provides free in-home consultations with detailed estimates."
+            answer: "Kitchen remodeling in Chevy Chase, MD typically costs between $50,000 and $200,000+ depending on home size, scope, and finish level. A mid-range remodel runs $60,000–$100,000. A full luxury renovation with custom cabinetry, premium appliances, and natural stone surfaces ranges from $120,000 to $200,000+. Chevy Chase's high property values mean kitchen renovations here typically involve premium materials and finishes that align with the quality of the home. DMV General Contracting Group provides free in-home consultations with detailed estimates."
         },
         {
-            question: "Does DMV-GC Group work in Chevy Chase Village and the special taxing areas?",
-            answer: "Yes. Chevy Chase is made up of several distinct incorporated villages and special taxing areas — including Chevy Chase Village, Section 3, Section 5, Martin's Additions, and others — each with its own local government and, in some cases, additional permit or design review requirements. DMV-GC Group is experienced working across these jurisdictions and identifies the specific requirements that apply to each property before beginning design work."
+            question: "Does DMV General Contracting Group work in Chevy Chase Village and the special taxing areas?",
+            answer: "Yes. Chevy Chase is made up of several distinct incorporated villages and special taxing areas — including Chevy Chase Village, Section 3, Section 5, Martin's Additions, and others — each with its own local government and, in some cases, additional permit or design review requirements. DMV General Contracting Group is experienced working across these jurisdictions and identifies the specific requirements that apply to each property before beginning design work."
         },
         {
-            question: "Can DMV-GC Group renovate a kitchen in a historic Chevy Chase home?",
-            answer: "Yes. Many homes in Chevy Chase — particularly in Chevy Chase Village and Section 3 — were built in the early 1900s and feature Colonial Revival, Tudor, and Craftsman architecture. DMV-GC Group has experience renovating kitchens in these homes, balancing modern functionality with the architectural character that defines Chevy Chase's historic neighborhoods. We assess original structural elements, plaster, and older systems as part of every renovation in these homes."
+            question: "Can DMV General Contracting Group renovate a kitchen in a historic Chevy Chase home?",
+            answer: "Yes. Many homes in Chevy Chase — particularly in Chevy Chase Village and Section 3 — were built in the early 1900s and feature Colonial Revival, Tudor, and Craftsman architecture. DMV General Contracting Group has experience renovating kitchens in these homes, balancing modern functionality with the architectural character that defines Chevy Chase's historic neighborhoods. We assess original structural elements, plaster, and older systems as part of every renovation in these homes."
         },
         {
-            question: "Does DMV-GC Group handle permits for kitchen remodeling in Chevy Chase?",
-            answer: "Yes. DMV-GC Group's in-house permit team handles all required permits for kitchen remodels in Chevy Chase. Because several Chevy Chase communities are independently incorporated villages with their own building codes in addition to Montgomery County requirements, we determine the specific permit and design review process that applies to each property and manage the entire process from application through final inspection."
+            question: "Does DMV General Contracting Group handle permits for kitchen remodeling in Chevy Chase?",
+            answer: "Yes. DMV General Contracting Group's in-house permit team handles all required permits for kitchen remodels in Chevy Chase. Because several Chevy Chase communities are independently incorporated villages with their own building codes in addition to Montgomery County requirements, we determine the specific permit and design review process that applies to each property and manage the entire process from application through final inspection."
         },
         {
             question: "What is the ROI of a kitchen remodel in Chevy Chase, MD?",
             answer: "A professionally renovated kitchen in Chevy Chase typically returns 70–80% of its cost in immediate property value. Given Chevy Chase's position as one of the highest-value real estate markets in Montgomery County — with median home values frequently exceeding $1.5 million — an updated kitchen is often considered essential rather than optional by buyers in this market. Homes with dated kitchens in Chevy Chase often face significant price reductions or extended time on market relative to comparable renovated properties."
         },
         {
-            question: "Is DMV-GC Group licensed for kitchen remodeling in Chevy Chase, MD?",
-            answer: "Yes. DMV-GC Group holds a Maryland MHIC (Home Improvement Contractor) license — required for all home renovation work in Chevy Chase and Montgomery County. We are fully bonded, carry comprehensive general liability insurance and workers' compensation coverage, and provide a 1-year workmanship warranty on every kitchen remodeling project completed in Chevy Chase."
+            question: "Is DMV General Contracting Group licensed for kitchen remodeling in Chevy Chase, MD?",
+            answer: "Yes. DMV General Contracting Group holds a Maryland MHIC (Home Improvement Contractor) license — required for all home renovation work in Chevy Chase and Montgomery County. We are fully bonded, carry comprehensive general liability insurance and workers' compensation coverage, and provide a 1-year workmanship warranty on every kitchen remodeling project completed in Chevy Chase."
         }
     ];
 

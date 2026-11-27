@@ -3,6 +3,7 @@ import { pageMetadata } from "@/lib/seo/resolve";
 import { notFound } from "next/navigation";
 import ProjectData from "@/data/projects/ProjectsData";
 import ProjectClient from "./ProjectClient";
+import PageSchema from "@/components/Schema/PageSchema";
 
 export function generateStaticParams() {
   return ProjectData.map((project) => ({ slug: project.slug }));
@@ -33,5 +34,10 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
 
   if (!project) return notFound();
 
-  return <ProjectClient project={project} />;
+  return (
+    <>
+      <PageSchema path={`/project/${slug}`} />
+      <ProjectClient project={project} />
+    </>
+  );
 }

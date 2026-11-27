@@ -13,6 +13,7 @@ import DcProjectsReviews from "@/components/ServiceArea/DcProjectsReviews";
 import HomesMatrix from "@/components/ServiceArea/HomesMatrix";
 import ServiceAreaPage from "@/components/ServiceArea/ServiceAreaPage";
 import SupportingServices from "@/components/ServiceArea/SupportingServices";
+import PageSchema from "@/components/Schema/PageSchema";
 
 const baseMetadata: Metadata = {
   title: "General Contractor in Washington, DC | Home Remodeling",
@@ -68,6 +69,8 @@ export default function WashingtonDcServiceAreaPage() {
         },
       ]}
     >
+      <PageSchema path="/service-area/washington-dc" />
+
       <HomeServices
         eyebrow="Services"
         title="Home Remodeling Services in Washington, DC"

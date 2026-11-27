@@ -18,27 +18,27 @@ const PotomacMD = () => {
     const faqData = [
         {
             question: "How much does a kitchen remodel cost in Potomac, MD?",
-            answer: "Kitchen remodeling in Potomac typically costs $45,000–$200,000+ depending on scope and finishes. Potomac's high-end real estate market — with median home values above $1.2M — means renovations here typically involve premium materials. A mid-range remodel runs $55,000–$85,000. A full luxury gut renovation averages $140,000–$200,000+. DMV-GC Group provides free in-home consultations with exact, itemized estimates for your specific Potomac kitchen."
+            answer: "Kitchen remodeling in Potomac typically costs $45,000–$200,000+ depending on scope and finishes. Potomac's high-end real estate market — with median home values above $1.2M — means renovations here typically involve premium materials. A mid-range remodel runs $55,000–$85,000. A full luxury gut renovation averages $140,000–$200,000+. DMV General Contracting Group provides free in-home consultations with exact, itemized estimates for your specific Potomac kitchen."
         },
         {
             question: "How long does a kitchen remodel take in Potomac?",
-            answer: "Most kitchen renovations in Potomac take 8–14 weeks from start to completion. The design phase takes 2–3 weeks. Montgomery County permit processing typically adds 4–6 weeks. Construction takes 6–10 weeks depending on scope. DMV-GC Group manages the entire timeline in-house — design, permits, and construction — to keep your project moving as efficiently as possible."
+            answer: "Most kitchen renovations in Potomac take 8–14 weeks from start to completion. The design phase takes 2–3 weeks. Montgomery County permit processing typically adds 4–6 weeks. Construction takes 6–10 weeks depending on scope. DMV General Contracting Group manages the entire timeline in-house — design, permits, and construction — to keep your project moving as efficiently as possible."
         },
         {
-            question: "Does DMV-GC Group handle permits for kitchen remodeling in Potomac?",
-            answer: "Yes. DMV-GC Group's in-house permit team handles all required Montgomery County building, electrical, and plumbing permits for kitchen remodels in Potomac. We prepare and submit all permit applications, manage all county correspondence, and schedule all required inspections. You never need to visit a county office or manage any paperwork throughout the project."
+            question: "Does DMV General Contracting Group handle permits for kitchen remodeling in Potomac?",
+            answer: "Yes. DMV General Contracting Group's in-house permit team handles all required Montgomery County building, electrical, and plumbing permits for kitchen remodels in Potomac. We prepare and submit all permit applications, manage all county correspondence, and schedule all required inspections. You never need to visit a county office or manage any paperwork throughout the project."
         },
         {
-            question: "Does DMV-GC Group serve Avenel and other Potomac neighborhoods?",
-            answer: "Yes. DMV-GC Group serves all Potomac neighborhoods — Avenel, Travilah, Potomac Village, River Road corridor, Brickyard Road, and Potomac Falls. Our team has completed kitchen renovations throughout Potomac and is familiar with the architectural styles, HOA requirements, and home sizes common across each neighborhood."
+            question: "Does DMV General Contracting Group serve Avenel and other Potomac neighborhoods?",
+            answer: "Yes. DMV General Contracting Group serves all Potomac neighborhoods — Avenel, Travilah, Potomac Village, River Road corridor, Brickyard Road, and Potomac Falls. Our team has completed kitchen renovations throughout Potomac and is familiar with the architectural styles, HOA requirements, and home sizes common across each neighborhood."
         },
         {
-            question: "Can DMV-GC Group do an open-concept kitchen conversion in a Potomac home?",
+            question: "Can DMV General Contracting Group do an open-concept kitchen conversion in a Potomac home?",
             answer: "Yes. Open-concept kitchen conversions — including load-bearing wall removal — are one of our most requested projects in Potomac. Our in-house structural engineers assess every wall before removal, perform all required load calculations, specify the correct beam and post sizes, and manage all required Montgomery County structural permits. We handle the full conversion from design through drywall patching, flooring blend, and final paint."
         },
         {
-            question: "Is DMV-GC Group licensed for kitchen remodeling in Potomac, MD?",
-            answer: "Yes. DMV-GC Group holds a Maryland MHIC (Home Improvement Contractor) license — the required license for all home renovation contractors operating in Potomac and Montgomery County. We are fully bonded, carry comprehensive general liability insurance and workers' compensation, and provide a 1-year workmanship warranty on every kitchen remodeling project we complete."
+            question: "Is DMV General Contracting Group licensed for kitchen remodeling in Potomac, MD?",
+            answer: "Yes. DMV General Contracting Group holds a Maryland MHIC (Home Improvement Contractor) license — the required license for all home renovation contractors operating in Potomac and Montgomery County. We are fully bonded, carry comprehensive general liability insurance and workers' compensation, and provide a 1-year workmanship warranty on every kitchen remodeling project we complete."
         }
     ];
 

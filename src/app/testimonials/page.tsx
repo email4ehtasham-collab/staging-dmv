@@ -8,6 +8,7 @@ import PageData from "./pageData";
 import { Suspense } from "react";
 
 import StarsIcon from '@/assets/stars.svg';
+import PageSchema from "@/components/Schema/PageSchema";
 
 const GlobalStyles = createGlobalStyle`
     .modal-video {
@@ -105,7 +106,7 @@ const StyledCom = styled.div`
 
 const baseMetadata: Metadata = {
   title: "Client Reviews & Testimonials | DMV General Contracting Group Bethesda MD",
-  description: "See what homeowners say about DMV General Contracting Group. Read verified reviews from satisfied clients across Maryland, Virginia & DC. 4.9★ rated on Google with 97+ reviews.",
+  description: "See what homeowners say about DMV General Contracting Group. Read verified reviews from satisfied clients across Maryland & DC. 4.9★ rated on Google with 97+ reviews.",
 
     alternates: {
       canonical: `/testimonials`,
@@ -120,6 +121,7 @@ export function generateMetadata(): Promise<Metadata> {
 export default function TestimonialsPage() {
     return (
         <div className="page-wrapper">
+            <PageSchema path="/testimonials" />
             <NavitemActive nav="testimonials" />
             <GlobalStyles />
             <StyledCom>

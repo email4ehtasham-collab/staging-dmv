@@ -15,6 +15,7 @@ import ServiceAreas from "@/components/Home/ServiceAreas/ServiceAreas";
 import locationStyles from "@/components/ServiceLocation/service-location.module.scss";
 import servicesData from "@/data/services/ServiceData";
 import styles from "./style.module.scss";
+import PageSchema from "@/components/Schema/PageSchema";
 
 const baseMetadata: Metadata = {
   title: "General Contractor & Remodeling Services in Maryland & DC",
@@ -396,6 +397,7 @@ function ServiceGrid({ items }: { items: ServiceItem[] }) {
 export default function ServicesPage() {
   return (
     <main className={locationStyles.page}>
+      <PageSchema path="/services" />
       <NavitemActive nav="service" />
 
       <section className={locationStyles.hero} aria-labelledby="services-title">

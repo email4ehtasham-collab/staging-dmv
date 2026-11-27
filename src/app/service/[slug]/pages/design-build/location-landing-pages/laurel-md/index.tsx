@@ -18,11 +18,11 @@ const LaurelMD = () => {
     const faqData = [
         {
             question: "How many permit jurisdictions does Laurel, MD have and which one covers my home?",
-            answer: "Laurel has three permit jurisdictions: the City of Laurel (permit office at 8103 Sandy Spring Road, Laurel, MD 20707) for incorporated city properties; Montgomery County DPS (2425 Reedie Drive, Wheaton) for unincorporated MoCo addresses including West Laurel and Montpelier; and Prince George's County DPS for unincorporated PG County addresses including Laurel Lakes and Russett. The correct jurisdiction for your property cannot be determined from the street address or ZIP code alone — parcel-level lookup is required. DMV-GC Group confirms the correct jurisdiction for every Laurel project at the free consultation before any permit-required scope begins."
+            answer: "Laurel has three permit jurisdictions: the City of Laurel (permit office at 8103 Sandy Spring Road, Laurel, MD 20707) for incorporated city properties; Montgomery County DPS (2425 Reedie Drive, Wheaton) for unincorporated MoCo addresses including West Laurel and Montpelier; and Prince George's County DPS for unincorporated PG County addresses including Laurel Lakes and Russett. The correct jurisdiction for your property cannot be determined from the street address or ZIP code alone — parcel-level lookup is required. DMV General Contracting Group confirms the correct jurisdiction for every Laurel project at the free consultation before any permit-required scope begins."
         },
         {
-            question: "Does DMV-GC Group serve both MoCo and PG County addresses in Laurel?",
-            answer: "Yes. DMV-GC Group holds Maryland MHIC license #156178 — valid for home improvement and construction work throughout Maryland, including all three Laurel permit jurisdictions: City of Laurel, unincorporated Montgomery County, and unincorporated Prince George's County. We file with whichever of the three authorities governs your specific parcel — City of Laurel at 8103 Sandy Spring Road, MoCo DPS at 2425 Reedie Drive, or PG County DPS — and manage the full permit process in-house for each jurisdiction."
+            question: "Does DMV General Contracting Group serve both MoCo and PG County addresses in Laurel?",
+            answer: "Yes. DMV General Contracting Group holds Maryland MHIC license #156178 — valid for home improvement and construction work throughout Maryland, including all three Laurel permit jurisdictions: City of Laurel, unincorporated Montgomery County, and unincorporated Prince George's County. We file with whichever of the three authorities governs your specific parcel — City of Laurel at 8103 Sandy Spring Road, MoCo DPS at 2425 Reedie Drive, or PG County DPS — and manage the full permit process in-house for each jurisdiction."
         },
         {
             question: "How much does a design-build renovation cost in Laurel, MD?",
@@ -33,7 +33,7 @@ const LaurelMD = () => {
             answer: "ADU eligibility in Laurel depends on which jurisdiction governs your parcel. City of Laurel, Montgomery County, and Prince George's County each implement Maryland's 2021 ADU reforms with jurisdiction-specific rules governing ADU size, setback, owner-occupancy requirements, and eligible lot types. Our architects confirm ADU eligibility under the specific rules that apply to your parcel at the free consultation — not by assuming MoCo or PG County rules apply uniformly across all Laurel addresses."
         },
         {
-            question: "Is DMV-GC Group licensed for design-build in Laurel, MD?",
+            question: "Is DMV General Contracting Group licensed for design-build in Laurel, MD?",
             answer: "Yes. DMV General Contracting Group holds Maryland MHIC license #156178 — required for all home improvement and construction work in Laurel across all three permit jurisdictions. Fully bonded, comprehensive general liability and workers' compensation coverage, and a 1-year workmanship warranty on every Laurel design-build project."
         }
     ];

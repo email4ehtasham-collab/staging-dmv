@@ -17,27 +17,27 @@ const GaithersburgMD = () => {
     const faqData = [
         {
             question: "How much does a kitchen remodel cost in Gaithersburg, MD?",
-            answer: "Kitchen remodeling in Gaithersburg, MD typically costs between $25,000 and $140,000 depending on scope, home type, and finishes. A cosmetic refresh starts around $15,000–$28,000. A mid-range remodel with new cabinets and countertops runs $32,000–$65,000. A full gut renovation with custom cabinetry costs $70,000–$140,000. Gaithersburg's diverse housing stock — from Kentlands townhomes to larger single-family homes in Lakelands — means costs vary significantly by property type. DMV-GC Group provides free in-home consultations with detailed, itemized estimates."
+            answer: "Kitchen remodeling in Gaithersburg, MD typically costs between $25,000 and $140,000 depending on scope, home type, and finishes. A cosmetic refresh starts around $15,000–$28,000. A mid-range remodel with new cabinets and countertops runs $32,000–$65,000. A full gut renovation with custom cabinetry costs $70,000–$140,000. Gaithersburg's diverse housing stock — from Kentlands townhomes to larger single-family homes in Lakelands — means costs vary significantly by property type. DMV General Contracting Group provides free in-home consultations with detailed, itemized estimates."
         },
         {
-            question: "Does DMV-GC Group work with HOAs in Gaithersburg?",
-            answer: "Yes. Many Gaithersburg communities — including Kentlands, Lakelands, and Rio — have active HOAs with specific renovation guidelines covering exterior changes, noise restrictions, contractor parking, and building access. DMV-GC Group is experienced working within HOA-governed communities throughout Gaithersburg. We provide HOA documentation support, coordinate with property management, and schedule work to comply with community noise and access restrictions."
+            question: "Does DMV General Contracting Group work with HOAs in Gaithersburg?",
+            answer: "Yes. Many Gaithersburg communities — including Kentlands, Lakelands, and Rio — have active HOAs with specific renovation guidelines covering exterior changes, noise restrictions, contractor parking, and building access. DMV General Contracting Group is experienced working within HOA-governed communities throughout Gaithersburg. We provide HOA documentation support, coordinate with property management, and schedule work to comply with community noise and access restrictions."
         },
         {
             question: "Do I need a City of Gaithersburg or Montgomery County permit for my kitchen remodel?",
-            answer: "It depends on your property's exact location. Gaithersburg is an incorporated city — properties within city limits require City of Gaithersburg permits. However, many properties with 'Gaithersburg' mailing addresses are actually in unincorporated Montgomery County and require county permits instead. DMV-GC Group identifies the correct jurisdiction for your specific property before filing — preventing the costly delays that come from filing with the wrong authority."
+            answer: "It depends on your property's exact location. Gaithersburg is an incorporated city — properties within city limits require City of Gaithersburg permits. However, many properties with 'Gaithersburg' mailing addresses are actually in unincorporated Montgomery County and require county permits instead. DMV General Contracting Group identifies the correct jurisdiction for your specific property before filing — preventing the costly delays that come from filing with the wrong authority."
         },
         {
-            question: "Can DMV-GC Group remodel a townhome kitchen in Kentlands or Lakelands?",
+            question: "Can DMV General Contracting Group remodel a townhome kitchen in Kentlands or Lakelands?",
             answer: "Yes. Townhome kitchen remodels in Kentlands and Lakelands are one of our most common project types in Gaithersburg. We handle all Kentlands Citizens Assembly and Lakelands HOA coordination — including pre-approval documentation, insurance certificates, noise scheduling, and contractor registration. Our design team specializes in maximizing townhome kitchen spaces through smart cabinet configurations, island additions where dimensions allow, and finish upgrades that make a dramatic visual impact within the existing footprint."
         },
         {
             question: "How long does a kitchen remodel take in Gaithersburg, MD?",
-            answer: "Most kitchen renovations in Gaithersburg take 6–11 weeks from construction start to completion. Add 3–5 weeks for permit processing (City of Gaithersburg or Montgomery County depending on location) and, for HOA communities, 2–4 weeks for HOA pre-approval before construction begins. DMV-GC Group manages the complete timeline in-house and coordinates HOA and permit timelines simultaneously to minimize overall project duration."
+            answer: "Most kitchen renovations in Gaithersburg take 6–11 weeks from construction start to completion. Add 3–5 weeks for permit processing (City of Gaithersburg or Montgomery County depending on location) and, for HOA communities, 2–4 weeks for HOA pre-approval before construction begins. DMV General Contracting Group manages the complete timeline in-house and coordinates HOA and permit timelines simultaneously to minimize overall project duration."
         },
         {
-            question: "Is DMV-GC Group licensed for kitchen remodeling in Gaithersburg, MD?",
-            answer: "Yes. DMV-GC Group holds a Maryland MHIC (Home Improvement Contractor) license — required for all home renovation work in Gaithersburg. We are fully bonded, carry comprehensive general liability insurance and workers' compensation coverage, and provide a 1-year workmanship warranty on every kitchen remodeling project completed in Gaithersburg."
+            question: "Is DMV General Contracting Group licensed for kitchen remodeling in Gaithersburg, MD?",
+            answer: "Yes. DMV General Contracting Group holds a Maryland MHIC (Home Improvement Contractor) license — required for all home renovation work in Gaithersburg. We are fully bonded, carry comprehensive general liability insurance and workers' compensation coverage, and provide a 1-year workmanship warranty on every kitchen remodeling project completed in Gaithersburg."
         }
     ];
 

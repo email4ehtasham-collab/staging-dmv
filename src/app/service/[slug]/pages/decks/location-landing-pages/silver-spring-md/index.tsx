@@ -7,120 +7,12 @@ import { useEffect } from "react";
 import { Accordion } from "react-bootstrap";
 import { useMyContext } from "@/hooks/context";
 
-const schemaJsonLd = {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "GeneralContractor",
-      "@id": "https://www.dmv-gc.com/#business",
-      "name": "DMV General Contracting Group LLC",
-      "legalName": "DMV General Contracting Group LLC",
-      "alternateName": ["DMV General Contracting Group", "DMV-GC"],
-      "image": "https://www.dmv-gc.com/logo.png",
-      "url": "https://www.dmv-gc.com",
-      "telephone": "+1-240-730-1292",
-      "email": "support@dmv-gc.com",
-      "foundingDate": "2018",
-      "description": "Licensed deck builder serving Silver Spring, MD. Specializing in custom deck design for Silver Spring's diverse housing stock — split-level rear decks, elevated colonial decks, mid-century ranch decks, and multi-level outdoor living builds — with full Montgomery County permit management.",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "11810 Grand Park Ave #500",
-        "addressLocality": "North Bethesda",
-        "addressRegion": "MD",
-        "postalCode": "20852",
-        "addressCountry": "US"
-      },
-      "geo": { "@type": "GeoCoordinates", "latitude": 39.0458, "longitude": -77.1139 },
-      "areaServed": [
-        { "@type": "City", "name": "Silver Spring", "sameAs": "https://en.wikipedia.org/wiki/Silver_Spring,_Maryland" },
-        { "@type": "City", "name": "Wheaton" },
-        { "@type": "City", "name": "Kensington" },
-        { "@type": "City", "name": "Takoma Park" },
-        { "@type": "City", "name": "Bethesda" }
-      ],
-      "hasCredential": [
-        { "@type": "EducationalOccupationalCredential", "name": "MHIC License", "credentialCategory": "Maryland Home Improvement Contractor License" }
-      ],
-      "priceRange": "$$$"
-    },
-    {
-      "@type": "Service",
-      "@id": "https://www.dmv-gc.com/service/decks/silver-spring-md#service",
-      "serviceType": "Deck Building",
-      "name": "Deck Building in Silver Spring, MD",
-      "alternateName": ["Custom Deck Construction", "Split-Level Deck", "Composite Deck", "Elevated Deck", "Multi-Level Deck"],
-      "provider": { "@id": "https://www.dmv-gc.com/#business" },
-      "areaServed": { "@type": "City", "name": "Silver Spring", "sameAs": "https://en.wikipedia.org/wiki/Silver_Spring,_Maryland" },
-      "description": "Custom deck building in Silver Spring, MD. Split-level rear decks, elevated colonial decks, mid-century ranch platform decks, and multi-level outdoor living builds — all permitted through Montgomery County DPS with full structural design and inspection management.",
-      "offers": {
-        "@type": "Offer",
-        "priceCurrency": "USD",
-        "priceSpecification": { "@type": "PriceSpecification", "minPrice": "16000", "maxPrice": "95000", "priceCurrency": "USD" }
-      }
-    },
-    {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.dmv-gc.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.dmv-gc.com/services" },
-        { "@type": "ListItem", "position": 3, "name": "Decks", "item": "https://www.dmv-gc.com/service/decks" },
-        { "@type": "ListItem", "position": 4, "name": "Silver Spring, MD", "item": "https://www.dmv-gc.com/service/decks/silver-spring-md" }
-      ]
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "How much does it cost to build a deck in Silver Spring, MD?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Deck construction in Silver Spring, MD typically costs between $16,000 and $95,000 depending on size, material, and home type. A pressure-treated rear deck for a split-level or ranch runs $16,000–$28,000. A composite deck on a split-level or colonial costs $26,000–$52,000. An elevated multi-level deck with stairs costs $42,000–$75,000. A full outdoor living build with pergola and built-in features runs $58,000–$95,000. Silver Spring's diverse housing stock — from compact mid-century ranches in Four Corners to larger colonials in Woodside — means project scope and cost vary meaningfully by neighborhood. DMV General Contracting Group provides free in-home consultations with detailed estimates."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Does DMV General Contracting Group handle Montgomery County deck permits for Silver Spring?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. Silver Spring is in unincorporated Montgomery County — all deck permits go through Montgomery County DPS. DMV General Contracting Group files all required building permits with structural drawings and manages all county correspondence, plan review, and inspection scheduling as a standard part of every Silver Spring deck project. Homeowners never need to contact the county directly."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What deck type works best for Silver Spring split-level homes?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Silver Spring's 1950s–70s split-level homes are excellent deck candidates. The raised main living floor — typically 4–6 feet above rear grade — creates a naturally elevated deck connection from the living or dining room sliding door, with the deck surface at or just below the main floor threshold. This elevation gives the deck excellent sight lines over the rear yard and natural separation from the ground level. The structural framing is more substantial than a ground-level deck, but the result — an elevated rear deck that functions as a genuine outdoor room off the main living floor — is one of the most functional deck configurations in any housing type. DMV General Contracting Group has designed and built elevated split-level decks throughout Silver Spring's Woodside, Four Corners, and Sligo Creek neighborhoods."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What deck designs work for Silver Spring's mid-century ranch homes?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Silver Spring's 1950s–60s ranch homes are at or near grade on all sides — the ideal configuration for a low-profile ground-level deck that connects seamlessly to the rear yard. A platform deck just 12–18 inches above grade is structurally simpler and lower-cost than an elevated deck, and creates a natural indoor-outdoor flow from the ranch's rear door. Mid-century modern design sensibility — horizontal lines, warm wood tones, simple clean railings or no railing at lower heights — suits these homes well. Composite decking in a mid-century-compatible warm grey or cedar tone is a popular choice for Silver Spring ranch decks."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is DMV General Contracting Group licensed for deck building in Silver Spring, MD?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. DMV General Contracting Group holds a Maryland MHIC license — required for all home improvement and construction work in Silver Spring and Montgomery County. We are fully bonded, carry comprehensive general liability insurance and workers' compensation coverage, and provide a 1-year workmanship warranty on every deck project completed in Silver Spring."
-          }
-        }
-      ]
-    }
-  ]
-};
-
 const faqData = [
-  { eventKey: "0", question: "How much does it cost to build a deck in Silver Spring, MD?", answer: "Deck construction in Silver Spring typically costs $16,000–$95,000 depending on home type, elevation, material, and features. A ground-level ranch platform deck runs $16,000–$26,000 in pressure-treated. A composite ground-level deck costs $24,000–$44,000. An elevated split-level composite deck runs $38,000–$65,000. An elevated deck with under-deck drainage system costs $48,000–$78,000. A multi-level deck with stairs costs $52,000–$88,000. Montgomery County permits are included in every scope. DMV-GC Group provides free in-home consultations with detailed estimates." },
+  { eventKey: "0", question: "How much does it cost to build a deck in Silver Spring, MD?", answer: "Deck construction in Silver Spring typically costs $16,000–$95,000 depending on home type, elevation, material, and features. A ground-level ranch platform deck runs $16,000–$26,000 in pressure-treated. A composite ground-level deck costs $24,000–$44,000. An elevated split-level composite deck runs $38,000–$65,000. An elevated deck with under-deck drainage system costs $48,000–$78,000. A multi-level deck with stairs costs $52,000–$88,000. Montgomery County permits are included in every scope. DMV General Contracting Group provides free in-home consultations with detailed estimates." },
   { eventKey: "1", question: "What is the best deck type for a Silver Spring split-level home?", answer: "An elevated rear deck off the main living floor — accessed from a sliding or French door — is the most functional deck configuration for Silver Spring&apos;s split-levels. The deck surface sits at roughly the same level as the main living and dining areas, creating a genuine indoor-outdoor connection. At 4–6 feet of elevation, the space below the deck can be converted to a covered patio using an under-deck drainage system. Stairs connect the deck to the lower yard level. Composite decking with cable or wood railing is the most popular material choice for Four Corners and Burnt Mills split-levels." },
-  { eventKey: "2", question: "Does DMV-GC Group handle Montgomery County deck permits for Silver Spring?", answer: "Yes. Silver Spring is in unincorporated Montgomery County — all deck permits go through Montgomery County DPS. DMV-GC Group files all required building permits with complete structural drawings and manages all county correspondence, plan review, and inspection scheduling. Homeowners never need to contact the county directly." },
-  { eventKey: "3", question: "What is an under-deck drainage system and should I add one to my Silver Spring split-level deck?", answer: "An under-deck drainage system is a waterproof ceiling installed beneath an elevated deck that channels rain water away through gutters and downspouts — converting the space beneath the deck from an exposed, wet area to a functional covered patio or outdoor workspace. For Silver Spring&apos;s Four Corners split-levels with 4–6 feet of clearance below the deck, an under-deck system adds meaningful usable outdoor space and is one of our most requested add-ons. DMV-GC Group installs complete under-deck systems as part of new deck builds or as a retrofit to existing elevated decks." },
-  { eventKey: "4", question: "Is DMV-GC Group licensed for deck building in Silver Spring, MD?", answer: "Yes. DMV-GC Group holds a Maryland MHIC license — required for all home improvement and construction work in Silver Spring and Montgomery County. We are fully bonded, carry comprehensive general liability insurance and workers&apos; compensation coverage, and provide a 1-year workmanship warranty on every Silver Spring deck project." }
+  { eventKey: "2", question: "Does DMV General Contracting Group handle Montgomery County deck permits for Silver Spring?", answer: "Yes. Silver Spring is in unincorporated Montgomery County — all deck permits go through Montgomery County DPS. DMV General Contracting Group files all required building permits with complete structural drawings and manages all county correspondence, plan review, and inspection scheduling. Homeowners never need to contact the county directly." },
+  { eventKey: "3", question: "What is an under-deck drainage system and should I add one to my Silver Spring split-level deck?", answer: "An under-deck drainage system is a waterproof ceiling installed beneath an elevated deck that channels rain water away through gutters and downspouts — converting the space beneath the deck from an exposed, wet area to a functional covered patio or outdoor workspace. For Silver Spring&apos;s Four Corners split-levels with 4–6 feet of clearance below the deck, an under-deck system adds meaningful usable outdoor space and is one of our most requested add-ons. DMV General Contracting Group installs complete under-deck systems as part of new deck builds or as a retrofit to existing elevated decks." },
+  { eventKey: "4", question: "Is DMV General Contracting Group licensed for deck building in Silver Spring, MD?", answer: "Yes. DMV General Contracting Group holds a Maryland MHIC license — required for all home improvement and construction work in Silver Spring and Montgomery County. We are fully bonded, carry comprehensive general liability insurance and workers&apos; compensation coverage, and provide a 1-year workmanship warranty on every Silver Spring deck project." }
 ];
 
 export default function DecksSilverSpringMD() {
@@ -526,7 +418,6 @@ export default function DecksSilverSpringMD() {
         </div>
       </div>
 
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaJsonLd) }} />
     </main>
   );
 }

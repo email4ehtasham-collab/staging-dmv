@@ -6,6 +6,7 @@ import { pageMetadata } from "@/lib/seo/resolve";
 
 import styles from './style.module.scss';
 import Faqs from './faqs';
+import PageSchema from "@/components/Schema/PageSchema";
 
 const baseMetadata: Metadata = {
   title: "FAQs Concerning Our General Contractor Services",
@@ -24,6 +25,7 @@ function FaqPage() {
 
 	return (
 		<main className='page-wrapper'>
+			<PageSchema path="/faqs" />
 			<NavitemActive nav="faqs" />
 			<div className={styles['banner-holder']}>
 				<div className={`image-holder ${styles["image-holder"]}`}>

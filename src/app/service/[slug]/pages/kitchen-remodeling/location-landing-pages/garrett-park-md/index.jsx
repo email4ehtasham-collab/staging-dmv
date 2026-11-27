@@ -18,27 +18,27 @@ const GarrettParkMD = () => {
     const faqData = [
         {
             question: "How much does a kitchen remodel cost in Garrett Park, MD?",
-            answer: "Kitchen remodeling in Garrett Park typically costs $25,000–$160,000+ depending on the home's age, size, and scope. A cosmetic update starts around $25,000–$42,000. A mid-range renovation that updates function while respecting period character runs $50,000–$90,000. A full gut renovation costs $90,000–$135,000. Kitchen additions or bump-outs run $100,000–$160,000+. Costs in Garrett Park often run higher than in newer-construction areas due to the additional care required when working with century-old homes. DMV-GC Group provides free in-home consultations with detailed estimates."
+            answer: "Kitchen remodeling in Garrett Park typically costs $25,000–$160,000+ depending on the home's age, size, and scope. A cosmetic update starts around $25,000–$42,000. A mid-range renovation that updates function while respecting period character runs $50,000–$90,000. A full gut renovation costs $90,000–$135,000. Kitchen additions or bump-outs run $100,000–$160,000+. Costs in Garrett Park often run higher than in newer-construction areas due to the additional care required when working with century-old homes. DMV General Contracting Group provides free in-home consultations with detailed estimates."
         },
         {
-            question: "Does DMV-GC Group have experience renovating historic homes in Garrett Park?",
-            answer: "Yes. Garrett Park is a designated National Register Historic District, with most homes built between the 1880s and early 1900s in Victorian, Queen Anne, and Carpenter Gothic styles. DMV-GC Group has experience renovating kitchens in historic homes throughout Montgomery County — balancing modern function with period-appropriate design, and planning around structural characteristics common to homes of this era including original plaster, balloon framing, and older mechanical systems."
+            question: "Does DMV General Contracting Group have experience renovating historic homes in Garrett Park?",
+            answer: "Yes. Garrett Park is a designated National Register Historic District, with most homes built between the 1880s and early 1900s in Victorian, Queen Anne, and Carpenter Gothic styles. DMV General Contracting Group has experience renovating kitchens in historic homes throughout Montgomery County — balancing modern function with period-appropriate design, and planning around structural characteristics common to homes of this era including original plaster, balloon framing, and older mechanical systems."
         },
         {
             question: "Are there special permit requirements for renovating in Garrett Park's Historic District?",
-            answer: "Interior kitchen renovations that don't change a home's exterior generally do not require Historic Preservation Commission review. However, exterior changes, additions, or visible modifications may require additional review through Montgomery County's Historic Preservation process. DMV-GC Group evaluates each Garrett Park project individually to determine what review applies and manages all required Montgomery County permits regardless of project scope."
+            answer: "Interior kitchen renovations that don't change a home's exterior generally do not require Historic Preservation Commission review. However, exterior changes, additions, or visible modifications may require additional review through Montgomery County's Historic Preservation process. DMV General Contracting Group evaluates each Garrett Park project individually to determine what review applies and manages all required Montgomery County permits regardless of project scope."
         },
         {
-            question: "Can DMV-GC Group add a kitchen bump-out or addition to a historic home in Garrett Park?",
-            answer: "Yes. Many Garrett Park homes have small original kitchens that benefit from a rear addition or bump-out. DMV-GC Group's in-house architects design additions scaled appropriately to the historic home, and where exterior changes are involved, we coordinate with Montgomery County's Historic Preservation process as needed. Our structural engineers handle integrating new construction with original framing — a key consideration in homes built in the late 1800s and early 1900s."
+            question: "Can DMV General Contracting Group add a kitchen bump-out or addition to a historic home in Garrett Park?",
+            answer: "Yes. Many Garrett Park homes have small original kitchens that benefit from a rear addition or bump-out. DMV General Contracting Group's in-house architects design additions scaled appropriately to the historic home, and where exterior changes are involved, we coordinate with Montgomery County's Historic Preservation process as needed. Our structural engineers handle integrating new construction with original framing — a key consideration in homes built in the late 1800s and early 1900s."
         },
         {
             question: "How long does a kitchen remodel take in Garrett Park, MD?",
             answer: "Most kitchen renovations in Garrett Park take 8–14 weeks from construction start to completion — slightly longer than newer homes due to the additional care required when working within original structural elements. Projects involving additions or bump-outs typically take 12–18 weeks. Permit processing, including any required historic preservation review, typically adds 4–8 weeks before construction begins."
         },
         {
-            question: "Is DMV-GC Group licensed for kitchen remodeling in Garrett Park, MD?",
-            answer: "Yes. DMV-GC Group holds a Maryland MHIC (Home Improvement Contractor) license — required for all home renovation work in Garrett Park and Montgomery County. We are fully bonded, carry comprehensive general liability insurance and workers' compensation coverage, and provide a 1-year workmanship warranty on every kitchen remodeling project completed in Garrett Park."
+            question: "Is DMV General Contracting Group licensed for kitchen remodeling in Garrett Park, MD?",
+            answer: "Yes. DMV General Contracting Group holds a Maryland MHIC (Home Improvement Contractor) license — required for all home renovation work in Garrett Park and Montgomery County. We are fully bonded, carry comprehensive general liability insurance and workers' compensation coverage, and provide a 1-year workmanship warranty on every kitchen remodeling project completed in Garrett Park."
         }
     ];
 

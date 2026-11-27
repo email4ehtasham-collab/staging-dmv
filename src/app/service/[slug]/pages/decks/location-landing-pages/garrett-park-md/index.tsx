@@ -7,120 +7,12 @@ import { useEffect } from "react";
 import { Accordion } from "react-bootstrap";
 import { useMyContext } from "@/hooks/context";
 
-const schemaJsonLd = {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "GeneralContractor",
-      "@id": "https://www.dmv-gc.com/#business",
-      "name": "DMV General Contracting Group LLC",
-      "legalName": "DMV General Contracting Group LLC",
-      "alternateName": ["DMV General Contracting Group", "DMV-GC"],
-      "image": "https://www.dmv-gc.com/logo.png",
-      "url": "https://www.dmv-gc.com",
-      "telephone": "+1-240-730-1292",
-      "email": "support@dmv-gc.com",
-      "foundingDate": "2018",
-      "description": "Licensed deck builder serving Garrett Park, MD. Specializing in character-appropriate rear yard deck design for Garrett Park's National Register historic district homes — 1920s–40s bungalows, craftsman cottages, and American Foursquares — with Town of Garrett Park permit expertise.",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "11810 Grand Park Ave #500",
-        "addressLocality": "North Bethesda",
-        "addressRegion": "MD",
-        "postalCode": "20852",
-        "addressCountry": "US"
-      },
-      "geo": { "@type": "GeoCoordinates", "latitude": 39.0458, "longitude": -77.1139 },
-      "areaServed": [
-        { "@type": "City", "name": "Garrett Park", "sameAs": "https://en.wikipedia.org/wiki/Garrett_Park,_Maryland" },
-        { "@type": "City", "name": "Kensington" },
-        { "@type": "City", "name": "Rockville" },
-        { "@type": "City", "name": "North Bethesda" },
-        { "@type": "City", "name": "Wheaton" }
-      ],
-      "hasCredential": [
-        { "@type": "EducationalOccupationalCredential", "name": "MHIC License", "credentialCategory": "Maryland Home Improvement Contractor License" }
-      ],
-      "priceRange": "$$$"
-    },
-    {
-      "@type": "Service",
-      "@id": "https://www.dmv-gc.com/service/decks/garrett-park-md#service",
-      "serviceType": "Deck Building",
-      "name": "Deck Building in Garrett Park, MD",
-      "alternateName": ["Custom Deck Construction", "Historic District Deck", "Bungalow Deck", "Rear Yard Deck", "Craftsman Deck"],
-      "provider": { "@id": "https://www.dmv-gc.com/#business" },
-      "areaServed": { "@type": "City", "name": "Garrett Park", "sameAs": "https://en.wikipedia.org/wiki/Garrett_Park,_Maryland" },
-      "description": "Custom deck building in Garrett Park, MD. Character-appropriate rear yard decks for Garrett Park's National Register historic district homes — designed to complement the architectural vocabulary of 1920s–40s bungalows and craftsman cottages, permitted through the Town of Garrett Park, and built with the quality these distinctive homes deserve.",
-      "offers": {
-        "@type": "Offer",
-        "priceCurrency": "USD",
-        "priceSpecification": { "@type": "PriceSpecification", "minPrice": "16000", "maxPrice": "72000", "priceCurrency": "USD" }
-      }
-    },
-    {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.dmv-gc.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.dmv-gc.com/services" },
-        { "@type": "ListItem", "position": 3, "name": "Decks", "item": "https://www.dmv-gc.com/service/decks" },
-        { "@type": "ListItem", "position": 4, "name": "Garrett Park, MD", "item": "https://www.dmv-gc.com/service/decks/garrett-park-md" }
-      ]
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "How much does it cost to build a deck in Garrett Park, MD?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Deck construction in Garrett Park, MD typically costs between $16,000 and $72,000 depending on size, material, and scope. A modest rear deck for a Garrett Park bungalow in pressure-treated or cedar runs $16,000–$26,000. A composite rear deck costs $22,000–$44,000. A composite deck with pergola or screened porch conversion runs $38,000–$72,000. Garrett Park's small lots constrain maximum deck footprint, but the community's distinctive character and walkable MARC Brunswick Line access make quality outdoor living investments worthwhile. DMV General Contracting Group provides free in-home consultations with detailed estimates."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Does Garrett Park have its own permit process for deck building?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. Garrett Park is an incorporated Town in Montgomery County with its own municipal government and building permit office at 4600 Oxford Street. All deck building permits for properties within the Town of Garrett Park are filed with the Town's permit office — not with Montgomery County DPS. DMV General Contracting Group handles the Town of Garrett Park permit process in-house for all deck projects within the town boundaries, verifying whether each address is within the town limits or in adjacent unincorporated Montgomery County before any application is filed."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Does Garrett Park's historic district designation affect deck building?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Garrett Park is listed on the National Register of Historic Places as a historic district. For deck construction specifically: interior work and rear yard deck construction that does not alter the primary street-facing facade of the home typically proceeds with standard Town of Garrett Park building permits and does not require Maryland Historical Trust review. However, any exterior modification visible from a public street — a new opening in the front facade, significant changes to a prominent side elevation — would require historic review. DMV General Contracting Group assesses every Garrett Park deck project for historic district implications during the free consultation and designs rear yard decks to avoid modifications that would trigger historic review."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What deck designs work best for Garrett Park's historic bungalow homes?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Garrett Park's 1920s–40s bungalows, craftsman cottages, and American Foursquares have a specific architectural vocabulary — natural materials, horizontal lines, overhanging eaves, and covered porches. The most appropriate deck designs for these homes are proportionate in scale, use warm wood tones or natural material references, and employ railing styles that complement rather than clash with the home's period character. Painted wood baluster railings, craftsman-style pergola posts, and cedar or composite in warm brown tones all read naturally on Garrett Park's homes. Cable railing and contemporary composite profiles can look incongruous on 1930s bungalows without careful design consideration. DMV General Contracting Group designs every Garrett Park deck with the home's architectural period in mind."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is DMV General Contracting Group licensed for deck building in Garrett Park, MD?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. DMV General Contracting Group holds a Maryland MHIC license — required for all home improvement and construction work in Garrett Park and Montgomery County. We handle the Town of Garrett Park permit process for properties within the town limits and Montgomery County DPS permits for adjacent unincorporated addresses. We are fully bonded, carry comprehensive general liability insurance and workers' compensation coverage, and provide a 1-year workmanship warranty on every deck project in Garrett Park."
-          }
-        }
-      ]
-    }
-  ]
-};
-
 const faqData = [
-  { eventKey: "0", question: "How much does it cost to build a deck in Garrett Park, MD?", answer: "Deck construction in Garrett Park typically costs $16,000–$72,000 depending on size, material, and scope. A small cedar or pressure-treated rear deck (160–220 sq ft) runs $16,000–$26,000. A composite rear deck (200–300 sq ft) costs $22,000–$44,000. A composite deck with craftsman pergola runs $36,000–$60,000. A screened porch addition costs $40,000–$72,000. A deck replacement runs $20,000–$50,000. Town of Garrett Park permit included in every scope. DMV-GC Group provides free in-home consultations with detailed estimates." },
-  { eventKey: "1", question: "Does the Town of Garrett Park have its own permit process for decks?", answer: "Yes. Garrett Park is an incorporated Town with its own permit office at 4600 Oxford Street — separate from Montgomery County DPS. Properties within the town limits file with the Town; properties just outside the town boundary (some Garrett Park-area addresses) use Montgomery County DPS. DMV-GC Group verifies the correct authority for every address and manages the Town of Garrett Park permit process in-house, including structural drawings, correspondence, and inspection scheduling." },
-  { eventKey: "2", question: "Does Garrett Park's National Register historic district designation prevent deck building?", answer: "No — not for rear yard deck construction. Garrett Park's National Register listing recognizes the community's historic significance but does not impose local design review requirements on private property owners for rear yard construction that does not alter the primary street-facing facade. Rear yard decks, screened porch additions at the rear, and pergolas in the rear yard proceed with standard Town of Garrett Park building permits without historic design review in virtually all cases. DMV-GC Group assesses every project for historic district implications during the consultation and designs to avoid any scope that would trigger review." },
+  { eventKey: "0", question: "How much does it cost to build a deck in Garrett Park, MD?", answer: "Deck construction in Garrett Park typically costs $16,000–$72,000 depending on size, material, and scope. A small cedar or pressure-treated rear deck (160–220 sq ft) runs $16,000–$26,000. A composite rear deck (200–300 sq ft) costs $22,000–$44,000. A composite deck with craftsman pergola runs $36,000–$60,000. A screened porch addition costs $40,000–$72,000. A deck replacement runs $20,000–$50,000. Town of Garrett Park permit included in every scope. DMV General Contracting Group provides free in-home consultations with detailed estimates." },
+  { eventKey: "1", question: "Does the Town of Garrett Park have its own permit process for decks?", answer: "Yes. Garrett Park is an incorporated Town with its own permit office at 4600 Oxford Street — separate from Montgomery County DPS. Properties within the town limits file with the Town; properties just outside the town boundary (some Garrett Park-area addresses) use Montgomery County DPS. DMV General Contracting Group verifies the correct authority for every address and manages the Town of Garrett Park permit process in-house, including structural drawings, correspondence, and inspection scheduling." },
+  { eventKey: "2", question: "Does Garrett Park's National Register historic district designation prevent deck building?", answer: "No — not for rear yard deck construction. Garrett Park's National Register listing recognizes the community's historic significance but does not impose local design review requirements on private property owners for rear yard construction that does not alter the primary street-facing facade. Rear yard decks, screened porch additions at the rear, and pergolas in the rear yard proceed with standard Town of Garrett Park building permits without historic design review in virtually all cases. DMV General Contracting Group assesses every project for historic district implications during the consultation and designs to avoid any scope that would trigger review." },
   { eventKey: "3", question: "What deck design suits a Garrett Park craftsman bungalow?", answer: "A proportionate rear deck — 160–280 sq ft — in warm-tone composite or stained cedar, with painted square-baluster wood railing matching the home's trim, and 2–4 steps to the rear yard. Optional craftsman-style pergola with square columns and simple brackets. Built-in bench seating and deck-edge planter boxes to maximize the smaller lot footprint. This is the design vocabulary that belongs on Garrett Park's 1920s–40s homes — it complements rather than clashes with the home's existing architectural character." },
-  { eventKey: "4", question: "Is DMV-GC Group licensed for deck building in Garrett Park, MD?", answer: "Yes. DMV-GC Group holds a Maryland MHIC license — required for all home improvement and construction work in Garrett Park. We manage the Town of Garrett Park permit process for properties within the town limits and Montgomery County DPS permits for adjacent unincorporated addresses. We are fully bonded, carry comprehensive general liability insurance and workers' compensation coverage, and provide a 1-year workmanship warranty on every Garrett Park deck project." }
+  { eventKey: "4", question: "Is DMV General Contracting Group licensed for deck building in Garrett Park, MD?", answer: "Yes. DMV General Contracting Group holds a Maryland MHIC license — required for all home improvement and construction work in Garrett Park. We manage the Town of Garrett Park permit process for properties within the town limits and Montgomery County DPS permits for adjacent unincorporated addresses. We are fully bonded, carry comprehensive general liability insurance and workers' compensation coverage, and provide a 1-year workmanship warranty on every Garrett Park deck project." }
 ];
 
 export default function DecksGarrettParkMD() {
@@ -538,7 +430,6 @@ export default function DecksGarrettParkMD() {
         </div>
       </div>
 
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaJsonLd) }} />
     </main>
   );
 }

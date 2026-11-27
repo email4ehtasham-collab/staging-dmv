@@ -10,26 +10,26 @@ export default function BathroomSilverSpringMD() {
     const faqData = [
         {
             question: "How much does a bathroom remodel cost in Silver Spring, MD?",
-            answer: "Bathroom remodeling in Silver Spring, MD typically costs between $8,000 and $120,000 depending on bathroom type, scope, and finishes. A powder room or half-bath refresh starts around $8,000–$18,000. A hall or guest bath remodel runs $18,000–$35,000. A tub-to-shower conversion runs $12,000–$25,000. A primary (master) bath renovation costs $35,000–$70,000, and a luxury primary bath can reach $70,000–$120,000+. Adding a new basement bathroom runs $20,000–$45,000. DMV-GC Group provides free in-home consultations with detailed estimates for any Silver Spring home."
+            answer: "Bathroom remodeling in Silver Spring, MD typically costs between $8,000 and $120,000 depending on bathroom type, scope, and finishes. A powder room or half-bath refresh starts around $8,000–$18,000. A hall or guest bath remodel runs $18,000–$35,000. A tub-to-shower conversion runs $12,000–$25,000. A primary (master) bath renovation costs $35,000–$70,000, and a luxury primary bath can reach $70,000–$120,000+. Adding a new basement bathroom runs $20,000–$45,000. DMV General Contracting Group provides free in-home consultations with detailed estimates for any Silver Spring home."
         },
         {
-            question: "Is DMV-GC Group licensed to do bathroom remodeling in Silver Spring, MD?",
-            answer: "Yes. DMV-GC Group holds a Maryland Home Improvement Contractor (MHIC) license issued by the Maryland Home Improvement Commission — the license required to legally perform residential renovation work in Silver Spring and throughout Maryland. We are fully bonded and insured, and provide a 1-year workmanship warranty on every bathroom remodeling project completed in Montgomery County."
+            question: "Is DMV General Contracting Group licensed to do bathroom remodeling in Silver Spring, MD?",
+            answer: "Yes. DMV General Contracting Group holds a Maryland Home Improvement Contractor (MHIC) license issued by the Maryland Home Improvement Commission — the license required to legally perform residential renovation work in Silver Spring and throughout Maryland. We are fully bonded and insured, and provide a 1-year workmanship warranty on every bathroom remodeling project completed in Montgomery County."
         },
         {
             question: "Do I need a permit to remodel a bathroom in Silver Spring / Montgomery County?",
-            answer: "In most cases, yes. Any bathroom remodel in Silver Spring that involves moving plumbing, adding or relocating electrical, or structural changes requires permits. In Montgomery County, building and electrical permits are issued by the Department of Permitting Services (DPS), while plumbing and gas permits are issued through WSSC Water. DMV-GC Group's permit team handles all of this for you — homeowners never need to navigate DPS or WSSC themselves."
+            answer: "In most cases, yes. Any bathroom remodel in Silver Spring that involves moving plumbing, adding or relocating electrical, or structural changes requires permits. In Montgomery County, building and electrical permits are issued by the Department of Permitting Services (DPS), while plumbing and gas permits are issued through WSSC Water. DMV General Contracting Group's permit team handles all of this for you — homeowners never need to navigate DPS or WSSC themselves."
         },
         {
-            question: "Can DMV-GC Group convert my tub to a walk-in shower?",
+            question: "Can DMV General Contracting Group convert my tub to a walk-in shower?",
             answer: "Yes. Tub-to-shower conversions are one of the most popular bathroom projects we complete in Silver Spring, especially in mid-century homes with original cast-iron tubs. We remove the existing tub, rebuild the wet area with proper waterproofing, and install a custom tile or low-maintenance walk-in shower — including curbless and accessible designs for aging-in-place. Most conversions are completed in 2–3 weeks."
         },
         {
             question: "How long does a bathroom remodel take in Silver Spring, MD?",
-            answer: "Most bathroom renovations in Silver Spring take 2–5 weeks from construction start to completion. A powder room refresh can be done in 1–2 weeks. A tub-to-shower conversion takes 2–3 weeks. A full primary bath renovation takes 4–6 weeks, and a new basement bathroom typically takes 3–5 weeks. Permit processing through Montgomery County DPS and WSSC usually adds 2–4 weeks before construction begins. DMV-GC Group factors realistic timelines into every project plan."
+            answer: "Most bathroom renovations in Silver Spring take 2–5 weeks from construction start to completion. A powder room refresh can be done in 1–2 weeks. A tub-to-shower conversion takes 2–3 weeks. A full primary bath renovation takes 4–6 weeks, and a new basement bathroom typically takes 3–5 weeks. Permit processing through Montgomery County DPS and WSSC usually adds 2–4 weeks before construction begins. DMV General Contracting Group factors realistic timelines into every project plan."
         },
         {
-            question: "Can DMV-GC Group add a bathroom in my basement or primary suite?",
+            question: "Can DMV General Contracting Group add a bathroom in my basement or primary suite?",
             answer: "Yes. Adding a bathroom is one of the highest-value upgrades for Silver Spring homes, where many mid-century houses were built with only one or two bathrooms. We design and build new basement bathrooms, primary-suite ensuites, and main-level powder rooms — handling plumbing rough-in, waterproofing, ventilation, and the full DPS and WSSC permit process from start to finish."
         }
     ];

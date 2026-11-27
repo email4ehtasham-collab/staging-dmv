@@ -21,23 +21,23 @@ const SilverSpringMD = () => {
         },
         {
             question: "How long does a kitchen remodel take in Silver Spring?",
-            answer: "Most kitchen renovations in Silver Spring take 6–12 weeks from construction start to completion. A cosmetic refresh with no structural changes can be done in 4–6 weeks. A full gut renovation with layout changes takes 10–14 weeks. Add 4–6 weeks for Montgomery County permit processing before construction begins. DMV-GC Group manages the complete timeline in-house — design, permits, and construction — to minimize delays."
+            answer: "Most kitchen renovations in Silver Spring take 6–12 weeks from construction start to completion. A cosmetic refresh with no structural changes can be done in 4–6 weeks. A full gut renovation with layout changes takes 10–14 weeks. Add 4–6 weeks for Montgomery County permit processing before construction begins. DMV General Contracting Group manages the complete timeline in-house — design, permits, and construction — to minimize delays."
         },
         {
-            question: "Can DMV-GC Group remodel a galley kitchen in a Silver Spring home?",
+            question: "Can DMV General Contracting Group remodel a galley kitchen in a Silver Spring home?",
             answer: "Yes — galley kitchen remodels and expansions are one of our most common projects in Silver Spring, where postwar Cape Cods and split-levels frequently have narrow, closed-off original kitchens. We assess load-bearing walls, recommend the best expansion or open-concept approach for your specific floor plan, handle all required permits, and manage the full structural and finish work to transform a cramped galley into a spacious, functional kitchen."
         },
         {
-            question: "Does DMV-GC Group handle permits for kitchen remodeling in Silver Spring?",
-            answer: "Yes. DMV-GC Group handles all required Montgomery County permits for kitchen remodels in Silver Spring — building, electrical, and plumbing permits included. Our in-house permit team manages every step from application to final inspection. Silver Spring homeowners never need to contact the county or manage any permit paperwork."
+            question: "Does DMV General Contracting Group handle permits for kitchen remodeling in Silver Spring?",
+            answer: "Yes. DMV General Contracting Group handles all required Montgomery County permits for kitchen remodels in Silver Spring — building, electrical, and plumbing permits included. Our in-house permit team manages every step from application to final inspection. Silver Spring homeowners never need to contact the county or manage any permit paperwork."
         },
         {
             question: "What is the ROI of a kitchen remodel in Silver Spring, MD?",
             answer: "A professionally renovated kitchen in Silver Spring typically returns 65–80% of its cost in immediate property value. Silver Spring's strong DC-area demand and Metro access make updated kitchens one of the most sought-after features by buyers. Mid-range kitchen remodels in Silver Spring — $35,000–$65,000 — consistently deliver the best ROI relative to investment in this market. Homes with renovated kitchens also tend to sell faster and closer to asking price than comparable homes with dated kitchens."
         },
         {
-            question: "Is DMV-GC Group licensed to do kitchen remodeling in Silver Spring, MD?",
-            answer: "Yes. DMV-GC Group holds a Maryland MHIC (Home Improvement Contractor) license — required for all home renovation work in Silver Spring and Montgomery County. We are fully bonded, carry comprehensive general liability insurance and workers' compensation, and provide a 1-year workmanship warranty on every kitchen remodeling project we complete in Silver Spring."
+            question: "Is DMV General Contracting Group licensed to do kitchen remodeling in Silver Spring, MD?",
+            answer: "Yes. DMV General Contracting Group holds a Maryland MHIC (Home Improvement Contractor) license — required for all home renovation work in Silver Spring and Montgomery County. We are fully bonded, carry comprehensive general liability insurance and workers' compensation, and provide a 1-year workmanship warranty on every kitchen remodeling project we complete in Silver Spring."
         }
     ];
 

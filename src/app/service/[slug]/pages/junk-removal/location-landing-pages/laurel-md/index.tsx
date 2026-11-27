@@ -7,126 +7,6 @@ import NavitemActive from "@/components/Common/NavitemActive";
 import "@/app/service/[slug]/pages/junk-removal/location-landing-pages/city-service-style.scss";
 import "./style.scss";
 
-const schemaJsonLd = {
-    "@context": "https://schema.org",
-    "@graph": [
-        {
-            "@type": "GeneralContractor",
-            "@id": "https://www.dmv-gc.com/#business",
-            "name": "DMV General Contracting Group LLC",
-            "legalName": "DMV General Contracting Group LLC",
-            "alternateName": ["DMV General Contracting Group", "DMV-GC"],
-            "image": "https://www.dmv-gc.com/logo.png",
-            "url": "https://www.dmv-gc.com",
-            "telephone": "+1-240-730-1292",
-            "email": "support@dmv-gc.com",
-            "foundingDate": "2018",
-            "description": "Licensed Maryland general contractor providing professional junk removal and debris hauling services in Laurel, MD. Residential and commercial cleanouts, construction debris removal, bulk item pickup, and property cleanouts. MHIC #156178.",
-            "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "11810 Grand Park Ave #500",
-                "addressLocality": "North Bethesda",
-                "addressRegion": "MD",
-                "postalCode": "20852",
-                "addressCountry": "US"
-            },
-            "geo": {
-                "@type": "GeoCoordinates",
-                "latitude": 39.0993,
-                "longitude": -76.8483
-            },
-            "areaServed": [
-                { "@type": "City", "name": "Laurel", "sameAs": "https://en.wikipedia.org/wiki/Laurel,_Maryland" },
-                { "@type": "City", "name": "North Laurel" },
-                { "@type": "City", "name": "South Laurel" },
-                { "@type": "City", "name": "West Laurel" },
-                { "@type": "City", "name": "Columbia" },
-                { "@type": "City", "name": "Beltsville" },
-                { "@type": "City", "name": "Silver Spring" },
-                { "@type": "AdministrativeArea", "name": "Prince George's County, MD" }
-            ],
-            "hasCredential": [
-                {
-                    "@type": "EducationalOccupationalCredential",
-                    "name": "MHIC License",
-                    "credentialCategory": "Maryland Home Improvement Contractor License — issued by the Maryland Home Improvement Commission #156178"
-                },
-                {
-                    "@type": "EducationalOccupationalCredential",
-                    "name": "DLCP License",
-                    "credentialCategory": "Washington DC Department of Licensing and Consumer Protection — Home Improvement Contractor #410526000209"
-                }
-            ],
-            "priceRange": "$$",
-            "openingHoursSpecification": {
-                "@type": "OpeningHoursSpecification",
-                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-                "opens": "08:00",
-                "closes": "20:00"
-            }
-        },
-        {
-            "@type": "Service",
-            "@id": "https://www.dmv-gc.com/service/junk-removal/laurel-md#service",
-            "serviceType": "Junk Removal, Construction Debris Removal, Residential Cleanout, Commercial Cleanup, Bulk Item Pickup, Property Cleanout",
-            "name": "Junk Removal Services in Laurel, MD",
-            "provider": { "@id": "https://www.dmv-gc.com/#business" },
-            "areaServed": {
-                "@type": "City",
-                "name": "Laurel",
-                "sameAs": "https://en.wikipedia.org/wiki/Laurel,_Maryland"
-            },
-            "description": "Professional junk removal and cleanout services in Laurel, MD — residential, commercial, construction debris, bulk item removal, and property cleanouts. Licensed and insured, MHIC #156178."
-        },
-        {
-            "@type": "BreadcrumbList",
-            "itemListElement": [
-                { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.dmv-gc.com/" },
-                { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.dmv-gc.com/services" },
-                { "@type": "ListItem", "position": 3, "name": "Junk Removal", "item": "https://www.dmv-gc.com/service/junk-removal" },
-                { "@type": "ListItem", "position": 4, "name": "Laurel, MD", "item": "https://www.dmv-gc.com/service/junk-removal/laurel-md" }
-            ]
-        },
-        {
-            "@type": "FAQPage",
-            "mainEntity": [
-                {
-                    "@type": "Question",
-                    "name": "What types of junk can you remove in Laurel?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "We provide removal support for household clutter, bulk items, renovation debris, construction materials, and other unwanted property items in Laurel, MD, subject to project requirements."
-                    }
-                },
-                {
-                    "@type": "Question",
-                    "name": "Do you provide residential and commercial junk removal in Laurel?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "Yes. Our services can support both residential properties and commercial spaces throughout Laurel, MD."
-                    }
-                },
-                {
-                    "@type": "Question",
-                    "name": "Can junk removal be part of a renovation project in Laurel?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "Yes. Junk and debris removal can be coordinated with remodeling, renovation, and other property improvement work for Laurel homes and businesses."
-                    }
-                },
-                {
-                    "@type": "Question",
-                    "name": "How much does junk removal cost in Laurel, MD?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "A single bulk item pickup starts at $75–$150. A partial load runs $150–$350. A full truck load runs $350–$600+. Estate cleanouts and construction debris removal are priced by scope after a free on-site estimate. DMV General Contracting Group provides a firm price before any work begins."
-                    }
-                }
-            ]
-        }
-    ]
-};
-
 export default function JunkRemovalLaurelMD() {
     const faqData = [
         {
@@ -372,10 +252,6 @@ export default function JunkRemovalLaurelMD() {
                 </div>
             </div>
 
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaJsonLd) }}
-            />
         </div>
     );
 }

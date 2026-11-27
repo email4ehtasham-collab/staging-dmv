@@ -9,6 +9,7 @@ import StarsIcon from '@/assets/stars.svg';
 
 import styles from "./style.module.scss";
 import ProjectsVideos from "@/components/ProjectsVideos/ProjectsVideos";
+import PageSchema from "@/components/Schema/PageSchema";
 
 const baseMetadata: Metadata = {
   title: "Home Renovation Projects & Portfolio | DMV General Contracting Group Bethesda MD",
@@ -26,6 +27,7 @@ export function generateMetadata(): Promise<Metadata> {
 export default function ProjectsPage() {
     return (
         <main className="page-wrapper">
+            <PageSchema path="/projects" />
             <NavitemActive nav="project" />
             <div className={styles['banner-holder']}>
                 <div className={`image-holder ${styles["image-holder"]}`}>

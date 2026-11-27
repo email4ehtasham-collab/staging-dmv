@@ -17,27 +17,27 @@ const CabinJohnMD = () => {
     const faqData = [
         {
             question: "How much does a kitchen remodel cost in Cabin John, MD?",
-            answer: "Kitchen remodeling in Cabin John, MD typically costs between $35,000 and $170,000 depending on home size, lot conditions, and scope. A mid-range remodel runs $45,000–$80,000. A full gut renovation with custom cabinetry costs $85,000–$135,000. Projects involving a kitchen addition on Cabin John's often-sloped, wooded lots can range from $110,000–$170,000+, reflecting the additional site work required. DMV-GC Group provides free in-home consultations with detailed estimates."
+            answer: "Kitchen remodeling in Cabin John, MD typically costs between $35,000 and $170,000 depending on home size, lot conditions, and scope. A mid-range remodel runs $45,000–$80,000. A full gut renovation with custom cabinetry costs $85,000–$135,000. Projects involving a kitchen addition on Cabin John's often-sloped, wooded lots can range from $110,000–$170,000+, reflecting the additional site work required. DMV General Contracting Group provides free in-home consultations with detailed estimates."
         },
         {
-            question: "Does DMV-GC Group have experience with sloped or wooded lots in Cabin John?",
-            answer: "Yes. Cabin John is known for its wooded, hillside terrain along the Potomac River bluffs, and many homes are built on sloped lots with mature tree canopy close to the structure. DMV-GC Group has experience designing kitchen additions and renovations that work with this terrain — including foundation work on sloped sites, tree protection during construction, and window and skylight placement that maximizes natural light in homes shaded by mature trees."
+            question: "Does DMV General Contracting Group have experience with sloped or wooded lots in Cabin John?",
+            answer: "Yes. Cabin John is known for its wooded, hillside terrain along the Potomac River bluffs, and many homes are built on sloped lots with mature tree canopy close to the structure. DMV General Contracting Group has experience designing kitchen additions and renovations that work with this terrain — including foundation work on sloped sites, tree protection during construction, and window and skylight placement that maximizes natural light in homes shaded by mature trees."
         },
         {
-            question: "Does DMV-GC Group handle permits for kitchen remodeling in Cabin John?",
-            answer: "Yes. Cabin John is an unincorporated community in Montgomery County, so kitchen remodeling permits are processed through Montgomery County's Department of Permitting Services. DMV-GC Group's in-house permit team handles all required building, electrical, and plumbing permits. For properties near the Potomac River or within designated environmentally sensitive areas, we also assess whether additional environmental or forest conservation review applies."
+            question: "Does DMV General Contracting Group handle permits for kitchen remodeling in Cabin John?",
+            answer: "Yes. Cabin John is an unincorporated community in Montgomery County, so kitchen remodeling permits are processed through Montgomery County's Department of Permitting Services. DMV General Contracting Group's in-house permit team handles all required building, electrical, and plumbing permits. For properties near the Potomac River or within designated environmentally sensitive areas, we also assess whether additional environmental or forest conservation review applies."
         },
         {
-            question: "Can DMV-GC Group add more natural light to a kitchen in a wooded Cabin John lot?",
-            answer: "Yes. Many Cabin John homes sit under mature tree canopy that can make kitchens feel darker than homes on open lots. DMV-GC Group's design team addresses this through strategic skylight placement, larger window openings where structurally feasible, light-colored finishes, and layout changes that bring more light into the kitchen from adjacent rooms — all while respecting the tree canopy that gives Cabin John its distinctive wooded character."
+            question: "Can DMV General Contracting Group add more natural light to a kitchen in a wooded Cabin John lot?",
+            answer: "Yes. Many Cabin John homes sit under mature tree canopy that can make kitchens feel darker than homes on open lots. DMV General Contracting Group's design team addresses this through strategic skylight placement, larger window openings where structurally feasible, light-colored finishes, and layout changes that bring more light into the kitchen from adjacent rooms — all while respecting the tree canopy that gives Cabin John its distinctive wooded character."
         },
         {
             question: "How long does a kitchen remodel take in Cabin John, MD?",
-            answer: "Most kitchen renovations in Cabin John take 8–13 weeks from construction start to completion. Projects on sloped or wooded lots may take slightly longer due to additional site access planning and tree protection measures. Permit processing through Montgomery County typically adds 4–6 weeks before construction begins. DMV-GC Group manages the complete timeline in-house."
+            answer: "Most kitchen renovations in Cabin John take 8–13 weeks from construction start to completion. Projects on sloped or wooded lots may take slightly longer due to additional site access planning and tree protection measures. Permit processing through Montgomery County typically adds 4–6 weeks before construction begins. DMV General Contracting Group manages the complete timeline in-house."
         },
         {
-            question: "Is DMV-GC Group licensed for kitchen remodeling in Cabin John, MD?",
-            answer: "Yes. DMV-GC Group holds a Maryland MHIC (Home Improvement Contractor) license — required for all home renovation work in Cabin John and Montgomery County. We are fully bonded, carry comprehensive general liability insurance and workers' compensation coverage, and provide a 1-year workmanship warranty on every kitchen remodeling project completed in Cabin John."
+            question: "Is DMV General Contracting Group licensed for kitchen remodeling in Cabin John, MD?",
+            answer: "Yes. DMV General Contracting Group holds a Maryland MHIC (Home Improvement Contractor) license — required for all home renovation work in Cabin John and Montgomery County. We are fully bonded, carry comprehensive general liability insurance and workers' compensation coverage, and provide a 1-year workmanship warranty on every kitchen remodeling project completed in Cabin John."
         }
     ];
 

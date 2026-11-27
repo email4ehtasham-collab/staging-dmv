@@ -7,6 +7,7 @@ import { Metadata } from "next";
 
 import styles from "./style.module.scss";
 import { seoFor, toMetadata } from "@/lib/seo/resolve";
+import PageSchema from "@/components/Schema/PageSchema";
 
 export async function generateMetadata(): Promise<Metadata> {
   const seo = await seoFor("/our-team", {
@@ -23,6 +24,7 @@ export default function OurTeam() {
 
     return (
         <main className="page-wrapper">
+            <PageSchema path="/our-team" />
             <NavitemActive nav="our-team" />
             <div className={styles['banner-holder']}>
 				<div className={`image-holder ${styles["image-holder"]}`}>

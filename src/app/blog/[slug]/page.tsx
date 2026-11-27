@@ -10,6 +10,7 @@ import NavitemActive from "@/components/Common/NavitemActive";
 import StarsIcon from '@/assets/stars.svg';
 
 import "./style.scss";
+import PageSchema from "@/components/Schema/PageSchema";
 
 export function generateStaticParams() {
   const slugs = new Set<string>([
@@ -48,6 +49,7 @@ export default async function BlogDetailPage(
     if (BlogComponent) {
         return (
             <>
+                <PageSchema path={`/blog/${slug}`} />
                 <NavitemActive nav="blog" />
                 <BlogComponent />
             </>
@@ -57,6 +59,7 @@ export default async function BlogDetailPage(
     if (tService) {
         return (
             <main className="page-wrapper blog-detail-page" >
+                <PageSchema path={`/blog/${slug}`} />
                 <NavitemActive nav="blog" />
                 <section className="page-content">
                     <div className="container">

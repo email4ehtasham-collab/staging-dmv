@@ -68,61 +68,6 @@ const HardscapingBethesdaMD = () => {
         <div className="city-service-detail-page hardscaping-bethesda-md hardscaping-page">
             <div className="container">
                 {/* SCHEMA JSON-LD */}
-                <script
-                    type="application/ld+json"
-                    dangerouslySetInnerHTML={{
-                        __html: JSON.stringify({
-                            "@context": "https://schema.org",
-                            "@graph": [
-                                {
-                                    "@type": "GeneralContractor",
-                                    "@id": "https://www.dmv-gc.com/#business",
-                                    "name": "DMV General Contracting Group LLC",
-                                    "legalName": "DMV General Contracting Group LLC",
-                                    "alternateName": ["DMV General Contracting Group", "DMV-GC"],
-                                    "url": "https://www.dmv-gc.com/",
-                                    "telephone": "+1-240-730-1292",
-                                    "email": "support@dmv-gc.com",
-                                    "description": "Professional hardscaping contractor serving Bethesda, MD. Custom patios, walkways, retaining walls, driveways, and outdoor kitchens for Bethesda's upscale colonials and established neighborhoods. MoCo DPS permits managed in-house. Natural stone specialists. MHIC #156178.",
-                                    "address": {
-                                        "@type": "PostalAddress",
-                                        "streetAddress": "11810 Grand Park Ave #500",
-                                        "addressLocality": "North Bethesda",
-                                        "addressRegion": "MD",
-                                        "postalCode": "20852",
-                                        "addressCountry": "US"
-                                    },
-                                    "areaServed": { "@type": "City", "name": "Bethesda" }
-                                },
-                                {
-                                    "@type": "Service",
-                                    "name": "Hardscaping Services in Bethesda, MD",
-                                    "provider": { "@type": "GeneralContractor", "name": "DMV General Contracting Group LLC", "telephone": "+1-240-730-1292", "url": "https://www.dmv-gc.com/" },
-                                    "areaServed": { "@type": "City", "name": "Bethesda" },
-                                    "serviceType": "Hardscaping, Patio Installation, Walkways, Retaining Walls, Driveway Paving, Outdoor Kitchen, Outdoor Living"
-                                },
-                                {
-                                    "@type": "BreadcrumbList",
-                                    "itemListElement": [
-                                        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.dmv-gc.com/" },
-                                        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.dmv-gc.com/services" },
-                                        { "@type": "ListItem", "position": 3, "name": "Hardscaping", "item": "https://www.dmv-gc.com/service/hardscaping" },
-                                        { "@type": "ListItem", "position": 4, "name": "Bethesda, MD", "item": "https://www.dmv-gc.com/service/hardscaping/bethesda-md" }
-                                    ]
-                                },
-                                {
-                                    "@type": "FAQPage",
-                                    "mainEntity": faqData.map(faq => ({
-                                        "@type": "Question",
-                                        "name": faq.question,
-                                        "acceptedAnswer": { "@type": "Answer", "text": faq.answer }
-                                    }))
-                                }
-                            ]
-                        })
-                    }}
-                />
-
                 {/* BREADCRUMB */}
                 <nav className="breadcrumb" aria-label="Breadcrumb">
                     <Link href="/">Home</Link><span>›</span>

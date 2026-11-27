@@ -47,22 +47,32 @@ const schemaData = {
 				"longitude": -77.1174492
 			},
 			"hasMap": "https://www.google.com/maps?cid=14905282013525036539",
-			"areaServed": [
-				{ "@type": "City", "name": "Bethesda", "addressRegion": "MD" },
-				{ "@type": "City", "name": "North Bethesda", "addressRegion": "MD" },
-				{ "@type": "City", "name": "Potomac", "addressRegion": "MD" },
-				{ "@type": "City", "name": "Chevy Chase", "addressRegion": "MD" },
-				{ "@type": "City", "name": "Rockville", "addressRegion": "MD" },
-				{ "@type": "City", "name": "Kensington", "addressRegion": "MD" },
-				{ "@type": "City", "name": "Silver Spring", "addressRegion": "MD" },
-				{ "@type": "City", "name": "Wheaton", "addressRegion": "MD" },
-				{ "@type": "City", "name": "Gaithersburg", "addressRegion": "MD" },
-				{ "@type": "City", "name": "Garrett Park", "addressRegion": "MD" },
-				{ "@type": "City", "name": "Cabin John", "addressRegion": "MD" },
-				{ "@type": "City", "name": "Laurel", "addressRegion": "MD" },
-				{ "@type": "City", "name": "Washington", "addressRegion": "DC" }
+			"contactPoint": {
+				"@type": "ContactPoint",
+				"contactType": "customer service",
+				"telephone": "+1-240-730-1292",
+				"email": "support@dmv-gc.com",
+				"areaServed": ["US-MD", "US-DC"]
+			},
+			"hasCredential": [
+				{
+					"@type": "EducationalOccupationalCredential",
+					"credentialCategory": "license",
+					"name": "Maryland Home Improvement Commission License #156178",
+					"recognizedBy": { "@type": "GovernmentOrganization", "name": "Maryland Home Improvement Commission" }
+				},
+				{
+					"@type": "EducationalOccupationalCredential",
+					"credentialCategory": "license",
+					"name": "DC Department of Licensing and Consumer Protection License #410526000209",
+					"recognizedBy": { "@type": "GovernmentOrganization", "name": "DC Department of Licensing and Consumer Protection" }
+				}
 			],
-			"priceRange": "$$$$",
+			"areaServed": [
+				{ "@type": "State", "name": "Maryland", "sameAs": "https://en.wikipedia.org/wiki/Maryland" },
+				{ "@type": "AdministrativeArea", "name": "Montgomery County", "sameAs": "https://en.wikipedia.org/wiki/Montgomery_County,_Maryland", "containedInPlace": { "@type": "State", "name": "Maryland" } },
+				{ "@type": "AdministrativeArea", "name": "Washington, DC", "sameAs": "https://en.wikipedia.org/wiki/Washington,_D.C." }
+			],
 			"openingHoursSpecification": [
 				{
 					"@type": "OpeningHoursSpecification",
@@ -81,13 +91,13 @@ const schemaData = {
 				"@type": "OfferCatalog",
 				"name": "Home Remodeling Services",
 				"itemListElement": [
-					{ "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Kitchen Remodeling" } },
-					{ "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Bathroom Remodeling" } },
-					{ "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Basement Remodeling" } },
-					{ "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Home Additions" } },
-					{ "@type": "Offer", "itemOffered": { "@type": "Service", "name": "ADU Construction" } },
-					{ "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Design-Build" } },
-					{ "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Whole-Home Renovation" } }
+					{ "@type": "Offer", "itemOffered": { "@type": "Service", "@id": "https://www.dmv-gc.com/service/kitchen-remodeling#service", "name": "Kitchen Remodeling" } },
+					{ "@type": "Offer", "itemOffered": { "@type": "Service", "@id": "https://www.dmv-gc.com/service/bathroom-remodeling#service", "name": "Bathroom Remodeling" } },
+					{ "@type": "Offer", "itemOffered": { "@type": "Service", "@id": "https://www.dmv-gc.com/service/basement-remodeling#service", "name": "Basement Remodeling" } },
+					{ "@type": "Offer", "itemOffered": { "@type": "Service", "@id": "https://www.dmv-gc.com/service/home-additions#service", "name": "Home Additions" } },
+					{ "@type": "Offer", "itemOffered": { "@type": "Service", "@id": "https://www.dmv-gc.com/service/adu#service", "name": "ADU Construction" } },
+					{ "@type": "Offer", "itemOffered": { "@type": "Service", "@id": "https://www.dmv-gc.com/service/design-build#service", "name": "Design-Build Remodeling" } },
+					{ "@type": "Offer", "itemOffered": { "@type": "Service", "@id": "https://www.dmv-gc.com/service/whole-home-renovation#service", "name": "Whole-Home Renovation" } }
 				]
 			},
 			"sameAs": [
@@ -102,6 +112,7 @@ const schemaData = {
 			"@id": "https://www.dmv-gc.com/#website",
 			"url": "https://www.dmv-gc.com/",
 			"name": "DMV General Contracting Group",
+			"inLanguage": "en-US",
 			"publisher": {
 				"@id": "https://www.dmv-gc.com/#business"
 			}

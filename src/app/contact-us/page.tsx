@@ -8,6 +8,7 @@ import styles from './style.module.scss';
 import GoogleMap from '@/components/GoogleMap';
 
 import StarsIcon from '@/assets/stars.svg';
+import PageSchema from "@/components/Schema/PageSchema";
 
 const baseMetadata: Metadata = {
   title: "Contact DMV General Contracting Group | Free Consultation Bethesda MD",
@@ -27,6 +28,7 @@ function ContactPage() {
 
 	return (
 		<main className='page-wrapper'>
+			<PageSchema path="/contact-us" />
 			<NavitemActive nav="contact" />
 			<div className={styles['banner-holder']}>
 				<div className={`image-holder ${styles["image-holder"]}`}>

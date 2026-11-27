@@ -14,6 +14,7 @@ import BethesdaProjectsReviews from "@/components/ServiceArea/BethesdaProjectsRe
 import HomesMatrix from "@/components/ServiceArea/HomesMatrix";
 import ServiceAreaPage from "@/components/ServiceArea/ServiceAreaPage";
 import SupportingServices from "@/components/ServiceArea/SupportingServices";
+import PageSchema from "@/components/Schema/PageSchema";
 
 const baseMetadata: Metadata = {
   title: "General Contractor & Home Remodeling in Bethesda, MD | DMV General Contracting Group",
@@ -44,8 +45,6 @@ export default function BethesdaServiceAreaPage() {
       ]}
       factsTitle="Working With Us in Bethesda"
       factsSubtitle="6 essential operational facts"
-      heroImage="/images/services/general-contractor.webp"
-      heroImageAlt="General contractor remodeling homes in Bethesda, MD"
       facts={[
         {
           label: "Maryland license",
@@ -295,6 +294,8 @@ export default function BethesdaServiceAreaPage() {
       <HomeFaq variant="bethesda" />
 
       <Estimate />
+
+      <PageSchema path="/service-area/bethesda-md" />
     </ServiceAreaPage>
   );
 }

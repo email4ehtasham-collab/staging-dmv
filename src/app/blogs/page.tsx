@@ -6,6 +6,7 @@ import blogData from "@/data/blogs/BlogsData";
 import NavitemActive from "@/components/Common/NavitemActive";
 
 import styles from "./style.module.scss";
+import PageSchema from "@/components/Schema/PageSchema";
 
 const baseMetadata: Metadata = {
   title: "Discover Our Construction Blogs for Modern Building Ideas",
@@ -23,6 +24,7 @@ export function generateMetadata(): Promise<Metadata> {
 export default function ProjectsPage() {
     return (
         <main className="page-wrapper">
+            <PageSchema path="/blogs" />
             <NavitemActive nav="blog" />
             <div className={styles['banner-holder']}>
                 <div className={`image-holder ${styles["image-holder"]}`}>

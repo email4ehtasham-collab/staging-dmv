@@ -12,10 +12,11 @@ import { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo/resolve";
 
 import StarsIcon from '@/assets/stars.svg';
+import PageSchema from "@/components/Schema/PageSchema";
 
 const baseMetadata: Metadata = {
   title: "About DMV General Contracting Group | Licensed General Contractor Bethesda MD",
-  description: "Learn about DMV General Contracting Group — a trusted design-build general contractor serving Bethesda MD, Virginia & DC. Years of experience, licensed in-house teams & 4.9★ rated. Meet our team.",
+  description: "Learn about DMV General Contracting Group — a trusted design-build general contractor serving Bethesda MD & DC. Years of experience, licensed in-house teams & 4.9★ rated. Meet our team.",
   
   alternates: {
     canonical: "/about-us",
@@ -30,6 +31,7 @@ function AboutPage() {
 
 	return (
 		<main className='page-wrapper'>
+			<PageSchema path="/about-us" />
 			<NavitemActive nav="about" />
 			<div className={styles['about-page']}>
 				<div className={styles['banner-holder']}>

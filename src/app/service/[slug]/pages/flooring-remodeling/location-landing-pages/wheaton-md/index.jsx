@@ -7,103 +7,6 @@ import { useMyContext } from "@/hooks/context";
 import "../city-service-style.scss";
 import "./style.scss";
 
-const schemaJsonLd = {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "GeneralContractor",
-      "@id": "https://www.dmv-gc.com/#business",
-      "name": "DMV General Contracting Group LLC",
-      "legalName": "DMV General Contracting Group LLC",
-      "alternateName": ["DMV General Contracting Group", "DMV-GC"],
-      "url": "https://www.dmv-gc.com",
-      "telephone": "+1-240-730-1292",
-      "email": "support@dmv-gc.com",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "11810 Grand Park Ave #500",
-        "addressLocality": "North Bethesda",
-        "addressRegion": "MD",
-        "postalCode": "20852",
-        "addressCountry": "US"
-      },
-      "areaServed": { "@type": "City", "name": "Wheaton", "sameAs": "https://en.wikipedia.org/wiki/Wheaton,_Maryland" },
-      "hasCredential": [
-        { "@type": "EducationalOccupationalCredential", "name": "MHIC License #156178" },
-        { "@type": "EducationalOccupationalCredential", "name": "DLCP License #410526000209" }
-      ],
-      "priceRange": "$$$"
-    },
-    {
-      "@type": "Service",
-      "name": "Flooring Installation in Wheaton, MD",
-      "serviceType": "Flooring Installation",
-      "provider": { "@id": "https://www.dmv-gc.com/#business" },
-      "areaServed": { "@type": "City", "name": "Wheaton" },
-      "description": "Full-service flooring installation, refinishing, and replacement in Wheaton, MD. Hardwood refinishing for postwar colonials, LVP for split-level lower levels and below-grade ADU spaces, porcelain tile for bathrooms, and whole-home flooring replacement across Glenmont, Wheaton Hills, Forest Estates, and all Wheaton neighborhoods — with split-level two-zone expertise and below-grade moisture management.",
-      "offers": {
-        "@type": "Offer",
-        "priceCurrency": "USD",
-        "priceSpecification": { "@type": "PriceSpecification", "minPrice": "4", "maxPrice": "18", "priceCurrency": "USD", "unitCode": "SQFT" }
-      }
-    },
-    {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.dmv-gc.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.dmv-gc.com/services" },
-        { "@type": "ListItem", "position": 3, "name": "Flooring", "item": "https://www.dmv-gc.com/service/flooring-remodeling" },
-        { "@type": "ListItem", "position": 4, "name": "Wheaton, MD", "item": "https://www.dmv-gc.com/service/flooring-remodeling/wheaton-md" }
-      ]
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "How much does flooring installation cost in Wheaton, MD?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Flooring installation in Wheaton, MD typically costs $4–$18 per square foot installed depending on material. Hardwood refinishing costs $3–$6 per square foot. New hardwood installation runs $8–$15 per square foot. LVP installation costs $5–$10 per square foot and is the correct choice for Wheaton's split-level lower levels and below-grade ADU spaces. Porcelain tile costs $8–$18 per square foot. A typical Wheaton split-level whole-home flooring package — hardwood on the upper level and premium LVP below grade — runs $10,000–$24,000. DMV General Contracting Group provides free, detailed zone-by-zone estimates for every Wheaton home."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is the best flooring for Wheaton's split-level homes?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Wheaton's split-level homes — which make up the majority of the community's single-family housing stock — require a two-zone flooring approach. The upper main level (living room, dining room, kitchen, upper bedrooms) is above grade and suitable for hardwood or engineered hardwood. The lower level (family room, laundry, ADU or rental space) is at or below grade and must use LVP or other fully waterproof flooring. Solid hardwood installed below grade in a Wheaton split-level will cup, buckle, and develop moisture-driven squeaks within a few seasons regardless of how well it was installed. Premium LVP on the lower level, matched in tone to the upper-level hardwood, is the correct two-zone strategy."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Does DMV General Contracting Group refinish original hardwood floors in Wheaton?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. Wheaton's 1950s–70s colonials and split-levels frequently have original strip hardwood on the upper main level — often 2.25-inch or 3-inch oak — that is structurally sound and refinishable. DMV General Contracting Group checks remaining wood thickness above the tongue during the free consultation before recommending refinishing. When viable, refinishing costs $3–$6 per square foot versus $8–$15 for new hardwood replacement. We always recommend refinishing when the floor supports it."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What flooring is best for a Wheaton ADU lower-level conversion?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Premium LVP is the correct flooring choice for Wheaton's split-level lower-level ADU conversions — consistently. It is 100% waterproof, handles below-grade moisture without cupping or buckling, is highly durable for rental use (important for ADU tenant turnover), available in realistic wood looks, and floats over minor slab irregularities without adhesive. DMV General Contracting Group installs LVP as part of full Wheaton ADU conversion projects — flooring coordinated with plumbing, electrical, and egress under one contract."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is DMV General Contracting Group licensed for flooring installation in Wheaton, MD?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. DMV General Contracting Group holds a Maryland MHIC license (#156178) — required for all home improvement work in Wheaton and Montgomery County. We are fully bonded, carry comprehensive general liability insurance and workers' compensation coverage, and provide a 1-year workmanship warranty on every Wheaton flooring project."
-          }
-        }
-      ]
-    }
-  ]
-};
-
 const WheatonMD = () => {
   const { setActiveMenuItem } = useMyContext();
 
@@ -114,7 +17,7 @@ const WheatonMD = () => {
   const faqData = [
     {
       question: "How much does flooring installation cost in Wheaton, MD?",
-      answer: "Flooring in Wheaton typically costs $3–$18 per square foot depending on material and zone. Hardwood refinishing costs $3–$6 per square foot. New hardwood installation runs $8–$15 per square foot. Premium LVP for lower levels and ADU spaces costs $5–$10 per square foot. Porcelain tile runs $8–$18 per square foot. A typical Wheaton split-level package — hardwood refinishing or new hardwood on the upper level, premium LVP on the lower level, and tile in bathrooms — runs $10,000–$24,000. DMV-GC Group provides free, itemized zone-by-zone estimates for every Wheaton home."
+      answer: "Flooring in Wheaton typically costs $3–$18 per square foot depending on material and zone. Hardwood refinishing costs $3–$6 per square foot. New hardwood installation runs $8–$15 per square foot. Premium LVP for lower levels and ADU spaces costs $5–$10 per square foot. Porcelain tile runs $8–$18 per square foot. A typical Wheaton split-level package — hardwood refinishing or new hardwood on the upper level, premium LVP on the lower level, and tile in bathrooms — runs $10,000–$24,000. DMV General Contracting Group provides free, itemized zone-by-zone estimates for every Wheaton home."
     },
     {
       question: "Why does solid hardwood fail on Wheaton split-level lower levels?",
@@ -122,23 +25,21 @@ const WheatonMD = () => {
     },
     {
       question: "What LVP is best for a Wheaton ADU rental unit?",
-      answer: "For ADU rental units, DMV-GC Group specifies commercial-grade LVP with a wear layer of 12mil or greater — COREtec Plus, Shaw Floorté Pro, or equivalent. The thicker wear layer handles the heavier foot traffic and furniture dragging that rental use generates, and resists the surface scratching that thinner residential-grade LVP shows within a few years of rental occupancy. The investment in a 12mil wear layer versus an 8mil residential product is typically $0.50–$1.50 per square foot — worthwhile for a rental floor that needs to last through multiple tenant cycles without replacement."
+      answer: "For ADU rental units, DMV General Contracting Group specifies commercial-grade LVP with a wear layer of 12mil or greater — COREtec Plus, Shaw Floorté Pro, or equivalent. The thicker wear layer handles the heavier foot traffic and furniture dragging that rental use generates, and resists the surface scratching that thinner residential-grade LVP shows within a few years of rental occupancy. The investment in a 12mil wear layer versus an 8mil residential product is typically $0.50–$1.50 per square foot — worthwhile for a rental floor that needs to last through multiple tenant cycles without replacement."
     },
     {
       question: "Can my original Wheaton split-level hardwood be refinished?",
-      answer: "Often yes — Wheaton's 1950s–70s split-levels frequently have original 2.25-inch or 3-inch strip oak on the upper main level that has survived under carpet in reasonable condition. DMV-GC Group checks the remaining thickness above the tongue during the free consultation. If sufficient thickness remains and the wood is structurally sound, refinishing is the right choice at $3–$6 per square foot — far less than the $8–$15 per square foot cost of replacement, and more authentic to the home's original character."
+      answer: "Often yes — Wheaton's 1950s–70s split-levels frequently have original 2.25-inch or 3-inch strip oak on the upper main level that has survived under carpet in reasonable condition. DMV General Contracting Group checks the remaining thickness above the tongue during the free consultation. If sufficient thickness remains and the wood is structurally sound, refinishing is the right choice at $3–$6 per square foot — far less than the $8–$15 per square foot cost of replacement, and more authentic to the home's original character."
     },
     {
-      question: "Is DMV-GC Group licensed for flooring in Wheaton, MD?",
-      answer: "Yes. DMV-GC Group holds Maryland MHIC license #156178 — required for all home improvement work in Wheaton and Montgomery County. We are fully bonded, carry comprehensive general liability insurance and workers' compensation coverage, and provide a 1-year workmanship warranty on every Wheaton flooring project."
+      question: "Is DMV General Contracting Group licensed for flooring in Wheaton, MD?",
+      answer: "Yes. DMV General Contracting Group holds Maryland MHIC license #156178 — required for all home improvement work in Wheaton and Montgomery County. We are fully bonded, carry comprehensive general liability insurance and workers' compensation coverage, and provide a 1-year workmanship warranty on every Wheaton flooring project."
     }
   ];
 
   return (
     <div className="city-service-detail-page flooring-wheaton-md">
       <div className="container">
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaJsonLd) }} />
-
         <nav className="breadcrumb">
           <Link href="/">Home</Link><span>›</span>
           <Link href="/services">Services</Link><span>›</span>

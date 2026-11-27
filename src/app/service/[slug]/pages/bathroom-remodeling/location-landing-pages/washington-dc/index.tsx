@@ -10,27 +10,27 @@ export default function BathroomWashingtonDC() {
     const faqData = [
         {
             question: "How much does a bathroom remodel cost in Washington, DC?",
-            answer: "Bathroom remodeling in DC typically costs $8,000&ndash;$110,000 depending on type and scope. A powder room runs $8,000&ndash;$18,000. A rowhouse hall bath refresh costs $12,000&ndash;$24,000. A full hall bath gut renovation runs $24,000&ndash;$45,000. A master bathroom renovation costs $32,000&ndash;$65,000. A luxury master renovation can reach $65,000&ndash;$110,000. An English basement bathroom addition runs $18,000&ndash;$40,000. Condo renovations run $14,000&ndash;$45,000. DMV-GC Group provides free in-home consultations with itemized estimates."
+            answer: "Bathroom remodeling in DC typically costs $8,000&ndash;$110,000 depending on type and scope. A powder room runs $8,000&ndash;$18,000. A rowhouse hall bath refresh costs $12,000&ndash;$24,000. A full hall bath gut renovation runs $24,000&ndash;$45,000. A master bathroom renovation costs $32,000&ndash;$65,000. A luxury master renovation can reach $65,000&ndash;$110,000. An English basement bathroom addition runs $18,000&ndash;$40,000. Condo renovations run $14,000&ndash;$45,000. DMV General Contracting Group provides free in-home consultations with itemized estimates."
         },
         {
-            question: "Is DMV-GC Group licensed to do bathroom remodeling in Washington, DC?",
-            answer: "Yes. DMV-GC Group holds a DLCP license from the DC Department of Licensing and Consumer Protection &mdash; the license required to legally perform residential renovation work in Washington, DC. We also hold a Maryland MHIC license, employ licensed plumbers and electricians in-house, and provide a 1-year workmanship warranty on every DC bathroom project."
+            question: "Is DMV General Contracting Group licensed to do bathroom remodeling in Washington, DC?",
+            answer: "Yes. DMV General Contracting Group holds a DLCP license from the DC Department of Licensing and Consumer Protection &mdash; the license required to legally perform residential renovation work in Washington, DC. We also hold a Maryland MHIC license, employ licensed plumbers and electricians in-house, and provide a 1-year workmanship warranty on every DC bathroom project."
         },
         {
-            question: "Can DMV-GC Group add a bathroom to an English basement in a DC rowhouse?",
-            answer: "Yes. Adding a bathroom to a DC rowhouse English basement is one of our most common projects. It requires a sewer elevation assessment to determine whether gravity drainage is possible or whether an ejector pump is needed. DMV-GC Group&apos;s licensed plumbers assess this during the free consultation and design the correct drainage system. All DOB plumbing permits are included and handled in-house."
+            question: "Can DMV General Contracting Group add a bathroom to an English basement in a DC rowhouse?",
+            answer: "Yes. Adding a bathroom to a DC rowhouse English basement is one of our most common projects. It requires a sewer elevation assessment to determine whether gravity drainage is possible or whether an ejector pump is needed. DMV General Contracting Group&apos;s licensed plumbers assess this during the free consultation and design the correct drainage system. All DOB plumbing permits are included and handled in-house."
         },
         {
-            question: "Does DMV-GC Group handle DC permits for bathroom remodeling?",
-            answer: "Yes. DMV-GC Group handles all required DC Department of Buildings (DOB) permits for bathroom remodeling &mdash; building, plumbing, and electrical. For historic district properties where exterior changes may trigger HPRB review, we manage that process as well. DC homeowners never need to navigate the permit process themselves."
+            question: "Does DMV General Contracting Group handle DC permits for bathroom remodeling?",
+            answer: "Yes. DMV General Contracting Group handles all required DC Department of Buildings (DOB) permits for bathroom remodeling &mdash; building, plumbing, and electrical. For historic district properties where exterior changes may trigger HPRB review, we manage that process as well. DC homeowners never need to navigate the permit process themselves."
         },
         {
-            question: "Can DMV-GC Group renovate a bathroom in a DC condo or co-op?",
-            answer: "Yes. DMV-GC Group has experience renovating bathrooms in DC&apos;s condo buildings and co-ops &mdash; including building management coordination (COI submission, elevator scheduling, work-hour compliance) and co-op board documentation where required. We manage all building coordination as a standard part of every DC condo bathroom project."
+            question: "Can DMV General Contracting Group renovate a bathroom in a DC condo or co-op?",
+            answer: "Yes. DMV General Contracting Group has experience renovating bathrooms in DC&apos;s condo buildings and co-ops &mdash; including building management coordination (COI submission, elevator scheduling, work-hour compliance) and co-op board documentation where required. We manage all building coordination as a standard part of every DC condo bathroom project."
         },
         {
             question: "How long does a bathroom remodel take in Washington, DC?",
-            answer: "Most bathroom renovations in DC take 4&ndash;8 weeks from construction start to completion. A hall bathroom refresh takes 2&ndash;3 weeks. A full master bathroom gut renovation takes 5&ndash;8 weeks. An English basement bathroom addition takes 6&ndash;10 weeks. DC DOB permit processing typically adds 4&ndash;6 weeks before construction begins. DMV-GC Group provides a detailed timeline with every estimate."
+            answer: "Most bathroom renovations in DC take 4&ndash;8 weeks from construction start to completion. A hall bathroom refresh takes 2&ndash;3 weeks. A full master bathroom gut renovation takes 5&ndash;8 weeks. An English basement bathroom addition takes 6&ndash;10 weeks. DC DOB permit processing typically adds 4&ndash;6 weeks before construction begins. DMV General Contracting Group provides a detailed timeline with every estimate."
         }
     ];
 
@@ -439,162 +439,6 @@ export default function BathroomWashingtonDC() {
                 </div>
 
                 {/* SCHEMA JSON-LD */}
-                <script
-                    type="application/ld+json"
-                    dangerouslySetInnerHTML={{
-                        __html: `{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "GeneralContractor",
-      "@id": "https://www.dmv-gc.com/#business",
-      "name": "DMV General Contracting Group LLC",
-      "legalName": "DMV General Contracting Group LLC",
-      "alternateName": ["DMV General Contracting Group", "DMV-GC"],
-      "image": "https://www.dmv-gc.com/logo.png",
-      "url": "https://www.dmv-gc.com",
-      "telephone": "+1-240-730-1292",
-      "email": "support@dmv-gc.com",
-      "foundingDate": "2018",
-      "description": "Licensed design-build general contractor serving Washington, DC and the greater DMV area. Specializing in bathroom remodeling for DC rowhouses, English basement units, condo renovations, and historic home bathrooms.",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "11810 Grand Park Ave #500",
-        "addressLocality": "North Bethesda",
-        "addressRegion": "MD",
-        "postalCode": "20852",
-        "addressCountry": "US"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 39.0458,
-        "longitude": -77.1139
-      },
-      "areaServed": [
-        {
-          "@type": "AdministrativeArea",
-          "name": "Washington, DC",
-          "sameAs": "https://en.wikipedia.org/wiki/Washington,_D.C."
-        },
-        {"@type": "City", "name": "Chevy Chase"},
-        {"@type": "City", "name": "Silver Spring"},
-        {"@type": "City", "name": "Bethesda"}
-      ],
-      "hasCredential": [
-        {
-          "@type": "EducationalOccupationalCredential",
-          "name": "DLCP License",
-          "credentialCategory": "Washington DC Department of Licensing and Consumer Protection \u2014 Home Improvement Contractor"
-        },
-        {
-          "@type": "EducationalOccupationalCredential",
-          "name": "MHIC License",
-          "credentialCategory": "Maryland Home Improvement Contractor License"
-        }
-      ],
-      "priceRange": "$$$$"
-    },
-    {
-      "@type": "Service",
-      "@id": "https://www.dmv-gc.com/service/bathroom-remodeling/washington-dc#service",
-      "serviceType": "Bathroom Remodeling",
-      "name": "Bathroom Remodeling in Washington, DC",
-      "provider": {"@id": "https://www.dmv-gc.com/#business"},
-      "areaServed": {
-        "@type": "AdministrativeArea",
-        "name": "Washington, DC",
-        "sameAs": "https://en.wikipedia.org/wiki/Washington,_D.C."
-      },
-      "description": "Full-service bathroom remodeling in Washington, DC. Rowhouse bathroom renovations, English basement bathroom additions, condo bathroom remodels, walk-in shower conversions, custom tile work, and all trade work \u2014 design through final finishes \u2014 by a DLCP-licensed design-build contractor.",
-      "offers": {
-        "@type": "Offer",
-        "priceCurrency": "USD",
-        "priceSpecification": {
-          "@type": "PriceSpecification",
-          "minPrice": "12000",
-          "maxPrice": "110000",
-          "priceCurrency": "USD"
-        }
-      },
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Bathroom Remodeling Services Washington DC",
-        "itemListElement": [
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Rowhouse Bathroom Renovation"}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "English Basement Bathroom Addition"}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Master Bathroom Renovation"}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Condo Bathroom Remodel"}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Tub-to-Shower Conversion"}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Custom Tile Design & Installation"}}
-        ]
-      }
-    },
-    {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.dmv-gc.com/"},
-        {"@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.dmv-gc.com/services"},
-        {"@type": "ListItem", "position": 3, "name": "Bathroom Remodeling", "item": "https://www.dmv-gc.com/service/bathroom-remodeling"},
-        {"@type": "ListItem", "position": 4, "name": "Washington, DC", "item": "https://www.dmv-gc.com/service/bathroom-remodeling/washington-dc"}
-      ]
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "How much does a bathroom remodel cost in Washington, DC?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Bathroom remodeling in Washington, DC typically costs between $12,000 and $110,000 depending on bathroom type, size, and scope. A hall or rowhouse bathroom refresh starts around $12,000\u2013$22,000. A mid-range master bathroom renovation runs $32,000\u2013$60,000. A full luxury gut renovation with custom tile and premium fixtures ranges from $65,000\u2013$110,000. An English basement bathroom addition runs $18,000\u2013$40,000. DMV General Contracting Group provides free in-home consultations with detailed estimates for any DC home type."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is DMV General Contracting Group licensed to do bathroom remodeling in Washington, DC?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. DMV General Contracting Group holds a license from the DC Department of Licensing and Consumer Protection (DLCP) as a Home Improvement Contractor \u2014 the license required to perform residential renovation work in Washington, DC. We also hold a Maryland MHIC license. We are fully bonded, carry comprehensive general liability insurance and workers' compensation coverage, and provide a 1-year workmanship warranty on every bathroom remodeling project in DC."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can DMV General Contracting Group add a bathroom to an English basement in a DC rowhouse?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. Adding a bathroom to an English basement unit is one of the most common and highest-value projects we complete in DC rowhouses. A basement bathroom requires below-slab plumbing \u2014 either a gravity drain if the sewer elevation allows, or an ejector pump system for below-grade drainage. DMV General Contracting Group's licensed plumbers assess the sewer elevation at your specific property during the consultation phase and recommend the correct drainage approach."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Does DMV General Contracting Group handle DC permits for bathroom remodeling?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. DMV General Contracting Group handles all required permits through the DC Department of Buildings (DOB) for bathroom remodeling projects \u2014 building, plumbing, and electrical permits included. For bathroom additions or structural changes, we also manage any required zoning review. DC homeowners never need to navigate the permit process themselves."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can DMV General Contracting Group renovate a bathroom in a DC condo or co-op?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. DMV General Contracting Group has experience renovating bathrooms in DC condo buildings and co-ops, including building management coordination \u2014 certificate of insurance submission, freight elevator scheduling, work-hour compliance, and co-op board documentation where required. We manage all building coordination as a standard part of every DC condo bathroom project."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How long does a bathroom remodel take in Washington, DC?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Most bathroom renovations in DC take 4\u20138 weeks from construction start to completion. A hall bathroom refresh can be done in 2\u20133 weeks. A full master bathroom gut renovation takes 5\u20138 weeks. An English basement bathroom addition takes 6\u201310 weeks. DC permit processing through the Department of Buildings typically adds 4\u20136 weeks before construction begins. DMV General Contracting Group provides a detailed timeline with every DC bathroom estimate."
-          }
-        }
-      ]
-    }
-  ]
-}`
-                    }}
-                />
             </div>
         </div>
     );

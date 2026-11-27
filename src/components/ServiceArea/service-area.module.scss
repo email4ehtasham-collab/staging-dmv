@@ -115,27 +115,6 @@
   margin-top: var(--dmv-space-8);
 }
 
-.factsSection {
-  padding-block: 0;
-  border-bottom: 0;
-  background: var(--dmv-color-dark-blue);
-}
-
-.factsSection .factsCard {
-  display: grid;
-  grid-template-columns: minmax(220px, 0.8fr) minmax(0, 2fr);
-  align-items: center;
-  gap: var(--dmv-space-8);
-  width: 100%;
-  max-width: none;
-  margin-inline: 0;
-  padding: var(--dmv-space-6) 0;
-  border: 0;
-  border-radius: 0;
-  background: var(--dmv-color-dark-blue);
-  box-shadow: none;
-}
-
 .factsCard {
   position: relative;
   overflow: hidden;

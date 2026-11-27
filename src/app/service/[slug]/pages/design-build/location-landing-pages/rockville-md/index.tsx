@@ -18,18 +18,18 @@ const RockvilleMD = () => {
     const faqData = [
         {
             question: "How does Rockville's varied housing age affect a design-build renovation?",
-            answer: "Rockville spans more than a century of residential architecture, and DMV-GC Group renovates across the full age range: pre-war cedars and capes in Lincoln Park and Old Rockville; mid-century split levels and ranches in the 1950s–1970s postwar neighborhoods; modern colonials and large detached homes in the 1980s–1990s areas; and contemporary luxury homes in the newer southern estates. Each era brings different conditions — older homes may have outdated wiring, galvanized piping, and load-bearing unknowns, while newer homes have their own structural systems and evolving codes. Our engineers and architects assess each home's specific conditions at consultation, and design solutions that preserve character while delivering modern function."
+            answer: "Rockville spans more than a century of residential architecture, and DMV General Contracting Group renovates across the full age range: pre-war cedars and capes in Lincoln Park and Old Rockville; mid-century split levels and ranches in the 1950s–1970s postwar neighborhoods; modern colonials and large detached homes in the 1980s–1990s areas; and contemporary luxury homes in the newer southern estates. Each era brings different conditions — older homes may have outdated wiring, galvanized piping, and load-bearing unknowns, while newer homes have their own structural systems and evolving codes. Our engineers and architects assess each home's specific conditions at consultation, and design solutions that preserve character while delivering modern function."
         },
         {
-            question: "Does DMV-GC Group build accessory dwelling units (ADUs) and in-law suites in Rockville?",
-            answer: "Yes. DMV-GC Group builds ADUs and in-law suites throughout Rockville, in partnership with MOCO DPS. Each accessory dwelling unit requires a building permit from MoCo DPS, must meet all local zoning and building code requirements, and must receive a Use and Occupancy (U&amp;O) Certificate before occupancy. Rockville's zoning and the county ADU law govern unit type, location, and dimensional standards. We handle the MoCo DPS permit, design the unit to code, and coordinate inspections so your in-law suite or rental unit is built legally and completely."
+            question: "Does DMV General Contracting Group build accessory dwelling units (ADUs) and in-law suites in Rockville?",
+            answer: "Yes. DMV General Contracting Group builds ADUs and in-law suites throughout Rockville, in partnership with MOCO DPS. Each accessory dwelling unit requires a building permit from MoCo DPS, must meet all local zoning and building code requirements, and must receive a Use and Occupancy (U&amp;O) Certificate before occupancy. Rockville's zoning and the county ADU law govern unit type, location, and dimensional standards. We handle the MoCo DPS permit, design the unit to code, and coordinate inspections so your in-law suite or rental unit is built legally and completely."
         },
         {
             question: "How much does a design-build renovation cost in Rockville, MD?",
             answer: "Rockville design-build costs span its range of housing. Kitchen remodels: $45,000–$175,000+ depending on scale and finishes. Primary bathrooms: $30,000–$100,000+. Basement remodels: $50,000–$150,000+. House additions: $250,000–$800,000+. ADUs and in-law suites: $80,000–$250,000+. Whole-home renovations: $150,000–$600,000+. Every project includes architectural design, structural engineering where required, MoCo DPS permitting, and construction by licensed in-house trades — typically at the same total cost you would pay a contractor who charges architecture separately."
         },
         {
-            question: "Is DMV-GC Group licensed and insured for design-build work in Rockville, MD?",
+            question: "Is DMV General Contracting Group licensed and insured for design-build work in Rockville, MD?",
             answer: "Yes. DMV General Contracting Group has held Maryland MHIC license #156178 since 2019, is fully bonded with comprehensive general liability and workers' compensation coverage, and provides a 1-year workmanship warranty on all Rockville design-build projects. MoCo DPS permits are actively managed by our in-house permit specialists from application through closing."
         }
     ];

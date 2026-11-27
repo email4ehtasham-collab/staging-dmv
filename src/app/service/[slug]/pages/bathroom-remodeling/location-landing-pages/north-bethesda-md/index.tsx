@@ -10,128 +10,33 @@ export default function BathroomNorthBethesdaMD() {
     const faqData = [
         {
             question: "How much does a bathroom remodel cost in North Bethesda, MD?",
-            answer: "Bathroom remodeling in North Bethesda, MD typically costs between $8,000 and $120,000 depending on bathroom type, scope, and finishes. A powder room or half-bath refresh starts around $8,000\u2013$18,000. A hall or guest bath remodel runs $18,000\u2013$35,000. A tub-to-shower conversion runs $12,000\u2013$25,000. A primary (master) bath renovation costs $35,000\u2013$70,000, and a luxury primary bath can reach $70,000\u2013$120,000+. Adding a new basement bathroom runs $20,000\u2013$45,000. DMV-GC Group provides free in-home consultations with detailed estimates for any North Bethesda home."
+            answer: "Bathroom remodeling in North Bethesda, MD typically costs between $8,000 and $120,000 depending on bathroom type, scope, and finishes. A powder room or half-bath refresh starts around $8,000\u2013$18,000. A hall or guest bath remodel runs $18,000\u2013$35,000. A tub-to-shower conversion runs $12,000\u2013$25,000. A primary (master) bath renovation costs $35,000\u2013$70,000, and a luxury primary bath can reach $70,000\u2013$120,000+. Adding a new basement bathroom runs $20,000\u2013$45,000. DMV General Contracting Group provides free in-home consultations with detailed estimates for any North Bethesda home."
         },
         {
-            question: "Is DMV-GC Group licensed to do bathroom remodeling in North Bethesda, MD?",
-            answer: "Yes. DMV-GC Group holds a Maryland Home Improvement Contractor (MHIC) license issued by the Maryland Home Improvement Commission \u2014 the license required to legally perform residential renovation work in North Bethesda and throughout Maryland. We are fully bonded and insured, and provide a 1-year workmanship warranty on every bathroom remodeling project completed in Montgomery County."
+            question: "Is DMV General Contracting Group licensed to do bathroom remodeling in North Bethesda, MD?",
+            answer: "Yes. DMV General Contracting Group holds a Maryland Home Improvement Contractor (MHIC) license issued by the Maryland Home Improvement Commission \u2014 the license required to legally perform residential renovation work in North Bethesda and throughout Maryland. We are fully bonded and insured, and provide a 1-year workmanship warranty on every bathroom remodeling project completed in Montgomery County."
         },
         {
             question: "Do I need a permit to remodel a bathroom in North Bethesda / Montgomery County?",
-            answer: "In most cases, yes. Any bathroom remodel in North Bethesda that involves moving plumbing, adding or relocating electrical, or structural changes requires permits. North Bethesda is unincorporated Montgomery County, so building and electrical permits are issued by the Department of Permitting Services (DPS) and plumbing through WSSC Water \u2014 even though many North Bethesda addresses carry a &quot;Rockville, MD 20852&quot; mailing label, they permit through the County, not the City of Rockville. For high-rise condos at Pike &amp; Rose, White Flint, or Grosvenor, there&apos;s an added layer: building-management or condo-board approval and certificate-of-insurance requirements. DMV-GC Group handles the County permits and the building&apos;s approval process for you."
+            answer: "In most cases, yes. Any bathroom remodel in North Bethesda that involves moving plumbing, adding or relocating electrical, or structural changes requires permits. North Bethesda is unincorporated Montgomery County, so building and electrical permits are issued by the Department of Permitting Services (DPS) and plumbing through WSSC Water \u2014 even though many North Bethesda addresses carry a &quot;Rockville, MD 20852&quot; mailing label, they permit through the County, not the City of Rockville. For high-rise condos at Pike &amp; Rose, White Flint, or Grosvenor, there&apos;s an added layer: building-management or condo-board approval and certificate-of-insurance requirements. DMV General Contracting Group handles the County permits and the building&apos;s approval process for you."
         },
         {
-            question: "Can DMV-GC Group convert my tub to a walk-in shower?",
+            question: "Can DMV General Contracting Group convert my tub to a walk-in shower?",
             answer: "Yes. Tub-to-shower conversions are one of the most popular bathroom projects we complete in North Bethesda \u2014 in the mid-century homes of neighborhoods like Luxmanor and Tilden Woods, and in condos at Grosvenor, White Flint, and Pike &amp; Rose. We remove the existing tub, rebuild the wet area with proper waterproofing, and install a custom tile or low-maintenance walk-in shower \u2014 including curbless and accessible designs for aging-in-place. Most conversions are completed in 2\u20133 weeks."
         },
         {
             question: "How long does a bathroom remodel take in North Bethesda, MD?",
-            answer: "Most bathroom renovations in North Bethesda take 2\u20135 weeks from construction start to completion. A powder room refresh can be done in 1\u20132 weeks. A tub-to-shower conversion takes 2\u20133 weeks. A full primary bath renovation takes 4\u20136 weeks, and a new basement bathroom typically takes 3\u20135 weeks. Permit processing through Montgomery County DPS and WSSC usually adds 2\u20134 weeks before construction begins. DMV-GC Group factors realistic timelines into every project plan."
+            answer: "Most bathroom renovations in North Bethesda take 2\u20135 weeks from construction start to completion. A powder room refresh can be done in 1\u20132 weeks. A tub-to-shower conversion takes 2\u20133 weeks. A full primary bath renovation takes 4\u20136 weeks, and a new basement bathroom typically takes 3\u20135 weeks. Permit processing through Montgomery County DPS and WSSC usually adds 2\u20134 weeks before construction begins. DMV General Contracting Group factors realistic timelines into every project plan."
         },
         {
-            question: "Can DMV-GC Group remodel a condo bathroom in a North Bethesda high-rise?",
-            answer: "Yes. Condo bathroom remodels are a specialty in North Bethesda, where buildings around Pike &amp; Rose, White Flint, and Grosvenor-Strathmore make up a large share of the housing. High-rise work has its own requirements \u2014 building-management and condo-board approval, certificate-of-insurance filings, restricted work hours, elevator and freight scheduling, and careful protection of common areas. DMV-GC Group coordinates all of it, pulls the County (DPS) and WSSC permits where required, and delivers a clean, code-compliant condo bathroom with minimal disruption to neighbors."
+            question: "Can DMV General Contracting Group remodel a condo bathroom in a North Bethesda high-rise?",
+            answer: "Yes. Condo bathroom remodels are a specialty in North Bethesda, where buildings around Pike &amp; Rose, White Flint, and Grosvenor-Strathmore make up a large share of the housing. High-rise work has its own requirements \u2014 building-management and condo-board approval, certificate-of-insurance filings, restricted work hours, elevator and freight scheduling, and careful protection of common areas. DMV General Contracting Group coordinates all of it, pulls the County (DPS) and WSSC permits where required, and delivers a clean, code-compliant condo bathroom with minimal disruption to neighbors."
         }
     ];
 
     return (
         <div className="city-service-detail-page bathroom-north-bethesda-md">
             <div className="container">
-                <script
-                    type="application/ld+json"
-                    dangerouslySetInnerHTML={{
-                        __html: `{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "GeneralContractor",
-      "@id": "https://www.dmv-gc.com/#business",
-      "name": "DMV General Contracting Group LLC",
-      "legalName": "DMV General Contracting Group LLC",
-      "alternateName": ["DMV General Contracting Group", "DMV-GC"],
-      "image": "https://www.dmv-gc.com/logo.png",
-      "url": "https://www.dmv-gc.com",
-      "telephone": "+1-240-730-1292",
-      "email": "support@dmv-gc.com",
-      "foundingDate": "2018",
-      "description": "Licensed design-build general contractor serving North Bethesda, MD and the greater Montgomery County area. Specializing in bathroom remodeling, master bath renovations, tub-to-shower conversions, basement bathroom additions, and aging-in-place remodels.",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "11810 Grand Park Ave #500",
-        "addressLocality": "North Bethesda",
-        "addressRegion": "MD",
-        "postalCode": "20852",
-        "addressCountry": "US"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 39.0458,
-        "longitude": -77.1139
-      },
-      "areaServed": [
-        {"@type": "City", "name": "North Bethesda", "sameAs": "https://en.wikipedia.org/wiki/North_Bethesda,_Maryland"},
-        {"@type": "City", "name": "Rockville"},
-        {"@type": "City", "name": "Bethesda"},
-        {"@type": "City", "name": "Potomac"},
-        {"@type": "City", "name": "Garrett Park"},
-        {"@type": "City", "name": "Kensington"},
-        {"@type": "AdministrativeArea", "name": "Montgomery County, MD"}
-      ],
-      "hasCredential": [
-        {"@type": "EducationalOccupationalCredential", "name": "MHIC License", "credentialCategory": "Maryland Home Improvement Contractor License \u2014 issued by the Maryland Home Improvement Commission"},
-        {"@type": "EducationalOccupationalCredential", "name": "DLCP License", "credentialCategory": "Washington DC Department of Licensing and Consumer Protection \u2014 Home Improvement Contractor"}
-      ],
-      "priceRange": "$$$",
-      "openingHoursSpecification": {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], "opens": "08:00", "closes": "20:00"}
-    },
-    {
-      "@type": "Service",
-      "@id": "https://www.dmv-gc.com/service/bathroom-remodeling/north-bethesda-md#service",
-      "serviceType": "Bathroom Remodeling",
-      "name": "Bathroom Remodeling in North Bethesda, MD",
-      "provider": {"@id": "https://www.dmv-gc.com/#business"},
-      "areaServed": {"@type": "City", "name": "North Bethesda", "sameAs": "https://en.wikipedia.org/wiki/North_Bethesda,_Maryland"},
-      "description": "Full-service bathroom remodeling in North Bethesda, MD. Master and primary bath renovations, hall and guest bath remodels, powder rooms, tub-to-shower conversions, walk-in showers, basement bathroom additions, and accessible aging-in-place baths \u2014 design through final finishes \u2014 by an MHIC-licensed design-build contractor.",
-      "offers": {"@type": "Offer", "priceCurrency": "USD", "priceSpecification": {"@type": "PriceSpecification", "minPrice": "8000", "maxPrice": "120000", "priceCurrency": "USD"}},
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Bathroom Remodeling Services North Bethesda MD",
-        "itemListElement": [
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Master / Primary Bath Renovation"}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Hall & Guest Bathroom Remodel"}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Tub-to-Shower Conversion"}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Walk-In & Curbless Shower Installation"}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Basement Bathroom Addition"}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "High-Rise Condo Bathroom Remodel"}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Accessible / Aging-in-Place Bathroom"}}
-        ]
-      }
-    },
-    {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.dmv-gc.com/"},
-        {"@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.dmv-gc.com/services"},
-        {"@type": "ListItem", "position": 3, "name": "Bathroom Remodeling", "item": "https://www.dmv-gc.com/service/bathroom-remodeling"},
-        {"@type": "ListItem", "position": 4, "name": "North Bethesda, MD", "item": "https://www.dmv-gc.com/service/bathroom-remodeling/north-bethesda-md"}
-      ]
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {"@type": "Question", "name": "How much does a bathroom remodel cost in North Bethesda, MD?", "acceptedAnswer": {"@type": "Answer", "text": "Bathroom remodeling in North Bethesda, MD typically costs between $8,000 and $120,000 depending on bathroom type, scope, and finishes. A powder room or half-bath refresh starts around $8,000\u2013$18,000. A hall or guest bath remodel runs $18,000\u2013$35,000. A tub-to-shower conversion runs $12,000\u2013$25,000. A primary (master) bath renovation costs $35,000\u2013$70,000, and a luxury primary bath can reach $70,000\u2013$120,000+. Adding a new basement bathroom runs $20,000\u2013$45,000. DMV General Contracting Group provides free in-home consultations with detailed estimates for any North Bethesda home."}},
-        {"@type": "Question", "name": "Is DMV General Contracting Group licensed to do bathroom remodeling in North Bethesda, MD?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. DMV General Contracting Group holds a Maryland Home Improvement Contractor (MHIC) license issued by the Maryland Home Improvement Commission \u2014 the license required to legally perform residential renovation work in North Bethesda and throughout Maryland. We are fully bonded and insured, and provide a 1-year workmanship warranty on every bathroom remodeling project completed in Montgomery County."}},
-        {"@type": "Question", "name": "Do I need a permit to remodel a bathroom in North Bethesda / Montgomery County?", "acceptedAnswer": {"@type": "Answer", "text": "In most cases, yes. Any bathroom remodel in North Bethesda that involves moving plumbing, adding or relocating electrical, or structural changes requires permits. North Bethesda is unincorporated Montgomery County, so building and electrical permits are issued by the Department of Permitting Services (DPS) and plumbing through WSSC Water \u2014 even though many North Bethesda addresses carry a 'Rockville, MD 20852' mailing label, they permit through the County, not the City of Rockville. For high-rise condos at Pike & Rose, White Flint, or Grosvenor, there's an added layer: building-management or condo-board approval and certificate-of-insurance requirements. DMV General Contracting Group handles the County permits and the building's approval process for you."}},
-        {"@type": "Question", "name": "Can DMV General Contracting Group convert my tub to a walk-in shower?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Tub-to-shower conversions are one of the most popular bathroom projects we complete in North Bethesda \u2014 in the mid-century homes of neighborhoods like Luxmanor and Tilden Woods, and in condos at Grosvenor, White Flint, and Pike & Rose. We remove the existing tub, rebuild the wet area with proper waterproofing, and install a custom tile or low-maintenance walk-in shower \u2014 including curbless and accessible designs for aging-in-place. Most conversions are completed in 2\u20133 weeks."}},
-        {"@type": "Question", "name": "How long does a bathroom remodel take in North Bethesda, MD?", "acceptedAnswer": {"@type": "Answer", "text": "Most bathroom renovations in North Bethesda take 2\u20135 weeks from construction start to completion. A powder room refresh can be done in 1\u20132 weeks. A tub-to-shower conversion takes 2\u20133 weeks. A full primary bath renovation takes 4\u20136 weeks, and a new basement bathroom typically takes 3\u20135 weeks. Permit processing through Montgomery County DPS and WSSC usually adds 2\u20134 weeks before construction begins. DMV General Contracting Group factors realistic timelines into every project plan."}},
-        {"@type": "Question", "name": "Can DMV General Contracting Group remodel a condo bathroom in a North Bethesda high-rise?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Condo bathroom remodels are a specialty in North Bethesda, where buildings around Pike & Rose, White Flint, and Grosvenor-Strathmore make up a large share of the housing. High-rise work has its own requirements \u2014 building-management and condo-board approval, certificate-of-insurance filings, restricted work hours, elevator and freight scheduling, and careful protection of common areas. DMV General Contracting Group coordinates all of it, pulls the County (DPS) and WSSC permits where required, and delivers a clean, code-compliant condo bathroom with minimal disruption to neighbors."}}
-      ]
-    }
-  ]
-}`
-                    }}
-                />
-
                 {/* BREADCRUMB */}
                 <nav className="breadcrumb" aria-label="Breadcrumb">
                     <Link href="/">Home</Link><span>&rsaquo;</span>

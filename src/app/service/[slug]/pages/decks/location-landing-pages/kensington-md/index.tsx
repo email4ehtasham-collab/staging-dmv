@@ -7,121 +7,13 @@ import { useEffect } from "react";
 import { Accordion } from "react-bootstrap";
 import { useMyContext } from "@/hooks/context";
 
-const schemaJsonLd = {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "GeneralContractor",
-      "@id": "https://www.dmv-gc.com/#business",
-      "name": "DMV General Contracting Group LLC",
-      "legalName": "DMV General Contracting Group LLC",
-      "alternateName": ["DMV General Contracting Group", "DMV-GC"],
-      "image": "https://www.dmv-gc.com/logo.png",
-      "url": "https://www.dmv-gc.com",
-      "telephone": "+1-240-730-1292",
-      "email": "support@dmv-gc.com",
-      "foundingDate": "2018",
-      "description": "Licensed deck builder serving Kensington, MD. Specializing in custom deck design for Kensington's historic 1920s–40s bungalows and craftsman homes — small-lot deck solutions, rear yard decks, and character-appropriate designs — with Town of Kensington permit expertise.",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "11810 Grand Park Ave #500",
-        "addressLocality": "North Bethesda",
-        "addressRegion": "MD",
-        "postalCode": "20852",
-        "addressCountry": "US"
-      },
-      "geo": { "@type": "GeoCoordinates", "latitude": 39.0458, "longitude": -77.1139 },
-      "areaServed": [
-        { "@type": "City", "name": "Kensington", "sameAs": "https://en.wikipedia.org/wiki/Kensington,_Maryland" },
-        { "@type": "City", "name": "Silver Spring" },
-        { "@type": "City", "name": "Wheaton" },
-        { "@type": "City", "name": "North Bethesda" },
-        { "@type": "City", "name": "Garrett Park" }
-      ],
-      "hasCredential": [
-        { "@type": "EducationalOccupationalCredential", "name": "MHIC License", "credentialCategory": "Maryland Home Improvement Contractor License" }
-      ],
-      "priceRange": "$$$"
-    },
-    {
-      "@type": "Service",
-      "@id": "https://www.dmv-gc.com/service/decks/kensington-md#service",
-      "serviceType": "Deck Building",
-      "name": "Deck Building in Kensington, MD",
-      "alternateName": ["Custom Deck Construction", "Composite Deck", "Rear Yard Deck", "Bungalow Deck", "Small Lot Deck"],
-      "provider": { "@id": "https://www.dmv-gc.com/#business" },
-      "areaServed": { "@type": "City", "name": "Kensington", "sameAs": "https://en.wikipedia.org/wiki/Kensington,_Maryland" },
-      "description": "Custom deck building in Kensington, MD. Rear yard decks, bungalow-appropriate designs, and small-lot deck solutions for Kensington's historic 1920s–40s homes — designed to complement the character of the community, permitted through the Town of Kensington, and built with quality finishes appropriate to this distinctive neighborhood.",
-      "offers": {
-        "@type": "Offer",
-        "priceCurrency": "USD",
-        "priceSpecification": { "@type": "PriceSpecification", "minPrice": "14000", "maxPrice": "75000", "priceCurrency": "USD" }
-      }
-    },
-    {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.dmv-gc.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.dmv-gc.com/services" },
-        { "@type": "ListItem", "position": 3, "name": "Decks", "item": "https://www.dmv-gc.com/service/decks" },
-        { "@type": "ListItem", "position": 4, "name": "Kensington, MD", "item": "https://www.dmv-gc.com/service/decks/kensington-md" }
-      ]
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "How much does it cost to build a deck in Kensington, MD?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Deck construction in Kensington, MD typically costs between $14,000 and $75,000 depending on size, material, and features. A modest rear deck sized for Kensington's smaller lots runs $14,000–$28,000 in pressure-treated or cedar. A composite rear deck costs $22,000–$48,000. A larger composite deck with pergola or railing upgrade costs $42,000–$75,000. Kensington's smaller lots constrain maximum deck footprint compared to Potomac or Bethesda estate properties, but the community's character and MARC Brunswick Line access make quality outdoor living investments worthwhile. DMV General Contracting Group provides free in-home consultations with detailed estimates."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Does Kensington have its own permit process for deck building?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. Kensington is an incorporated Town in Montgomery County with its own municipal government and building permit process — separate from Montgomery County DPS. All deck permits in the Town of Kensington are filed with the Town's permit office at 3710 Mitchell Street, not with Montgomery County. DMV General Contracting Group handles the Town of Kensington permit process in-house for all deck projects within the town boundaries, and verifies whether each Kensington-area address is within the town limits or in unincorporated Montgomery County before any application is filed."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What deck designs work best for Kensington's historic bungalow homes?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Kensington's 1920s–40s bungalows and craftsman homes call for deck designs that respect the home's original character — proportionate in scale, with materials and railing styles that complement rather than clash with the existing architecture. Painted or stained pressure-treated decks with craftsman-style wood railings are a traditional choice that fits the bungalow aesthetic naturally. Composite decking in warm brown or grey tones is increasingly popular as a lower-maintenance alternative that also reads appropriately on these homes. Heavy-gauge aluminum or cable railing — commonly seen on contemporary homes — can look out of place on a 1930s bungalow without careful design consideration. DMV General Contracting Group designs every Kensington deck with the home's existing architectural character in mind."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How does a small lot affect deck design in Kensington?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Kensington's lots — typically 5,000–8,000 sq ft — are smaller than most Montgomery County communities, and rear yard setback requirements further constrain the usable deck footprint. For a typical Kensington home, a rear deck of 200–350 sq ft is often the practical range after setbacks, side clearances, and existing landscaping are accounted for. Within that footprint, design efficiency matters: built-in seating eliminates the need for bulky furniture, integrated planter boxes frame the space without consuming additional yard, and a well-chosen railing creates enclosure and privacy without making the deck feel cramped. DMV General Contracting Group is experienced in designing decks that feel generous and functional within Kensington's smaller rear yard footprints."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is DMV General Contracting Group licensed for deck building in Kensington, MD?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. DMV General Contracting Group holds a Maryland MHIC license — required for all home improvement and construction work in Kensington. We handle the Town of Kensington permit process for properties within the town limits and Montgomery County DPS permits for unincorporated addresses. We are fully bonded, carry comprehensive general liability insurance and workers' compensation coverage, and provide a 1-year workmanship warranty on every deck project."
-          }
-        }
-      ]
-    }
-  ]
-};
-
 const faqData = [
-  { eventKey: "0", question: "How much does it cost to build a deck in Kensington, MD?", answer: "Deck construction in Kensington typically costs $14,000–$75,000 depending on size, material, and features. A small pressure-treated rear deck (160–220 sq ft) runs $14,000–$22,000. A composite rear deck (200–350 sq ft) costs $22,000–$48,000. A composite deck with pergola runs $36,000–$62,000. A screened porch addition costs $38,000–$72,000. Town of Kensington permit is included in every scope. DMV-GC Group provides free in-home consultations with detailed estimates." },
-  { eventKey: "1", question: "Does the Town of Kensington have its own permit process for decks?", answer: "Yes. Kensington is an incorporated town with its own permit authority at 3710 Mitchell Street — separate from Montgomery County DPS. Properties within the town limits file with the Town; properties outside the limits (some Kensington-area addresses) use Montgomery County DPS. DMV-GC Group verifies the correct authority for every address and manages the Town of Kensington permit process in-house, including all structural drawings, correspondence, and inspection scheduling." },
-  { eventKey: "2", question: "What deck design works best for Kensington's historic bungalows?", answer: "Proportionate rear decks with painted wood baluster railings and composite or cedar decking in warm tones are the most architecturally appropriate choice for Kensington's 1920s–40s bungalows and craftsman homes. Craftsman-style pergolas with square columns and simple brackets read naturally on these homes. Contemporary elements like horizontal cable railing or smooth-profile composite can work, but require more careful design consideration to avoid looking incongruous on older homes. DMV-GC Group designs every Kensington deck with the home's existing architecture as the starting point." },
-  { eventKey: "3", question: "How does a small lot affect deck size in Kensington?", answer: "Kensington's typical lots (5,000–8,000 sq ft) combined with rear and side setback requirements often limit practical deck footprints to 160–350 sq ft. Within that range, design efficiency makes a significant difference — built-in seating, integrated planters, and thoughtful layout can make a 220 sq ft deck feel generous and functional for a family of four. DMV-GC Group calculates your specific lot's buildable footprint during the free consultation and designs to maximize it." },
-  { eventKey: "4", question: "Can DMV-GC Group build a screened porch on a Kensington bungalow?", answer: "Yes — and a screened porch is one of the most historically appropriate additions possible on a Kensington craftsman or bungalow home. DMV-GC Group designs and builds complete screened porch additions — foundation, framing, roof structure, screening, and trim — with Town of Kensington permits and structural engineering included. A well-designed screened porch on a Kensington bungalow looks as though it was part of the original design." },
-  { eventKey: "5", question: "Is DMV-GC Group licensed for deck building in Kensington, MD?", answer: "Yes. DMV-GC Group holds a Maryland MHIC license — required for all home improvement and construction work in Kensington. We manage the Town of Kensington permit process for properties within the town limits and Montgomery County DPS permits for unincorporated addresses. We are fully bonded, carry comprehensive general liability insurance and workers' compensation coverage, and provide a 1-year workmanship warranty on every deck project in Kensington." }
+  { eventKey: "0", question: "How much does it cost to build a deck in Kensington, MD?", answer: "Deck construction in Kensington typically costs $14,000–$75,000 depending on size, material, and features. A small pressure-treated rear deck (160–220 sq ft) runs $14,000–$22,000. A composite rear deck (200–350 sq ft) costs $22,000–$48,000. A composite deck with pergola runs $36,000–$62,000. A screened porch addition costs $38,000–$72,000. Town of Kensington permit is included in every scope. DMV General Contracting Group provides free in-home consultations with detailed estimates." },
+  { eventKey: "1", question: "Does the Town of Kensington have its own permit process for decks?", answer: "Yes. Kensington is an incorporated town with its own permit authority at 3710 Mitchell Street — separate from Montgomery County DPS. Properties within the town limits file with the Town; properties outside the limits (some Kensington-area addresses) use Montgomery County DPS. DMV General Contracting Group verifies the correct authority for every address and manages the Town of Kensington permit process in-house, including all structural drawings, correspondence, and inspection scheduling." },
+  { eventKey: "2", question: "What deck design works best for Kensington's historic bungalows?", answer: "Proportionate rear decks with painted wood baluster railings and composite or cedar decking in warm tones are the most architecturally appropriate choice for Kensington's 1920s–40s bungalows and craftsman homes. Craftsman-style pergolas with square columns and simple brackets read naturally on these homes. Contemporary elements like horizontal cable railing or smooth-profile composite can work, but require more careful design consideration to avoid looking incongruous on older homes. DMV General Contracting Group designs every Kensington deck with the home's existing architecture as the starting point." },
+  { eventKey: "3", question: "How does a small lot affect deck size in Kensington?", answer: "Kensington's typical lots (5,000–8,000 sq ft) combined with rear and side setback requirements often limit practical deck footprints to 160–350 sq ft. Within that range, design efficiency makes a significant difference — built-in seating, integrated planters, and thoughtful layout can make a 220 sq ft deck feel generous and functional for a family of four. DMV General Contracting Group calculates your specific lot's buildable footprint during the free consultation and designs to maximize it." },
+  { eventKey: "4", question: "Can DMV General Contracting Group build a screened porch on a Kensington bungalow?", answer: "Yes — and a screened porch is one of the most historically appropriate additions possible on a Kensington craftsman or bungalow home. DMV General Contracting Group designs and builds complete screened porch additions — foundation, framing, roof structure, screening, and trim — with Town of Kensington permits and structural engineering included. A well-designed screened porch on a Kensington bungalow looks as though it was part of the original design." },
+  { eventKey: "5", question: "Is DMV General Contracting Group licensed for deck building in Kensington, MD?", answer: "Yes. DMV General Contracting Group holds a Maryland MHIC license — required for all home improvement and construction work in Kensington. We manage the Town of Kensington permit process for properties within the town limits and Montgomery County DPS permits for unincorporated addresses. We are fully bonded, carry comprehensive general liability insurance and workers' compensation coverage, and provide a 1-year workmanship warranty on every deck project in Kensington." }
 ];
 
 export default function DecksKensingtonMD() {
@@ -567,7 +459,6 @@ export default function DecksKensingtonMD() {
         </div>
       </div>
 
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaJsonLd) }} />
     </main>
   );
 }

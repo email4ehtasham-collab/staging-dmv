@@ -7,124 +7,6 @@ import NavitemActive from "@/components/Common/NavitemActive";
 import "@/app/service/[slug]/pages/junk-removal/location-landing-pages/city-service-style.scss";
 import "./style.scss";
 
-const schemaJsonLd = {
-    "@context": "https://schema.org",
-    "@graph": [
-        {
-            "@type": "GeneralContractor",
-            "@id": "https://www.dmv-gc.com/#business",
-            "name": "DMV General Contracting Group LLC",
-            "legalName": "DMV General Contracting Group LLC",
-            "alternateName": ["DMV General Contracting Group", "DMV-GC"],
-            "image": "https://www.dmv-gc.com/logo.png",
-            "url": "https://www.dmv-gc.com",
-            "telephone": "+1-240-730-1292",
-            "email": "support@dmv-gc.com",
-            "foundingDate": "2018",
-            "description": "Licensed general contractor providing professional junk removal and debris hauling services in Washington DC. Residential and commercial cleanouts, construction debris removal, bulk item pickup, and property cleanouts. DC DLCP #410526000209.",
-            "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "11810 Grand Park Ave #500",
-                "addressLocality": "North Bethesda",
-                "addressRegion": "MD",
-                "postalCode": "20852",
-                "addressCountry": "US"
-            },
-            "geo": {
-                "@type": "GeoCoordinates",
-                "latitude": 38.9072,
-                "longitude": -77.0369
-            },
-            "areaServed": [
-                { "@type": "City", "name": "Washington", "sameAs": "https://en.wikipedia.org/wiki/Washington,_D.C." },
-                { "@type": "City", "name": "Georgetown" },
-                { "@type": "City", "name": "Capitol Hill" },
-                { "@type": "City", "name": "Dupont Circle" },
-                { "@type": "City", "name": "Friendship Heights" },
-                { "@type": "AdministrativeArea", "name": "Washington, DC" }
-            ],
-            "hasCredential": [
-                {
-                    "@type": "EducationalOccupationalCredential",
-                    "name": "DLCP License",
-                    "credentialCategory": "Washington DC Department of Licensing and Consumer Protection — Home Improvement Contractor #410526000209"
-                },
-                {
-                    "@type": "EducationalOccupationalCredential",
-                    "name": "MHIC License",
-                    "credentialCategory": "Maryland Home Improvement Contractor License — issued by the Maryland Home Improvement Commission #156178"
-                }
-            ],
-            "priceRange": "$$",
-            "openingHoursSpecification": {
-                "@type": "OpeningHoursSpecification",
-                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-                "opens": "08:00",
-                "closes": "20:00"
-            }
-        },
-        {
-            "@type": "Service",
-            "@id": "https://www.dmv-gc.com/service/junk-removal/washington-dc#service",
-            "serviceType": "Junk Removal, Construction Debris Removal, Residential Cleanout, Commercial Cleanup, Bulk Item Pickup, Property Cleanout",
-            "name": "Junk Removal Services in Washington DC",
-            "provider": { "@id": "https://www.dmv-gc.com/#business" },
-            "areaServed": {
-                "@type": "City",
-                "name": "Washington",
-                "sameAs": "https://en.wikipedia.org/wiki/Washington,_D.C."
-            },
-            "description": "Professional junk removal and cleanout services in Washington DC — residential, commercial, construction debris, bulk item removal, and property cleanouts. Licensed and insured, DC DLCP #410526000209."
-        },
-        {
-            "@type": "BreadcrumbList",
-            "itemListElement": [
-                { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.dmv-gc.com/" },
-                { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.dmv-gc.com/services" },
-                { "@type": "ListItem", "position": 3, "name": "Junk Removal", "item": "https://www.dmv-gc.com/service/junk-removal" },
-                { "@type": "ListItem", "position": 4, "name": "Washington DC", "item": "https://www.dmv-gc.com/service/junk-removal/washington-dc" }
-            ]
-        },
-        {
-            "@type": "FAQPage",
-            "mainEntity": [
-                {
-                    "@type": "Question",
-                    "name": "What types of junk can you remove in Washington DC?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "We provide removal support for household clutter, bulk items, renovation debris, construction materials, and other unwanted property items in Washington DC, subject to project requirements."
-                    }
-                },
-                {
-                    "@type": "Question",
-                    "name": "Do you provide residential and commercial junk removal in Washington DC?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "Yes. Our services can support both residential properties and commercial spaces throughout Washington DC."
-                    }
-                },
-                {
-                    "@type": "Question",
-                    "name": "Can junk removal be part of a renovation project in Washington DC?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "Yes. Junk and debris removal can be coordinated with remodeling, renovation, and other property improvement work for Washington DC homes and businesses."
-                    }
-                },
-                {
-                    "@type": "Question",
-                    "name": "How much does junk removal cost in Washington DC?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "A single bulk item pickup starts at $75–$150. A partial load runs $150–$350. A full truck load runs $350–$600+. Estate cleanouts and construction debris removal are priced by scope after a free on-site estimate. DMV General Contracting Group provides a firm price before any work begins."
-                    }
-                }
-            ]
-        }
-    ]
-};
-
 export default function JunkRemovalWashingtonDC() {
     const faqData = [
         {
@@ -367,10 +249,6 @@ export default function JunkRemovalWashingtonDC() {
                 </div>
             </div>
 
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaJsonLd) }}
-            />
         </div>
     );
 }

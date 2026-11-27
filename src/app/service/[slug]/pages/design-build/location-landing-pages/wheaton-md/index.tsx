@@ -21,8 +21,8 @@ const WheatonMD = () => {
             answer: "Wheaton's home prices are priced below comparable Silver Spring, Kensington, and Bethesda properties despite sharing the same Montgomery County school district, Metro Red Line access at Wheaton station, and proximity to DC employment. This gap between Wheaton's current prices and its underlying location value means renovation returns are measured against a lower cost base — the same construction investment that produces a modest percentage gain on a $900,000 Bethesda home produces a significant percentage gain on a $600,000 Wheaton home. As Wheaton's community trajectory continues improving through the Wheaton Sector Plan and surrounding development, renovation-driven equity growth compounds that advantage further."
         },
         {
-            question: "How does DMV-GC Group handle MoCo DPS permits for Wheaton projects?",
-            answer: "Wheaton is unincorporated Montgomery County — all building permits go through MoCo DPS at 2425 Reedie Drive, Wheaton. Our permit office is literally in Wheaton. DMV-GC Group's in-house permit team handles all MoCo DPS permit filings, structural plan reviews, zoning submissions, and inspection scheduling for every Wheaton project. We file complete packages that do not require supplemental submissions. Wheaton homeowners never contact MoCo DPS during their project — we are the single point of contact with the county from initial filing through permit close."
+            question: "How does DMV General Contracting Group handle MoCo DPS permits for Wheaton projects?",
+            answer: "Wheaton is unincorporated Montgomery County — all building permits go through MoCo DPS at 2425 Reedie Drive, Wheaton. Our permit office is literally in Wheaton. DMV General Contracting Group's in-house permit team handles all MoCo DPS permit filings, structural plan reviews, zoning submissions, and inspection scheduling for every Wheaton project. We file complete packages that do not require supplemental submissions. Wheaton homeowners never contact MoCo DPS during their project — we are the single point of contact with the county from initial filing through permit close."
         },
         {
             question: "How much does a design-build renovation cost in Wheaton, MD?",
@@ -30,10 +30,10 @@ const WheatonMD = () => {
         },
         {
             question: "Can my Wheaton split-level support an open-concept conversion?",
-            answer: "In most cases, yes — but only when the load-bearing status of walls in the conversion area is confirmed by a structural engineer before any demolition begins. Wheaton's 1950s–1970s split-levels have load-bearing walls at locations that are not always visually obvious, and the multi-level floor plate creates structural conditions that differ from single-story or two-story construction. DMV-GC Group's in-house structural engineers walk Wheaton homes and assess load-bearing wall conditions before any design is finalized — so the open-concept layout you approve is one that can actually be built without mid-project structural discoveries."
+            answer: "In most cases, yes — but only when the load-bearing status of walls in the conversion area is confirmed by a structural engineer before any demolition begins. Wheaton's 1950s–1970s split-levels have load-bearing walls at locations that are not always visually obvious, and the multi-level floor plate creates structural conditions that differ from single-story or two-story construction. DMV General Contracting Group's in-house structural engineers walk Wheaton homes and assess load-bearing wall conditions before any design is finalized — so the open-concept layout you approve is one that can actually be built without mid-project structural discoveries."
         },
         {
-            question: "Is DMV-GC Group licensed for design-build work in Wheaton, MD?",
+            question: "Is DMV General Contracting Group licensed for design-build work in Wheaton, MD?",
             answer: "Yes. DMV General Contracting Group holds Maryland MHIC license #156178 — required for all home improvement and construction work in Wheaton, which is unincorporated Montgomery County. Fully bonded, comprehensive general liability and workers' compensation coverage, and a 1-year workmanship warranty on every Wheaton design-build project."
         }
     ];

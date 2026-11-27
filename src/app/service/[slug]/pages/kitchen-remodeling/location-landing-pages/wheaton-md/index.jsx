@@ -17,10 +17,10 @@ const WheatonMD = () => {
     const faqData = [
         {
             question: "How much does a kitchen remodel cost in Wheaton, MD?",
-            answer: "Kitchen remodeling in Wheaton typically costs $12,000–$130,000 depending on scope and finishes. A cosmetic refresh starts around $12,000–$25,000. A mid-range remodel with new cabinets and countertops runs $30,000–$58,000. A full gut renovation costs $60,000–$100,000. Wheaton is generally 10–15% less expensive than Silver Spring for comparable projects — making it one of the strongest renovation ROI markets in Montgomery County. DMV-GC Group provides free in-home consultations with detailed, itemized estimates."
+            answer: "Kitchen remodeling in Wheaton typically costs $12,000–$130,000 depending on scope and finishes. A cosmetic refresh starts around $12,000–$25,000. A mid-range remodel with new cabinets and countertops runs $30,000–$58,000. A full gut renovation costs $60,000–$100,000. Wheaton is generally 10–15% less expensive than Silver Spring for comparable projects — making it one of the strongest renovation ROI markets in Montgomery County. DMV General Contracting Group provides free in-home consultations with detailed, itemized estimates."
         },
         {
-            question: "Can DMV-GC Group remodel a split-level kitchen in Wheaton?",
+            question: "Can DMV General Contracting Group remodel a split-level kitchen in Wheaton?",
             answer: "Yes — split-level kitchen remodels are one of our most common project types in Wheaton. Split-level homes have kitchens on an intermediate floor level, often closed off from the main living areas. We assess the structural configuration of your split-level, recommend the best layout improvement approach for your specific floor plan, and manage the complete renovation — from structural engineering through final finishes and county inspection."
         },
         {
@@ -29,15 +29,15 @@ const WheatonMD = () => {
         },
         {
             question: "How long does a kitchen remodel take in Wheaton, MD?",
-            answer: "Most kitchen renovations in Wheaton take 6–10 weeks from construction start to completion. A cosmetic refresh can be completed in 3–5 weeks. A full gut renovation with layout changes takes 8–12 weeks. Add 3–5 weeks for Montgomery County permit processing before construction begins. DMV-GC Group manages the complete timeline in-house to minimize delays and keep your project on schedule."
+            answer: "Most kitchen renovations in Wheaton take 6–10 weeks from construction start to completion. A cosmetic refresh can be completed in 3–5 weeks. A full gut renovation with layout changes takes 8–12 weeks. Add 3–5 weeks for Montgomery County permit processing before construction begins. DMV General Contracting Group manages the complete timeline in-house to minimize delays and keep your project on schedule."
         },
         {
-            question: "Does DMV-GC Group handle permits for kitchen remodeling in Wheaton?",
-            answer: "Yes. DMV-GC Group handles all required Montgomery County permits for kitchen remodels in Wheaton — building, electrical, and plumbing permits included. Our in-house permit team manages every step from application submission through final inspection scheduling. Wheaton homeowners never need to contact the county or manage any paperwork throughout the project."
+            question: "Does DMV General Contracting Group handle permits for kitchen remodeling in Wheaton?",
+            answer: "Yes. DMV General Contracting Group handles all required Montgomery County permits for kitchen remodels in Wheaton — building, electrical, and plumbing permits included. Our in-house permit team manages every step from application submission through final inspection scheduling. Wheaton homeowners never need to contact the county or manage any paperwork throughout the project."
         },
         {
-            question: "Is DMV-GC Group licensed for kitchen remodeling in Wheaton, MD?",
-            answer: "Yes. DMV-GC Group holds a Maryland MHIC (Home Improvement Contractor) license — required for all home renovation work in Wheaton and Montgomery County. We are fully bonded, carry comprehensive general liability and workers' compensation insurance, and provide a 1-year workmanship warranty on every kitchen remodeling project completed in Wheaton."
+            question: "Is DMV General Contracting Group licensed for kitchen remodeling in Wheaton, MD?",
+            answer: "Yes. DMV General Contracting Group holds a Maryland MHIC (Home Improvement Contractor) license — required for all home renovation work in Wheaton and Montgomery County. We are fully bonded, carry comprehensive general liability and workers' compensation insurance, and provide a 1-year workmanship warranty on every kitchen remodeling project completed in Wheaton."
         }
     ];
 

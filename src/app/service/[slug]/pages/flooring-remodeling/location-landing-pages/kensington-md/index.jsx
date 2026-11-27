@@ -7,126 +7,6 @@ import { useMyContext } from "@/hooks/context";
 import "../city-service-style.scss";
 import "./style.scss";
 
-const schemaJsonLd = {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "GeneralContractor",
-      "@id": "https://www.dmv-gc.com/#business",
-      "name": "DMV General Contracting Group LLC",
-      "legalName": "DMV General Contracting Group LLC",
-      "alternateName": ["DMV General Contracting Group", "DMV-GC"],
-      "image": "https://www.dmv-gc.com/logo.png",
-      "url": "https://www.dmv-gc.com",
-      "telephone": "+1-240-730-1292",
-      "email": "support@dmv-gc.com",
-      "foundingDate": "2018",
-      "description": "Licensed design-build general contractor serving Kensington, MD. Specializing in hardwood refinishing, LVP, tile, and carpet installation for Kensington's 1920s–40s bungalows and colonials.",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "11810 Grand Park Ave #500",
-        "addressLocality": "North Bethesda",
-        "addressRegion": "MD",
-        "postalCode": "20852",
-        "addressCountry": "US"
-      },
-      "geo": { "@type": "GeoCoordinates", "latitude": 39.0458, "longitude": -77.1139 },
-      "areaServed": [
-        { "@type": "City", "name": "Kensington", "sameAs": "https://en.wikipedia.org/wiki/Kensington,_Maryland" },
-        { "@type": "City", "name": "North Kensington" },
-        { "@type": "City", "name": "South Kensington" },
-        { "@type": "City", "name": "Garrett Park" },
-        { "@type": "City", "name": "Chevy Chase" },
-        { "@type": "City", "name": "Silver Spring" },
-        { "@type": "City", "name": "Wheaton" },
-        { "@type": "City", "name": "Potomac" }
-      ],
-      "hasCredential": [
-        { "@type": "EducationalOccupationalCredential", "name": "MHIC #156178" },
-        { "@type": "EducationalOccupationalCredential", "name": "Licensed General Contractor - Maryland" }
-      ],
-      "openingHours": "Mo-Sa 08:00-18:00",
-      "priceRange": "$$",
-      "sameAs": [
-        "https://www.facebook.com/dmvgcgroup",
-        "https://www.instagram.com/dmvgcgroup",
-        "https://www.yelp.com/biz/dmv-gc-group-north-bethesda"
-      ]
-    },
-    {
-      "@type": "Service",
-      "@id": "https://www.dmv-gc.com/service/flooring-remodeling/kensington-md#service",
-      "serviceType": "Flooring Installation",
-      "provider": { "@id": "https://www.dmv-gc.com/#business" },
-      "areaServed": { "@type": "City", "name": "Kensington", "sameAs": "https://en.wikipedia.org/wiki/Kensington,_Maryland" },
-      "description": "Flooring installation and refinishing in Kensington, MD — hardwood refinishing, LVP, tile, carpet, subfloor repair, and whole-home flooring packages for 1920s–40s bungalows and colonials.",
-      "hasOfferCatalog": [
-        {
-          "@type": "Offer",
-          "name": "Hardwood Refinishing",
-          "priceSpecification": { "@type": "PriceSpecification", "price": "3", "minPrice": "3", "maxPrice": "6", "priceCurrency": "USD" }
-        },
-        {
-          "@type": "Offer",
-          "name": "New Hardwood Installation",
-          "priceSpecification": { "@type": "PriceSpecification", "price": "8", "minPrice": "8", "maxPrice": "15", "priceCurrency": "USD" }
-        },
-        {
-          "@type": "Offer",
-          "name": "LVP Installation",
-          "priceSpecification": { "@type": "PriceSpecification", "price": "5", "minPrice": "5", "maxPrice": "10", "priceCurrency": "USD" }
-        },
-        {
-          "@type": "Offer",
-          "name": "Porcelain Tile",
-          "priceSpecification": { "@type": "PriceSpecification", "price": "8", "minPrice": "8", "maxPrice": "18", "priceCurrency": "USD" }
-        },
-        {
-          "@type": "Offer",
-          "name": "Whole-Home Flooring Package",
-          "priceSpecification": { "@type": "PriceSpecification", "price": "10000", "minPrice": "10000", "maxPrice": "28000", "priceCurrency": "USD" }
-        }
-      ]
-    },
-    {
-      "@type": "FAQPage",
-      "@id": "https://www.dmv-gc.com/service/flooring-remodeling/kensington-md#faq",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "How much does flooring installation cost in Kensington, MD?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Flooring in Kensington typically costs $3–$18 per square foot depending on material and zone. Hardwood refinishing costs $3–$6 per square foot. New hardwood installation runs $8–$15 per square foot. LVP for kitchens and basements costs $5–$10 per square foot. Porcelain tile runs $8–$18 per square foot. A typical Kensington home package runs $8,000–$18,000 for a 1,500–2,000 sq ft home. DMV General Contracting Group provides free, itemized zone-by-zone estimates." }
-        },
-        {
-          "@type": "Question",
-          "name": "How do I know if my Kensington hardwood floors can be refinished?",
-          "acceptedAnswer": { "@type": "Answer", "text": "The key factor is remaining wood thickness above the tongue. Original ¾-inch strip hardwood needs at least 3/16\" above the tongue to safely sand. DMV General Contracting Group checks remaining thickness during the free in-home consultation using a thickness gauge. If sufficient thickness remains and the wood is structurally sound, refinishing is almost always the right choice." }
-        },
-        {
-          "@type": "Question",
-          "name": "Why does tile crack in older Kensington homes?",
-          "acceptedAnswer": { "@type": "Answer", "text": "The most common cause is installation over diagonal plank subfloor boards without an uncoupling membrane. Diagonal plank subfloors move seasonally, and that movement telegraphs through a rigid tile installation and cracks the tiles or grout joints. DMV General Contracting Group installs uncoupling membrane as a standard part of every tile project on older Kensington subfloors." }
-        },
-        {
-          "@type": "Question",
-          "name": "Is LVP a good choice for a Kensington home with a crawlspace?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Yes — LVP is often the best choice for first-floor rooms with crawlspace foundations where moisture is a concern. LVP is 100% waterproof and dimensionally stable, so it will not cup, buckle, or squeak in response to seasonal moisture changes. DMV General Contracting Group recommends a vapor barrier under LVP in crawlspace homes." }
-        },
-        {
-          "@type": "Question",
-          "name": "What does the flooring installation process look like in Kensington?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Every Kensington flooring project follows this same five-step process: free in-home consultation, detailed written estimate, subfloor preparation, expert installation by our in-house crews, and a final walkthrough. Most projects complete in 3–10 days. All permits are handled by our team." }
-        },
-        {
-          "@type": "Question",
-          "name": "Does DMV General Contracting Group provide flooring warranties?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Every project includes our workmanship warranty — one full year with no proration. Material warranties are provided by the manufacturer (typically 15–50 years for hardwood and LVP, lifetime for some tile). We also offer maintenance guidance so your warranty stays valid." }
-        }
-      ]
-    }
-  ]
-};
-
 const KensingtonMD = () => {
   const { setActiveMenuItem } = useMyContext();
 
@@ -137,35 +17,33 @@ const KensingtonMD = () => {
   const faqData = [
     {
       question: "How much does flooring installation cost in Kensington, MD?",
-      answer: "Flooring in Kensington typically costs $3–$18 per square foot depending on material and zone. Hardwood refinishing costs $3–$6 per square foot. New hardwood installation runs $8–$15 per square foot. LVP for kitchens and basements costs $5–$10 per square foot. Porcelain tile runs $8–$18 per square foot. A typical Kensington home package — refinishing original hardwood in the main living areas and installing LVP or tile in kitchens and baths — runs $8,000–$18,000 for a 1,500–2,000 sq ft home. DMV-GC Group provides free, itemized zone-by-zone estimates."
+      answer: "Flooring in Kensington typically costs $3–$18 per square foot depending on material and zone. Hardwood refinishing costs $3–$6 per square foot. New hardwood installation runs $8–$15 per square foot. LVP for kitchens and basements costs $5–$10 per square foot. Porcelain tile runs $8–$18 per square foot. A typical Kensington home package — refinishing original hardwood in the main living areas and installing LVP or tile in kitchens and baths — runs $8,000–$18,000 for a 1,500–2,000 sq ft home. DMV General Contracting Group provides free, itemized zone-by-zone estimates."
     },
     {
       question: "How do I know if my Kensington hardwood floors can be refinished?",
-      answer: "The key factor is remaining wood thickness above the tongue. Original ¾-inch strip hardwood needs at least 3/16\" above the tongue to safely sand without compromising the mechanical connection. DMV-GC Group checks remaining thickness during the free in-home consultation using a thickness gauge. If sufficient thickness remains and the wood is structurally sound (not cupped, rotted, or buckled), refinishing is almost always the right choice — more authentic and significantly less expensive than replacement."
+      answer: "The key factor is remaining wood thickness above the tongue. Original ¾-inch strip hardwood needs at least 3/16\" above the tongue to safely sand without compromising the mechanical connection. DMV General Contracting Group checks remaining thickness during the free in-home consultation using a thickness gauge. If sufficient thickness remains and the wood is structurally sound (not cupped, rotted, or buckled), refinishing is almost always the right choice — more authentic and significantly less expensive than replacement."
     },
     {
       question: "Why does tile crack in older Kensington homes?",
-      answer: "The most common cause of tile failure in older Kensington homes is installation directly over diagonal plank subfloor boards without an uncoupling membrane. Diagonal plank subfloors have joints between boards that move seasonally — when the boards expand and contract, that movement telegraphs through a rigid tile installation and cracks the tiles or grout joints. An uncoupling membrane (such as Schlüter DITRA) absorbs this movement and prevents it from reaching the tile above. DMV-GC Group installs uncoupling membrane as a standard part of every tile project on older Kensington subfloors — the step that determines whether tile lasts 50 years or 2."
+      answer: "The most common cause of tile failure in older Kensington homes is installation directly over diagonal plank subfloor boards without an uncoupling membrane. Diagonal plank subfloors have joints between boards that move seasonally — when the boards expand and contract, that movement telegraphs through a rigid tile installation and cracks the tiles or grout joints. An uncoupling membrane (such as Schlüter DITRA) absorbs this movement and prevents it from reaching the tile above. DMV General Contracting Group installs uncoupling membrane as a standard part of every tile project on older Kensington subfloors — the step that determines whether tile lasts 50 years or 2."
     },
     {
       question: "Is LVP a good choice for a Kensington home with a crawlspace?",
-      answer: "Yes — LVP is often the best choice for first-floor rooms in Kensington homes with crawlspace foundations where moisture is a concern. Because LVP is 100% waterproof and dimensionally stable regardless of humidity, it will not cup, buckle, or squeak in response to seasonal moisture changes. DMV-GC Group recommends a vapor barrier under LVP in crawlspace homes and uses an embedded moisture meter to check humidity levels in the wood subfloor before installation."
+      answer: "Yes — LVP is often the best choice for first-floor rooms in Kensington homes with crawlspace foundations where moisture is a concern. Because LVP is 100% waterproof and dimensionally stable regardless of humidity, it will not cup, buckle, or squeak in response to seasonal moisture changes. DMV General Contracting Group recommends a vapor barrier under LVP in crawlspace homes and uses an embedded moisture meter to check humidity levels in the wood subfloor before installation."
     },
     {
       question: "What does the flooring installation process look like in Kensington?",
       answer: "Every Kensington flooring project follows this same five-step process: free in-home consultation, detailed written estimate, subfloor preparation, expert installation by our in-house crews, and a final walkthrough. Most projects — from simple refinishes to full installations — complete in 3–10 days. Larger whole-home projects can take 2–4 weeks. All permits are handled by our team, so you don't have to deal with the Town of Kensington or Montgomery County directly."
     },
     {
-      question: "Does DMV-GC Group provide flooring warranties?",
-      answer: "Yes. Every DMV-GC Group flooring project includes our workmanship warranty — we guarantee our installation work for one full year with no proration. Material warranties are provided by the manufacturer and vary depending on product (typically 15–50 years for hardwood and LVP, lifetime for some tile). We also offer maintenance guidance so your warranty stays valid."
+      question: "Does DMV General Contracting Group provide flooring warranties?",
+      answer: "Yes. Every DMV General Contracting Group flooring project includes our workmanship warranty — we guarantee our installation work for one full year with no proration. Material warranties are provided by the manufacturer and vary depending on product (typically 15–50 years for hardwood and LVP, lifetime for some tile). We also offer maintenance guidance so your warranty stays valid."
     }
   ];
 
   return (
     <div className="city-service-detail-page flooring-kensington-md">
       <div className="container">
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaJsonLd) }} />
-
         <nav className="breadcrumb">
           <Link href="/">Home</Link><span>›</span>
           <Link href="/services">Services</Link><span>›</span>

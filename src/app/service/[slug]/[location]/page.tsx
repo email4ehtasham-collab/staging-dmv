@@ -5,6 +5,7 @@ import ReviewsBeforeWhyChooseUs from "@/components/Home/ClientReviews/ReviewsBef
 import ServiceData from "@/data/services/ServiceData";
 import locationMetadata from "@/data/services/locationMetadata";
 import getDynamicLocationComponent, { getLocationStaticParams } from "../../getDynamicLocationComponent";
+import PageSchema from "@/components/Schema/PageSchema";
 
 export const dynamicParams = false;
 
@@ -49,6 +50,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string;
 
     return (
         <>
+            <PageSchema path={`/service/${slug}/${location}`} />
             <DynamicComponent data={service} location={location} />
             <ReviewsBeforeWhyChooseUs />
         </>

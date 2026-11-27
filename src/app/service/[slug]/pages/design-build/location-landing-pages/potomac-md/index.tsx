@@ -18,18 +18,18 @@ const PotomacMD = () => {
     const faqData = [
         {
             question: "How does a design-build approach benefit high-value Potomac homes?",
-            answer: "Potomac's luxury market demands precision execution — a $300,000+ addition or whole-home renovation on a $2M–$4M property leaves no margin for error. Design-build eliminates the coordination gap between architect and GC that causes budget overruns and schedule delays in high-value projects. DMV-GC Group's in-house architects and engineers design within your renovation budget from day one, and our construction team prices design in real time — so the budget you approve is the budget you build to. MoCo DPS permit filings are handled entirely in-house, and structural modifications are engineered in-house with no outsourced structural engineer creating coordination friction."
+            answer: "Potomac's luxury market demands precision execution — a $300,000+ addition or whole-home renovation on a $2M–$4M property leaves no margin for error. Design-build eliminates the coordination gap between architect and GC that causes budget overruns and schedule delays in high-value projects. DMV General Contracting Group's in-house architects and engineers design within your renovation budget from day one, and our construction team prices design in real time — so the budget you approve is the budget you build to. MoCo DPS permit filings are handled entirely in-house, and structural modifications are engineered in-house with no outsourced structural engineer creating coordination friction."
         },
         {
-            question: "How does DMV-GC Group handle MoCo DPS permits for Potomac projects?",
-            answer: "Potomac is unincorporated Montgomery County — all building permits go through MoCo DPS at 2425 Reedie Drive, Wheaton. DMV-GC Group's in-house permit team handles all MoCo DPS filings, structural plan reviews, zoning submissions, and inspection scheduling for every Potomac project. We file complete packages that do not require supplemental submissions. Potomac homeowners never contact MoCo DPS during their project."
+            question: "How does DMV General Contracting Group handle MoCo DPS permits for Potomac projects?",
+            answer: "Potomac is unincorporated Montgomery County — all building permits go through MoCo DPS at 2425 Reedie Drive, Wheaton. DMV General Contracting Group's in-house permit team handles all MoCo DPS filings, structural plan reviews, zoning submissions, and inspection scheduling for every Potomac project. We file complete packages that do not require supplemental submissions. Potomac homeowners never contact MoCo DPS during their project."
         },
         {
             question: "Can Potomac estate properties support additions and ADU construction?",
             answer: "Potomac's large lot sizes (often 0.5–2+ acres) in MoCo's R-200 and R-90 zoning districts provide substantial addition and ADU potential within the setback, lot coverage, and height limits that our architects assess for each specific parcel. Many Potomac properties have detached garages, guest houses, or outbuildings that are ideal candidates for ADU conversion. Our architects design additions and ADUs that complement the existing estate architecture, and our structural engineers ensure additions are seamlessly integrated into the original construction."
         },
         {
-            question: "Is DMV-GC Group licensed for design-build work in Potomac, MD?",
+            question: "Is DMV General Contracting Group licensed for design-build work in Potomac, MD?",
             answer: "Yes. DMV General Contracting Group holds Maryland MHIC license #156178 — required for all home improvement and construction work in Potomac, which is unincorporated Montgomery County. Fully bonded, comprehensive general liability and workers' compensation coverage, and a 1-year workmanship warranty on every Potomac design-build project."
         }
     ];

@@ -7,136 +7,6 @@ import { useMyContext } from "@/hooks/context";
 import "../city-service-style.scss";
 import "./style.scss";
 
-const schemaJsonLd = {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "GeneralContractor",
-      "@id": "https://www.dmv-gc.com/#business",
-      "name": "DMV General Contracting Group LLC",
-      "legalName": "DMV General Contracting Group LLC",
-      "alternateName": ["DMV General Contracting Group", "DMV-GC"],
-      "url": "https://www.dmv-gc.com",
-      "telephone": "+1-240-730-1292",
-      "email": "support@dmv-gc.com",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "11810 Grand Park Ave #500",
-        "addressLocality": "North Bethesda",
-        "addressRegion": "MD",
-        "postalCode": "20852",
-        "addressCountry": "US"
-      },
-      "areaServed": {
-        "@type": "City",
-        "name": "North Bethesda",
-        "sameAs": "https://en.wikipedia.org/wiki/North_Bethesda,_Maryland"
-      },
-      "hasCredential": [
-        {
-          "@type": "EducationalOccupationalCredential",
-          "name": "MHIC License #156178"
-        },
-        {
-          "@type": "EducationalOccupationalCredential",
-          "name": "DLCP License #410526000209"
-        }
-      ],
-      "priceRange": "$$$"
-    },
-    {
-      "@type": "Service",
-      "name": "Flooring Installation in North Bethesda, MD",
-      "serviceType": "Flooring Installation",
-      "provider": {
-        "@id": "https://www.dmv-gc.com/#business"
-      },
-      "areaServed": {
-        "@type": "City",
-        "name": "North Bethesda"
-      },
-      "description": "Full-service flooring installation and replacement in North Bethesda, MD. LVP, engineered hardwood, wide-plank oak, and porcelain tile for Pike & Rose condos, White Flint townhomes, Wildwood single-family homes — with concrete slab subfloor expertise and condo HOA acoustic rule compliance.",
-      "offers": {
-        "@type": "Offer",
-        "priceCurrency": "USD",
-        "priceSpecification": {
-          "@type": "PriceSpecification",
-          "minPrice": "4",
-          "maxPrice": "18",
-          "priceCurrency": "USD",
-          "unitCode": "SQFT"
-        }
-      }
-    },
-    {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://www.dmv-gc.com/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Services",
-          "item": "https://www.dmv-gc.com/services"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Flooring",
-          "item": "https://www.dmv-gc.com/service/flooring-remodeling"
-        },
-        {
-          "@type": "ListItem",
-          "position": 4,
-          "name": "North Bethesda, MD",
-          "item": "https://www.dmv-gc.com/service/flooring-remodeling/north-bethesda-md"
-        }
-      ]
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "How much does flooring installation cost in North Bethesda, MD?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Flooring in North Bethesda typically costs $3–$32 per square foot. For condos: premium LVP with acoustic underlayment runs $6–$12/sq ft; engineered hardwood glue-down runs $8–$16/sq ft; porcelain tile on slab runs $8–$16/sq ft. For single-family homes: wide-plank white oak runs $10–$18/sq ft; hardwood refinishing costs $3–$6/sq ft. A Pike & Rose condo whole-unit package runs $8,000–$22,000. A Wildwood single-family package runs $14,000–$28,000."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can I install solid hardwood floors in a North Bethesda condo?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "No. North Bethesda condos have concrete slab subfloors. Solid hardwood nail-down requires a wood subfloor. The correct hardwood spec for a condo is engineered hardwood, which can be glued to concrete with moisture-blocking adhesive. Premium engineered hardwood with a 4mm+ wear layer provides the same look and feel as solid hardwood without the installation problems."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Do North Bethesda condo HOAs allow new flooring installation?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Most do, but require acoustic underlayment beneath hard flooring. The specific requirement varies by building — minimum IIC rating, specific product, or prior written approval. Standard 1mm foam does not meet most North Bethesda condo minimums. DMV General Contracting Group obtains and reviews the building's flooring rules before any materials are ordered and specifies the correct acoustic underlayment product with published tested assembly ratings."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is DMV General Contracting Group licensed for flooring in North Bethesda, MD?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. DMV General Contracting Group holds Maryland MHIC license #156178 and is headquartered at 11810 Grand Park Ave #500 — in North Bethesda. Fully bonded, insured, and backed by a 1-year workmanship warranty on every project."
-          }
-        }
-      ]
-    }
-  ]
-};
-
 const NorthBethesdaMD = () => {
   const { setActiveMenuItem } = useMyContext();
 
@@ -155,23 +25,21 @@ const NorthBethesdaMD = () => {
     },
     {
       question: "What acoustic underlayment does my North Bethesda condo HOA require?",
-      answer: `It depends on your specific building. North Bethesda condo associations universally require acoustic underlayment under hard flooring, but the specific requirement varies — some specify minimum IIC rating (commonly IIC 50 or higher), some require a specific product, and some require prior written approval. Standard 1mm foam does not meet most North Bethesda condo minimums. DMV-GC Group obtains your specific building's flooring rules before materials are ordered, specifies the correct acoustic underlayment with published tested assembly ratings, and handles any prior-approval submission your building requires.`
+      answer: `It depends on your specific building. North Bethesda condo associations universally require acoustic underlayment under hard flooring, but the specific requirement varies — some specify minimum IIC rating (commonly IIC 50 or higher), some require a specific product, and some require prior written approval. Standard 1mm foam does not meet most North Bethesda condo minimums. DMV General Contracting Group obtains your specific building's flooring rules before materials are ordered, specifies the correct acoustic underlayment with published tested assembly ratings, and handles any prior-approval submission your building requires.`
     },
     {
-      question: "Does DMV-GC Group coordinate freight elevator access for North Bethesda condo flooring projects?",
+      question: "Does DMV General Contracting Group coordinate freight elevator access for North Bethesda condo flooring projects?",
       answer: `Yes — this is a standard part of every North Bethesda condo flooring project. We contact building management to reserve freight elevator access for material delivery and debris removal, confirm permitted work hours, and ensure debris removal is scheduled within building restrictions. Managing building logistics before the project starts prevents day-of delays that occur when elevator access has not been reserved or debris scheduling has not been confirmed.`
     },
     {
-      question: "Is DMV-GC Group licensed for flooring in North Bethesda, MD?",
-      answer: `Yes — and we are headquartered here. DMV-GC Group holds Maryland MHIC license #156178 and operates from 11810 Grand Park Ave, Suite 500, North Bethesda. Fully bonded, comprehensive general liability and workers' compensation coverage, and a 1-year workmanship warranty on every North Bethesda flooring project — whether in a Pike & Rose condo unit or a Wildwood single-family home.`
+      question: "Is DMV General Contracting Group licensed for flooring in North Bethesda, MD?",
+      answer: `Yes — and we are headquartered here. DMV General Contracting Group holds Maryland MHIC license #156178 and operates from 11810 Grand Park Ave #500, North Bethesda. Fully bonded, comprehensive general liability and workers' compensation coverage, and a 1-year workmanship warranty on every North Bethesda flooring project — whether in a Pike & Rose condo unit or a Wildwood single-family home.`
     }
   ];
 
   return (
     <div className="city-service-detail-page flooring-north-bethesda-md">
       <div className="container">
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaJsonLd) }} />
-
         <nav className="breadcrumb" aria-label="Breadcrumb">
           <Link href="/">Home</Link><span>›</span><Link href="/services">Services</Link><span>›</span><Link href="/service/flooring-remodeling">Flooring Installation</Link><span>›</span>North Bethesda, MD
         </nav>

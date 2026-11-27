@@ -7,136 +7,6 @@ import { useMyContext } from "@/hooks/context";
 import "../city-service-style.scss";
 import "./style.scss";
 
-const schemaJsonLd = {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "GeneralContractor",
-      "@id": "https://www.dmv-gc.com/#business",
-      "name": "DMV General Contracting Group LLC",
-      "legalName": "DMV General Contracting Group LLC",
-      "alternateName": ["DMV General Contracting Group", "DMV-GC"],
-      "url": "https://www.dmv-gc.com",
-      "telephone": "+1-240-730-1292",
-      "email": "support@dmv-gc.com",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "11810 Grand Park Ave #500",
-        "addressLocality": "North Bethesda",
-        "addressRegion": "MD",
-        "postalCode": "20852",
-        "addressCountry": "US"
-      },
-      "areaServed": {
-        "@type": "City",
-        "name": "Laurel",
-        "sameAs": "https://en.wikipedia.org/wiki/Laurel,_Maryland"
-      },
-      "hasCredential": [
-        {
-          "@type": "EducationalOccupationalCredential",
-          "name": "MHIC License #156178"
-        },
-        {
-          "@type": "EducationalOccupationalCredential",
-          "name": "DLCP License #410526000209"
-        }
-      ],
-      "priceRange": "$$$"
-    },
-    {
-      "@type": "Service",
-      "name": "Flooring Installation in Laurel, MD",
-      "serviceType": "Flooring Installation",
-      "provider": {
-        "@id": "https://www.dmv-gc.com/#business"
-      },
-      "areaServed": {
-        "@type": "City",
-        "name": "Laurel"
-      },
-      "description": "Full-service flooring installation and replacement in Laurel, MD. Wide-plank white oak, LVP, engineered hardwood, and porcelain tile for City of Laurel colonials and split-levels, West Laurel and Montpelier single-family homes (Montgomery County), and Laurel Lakes and Russett townhomes (Prince George's County) — with three-jurisdiction permit knowledge and the split-level two-zone flooring strategy that Laurel's predominant housing stock requires.",
-      "offers": {
-        "@type": "Offer",
-        "priceCurrency": "USD",
-        "priceSpecification": {
-          "@type": "PriceSpecification",
-          "minPrice": "3",
-          "maxPrice": "18",
-          "priceCurrency": "USD",
-          "unitCode": "SQFT"
-        }
-      }
-    },
-    {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://www.dmv-gc.com/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Services",
-          "item": "https://www.dmv-gc.com/services"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Flooring",
-          "item": "https://www.dmv-gc.com/service/flooring-remodeling"
-        },
-        {
-          "@type": "ListItem",
-          "position": 4,
-          "name": "Laurel, MD",
-          "item": "https://www.dmv-gc.com/service/flooring-remodeling/laurel-md"
-        }
-      ]
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "How much does flooring installation cost in Laurel, MD?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Flooring installation in Laurel, MD typically costs $3–$18 per square foot installed. Hardwood refinishing for Laurel's 1960s–80s colonials and split-levels costs $3–$6 per square foot. Wide-plank white oak installation runs $10–$18 per square foot. LVP for split-level lower levels and kitchens costs $5–$10 per square foot — the most critical zone in Laurel's split-level-dominant housing. Porcelain tile costs $8–$18 per square foot. A typical Laurel whole-home flooring package for a 1970s colonial or split-level runs $12,000–$26,000. DMV General Contracting Group provides free in-home estimates for all Laurel neighborhoods."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Does DMV General Contracting Group serve all three Laurel permit jurisdictions?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. Laurel, MD has three distinct permit jurisdictions depending on where the property is located: the City of Laurel (permit office at 8103 Sandy Spring Road) for incorporated city addresses; Montgomery County DPS (2425 Reedie Drive, Wheaton) for West Laurel and Montpelier; and Prince George's County DPS for Laurel Lakes, Russett, and other PG County Laurel addresses. DMV General Contracting Group identifies the correct jurisdiction for every Laurel project before any renovation scope requiring a permit begins. Flooring-only projects typically do not require a building permit in any of the three jurisdictions."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is the best flooring for Laurel's split-level homes?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Laurel's 1960s–80s split-level homes require a two-zone flooring strategy: hardwood (solid or engineered, depending on subfloor moisture) on the above-grade main level and upper bedrooms, and LVP on the below-grade lower-level family room or finished basement. Solid hardwood is not appropriate for below-grade finished spaces in any Laurel split-level — the slab-on-grade lower level has inherent moisture conditions that will cause solid hardwood to cup and buckle. LVP is 100% waterproof and handles the below-grade zone without risk. Wide-plank white oak on the main level with LVP matched to the oak tone on the lower level is the most popular Laurel split-level flooring combination."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is DMV General Contracting Group licensed for flooring in Laurel, MD?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. DMV General Contracting Group holds Maryland MHIC license #156178 — required for all home improvement work in Laurel across all three jurisdictions (City of Laurel, Montgomery County, and Prince George's County). We are fully bonded, carry comprehensive general liability insurance and workers' compensation coverage, and provide a 1-year workmanship warranty on every Laurel flooring project."
-          }
-        }
-      ]
-    }
-  ]
-};
-
 const LaurelMD = () => {
   const { setActiveMenuItem } = useMyContext();
 
@@ -147,31 +17,29 @@ const LaurelMD = () => {
   const faqData = [
     {
       question: "How much does flooring installation cost in Laurel, MD?",
-      answer: `Flooring in Laurel typically costs $3–$20 per square foot depending on material and zone. Hardwood refinishing for original 1960s–80s floors costs $3–$6 per square foot. Wide-plank white oak installation runs $10–$18 per square foot. Engineered hardwood costs $7–$14 per square foot. Premium LVP for lower levels costs $5–$10 per square foot. LVP with HOA acoustic underlayment for Russett and Laurel Lakes townhomes runs $6–$12 per square foot. Porcelain tile costs $8–$18 per square foot, or $10–$20 with uncoupling membrane on older subfloors. A typical Laurel split-level or colonial whole-home flooring package runs $12,000–$26,000. Free in-home estimates with zone-by-zone pricing from DMV-GC Group.`
+      answer: `Flooring in Laurel typically costs $3–$20 per square foot depending on material and zone. Hardwood refinishing for original 1960s–80s floors costs $3–$6 per square foot. Wide-plank white oak installation runs $10–$18 per square foot. Engineered hardwood costs $7–$14 per square foot. Premium LVP for lower levels costs $5–$10 per square foot. LVP with HOA acoustic underlayment for Russett and Laurel Lakes townhomes runs $6–$12 per square foot. Porcelain tile costs $8–$18 per square foot, or $10–$20 with uncoupling membrane on older subfloors. A typical Laurel split-level or colonial whole-home flooring package runs $12,000–$26,000. Free in-home estimates with zone-by-zone pricing from DMV General Contracting Group.`
     },
     {
       question: "Why can't I install solid hardwood on the lower level of my Laurel split-level?",
-      answer: `Laurel split-level lower levels are below grade — they sit on or adjacent to a concrete slab that has direct contact with ground moisture. Solid hardwood is hygroscopic and absorbs moisture from below, causing it to swell seasonally, cup at board edges, gap in dry weather, and develop persistent squeaks over time. This failure is not a workmanship issue — it is what happens when solid hardwood is placed in a below-grade environment. LVP is 100% waterproof and unaffected by slab moisture. For Laurel split-levels, DMV-GC Group specifies LVP on every below-grade lower level without exception, and matches the LVP color tone to the above-grade hardwood for visual continuity at the stair transition.`
+      answer: `Laurel split-level lower levels are below grade — they sit on or adjacent to a concrete slab that has direct contact with ground moisture. Solid hardwood is hygroscopic and absorbs moisture from below, causing it to swell seasonally, cup at board edges, gap in dry weather, and develop persistent squeaks over time. This failure is not a workmanship issue — it is what happens when solid hardwood is placed in a below-grade environment. LVP is 100% waterproof and unaffected by slab moisture. For Laurel split-levels, DMV General Contracting Group specifies LVP on every below-grade lower level without exception, and matches the LVP color tone to the above-grade hardwood for visual continuity at the stair transition.`
     },
     {
-      question: "Does DMV-GC Group know which Laurel permit jurisdiction applies to my property?",
-      answer: `Yes. Laurel has three permit jurisdictions — the City of Laurel (8103 Sandy Spring Road), Montgomery County DPS (West Laurel and Montpelier), and Prince George's County DPS (Laurel Lakes, Russett, South Laurel). DMV-GC Group confirms the correct jurisdiction for every Laurel project before any renovation scope requiring a permit begins. For flooring-only projects — refinishing, LVP replacement, tile installation — a building permit is generally not required in any of Laurel's three jurisdictions, so this complexity does not typically affect pure flooring projects.`
+      question: "Does DMV General Contracting Group know which Laurel permit jurisdiction applies to my property?",
+      answer: `Yes. Laurel has three permit jurisdictions — the City of Laurel (8103 Sandy Spring Road), Montgomery County DPS (West Laurel and Montpelier), and Prince George's County DPS (Laurel Lakes, Russett, South Laurel). DMV General Contracting Group confirms the correct jurisdiction for every Laurel project before any renovation scope requiring a permit begins. For flooring-only projects — refinishing, LVP replacement, tile installation — a building permit is generally not required in any of Laurel's three jurisdictions, so this complexity does not typically affect pure flooring projects.`
     },
     {
       question: "What HOA acoustic requirements apply in Russett and Laurel Lakes?",
-      answer: `Russett and Laurel Lakes are attached townhome communities where upper-level hard flooring transmits impact noise to neighbors below. Both communities have HOA rules requiring acoustic underlayment under any hard flooring installed on upper levels. The specific requirement varies — some specify a minimum IIC rating, others require a specific product. DMV-GC Group verifies the specific HOA flooring rules for every Russett and Laurel Lakes project before materials are ordered and specifies the correct IIC-rated acoustic underlayment product. Standard 1mm foam does not meet most townhome HOA minimums in these communities.`
+      answer: `Russett and Laurel Lakes are attached townhome communities where upper-level hard flooring transmits impact noise to neighbors below. Both communities have HOA rules requiring acoustic underlayment under any hard flooring installed on upper levels. The specific requirement varies — some specify a minimum IIC rating, others require a specific product. DMV General Contracting Group verifies the specific HOA flooring rules for every Russett and Laurel Lakes project before materials are ordered and specifies the correct IIC-rated acoustic underlayment product. Standard 1mm foam does not meet most townhome HOA minimums in these communities.`
     },
     {
-      question: "Is DMV-GC Group licensed for flooring in Laurel, MD?",
-      answer: `Yes. DMV-GC Group holds Maryland MHIC license #156178 — required for all home improvement work in Laurel across all three jurisdictions: City of Laurel, unincorporated Montgomery County (West Laurel, Montpelier), and Prince George's County (Laurel Lakes, Russett, South Laurel). The MHIC license is a statewide Maryland license valid in all Maryland jurisdictions. We are fully bonded, carry comprehensive general liability insurance and workers' compensation coverage, and provide a 1-year workmanship warranty on every Laurel flooring project.`
+      question: "Is DMV General Contracting Group licensed for flooring in Laurel, MD?",
+      answer: `Yes. DMV General Contracting Group holds Maryland MHIC license #156178 — required for all home improvement work in Laurel across all three jurisdictions: City of Laurel, unincorporated Montgomery County (West Laurel, Montpelier), and Prince George's County (Laurel Lakes, Russett, South Laurel). The MHIC license is a statewide Maryland license valid in all Maryland jurisdictions. We are fully bonded, carry comprehensive general liability insurance and workers' compensation coverage, and provide a 1-year workmanship warranty on every Laurel flooring project.`
     }
   ];
 
   return (
     <div className="city-service-detail-page flooring-laurel-md">
       <div className="container">
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaJsonLd) }} />
-
         <nav className="breadcrumb" aria-label="Breadcrumb">
           <Link href="/">Home</Link><span>›</span><Link href="/services">Services</Link><span>›</span><Link href="/service/flooring-remodeling">Flooring Installation</Link><span>›</span>Laurel, MD
         </nav>

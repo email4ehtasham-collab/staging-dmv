@@ -7,122 +7,6 @@ import { useMyContext } from "@/hooks/context";
 import "../city-service-style.scss";
 import "./style.scss";
 
-const schemaJsonLd = {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "GeneralContractor",
-      "@id": "https://www.dmv-gc.com/#business",
-      "name": "DMV General Contracting Group LLC",
-      "legalName": "DMV General Contracting Group LLC",
-      "alternateName": ["DMV General Contracting Group", "DMV-GC"],
-      "image": "https://www.dmv-gc.com/logo.png",
-      "url": "https://www.dmv-gc.com",
-      "telephone": "+1-240-730-1292",
-      "email": "support@dmv-gc.com",
-      "foundingDate": "2018",
-      "description": "Licensed design-build general contractor serving Laurel, MD. Specializing in basement remodeling across Laurel's three-jurisdiction landscape — City of Laurel, Montgomery County, and Prince George's County — with in-house permit expertise for all three authorities.",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "11810 Grand Park Ave #500",
-        "addressLocality": "North Bethesda",
-        "addressRegion": "MD",
-        "postalCode": "20852",
-        "addressCountry": "US"
-      },
-      "geo": { "@type": "GeoCoordinates", "latitude": 39.0458, "longitude": -77.1139 },
-      "areaServed": [
-        { "@type": "City", "name": "Laurel", "sameAs": "https://en.wikipedia.org/wiki/Laurel,_Maryland" },
-        { "@type": "City", "name": "Beltsville" },
-        { "@type": "City", "name": "Savage" },
-        { "@type": "City", "name": "Burtonsville" },
-        { "@type": "City", "name": "College Park" }
-      ],
-      "hasCredential": [
-        { "@type": "EducationalOccupationalCredential", "name": "MHIC License", "credentialCategory": "Maryland Home Improvement Contractor License" },
-        { "@type": "EducationalOccupationalCredential", "name": "DLCP License", "credentialCategory": "Washington DC Department of Licensing and Consumer Protection" }
-      ],
-      "priceRange": "$$"
-    },
-    {
-      "@type": "Service",
-      "@id": "https://www.dmv-gc.com/service/basement-remodeling/laurel-md#service",
-      "serviceType": "Basement Remodeling",
-      "name": "Basement Remodeling in Laurel, MD",
-      "provider": { "@id": "https://www.dmv-gc.com/#business" },
-      "areaServed": { "@type": "City", "name": "Laurel", "sameAs": "https://en.wikipedia.org/wiki/Laurel,_Maryland" },
-      "description": "Full-service basement remodeling in Laurel, MD. Recreation rooms, home offices, guest suites, ADU conversions, and full basement finishing — serving City of Laurel, Montgomery County, and Prince George's County areas with in-house permit expertise for all three jurisdictions.",
-      "offers": {
-        "@type": "Offer",
-        "priceCurrency": "USD",
-        "priceSpecification": { "@type": "PriceSpecification", "minPrice": "16000", "maxPrice": "105000", "priceCurrency": "USD" }
-      }
-    },
-    {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.dmv-gc.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.dmv-gc.com/services" },
-        { "@type": "ListItem", "position": 3, "name": "Basement Remodeling", "item": "https://www.dmv-gc.com/service/basement-remodeling" },
-        { "@type": "ListItem", "position": 4, "name": "Laurel, MD", "item": "https://www.dmv-gc.com/service/basement-remodeling/laurel-md" }
-      ]
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "How much does basement remodeling cost in Laurel, MD?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Basement remodeling in Laurel, MD typically costs between $16,000 and $105,000 depending on scope, home type, and finish level. A basic basement finishing runs $16,000–$36,000. A mid-range basement with bathroom and home office runs $34,000–$65,000. A full ADU conversion with egress windows, separate entrance, kitchen, and bathroom typically costs $60,000–$105,000. Laurel's value-oriented housing market means basement renovations here offer strong ROI percentages. DMV General Contracting Group provides free in-home consultations with detailed estimates."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Does Laurel require City permits or County permits for basement remodeling?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "It depends on your property's exact location. Laurel sits at the intersection of three jurisdictions: the City of Laurel (incorporated), Montgomery County (unincorporated areas north and west of the city), and Prince George's County (unincorporated areas south and east of the city). Properties within the City of Laurel require City of Laurel permits. Properties outside the city limits require Montgomery County or Prince George's County permits depending on which county the property falls in. DMV General Contracting Group verifies the correct permit jurisdiction for every Laurel address before filing any permit application."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can DMV General Contracting Group convert a Laurel basement into a legal ADU?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. ADU basement conversions are popular in Laurel given the area's strong rental market, access to the MARC Penn Line at Laurel station, and mix of Montgomery County and Prince George's County rental markets. A legal basement ADU requires egress windows in sleeping areas, a separate entrance, a full kitchen or kitchenette, a full bathroom, fire-rated separation, and a Certificate of Occupancy from the correct jurisdiction — City of Laurel, Montgomery County, or Prince George's County depending on your property's location. DMV General Contracting Group handles the entire process in-house."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Does DMV General Contracting Group serve both Montgomery County and Prince George's County Laurel addresses?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. Many contractors only serve one county and turn away Laurel homeowners whose address falls in the other. DMV General Contracting Group serves the entire Laurel area — City of Laurel, Montgomery County portions, and Prince George's County portions — with the same licensed team, same quality standards, and the permit expertise to handle whichever jurisdiction applies to your specific property."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How long does a basement remodel take in Laurel, MD?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Most Laurel basement renovations take 6–12 weeks from construction start to completion. A basic finishing takes 5–8 weeks. A full ADU conversion takes 10–14 weeks. Permit processing — through the City of Laurel, Montgomery County, or Prince George's County — typically adds 3–6 weeks before construction begins. DMV General Contracting Group manages the complete timeline in-house regardless of which jurisdiction applies."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is DMV General Contracting Group licensed for basement remodeling in Laurel, MD?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. DMV General Contracting Group holds a Maryland MHIC (Home Improvement Contractor) license — required for all home renovation work in Laurel, regardless of whether the property is in the City of Laurel, Montgomery County, or Prince George's County. We are fully bonded, carry comprehensive general liability insurance and workers' compensation coverage, and provide a 1-year workmanship warranty on every basement remodeling project completed in Laurel."
-          }
-        }
-      ]
-    }
-  ]
-};
-
 export default function BasementLaurelMD() {
   const { setActiveMenuItem } = useMyContext();
 
@@ -268,7 +152,7 @@ export default function BasementLaurelMD() {
         </div>
 
         <div className="note">
-          ⚠️ <strong>Common Laurel Permit Mistake:</strong> Many contractors who work primarily in Montgomery County file all Laurel permits with MoCo DPS — even for properties within the City of Laurel or in Prince George&apos;s County. City inspectors won&apos;t inspect work permitted by the county, and vice versa. If your previous contractor filed your permit with the wrong authority, your renovation work has not been properly inspected — a problem that surfaces at resale. DMV-GC Group eliminates this risk by verifying jurisdiction at the start of every Laurel project.
+          ⚠️ <strong>Common Laurel Permit Mistake:</strong> Many contractors who work primarily in Montgomery County file all Laurel permits with MoCo DPS — even for properties within the City of Laurel or in Prince George&apos;s County. City inspectors won&apos;t inspect work permitted by the county, and vice versa. If your previous contractor filed your permit with the wrong authority, your renovation work has not been properly inspected — a problem that surfaces at resale. DMV General Contracting Group eliminates this risk by verifying jurisdiction at the start of every Laurel project.
         </div>
 
         {/* ADU SECTION */}
@@ -551,37 +435,37 @@ export default function BasementLaurelMD() {
           <Accordion.Item eventKey="0">
             <Accordion.Header>How much does basement remodeling cost in Laurel, MD?</Accordion.Header>
             <Accordion.Body>
-              Basement remodeling in Laurel typically costs $16,000–$105,000 depending on scope. A basic finishing runs $16,000–$36,000. A full finishing costs $28,000–$55,000. A mid-range renovation with bathroom and office runs $34,000–$65,000. A full ADU conversion costs $60,000–$105,000. Costs are consistent across all three Laurel jurisdictions — City, MoCo, and PG County. DMV-GC Group provides free in-home consultations with itemized estimates for any scope.
+              Basement remodeling in Laurel typically costs $16,000–$105,000 depending on scope. A basic finishing runs $16,000–$36,000. A full finishing costs $28,000–$55,000. A mid-range renovation with bathroom and office runs $34,000–$65,000. A full ADU conversion costs $60,000–$105,000. Costs are consistent across all three Laurel jurisdictions — City, MoCo, and PG County. DMV General Contracting Group provides free in-home consultations with itemized estimates for any scope.
             </Accordion.Body>
           </Accordion.Item>
           <Accordion.Item eventKey="1">
             <Accordion.Header>Does Laurel require City permits or County permits for basement remodeling?</Accordion.Header>
             <Accordion.Body>
-              It depends on your property&apos;s exact location. Laurel addresses span three jurisdictions: City of Laurel (City DPW permits), unincorporated Montgomery County (MoCo DPS permits), and unincorporated Prince George&apos;s County (PG County DPS permits). Your mailing address or zip code does not determine your jurisdiction — only your parcel&apos;s actual boundary location does. DMV-GC Group verifies the correct jurisdiction for every Laurel address before filing any permit.
+              It depends on your property&apos;s exact location. Laurel addresses span three jurisdictions: City of Laurel (City DPW permits), unincorporated Montgomery County (MoCo DPS permits), and unincorporated Prince George&apos;s County (PG County DPS permits). Your mailing address or zip code does not determine your jurisdiction — only your parcel&apos;s actual boundary location does. DMV General Contracting Group verifies the correct jurisdiction for every Laurel address before filing any permit.
             </Accordion.Body>
           </Accordion.Item>
           <Accordion.Item eventKey="2">
-            <Accordion.Header>Does DMV-GC Group serve Prince George&apos;s County Laurel addresses?</Accordion.Header>
+            <Accordion.Header>Does DMV General Contracting Group serve Prince George&apos;s County Laurel addresses?</Accordion.Header>
             <Accordion.Body>
-              Yes. Many contractors who work primarily in Montgomery County don&apos;t serve PG County Laurel addresses. DMV-GC Group serves all of Laurel — City, MoCo, and PG County — with the same licensed team, same quality standards, and the permit expertise to handle PG County&apos;s DPS process, including the PG County Certificate of Occupancy for ADU conversions.
+              Yes. Many contractors who work primarily in Montgomery County don&apos;t serve PG County Laurel addresses. DMV General Contracting Group serves all of Laurel — City, MoCo, and PG County — with the same licensed team, same quality standards, and the permit expertise to handle PG County&apos;s DPS process, including the PG County Certificate of Occupancy for ADU conversions.
             </Accordion.Body>
           </Accordion.Item>
           <Accordion.Item eventKey="3">
-            <Accordion.Header>Can DMV-GC Group convert a Laurel basement into a legal ADU?</Accordion.Header>
+            <Accordion.Header>Can DMV General Contracting Group convert a Laurel basement into a legal ADU?</Accordion.Header>
             <Accordion.Body>
-              Yes. ADU basement conversions are a popular project in Laurel given the area&apos;s MARC rail access and strong rental market. A legal ADU requires egress windows, a separate entrance, kitchen or kitchenette, full bathroom, fire-rated separation, and a Certificate of Occupancy from the correct jurisdiction. DMV-GC Group manages the entire process — including the COO application and all required inspections — regardless of whether your property is in the City, MoCo, or PG County.
+              Yes. ADU basement conversions are a popular project in Laurel given the area&apos;s MARC rail access and strong rental market. A legal ADU requires egress windows, a separate entrance, kitchen or kitchenette, full bathroom, fire-rated separation, and a Certificate of Occupancy from the correct jurisdiction. DMV General Contracting Group manages the entire process — including the COO application and all required inspections — regardless of whether your property is in the City, MoCo, or PG County.
             </Accordion.Body>
           </Accordion.Item>
           <Accordion.Item eventKey="4">
             <Accordion.Header>How does Laurel&apos;s three-jurisdiction structure affect basement renovation permits?</Accordion.Header>
             <Accordion.Body>
-              Each jurisdiction has its own building department, plan review process, fee schedule, and inspection staff. Filing with the wrong authority produces a permit that the correct jurisdiction&apos;s inspectors cannot enforce — leaving renovation work without valid inspections. This creates code compliance issues that surface at resale and can be expensive to resolve. DMV-GC Group eliminates this risk by verifying jurisdiction at the start of every Laurel project, before any design or filing begins.
+              Each jurisdiction has its own building department, plan review process, fee schedule, and inspection staff. Filing with the wrong authority produces a permit that the correct jurisdiction&apos;s inspectors cannot enforce — leaving renovation work without valid inspections. This creates code compliance issues that surface at resale and can be expensive to resolve. DMV General Contracting Group eliminates this risk by verifying jurisdiction at the start of every Laurel project, before any design or filing begins.
             </Accordion.Body>
           </Accordion.Item>
           <Accordion.Item eventKey="5">
-            <Accordion.Header>Is DMV-GC Group licensed for basement remodeling in Laurel, MD?</Accordion.Header>
+            <Accordion.Header>Is DMV General Contracting Group licensed for basement remodeling in Laurel, MD?</Accordion.Header>
             <Accordion.Body>
-              Yes. DMV-GC Group holds a Maryland MHIC (Home Improvement Contractor) license — required for all home renovation work throughout Laurel, regardless of jurisdiction. We employ licensed plumbers and electricians in-house, are fully bonded, carry comprehensive general liability insurance and workers&apos; compensation coverage, and provide a 1-year workmanship warranty on every basement project in Laurel.
+              Yes. DMV General Contracting Group holds a Maryland MHIC (Home Improvement Contractor) license — required for all home renovation work throughout Laurel, regardless of jurisdiction. We employ licensed plumbers and electricians in-house, are fully bonded, carry comprehensive general liability insurance and workers&apos; compensation coverage, and provide a 1-year workmanship warranty on every basement project in Laurel.
             </Accordion.Body>
           </Accordion.Item>
         </Accordion>
@@ -608,10 +492,6 @@ export default function BasementLaurelMD() {
         </div>
 
         {/* SCHEMA JSON-LD */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaJsonLd) }}
-        />
       </div>
     </div>
   );

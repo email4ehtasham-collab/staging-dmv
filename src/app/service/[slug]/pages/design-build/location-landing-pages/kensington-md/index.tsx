@@ -21,15 +21,15 @@ const KensingtonMD = () => {
             answer: "Kensington's home prices are priced below Bethesda and Chevy Chase equivalents despite sharing the same Montgomery County school district, the same Metro Red Line access at Kensington station (or nearby Bethesda/Silver Spring stations), and comparable proximity to DC employment. This gap between Kensington's current prices and its underlying location value means renovation dollars build equity against a lower base — a well-executed design-build renovation on a $650,000 Kensington home produces a stronger percentage return than the same renovation on a $900,000 Bethesda home. As Kensington's community trajectory continues improving through its historic town center and surrounding development, renovation-driven equity gains compound that advantage further."
         },
         {
-            question: "How does DMV-GC Group handle MoCo DPS permits for Kensington projects?",
-            answer: "Kensington is unincorporated Montgomery County — all building permits go through MoCo DPS at 2425 Reedie Drive, Wheaton. DMV-GC Group's in-house permit team handles all MoCo DPS filings, structural plan reviews, zoning submissions, and inspection scheduling for every Kensington project. We file complete packages that do not require supplemental submissions. Kensington homeowners never contact MoCo DPS during their project."
+            question: "How does DMV General Contracting Group handle MoCo DPS permits for Kensington projects?",
+            answer: "Kensington is unincorporated Montgomery County — all building permits go through MoCo DPS at 2425 Reedie Drive, Wheaton. DMV General Contracting Group's in-house permit team handles all MoCo DPS filings, structural plan reviews, zoning submissions, and inspection scheduling for every Kensington project. We file complete packages that do not require supplemental submissions. Kensington homeowners never contact MoCo DPS during their project."
         },
         {
             question: "Can Kensington's historic homes support open-concept conversions and additions?",
-            answer: "In most cases, yes — but Kensington's older housing stock (many homes built in the 1920s–1950s) requires careful structural assessment before any open-concept conversion. DMV-GC Group's in-house structural engineers walk Kensington homes and assess load-bearing wall conditions before any design is finalized — accounting for the framing methods and construction standards of the era in which the home was built. For properties within Kensington's historic districts, our permit team coordinates with Montgomery County Historic Preservation as needed."
+            answer: "In most cases, yes — but Kensington's older housing stock (many homes built in the 1920s–1950s) requires careful structural assessment before any open-concept conversion. DMV General Contracting Group's in-house structural engineers walk Kensington homes and assess load-bearing wall conditions before any design is finalized — accounting for the framing methods and construction standards of the era in which the home was built. For properties within Kensington's historic districts, our permit team coordinates with Montgomery County Historic Preservation as needed."
         },
         {
-            question: "Is DMV-GC Group licensed for design-build work in Kensington, MD?",
+            question: "Is DMV General Contracting Group licensed for design-build work in Kensington, MD?",
             answer: "Yes. DMV General Contracting Group holds Maryland MHIC license #156178 — required for all home improvement and construction work in Kensington, which is unincorporated Montgomery County. Fully bonded, comprehensive general liability and workers' compensation coverage, and a 1-year workmanship warranty on every Kensington design-build project."
         }
     ];
