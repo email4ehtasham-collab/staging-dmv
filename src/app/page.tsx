@@ -93,7 +93,7 @@ const schemaDataOrg = {
 			},
 			{
 			"@type": "GeneralContractor",
-			"@id": "https://www.dmv-gc.com/#localbusiness",
+			"@id": "https://www.dmv-gc.com/#business",
 			"name": "DMV General Contracting Group LLC",
 			"legalName": "DMV General Contracting Group LLC",
 			"alternateName": ["DMV General Contracting Group", "DMV-GC"],
