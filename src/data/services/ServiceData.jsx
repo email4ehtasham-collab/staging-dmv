@@ -10,7 +10,7 @@ const ServiceData = [
         points_main_title: "Our Kitchen Remodeling services include",
         newService: true,
         imageAlt: 'Kitchen remodeling services in Bethesda MD —custom design and renovation',
-        meta_title: "Kitchen Remodeling in Maryland & DC | DMV General Contracting",
+        meta_title: "Kitchen Remodeling in Maryland | DMV General Contracting",
         meta_description: "DMV General Contracting Group offers kitchen remodeling in Maryland and DC from $15,000, with design, permits and a 1-year warranty. Free estimate.",
         schemaData: {
             "@context": "https://schema.org",
@@ -161,7 +161,7 @@ const ServiceData = [
         points_main_title: "Explore our comprehensive Bathroom Remodeling services:",
         newService: true,
         imageAlt: 'Bathroom renovation contractor in Bethesda Maryland —DMV General Contracting Group',
-        meta_title: "Bathroom Remodeling in Maryland & DC | DMV General Contracting",
+        meta_title: "Bathroom Remodeling in Maryland | DMV General Contracting",
         meta_description: "DMV General Contracting Group offers bathroom remodeling in Maryland and DC from $10,000, with waterproofing, permits and a 1-year warranty. Free estimate.",
         schemaData: {
             "@context": "https://schema.org",
@@ -310,7 +310,7 @@ const ServiceData = [
         points_main_title: "Explore our comprehensive Basement Remodeling services:",
         newService: true,
         imageAlt: 'Basement finishing and remodeling in Bethesda MD —licensed contractor',
-        meta_title: "Basement Remodeling & Finishing in Maryland & DC",
+        meta_title: "Basement Remodeling Maryland | DMV General Contracting Group",
         meta_description: "DMV General Contracting Group offers basement remodeling and finishing in Maryland and DC from $30 per sq ft, with permits and a 1-year warranty.",
         schemaData: {
             "@context": "https://schema.org",
@@ -488,7 +488,7 @@ const ServiceData = [
                 point_desc: "From foundation work to interior finishing, we handle every phase of construction. Our skilled craftsmen deliver high-quality framing, electrical, plumbing, HVAC, insulation, and finishing details to ensure your ADU is efficient, comfortable, and built to last.",
             },
         ],
-        meta_title: "ADU Builder in Maryland & DC | DMV General Contracting",
+        meta_title: "ADU Builder in Maryland | DMV General Contracting",
         meta_description: "Licensed ADU builder in Maryland and DC. Detached accessory dwelling units from $150,000, conversions from $60,000, permits included. Free feasibility check.",
         schemaData: {
             "@context": "https://schema.org",
@@ -1331,7 +1331,7 @@ const ServiceData = [
         points_main_title: "Explore our comprehensive Additions services:",
         newService: true,
         imageAlt: 'Home additions in Maryland and Washington, DC',
-        meta_title: "Home Additions in Maryland & DC | DMV General Contracting",
+        meta_title: "Home Additions in Maryland | DMV General Contracting",
         meta_description: "Home additions in Maryland and DC from $200 per sq ft. DMV General Contracting Group handles zoning, engineering, permits and the build. Free estimate.",
         schemaData: {
             "@context": "https://schema.org",

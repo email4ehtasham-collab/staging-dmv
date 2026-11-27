@@ -110,7 +110,12 @@ export default function BethesdaKitchenServices() {
             align="center"
             eyebrow={<Badge>Services</Badge>}
             title="Bethesda Kitchen Remodeling Services"
-            text="Our Bethesda kitchen remodeling team handles six kinds of projects, and each kitchen renovation in Bethesda, MD is shaped around the house it sits in:"
+            text={
+              <>
+                Our <strong>Bethesda kitchen remodeling</strong> team handles six kinds of projects, and each{" "}
+                <strong>kitchen renovation in Bethesda, MD</strong> is shaped around the house it sits in:
+              </>
+            }
           />
           <Button href="/service/kitchen-remodeling" variant="secondary" className={styles.headerButton}>
             All Kitchen Services

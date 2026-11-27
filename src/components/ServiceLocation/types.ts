@@ -6,6 +6,22 @@ export type ServiceLocationFact = {
   note?: string;
 };
 
+/** Optional hub-style hero photo. When set, the hero uses the service-hub layout:
+ * photo + featured project + Google rating card on the right, credentials as a trust
+ * row under the buttons, and the facts as a stats bar under the hero. */
+export type ServiceLocationHeroMedia = {
+  image: string;
+  imageAlt: string;
+  featuredLabel?: string;
+  featuredTitle: string;
+  featuredMeta?: string;
+  reviewScore?: string;
+  reviewText?: string;
+  reviewMeta?: string;
+  glanceLinkLabel?: string;
+  glanceLinkHref?: string;
+};
+
 export type ServiceLocationHeroData = {
   serviceName: string;
   serviceHref: string;
@@ -13,12 +29,13 @@ export type ServiceLocationHeroData = {
   badge: string;
   title: string;
   titleAccent?: string;
-  intro: string;
+  intro: ReactNode;
   credentials: string[];
   factsTitle: string;
   factsCtaText: string;
   factsCtaLabel: string;
   facts: ServiceLocationFact[];
+  media?: ServiceLocationHeroMedia;
 };
 
 export type ServiceLocationOverviewItem = {
@@ -52,7 +69,7 @@ export type ServiceLocationCostRow = {
 export type ServiceLocationCostsData = {
   eyebrow: string;
   title: string;
-  text: string;
+  text: ReactNode;
   featured?: {
     range: string;
     label: string;
@@ -60,6 +77,8 @@ export type ServiceLocationCostsData = {
   rows: ServiceLocationCostRow[];
   note: string;
   ctaLabel?: string;
+  /** "table" shows the tiers as a real table instead of cards. */
+  layout?: "cards" | "table";
 };
 
 export type ServiceLocationConsultation = {

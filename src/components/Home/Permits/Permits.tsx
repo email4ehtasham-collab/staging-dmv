@@ -30,7 +30,7 @@ const homeRows = [
     plumbing: "WSSC Water",
   },
   {
-    location: "Washington, DC",
+    location: "DC",
     detail: "",
     building: "DC Department of Buildings (DOB)",
     plumbing: "DC Department of Buildings (DOB)",
@@ -69,7 +69,7 @@ const kitchenRows = [
     plumbing: "WSSC Water",
   },
   {
-    location: "Washington, DC",
+    location: "DC",
     detail: "",
     building: "DC Department of Buildings (DOB), with Historic Preservation Office review for historic exteriors",
     plumbing: "DC Department of Buildings (DOB)",
@@ -102,7 +102,7 @@ const aduRows = [
     plumbing: "City of Laurel inside city limits; Prince George's County DPIE outside them",
   },
   {
-    location: "Washington, DC",
+    location: "DC",
     detail: "",
     building: "Certificate of occupancy and rental business license to rent",
     plumbing: "DC Department of Buildings (DOB)",
@@ -141,7 +141,7 @@ const homeAdditionRows = [
     plumbing: "Historic Area Work Permit from the Historic Preservation Commission",
   },
   {
-    location: "Washington, DC",
+    location: "DC",
     detail: "",
     building: "Department of Buildings (DOB)",
     plumbing: "Zoning review, plus Historic Preservation Office review in historic districts",
@@ -174,7 +174,7 @@ const bathroomRows = [
     plumbing: "WSSC Water",
   },
   {
-    location: "Washington, DC",
+    location: "DC",
     detail: "",
     building: "DC Department of Buildings (DOB)",
     plumbing: "DC Department of Buildings (DOB)",
@@ -207,7 +207,7 @@ const basementRows = [
     plumbing: "WSSC Water",
   },
   {
-    location: "Washington, DC",
+    location: "DC",
     detail: "",
     building: "DC Department of Buildings (DOB)",
     plumbing: "DC Department of Buildings (DOB)",
@@ -276,24 +276,24 @@ export default function Permits({ variant = "home" }: PermitsProps) {
                 : isBasement
                   ? "Do You Need a Permit to Finish a Basement in Maryland?"
                   : isAdu
-                    ? "What Licenses and Permits Does an ADU Need in Maryland or DC?"
+                    ? "What Licenses and Permits Does an ADU Need in Maryland?"
                     : isKitchen
-                    ? "Do You Need a Permit to Remodel a Kitchen in Maryland or DC?"
+                    ? "Do You Need a Permit to Remodel a Kitchen in Maryland?"
                     : isBathroom
                       ? "Do You Need a Permit to Remodel a Bathroom in Maryland?"
                       : "Permits Handled Wherever We Work"
             }
             text={
               isAddition
-                ? "Every addition needs a building permit and must fit your lot's setback, height and coverage rules. In Montgomery County's common R-60 zone, the house must sit 25 feet from the front line and 20 feet from the rear. Side yards need 8 feet on one side and 18 feet combined. Coverage is capped at 35% and height at 35 feet to the peak, per DPS. This table shows who reviews plans in each Maryland and DC jurisdiction:"
+                ? <>Every addition needs a building permit and must fit your lot's setback, height and coverage rules. In Montgomery County's common R-60 zone, the house must sit 25 feet from the front line and 20 feet from the rear. Side yards need 8 feet on one side and 18 feet combined. Coverage is capped at 35% and height at 35 feet to the peak, per{" "}<Link target="_blank" href="https://www.montgomerycountymd.gov/department-permitting-services">Montgomery County DPS</Link>. This table shows who reviews plans in each Maryland and DC jurisdiction:</>
                 : isBasement
-                  ? "Yes. Finishing a basement is an interior alteration, so Montgomery County, Rockville, Gaithersburg and DC all require a building permit. New circuits or a bathroom add electrical and plumbing permits. This table shows which Maryland or DC office handles your address:"
+                  ? <>Yes. Finishing a basement is an interior alteration, so Montgomery County (through its{" "}<Link target="_blank" href="https://www.montgomerycountymd.gov/department-permitting-services">Department of Permitting Services</Link>), Rockville, Gaithersburg and <strong>DC</strong> all require a <strong>building permit</strong>. New circuits or a bathroom add electrical and plumbing permits. This table shows which Maryland or DC office handles your address:</>
                   : isAdu
                   ? "Yes. Montgomery County requires a DHCA ADU license before the building permit, while DC requires a certificate of occupancy and a rental business license to rent. Rockville and Gaithersburg write their own zoning, so we check each address directly:"
                   : isKitchen
-                    ? "Yes, if the work changes walls, wiring or plumbing. The Montgomery County Department of Permitting Services lists cabinet installs and floor coverings as work that needs no permit. In Maryland and DC, the permit office depends on your address:"
+                    ? <>Yes, if the work changes walls, wiring or plumbing. The{" "}<Link target="_blank" href="https://www.montgomerycountymd.gov/department-permitting-services">Montgomery County Department of Permitting Services</Link>{" "}lists cabinet installs and floor coverings as work that needs no permit. In <strong>Maryland</strong> and <strong>DC</strong>, the <strong>permit office</strong> depends on your address:</>
                     : isBathroom
-                      ? "Yes, once you move or add plumbing, change walls or add circuits. Plumbing appears on the Montgomery County Department of Permitting Services permit-required list, with a note to contact WSSC Water. Which agency signs off on a Maryland or DC bathroom depends on the jurisdiction:"
+                      ? <>Yes, once you move or add plumbing, change walls or add circuits. Plumbing appears on the{" "}<Link target="_blank" href="https://www.montgomerycountymd.gov/department-permitting-services">Montgomery County Department of Permitting Services</Link>{" "}permit-required list, with a note to contact <strong>WSSC Water</strong>. Which agency signs off on a <strong>Maryland</strong> or <strong>DC</strong> bathroom depends on the jurisdiction:</>
                       : <>We apply for and <strong>manage every permit</strong> your project needs. Who issues it depends on where you live, and in Maryland the <strong>plumbing and gas permit</strong> often comes from a different office than the <strong>building permit</strong>.</>
             }
           />
@@ -327,15 +327,52 @@ export default function Permits({ variant = "home" }: PermitsProps) {
           <InfoIcon />
           <p>
             {isAddition ? (
-              "A bathroom or kitchen in the addition also needs a plumbing permit from WSSC Water in most of Montgomery County. Infill lots face tighter coverage caps, so we draw to the limits from the first sketch."
+              <>
+                A bathroom or kitchen in the addition also needs a plumbing permit from WSSC Water in most of Montgomery County. Infill lots face tighter coverage caps, so we draw to the limits from the first sketch. Before
+                you sign with any contractor, check the license with the{" "}
+                <Link target="_blank" href="https://labor.maryland.gov/license/mhic/">
+                  Maryland Home Improvement Commission
+                </Link>
+                ; ours is <strong>MHIC #156178</strong>.
+              </>
             ) : isBasement ? (
-              "Renting out a basement apartment brings a second set of rules. Montgomery County registers and licenses accessory dwelling units through its Department of Housing and Community Affairs. DC requires a certificate of occupancy and a rental license, so we confirm the rules for your address before design."
+              <>
+                Renting out a basement apartment brings a second set of rules. Montgomery County registers and licenses accessory dwelling units through its Department of Housing and Community Affairs. DC requires a certificate of occupancy and a rental license, so we confirm the rules for your address before design. Before
+                you sign with any contractor, check the license with the{" "}
+                <Link target="_blank" href="https://labor.maryland.gov/license/mhic/">
+                  Maryland Home Improvement Commission
+                </Link>
+                ; ours is <strong>MHIC #156178</strong>.
+              </>
             ) : isAdu ? (
-              "Short-term rentals are not allowed on a Montgomery County lot with an ADU. In DC, separate short-term rental rules apply. We apply for the DHCA license first in Montgomery County, then file the building permit with DPS, Rockville, Gaithersburg or DC DOB, and we book every inspection."
+              <>
+                Short-term rentals are not allowed on a Montgomery County lot with an ADU. In DC, separate short-term rental rules apply. We apply for the DHCA license first in Montgomery County, then file the building permit with{" "}<Link target="_blank" href="https://www.montgomerycountymd.gov/department-permitting-services">DPS</Link>, Rockville, Gaithersburg or DC DOB, and we book every inspection. Before
+                you sign with any contractor, check the license with the{" "}
+                <Link target="_blank" href="https://labor.maryland.gov/license/mhic/">
+                  Maryland Home Improvement Commission
+                </Link>
+                ; ours is <strong>MHIC #156178</strong>.
+              </>
             ) : isKitchen ? (
-              "New circuits or rewiring also need an electrical permit, which DPS issues in Montgomery County and DOB issues in DC. We draw the plans, file each application and book every inspection for you."
+              <>
+                New circuits or rewiring also need an <strong>electrical permit</strong>, which DPS issues in Montgomery County
+                and DOB issues in DC. We draw the plans, file each application and book every inspection for you. Before
+                you sign with any contractor, check the license with the{" "}
+                <Link target="_blank" href="https://labor.maryland.gov/license/mhic/">
+                  Maryland Home Improvement Commission
+                </Link>
+                ; ours is <strong>MHIC #156178</strong>.
+              </>
             ) : isBathroom ? (
-              "New circuits for lights, fans or heated floors also need an electrical permit from DPS or DOB. Our office prepares drawings, submits every form and lines up both the rough-in and final inspector visits."
+              <>
+                New circuits for lights, fans or heated floors also need an <strong>electrical permit</strong> from DPS or
+                DOB. Our office prepares drawings, submits every form and lines up both the rough-in and final inspector
+                visits. Before you sign with any contractor, check the license with the{" "}
+                <Link target="_blank" href="https://labor.maryland.gov/license/mhic/">
+                  Maryland Home Improvement Commission
+                </Link>
+                ; ours is <strong>MHIC #156178</strong>.
+              </>
             ) : (
               <>
                 According to{" "}

@@ -8,16 +8,16 @@ const locationMetadata = {
         description: "Licensed ADU builder in Cabin John, MD. Detached cottages, basement apartments, garage conversions and in-law suites under Montgomery County rules. Free feasibility check.",
     },
     "kitchen-remodeling/bethesda-md": {
-        title: "Kitchen Remodeling in Bethesda, MD | Licensed Kitchen Contractor | DMV General Contracting Group",
-        description: "Licensed kitchen remodeling contractor in Bethesda, MD. Full gut renovations, custom cabinets, countertops, layout changes and permits handled in-house. MHIC #156178. Call (240) 730-1292.",
+        title: "Kitchen Remodeling in Bethesda, MD | DMV General Contracting",
+        description: "Bethesda kitchen remodeling from $35,000–$75,000 for most mid-range jobs. Kitchen remodeling in Bethesda, MD with design, permits and a 1-year warranty.",
     },
     "bathroom-remodeling/bethesda-md": {
-        title: "Bathroom Remodeling Bethesda MD | Bethesda Bathroom Remodeling",
-        description: "Bathroom remodeling in Bethesda, MD: primary baths, walk-in showers, tub-to-shower conversions and powder rooms. Costs, permits and timelines.",
+        title: "Bathroom Remodeling Bethesda MD | DMV General Contracting",
+        description: "Bethesda bathroom remodeling from $25,000–$45,000 for a full remodel. Bathroom remodeling in Bethesda, MD with design, permits and a 1-year warranty.",
     },
     "basement-remodeling/bethesda-md": {
-        title: "Basement Remodeling Bethesda MD | Basement Finishing in Bethesda",
-        description: "Basement finishing in Bethesda, MD: waterproofing, egress windows, basement baths and legal basement apartments. Costs, permits and local projects.",
+        title: "Basement Remodeling Bethesda MD | DMV General Contracting",
+        description: "Bethesda basement finishing from $30–$85 per sq ft, $30,000–$90,000 for most jobs. Basement remodeling in Bethesda, MD with permits and a 1-year warranty.",
     },
     "junk-removal/bethesda-md": {
         title: "Junk Removal Services in Bethesda, MD | DMV General Contracting Group",
@@ -181,7 +181,7 @@ const locationMetadata = {
     },
     "home-additions/bethesda-md": {
         title: "Home Additions in Bethesda, MD | DMV General Contracting",
-        description: "Home additions in Bethesda, MD: second stories, bump-outs and primary suites designed, permitted and built by one licensed team. Cost per sq ft.",
+        description: "Bethesda home addition contractor for second stories, bump-outs and suites. Home additions in Bethesda, MD cost $200–$400 per sq ft, permits included.",
     },
     "home-additions/cabin-john-md": {
         title: "Home Additions in Cabin John, MD | Licensed Addition Contractor | DMV General Contracting Group",

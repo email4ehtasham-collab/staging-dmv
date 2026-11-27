@@ -39,7 +39,7 @@ export default function HeroBanner() {
             Licensed Maryland General Contractor for Home Remodels <span className={styles.highlight}> From Design To Completion</span>
           </h1>
           <p className={styles.lede}>
-            DMV General Contracting Group is a <strong>licensed residential general contractor in Maryland and Washington, DC</strong>, with <strong>35 years of experience</strong> in home remodeling. We design, permit and build kitchens, bathrooms, basements, ADUs, additions and whole-home renovations under <strong>one contract</strong>, so you never have to hire and schedule separate trades yourself.
+            DMV General Contracting Group is a <strong>licensed residential general contractor in Maryland and DC</strong>, with <strong>35 years of experience</strong> in home remodeling. We design, permit and build kitchens, bathrooms, basements, ADUs, additions and whole-home renovations under <strong>one contract</strong>, so you never have to hire and schedule separate trades yourself.
           </p>
           <div className={styles.actions}>
             <Button href="/contact-us" data-estimate-trigger icon={<ArrowIcon />}>
@@ -57,8 +57,8 @@ export default function HeroBanner() {
         <div className={styles.media}>
           <div className={styles.mediaFrame}>
             <Image
-              src="/images/home/open-concept-kitchen-remodel-washington-dc-condo.webp"
-              alt="Open-concept condo kitchen with a navy island, remodeled in Washington, DC by DMV General Contracting Group"
+              src="/images/home/open-concept-kitchen-remodel-dc-condo.webp"
+              alt="Open-concept condo kitchen with a navy island, remodeled in DC by DMV General Contracting Group"
               fill
               priority
               loading="eager"

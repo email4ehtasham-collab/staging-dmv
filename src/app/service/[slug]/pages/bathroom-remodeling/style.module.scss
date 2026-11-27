@@ -286,6 +286,69 @@
   min-width: 0;
 }
 
+.areaText {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+}
+
+.areaZips {
+  margin-top: 2px;
+  color: var(--dmv-color-heading);
+  font-size: 12px;
+  font-weight: var(--dmv-weight-bold);
+  line-height: 1.4;
+}
+
+.areaCardWide {
+  grid-column: 1 / -1;
+}
+
+.areasMap {
+  display: grid;
+  margin-top: var(--dmv-space-8);
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+  align-items: stretch;
+  gap: var(--dmv-space-6);
+}
+
+.areasMapFrame {
+  width: 100%;
+  height: 100%;
+  min-height: 360px;
+  border: 0;
+  border-radius: var(--dmv-radius-md);
+}
+
+.areasNap {
+  display: flex;
+  padding: var(--dmv-space-6);
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--dmv-space-2);
+  border: var(--dmv-border-width) solid var(--dmv-color-border-card);
+  border-radius: var(--dmv-radius-md);
+  background: var(--dmv-color-surface);
+  color: var(--dmv-color-heading);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.areasNap h3 {
+  margin: 0 0 var(--dmv-space-2);
+  font-size: 20px;
+}
+
+.areasNap address {
+  margin: 0;
+  font-style: normal;
+}
+
+/* Plain text links only; the estimate button keeps its own colors. */
+.areasNap a:not([class]) {
+  color: var(--dmv-color-brand);
+}
+
 .areaArrow {
   width: 16px;
   height: 16px;
@@ -328,6 +391,10 @@
 }
 
 @media (max-width: 900px) {
+  .areasMap {
+    grid-template-columns: 1fr;
+  }
+
   .reviewPanel {
     grid-template-columns: 1fr;
   }
@@ -454,8 +521,9 @@
   line-height: 1.14;
 }
 
+/* Inline so the H1 reads as one line of text; the accent color stays. */
 .heroTitle span {
-  display: block;
+  display: inline;
   color: var(--dmv-color-brand);
 }
 
@@ -1002,6 +1070,131 @@
 }
 .tierCard:last-child .tierText {
   color: white;
+}
+
+/* Pricing tables (budget tiers and small budgets) */
+.priceTableWrap {
+  overflow-x: auto;
+  overflow-y: hidden;
+  border: var(--dmv-border-width) solid var(--dmv-color-border-card);
+  border-radius: 18px;
+  background: var(--dmv-color-surface);
+  box-shadow: var(--dmv-shadow-soft);
+}
+
+.amountTableWrap {
+  margin-top: var(--dmv-space-6);
+}
+
+.priceTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 16px;
+}
+
+.priceTable th,
+.priceTable td {
+  padding: 18px 24px;
+  border-bottom: var(--dmv-border-width) solid var(--dmv-color-line-soft);
+  color: var(--dmv-color-body);
+  font-weight: 400;
+  line-height: var(--dmv-line-normal);
+  text-align: left;
+  vertical-align: top;
+}
+
+.priceTable thead th {
+  background: var(--dmv-color-heading);
+  color: #fff;
+  font-size: 13px;
+  font-weight: var(--dmv-weight-bold);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.priceTable tbody th {
+  color: var(--dmv-color-heading);
+  font-size: 18px;
+  font-weight: var(--dmv-weight-bold);
+}
+
+.priceTable tbody tr:nth-child(even) {
+  background: var(--dmv-color-surface-soft);
+}
+
+.priceTable tbody tr:last-child th,
+.priceTable tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.priceTableTag {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--dmv-color-brand);
+  font-size: 11px;
+  font-weight: var(--dmv-weight-bold);
+  letter-spacing: 0.08em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.priceTable .priceTableCost {
+  white-space: nowrap;
+}
+
+.priceTableCost strong {
+  color: var(--dmv-color-heading);
+  font-size: 20px;
+  font-weight: var(--dmv-weight-extrabold);
+  letter-spacing: -0.01em;
+}
+
+@media (max-width: 640px) {
+  .priceTable thead {
+    display: none;
+  }
+
+  .priceTable,
+  .priceTable tbody,
+  .priceTable tr,
+  .priceTable th,
+  .priceTable td {
+    display: block;
+    width: 100%;
+  }
+
+  .priceTable tr {
+    border-bottom: var(--dmv-border-width) solid var(--dmv-color-line-soft);
+  }
+
+  .priceTable th,
+  .priceTable td {
+    padding: 8px 18px;
+    border-bottom: 0;
+  }
+
+  .priceTable tbody th {
+    padding-top: 16px;
+  }
+
+  .priceTable tbody td:last-child {
+    padding-bottom: 16px;
+  }
+
+  .priceTable td::before {
+    content: attr(data-label);
+    display: block;
+    margin-bottom: 2px;
+    color: var(--dmv-color-brand);
+    font-size: 11px;
+    font-weight: var(--dmv-weight-bold);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .priceTable .priceTableCost {
+    white-space: normal;
+  }
 }
 
 .costNote {

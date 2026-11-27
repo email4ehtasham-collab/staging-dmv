@@ -42,7 +42,7 @@ export const metadata: Metadata = {
 			"name": "What services does DMV General Contracting Group offer?",
 			"acceptedAnswer": {
 				"@type": "Answer",
-				"text": "DMV General Contracting Group offers a full range of home renovation and remodeling services including kitchen remodeling, bathroom renovation, basement finishing, architectural design, home additions, ADU construction, design/build, roofing, siding, flooring, electrical, plumbing, HVAC, decks, patios, fencing, concrete, hardscaping, and junk removal. All services are handled by our licensed in-house team across Washington DC and Maryland."
+				"text": "DMV General Contracting Group offers a full range of home renovation and remodeling services including kitchen remodeling, bathroom renovation, basement finishing, architectural design, home additions, ADU construction, design/build, roofing, siding, flooring, electrical, plumbing, HVAC, decks, patios, fencing, concrete, hardscaping, and junk removal. All services are handled by our licensed in-house team across Maryland and DC."
 			}
 			},
 			{
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
 			"name": "Do you serve areas other than Maryland?",
 			"acceptedAnswer": {
 				"@type": "Answer",
-				"text": "Yes. DMV General Contracting Group serves a wide range of cities and neighborhoods across the entire DMV area. In Maryland, we serve Bethesda, Potomac, Kensington, Silver Spring, Wheaton, Gaithersburg, Garrett Park, Rockville, Chevy Chase, North Bethesda, Cabin John, and Laurel. We also serve Washington, DC. No matter where you are in the DMV area, DMV General Contracting Group brings the same quality craftsmanship, licensed expertise, and attention to detail to every project. Contact us at +1 240-730-1292 for a free in-home consultation."
+				"text": "Yes. DMV General Contracting Group serves a wide range of cities and neighborhoods across the entire DMV area. In Maryland, we serve Bethesda, Potomac, Kensington, Silver Spring, Wheaton, Gaithersburg, Garrett Park, Rockville, Chevy Chase, North Bethesda, Cabin John, and Laurel. We also serve DC. No matter where you are in the DMV area, DMV General Contracting Group brings the same quality craftsmanship, licensed expertise, and attention to detail to every project. Contact us at +1 240-730-1292 for a free in-home consultation."
 			}
 			},
 			{
@@ -140,7 +140,7 @@ export default function Home() {
                 <WhatWeDo />
                 <Services
                     title="Our Services for Home Remodeling in Maryland and DC"
-                    text={<>We offer <strong>home remodeling in Maryland</strong> and Washington, DC through seven main services. Each one has its own page with details on design, permits, costs and timelines, and the rest of our services are listed after these seven.</>}
+                    text={<>We offer <strong>home remodeling in Maryland</strong> and DC through seven main services. Each one has its own page with details on design, permits, costs and timelines, and the rest of our services are listed after these seven.</>}
                     serviceOverrides={homeServiceOverrides}
                 />
                 <LicensedInsured />

@@ -14,6 +14,9 @@ import InHomeConsultation from "@/components/Home/InHomeConsultation/InHomeConsu
 import LicensedInsured from "@/components/Home/LicensedInsured/LicensedInsured";
 import Permits from "@/components/Home/Permits/Permits";
 import RecentProjects from "@/components/Home/RecentProjects/RecentProjects";
+import type { ProjectCardData } from "@/components/Home/RecentProjects/ProjectCard";
+import ProjectsData from "@/data/projects/ProjectsData";
+import { GOOGLE_BUSINESS_PROFILE_URL } from "@/data/home/homePageMedia";
 import styles from "./style.module.scss";
 
 type KitchenService = {
@@ -342,19 +345,89 @@ const timelineTabs: { key: TimelineFilter; label: string }[] = [
 
 const timelineWeeks = ["0", "2", "4", "6", "8", "10", "12", "14 wks"];
 
-const areaLinks = [
-    { label: "Kitchen remodeling in Bethesda", href: "/service/kitchen-remodeling/bethesda-md" },
-    { label: "Kitchen remodeling in Rockville", href: "/service/kitchen-remodeling/rockville-md" },
-    { label: "Kitchen remodeling in Kensington", href: "/service/kitchen-remodeling/kensington-md" },
-    { label: "Kitchen remodeling in Potomac", href: "/service/kitchen-remodeling/potomac-md" },
-    { label: "Kitchen remodeling in Wheaton", href: "/service/kitchen-remodeling/wheaton-md" },
-    { label: "Kitchen remodeling in Silver Spring", href: "/service/kitchen-remodeling/silver-spring-md" },
-    { label: "Kitchen remodeling in Gaithersburg", href: "/service/kitchen-remodeling/gaithersburg-md" },
-    { label: "Kitchen remodeling in Garrett Park", href: "/service/kitchen-remodeling/garrett-park-md" },
-    { label: "Kitchen remodeling in Chevy Chase", href: "/service/kitchen-remodeling/chevy-chase-md" },
-    { label: "Kitchen remodeling in Cabin John", href: "/service/kitchen-remodeling/cabin-john-md" },
-    { label: "Kitchen remodeling in Washington, DC", href: "/service/kitchen-remodeling/washington-dc" },
+// Kitchen hub areas: 11 Montgomery County communities, Laurel and DC, with zip codes.
+// Areas without a kitchen page yet (North Bethesda, Laurel) are listed without a link.
+type KitchenArea = {
+    label: string;
+    zips: string;
+    href?: string;
+    wide?: boolean;
+};
+
+const kitchenAreas: KitchenArea[] = [
+    { label: "Bethesda", zips: "20814, 20816, 20817", href: "/service/kitchen-remodeling/bethesda-md" },
+    { label: "North Bethesda", zips: "20852" },
+    { label: "Rockville", zips: "20850, 20851, 20852, 20853", href: "/service/kitchen-remodeling/rockville-md" },
+    { label: "Potomac", zips: "20854", href: "/service/kitchen-remodeling/potomac-md" },
+    { label: "Chevy Chase", zips: "20815", href: "/service/kitchen-remodeling/chevy-chase-md" },
+    { label: "Gaithersburg", zips: "20877, 20878, 20879, 20882", href: "/service/kitchen-remodeling/gaithersburg-md" },
+    { label: "Kensington", zips: "20895", href: "/service/kitchen-remodeling/kensington-md" },
+    { label: "Silver Spring", zips: "20901, 20902, 20903, 20904, 20905, 20906, 20910", href: "/service/kitchen-remodeling/silver-spring-md" },
+    { label: "Wheaton", zips: "20902, 20906", href: "/service/kitchen-remodeling/wheaton-md" },
+    { label: "Garrett Park", zips: "20896", href: "/service/kitchen-remodeling/garrett-park-md" },
+    { label: "Cabin John", zips: "20818", href: "/service/kitchen-remodeling/cabin-john-md" },
+    { label: "Laurel", zips: "20707, 20708, 20723, 20724" },
+    { label: "DC", zips: "20001, 20002, 20003, 20004, 20005, 20006, 20007, 20008, 20009, 20010, 20011, 20012, 20015, 20016, 20017, 20018, 20019, 20020, 20024, 20032, 20036, 20037", href: "/service/kitchen-remodeling/washington-dc", wide: true },
 ];
+
+const SERVICE_AREA_MAP_EMBED_URL =
+    "https://www.google.com/maps/d/u/0/embed?mid=18yZmZjXwVotzSHlIUaeEYMgoXUZnUI0&ehbc=2E312F&noprof=1";
+
+// Kitchen-hub-only image copies (public/images/kitchen-remodeling/). Each photo appears once on this
+// page and is not shared with another page. EXIF GPS points to the Google Business Profile pin.
+const kitchenHeroImage = {
+    src: "/images/kitchen-remodeling/kitchen-remodeling-maryland-bethesda-condo.webp",
+    alt: "Kitchen remodeling in Montgomery County, Maryland: Bethesda condo kitchen with white cabinets, a stainless range and a vented hood",
+};
+
+const kitchenProjectImages: Record<string, { image: string; imageAlt: string }> = {
+    "ronnie-r-kitchen-revival-plumbing-crisis": {
+        image: "/images/kitchen-remodeling/rockville-kitchen-restoration-white-cabinets.webp",
+        imageAlt: "Rockville, MD kitchen restoration with white cabinets, a double-oven range and wood-look flooring",
+    },
+    "bethesda-condo-full-renovation": {
+        image: "/images/kitchen-remodeling/bethesda-condo-kitchen-renovation.webp",
+        imageAlt: "Bethesda condo kitchen renovation with white cabinets, a tile backsplash and recessed lighting",
+    },
+    "townhouse-renovation-silver-spring": {
+        image: "/images/kitchen-remodeling/silver-spring-townhouse-open-kitchen.webp",
+        imageAlt: "Open kitchen with a peninsula after a complete townhouse renovation in Silver Spring, MD",
+    },
+};
+
+type ProjectSource = {
+    slug: string;
+    category: string;
+    titles?: string[];
+    client?: string;
+    description?: string;
+    topdesc?: string;
+};
+
+// Same card text as the RecentProjects default; only the projects (Maryland kitchens) and images differ.
+function createSummary(text = "", maxLength = 155) {
+    const normalized = text.replace(/\s+/g, " ").trim();
+    if (normalized.length <= maxLength) {
+        return normalized;
+    }
+    const shortened = normalized.slice(0, maxLength);
+    const lastSpace = shortened.lastIndexOf(" ");
+    return `${shortened.slice(0, lastSpace > 0 ? lastSpace : maxLength).trim()}...`;
+}
+
+const kitchenRecentProjects: ProjectCardData[] = Object.keys(kitchenProjectImages)
+    .map((slug) => (ProjectsData as ProjectSource[]).find((project) => project.slug === slug))
+    .filter((project): project is ProjectSource => Boolean(project))
+    .map((project) => {
+        const [categoryTitle, categoryLocation] = project.category.split("|").map((part) => part.trim());
+        return {
+            title: categoryTitle || project.titles?.[0] || project.client || "Recent Project",
+            location: categoryLocation || "Maryland",
+            text: createSummary(project.description || project.topdesc),
+            href: `/project/${project.slug}`,
+            ...kitchenProjectImages[project.slug],
+        };
+    });
 
 const googleReviewsUrl =
     "https://www.google.com/maps/place/DMV+General+Contracting+Group+LLC/@39.0493761,-77.1200241,17z/data=!3m1!4b1!4m6!3m5!1s0x158dd0ef2148a11:0xceda33050d2dcdfb!8m2!3d39.049372!4d-77.1174492!16s%2Fg%2F11v3gbzc44?hl=en&entry=ttu&g_ep=EgoyMDI2MTEwMS4wIKXMDSoASAFQAw%3D%3D";
@@ -612,10 +685,11 @@ function Stars() {
     );
 }
 
-export default function KitchenRemodeling({ data }: { data?: KitchenService }) {
+export default function KitchenRemodeling(_props: { data?: KitchenService }) {
     const [timelineFilter, setTimelineFilter] = useState<TimelineFilter>("planning");
-    const heroImage = data?.image?.replace(/^\./, "") || "/images/services/kitchen.webp";
-    const heroAlt = data?.imageAlt || "Kitchen remodeling project in Maryland and Washington, DC";
+    // The hub uses its own hero copy; data.image stays for the services listing.
+    const heroImage = kitchenHeroImage.src;
+    const heroAlt = kitchenHeroImage.alt;
 
     return (
         <main className={`page-wrapper ${styles.page}`}>
@@ -633,14 +707,14 @@ export default function KitchenRemodeling({ data }: { data?: KitchenService }) {
 
                     <div className={styles.heroGrid}>
                         <div className={styles.heroContent}>
-                            <Badge className="nostars">Kitchen Remodeling · Maryland &amp; DC</Badge>
+                            <Badge className="nostars">Kitchen Remodeling · Maryland</Badge>
 
                             <h1 className={styles.heroTitle}>
-                                Kitchen Remodeling in <span>Maryland &amp; Washington, DC</span>
+                                Maryland Kitchen Remodeling Under <span>One Contract</span>
                             </h1>
 
                             <p className={styles.heroText}>
-                                DMV General Contracting Group is a licensed design-build firm for kitchen remodeling in Maryland and Washington, DC homes. One contract covers the design, the permits and the build, from a cabinet refresh to a full gut renovation, and every kitchen comes with a 1-year warranty. Our team brings 35 years of residential construction experience to kitchens across Montgomery County, Laurel and DC.
+                                DMV General Contracting Group is a licensed <strong>design-build</strong> firm for <strong>kitchen remodeling in Maryland</strong>. One contract covers the <strong>design</strong>, the <strong>permits</strong> and the <strong>build</strong>, from a <strong>cabinet refresh</strong> to a <strong>full gut renovation</strong>, and every kitchen comes with a <strong>1-year warranty</strong>. Our team brings 35 years of residential construction experience to kitchens across <strong>Montgomery County</strong>, <strong>Laurel</strong> and <strong>DC</strong>.
                             </p>
 
                             <div className={styles.heroActions}>
@@ -685,9 +759,9 @@ export default function KitchenRemodeling({ data }: { data?: KitchenService }) {
                                     <Badge variant="accent" className="nostars">
                                         Featured project
                                     </Badge>
-                                    <p className={styles.heroFeaturedTitle}>Bethesda custom open-concept kitchen</p>
+                                    <p className={styles.heroFeaturedTitle}>Bethesda condo kitchen renovation</p>
                                     <p className={styles.heroFeaturedMeta}>
-                                        Design, cabinetry, countertops, lighting, permits and complete remodel
+                                        Cabinetry, countertops, backsplash, appliances and recessed lighting
                                     </p>
                                 </div>
                             </div>
@@ -750,8 +824,8 @@ export default function KitchenRemodeling({ data }: { data?: KitchenService }) {
                         <div className={styles.includedAside}>
                             <div className={styles.includedFeature}>
                                 <Image
-                                    src="/images/services/kitchen.webp"
-                                    alt="Remodeled galley kitchen with white upper cabinets and gray lowers"
+                                    src="/images/kitchen-remodeling/kitchen-renovation-galley-rockville-md.webp"
+                                    alt="Galley kitchen in Rockville, MD after a full kitchen renovation, with white cabinets, stone countertops and new flooring"
                                     fill
                                     sizes="(max-width: 900px) 100vw, 38vw"
                                     className={styles.featureImage}
@@ -792,10 +866,14 @@ export default function KitchenRemodeling({ data }: { data?: KitchenService }) {
                             eyebrow={<Badge>Our Services</Badge>}
                             title={
                                 <>
-                                    Our DC & Maryland  <span>Kitchen Remodeling</span> Services
+                                    Kitchen Remodels <span>We Build</span>
                                 </>
                             }
-                            text="DMV General Contracting Group provides 8 types of kitchen remodeling services across Maryland and DC. A free site visit shows which type suits your room and budget."
+                            text={
+                                <>
+                                    DMV General Contracting Group offers <strong>8 types of kitchen renovation in Maryland</strong> and DC. A <strong>free site visit</strong> shows which type suits your room and budget.
+                                </>
+                            }
                         />
                     <Button href="/" variant="secondary">
                         Book a Free Site Visit
@@ -841,7 +919,11 @@ export default function KitchenRemodeling({ data }: { data?: KitchenService }) {
                                     How Much Does a Kitchen Remodel <span>Cost in Maryland?</span>
                                 </>
                             }
-                            text="A kitchen remodel in Maryland costs between $15,000 and $75,000. A cosmetic refresh runs $15,000 to $30,000. A full custom kitchen costs $75,000 to $120,000 or more. This table shows what each Maryland budget tier buys:"
+                            text={
+                                <>
+                                    A <strong>kitchen remodel in Maryland</strong> costs between <strong>$15,000 and $75,000</strong>. A cosmetic refresh runs $15,000 to $30,000. A full custom kitchen costs $75,000 to $120,000 or more. This table shows what each Maryland budget tier buys:
+                                </>
+                            }
                         />
                     </div>
 
@@ -850,17 +932,31 @@ export default function KitchenRemodeling({ data }: { data?: KitchenService }) {
                         <strong>$15,000–$75,000</strong>
                     </div>
 
-                    <div className={styles.pricingGrid}>
-                        {budgetTiers.map((tier) => (
-                            <article className={styles.tierCard} key={tier.tier}>
-                                <span className={styles.tierLevel}>{tier.tier}</span>
-                                <h3 className={styles.tierTitle}>{tier.title}</h3>
-                                <div className={styles.tierPrice}>
-                                    <strong>{tier.price}</strong>
-                                </div>
-                                <p className={styles.tierText}>{tier.text}</p>
-                            </article>
-                        ))}
+                    <div className={styles.priceTableWrap}>
+                        <table className={styles.priceTable}>
+                            <caption className="visually-hidden">Maryland kitchen remodel cost by budget tier</caption>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Budget tier</th>
+                                    <th scope="col">Typical cost</th>
+                                    <th scope="col">What it buys</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {budgetTiers.map((tier) => (
+                                    <tr key={tier.tier}>
+                                        <th scope="row" data-label="Budget tier">
+                                            <span className={styles.priceTableTag}>{tier.tier}</span>
+                                            {tier.title}
+                                        </th>
+                                        <td data-label="Typical cost" className={styles.priceTableCost}>
+                                            <strong>{tier.price}</strong>
+                                        </td>
+                                        <td data-label="What it buys">{tier.text}</td>
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
                     </div>
 
                     <p className={styles.costNote}>
@@ -871,18 +967,35 @@ export default function KitchenRemodeling({ data }: { data?: KitchenService }) {
                         <div className={styles.budgetCheckHead}>
                             <h3>Is $30,000 Enough for a Kitchen Remodel?</h3>
                             <p>
-                                Yes, $30,000 is enough for a kitchen remodel if you keep the current layout. You get refaced or stock boxes, fresh counters, a tiled backsplash and new light fixtures. It does not cover moving walls or plumbing.
+                                <strong>Yes, $30,000 is enough</strong> for a kitchen remodel if you keep the current layout. You get refaced or stock boxes, fresh counters, a tiled backsplash and new light fixtures. It does not cover moving walls or plumbing. This table shows what three smaller Maryland kitchen budgets cover:
                             </p>
                         </div>
 
-                        <div className={styles.amountGrid}>
-                            {budgetScenarios.map((scenario) => (
-                                <article className={styles.amountCard} key={scenario.amount}>
-                                    <strong>{scenario.amount}</strong>
-                                    <p>{scenario.text}</p>
-                                </article>
-                            ))}
+                        <div className={`${styles.priceTableWrap} ${styles.amountTableWrap}`}>
+                            <table className={styles.priceTable}>
+                                <caption className="visually-hidden">What a $10,000 to $30,000 kitchen budget covers</caption>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Budget</th>
+                                        <th scope="col">What it covers</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {budgetScenarios.map((scenario) => (
+                                        <tr key={scenario.amount}>
+                                            <th scope="row" data-label="Budget" className={styles.priceTableCost}>
+                                                <strong>{scenario.amount}</strong>
+                                            </th>
+                                            <td data-label="What it covers">{scenario.text}</td>
+                                        </tr>
+                                    ))}
+                                </tbody>
+                            </table>
                         </div>
+
+                        <p className={styles.costNote}>
+                            Each of these budgets keeps the current layout. Layout changes start in the full custom tier at $75,000.
+                        </p>
                     </div>
 
                     <div className={styles.driversBlock}>
@@ -939,15 +1052,15 @@ export default function KitchenRemodeling({ data }: { data?: KitchenService }) {
                         <figure className={styles.designMedia}>
                             <div className={styles.designImageWrap}>
                                 <Image
-                                    src="/images/banner-kitchen.webp"
-                                    alt="Open-concept kitchen with island and pendant lights"
+                                    src="/images/kitchen-remodeling/peninsula-kitchen-under-cabinet-lighting-silver-spring-md.webp"
+                                    alt="Kitchen with a white peninsula counter, white cabinets and under-cabinet lighting in a Silver Spring, MD townhouse"
                                     fill
                                     sizes="(max-width: 1024px) 100vw, 46vw"
                                     className={styles.designImage}
                                 />
                             </div>
                             <figcaption className={styles.designCaption}>
-                                <strong>Open-concept kitchen with island and pendant lights</strong>
+                                <strong>Peninsula kitchen with under-cabinet lighting in Silver Spring, MD</strong>
                                 <p>
                                     Long-lead items such as cabinets are ordered right after you approve the design, so they reach the site on schedule.
                                 </p>
@@ -978,7 +1091,7 @@ export default function KitchenRemodeling({ data }: { data?: KitchenService }) {
                             eyebrow={<Badge>Process</Badge>}
                             title={
                                 <>
-                                    Our Kitchen Remodeling Process in <span>MD &amp; DC</span>
+                                    Our Kitchen <span>Remodeling Process</span>
                                 </>
                             }
                             text="Our kitchen remodeling process runs in five steps, with one project lead as your contact from demolition to handover:"
@@ -1162,7 +1275,7 @@ export default function KitchenRemodeling({ data }: { data?: KitchenService }) {
             <LicensedInsured variant="kitchen" />
 
             <RecentProjects
-                serviceType="kitchen-remodeling"
+                projects={kitchenRecentProjects}
                 eyebrow="Case Studies & Projects"
                 title="Our Kitchen Remodeling Projects"
                 text="Our crews took these three kitchens from first drawing to final inspection. Each linked project page has photos of the finished room:"
@@ -1255,34 +1368,81 @@ export default function KitchenRemodeling({ data }: { data?: KitchenService }) {
                         <div className={styles.areasHeader}>
                             <Badge>Areas We Serve</Badge>
                             <h2 id="areas-title">
-                                Kitchen Remodeling in Montgomery County, Laurel and Washington, DC
+                                Kitchen Remodeling in Montgomery County, MD
                             </h2>
                             <p>
-                                Our kitchen remodeling service area spans every corner of Montgomery County, MD,
-                                along with Laurel and the District. Pick your town below for its local housing, permit
-                                rules and kitchen prices across all 13 areas:
+                                Our <strong>kitchen remodeling in Montgomery County</strong> covers{" "}
+                                <strong>11 communities</strong>, plus <strong>Laurel</strong> and <strong>DC</strong>,
+                                from our <strong>North Bethesda</strong> office. Linked towns have their own page with
+                                local housing, permit rules and kitchen prices. All 13 areas are listed with their zip
+                                codes:
                             </p>
                             <span className={styles.areasCount}>13 service areas</span>
                         </div>
 
                         <div className={styles.areasGrid}>
-                            {areaLinks.map((area, index) => (
-                                <Link href={area.href} className={styles.areaCard} key={area.href}>
+                            {kitchenAreas.map((area, index) => {
+                                const number = (
                                     <span className={styles.areaNumber}>
                                         {String(index + 1).padStart(2, "0")}
                                     </span>
-                                    <span className={styles.areaLabel}>{area.label}</span>
-                                    <ArrowIcon className={styles.areaArrow} />
-                                </Link>
-                            ))}
+                                );
+                                const text = (
+                                    <span className={styles.areaText}>
+                                        <span className={styles.areaLabel}>{area.label}</span>
+                                        <strong className={styles.areaZips}>{area.zips}</strong>
+                                    </span>
+                                );
+                                const wide = area.wide ? ` ${styles.areaCardWide}` : "";
+
+                                return area.href ? (
+                                    <Link href={area.href} className={`${styles.areaCard}${wide}`} key={area.label}>
+                                        {number}
+                                        {text}
+                                        <ArrowIcon className={styles.areaArrow} />
+                                    </Link>
+                                ) : (
+                                    <div className={`${styles.areaCard} ${styles.areaCardStatic}${wide}`} key={area.label}>
+                                        {number}
+                                        {text}
+                                    </div>
+                                );
+                            })}
                         </div>
                     </div>
 
                     <div className={styles.areasNote}>
                         <p>
-                            Montgomery County jobs range from 1950s colonials and ramblers to new infill homes.
-                            In DC we mostly remodel kitchens in rowhouses, townhomes and condos.
+                            <strong>Montgomery County</strong> jobs range from 1950s colonials and ramblers to new infill homes.
+                            In <strong>DC</strong> we mostly remodel kitchens in rowhouses, townhomes and condos.
                         </p>
+                    </div>
+
+                    <div className={styles.areasMap}>
+                        <iframe
+                            src={SERVICE_AREA_MAP_EMBED_URL}
+                            title="DMV General Contracting Group LLC | Kitchen Remodeling in Montgomery County, Maryland"
+                            className={styles.areasMapFrame}
+                            loading="lazy"
+                            referrerPolicy="no-referrer-when-downgrade"
+                            allowFullScreen
+                        />
+                        <div className={styles.areasNap}>
+                            <h3>Our North Bethesda Office</h3>
+                            <Link href={GOOGLE_BUSINESS_PROFILE_URL} target="_blank" rel="noopener noreferrer">
+                                <strong>DMV General Contracting Group LLC</strong>
+                            </Link>
+                            <address>
+                                <Link href={GOOGLE_BUSINESS_PROFILE_URL} target="_blank" rel="noopener noreferrer">
+                                    11810 Grand Park Ave #500, North Bethesda, MD 20852
+                                </Link>
+                            </address>
+                            <span><strong>Phone: </strong><a href="tel:+12407301292">+1 240-730-1292</a></span>
+                            <span>Open 7 days a week</span>
+                            <Button href="#estimate" icon={<ArrowIcon />}>
+                                Book a Free Kitchen Estimate
+                            </Button>
+                        </div>
                     </div>
                 </Container>
             </section>

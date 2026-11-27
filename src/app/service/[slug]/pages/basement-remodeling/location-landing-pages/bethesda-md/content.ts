@@ -11,15 +11,11 @@ const bethesdaBasementContent = {
         serviceHref: "/service/basement-remodeling",
         locationName: "Bethesda, MD",
         badge: "Bethesda · Montgomery County, MD",
-        title: "Basement Remodeling in Bethesda, MD",
+        title: "Basement Finishing in Bethesda, MD",
+        titleAccent: "That Stays Dry",
         intro:
             "If you are planning basement remodeling in Bethesda, MD, DMV General Contracting Group is a licensed general contractor based a few minutes up the Pike in North Bethesda. We start by testing for moisture and measuring headroom, then design, permit and finish the lower level on one contract, and the workmanship is guaranteed for a year. This page covers what Bethesda basements become, the checks that come first, cost per square foot, the best season to build, permits, legal apartments, our process, timing and local projects.",
-        credentials: [
-            "MHIC #156178",
-            "DC DLCP #410526000209",
-            "4.9 out of 5 on Google",
-            "1-year workmanship warranty",
-        ],
+        credentials: ["4.9 on Google", "MHIC #156178", "DLCP #410526000209"],
         factsTitle: "Bethesda Basement At A Glance",
         factsCtaText:
             "Get a free basement assessment, and we will tell you on the first visit whether the space can be finished as it is.",
@@ -27,21 +23,34 @@ const bethesdaBasementContent = {
         facts: [
             {
                 label: "Typical cost",
-                value: "Usually $30,000 to $90,000, or $30–$85 for each square foot",
+                value: "$30,000–$90,000",
+                note: "$30–$85 for each finished square foot",
+            },
+            {
+                label: "Construction time",
+                value: "6–12 weeks",
+                note: "after 3–6 weeks of county permit review",
             },
             {
                 label: "Permits",
-                value: "One county permit for the build and wiring; a separate WSSC permit if pipes are added",
+                value: "DPS & WSSC Water",
+                note: "County DPS for the build and wiring; WSSC Water if pipes are added",
             },
             {
-                label: "Egress",
-                value: "An escape window for every bedroom",
-            },
-            {
-                label: "Warranty",
-                value: "1 year on workmanship",
+                label: "Workmanship warranty",
+                value: "1 year",
             },
         ],
+        media: {
+            image: "/images/basement-remodeling-bethesda-md/basement-remodeling-bethesda-md-finished-basement-kitchenette.webp",
+            imageAlt: "Basement remodeling: finished basement with a living area, a kitchenette, a bathroom and white built-ins",
+            featuredTitle: "Finished basement with a kitchenette",
+            featuredMeta: "Living area, kitchenette, bathroom, built-ins and an electric fireplace",
+            reviewScore: "4.9",
+            reviewText: "Homeowners rate our basement work 4.9 out of 5 on Google.",
+            glanceLinkLabel: "See Bethesda Basement Pricing",
+            glanceLinkHref: "#service-location-pricing",
+        },
     },
     costs: {
         eyebrow: "Cost and Pricing",
@@ -51,19 +60,19 @@ const bethesdaBasementContent = {
             {
                 level: "Basic",
                 title: "Dry, insulated open space",
-                range: "$30–$50",
+                range: "$30–$50 / sq ft",
                 text: "Framing, drywall, LVP flooring, recessed lights and heat",
             },
             {
                 level: "Mid-range with bathroom",
                 title: "Rooms and a bath",
-                range: "$50–$85",
+                range: "$50–$85 / sq ft",
                 text: "A bedroom or office, a full or half bath, an egress window and storage",
             },
             {
                 level: "Premium",
                 title: "High-end finishes",
-                range: "$85–$110+",
+                range: "$85–$110+ / sq ft",
                 text: "Theater, wet bar, custom built-ins and upgraded finishes",
             },
             {
@@ -75,6 +84,7 @@ const bethesdaBasementContent = {
         ],
         note: "Your estimate itemizes every line, including waterproofing or egress work if the checks call for it.",
         ctaLabel: "Get a Free Basement Estimate",
+        layout: "table" as const,
     },
     process: {
         title: "Our Basement Finishing Process in Bethesda",

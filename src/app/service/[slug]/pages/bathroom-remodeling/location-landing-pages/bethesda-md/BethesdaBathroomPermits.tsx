@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Badge from "@/components/Common/Badge";
 import Container from "@/components/Common/Container";
 import SectionHeading from "@/components/Common/SectionHeading";
@@ -66,7 +67,23 @@ export default function BethesdaBathroomPermits() {
             align="center"
             eyebrow={<Badge>Permits</Badge>}
             title="Do You Need a Permit to Remodel a Bathroom in Bethesda?"
-            text="A permit comes into play as soon as a pipe is relocated, a wall shifts or a circuit is added. Because Bethesda is unincorporated, there is no town hall involved: the county's permitting department reviews structure and wiring, and the regional water utility, WSSC, signs off on plumbing. Typical bathroom tasks, checked against Montgomery County's 2024 list of what does and does not need a permit:"
+            text={
+              <>
+                <strong>
+                  A permit comes into play as soon as a pipe is relocated, a wall shifts or a circuit is added.
+                </strong>{" "}
+                Because Bethesda is unincorporated, there is no town hall involved:{" "}
+                <Link target="_blank" href="https://www.montgomerycountymd.gov/department-permitting-services">
+                  Montgomery County DPS
+                </Link>{" "}
+                reviews structure and wiring, and{" "}
+                <Link target="_blank" href="https://www.wsscwater.com/">
+                  WSSC Water
+                </Link>{" "}
+                signs off on plumbing. Typical bathroom tasks, checked against Montgomery County&apos;s 2024 list of what
+                does and does not need a permit:
+              </>
+            }
           />
         </div>
 

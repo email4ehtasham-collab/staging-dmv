@@ -35,7 +35,7 @@ export default function TopBar() {
       <Container className={styles.inner}>
         <div className={styles.license}>
           <Badge variant="accent" icon={<ShieldIcon />} className={`${styles.licenseBadge} nostars`}>
-            Licensed in Maryland (MHIC #156178) &amp; Washington, DC (DLCP #410526000209)
+            Licensed in Maryland (MHIC #156178) &amp; DC (DLCP #410526000209)
           </Badge>
         </div>
         <div className={styles.hours}>

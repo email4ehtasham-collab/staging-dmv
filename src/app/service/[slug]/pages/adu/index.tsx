@@ -14,6 +14,8 @@ import InHomeConsultation from "@/components/Home/InHomeConsultation/InHomeConsu
 import LicensedInsured from "@/components/Home/LicensedInsured/LicensedInsured";
 import Permits from "@/components/Home/Permits/Permits";
 import RecentProjects from "@/components/Home/RecentProjects/RecentProjects";
+import type { ProjectCardData } from "@/components/Home/RecentProjects/ProjectCard";
+import { GOOGLE_BUSINESS_PROFILE_URL } from "@/data/home/homePageMedia";
 import styles from "./style.module.scss";
 
 type AduService = {
@@ -156,20 +158,52 @@ const aduProcessSteps = [
     },
 ];
 
-const areaLinks = [
-    { label: "ADU builder in Washington, DC", href: "/service/adu/washington-dc" },
-    { label: "ADU builder in Bethesda", href: "/service/adu/bethesda-md" },
-    { label: "ADU builder in North Bethesda", href: "/service/adu/north-bethesda-md" },
-    { label: "ADU builder in Rockville", href: "/service/adu/rockville-md" },
-    { label: "ADU builder in Kensington", href: "/service/adu/kensington-md" },
-    { label: "ADU builder in Potomac", href: "/service/adu/potomac-md" },
-    { label: "ADU builder in Wheaton", href: "/service/adu/wheaton-md" },
-    { label: "ADU builder in Silver Spring", href: "/service/adu/silver-spring-md" },
-    { label: "ADU builder in Gaithersburg", href: "/service/adu/gaithersburg-md" },
-    { label: "ADU builder in Garrett Park", href: "/service/adu/garrett-park-md" },
-    { label: "ADU builder in Chevy Chase", href: "/service/adu/chevy-chase-md" },
-    { label: "ADU builder in Cabin John", href: "/service/adu/cabin-john-md" },
-    { label: "ADU builder in Laurel", href: "/service/adu/laurel-md" },
+// ADU hub areas: 11 Montgomery County communities, Laurel and DC, with zip codes.
+const areaLinks: { label: string; zips: string; href?: string; wide?: boolean }[] = [
+    { label: "Bethesda", zips: "20814, 20816, 20817", href: "/service/adu/bethesda-md" },
+    { label: "North Bethesda", zips: "20852", href: "/service/adu/north-bethesda-md" },
+    { label: "Rockville", zips: "20850, 20851, 20852, 20853", href: "/service/adu/rockville-md" },
+    { label: "Potomac", zips: "20854", href: "/service/adu/potomac-md" },
+    { label: "Chevy Chase", zips: "20815", href: "/service/adu/chevy-chase-md" },
+    { label: "Gaithersburg", zips: "20877, 20878, 20879, 20882", href: "/service/adu/gaithersburg-md" },
+    { label: "Kensington", zips: "20895", href: "/service/adu/kensington-md" },
+    { label: "Silver Spring", zips: "20901, 20902, 20903, 20904, 20905, 20906, 20910", href: "/service/adu/silver-spring-md" },
+    { label: "Wheaton", zips: "20902, 20906", href: "/service/adu/wheaton-md" },
+    { label: "Garrett Park", zips: "20896", href: "/service/adu/garrett-park-md" },
+    { label: "Cabin John", zips: "20818", href: "/service/adu/cabin-john-md" },
+    { label: "Laurel", zips: "20707, 20708, 20723, 20724", href: "/service/adu/laurel-md" },
+    { label: "DC", zips: "20001, 20002, 20003, 20004, 20005, 20006, 20007, 20008, 20009, 20010, 20011, 20012, 20015, 20016, 20017, 20018, 20019, 20020, 20024, 20032, 20036, 20037", href: "/service/adu/washington-dc", wide: true },
+];
+
+const SERVICE_AREA_MAP_EMBED_URL =
+    "https://www.google.com/maps/d/u/0/embed?mid=18yZmZjXwVotzSHlIUaeEYMgoXUZnUI0&ehbc=2E312F&noprof=1";
+
+// ADU-hub-only image copies (public/images/adu/), each used once on this page. All four come from
+// our Northwest DC ADU project. EXIF GPS points to the Google Business Profile pin.
+const aduImages = {
+    hero: {
+        src: "/images/adu/adu-builder-detached-adu-northwest-dc.webp",
+        alt: "ADU builder project: two-story detached accessory dwelling unit behind a fenced yard in Northwest DC",
+    },
+    included: {
+        src: "/images/adu/adu-over-garage-alley-northwest-dc.webp",
+        alt: "Alley side of a two-story ADU with a garage door in Northwest DC",
+    },
+    design: {
+        src: "/images/adu/adu-interior-skylights-kitchenette-northwest-dc.webp",
+        alt: "Inside a Northwest DC ADU: living area with skylights, a kitchenette and a stair railing",
+    },
+};
+
+const aduProjects: ProjectCardData[] = [
+    {
+        title: "Northwest DC: ADU Construction",
+        location: "Northwest DC",
+        text: "We built an accessory dwelling unit on a residential lot in Northwest DC, from DOB permitting through final inspection.",
+        href: "/project/nw-dc-adu-construction",
+        image: "/images/adu/adu-construction-rear-yard-northwest-dc.webp",
+        imageAlt: "Finished ADU with a balcony at the end of a landscaped rear yard in Northwest DC",
+    },
 ];
 
 const googleReviewsUrl =
@@ -369,9 +403,10 @@ function Stars() {
     );
 }
 
-export default function Adu({ data }: { data?: AduService }) {
-    const heroImage = data?.image?.replace(/^\./, "") || "/images/services/adu.webp";
-    const heroAlt = data?.imageAlt || "Accessory dwelling unit (ADU) builder in Maryland and Washington, DC";
+export default function Adu(_props: { data?: AduService }) {
+    // The hub uses its own image copies; data.image stays for the services listing.
+    const heroImage = aduImages.hero.src;
+    const heroAlt = aduImages.hero.alt;
 
     return (
         <main className={`page-wrapper ${styles.page}`}>
@@ -386,11 +421,9 @@ export default function Adu({ data }: { data?: AduService }) {
                     </nav>
                     <div className={styles.heroGrid}>
                         <div className={styles.heroContent}>
-                            <Badge className="nostars">ADU Builder · Maryland &amp; DC</Badge>
-                            <h1 className={styles.heroTitle}>Accessory Dwelling Unit (ADU) Builder in <span>Maryland &amp; Washington, DC</span></h1>
-                            <p className={styles.heroText}>Accessory dwelling units are allowed by right on single-family lots in Montgomery County. DC has allowed them in most residential zones since 2016. As an ADU builder in Maryland and Washington, DC, DMV General Contracting Group checks your lot, designs the unit, files the permits and builds it under one contract. Most new ADUs cost $150,000 to $300,000.</p>
-                            <p className={styles.heroText}>MHIC #156178 · DC DLCP #410526000209 · 4.9 out of 5 on Google · 1-year workmanship warranty</p>
-                            <p className={styles.heroText}>Request a free ADU feasibility check, or call +1 240-730-1292 any day.</p>
+                            <Badge className="nostars">ADU Builder · Maryland</Badge>
+                            <h1 className={styles.heroTitle}>Maryland ADU Builder: <span>Zoning and Permits Handled</span></h1>
+                            <p className={styles.heroText}><strong>Accessory dwelling units</strong> are allowed by right on single-family lots in <strong>Montgomery County</strong>. DC has allowed them in most residential zones since 2016. As an <strong>ADU builder in Maryland</strong>, DMV General Contracting Group <strong>checks your lot</strong>, <strong>designs the unit</strong>, <strong>files the permits</strong> and <strong>builds it</strong> under one contract. Most new ADUs cost <strong>$150,000 to $300,000</strong>.</p>
                             <div className={styles.heroActions}>
                                 <Button href="#estimate" icon={<ArrowIcon />}>Request a Free ADU Feasibility Check</Button>
                                 <Button href="tel:+12407301292" variant="secondary">+1 240-730-1292</Button>
@@ -408,7 +441,7 @@ export default function Adu({ data }: { data?: AduService }) {
                                 <div className={styles.mediaOverlay} />
                                 <div className={styles.heroFeatured}>
                                     <Badge variant="accent" className="nostars">Featured project</Badge>
-                                    <p className={styles.heroFeaturedTitle}>Northwest Washington, DC: ADU Construction</p>
+                                    <p className={styles.heroFeaturedTitle}>Northwest DC: ADU construction</p>
                                     <p className={styles.heroFeaturedMeta}>We built an accessory dwelling unit on a residential lot in Northwest DC, from DOB permitting through final inspection.</p>
                                 </div>
                             </div>
@@ -440,16 +473,16 @@ export default function Adu({ data }: { data?: AduService }) {
                     <div className={styles.includedGrid}>
                         <div className={styles.includedAside}>
                             <div className={styles.includedFeature}>
-                                <Image src={heroImage}
-                                    alt="Accessory dwelling unit with a private entrance in Maryland"
+                                <Image src={aduImages.included.src}
+                                    alt={aduImages.included.alt}
                                     fill sizes="(max-width: 900px) 100vw, 38vw" className={styles.featureImage} />
                             </div>
                             <div className={styles.remodelOptions}>
                                 <article className={styles.remodelCard}>
-                                    <h2 className="h3">ADU</h2><p>A second home on your lot, privately owned by you.</p>
+                                    <strong className={styles.remodelTitle}>ADU</strong><p>A second home on your lot, privately owned by you.</p>
                                 </article>
                                 <article className={`${styles.remodelCard} ${styles.remodelCardDark}`}>
-                                    <h3>MPDU</h3><p>A county affordable-housing program with deed restrictions.</p>
+                                    <strong className={styles.remodelTitle}>MPDU</strong><p>A county affordable-housing program with deed restrictions.</p>
                                 </article>
                             </div>
                         </div>
@@ -458,7 +491,7 @@ export default function Adu({ data }: { data?: AduService }) {
                             {includedItems.map((item) => (
                                 <article className={styles.includeCard} key={item.number}>
                                     <span className={styles.number}>{item.number}</span>
-                                    <h3 className={styles.cardTitle}>{item.title}</h3>
+                                    <strong className={styles.cardTitle}>{item.title}</strong>
                                     <p className={styles.cardText}>{item.text}</p>
                                 </article>
                             ))}
@@ -473,7 +506,7 @@ export default function Adu({ data }: { data?: AduService }) {
                     <div className={styles.sectionHeader}>
                         <SectionHeading id="adu-rules-title" align="center"
                             eyebrow={<Badge>Rules</Badge>}
-                            title={<>Can You Build an ADU in <span>Maryland or DC?</span></>}
+                            title={<>Can You Build an ADU <span>in Maryland?</span></>}
                             text="Yes, on most lots with a single-family detached home. Maryland's HB 1466 required every county to allow ADUs up to 75% of the main house by October 1, 2026. Montgomery County adopted that standard through ZTA 26-06, effective October 5, 2026. The current rules in Montgomery County and DC compare like this:" />
                     </div>
                     <div className={styles.contentTableWrap}>
@@ -482,7 +515,7 @@ export default function Adu({ data }: { data?: AduService }) {
                                 <tr>
                                     <th scope="col">Rule</th>
                                     <th scope="col">Montgomery County</th>
-                                    <th scope="col">Washington, DC</th>
+                                    <th scope="col">DC</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -524,7 +557,7 @@ export default function Adu({ data }: { data?: AduService }) {
                         <SectionHeading id="adu-types-title" align="center"
                             eyebrow={<Badge>Services</Badge>}
                             title={<>Types of ADUs <span>We Build</span></>}
-                            text="We build five types of ADUs. Your lot, budget and planned use decide which one fits:" />
+                            text={<>We build five types of <strong>accessory dwelling unit in Maryland</strong> and DC. Your <strong>lot</strong>, <strong>budget</strong> and <strong>planned use</strong> decide which one fits:</>} />
                         <Button href="/contact-us" variant="secondary">Book a Free Feasibility Visit</Button>
                     </div>
                     <div className={styles.servicesGrid}>
@@ -548,7 +581,7 @@ export default function Adu({ data }: { data?: AduService }) {
                         <SectionHeading id="adu-pricing-title" align="center"
                             eyebrow={<Badge>Cost and Pricing</Badge>}
                             title={<>How Much Does It Cost to Build an ADU <span>in Maryland?</span></>}
-                            text="Most new ADUs in Maryland cost $150,000 to $300,000. Converting a garage or basement costs $60,000 to $150,000. The type of unit moves the price far more than finishes do in Maryland:" />
+                            text={<>Most <strong>new ADUs in Maryland</strong> cost <strong>$150,000 to $300,000</strong>. Converting a garage or basement costs <strong>$60,000 to $150,000</strong>. The type of unit moves the price far more than finishes do in Maryland:</>} />
                     </div>
                     <div className={styles.budgetBand}>
                         <span>Typical new Maryland ADU</span><strong>$150,000–$300,000</strong>
@@ -635,7 +668,7 @@ export default function Adu({ data }: { data?: AduService }) {
                 id="adu-estimate-cta"
                 headingId="adu-estimate-cta-title"
                 title="Request a free ADU feasibility check, or call +1 240-730-1292 any day."
-                text="As an ADU builder in Maryland and Washington, DC, we review zoning, design the unit and handle every license and permit."
+                text="As an ADU builder in Maryland and DC, we review zoning, design the unit and handle every license and permit."
                 ctaLabel="Request a free ADU feasibility check"
             />
 
@@ -650,11 +683,11 @@ export default function Adu({ data }: { data?: AduService }) {
                     <div className={styles.designGrid}>
                         <figure className={styles.designMedia}>
                             <div className={styles.designImageWrap}>
-                                <Image src={heroImage} alt="Detached ADU with a private entrance"
+                                <Image src={aduImages.design.src} alt={aduImages.design.alt}
                                     fill sizes="(max-width: 1024px) 100vw, 46vw" className={styles.designImage} />
                             </div>
                             <figcaption className={styles.designCaption}>
-                                <strong>Detached ADU with a private entrance</strong>
+                                <strong>Inside a detached ADU in Northwest DC</strong>
                                 <p>Our team draws the floor plans and elevations in-house, so permit drawings match what we build.</p>
                             </figcaption>
                         </figure>
@@ -711,7 +744,7 @@ export default function Adu({ data }: { data?: AduService }) {
                         {drawbacks.map((item, index) => (
                             <article className={styles.driverCard} key={item.title}>
                                 <span className={styles.driverNumber}>{String(index + 1).padStart(2, "0")}</span>
-                                <h4>{item.title}</h4><p>{item.text}</p>
+                                <strong className={styles.driverTitle}>{item.title}</strong><p>{item.text}</p>
                             </article>
                         ))}
                     </div>
@@ -719,10 +752,11 @@ export default function Adu({ data }: { data?: AduService }) {
                         <span className={styles.tipLabel}>PRIVACY</span>
                         <p>Orienting the unit away from the main house's living areas solves most privacy concerns.</p>
                     </div>
-                    <div className={styles.tipCard}>
-                        <span className={styles.tipLabel}>HOME VALUE</span>
-                        <h3>Does an ADU Increase Home Value?</h3>
-                        <p>Yes, in most cases, because it adds finished living space and rental income. The size of the gain depends on the appraiser, the neighborhood and whether the unit is permitted and licensed. That is why every ADU we build carries full permits. Rent from a licensed unit is a second, ongoing return.</p>
+                    <div className={styles.budgetCheck}>
+                        <div className={styles.budgetCheckHead}>
+                            <h3>Does an ADU Increase Home Value?</h3>
+                            <p>Yes, in most cases, because it adds finished living space and rental income. The size of the gain depends on the appraiser, the neighborhood and whether the unit is permitted and licensed. That is why every ADU we build carries full permits. Rent from a licensed unit is a second, ongoing return.</p>
+                        </div>
                     </div>
                 </Container>
             </section>
@@ -731,7 +765,9 @@ export default function Adu({ data }: { data?: AduService }) {
                 <Container>
                     <div className={styles.sectionHeader}>
                         <SectionHeading id="adu-timeline-title" align="center"
-                            title="These are typical durations from first visit to move-in in Maryland and DC:" />
+                            eyebrow={<Badge>Timeline</Badge>}
+                            title={<>How Long Does It Take to <span>Build an ADU?</span></>}
+                            text="These are typical durations from first visit to move-in in Maryland and DC:" />
                     </div>
                     <div className={styles.contentTableWrap}>
                         <table className={styles.contentTable}>
@@ -773,7 +809,7 @@ export default function Adu({ data }: { data?: AduService }) {
             <LicensedInsured variant="adu" />
 
             <RecentProjects
-                serviceType="adu"
+                projects={aduProjects}
                 eyebrow="Case Studies & Projects"
                 title="Our ADU Projects"
                 text={<>This ADU from our portfolio shows the full permit-to-move-in path:<br />Our remodeling projects page shows the rest of our residential portfolio.</>}
@@ -833,22 +869,80 @@ export default function Adu({ data }: { data?: AduService }) {
                     <div className={styles.areasLayout}>
                         <div className={styles.areasHeader}>
                             <Badge>Areas We Serve</Badge>
-                            <h2 id="areas-title">ADU Builder in Washington, DC and Montgomery County</h2>
-                            <p>Our ADU crews cover the District, Laurel and all of Montgomery County. Each of the 13 local pages below explains lot sizes and unit rules for that area:</p>
+                            <h2 id="areas-title">
+                                ADU Builder in Montgomery County, MD
+                            </h2>
+                            <p>
+                                Our <strong>ADU building in Montgomery County</strong> covers{" "}
+                                <strong>11 communities</strong>, plus <strong>Laurel</strong> and <strong>DC</strong>,
+                                from our <strong>North Bethesda</strong> office. Each local page explains lot sizes and
+                                unit rules for that area. All 13 areas are listed with their zip codes:
+                            </p>
                             <span className={styles.areasCount}>13 service areas</span>
                         </div>
+
                         <div className={styles.areasGrid}>
-                            {areaLinks.map((area, index) => (
-                                <Link href={area.href} className={styles.areaCard} key={area.href}>
-                                    <span className={styles.areaNumber}>{String(index + 1).padStart(2, "0")}</span>
-                                    <span className={styles.areaLabel}>{area.label}</span>
-                                    <ArrowIcon className={styles.areaArrow} />
-                                </Link>
-                            ))}
+                            {areaLinks.map((area, index) => {
+                                const number = (
+                                    <span className={styles.areaNumber}>
+                                        {String(index + 1).padStart(2, "0")}
+                                    </span>
+                                );
+                                const text = (
+                                    <span className={styles.areaText}>
+                                        <span className={styles.areaLabel}>{area.label}</span>
+                                        <strong className={styles.areaZips}>{area.zips}</strong>
+                                    </span>
+                                );
+                                const wide = area.wide ? ` ${styles.areaCardWide}` : "";
+
+                                return area.href ? (
+                                    <Link href={area.href} className={`${styles.areaCard}${wide}`} key={area.label}>
+                                        {number}
+                                        {text}
+                                        <ArrowIcon className={styles.areaArrow} />
+                                    </Link>
+                                ) : (
+                                    <div className={`${styles.areaCard} ${styles.areaCardStatic}${wide}`} key={area.label}>
+                                        {number}
+                                        {text}
+                                    </div>
+                                );
+                            })}
                         </div>
                     </div>
+
                     <div className={styles.areasNote}>
-                        <p>Large lots in Potomac and Gaithersburg suit detached cottages. DC rowhouses usually suit basement or carriage-house units.</p>
+                        <p>
+                            Large lots in <strong>Potomac</strong> and <strong>Gaithersburg</strong> suit detached cottages. <strong>DC</strong> rowhouses usually suit basement or carriage-house units.
+                        </p>
+                    </div>
+
+                    <div className={styles.areasMap}>
+                        <iframe
+                            src={SERVICE_AREA_MAP_EMBED_URL}
+                            title="DMV General Contracting Group LLC | ADU Builder in Montgomery County, Maryland"
+                            className={styles.areasMapFrame}
+                            loading="lazy"
+                            referrerPolicy="no-referrer-when-downgrade"
+                            allowFullScreen
+                        />
+                        <div className={styles.areasNap}>
+                            <h3>Our North Bethesda Office</h3>
+                            <Link href={GOOGLE_BUSINESS_PROFILE_URL} target="_blank" rel="noopener noreferrer">
+                                <strong>DMV General Contracting Group LLC</strong>
+                            </Link>
+                            <address>
+                                <Link href={GOOGLE_BUSINESS_PROFILE_URL} target="_blank" rel="noopener noreferrer">
+                                    11810 Grand Park Ave #500, North Bethesda, MD 20852
+                                </Link>
+                            </address>
+                            <span><strong>Phone: </strong><a href="tel:+12407301292">+1 240-730-1292</a></span>
+                            <span>Open 7 days a week</span>
+                            <Button href="#estimate" icon={<ArrowIcon />}>
+                                Request a Free ADU Feasibility Check
+                            </Button>
+                        </div>
                     </div>
                 </Container>
             </section>

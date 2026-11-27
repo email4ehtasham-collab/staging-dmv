@@ -7,10 +7,9 @@ import Container from "@/components/Common/Container";
 import NavitemActive from "@/components/Common/NavitemActive";
 import ResponsiveImage from "@/components/Common/ResponsiveImage";
 import SectionHeading from "@/components/Common/SectionHeading";
-import ServiceHeroImage from "@/components/ServiceHero/ServiceHeroImage";
-import { getFallbackHeroImage } from "@/components/ServiceHero/resolveServiceHeroImage";
 import Estimate from "@/components/Home/Estimate/Estimate";
 import RecentProjects from "@/components/Home/RecentProjects/RecentProjects";
+import ServiceAreas from "@/components/Home/ServiceAreas/ServiceAreas";
 import locationStyles from "@/components/ServiceLocation/service-location.module.scss";
 import servicesData from "@/data/services/ServiceData";
 import styles from "./style.module.scss";
@@ -20,7 +19,7 @@ export const metadata: Metadata = {
   description:
     "All remodeling and construction services from DMV General Contracting in Maryland and DC, from kitchens and ADUs to roofing and decks.",
   alternates: {
-    canonical: "/services",
+    canonical: "https://dmv-gc.com/services",
   },
 };
 
@@ -361,31 +360,6 @@ const advantages = [
   },
 ];
 
-const areas = [
-  { label: "General contractor in Montgomery County", href: "/service/design-build" },
-  { label: "General contractor in Washington, DC", href: "/service/design-build" },
-  { label: "General contractor in Bethesda", href: "/service-area/bethesda-md" },
-  { label: "General contractor in North Bethesda", href: "/service/design-build/north-bethesda-md" },
-  { label: "General contractor in Rockville", href: "/service/design-build/rockville-md" },
-  { label: "General contractor in Kensington", href: "/service/design-build/kensington-md" },
-  { label: "General contractor in Potomac", href: "/service/design-build/potomac-md" },
-  { label: "General contractor in Wheaton", href: "/service/design-build/wheaton-md" },
-  { label: "General contractor in Silver Spring", href: "/service/design-build/silver-spring-md" },
-  { label: "General contractor in Gaithersburg", href: "/service/design-build/gaithersburg-md" },
-  { label: "General contractor in Garrett Park", href: "/service/design-build" },
-  { label: "General contractor in Chevy Chase", href: "/service/design-build/chevy-chase-md" },
-  { label: "General contractor in Cabin John", href: "/service/design-build/cabin-john-md" },
-  { label: "General contractor in Laurel", href: "/service/design-build/laurel-md" },
-];
-
-function PhoneIcon() {
-  return (
-    <svg viewBox="0 0 16 16" fill="none" aria-hidden="true" focusable="false" className={`${styles.buttonIcon} ${styles.phoneIcon}`}>
-      <path d="M5 2.6 6.7 4.2c.2.2.3.5.2.8l-.5 1.4c.8 1.3 1.9 2.4 3.2 3.2L11 9.1c.3-.1.6 0 .8.2l1.6 1.7c.2.2.2.6 0 .8l-1.1 1.1c-.5.5-1.2.7-1.9.6C6.6 13 3 9.4 2.6 5.6c-.1-.7.1-1.4.6-1.9l1.1-1.1c.2-.2.6-.2.8 0Z" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
-  );
-}
-
 function ServiceGrid({ items }: { items: ServiceItem[] }) {
   return (
     <div className={styles.serviceGrid}>
@@ -414,8 +388,6 @@ function ServiceGrid({ items }: { items: ServiceItem[] }) {
 }
 
 export default function ServicesPage() {
-  const heroImage = getFallbackHeroImage();
-
   return (
     <main className={locationStyles.page}>
       <NavitemActive nav="service" />
@@ -458,38 +430,32 @@ export default function ServicesPage() {
                 <Button href="/contact-us" data-estimate-trigger>
                   Get a free estimate
                 </Button>
-                <Button href="tel:+12407301292" variant="secondary" icon={<PhoneIcon />} iconPosition="left">
+                <a className={locationStyles.phoneLink} href="tel:+12407301292">
                   +1 240-730-1292
-                </Button>
+                </a>
               </div>
             </div>
 
-            <ServiceHeroImage src={heroImage.src} alt={heroImage.alt} />
+            <aside className={locationStyles.factsCard} aria-labelledby="services-facts-title">
+              <h2 id="services-facts-title" className={locationStyles.factsTitle}>
+                The services below are grouped into six categories:
+              </h2>
+              <ul className={locationStyles.factsList}>
+                <li><span className={locationStyles.factValue}>Remodeling</span></li>
+                <li><span className={locationStyles.factValue}>Interior structure</span></li>
+                <li><span className={locationStyles.factValue}>Home systems</span></li>
+                <li><span className={locationStyles.factValue}>Exterior</span></li>
+                <li><span className={locationStyles.factValue}>Outdoor living</span></li>
+                <li><span className={locationStyles.factValue}>Property services</span></li>
+              </ul>
+              <div className={locationStyles.factsCta}>
+                <p>Not sure which service fits? Get a free estimate and we will scope it with you.</p>
+                <Button href="/contact-us" variant="secondary" data-estimate-trigger className={locationStyles.factsButton}>
+                  Get a free estimate
+                </Button>
+              </div>
+            </aside>
           </div>
-        </Container>
-      </section>
-
-      <section className={locationStyles.factsSection} aria-label="Services overview">
-        <Container>
-          <aside className={locationStyles.factsCard} aria-labelledby="services-facts-title">
-            <h2 id="services-facts-title" className={locationStyles.factsTitle}>
-              The services below are grouped into six categories:
-            </h2>
-            <ul className={locationStyles.factsList}>
-              <li><span className={locationStyles.factValue}>Remodeling</span></li>
-              <li><span className={locationStyles.factValue}>Interior structure</span></li>
-              <li><span className={locationStyles.factValue}>Home systems</span></li>
-              <li><span className={locationStyles.factValue}>Exterior</span></li>
-              <li><span className={locationStyles.factValue}>Outdoor living</span></li>
-              <li><span className={locationStyles.factValue}>Property services</span></li>
-            </ul>
-            <div className={locationStyles.factsCta}>
-              <p>Not sure which service fits? Get a free estimate and we will scope it with you.</p>
-              <Button href="/contact-us" variant="secondary" data-estimate-trigger className={locationStyles.factsButton}>
-                Get a free estimate
-              </Button>
-            </div>
-          </aside>
         </Container>
       </section>
 
@@ -661,27 +627,25 @@ export default function ServicesPage() {
         </Container>
       </section>
 
-      <section className={styles.section} aria-labelledby="service-areas-title">
-        <Container>
-          <div className={styles.sectionHeader}>
-            <SectionHeading
-              id="service-areas-title"
-              align="center"
-              eyebrow={<Badge className="nostars">Area we serve</Badge>}
-              title="Home Remodeling Services in Montgomery County and Washington, DC"
-              text="Our crews cover the District, every corner of Montgomery County and the city of Laurel. Choose your area:"
-            />
-          </div>
-          <div className={styles.areaGrid}>
-            {areas.map((area) => (
-              <Link href={area.href} className={styles.areaLink} key={area.label}>
-                {area.label}
-              </Link>
-            ))}
-          </div>
-          <p className={styles.note}>Area pages describe local permit rules alongside the services available nearby.</p>
-        </Container>
-      </section>
+      {/* Same area list, zip codes, office details and map as the homepage, with services-page copy. */}
+      <ServiceAreas
+        title="Home Remodeling Services in Montgomery County, MD"
+        text={
+          <>
+            We provide <strong>home remodeling services in Montgomery County</strong>, <strong>Laurel</strong> and{" "}
+            <strong>DC</strong> from our <strong>North Bethesda</strong> office near <strong>Pike &amp; Rose</strong>.
+            Every service on this page is available in each of the 13 areas below, and we file the permits with the
+            right county, city or DC office for your address.
+          </>
+        }
+        districtText={
+          <>
+            <strong>In DC, we offer the same services across the District.</strong> Rowhouse, townhome and condo
+            projects there go through the DC Department of Buildings, and we handle those permits and inspections too.
+          </>
+        }
+        mapTitle="DMV General Contracting Group LLC | Home Remodeling Services in Montgomery County, Maryland"
+      />
 
       <Estimate variant="services" />
     </main>

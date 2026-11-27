@@ -15,6 +15,7 @@ import LicensedInsured from "@/components/Home/LicensedInsured/LicensedInsured";
 import Permits from "@/components/Home/Permits/Permits";
 import RecentProjects from "@/components/Home/RecentProjects/RecentProjects";
 import type { ProjectCardData } from "@/components/Home/RecentProjects/ProjectCard";
+import { GOOGLE_BUSINESS_PROFILE_URL } from "@/data/home/homePageMedia";
 import styles from "./style.module.scss";
 
 type BathroomService = {
@@ -299,57 +300,62 @@ const timelineTabs: { key: TimelineFilter; label: string }[] = [
 
 const timelineWeeks = ["0", "1", "2", "3", "4", "5", "6", "7", "8 wks"];
 
-const areaLinks: { label: string; href?: string }[] = [
-    { label: "Bathroom remodeling in Washington, DC", href: "/service/bathroom-remodeling/washington-dc" },
-    { label: "Bathroom remodeling in Bethesda", href: "/service/bathroom-remodeling/bethesda-md" },
-    { label: "Bathroom remodeling in North Bethesda", href: "/service/bathroom-remodeling/north-bethesda-md" },
-    { label: "Bathroom remodeling in Rockville", href: "/service/bathroom-remodeling/rockville-md" },
-    { label: "Bathroom remodeling in Kensington" },
-    { label: "Bathroom remodeling in Potomac", href: "/service/bathroom-remodeling/potomac-md" },
-    { label: "Bathroom remodeling in Wheaton", href: "/service/bathroom-remodeling/wheaton-md" },
-    { label: "Bathroom remodeling in Silver Spring", href: "/service/bathroom-remodeling/silver-spring-md" },
-    { label: "Bathroom remodeling in Gaithersburg", href: "/service/bathroom-remodeling/gaithersburg-md" },
-    { label: "Bathroom remodeling in Garrett Park", href: "/service/bathroom-remodeling/garrett-park-md" },
-    { label: "Bathroom remodeling in Chevy Chase", href: "/service/bathroom-remodeling/chevy-chase-md" },
-    { label: "Bathroom remodeling in Cabin John", href: "/service/bathroom-remodeling/cabin-john-md" },
-    { label: "Bathroom remodeling in Laurel", href: "/service/bathroom-remodeling/laurel-md" },
+// Bathroom hub areas: 11 Montgomery County communities, Laurel and DC, with zip codes.
+// Kensington has no bathroom page yet, so it is listed without a link.
+const areaLinks: { label: string; zips: string; href?: string; wide?: boolean }[] = [
+    { label: "Bethesda", zips: "20814, 20816, 20817", href: "/service/bathroom-remodeling/bethesda-md" },
+    { label: "North Bethesda", zips: "20852", href: "/service/bathroom-remodeling/north-bethesda-md" },
+    { label: "Rockville", zips: "20850, 20851, 20852, 20853", href: "/service/bathroom-remodeling/rockville-md" },
+    { label: "Potomac", zips: "20854", href: "/service/bathroom-remodeling/potomac-md" },
+    { label: "Chevy Chase", zips: "20815", href: "/service/bathroom-remodeling/chevy-chase-md" },
+    { label: "Gaithersburg", zips: "20877, 20878, 20879, 20882", href: "/service/bathroom-remodeling/gaithersburg-md" },
+    { label: "Kensington", zips: "20895" },
+    { label: "Silver Spring", zips: "20901, 20902, 20903, 20904, 20905, 20906, 20910", href: "/service/bathroom-remodeling/silver-spring-md" },
+    { label: "Wheaton", zips: "20902, 20906", href: "/service/bathroom-remodeling/wheaton-md" },
+    { label: "Garrett Park", zips: "20896", href: "/service/bathroom-remodeling/garrett-park-md" },
+    { label: "Cabin John", zips: "20818", href: "/service/bathroom-remodeling/cabin-john-md" },
+    { label: "Laurel", zips: "20707, 20708, 20723, 20724", href: "/service/bathroom-remodeling/laurel-md" },
+    { label: "DC", zips: "20001, 20002, 20003, 20004, 20005, 20006, 20007, 20008, 20009, 20010, 20011, 20012, 20015, 20016, 20017, 20018, 20019, 20020, 20024, 20032, 20036, 20037", href: "/service/bathroom-remodeling/washington-dc", wide: true },
 ];
+
+const SERVICE_AREA_MAP_EMBED_URL =
+    "https://www.google.com/maps/d/u/0/embed?mid=18yZmZjXwVotzSHlIUaeEYMgoXUZnUI0&ehbc=2E312F&noprof=1";
+
+// Bathroom-hub-only image copies (public/images/bathroom-remodeling/). Each photo appears once on this
+// page and is not shared with another page. EXIF GPS points to the Google Business Profile pin.
+const bathroomHeroImage = {
+    src: "/images/bathroom-remodeling/bathroom-remodeling-maryland-chevy-chase.webp",
+    alt: "Bathroom remodeling in Montgomery County, Maryland: Chevy Chase bathroom with a white vanity, a tiled tub surround and hexagon floor tile",
+};
 
 const googleReviewsUrl =
     "https://www.google.com/maps/place/DMV+General+Contracting+Group+LLC/@39.0493761,-77.1200241,17z/data=!3m1!4b1!4m6!3m5!1s0x158dd0ef2148a11:0xceda33050d2dcdfb!8m2!3d39.049372!4d-77.1174492!16s%2Fg%2F11v3gbzc44?hl=en&entry=ttu&g_ep=EgoyMDI2MTEwMS4wIKXMDSoASAFQAw%3D%3D";
 
+// Maryland bathroom projects only; DC projects belong on the DC bathroom page.
 const bathroomProjects: ProjectCardData[] = [
-    {
-        location: "Washington, DC",
-        title: "Primary Bathroom and Entry Powder Room Renovation",
-        text: "This project rebuilt a primary bathroom and the entry powder room together.",
-        href: "/project/primary-bathroom-powder-room-renovation-glover-park",
-        image: "/images/projects-galary/primary-bathroom-entry-powder-room/1.webp",
-        imageAlt: "Primary bathroom and entry powder room renovation in Glover Park",
-    },
     {
         location: "Chevy Chase, Maryland",
         title: "Luxury Primary Bath and Entry Powder Room",
         text: "A luxury primary bath was finished alongside a matching powder room by the front door.",
         href: "/project/teresa-f-modern-bathroom-transformation",
-        image: "/images/projects-galary/teresa-faria/1.webp",
-        imageAlt: "Modern primary bathroom transformation in Chevy Chase",
+        image: "/images/bathroom-remodeling/chevy-chase-bathroom-renovation-tub-vanity.webp",
+        imageAlt: "Chevy Chase, MD bathroom renovation with a white vanity, a tiled tub surround and a wall niche",
     },
     {
         location: "Silver Spring, Maryland",
         title: "Modern Bathroom Remodel",
         text: "A dated full bath was rebuilt with a modern layout, clean-lined tile and new fixtures.",
         href: "/project/dave-bathroom-reimagined",
-        image: "/images/projects-galary/dave-rardin/updated/1.webp",
-        imageAlt: "Modern bathroom remodel in Silver Spring",
+        image: "/images/bathroom-remodeling/silver-spring-bathroom-subway-tile-tub.webp",
+        imageAlt: "Silver Spring, MD bathroom with white subway tile, a wall niche and matte black tub fixtures",
     },
     {
-        location: "Washington, DC",
-        title: "Dual Bathroom Remodel",
-        text: "Two bathrooms in one home were redone on one schedule and one contract.",
-        href: "/project/michelle-r-dual-bathroom-transformation",
-        image: "/images/projects-galary/michelle-rieff/8.webp",
-        imageAlt: "Dual bathroom remodel in Washington, DC",
+        location: "Bethesda, Maryland",
+        title: "Kitchen and Dual Bathroom Renovation",
+        text: "Two bathrooms were remodeled together with a new kitchen in one Bethesda home.",
+        href: "/project/gabriella-w-kitchen-bath-renaissance",
+        image: "/images/bathroom-remodeling/bethesda-bathroom-mosaic-floor-arched-mirror.webp",
+        imageAlt: "Bethesda, MD bathroom with an arched mirror, a wood vanity and black-and-white mosaic floor tile",
     },
 ];
 
@@ -625,10 +631,11 @@ function Stars() {
     );
 }
 
-export default function BathroomRemodeling({ data }: { data?: BathroomService }) {
+export default function BathroomRemodeling(_props: { data?: BathroomService }) {
     const [timelineFilter, setTimelineFilter] = useState<TimelineFilter>("planning");
-    const heroImage = data?.image?.replace(/^\./, "") || "/images/services/bathroom.webp";
-    const heroAlt = data?.imageAlt || "Bathroom remodeling project in Maryland and Washington, DC";
+    // The hub uses its own hero copy; data.image stays for the services listing.
+    const heroImage = bathroomHeroImage.src;
+    const heroAlt = bathroomHeroImage.alt;
 
     return (
         <main className={`page-wrapper ${styles.page}`}>
@@ -646,16 +653,18 @@ export default function BathroomRemodeling({ data }: { data?: BathroomService })
 
                     <div className={styles.heroGrid}>
                         <div className={styles.heroContent}>
-                            <Badge className="nostars">Bathroom Remodeling · Maryland &amp; DC</Badge>
+                            <Badge className="nostars">Bathroom Remodeling · Maryland</Badge>
 
                             <h1 className={styles.heroTitle}>
-                                Bathroom Remodeling in <span>Maryland &amp; Washington, DC</span>
+                                Maryland Bathroom Remodeling <span>Without Leaks or Surprises</span>
                             </h1>
 
                             <p className={styles.heroText}>
-                                DMV General Contracting Group provides bathroom remodeling in Maryland and Washington,
-                                DC as a licensed general contractor. We design, permit, waterproof and tile the room
-                                under one contract. Thirty-five years of hands-on building have taught our crew where
+                                DMV General Contracting Group provides <strong>bathroom remodeling in Maryland</strong> as a{" "}
+                                <strong>licensed general contractor</strong>, serving <strong>Montgomery County</strong>,{" "}
+                                <strong>Laurel</strong> and <strong>DC</strong>. We <strong>design</strong>,{" "}
+                                <strong>permit</strong>, <strong>waterproof</strong> and <strong>tile</strong> the room
+                                under <strong>one contract</strong>. Thirty-five years of hands-on building have taught our crew where
                                 bathrooms in older Maryland houses tend to hide trouble.
                             </p>
 
@@ -702,10 +711,10 @@ export default function BathroomRemodeling({ data }: { data?: BathroomService })
                                         Featured project
                                     </Badge>
                                     <p className={styles.heroFeaturedTitle}>
-                                        Primary Bathroom and Entry Powder Room Renovation
+                                        Chevy Chase bathroom renovation
                                     </p>
                                     <p className={styles.heroFeaturedMeta}>
-                                        This project rebuilt a primary bathroom and the entry powder room together.
+                                        A primary bath finished alongside a matching powder room by the front door.
                                     </p>
                                 </div>
                             </div>
@@ -768,8 +777,8 @@ export default function BathroomRemodeling({ data }: { data?: BathroomService })
                         <div className={styles.includedAside}>
                             <div className={styles.includedFeature}>
                                 <Image
-                                    src="/images/services/cover/bathroom.webp"
-                                    alt="Remodeled bathroom with a tiled shower and double vanity"
+                                    src="/images/bathroom-remodeling/silver-spring-bathroom-remodel-green-vanity.webp"
+                                    alt="Silver Spring, MD bathroom remodel with a green vanity, a subway-tile tub surround and marble-look floor tile"
                                     fill
                                     sizes="(max-width: 900px) 100vw, 38vw"
                                     className={styles.featureImage}
@@ -814,7 +823,11 @@ export default function BathroomRemodeling({ data }: { data?: BathroomService })
                             align="center"
                             eyebrow={<Badge>Our Services</Badge>}
                             title="Bathroom Remodels We Build"
-                            text="Our DC & Maryland bathroom remodeling work covers eight project types. During a no-cost walkthrough we point out which project type matches your room and spending limit."
+                            text={
+                                <>
+                                    Our <strong>bathroom renovation in Maryland</strong> and DC covers <strong>eight project types</strong>. During a <strong>no-cost walkthrough</strong> we point out which project type matches your room and spending limit.
+                                </>
+                            }
                         />
                         <Button href="#estimate" variant="secondary">
                             Book a Free Site Visit
@@ -862,7 +875,11 @@ export default function BathroomRemodeling({ data }: { data?: BathroomService })
                                     How Much Does a Bathroom Remodel <span>Cost in Maryland?</span>
                                 </>
                             }
-                            text="A full bathroom remodel in Maryland usually runs $25,000 to $45,000. Surface-only updates land between $10,000 and $20,000. Primary or luxury suites start near $50,000 and can pass $80,000. Here is the Maryland bathroom price ladder by scope:"
+                            text={
+                                <>
+                                    A <strong>full bathroom remodel in Maryland</strong> usually runs <strong>$25,000 to $45,000</strong>. Surface-only updates land between $10,000 and $20,000. Primary or luxury suites start near $50,000 and can pass $80,000. This table shows the Maryland bathroom price ladder by scope:
+                                </>
+                            }
                         />
                     </div>
 
@@ -871,17 +888,28 @@ export default function BathroomRemodeling({ data }: { data?: BathroomService })
                         <strong>$25,000–$45,000</strong>
                     </div>
 
-                    <div className={styles.pricingGrid}>
-                        {budgetTiers.map((tier) => (
-                            <article className={styles.tierCard} key={tier.tier}>
-                                <span className={styles.tierLevel}>Tier</span>
-                                <h3 className={styles.tierTitle}>{tier.title}</h3>
-                                <div className={styles.tierPrice}>
-                                    <strong>{tier.price}</strong>
-                                </div>
-                                <p className={styles.tierText}>{tier.text}</p>
-                            </article>
-                        ))}
+                    <div className={styles.priceTableWrap}>
+                        <table className={styles.priceTable}>
+                            <caption className="visually-hidden">Maryland bathroom remodel cost by scope</caption>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Scope</th>
+                                    <th scope="col">Typical cost</th>
+                                    <th scope="col">What it covers</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {budgetTiers.map((tier) => (
+                                    <tr key={tier.tier}>
+                                        <th scope="row" data-label="Scope">{tier.title}</th>
+                                        <td data-label="Typical cost" className={styles.priceTableCost}>
+                                            <strong>{tier.price}</strong>
+                                        </td>
+                                        <td data-label="What it covers">{tier.text}</td>
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
                     </div>
 
                     <p className={styles.costNote}>
@@ -894,7 +922,7 @@ export default function BathroomRemodeling({ data }: { data?: BathroomService })
                         <div className={styles.budgetCheckHead}>
                             <h3>Is $10,000 Enough for a Bathroom Remodel?</h3>
                             <p>
-                                Yes for a cosmetic refresh, and no for a new tiled shower. $10,000 covers a small bath
+                                <strong>Yes for a cosmetic refresh, and no for a new tiled shower.</strong> $10,000 covers a small bath
                                 that keeps its plumbing in place. A $5,000 to $10,000 budget buys a vanity, toilet,
                                 faucets, paint and flooring. Moving a drain or rebuilding the shower pushes the job into
                                 the full-remodel tier.
@@ -953,8 +981,8 @@ export default function BathroomRemodeling({ data }: { data?: BathroomService })
                         <figure className={styles.designMedia}>
                             <div className={styles.designImageWrap}>
                                 <Image
-                                    src="/images/services/modern-bathroom.webp"
-                                    alt="Modern bathroom with a tiled walk-in shower and floating vanity"
+                                    src="/images/bathroom-remodeling/herringbone-tile-glass-shower-bethesda-md.webp"
+                                    alt="Herringbone wall tile, a glass shower panel and matte black fixtures in a Bethesda, MD bathroom"
                                     fill
                                     sizes="(max-width: 1024px) 100vw, 46vw"
                                     className={styles.designImage}
@@ -1168,7 +1196,7 @@ export default function BathroomRemodeling({ data }: { data?: BathroomService })
                 projects={bathroomProjects}
                 eyebrow="Case Studies & Projects"
                 title="Bathroom Remodeling Projects"
-                text="Our team designed, permitted and built these four bathroom projects: Finished-room photos for all four bathrooms are on our remodeling projects page."
+                text="Our team designed, permitted and built these three Maryland bathroom projects. Each project page has photos of the finished rooms:"
             />
 
             <section id="reviews" className={styles.section} aria-labelledby="bathroom-reviews-title">
@@ -1256,43 +1284,82 @@ export default function BathroomRemodeling({ data }: { data?: BathroomService })
                         <div className={styles.areasHeader}>
                             <Badge>Areas We Serve</Badge>
                             <h2 id="areas-title">
-                                Bathroom Remodeling in Montgomery County, Laurel and Washington, DC
+                                Bathroom Remodeling in Montgomery County, MD
                             </h2>
                             <p>
-                                Bathroom remodeling crews from our office reach every Montgomery County town, plus
-                                Laurel and the District. These 13 local pages cover each area's homes, permit offices and
-                                bathroom costs:
+                                Our <strong>bathroom remodeling in Montgomery County</strong> covers{" "}
+                                <strong>11 communities</strong>, plus <strong>Laurel</strong> and <strong>DC</strong>,
+                                from our <strong>North Bethesda</strong> office. Linked towns have their own page with
+                                local homes, permit offices and bathroom costs. All 13 areas are listed with their zip
+                                codes:
                             </p>
                             <span className={styles.areasCount}>13 service areas</span>
                         </div>
 
                         <div className={styles.areasGrid}>
-                            {areaLinks.map((area, index) =>
-                                area.href ? (
-                                    <Link href={area.href} className={styles.areaCard} key={area.label}>
-                                        <span className={styles.areaNumber}>
-                                            {String(index + 1).padStart(2, "0")}
-                                        </span>
+                            {areaLinks.map((area, index) => {
+                                const number = (
+                                    <span className={styles.areaNumber}>
+                                        {String(index + 1).padStart(2, "0")}
+                                    </span>
+                                );
+                                const text = (
+                                    <span className={styles.areaText}>
                                         <span className={styles.areaLabel}>{area.label}</span>
+                                        <strong className={styles.areaZips}>{area.zips}</strong>
+                                    </span>
+                                );
+                                const wide = area.wide ? ` ${styles.areaCardWide}` : "";
+
+                                return area.href ? (
+                                    <Link href={area.href} className={`${styles.areaCard}${wide}`} key={area.label}>
+                                        {number}
+                                        {text}
                                         <ArrowIcon className={styles.areaArrow} />
                                     </Link>
                                 ) : (
-                                    <div className={`${styles.areaCard} ${styles.areaCardStatic}`} key={area.label}>
-                                        <span className={styles.areaNumber}>
-                                            {String(index + 1).padStart(2, "0")}
-                                        </span>
-                                        <span className={styles.areaLabel}>{area.label}</span>
+                                    <div className={`${styles.areaCard} ${styles.areaCardStatic}${wide}`} key={area.label}>
+                                        {number}
+                                        {text}
                                     </div>
-                                ),
-                            )}
+                                );
+                            })}
                         </div>
                     </div>
 
                     <div className={styles.areasNote}>
                         <p>
-                            DC jobs are mostly rowhouse and condo baths with tight footprints. Across Montgomery County
-                            we often pull out pink or mint 1950s tile, and we also update baths in new infill houses.
+                            <strong>DC</strong> jobs are mostly rowhouse and condo baths with tight footprints. Across{" "}
+                            <strong>Montgomery County</strong> we often pull out pink or mint 1950s tile, and we also
+                            update baths in new infill houses.
                         </p>
+                    </div>
+
+                    <div className={styles.areasMap}>
+                        <iframe
+                            src={SERVICE_AREA_MAP_EMBED_URL}
+                            title="DMV General Contracting Group LLC | Bathroom Remodeling in Montgomery County, Maryland"
+                            className={styles.areasMapFrame}
+                            loading="lazy"
+                            referrerPolicy="no-referrer-when-downgrade"
+                            allowFullScreen
+                        />
+                        <div className={styles.areasNap}>
+                            <h3>Our North Bethesda Office</h3>
+                            <Link href={GOOGLE_BUSINESS_PROFILE_URL} target="_blank" rel="noopener noreferrer">
+                                <strong>DMV General Contracting Group LLC</strong>
+                            </Link>
+                            <address>
+                                <Link href={GOOGLE_BUSINESS_PROFILE_URL} target="_blank" rel="noopener noreferrer">
+                                    11810 Grand Park Ave #500, North Bethesda, MD 20852
+                                </Link>
+                            </address>
+                            <span><strong>Phone: </strong><a href="tel:+12407301292">+1 240-730-1292</a></span>
+                            <span>Open 7 days a week</span>
+                            <Button href="#estimate" icon={<ArrowIcon />}>
+                                Book a Free Bathroom Estimate
+                            </Button>
+                        </div>
                     </div>
                 </Container>
             </section>

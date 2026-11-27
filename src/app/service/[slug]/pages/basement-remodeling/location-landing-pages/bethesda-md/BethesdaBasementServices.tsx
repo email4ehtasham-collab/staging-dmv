@@ -74,7 +74,12 @@ export default function BethesdaBasementServices() {
                         align="center"
                         eyebrow={<Badge>Services</Badge>}
                         title="Basement Finishing in Bethesda, MD: What We Build"
-                        text="Bethesda families put finished basements to eight common uses:"
+                        text={
+                            <>
+                                Our <strong>basement finishing in Bethesda, MD</strong> covers the eight uses Bethesda
+                                families most often ask for:
+                            </>
+                        }
                     />
                     <Button href="/service/basement-remodeling" variant="secondary" className={styles.headerButton}>
                         All Basement Services
@@ -93,8 +98,8 @@ export default function BethesdaBasementServices() {
 
                 <div className={styles.note}>
                     <p className={styles.noteText}>
-                        When a 1950s basement is too low to finish, lowering the floor is another option we can price. Any
-                        basement renovation in Bethesda, MD we take on begins with a no-cost visit.
+                        When a 1950s basement is too low to finish, lowering the floor is another option we can price. Any{" "}
+                        <strong>basement renovation in Bethesda, MD</strong> we take on begins with a no-cost visit.
                     </p>
                     <Button href="/contact-us" data-estimate-trigger icon={<ArrowRightIcon />} className={styles.noteButton}>
                         Book the Free Visit
