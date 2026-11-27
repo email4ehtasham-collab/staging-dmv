@@ -18,7 +18,7 @@ const KensingtonMD = () => {
     const faqData = [
         {
             question: "How much does a kitchen remodel cost in Kensington, MD?",
-            answer: "In Kensington, kitchen remodeling typically costs $38,000–$120,000+ depending on scope. A cosmetic update (new cabinets, countertops, backsplash) starts around $18,000–$32,000. A full gut renovation runs $72,000–$110,000. Older Kensington homes sometimes require additional work — pipe replacement, panel upgrades, or subfloor leveling — that can add $3,000–$12,000 to the base cost. DMV-GC Group identifies all of these during our free pre-construction assessment so you have a complete, honest estimate before signing anything."
+            answer: "In Kensington, kitchen remodeling typically costs $38,000–$120,000+ depending on scope. A cosmetic update (new cabinets, countertops, backsplash) starts around $18,000–$32,000. A full gut renovation runs $72,000–$110,000. Older Kensington homes sometimes require additional work — pipe replacement, panel upgrades, or subfloor leveling — that can add $3,000–$12,000 to the base cost. DMV General Contracting Group identifies all of these during our free pre-construction assessment so you have a complete, honest estimate before signing anything."
         },
         {
             question: "Can you remodel a small kitchen in a Kensington cape cod or bungalow?",
@@ -26,15 +26,15 @@ const KensingtonMD = () => {
         },
         {
             question: "Do older Kensington homes have special requirements for kitchen remodeling?",
-            answer: "Yes. Kensington homes built before 1980 often have galvanized steel supply lines (which restrict flow and corrode internally), undersized 100-amp electrical panels (insufficient for modern kitchen appliances), settled subfloors that need leveling before new flooring, and occasionally plaster walls rather than drywall. DMV-GC Group's in-house plumbing and electrical teams handle all of these as part of your kitchen remodel — and we assess them during the free consultation so there are no surprises mid-project."
+            answer: "Yes. Kensington homes built before 1980 often have galvanized steel supply lines (which restrict flow and corrode internally), undersized 100-amp electrical panels (insufficient for modern kitchen appliances), settled subfloors that need leveling before new flooring, and occasionally plaster walls rather than drywall. DMV General Contracting Group's in-house plumbing and electrical teams handle all of these as part of your kitchen remodel — and we assess them during the free consultation so there are no surprises mid-project."
         },
         {
-            question: "Does DMV-GC Group do open-concept kitchen conversions in Kensington?",
+            question: "Does DMV General Contracting Group do open-concept kitchen conversions in Kensington?",
             answer: "Yes. Open-concept conversions are our most requested project in Kensington's older homes. Our in-house structural engineers assess every wall before removal, perform all required load calculations, and specify the correct beam and post configuration. We manage all required Montgomery County structural permits and handle the full conversion — wall removal, beam installation, drywall patching, flooring blend, and all finishes — with our single in-house crew."
         },
         {
             question: "How long does a kitchen remodel take in Kensington?",
-            answer: "Most kitchen remodels in Kensington take 6–12 weeks. Simple cosmetic updates take 4–6 weeks. Full gut renovations or open-concept conversions take 8–12 weeks. Older Kensington homes can occasionally have unexpected conditions behind walls — aging pipes, outdated wiring, or uneven framing — that add time. DMV-GC Group builds buffer into every Kensington project schedule based on our pre-construction assessment of your specific home's condition."
+            answer: "Most kitchen remodels in Kensington take 6–12 weeks. Simple cosmetic updates take 4–6 weeks. Full gut renovations or open-concept conversions take 8–12 weeks. Older Kensington homes can occasionally have unexpected conditions behind walls — aging pipes, outdated wiring, or uneven framing — that add time. DMV General Contracting Group builds buffer into every Kensington project schedule based on our pre-construction assessment of your specific home's condition."
         },
         {
             question: "Is a kitchen remodel worth it in Kensington, MD?",

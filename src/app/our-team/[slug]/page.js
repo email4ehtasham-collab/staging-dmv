@@ -8,6 +8,7 @@ import { seoFor, toMetadata } from "@/lib/seo/resolve";
 
 import styles from "../style.module.scss";
 import NavitemActive from "@/components/Common/NavitemActive";
+import PageSchema from "@/components/Schema/PageSchema";
 
 export function generateStaticParams() {
   return TEAM_MEMBERS.map((member) => ({ slug: member.slug }));
@@ -38,6 +39,7 @@ export default async function OurTeam({ params }) {
 
   return (
     <main className="page-wrapper">
+      <PageSchema path={`/our-team/${slug}`} />
       <NavitemActive nav="our-team" />
 
       {/* (optional) banner — include if you want same as main page */}

@@ -8,118 +8,6 @@ import { useMyContext } from "@/hooks/context";
 import "../city-service-style.scss";
 import "./style.scss";
 
-const schemaJsonLd = {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "GeneralContractor",
-      "@id": "https://www.dmv-gc.com/#business",
-      "name": "DMV General Contracting Group LLC",
-      "legalName": "DMV General Contracting Group LLC",
-      "alternateName": ["DMV General Contracting Group", "DMV-GC"],
-      "image": "https://www.dmv-gc.com/logo.png",
-      "url": "https://www.dmv-gc.com",
-      "telephone": "+1-240-730-1292",
-      "email": "support@dmv-gc.com",
-      "foundingDate": "2018",
-      "description": "DLCP-licensed design-build general contractor serving Washington, DC. Specializing in rowhouse basement remodeling, English basement ADU conversions, ejector pump bathroom additions, and historic district basement renovation across all DC neighborhoods.",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "11810 Grand Park Ave #500",
-        "addressLocality": "North Bethesda",
-        "addressRegion": "MD",
-        "postalCode": "20852",
-        "addressCountry": "US"
-      },
-      "geo": { "@type": "GeoCoordinates", "latitude": 39.0458, "longitude": -77.1139 },
-      "areaServed": [
-        { "@type": "City", "name": "Washington", "sameAs": "https://en.wikipedia.org/wiki/Washington,_D.C." }
-      ],
-      "hasCredential": [
-        { "@type": "EducationalOccupationalCredential", "name": "MHIC License", "credentialCategory": "Maryland Home Improvement Contractor License" },
-        { "@type": "EducationalOccupationalCredential", "name": "DLCP License", "credentialCategory": "Washington DC Department of Licensing and Consumer Protection" }
-      ],
-      "priceRange": "$$$"
-    },
-    {
-      "@type": "Service",
-      "@id": "https://www.dmv-gc.com/service/basement-remodeling/washington-dc#service",
-      "serviceType": "Basement Remodeling",
-      "name": "Basement Remodeling in Washington, DC",
-      "provider": { "@id": "https://www.dmv-gc.com/#business" },
-      "areaServed": { "@type": "City", "name": "Washington", "sameAs": "https://en.wikipedia.org/wiki/Washington,_D.C." },
-      "description": "Full-service basement remodeling in Washington, DC. Rowhouse basement finishing, English basement ADU conversions, below-grade bathroom additions with ejector pumps, home offices, and family rooms — serving all DC neighborhoods with DLCP license, DC DOB permits, and HPRB historic district coordination.",
-      "offers": {
-        "@type": "Offer",
-        "priceCurrency": "USD",
-        "priceSpecification": { "@type": "PriceSpecification", "minPrice": "35000", "maxPrice": "175000", "priceCurrency": "USD" }
-      }
-    },
-    {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.dmv-gc.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.dmv-gc.com/services" },
-        { "@type": "ListItem", "position": 3, "name": "Basement Remodeling", "item": "https://www.dmv-gc.com/service/basement-remodeling" },
-        { "@type": "ListItem", "position": 4, "name": "Washington, DC", "item": "https://www.dmv-gc.com/service/basement-remodeling/washington-dc" }
-      ]
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "How much does basement remodeling cost in Washington, DC?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Basement remodeling in Washington, DC typically costs between $35,000 and $175,000 depending on scope and home type. A standard rowhouse basement finishing runs $35,000–$65,000. A mid-range basement with bathroom (ejector pump) and home office runs $55,000–$90,000. A full English basement ADU conversion with separate entrance, kitchen, and legal rental unit typically costs $80,000–$140,000. Basement work in DC's historic districts (Capitol Hill, Georgetown, Dupont Circle) may add complexity for any exterior modifications. DMV General Contracting Group provides free in-home consultations with detailed estimates."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Does DMV General Contracting Group hold a DC DLCP license for basement remodeling in Washington, DC?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. DMV General Contracting Group holds a Washington DC DLCP (Department of Licensing and Consumer Protection) license — required for all home improvement work in the District of Columbia. A Maryland MHIC license alone does not authorize work in DC. Any contractor performing basement renovation work in DC without a valid DLCP license is operating illegally. DMV General Contracting Group holds both MHIC (Maryland) and DLCP (DC) licenses, covering work throughout the DMV area."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is an English basement in Washington, DC?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "An English basement is a semi-below-grade space in a DC rowhouse — partially below street level but with windows above grade on the front or rear of the home, allowing natural light. English basements in DC are commonly converted into separate rental units (often called 'English basement apartments'), with their own entrance typically at the below-grade front door or a rear entrance. Converting a DC rowhouse English basement into a legal rental unit requires DC DOB permits, a Certificate of Occupancy, and often a separate electric meter — all of which DMV General Contracting Group handles in-house."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Do DC basement bathrooms require ejector pumps?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "In many cases, yes. DC rowhouse basements are typically below the city sewer line, which means waste from a below-grade bathroom cannot drain by gravity into the main drain. An ejector pump (also called a sewage ejector) receives waste from the below-grade bathroom fixtures in a sealed pit, then pumps it up to the gravity drain line. DMV General Contracting Group's licensed plumbers assess the relative elevation of the existing drain line versus the proposed bathroom fixtures for every DC basement bathroom addition — confirming whether an ejector pump is needed and sizing it correctly for the fixture count."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Does DC's historic district designation affect basement remodeling?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "For interior basement renovation — finishing, framing, drywall, flooring — DC historic district designation typically does not add regulatory requirements beyond standard DC DOB permits. However, any exterior modification visible from a public street — including new egress windows in the front of a rowhouse, new exterior doors at the front facade, or changes to the English basement entrance — may require Historic Preservation Review Board (HPRB) review or a Certificate of No Objection from the State Historic Preservation Office. DMV General Contracting Group assesses any exterior scope items for HPRB implications during the consultation for every DC historic district project."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How long does a basement remodel take in Washington, DC?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Most DC basement renovations take 7–14 weeks from construction start to completion. A standard rowhouse basement finishing takes 6–9 weeks. A full English basement ADU conversion takes 10–14 weeks. DC DOB permit processing typically takes 4–8 weeks before construction begins. HPRB review for exterior modifications adds additional time where required. DMV General Contracting Group manages the complete timeline in-house."
-          }
-        }
-      ]
-    }
-  ]
-};
-
 const stepsData = [
   {
     num: 1,
@@ -157,32 +45,32 @@ const faqData = [
   {
     eventKey: "0",
     question: "How much does basement remodeling cost in Washington, DC?",
-    answer: "Basement remodeling in DC typically costs $35,000\u2013$175,000 depending on scope. A standard rowhouse basement finishing runs $35,000\u2013$65,000. A mid-range renovation with bathroom and office runs $55,000\u2013$90,000. A full English basement ADU conversion costs $80,000\u2013$140,000. Projects in historic districts with exterior modifications add HPRB review costs. DMV-GC Group provides free in-home consultations with itemized estimates for every DC basement scope."
+    answer: "Basement remodeling in DC typically costs $35,000\u2013$175,000 depending on scope. A standard rowhouse basement finishing runs $35,000\u2013$65,000. A mid-range renovation with bathroom and office runs $55,000\u2013$90,000. A full English basement ADU conversion costs $80,000\u2013$140,000. Projects in historic districts with exterior modifications add HPRB review costs. DMV General Contracting Group provides free in-home consultations with itemized estimates for every DC basement scope."
   },
   {
     eventKey: "1",
-    question: "Does DMV-GC Group hold a DC DLCP license for basement renovation work?",
-    answer: "Yes. DMV-GC Group holds a Washington DC DLCP (Department of Licensing and Consumer Protection) license \u2014 legally required for all home improvement work in DC. A Maryland MHIC license does not authorize DC work. We also hold a Maryland MHIC license, making us one of the few contractors in the DMV area fully licensed for both jurisdictions. You can verify our DLCP license at DC\u2019s online licensing portal."
+    question: "Does DMV General Contracting Group hold a DC DLCP license for basement renovation work?",
+    answer: "Yes. DMV General Contracting Group holds a Washington DC DLCP (Department of Licensing and Consumer Protection) license \u2014 legally required for all home improvement work in DC. A Maryland MHIC license does not authorize DC work. We also hold a Maryland MHIC license, making us one of the few contractors in the DMV area fully licensed for both jurisdictions. You can verify our DLCP license at DC\u2019s online licensing portal."
   },
   {
     eventKey: "2",
     question: "What is an English basement and can it be converted to a rental unit?",
-    answer: "An English basement is the semi-below-grade level of a DC rowhouse \u2014 partially below street grade on the front with its own separate entrance typically below the main stoop. Yes, English basements can be converted to legal rental units with a DC Certificate of Occupancy, making them a legal ADU. The conversion requires a separate entrance (often already in place), egress window compliance in sleeping areas, full kitchen, full bathroom, fire-rated ceiling separation, and a COO \u2014 all of which DMV-GC Group designs, builds, and permits."
+    answer: "An English basement is the semi-below-grade level of a DC rowhouse \u2014 partially below street grade on the front with its own separate entrance typically below the main stoop. Yes, English basements can be converted to legal rental units with a DC Certificate of Occupancy, making them a legal ADU. The conversion requires a separate entrance (often already in place), egress window compliance in sleeping areas, full kitchen, full bathroom, fire-rated ceiling separation, and a COO \u2014 all of which DMV General Contracting Group designs, builds, and permits."
   },
   {
     eventKey: "3",
     question: "Do DC basement bathrooms require ejector pumps?",
-    answer: "In many cases yes. DC rowhouse basements are often at or below the elevation of the gravity sewer line, meaning waste from below-grade fixtures cannot drain by gravity. An ejector pump \u2014 a sealed pit in the basement floor with a pump that pushes waste up to the gravity drain line \u2014 is required when the proposed bathroom floor elevation is below the existing drain invert. DMV-GC Group\u2019s licensed plumbers assess this on every DC basement bathroom project before pricing."
+    answer: "In many cases yes. DC rowhouse basements are often at or below the elevation of the gravity sewer line, meaning waste from below-grade fixtures cannot drain by gravity. An ejector pump \u2014 a sealed pit in the basement floor with a pump that pushes waste up to the gravity drain line \u2014 is required when the proposed bathroom floor elevation is below the existing drain invert. DMV General Contracting Group\u2019s licensed plumbers assess this on every DC basement bathroom project before pricing."
   },
   {
     eventKey: "4",
     question: "Does DC\u2019s historic district designation affect basement remodeling?",
-    answer: "For interior work only \u2014 no. HPRB reviews exterior changes, not interior renovation. Interior finishing, framing, drywall, bathrooms, and kitchens proceed with standard DC DOB permits in historic districts. However, any exterior modification \u2014 new window opening, new entrance door, changes to the front facade \u2014 in a historic district requires HPRB review or a Certificate of No Objection before DOB permits are issued. DMV-GC Group assesses every DC project for HPRB applicability during the consultation."
+    answer: "For interior work only \u2014 no. HPRB reviews exterior changes, not interior renovation. Interior finishing, framing, drywall, bathrooms, and kitchens proceed with standard DC DOB permits in historic districts. However, any exterior modification \u2014 new window opening, new entrance door, changes to the front facade \u2014 in a historic district requires HPRB review or a Certificate of No Objection before DOB permits are issued. DMV General Contracting Group assesses every DC project for HPRB applicability during the consultation."
   },
   {
     eventKey: "5",
     question: "How long do DC DOB permits take for basement remodeling?",
-    answer: "DC DOB permit processing for basement renovation typically takes 4\u20138 weeks from application to permit issuance. Projects that also require HPRB review add 4\u20138 additional weeks for the historic review process. DMV-GC Group submits all applications as early as possible and runs DOB and HPRB applications simultaneously where applicable to minimize the pre-construction timeline."
+    answer: "DC DOB permit processing for basement renovation typically takes 4\u20138 weeks from application to permit issuance. Projects that also require HPRB review add 4\u20138 additional weeks for the historic review process. DMV General Contracting Group submits all applications as early as possible and runs DOB and HPRB applications simultaneously where applicable to minimize the pre-construction timeline."
   }
 ];
 
@@ -666,10 +554,6 @@ export default function BasementWashingtonDC() {
         </div>
 
         {/* SCHEMA JSON-LD */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaJsonLd) }}
-        />
       </div>
     </div>
   );

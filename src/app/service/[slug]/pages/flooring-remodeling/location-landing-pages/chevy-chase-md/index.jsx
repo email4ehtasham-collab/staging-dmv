@@ -7,144 +7,6 @@ import { useMyContext } from "@/hooks/context";
 import "../city-service-style.scss";
 import "./style.scss";
 
-const schemaJsonLd = {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "GeneralContractor",
-      "@id": "https://www.dmv-gc.com/#business",
-      "name": "DMV General Contracting Group LLC",
-      "legalName": "DMV General Contracting Group LLC",
-      "alternateName": ["DMV General Contracting Group", "DMV-GC"],
-      "url": "https://www.dmv-gc.com",
-      "telephone": "+1-240-730-1292",
-      "email": "support@dmv-gc.com",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "11810 Grand Park Ave #500",
-        "addressLocality": "North Bethesda",
-        "addressRegion": "MD",
-        "postalCode": "20852",
-        "addressCountry": "US"
-      },
-      "areaServed": {
-        "@type": "City",
-        "name": "Chevy Chase",
-        "sameAs": "https://en.wikipedia.org/wiki/Chevy_Chase,_Maryland"
-      },
-      "hasCredential": [
-        {
-          "@type": "EducationalOccupationalCredential",
-          "name": "MHIC License #156178"
-        },
-        {
-          "@type": "EducationalOccupationalCredential",
-          "name": "DLCP License #410526000209"
-        }
-      ],
-      "priceRange": "$$$"
-    },
-    {
-      "@type": "Service",
-      "name": "Flooring Installation in Chevy Chase, MD",
-      "serviceType": "Flooring Installation",
-      "provider": {
-        "@id": "https://www.dmv-gc.com/#business"
-      },
-      "areaServed": {
-        "@type": "City",
-        "name": "Chevy Chase"
-      },
-      "description": "Full-service flooring installation, refinishing, and replacement in Chevy Chase, MD — original hardwood refinishing, premium wide-plank oak, walnut, herringbone patterns, Carrara marble, and LVP across all five Chevy Chase villages and unincorporated Montgomery County.",
-      "offers": {
-        "@type": "Offer",
-        "priceCurrency": "USD",
-        "priceSpecification": {
-          "@type": "PriceSpecification",
-          "minPrice": "3",
-          "maxPrice": "35",
-          "priceCurrency": "USD",
-          "unitCode": "SQFT"
-        }
-      }
-    },
-    {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://www.dmv-gc.com/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Services",
-          "item": "https://www.dmv-gc.com/services"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Flooring",
-          "item": "https://www.dmv-gc.com/service/flooring-remodeling"
-        },
-        {
-          "@type": "ListItem",
-          "position": 4,
-          "name": "Chevy Chase, MD",
-          "item": "https://www.dmv-gc.com/service/flooring-remodeling/chevy-chase-md"
-        }
-      ]
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "How much does flooring installation cost in Chevy Chase, MD?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Flooring in Chevy Chase ranges from $3–$35+ per square foot. Original hardwood refinishing costs $3–$6/sq ft. Wide-plank white oak runs $12–$22/sq ft. American walnut runs $15–$28/sq ft. Herringbone pattern hardwood costs $16–$30/sq ft. LVP runs $5–$10/sq ft. Large-format porcelain with uncoupling membrane runs $12–$22/sq ft. Carrara or Calacatta marble costs $18–$35/sq ft installed. Whole-home packages in Chevy Chase's larger homes typically run $35,000–$80,000+."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can the original hardwood floors in Chevy Chase's 1920s–1940s homes be refinished?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Usually yes — and refinishing is almost always the correct first recommendation. Old-growth oak, walnut, and fir in Chevy Chase's historic homes has density and character that modern lumber cannot match. DMV General Contracting Group checks remaining thickness before recommending refinishing. When viable, it preserves irreplaceable material at $3–$6 per square foot versus $12–$28 for premium replacement."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Does Chevy Chase have special permit requirements for flooring?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Flooring-only projects typically do not require a building permit in any of Chevy Chase's six jurisdictions. When flooring is part of a broader renovation requiring a permit, the correct authority depends on which of the six jurisdictions the property falls in: Village of Chevy Chase, Town of Chevy Chase, Section 3, Section 5, Martin's Additions, or unincorporated Montgomery County. DMV General Contracting Group confirms the correct jurisdiction before any permitted renovation scope begins."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Why is an uncoupling membrane required for tile in Chevy Chase homes?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Chevy Chase's pre-1950 homes have diagonal plank subfloors that move seasonally. Tile adhered directly to this subfloor without an uncoupling membrane will crack at the board joints within a few seasonal cycles. Schlueter DITRA or equivalent membrane allows the subfloor and tile to move independently. DMV General Contracting Group installs it on every tile project in Chevy Chase's pre-1950 homes without exception."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is DMV General Contracting Group licensed for flooring in Chevy Chase, MD?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. DMV General Contracting Group holds Maryland MHIC license #156178, required for all home improvement work across all Chevy Chase jurisdictions. Fully bonded, insured, and backed by a 1-year workmanship warranty on every project."
-          }
-        }
-      ]
-    }
-  ]
-};
-
 const ChevyChaseMD = () => {
   const { setActiveMenuItem } = useMyContext();
 
@@ -155,31 +17,29 @@ const ChevyChaseMD = () => {
   const faqData = [
     {
       question: "How much does flooring installation cost in Chevy Chase, MD?",
-      answer: `Flooring in Chevy Chase ranges from $3–$35+ per square foot. Original hardwood refinishing costs $3–$6/sq ft. Wide-plank white oak runs $12–$22/sq ft. American black walnut runs $15–$28/sq ft. Herringbone pattern hardwood costs $16–$30/sq ft. Premium LVP costs $5–$10/sq ft. Large-format porcelain with uncoupling membrane runs $12–$22/sq ft. Carrara or Calacatta marble tile costs $18–$35/sq ft installed. A whole-home Chevy Chase renovation flooring package typically runs $35,000–$80,000+. Free in-home estimates with room-by-room pricing from DMV-GC Group.`
+      answer: `Flooring in Chevy Chase ranges from $3–$35+ per square foot. Original hardwood refinishing costs $3–$6/sq ft. Wide-plank white oak runs $12–$22/sq ft. American black walnut runs $15–$28/sq ft. Herringbone pattern hardwood costs $16–$30/sq ft. Premium LVP costs $5–$10/sq ft. Large-format porcelain with uncoupling membrane runs $12–$22/sq ft. Carrara or Calacatta marble tile costs $18–$35/sq ft installed. A whole-home Chevy Chase renovation flooring package typically runs $35,000–$80,000+. Free in-home estimates with room-by-room pricing from DMV General Contracting Group.`
     },
     {
       question: "Should I refinish my Chevy Chase Tudor's original floors or replace with wide-plank oak?",
-      answer: `Refinish, if the floor is viable. The old-growth oak or fir in a 1920s–1940s Chevy Chase Tudor is denser and more dimensionally stable than any new hardwood available today. Refinishing at $3–$6/sq ft preserves that material. Replacing with wide-plank white oak at $12–$22/sq ft produces a beautiful contemporary floor but not a better one. On a 3,000 sq ft Chevy Chase main floor, the cost difference is $27,000–$48,000. DMV-GC Group checks thickness and assesses condition before any recommendation. When the original floor is viable, refinishing is almost always the correct choice. When the renovation is a full gut seeking a contemporary aesthetic, premium new hardwood is clear and we present it honestly.`
+      answer: `Refinish, if the floor is viable. The old-growth oak or fir in a 1920s–1940s Chevy Chase Tudor is denser and more dimensionally stable than any new hardwood available today. Refinishing at $3–$6/sq ft preserves that material. Replacing with wide-plank white oak at $12–$22/sq ft produces a beautiful contemporary floor but not a better one. On a 3,000 sq ft Chevy Chase main floor, the cost difference is $27,000–$48,000. DMV General Contracting Group checks thickness and assesses condition before any recommendation. When the original floor is viable, refinishing is almost always the correct choice. When the renovation is a full gut seeking a contemporary aesthetic, premium new hardwood is clear and we present it honestly.`
     },
     {
       question: "Why is an uncoupling membrane required for tile in Chevy Chase homes?",
-      answer: `Chevy Chase's pre-1950 homes have diagonal plank subfloors that move seasonally. Tile adhered directly to this subfloor without a membrane bonds across those moving joints. When the boards move, the tile cracks — typically within two to three seasonal cycles regardless of grout flexibility. Schluter DITRA or equivalent membrane breaks the bond between the subfloor and tile, allowing each to move independently. The membrane adds $2–$4/sq ft but is non-negotiable for any tile installation that will last in a Chevy Chase pre-1950 home. DMV-GC Group installs it on every such project without exception.`
+      answer: `Chevy Chase's pre-1950 homes have diagonal plank subfloors that move seasonally. Tile adhered directly to this subfloor without a membrane bonds across those moving joints. When the boards move, the tile cracks — typically within two to three seasonal cycles regardless of grout flexibility. Schluter DITRA or equivalent membrane breaks the bond between the subfloor and tile, allowing each to move independently. The membrane adds $2–$4/sq ft but is non-negotiable for any tile installation that will last in a Chevy Chase pre-1950 home. DMV General Contracting Group installs it on every such project without exception.`
     },
     {
       question: "Which permit authority do I need for a Chevy Chase renovation?",
-      answer: `It depends on which of Chevy Chase's six jurisdictions your property falls in: Village of Chevy Chase, Town of Chevy Chase, Section 3, Section 5, Martin's Additions, or unincorporated Montgomery County. For flooring-only projects, a building permit is generally not required in any of these jurisdictions. When flooring is part of a broader renovation requiring a permit, DMV-GC Group confirms which authority governs your specific parcel and handles the permit submission — preventing the project delays that result from filing with the wrong jurisdiction initially.`
+      answer: `It depends on which of Chevy Chase's six jurisdictions your property falls in: Village of Chevy Chase, Town of Chevy Chase, Section 3, Section 5, Martin's Additions, or unincorporated Montgomery County. For flooring-only projects, a building permit is generally not required in any of these jurisdictions. When flooring is part of a broader renovation requiring a permit, DMV General Contracting Group confirms which authority governs your specific parcel and handles the permit submission — preventing the project delays that result from filing with the wrong jurisdiction initially.`
     },
     {
-      question: "Is DMV-GC Group licensed for flooring in Chevy Chase, MD?",
-      answer: `Yes. DMV-GC Group holds Maryland MHIC license #156178 — required for all home improvement work across all Chevy Chase jurisdictions, both incorporated villages and unincorporated Montgomery County. Fully bonded, comprehensive general liability and workers' compensation coverage, and a 1-year workmanship warranty on every Chevy Chase flooring project.`
+      question: "Is DMV General Contracting Group licensed for flooring in Chevy Chase, MD?",
+      answer: `Yes. DMV General Contracting Group holds Maryland MHIC license #156178 — required for all home improvement work across all Chevy Chase jurisdictions, both incorporated villages and unincorporated Montgomery County. Fully bonded, comprehensive general liability and workers' compensation coverage, and a 1-year workmanship warranty on every Chevy Chase flooring project.`
     }
   ];
 
   return (
     <div className="city-service-detail-page flooring-chevy-chase-md">
       <div className="container">
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaJsonLd) }} />
-
         <nav className="breadcrumb" aria-label="Breadcrumb">
           <Link href="/">Home</Link><span>›</span><Link href="/services">Services</Link><span>›</span><Link href="/service/flooring-remodeling">Flooring Installation</Link><span>›</span>Chevy Chase, MD
         </nav>

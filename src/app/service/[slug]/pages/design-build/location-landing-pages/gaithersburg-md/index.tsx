@@ -21,15 +21,15 @@ const GaithersburgMD = () => {
             answer: "Gaithersburg's home prices are priced below Bethesda, Chevy Chase, and Silver Spring equivalents despite sharing the same Montgomery County school district and benefiting from I-270 corridor employment access — the biotech and tech corridor that is one of Maryland's fastest-growing employment centers. This gap between Gaithersburg's current prices and its underlying location value means renovation dollars build equity against a lower base. As Gaithersburg's community continues growing through the Washingtonian Center area and surrounding development, renovation-driven equity gains compound that advantage further."
         },
         {
-            question: "How does DMV-GC Group handle MoCo DPS permits for Gaithersburg projects?",
-            answer: "Gaithersburg is unincorporated Montgomery County (portions are within the City of Gaithersburg, which has its own permit process). DMV-GC Group's in-house permit team handles all MoCo DPS and City of Gaithersburg permit filings, structural plan reviews, zoning submissions, and inspection scheduling for every Gaithersburg project. We file complete packages that do not require supplemental submissions."
+            question: "How does DMV General Contracting Group handle MoCo DPS permits for Gaithersburg projects?",
+            answer: "Gaithersburg is unincorporated Montgomery County (portions are within the City of Gaithersburg, which has its own permit process). DMV General Contracting Group's in-house permit team handles all MoCo DPS and City of Gaithersburg permit filings, structural plan reviews, zoning submissions, and inspection scheduling for every Gaithersburg project. We file complete packages that do not require supplemental submissions."
         },
         {
             question: "Can Gaithersburg's 1980s–2000s colonials support open-concept conversions?",
-            answer: "In most cases, yes — Gaithersburg's newer construction (1980s–2000s) often has more straightforward structural configurations than the older split-levels and colonials in closer-in communities. DMV-GC Group's in-house structural engineers confirm load-bearing wall status before any design is finalized, ensuring the open-concept layout is structurally sound and permitted correctly."
+            answer: "In most cases, yes — Gaithersburg's newer construction (1980s–2000s) often has more straightforward structural configurations than the older split-levels and colonials in closer-in communities. DMV General Contracting Group's in-house structural engineers confirm load-bearing wall status before any design is finalized, ensuring the open-concept layout is structurally sound and permitted correctly."
         },
         {
-            question: "Is DMV-GC Group licensed for design-build work in Gaithersburg, MD?",
+            question: "Is DMV General Contracting Group licensed for design-build work in Gaithersburg, MD?",
             answer: "Yes. DMV General Contracting Group holds Maryland MHIC license #156178 — required for all home improvement and construction work in Gaithersburg, Montgomery County. Fully bonded, comprehensive general liability and workers' compensation coverage, and a 1-year workmanship warranty on every Gaithersburg design-build project."
         }
     ];

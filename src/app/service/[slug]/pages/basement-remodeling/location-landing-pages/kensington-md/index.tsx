@@ -7,134 +7,6 @@ import { useMyContext } from "@/hooks/context";
 import "../city-service-style.scss";
 import "./style.scss";
 
-const schemaJsonLd = {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "GeneralContractor",
-      "@id": "https://www.dmv-gc.com/#business",
-      "name": "DMV General Contracting Group LLC",
-      "legalName": "DMV General Contracting Group LLC",
-      "alternateName": ["DMV General Contracting Group", "DMV-GC"],
-      "image": "https://www.dmv-gc.com/logo.png",
-      "url": "https://www.dmv-gc.com",
-      "telephone": "+1-240-730-1292",
-      "email": "support@dmv-gc.com",
-      "foundingDate": "2018",
-      "description": "Licensed design-build general contractor serving Kensington, MD. Specializing in basement remodeling for Victorian, Craftsman, and historic homes — recreation rooms, home offices, guest suites, and full basement finishing.",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "11810 Grand Park Ave #500",
-        "addressLocality": "North Bethesda",
-        "addressRegion": "MD",
-        "postalCode": "20852",
-        "addressCountry": "US"
-      },
-      "geo": { "@type": "GeoCoordinates", "latitude": 39.0458, "longitude": -77.1139 },
-      "areaServed": [
-        { "@type": "City", "name": "Kensington", "sameAs": "https://en.wikipedia.org/wiki/Kensington,_Maryland" },
-        { "@type": "City", "name": "Chevy Chase" },
-        { "@type": "City", "name": "Garrett Park" },
-        { "@type": "City", "name": "Silver Spring" },
-        { "@type": "City", "name": "Wheaton" }
-      ],
-      "hasCredential": [
-        { "@type": "EducationalOccupationalCredential", "name": "MHIC License", "credentialCategory": "Maryland Home Improvement Contractor License" },
-        { "@type": "EducationalOccupationalCredential", "name": "DLCP License", "credentialCategory": "Washington DC Department of Licensing and Consumer Protection" }
-      ],
-      "priceRange": "$$$"
-    },
-    {
-      "@type": "Service",
-      "@id": "https://www.dmv-gc.com/service/basement-remodeling/kensington-md#service",
-      "serviceType": "Basement Remodeling",
-      "name": "Basement Remodeling in Kensington, MD",
-      "provider": { "@id": "https://www.dmv-gc.com/#business" },
-      "areaServed": { "@type": "City", "name": "Kensington", "sameAs": "https://en.wikipedia.org/wiki/Kensington,_Maryland" },
-      "description": "Full-service basement remodeling in Kensington, MD. Recreation rooms, home offices, guest suites, basement bathrooms, and full finishing for Kensington's Victorian, Craftsman, and mid-century homes — with expertise in older systems assessment and historic home basement construction.",
-      "offers": {
-        "@type": "Offer",
-        "priceCurrency": "USD",
-        "priceSpecification": { "@type": "PriceSpecification", "minPrice": "25000", "maxPrice": "120000", "priceCurrency": "USD" }
-      },
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Basement Remodeling Services Kensington MD",
-        "itemListElement": [
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Full Basement Finishing" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Recreation Room" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Home Office Buildout" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Basement Guest Suite" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Basement Bathroom Addition" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Egress Window Installation" } }
-        ]
-      }
-    },
-    {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.dmv-gc.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.dmv-gc.com/services" },
-        { "@type": "ListItem", "position": 3, "name": "Basement Remodeling", "item": "https://www.dmv-gc.com/service/basement-remodeling" },
-        { "@type": "ListItem", "position": 4, "name": "Kensington, MD", "item": "https://www.dmv-gc.com/service/basement-remodeling/kensington-md" }
-      ]
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "How much does basement remodeling cost in Kensington, MD?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Basement remodeling in Kensington, MD typically costs between $25,000 and $120,000 depending on scope, basement size, and finish level. A standard basement finishing runs $25,000–$55,000. A mid-range basement with a bathroom and home office runs $50,000–$85,000. A full basement renovation with guest suite and custom finishes can reach $85,000–$120,000. Kensington's older Victorian and Craftsman homes often require additional work addressing older systems — galvanized plumbing, older electrical, and stone or block foundation walls — which should be budgeted for. DMV General Contracting Group provides free in-home consultations with detailed estimates."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can DMV General Contracting Group finish the basement of a Victorian or Craftsman home in Kensington?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. DMV General Contracting Group has experience finishing basements in Kensington's Victorian, Queen Anne, and Craftsman homes. These older homes often have lower ceiling heights, rubble stone or block foundation walls that require specific moisture management approaches, and older systems (galvanized plumbing, knob-and-tube wiring) that need assessment and updating before finishing begins. Our team assesses all of these conditions during the free in-home consultation and factors them into a realistic scope and budget."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Does DMV General Contracting Group handle permits for basement remodeling in Kensington?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. Kensington is an incorporated town within Montgomery County. DMV General Contracting Group's in-house permit team determines whether your specific property requires a Town of Kensington permit, a Montgomery County permit, or both, and manages the entire process from application through final inspection. Kensington homeowners never need to contact the town or county directly."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What ceiling height is needed to finish a Kensington basement?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Montgomery County building code requires a minimum ceiling height of 7 feet for habitable basement space. Many of Kensington's older Victorian and Craftsman homes have basement ceiling heights of 6'6\" to 7'4\" — meaning some rooms may meet code as-is while others may need mechanical systems re-routed to gain clearance. DMV General Contracting Group measures existing ceiling heights and identifies any areas where ductwork or beam locations affect the finished ceiling height during the initial consultation."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How long does a basement remodel take in Kensington, MD?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Most basement renovations in Kensington take 7–14 weeks from construction start to completion. Older homes may take slightly longer if older systems need to be addressed before finishing begins. Permit processing through the Town of Kensington or Montgomery County typically adds 3–5 weeks before construction begins. DMV General Contracting Group provides a detailed project schedule with every estimate."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is DMV General Contracting Group licensed for basement remodeling in Kensington, MD?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. DMV General Contracting Group holds a Maryland MHIC (Home Improvement Contractor) license — required for all home renovation work in Kensington and Montgomery County. We are fully bonded, carry comprehensive general liability insurance and workers' compensation coverage, and provide a 1-year workmanship warranty on every basement remodeling project completed in Kensington."
-          }
-        }
-      ]
-    }
-  ]
-};
-
 export default function BasementKensingtonMD() {
   const { setActiveMenuItem } = useMyContext();
 
@@ -565,37 +437,37 @@ export default function BasementKensingtonMD() {
           <Accordion.Item eventKey="0">
             <Accordion.Header>How much does basement remodeling cost in Kensington, MD?</Accordion.Header>
             <Accordion.Body>
-              Basement remodeling in Kensington typically costs $25,000–$120,000 depending on scope and finish level. Standard finishing runs $30–$55 per sq ft. A full 600–900 sq ft finishing costs $25,000–$55,000. Adding moisture management adds $6,000–$18,000. A bathroom addition adds $18,000–$38,000. A full renovation with guest suite can reach $75,000–$120,000. Historic homes typically add 10–20% for older systems work. DMV-GC Group provides free in-home consultations with itemized estimates.
+              Basement remodeling in Kensington typically costs $25,000–$120,000 depending on scope and finish level. Standard finishing runs $30–$55 per sq ft. A full 600–900 sq ft finishing costs $25,000–$55,000. Adding moisture management adds $6,000–$18,000. A bathroom addition adds $18,000–$38,000. A full renovation with guest suite can reach $75,000–$120,000. Historic homes typically add 10–20% for older systems work. DMV General Contracting Group provides free in-home consultations with itemized estimates.
             </Accordion.Body>
           </Accordion.Item>
           <Accordion.Item eventKey="1">
-            <Accordion.Header>Can DMV-GC Group finish the basement of a Victorian or Craftsman home in Kensington?</Accordion.Header>
+            <Accordion.Header>Can DMV General Contracting Group finish the basement of a Victorian or Craftsman home in Kensington?</Accordion.Header>
             <Accordion.Body>
-              Yes. DMV-GC Group has experience finishing basements in Kensington&apos;s Victorian, Queen Anne, and Craftsman homes. These older homes often have lower ceiling heights, stone or block foundation walls that require specific moisture management, and older systems that need assessment and updating before finishing begins. We assess all of these conditions during the free consultation and factor them into a realistic scope and budget.
+              Yes. DMV General Contracting Group has experience finishing basements in Kensington&apos;s Victorian, Queen Anne, and Craftsman homes. These older homes often have lower ceiling heights, stone or block foundation walls that require specific moisture management, and older systems that need assessment and updating before finishing begins. We assess all of these conditions during the free consultation and factor them into a realistic scope and budget.
             </Accordion.Body>
           </Accordion.Item>
           <Accordion.Item eventKey="2">
             <Accordion.Header>What ceiling height is needed to finish a Kensington basement?</Accordion.Header>
             <Accordion.Body>
-              Montgomery County building code requires a minimum ceiling height of 7 feet for habitable basement space. Many of Kensington&apos;s older homes have ceiling heights of 6&apos;6&quot;–7&apos;0&quot;. DMV-GC Group measures all basement ceiling heights during the consultation and identifies where ductwork rerouting can recover clearance — often gaining 6–12 inches in constrained areas.
+              Montgomery County building code requires a minimum ceiling height of 7 feet for habitable basement space. Many of Kensington&apos;s older homes have ceiling heights of 6&apos;6&quot;–7&apos;0&quot;. DMV General Contracting Group measures all basement ceiling heights during the consultation and identifies where ductwork rerouting can recover clearance — often gaining 6–12 inches in constrained areas.
             </Accordion.Body>
           </Accordion.Item>
           <Accordion.Item eventKey="3">
-            <Accordion.Header>Does DMV-GC Group handle permits for basement remodeling in Kensington?</Accordion.Header>
+            <Accordion.Header>Does DMV General Contracting Group handle permits for basement remodeling in Kensington?</Accordion.Header>
             <Accordion.Body>
-              Yes. Kensington is an incorporated town within Montgomery County, and permits may be required from the Town of Kensington, Montgomery County, or both — depending on your property&apos;s exact location. DMV-GC Group verifies the correct jurisdiction for your specific address and manages the entire permit process from application through final inspection.
+              Yes. Kensington is an incorporated town within Montgomery County, and permits may be required from the Town of Kensington, Montgomery County, or both — depending on your property&apos;s exact location. DMV General Contracting Group verifies the correct jurisdiction for your specific address and manages the entire permit process from application through final inspection.
             </Accordion.Body>
           </Accordion.Item>
           <Accordion.Item eventKey="4">
             <Accordion.Header>Do I need to worry about moisture before finishing my Kensington basement?</Accordion.Header>
             <Accordion.Body>
-              Yes — especially in Kensington&apos;s older stone and block foundation homes. Finishing a basement with unaddressed moisture issues is the most common and costly renovation mistake. DMV-GC Group provides a written moisture assessment with findings and recommendations before any design or pricing is finalized. Addressing moisture before finishing — not after — is always the correct sequence.
+              Yes — especially in Kensington&apos;s older stone and block foundation homes. Finishing a basement with unaddressed moisture issues is the most common and costly renovation mistake. DMV General Contracting Group provides a written moisture assessment with findings and recommendations before any design or pricing is finalized. Addressing moisture before finishing — not after — is always the correct sequence.
             </Accordion.Body>
           </Accordion.Item>
           <Accordion.Item eventKey="5">
-            <Accordion.Header>Is DMV-GC Group licensed for basement remodeling in Kensington, MD?</Accordion.Header>
+            <Accordion.Header>Is DMV General Contracting Group licensed for basement remodeling in Kensington, MD?</Accordion.Header>
             <Accordion.Body>
-              Yes. DMV-GC Group holds a Maryland MHIC (Home Improvement Contractor) license — required for all home renovation work in Kensington and Montgomery County. We employ licensed plumbers and electricians in-house, are fully bonded, carry comprehensive general liability insurance and workers&apos; compensation coverage, and provide a 1-year workmanship warranty on every basement project.
+              Yes. DMV General Contracting Group holds a Maryland MHIC (Home Improvement Contractor) license — required for all home renovation work in Kensington and Montgomery County. We employ licensed plumbers and electricians in-house, are fully bonded, carry comprehensive general liability insurance and workers&apos; compensation coverage, and provide a 1-year workmanship warranty on every basement project.
             </Accordion.Body>
           </Accordion.Item>
         </Accordion>
@@ -622,10 +494,6 @@ export default function BasementKensingtonMD() {
         </div>
 
         {/* SCHEMA JSON-LD */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaJsonLd) }}
-        />
       </div>
     </div>
   );

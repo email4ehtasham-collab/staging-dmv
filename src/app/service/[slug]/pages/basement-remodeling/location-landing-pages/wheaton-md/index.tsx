@@ -7,158 +7,30 @@ import { useMyContext } from "@/hooks/context";
 import "../city-service-style.scss";
 import "./style.scss";
 
-const schemaJsonLd = {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "GeneralContractor",
-      "@id": "https://www.dmv-gc.com/#business",
-      "name": "DMV General Contracting Group LLC",
-      "legalName": "DMV General Contracting Group LLC",
-      "alternateName": ["DMV General Contracting Group", "DMV-GC"],
-      "image": "https://www.dmv-gc.com/logo.png",
-      "url": "https://www.dmv-gc.com",
-      "telephone": "+1-240-730-1292",
-      "email": "support@dmv-gc.com",
-      "foundingDate": "2018",
-      "description": "Licensed design-build general contractor serving Wheaton, MD. Specializing in basement remodeling for Wheaton's split-levels, ranches, and colonials — recreation rooms, ADU conversions, home offices, and guest suites.",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "11810 Grand Park Ave #500",
-        "addressLocality": "North Bethesda",
-        "addressRegion": "MD",
-        "postalCode": "20852",
-        "addressCountry": "US"
-      },
-      "geo": { "@type": "GeoCoordinates", "latitude": 39.0458, "longitude": -77.1139 },
-      "areaServed": [
-        { "@type": "City", "name": "Wheaton", "sameAs": "https://en.wikipedia.org/wiki/Wheaton,_Maryland" },
-        { "@type": "City", "name": "Silver Spring" },
-        { "@type": "City", "name": "Kensington" },
-        { "@type": "City", "name": "Gaithersburg" },
-        { "@type": "City", "name": "Rockville" }
-      ],
-      "hasCredential": [
-        { "@type": "EducationalOccupationalCredential", "name": "MHIC License", "credentialCategory": "Maryland Home Improvement Contractor License" },
-        { "@type": "EducationalOccupationalCredential", "name": "DLCP License", "credentialCategory": "Washington DC Department of Licensing and Consumer Protection" }
-      ],
-      "priceRange": "$$"
-    },
-    {
-      "@type": "Service",
-      "@id": "https://www.dmv-gc.com/service/basement-remodeling/wheaton-md#service",
-      "serviceType": "Basement Remodeling",
-      "name": "Basement Remodeling in Wheaton, MD",
-      "provider": { "@id": "https://www.dmv-gc.com/#business" },
-      "areaServed": { "@type": "City", "name": "Wheaton", "sameAs": "https://en.wikipedia.org/wiki/Wheaton,_Maryland" },
-      "description": "Full-service basement remodeling in Wheaton, MD. Split-level finishing, ADU basement conversions, recreation rooms, home offices, guest suites, and basement bathroom additions for Wheaton's diverse housing stock.",
-      "offers": {
-        "@type": "Offer",
-        "priceCurrency": "USD",
-        "priceSpecification": { "@type": "PriceSpecification", "minPrice": "16000", "maxPrice": "100000", "priceCurrency": "USD" }
-      },
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Basement Remodeling Services Wheaton MD",
-        "itemListElement": [
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Split-Level Basement Finishing" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "ADU Basement Conversion" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Recreation Room & Family Room" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Home Office Buildout" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Basement Guest Suite" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Basement Bathroom Addition" } }
-        ]
-      }
-    },
-    {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.dmv-gc.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.dmv-gc.com/services" },
-        { "@type": "ListItem", "position": 3, "name": "Basement Remodeling", "item": "https://www.dmv-gc.com/service/basement-remodeling" },
-        { "@type": "ListItem", "position": 4, "name": "Wheaton, MD", "item": "https://www.dmv-gc.com/service/basement-remodeling/wheaton-md" }
-      ]
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "How much does basement remodeling cost in Wheaton, MD?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Basement remodeling in Wheaton, MD typically costs between $16,000 and $100,000 depending on scope, basement size, and finish level. A basic split-level lower-level finishing runs $16,000–$35,000. A mid-range basement with bathroom and home office runs $35,000–$65,000. A full ADU basement conversion with egress windows, separate entrance, kitchen, and bathroom typically runs $60,000–$100,000. Wheaton's value-oriented housing market means basement renovations here offer some of the strongest ROI percentages in Montgomery County. DMV General Contracting Group provides free in-home consultations with detailed estimates."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can DMV General Contracting Group finish a split-level basement in Wheaton?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. Split-level homes are extremely common in Wheaton — built extensively throughout the 1950s–1970s. Their lower levels are partially above grade, which typically means natural light from existing windows, more generous ceiling heights than fully below-grade basements, and sometimes an existing exterior door that simplifies separate entrance requirements for ADU conversions. DMV General Contracting Group has extensive experience finishing Wheaton split-level lower levels."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Does DMV General Contracting Group build ADU basement units in Wheaton?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. ADU basement conversions are a popular project in Wheaton, driven by the area's affordable home values, diverse community, and growing transit access from the Wheaton Metro station and the incoming Purple Line. A legal Montgomery County basement ADU requires egress windows, a separate entrance, a full kitchen or kitchenette, a full bathroom, fire separation, and a Certificate of Occupancy — all of which DMV General Contracting Group designs, builds, and permits in-house."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Does DMV General Contracting Group handle permits for basement remodeling in Wheaton?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. Wheaton is an unincorporated community in Montgomery County, so all basement remodeling permits are processed through Montgomery County's Department of Permitting Services (DPS). DMV General Contracting Group handles all required building, electrical, and plumbing permits and manages all county correspondence and inspection scheduling. For ADU projects, we also manage the Certificate of Occupancy process."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How long does a basement remodel take in Wheaton, MD?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Most basement renovations in Wheaton take 6–12 weeks from construction start to completion. A split-level lower-level finishing takes 5–8 weeks. A full ADU conversion takes 10–14 weeks. Montgomery County permit processing typically adds 4–6 weeks before construction begins. ADU projects also require a Certificate of Occupancy inspection at completion. DMV General Contracting Group manages the complete timeline in-house."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is DMV General Contracting Group licensed for basement remodeling in Wheaton, MD?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. DMV General Contracting Group holds a Maryland MHIC (Home Improvement Contractor) license — required for all home renovation work in Wheaton and Montgomery County. We are fully bonded, carry comprehensive general liability insurance and workers' compensation coverage, and provide a 1-year workmanship warranty on every basement remodeling project completed in Wheaton."
-          }
-        }
-      ]
-    }
-  ]
-};
-
 const faqData = [
   {
     question: "How much does basement remodeling cost in Wheaton, MD?",
-    answer: "Basement remodeling in Wheaton typically costs $16,000–$100,000 depending on scope. A split-level lower level finishing runs $16,000–$32,000. Full below-grade finishing costs $24,000–$48,000. A mid-range basement with bathroom and office runs $32,000–$60,000. A full ADU conversion (egress, entrance, kitchen, bathroom, COO) costs $60,000–$100,000. DMV-GC Group provides free in-home consultations with itemized estimates for any scope."
+    answer: "Basement remodeling in Wheaton typically costs $16,000–$100,000 depending on scope. A split-level lower level finishing runs $16,000–$32,000. Full below-grade finishing costs $24,000–$48,000. A mid-range basement with bathroom and office runs $32,000–$60,000. A full ADU conversion (egress, entrance, kitchen, bathroom, COO) costs $60,000–$100,000. DMV General Contracting Group provides free in-home consultations with itemized estimates for any scope."
   },
   {
-    question: "Can DMV-GC Group finish a split-level basement in Wheaton?",
+    question: "Can DMV General Contracting Group finish a split-level basement in Wheaton?",
     answer: "Yes. Split-level homes are extremely common in Wheaton and their lower levels are among the most practical basement finishing projects we complete. The partially above-grade nature of these spaces means natural light, more generous ceiling heights, and often an existing exterior door — all of which reduce cost and complexity compared to fully below-grade finishing. We have completed numerous split-level lower-level renovations throughout Wheaton's neighborhoods."
   },
   {
-    question: "Does DMV-GC Group build legal ADU basement units in Wheaton?",
-    answer: "Yes. ADU basement conversions are a major part of our Wheaton business, driven by the area's Metro access and growing rental demand. A legal Montgomery County ADU requires egress windows, a separate entrance, kitchen or kitchenette, full bathroom, fire-rated separation, and a Certificate of Occupancy. DMV-GC Group manages all of these requirements — including the COO application and all required inspections."
+    question: "Does DMV General Contracting Group build legal ADU basement units in Wheaton?",
+    answer: "Yes. ADU basement conversions are a major part of our Wheaton business, driven by the area's Metro access and growing rental demand. A legal Montgomery County ADU requires egress windows, a separate entrance, kitchen or kitchenette, full bathroom, fire-rated separation, and a Certificate of Occupancy. DMV General Contracting Group manages all of these requirements — including the COO application and all required inspections."
   },
   {
-    question: "Does DMV-GC Group handle permits for basement remodeling in Wheaton?",
-    answer: "Yes. Wheaton is an unincorporated community in Montgomery County — all permits go through Montgomery County's Department of Permitting Services (DPS). DMV-GC Group handles all required building, electrical, and plumbing permits, plus the Certificate of Occupancy application for ADU projects. Our permit team manages all county correspondence and inspections from start to finish."
+    question: "Does DMV General Contracting Group handle permits for basement remodeling in Wheaton?",
+    answer: "Yes. Wheaton is an unincorporated community in Montgomery County — all permits go through Montgomery County's Department of Permitting Services (DPS). DMV General Contracting Group handles all required building, electrical, and plumbing permits, plus the Certificate of Occupancy application for ADU projects. Our permit team manages all county correspondence and inspections from start to finish."
   },
   {
     question: "How does the Purple Line affect basement ADU values in Wheaton?",
     answer: "Transit access is the strongest single driver of rental demand in Montgomery County. The Purple Line will add a second major transit option to Wheaton — connecting it to Bethesda, Silver Spring, and New Carrollton. This additional connectivity is expected to increase rental demand in Wheaton and support higher rents for transit-accessible units. Homeowners who build ADU units before the Purple Line opens are likely to benefit from both current Red Line demand and the incremental demand the Purple Line brings."
   },
   {
-    question: "Is DMV-GC Group licensed for basement remodeling in Wheaton, MD?",
-    answer: "Yes. DMV-GC Group holds a Maryland MHIC (Home Improvement Contractor) license — required for all home renovation work in Wheaton and Montgomery County. We employ licensed plumbers and electricians in-house, are fully bonded, carry comprehensive general liability insurance and workers' compensation coverage, and provide a 1-year workmanship warranty on every basement project."
+    question: "Is DMV General Contracting Group licensed for basement remodeling in Wheaton, MD?",
+    answer: "Yes. DMV General Contracting Group holds a Maryland MHIC (Home Improvement Contractor) license — required for all home renovation work in Wheaton and Montgomery County. We employ licensed plumbers and electricians in-house, are fully bonded, carry comprehensive general liability insurance and workers' compensation coverage, and provide a 1-year workmanship warranty on every basement project."
   }
 ];
 
@@ -171,11 +43,6 @@ export default function BasementWheatonMD() {
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaJsonLd) }}
-      />
-
       <main className="page-wrapper">
         <div className="city-service-detail-page basement-wheaton-md">
           <div className="container">

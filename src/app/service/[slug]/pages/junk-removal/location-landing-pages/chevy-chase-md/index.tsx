@@ -7,125 +7,6 @@ import NavitemActive from "@/components/Common/NavitemActive";
 import "@/app/service/[slug]/pages/junk-removal/location-landing-pages/city-service-style.scss";
 import "./style.scss";
 
-const schemaJsonLd = {
-    "@context": "https://schema.org",
-    "@graph": [
-        {
-            "@type": "GeneralContractor",
-            "@id": "https://www.dmv-gc.com/#business",
-            "name": "DMV General Contracting Group LLC",
-            "legalName": "DMV General Contracting Group LLC",
-            "alternateName": ["DMV General Contracting Group", "DMV-GC"],
-            "image": "https://www.dmv-gc.com/logo.png",
-            "url": "https://www.dmv-gc.com",
-            "telephone": "+1-240-730-1292",
-            "email": "support@dmv-gc.com",
-            "foundingDate": "2018",
-            "description": "Licensed Maryland general contractor providing professional junk removal and debris hauling services in Chevy Chase, MD. Residential cleanouts, commercial spaces, bulky items, renovation debris, and unwanted clutter. MHIC #156178.",
-            "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "11810 Grand Park Ave #500",
-                "addressLocality": "North Bethesda",
-                "addressRegion": "MD",
-                "postalCode": "20852",
-                "addressCountry": "US"
-            },
-            "geo": {
-                "@type": "GeoCoordinates",
-                "latitude": 38.9654,
-                "longitude": -77.0797
-            },
-            "areaServed": [
-                { "@type": "City", "name": "Chevy Chase", "sameAs": "https://en.wikipedia.org/wiki/Chevy_Chase,_Maryland" },
-                { "@type": "City", "name": "Chevy Chase Village" },
-                { "@type": "City", "name": "Friendship Heights" },
-                { "@type": "City", "name": "Somerset" },
-                { "@type": "City", "name": "Bethesda" },
-                { "@type": "City", "name": "Silver Spring" },
-                { "@type": "AdministrativeArea", "name": "Montgomery County, MD" }
-            ],
-            "hasCredential": [
-                {
-                    "@type": "EducationalOccupationalCredential",
-                    "name": "MHIC License",
-                    "credentialCategory": "Maryland Home Improvement Contractor License — issued by the Maryland Home Improvement Commission #156178"
-                },
-                {
-                    "@type": "EducationalOccupationalCredential",
-                    "name": "DLCP License",
-                    "credentialCategory": "Washington DC Department of Licensing and Consumer Protection — Home Improvement Contractor #410526000209"
-                }
-            ],
-            "priceRange": "$$",
-            "openingHoursSpecification": {
-                "@type": "OpeningHoursSpecification",
-                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-                "opens": "08:00",
-                "closes": "20:00"
-            }
-        },
-        {
-            "@type": "Service",
-            "@id": "https://www.dmv-gc.com/service/junk-removal/chevy-chase-md#service",
-            "serviceType": "Junk Removal, Construction Debris Removal, Residential Cleanout, Commercial Cleanup, Bulk Item Pickup, Property Cleanout",
-            "name": "Junk Removal in Chevy Chase, MD",
-            "provider": { "@id": "https://www.dmv-gc.com/#business" },
-            "areaServed": {
-                "@type": "City",
-                "name": "Chevy Chase",
-                "sameAs": "https://en.wikipedia.org/wiki/Chevy_Chase,_Maryland"
-            },
-            "description": "Professional junk removal and debris removal services in Chevy Chase, MD — residential cleanouts, commercial spaces, bulky items, renovation debris, and unwanted clutter. Licensed and insured."
-        },
-        {
-            "@type": "BreadcrumbList",
-            "itemListElement": [
-                { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.dmv-gc.com/" },
-                { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.dmv-gc.com/services" },
-                { "@type": "ListItem", "position": 3, "name": "Junk Removal", "item": "https://www.dmv-gc.com/service/junk-removal" },
-                { "@type": "ListItem", "position": 4, "name": "Chevy Chase, MD", "item": "https://www.dmv-gc.com/service/junk-removal/chevy-chase-md" }
-            ]
-        },
-        {
-            "@type": "FAQPage",
-            "mainEntity": [
-                {
-                    "@type": "Question",
-                    "name": "What types of junk can you remove in Chevy Chase?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "We handle many common residential and commercial items, general clutter, bulk items, and non-hazardous renovation or construction debris in Chevy Chase, MD. Contact us with the details of your specific items."
-                    }
-                },
-                {
-                    "@type": "Question",
-                    "name": "Do you provide residential junk removal in Chevy Chase?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "Yes. Our residential junk removal services can help with home cleanouts, garages, basements, renovation cleanup, and general household clutter."
-                    }
-                },
-                {
-                    "@type": "Question",
-                    "name": "Can you remove construction debris after a remodeling project?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "Yes. We provide construction debris removal for applicable renovation and remodeling projects. Share the project details with our team so we can determine the appropriate removal plan."
-                    }
-                },
-                {
-                    "@type": "Question",
-                    "name": "How do I schedule junk removal in Chevy Chase, MD?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "Call DMV-GC at +1 240-730-1292 or email support@dmv-gc.com to discuss your junk removal needs and arrange the next steps."
-                    }
-                }
-            ]
-        }
-    ]
-};
-
 export default function JunkRemovalChevyChaseMD() {
     const faqData = [
         {
@@ -371,10 +252,6 @@ export default function JunkRemovalChevyChaseMD() {
                 </div>
             </div>
 
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaJsonLd) }}
-            />
         </div>
     );
 }

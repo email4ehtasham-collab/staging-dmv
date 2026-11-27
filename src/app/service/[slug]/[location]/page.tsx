@@ -3,6 +3,7 @@ import { Metadata } from "next";
 import ServiceData from "@/data/services/ServiceData";
 import locationMetadata from "@/data/services/locationMetadata";
 import getDynamicLocationComponent, { getLocationStaticParams } from "../../getDynamicLocationComponent";
+import PageSchema from "@/components/Schema/PageSchema";
 
 export function generateStaticParams() {
     return getLocationStaticParams();
@@ -43,5 +44,10 @@ export default async function Page({ params }: { params: Promise<{ slug: string;
 
     const service = ServiceData.find((s) => s.slug === slug);
 
-    return <DynamicComponent data={service} location={location} />;
+    return (
+        <>
+            <PageSchema path={`/service/${slug}/${location}`} />
+            <DynamicComponent data={service} location={location} />
+        </>
+    );
 }

@@ -7,125 +7,6 @@ import NavitemActive from "@/components/Common/NavitemActive";
 import "@/app/service/[slug]/pages/junk-removal/location-landing-pages/city-service-style.scss";
 import "./style.scss";
 
-const schemaJsonLd = {
-    "@context": "https://schema.org",
-    "@graph": [
-        {
-            "@type": "GeneralContractor",
-            "@id": "https://www.dmv-gc.com/#business",
-            "name": "DMV General Contracting Group LLC",
-            "legalName": "DMV General Contracting Group LLC",
-            "alternateName": ["DMV General Contracting Group", "DMV-GC"],
-            "image": "https://www.dmv-gc.com/logo.png",
-            "url": "https://www.dmv-gc.com",
-            "telephone": "+1-240-730-1292",
-            "email": "support@dmv-gc.com",
-            "foundingDate": "2018",
-            "description": "Licensed Maryland general contractor providing professional junk removal and debris hauling services in Potomac, MD. Large-scale construction debris removal, full estate cleanouts, bulk item pickup, and renovation waste hauling for Potomac's R-200 estate properties. MHIC #156178.",
-            "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "11810 Grand Park Ave #500",
-                "addressLocality": "North Bethesda",
-                "addressRegion": "MD",
-                "postalCode": "20852",
-                "addressCountry": "US"
-            },
-            "geo": {
-                "@type": "GeoCoordinates",
-                "latitude": 39.0458,
-                "longitude": -77.1139
-            },
-            "areaServed": [
-                { "@type": "City", "name": "Potomac", "sameAs": "https://en.wikipedia.org/wiki/Potomac,_Maryland" },
-                { "@type": "City", "name": "North Bethesda" },
-                { "@type": "City", "name": "Bethesda" },
-                { "@type": "City", "name": "Rockville" },
-                { "@type": "City", "name": "Cabin John" },
-                { "@type": "City", "name": "Chevy Chase" },
-                { "@type": "AdministrativeArea", "name": "Montgomery County, MD" }
-            ],
-            "hasCredential": [
-                {
-                    "@type": "EducationalOccupationalCredential",
-                    "name": "MHIC License",
-                    "credentialCategory": "Maryland Home Improvement Contractor License — issued by the Maryland Home Improvement Commission #156178"
-                },
-                {
-                    "@type": "EducationalOccupationalCredential",
-                    "name": "DLCP License",
-                    "credentialCategory": "Washington DC Department of Licensing and Consumer Protection — Home Improvement Contractor #410526000209"
-                }
-            ],
-            "priceRange": "$$",
-            "openingHoursSpecification": {
-                "@type": "OpeningHoursSpecification",
-                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-                "opens": "08:00",
-                "closes": "20:00"
-            }
-        },
-        {
-            "@type": "Service",
-            "@id": "https://www.dmv-gc.com/service/junk-removal/potomac-md#service",
-            "serviceType": "Junk Removal, Construction Debris Removal, Estate Cleanout, Bulk Item Pickup, Renovation Waste Removal, Large-Scale Debris Hauling",
-            "name": "Junk Removal Services in Potomac, MD",
-            "provider": { "@id": "https://www.dmv-gc.com/#business" },
-            "areaServed": {
-                "@type": "City",
-                "name": "Potomac",
-                "sameAs": "https://en.wikipedia.org/wiki/Potomac,_Maryland"
-            },
-            "description": "Professional junk removal and debris hauling for Potomac's estate properties — large-scale construction debris removal, full estate cleanouts, bulk item pickup, renovation waste hauling, and garage and basement cleanouts. Equipped for Potomac's estate scale. MHIC #156178."
-        },
-        {
-            "@type": "BreadcrumbList",
-            "itemListElement": [
-                { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.dmv-gc.com/" },
-                { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.dmv-gc.com/services" },
-                { "@type": "ListItem", "position": 3, "name": "Junk Removal", "item": "https://www.dmv-gc.com/service/junk-removal" },
-                { "@type": "ListItem", "position": 4, "name": "Potomac, MD", "item": "https://www.dmv-gc.com/service/junk-removal/potomac-md" }
-            ]
-        },
-        {
-            "@type": "FAQPage",
-            "mainEntity": [
-                {
-                    "@type": "Question",
-                    "name": "Can DMV General Contracting Group handle large-scale debris removal from a Potomac estate renovation?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "Yes. Potomac's estate-scale renovations — whole-home gut remodels, large addition projects, and full outdoor living builds — generate significantly more debris volume than standard suburban renovations. DMV General Contracting Group coordinates large-scale, multi-load debris removal for Potomac renovation projects, with hauls scheduled at project milestones to keep the job site clear throughout. As a licensed general contractor, we manage debris removal as part of the overall renovation workflow or as a standalone service."
-                    }
-                },
-                {
-                    "@type": "Question",
-                    "name": "Do you provide estate cleanout services for Potomac homes being sold or transferred?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "Yes. DMV General Contracting Group provides full estate cleanout services for Potomac properties — removing furniture, appliances, household goods, and accumulated belongings from homes being prepared for sale, renovation, or estate transfer. Potomac estate properties are often large homes with decades of accumulated contents — our team handles the full scope efficiently and responsibly, with donation and recycling coordination included where the family wishes."
-                    }
-                },
-                {
-                    "@type": "Question",
-                    "name": "How does junk removal in Potomac differ from standard suburban service?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "Potomac's R-200 zoned estate properties are typically much larger than standard suburban homes — larger rooms, more storage space, longer driveways, and significantly greater debris volumes from renovation projects. Estate cleanouts in Potomac frequently require multiple truck loads. Renovation debris from a Potomac kitchen remodel or whole-home renovation can far exceed what a standard suburban project generates. DMV General Contracting Group is equipped for Potomac's estate scale — not just standard suburban volumes."
-                    }
-                },
-                {
-                    "@type": "Question",
-                    "name": "How much does junk removal cost in Potomac, MD?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "Junk removal costs in Potomac reflect the community's estate scale. A single bulk item pickup starts at $75–$150. A partial load runs $150–$400. A full truck load runs $400–$700+. Multi-load estate cleanouts and large construction debris projects are priced by scope after a free on-site review. Potomac estate cleanouts frequently require 2–4+ loads — all priced transparently at the free estimate before work begins."
-                    }
-                }
-            ]
-        }
-    ]
-};
-
 export default function JunkRemovalPotomacMD() {
     const faqData = [
         {
@@ -372,10 +253,6 @@ export default function JunkRemovalPotomacMD() {
                 </div>
             </div>
 
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaJsonLd) }}
-            />
         </div>
     );
 }

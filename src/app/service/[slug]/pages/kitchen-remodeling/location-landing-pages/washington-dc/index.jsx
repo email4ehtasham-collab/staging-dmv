@@ -17,27 +17,27 @@ const WashingtonDC = () => {
     const faqData = [
         {
             question: "How much does a kitchen remodel cost in Washington, DC?",
-            answer: "Kitchen remodeling in DC typically costs $20,000–$180,000+ depending on home type, scope, and finishes. A galley kitchen refresh starts around $20,000–$35,000. A mid-range renovation runs $40,000–$75,000. A full gut renovation costs $80,000–$130,000. Open-concept conversions run $70,000–$130,000, and a rear addition or pop-back can range from $100,000–$180,000+. Condo kitchen renovations run $28,000–$60,000. DMV-GC Group provides free in-home consultations with detailed estimates specific to your property."
+            answer: "Kitchen remodeling in DC typically costs $20,000–$180,000+ depending on home type, scope, and finishes. A galley kitchen refresh starts around $20,000–$35,000. A mid-range renovation runs $40,000–$75,000. A full gut renovation costs $80,000–$130,000. Open-concept conversions run $70,000–$130,000, and a rear addition or pop-back can range from $100,000–$180,000+. Condo kitchen renovations run $28,000–$60,000. DMV General Contracting Group provides free in-home consultations with detailed estimates specific to your property."
         },
         {
-            question: "Is DMV-GC Group licensed to do kitchen remodeling in Washington, DC?",
-            answer: "Yes. DMV-GC Group holds a license from the DC Department of Licensing and Consumer Protection (DLCP) as a Home Improvement Contractor — the license required to legally perform residential renovation work in Washington, DC. We also hold a Maryland MHIC license. We are fully bonded and insured, and provide a 1-year workmanship warranty on every kitchen remodeling project completed in DC."
+            question: "Is DMV General Contracting Group licensed to do kitchen remodeling in Washington, DC?",
+            answer: "Yes. DMV General Contracting Group holds a license from the DC Department of Licensing and Consumer Protection (DLCP) as a Home Improvement Contractor — the license required to legally perform residential renovation work in Washington, DC. We also hold a Maryland MHIC license. We are fully bonded and insured, and provide a 1-year workmanship warranty on every kitchen remodeling project completed in DC."
         },
         {
-            question: "Can DMV-GC Group add a rear addition or pop-back to expand my DC rowhouse kitchen?",
-            answer: "Yes. Rear additions — often called 'pop-backs' — are one of the most common ways to expand a kitchen in a DC rowhouse. DMV-GC Group's in-house architects design additions that maximize usable kitchen space within DC's zoning regulations, including lot occupancy and rear yard setback requirements. We handle the full permit process through the DC Department of Buildings (DOB), including any required zoning review and HPRB review if your property is in a historic district."
+            question: "Can DMV General Contracting Group add a rear addition or pop-back to expand my DC rowhouse kitchen?",
+            answer: "Yes. Rear additions — often called 'pop-backs' — are one of the most common ways to expand a kitchen in a DC rowhouse. DMV General Contracting Group's in-house architects design additions that maximize usable kitchen space within DC's zoning regulations, including lot occupancy and rear yard setback requirements. We handle the full permit process through the DC Department of Buildings (DOB), including any required zoning review and HPRB review if your property is in a historic district."
         },
         {
-            question: "Does DMV-GC Group handle DC permits for kitchen remodeling?",
-            answer: "Yes. DMV-GC Group's in-house permit team handles all required permits through the DC Department of Buildings (DOB) for kitchen remodeling projects — including building, electrical, and plumbing permits. For projects involving additions or structural changes, we also manage any required zoning review and HPRB submissions for historic districts. DC homeowners never need to navigate the permit process themselves."
+            question: "Does DMV General Contracting Group handle DC permits for kitchen remodeling?",
+            answer: "Yes. DMV General Contracting Group's in-house permit team handles all required permits through the DC Department of Buildings (DOB) for kitchen remodeling projects — including building, electrical, and plumbing permits. For projects involving additions or structural changes, we also manage any required zoning review and HPRB submissions for historic districts. DC homeowners never need to navigate the permit process themselves."
         },
         {
-            question: "Can DMV-GC Group remodel a galley kitchen in a DC rowhouse?",
+            question: "Can DMV General Contracting Group remodel a galley kitchen in a DC rowhouse?",
             answer: "Yes. Galley kitchen remodels are one of the most common projects we complete in DC, where the vast majority of homes are rowhouses with narrow galley-style kitchens — often only 8 to 10 feet wide. We specialize in maximizing these spaces through smart cabinet configurations, opening walls into adjacent dining rooms where structurally feasible (accounting for shared party walls), and designing layouts that make the most of every square foot."
         },
         {
             question: "How long does a kitchen remodel take in Washington, DC?",
-            answer: "Most kitchen renovations in DC take 6–12 weeks from construction start to completion. A galley kitchen refresh can be done in 3–5 weeks. A full gut renovation takes 9–13 weeks. A rear addition or pop-back typically takes 12–18 weeks total. DC permit processing through DOB typically adds 4–8 weeks before construction begins — longer for projects requiring HPRB or zoning review. DMV-GC Group factors realistic timelines into every project plan from the start."
+            answer: "Most kitchen renovations in DC take 6–12 weeks from construction start to completion. A galley kitchen refresh can be done in 3–5 weeks. A full gut renovation takes 9–13 weeks. A rear addition or pop-back typically takes 12–18 weeks total. DC permit processing through DOB typically adds 4–8 weeks before construction begins — longer for projects requiring HPRB or zoning review. DMV General Contracting Group factors realistic timelines into every project plan from the start."
         }
     ];
 

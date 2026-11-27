@@ -7,120 +7,12 @@ import { useEffect } from "react";
 import { Accordion } from "react-bootstrap";
 import { useMyContext } from "@/hooks/context";
 
-const schemaJsonLd = {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "GeneralContractor",
-      "@id": "https://www.dmv-gc.com/#business",
-      "name": "DMV General Contracting Group LLC",
-      "legalName": "DMV General Contracting Group LLC",
-      "alternateName": ["DMV General Contracting Group", "DMV-GC"],
-      "image": "https://www.dmv-gc.com/logo.png",
-      "url": "https://www.dmv-gc.com",
-      "telephone": "+1-240-730-1292",
-      "email": "support@dmv-gc.com",
-      "foundingDate": "2018",
-      "description": "Licensed deck builder serving Wheaton, MD. Specializing in elevated split-level decks and custom composite decks for Wheaton's 1950s–70s housing stock — with concrete block foundation expertise, Montgomery County permit management, and under-deck space conversion.",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "11810 Grand Park Ave #500",
-        "addressLocality": "North Bethesda",
-        "addressRegion": "MD",
-        "postalCode": "20852",
-        "addressCountry": "US"
-      },
-      "geo": { "@type": "GeoCoordinates", "latitude": 39.0458, "longitude": -77.1139 },
-      "areaServed": [
-        { "@type": "City", "name": "Wheaton", "sameAs": "https://en.wikipedia.org/wiki/Wheaton,_Maryland" },
-        { "@type": "City", "name": "Silver Spring" },
-        { "@type": "City", "name": "Kensington" },
-        { "@type": "City", "name": "Glenmont" },
-        { "@type": "City", "name": "Rockville" }
-      ],
-      "hasCredential": [
-        { "@type": "EducationalOccupationalCredential", "name": "MHIC License", "credentialCategory": "Maryland Home Improvement Contractor License" }
-      ],
-      "priceRange": "$$$"
-    },
-    {
-      "@type": "Service",
-      "@id": "https://www.dmv-gc.com/service/decks/wheaton-md#service",
-      "serviceType": "Deck Building",
-      "name": "Deck Building in Wheaton, MD",
-      "alternateName": ["Custom Deck Construction", "Split-Level Deck", "Composite Deck", "Elevated Deck", "Concrete Block Foundation Deck"],
-      "provider": { "@id": "https://www.dmv-gc.com/#business" },
-      "areaServed": { "@type": "City", "name": "Wheaton", "sameAs": "https://en.wikipedia.org/wiki/Wheaton,_Maryland" },
-      "description": "Custom deck building in Wheaton, MD. Elevated split-level decks, composite rear decks, and under-deck dry space conversions for Wheaton's 1950s–70s housing stock — with concrete block foundation expertise, Montgomery County DPS permit management, and in-house structural engineering.",
-      "offers": {
-        "@type": "Offer",
-        "priceCurrency": "USD",
-        "priceSpecification": { "@type": "PriceSpecification", "minPrice": "17000", "maxPrice": "88000", "priceCurrency": "USD" }
-      }
-    },
-    {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.dmv-gc.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.dmv-gc.com/services" },
-        { "@type": "ListItem", "position": 3, "name": "Decks", "item": "https://www.dmv-gc.com/service/decks" },
-        { "@type": "ListItem", "position": 4, "name": "Wheaton, MD", "item": "https://www.dmv-gc.com/service/decks/wheaton-md" }
-      ]
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "How much does it cost to build a deck in Wheaton, MD?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Deck construction in Wheaton, MD typically costs between $17,000 and $88,000 depending on size, material, and home type. A pressure-treated rear deck for a split-level runs $17,000–$29,000. A composite deck on a split-level costs $28,000–$54,000. An elevated split-level deck with under-deck drainage system costs $46,000–$76,000. A multi-level deck with pergola and built-in features runs $55,000–$88,000. Wheaton's predominantly 1950s–70s split-level and colonial housing makes elevated rear decks the most common project type. DMV General Contracting Group provides free in-home consultations with detailed estimates."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Does DMV General Contracting Group handle Montgomery County deck permits for Wheaton?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. Wheaton is in unincorporated Montgomery County — all deck permits go through Montgomery County DPS. DMV General Contracting Group files all required building permits with structural drawings and manages all county correspondence, plan review, and inspection scheduling as a standard part of every Wheaton deck project. Homeowners never need to contact the county directly."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How does a concrete block foundation affect deck attachment in Wheaton homes?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Wheaton's 1950s–60s split-levels were commonly built with concrete block (CMU) foundation walls rather than poured concrete. Attaching a deck ledger board to a concrete block wall requires a different fastener approach than poured concrete or wood-frame rim joist — masonry anchors or through-bolts into solid block sections must be used, and the block wall must be assessed for structural integrity before attachment. DMV General Contracting Group's crew assesses concrete block foundation condition and specifies the correct ledger attachment method before any deck framing begins on Wheaton homes with CMU foundations."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What deck type works best for Wheaton's split-level homes?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Wheaton's 1950s–70s split-levels share the same elevated deck opportunity as Silver Spring's Four Corners neighborhood — the main living floor sits 4–6 feet above rear grade, creating a natural elevated deck connection from the living or dining room. An elevated composite or pressure-treated rear deck with stairs to the lower yard is the most functional configuration. At 4–6 feet of clearance, the space below the deck can be converted to a covered dry patio using an under-deck drainage system. DMV General Contracting Group has built elevated split-level decks throughout Wheaton's Glenmont, Wheaton Hills, and Georgia Avenue corridor neighborhoods."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is DMV General Contracting Group licensed for deck building in Wheaton, MD?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. DMV General Contracting Group holds a Maryland MHIC license — required for all home improvement and construction work in Wheaton and Montgomery County. We are fully bonded, carry comprehensive general liability insurance and workers' compensation coverage, and provide a 1-year workmanship warranty on every deck project completed in Wheaton."
-          }
-        }
-      ]
-    }
-  ]
-};
-
 const faqData = [
   { eventKey: "0", question: "How much does it cost to build a deck in Wheaton, MD?", answer: "Deck construction in Wheaton typically costs $17,000–$88,000 depending on type and scope. A ground-level platform deck runs $17,000–$28,000. An elevated split-level deck in pressure-treated costs $28,000–$48,000. An elevated composite deck runs $38,000–$62,000. Adding an under-deck drainage system brings that to $46,000–$76,000. A multi-level deck with pergola costs $55,000–$88,000. CMU foundation assessment is included in every consultation at no charge. Montgomery County permits are included in every project scope." },
-  { eventKey: "1", question: "Why does a concrete block foundation matter for deck building in Wheaton?", answer: "Wheaton's 1950s–60s split-levels were commonly built with concrete block (CMU) foundations. Attaching a deck ledger to CMU requires a different fastener approach than poured concrete — masonry anchors must be placed into solid block zones, not hollow cores, and the block must be structurally sound enough to accept the load. A contractor who doesn't assess the foundation type first risks attaching the ledger improperly, which can result in the deck pulling away from the house. DMV-GC Group identifies foundation type and assesses CMU condition on every Wheaton deck project before any ledger design is specified." },
-  { eventKey: "2", question: "What is an under-deck drainage system and is it worth adding in Wheaton?", answer: "An under-deck drainage system is a waterproof ceiling installed beneath an elevated deck that channels rain through gutters and downspouts — converting the under-deck area from a wet, exposed space into a functional covered patio. For Wheaton's split-level homes with 4–6 feet of clearance beneath the deck, this is consistently the most popular add-on — adding meaningful usable outdoor space that works even in rain. DMV-GC Group installs complete under-deck systems as part of new deck builds or as a retrofit to existing elevated decks." },
-  { eventKey: "3", question: "Does DMV-GC Group handle Montgomery County deck permits for Wheaton?", answer: "Yes. Wheaton is in unincorporated Montgomery County — all deck permits go through Montgomery County DPS. DMV-GC Group files all required building permits with complete structural drawings and manages all county correspondence, plan review, and inspection scheduling. Homeowners never need to contact the county directly for any part of the permit process." },
-  { eventKey: "4", question: "Is DMV-GC Group licensed for deck building in Wheaton, MD?", answer: "Yes. DMV-GC Group holds a Maryland MHIC license — required for all home improvement and construction work in Wheaton and Montgomery County. We are fully bonded, carry comprehensive general liability insurance and workers' compensation coverage, and provide a 1-year workmanship warranty on every deck project completed in Wheaton." }
+  { eventKey: "1", question: "Why does a concrete block foundation matter for deck building in Wheaton?", answer: "Wheaton's 1950s–60s split-levels were commonly built with concrete block (CMU) foundations. Attaching a deck ledger to CMU requires a different fastener approach than poured concrete — masonry anchors must be placed into solid block zones, not hollow cores, and the block must be structurally sound enough to accept the load. A contractor who doesn't assess the foundation type first risks attaching the ledger improperly, which can result in the deck pulling away from the house. DMV General Contracting Group identifies foundation type and assesses CMU condition on every Wheaton deck project before any ledger design is specified." },
+  { eventKey: "2", question: "What is an under-deck drainage system and is it worth adding in Wheaton?", answer: "An under-deck drainage system is a waterproof ceiling installed beneath an elevated deck that channels rain through gutters and downspouts — converting the under-deck area from a wet, exposed space into a functional covered patio. For Wheaton's split-level homes with 4–6 feet of clearance beneath the deck, this is consistently the most popular add-on — adding meaningful usable outdoor space that works even in rain. DMV General Contracting Group installs complete under-deck systems as part of new deck builds or as a retrofit to existing elevated decks." },
+  { eventKey: "3", question: "Does DMV General Contracting Group handle Montgomery County deck permits for Wheaton?", answer: "Yes. Wheaton is in unincorporated Montgomery County — all deck permits go through Montgomery County DPS. DMV General Contracting Group files all required building permits with complete structural drawings and manages all county correspondence, plan review, and inspection scheduling. Homeowners never need to contact the county directly for any part of the permit process." },
+  { eventKey: "4", question: "Is DMV General Contracting Group licensed for deck building in Wheaton, MD?", answer: "Yes. DMV General Contracting Group holds a Maryland MHIC license — required for all home improvement and construction work in Wheaton and Montgomery County. We are fully bonded, carry comprehensive general liability insurance and workers' compensation coverage, and provide a 1-year workmanship warranty on every deck project completed in Wheaton." }
 ];
 
 export default function DecksWheatonMD() {
@@ -547,7 +439,6 @@ export default function DecksWheatonMD() {
         </div>
       </div>
 
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaJsonLd) }} />
     </main>
   );
 }

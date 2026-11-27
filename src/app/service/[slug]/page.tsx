@@ -9,6 +9,7 @@ import OurValues from "@/components/OurValues";
 import StarsIcon from '@/assets/stars.svg';
 
 import styles from "./style.module.scss";
+import PageSchema from "@/components/Schema/PageSchema";
 
 export function generateStaticParams() {
     return ServiceData.map((service) => ({ slug: service.slug }));
@@ -47,12 +48,18 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
         const DynamicComponent = getDynamicComponent(slug);
 
         if (DynamicComponent) {
-            return <DynamicComponent data={service} />;
+            return (
+                <>
+                    <PageSchema path={`/service/${slug}`} />
+                    <DynamicComponent data={service} />
+                </>
+            );
         }
     }
 
     return (
         <main className="page-wrapper">
+            <PageSchema path={`/service/${slug}`} />
             <NavitemActive nav="service" />
             <div className="container">
                 <h1 className="section-title mb-2 h3">

@@ -6,188 +6,31 @@ import AccordionBody from 'react-bootstrap/AccordionBody';
 import "@/app/service/[slug]/pages/bathroom-remodeling/location-landing-pages/city-service-style.scss";
 import "./style.scss";
 
-const schemaJsonLd = {
-    "@context": "https://schema.org",
-    "@graph": [
-        {
-            "@type": "GeneralContractor",
-            "@id": "https://www.dmv-gc.com/#business",
-            "name": "DMV General Contracting Group LLC",
-            "legalName": "DMV General Contracting Group LLC",
-            "alternateName": ["DMV General Contracting Group", "DMV-GC"],
-            "image": "https://www.dmv-gc.com/logo.png",
-            "url": "https://www.dmv-gc.com",
-            "telephone": "+1-240-730-1292",
-            "email": "support@dmv-gc.com",
-            "foundingDate": "2018",
-            "description": "Licensed design-build general contractor serving Rockville, MD and the greater Montgomery County area. Specializing in bathroom remodeling, master bath renovations, tub-to-shower conversions, basement bathroom additions, and aging-in-place remodels.",
-            "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "11810 Grand Park Ave #500",
-                "addressLocality": "North Bethesda",
-                "addressRegion": "MD",
-                "postalCode": "20852",
-                "addressCountry": "US"
-            },
-            "geo": {
-                "@type": "GeoCoordinates",
-                "latitude": 39.0458,
-                "longitude": -77.1139
-            },
-            "areaServed": [
-                { "@type": "City", "name": "Rockville", "sameAs": "https://en.wikipedia.org/wiki/Rockville,_Maryland" },
-                { "@type": "City", "name": "North Bethesda" },
-                { "@type": "City", "name": "Potomac" },
-                { "@type": "City", "name": "Gaithersburg" },
-                { "@type": "City", "name": "Bethesda" },
-                { "@type": "City", "name": "Kensington" },
-                { "@type": "AdministrativeArea", "name": "Montgomery County, MD" }
-            ],
-            "hasCredential": [
-                {
-                    "@type": "EducationalOccupationalCredential",
-                    "name": "MHIC License",
-                    "credentialCategory": "Maryland Home Improvement Contractor License — issued by the Maryland Home Improvement Commission"
-                },
-                {
-                    "@type": "EducationalOccupationalCredential",
-                    "name": "DLCP License",
-                    "credentialCategory": "Washington DC Department of Licensing and Consumer Protection — Home Improvement Contractor"
-                }
-            ],
-            "priceRange": "$$$",
-            "openingHoursSpecification": {
-                "@type": "OpeningHoursSpecification",
-                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-                "opens": "08:00",
-                "closes": "20:00"
-            }
-        },
-        {
-            "@type": "Service",
-            "@id": "https://www.dmv-gc.com/service/bathroom-remodeling/rockville-md#service",
-            "serviceType": "Bathroom Remodeling",
-            "name": "Bathroom Remodeling in Rockville, MD",
-            "provider": { "@id": "https://www.dmv-gc.com/#business" },
-            "areaServed": {
-                "@type": "City",
-                "name": "Rockville",
-                "sameAs": "https://en.wikipedia.org/wiki/Rockville,_Maryland"
-            },
-            "description": "Full-service bathroom remodeling in Rockville, MD. Master and primary bath renovations, hall and guest bath remodels, powder rooms, tub-to-shower conversions, walk-in showers, basement bathroom additions, and accessible aging-in-place baths — design through final finishes — by an MHIC-licensed design-build contractor.",
-            "offers": {
-                "@type": "Offer",
-                "priceCurrency": "USD",
-                "priceSpecification": {
-                    "@type": "PriceSpecification",
-                    "minPrice": "8000",
-                    "maxPrice": "120000",
-                    "priceCurrency": "USD"
-                }
-            },
-            "hasOfferCatalog": {
-                "@type": "OfferCatalog",
-                "name": "Bathroom Remodeling Services Rockville MD",
-                "itemListElement": [
-                    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Master / Primary Bath Renovation" } },
-                    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Hall & Guest Bathroom Remodel" } },
-                    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Tub-to-Shower Conversion" } },
-                    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Walk-In & Curbless Shower Installation" } },
-                    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Basement Bathroom Addition" } },
-                    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Accessible / Aging-in-Place Bathroom" } }
-                ]
-            }
-        },
-        {
-            "@type": "BreadcrumbList",
-            "itemListElement": [
-                { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.dmv-gc.com/" },
-                { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.dmv-gc.com/services" },
-                { "@type": "ListItem", "position": 3, "name": "Bathroom Remodeling", "item": "https://www.dmv-gc.com/service/bathroom-remodeling" },
-                { "@type": "ListItem", "position": 4, "name": "Rockville, MD", "item": "https://www.dmv-gc.com/service/bathroom-remodeling/rockville-md" }
-            ]
-        },
-        {
-            "@type": "FAQPage",
-            "mainEntity": [
-                {
-                    "@type": "Question",
-                    "name": "How much does a bathroom remodel cost in Rockville, MD?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "Bathroom remodeling in Rockville, MD typically costs between $8,000 and $120,000 depending on bathroom type, scope, and finishes. A powder room or half-bath refresh starts around $8,000–$18,000. A hall or guest bath remodel runs $18,000–$35,000. A tub-to-shower conversion runs $12,000–$25,000. A primary (master) bath renovation costs $35,000–$70,000, and a luxury primary bath can reach $70,000–$120,000+. Adding a new basement bathroom runs $20,000–$45,000. DMV General Contracting Group provides free in-home consultations with detailed estimates for any Rockville home."
-                    }
-                },
-                {
-                    "@type": "Question",
-                    "name": "Is DMV General Contracting Group licensed to do bathroom remodeling in Rockville, MD?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "Yes. DMV General Contracting Group holds a Maryland Home Improvement Contractor (MHIC) license issued by the Maryland Home Improvement Commission — the license required to legally perform residential renovation work in Rockville and throughout Maryland. We are fully bonded and insured, and provide a 1-year workmanship warranty on every bathroom remodeling project completed in Montgomery County."
-                    }
-                },
-                {
-                    "@type": "Question",
-                    "name": "Do I need a permit to remodel a bathroom in Rockville / Montgomery County?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "In most cases, yes. Any bathroom remodel that involves moving plumbing, adding or relocating electrical, or structural changes requires permits. In Rockville the jurisdiction depends on location: homes inside the City of Rockville permit through the City's own permitting office, while the many Rockville-address homes in unincorporated areas — such as North Bethesda and Derwood — permit through Montgomery County DPS. Plumbing permits go through WSSC Water in both cases. DMV General Contracting Group identifies the correct jurisdiction and handles every permit and inspection for you, plus any HOA approvals."
-                    }
-                },
-                {
-                    "@type": "Question",
-                    "name": "Can DMV General Contracting Group convert my tub to a walk-in shower?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "Yes. Tub-to-shower conversions are one of the most popular bathroom projects we complete in Rockville — from older tubs in Twinbrook's 1950s homes and the historic West End, to oversized jetted or garden tubs in 1990s–2000s King Farm and Fallsgrove primary baths. We remove the existing tub, rebuild the wet area with proper waterproofing, and install a custom tile or low-maintenance walk-in shower — including curbless and accessible designs for aging-in-place. Most conversions are completed in 2–3 weeks."
-                    }
-                },
-                {
-                    "@type": "Question",
-                    "name": "How long does a bathroom remodel take in Rockville, MD?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "Most bathroom renovations in Rockville take 2–5 weeks from construction start to completion. A powder room refresh can be done in 1–2 weeks. A tub-to-shower conversion takes 2–3 weeks. A full primary bath renovation takes 4–6 weeks, and a new basement bathroom typically takes 3–5 weeks. Permit processing through the City of Rockville or Montgomery County DPS, plus WSSC, usually adds 2–4 weeks before construction begins, and HOA approval may add time in planned communities. DMV General Contracting Group factors realistic timelines into every project plan."
-                    }
-                },
-                {
-                    "@type": "Question",
-                    "name": "Can DMV General Contracting Group add a bathroom in my basement or primary suite?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "Yes. Adding a bathroom is a popular upgrade for Rockville homes — most often a full or half bath in a finished basement, or reconfiguring a primary suite for more space. We design and build new basement bathrooms, primary-suite ensuites, and main-level powder rooms — assessing how your home is built to plan the most cost-effective plumbing rough-in, then handling drainage, ventilation, waterproofing, HOA approvals, and the full City of Rockville or DPS permit process from start to finish."
-                    }
-                }
-            ]
-        }
-    ]
-};
-
 export default function BathroomRockvilleMD() {
     const faqData = [
         {
             question: "How much does a bathroom remodel cost in Rockville, MD?",
-            answer: "Bathroom remodeling in Rockville typically costs $8,000–$120,000+ depending on bathroom type, scope, and finishes. A powder room or half-bath starts around $8,000–$18,000. A hall or guest bath remodel runs $18,000–$35,000. A tub-to-shower conversion runs $12,000–$25,000. A primary (master) bath renovation costs $35,000–$70,000, and a luxury primary bath can reach $70,000–$120,000+. A new basement bathroom runs $20,000–$45,000. DMV-GC Group provides free in-home consultations with detailed estimates specific to your home."
+            answer: "Bathroom remodeling in Rockville typically costs $8,000–$120,000+ depending on bathroom type, scope, and finishes. A powder room or half-bath starts around $8,000–$18,000. A hall or guest bath remodel runs $18,000–$35,000. A tub-to-shower conversion runs $12,000–$25,000. A primary (master) bath renovation costs $35,000–$70,000, and a luxury primary bath can reach $70,000–$120,000+. A new basement bathroom runs $20,000–$45,000. DMV General Contracting Group provides free in-home consultations with detailed estimates specific to your home."
         },
         {
-            question: "Is DMV-GC Group licensed to do bathroom remodeling in Rockville, MD?",
-            answer: "Yes. DMV-GC Group holds a Maryland Home Improvement Contractor (MHIC) license issued by the Maryland Home Improvement Commission — the license required to legally perform residential renovation work in Rockville and throughout Maryland. We also hold a DC DLCP license for cross-border work. We are fully bonded and insured, and provide a 1-year workmanship warranty on every bathroom remodeling project. You can verify our MHIC number before hiring."
+            question: "Is DMV General Contracting Group licensed to do bathroom remodeling in Rockville, MD?",
+            answer: "Yes. DMV General Contracting Group holds a Maryland Home Improvement Contractor (MHIC) license issued by the Maryland Home Improvement Commission — the license required to legally perform residential renovation work in Rockville and throughout Maryland. We also hold a DC DLCP license for cross-border work. We are fully bonded and insured, and provide a 1-year workmanship warranty on every bathroom remodeling project. You can verify our MHIC number before hiring."
         },
         {
             question: "Do I need a permit to remodel a bathroom in Rockville / Montgomery County?",
-            answer: "In most cases, yes. Any bathroom remodel that involves moving plumbing, adding or relocating electrical, or making structural changes requires permits. In Rockville the jurisdiction depends on location: homes inside the City of Rockville permit through the City's own permitting office, while the many Rockville-address homes in unincorporated areas (such as North Bethesda and Derwood) permit through Montgomery County DPS — with plumbing permits through WSSC Water in both cases. DMV-GC Group identifies the correct jurisdiction and handles every permit, inspection, and HOA approval for you."
+            answer: "In most cases, yes. Any bathroom remodel that involves moving plumbing, adding or relocating electrical, or making structural changes requires permits. In Rockville the jurisdiction depends on location: homes inside the City of Rockville permit through the City's own permitting office, while the many Rockville-address homes in unincorporated areas (such as North Bethesda and Derwood) permit through Montgomery County DPS — with plumbing permits through WSSC Water in both cases. DMV General Contracting Group identifies the correct jurisdiction and handles every permit, inspection, and HOA approval for you."
         },
         {
-            question: "Can DMV-GC Group convert my tub to a walk-in shower?",
+            question: "Can DMV General Contracting Group convert my tub to a walk-in shower?",
             answer: "Yes. Tub-to-shower conversions are one of the most common bathroom projects we complete in Rockville — from the small cast-iron tubs in Twinbrook's 1950s baths and the historic West End, to oversized jetted or garden tubs in 1990s–2000s King Farm and Fallsgrove primary suites. We remove the existing tub, rebuild the wet area with a proper bonded waterproofing system, and install a custom tile or low-maintenance walk-in shower — including frameless glass, niches, benches, and curbless accessible designs. Most conversions are completed in 2–3 weeks."
         },
         {
-            question: "Can DMV-GC Group add a bathroom in my basement or primary suite?",
+            question: "Can DMV General Contracting Group add a bathroom in my basement or primary suite?",
             answer: "Yes. Adding a bathroom is a popular upgrade for Rockville homes — most often a full or half bath in a finished basement, or reconfiguring a primary suite for more space. We design and build new basement bathrooms, primary-suite ensuites, and main-level powder rooms — assessing your home's construction to plan the most cost-effective plumbing rough-in, then handling drainage, ventilation, waterproofing, HOA approvals, and the full City of Rockville or DPS permit process."
         },
         {
             question: "How long does a bathroom remodel take in Rockville, MD?",
-            answer: "Most bathroom renovations in Rockville take 2–5 weeks from construction start to completion. A powder room refresh can be done in 1–2 weeks. A tub-to-shower conversion takes 2–3 weeks. A full primary bath renovation takes 4–6 weeks, and a new basement bathroom typically takes 3–5 weeks. Permit processing through the City of Rockville or Montgomery County DPS, plus WSSC, usually adds 2–4 weeks before construction begins, and HOA approval may add time in planned communities. DMV-GC Group factors realistic timelines into every project plan from the start."
+            answer: "Most bathroom renovations in Rockville take 2–5 weeks from construction start to completion. A powder room refresh can be done in 1–2 weeks. A tub-to-shower conversion takes 2–3 weeks. A full primary bath renovation takes 4–6 weeks, and a new basement bathroom typically takes 3–5 weeks. Permit processing through the City of Rockville or Montgomery County DPS, plus WSSC, usually adds 2–4 weeks before construction begins, and HOA approval may add time in planned communities. DMV General Contracting Group factors realistic timelines into every project plan from the start."
         }
     ];
 
@@ -546,10 +389,6 @@ export default function BathroomRockvilleMD() {
                 </div>
 
                 {/* SCHEMA JSON-LD */}
-                <script
-                    type="application/ld+json"
-                    dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaJsonLd) }}
-                />
             </div>
         </div>
     );

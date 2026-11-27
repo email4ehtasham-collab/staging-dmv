@@ -7,125 +7,6 @@ import NavitemActive from "@/components/Common/NavitemActive";
 import "@/app/service/[slug]/pages/junk-removal/location-landing-pages/city-service-style.scss";
 import "./style.scss";
 
-const schemaJsonLd = {
-    "@context": "https://schema.org",
-    "@graph": [
-        {
-            "@type": "GeneralContractor",
-            "@id": "https://www.dmv-gc.com/#business",
-            "name": "DMV General Contracting Group LLC",
-            "legalName": "DMV General Contracting Group LLC",
-            "alternateName": ["DMV General Contracting Group", "DMV-GC"],
-            "image": "https://www.dmv-gc.com/logo.png",
-            "url": "https://www.dmv-gc.com",
-            "telephone": "+1-240-730-1292",
-            "email": "support@dmv-gc.com",
-            "foundingDate": "2018",
-            "description": "Licensed Maryland general contractor providing professional junk removal and debris hauling services in Bethesda, MD. Construction debris removal, residential cleanouts, estate cleanouts, bulk item pickup, and renovation waste hauling. MHIC #156178.",
-            "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "11810 Grand Park Ave #500",
-                "addressLocality": "North Bethesda",
-                "addressRegion": "MD",
-                "postalCode": "20852",
-                "addressCountry": "US"
-            },
-            "geo": {
-                "@type": "GeoCoordinates",
-                "latitude": 39.0458,
-                "longitude": -77.1139
-            },
-            "areaServed": [
-                { "@type": "City", "name": "Bethesda", "sameAs": "https://en.wikipedia.org/wiki/Bethesda,_Maryland" },
-                { "@type": "City", "name": "North Bethesda" },
-                { "@type": "City", "name": "Chevy Chase" },
-                { "@type": "City", "name": "Kensington" },
-                { "@type": "City", "name": "Potomac" },
-                { "@type": "City", "name": "Rockville" },
-                { "@type": "AdministrativeArea", "name": "Montgomery County, MD" }
-            ],
-            "hasCredential": [
-                {
-                    "@type": "EducationalOccupationalCredential",
-                    "name": "MHIC License",
-                    "credentialCategory": "Maryland Home Improvement Contractor License — issued by the Maryland Home Improvement Commission #156178"
-                },
-                {
-                    "@type": "EducationalOccupationalCredential",
-                    "name": "DLCP License",
-                    "credentialCategory": "Washington DC Department of Licensing and Consumer Protection — Home Improvement Contractor #410526000209"
-                }
-            ],
-            "priceRange": "$$",
-            "openingHoursSpecification": {
-                "@type": "OpeningHoursSpecification",
-                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-                "opens": "08:00",
-                "closes": "20:00"
-            }
-        },
-        {
-            "@type": "Service",
-            "@id": "https://www.dmv-gc.com/service/junk-removal/bethesda-md#service",
-            "serviceType": "Junk Removal, Construction Debris Removal, Residential Cleanout, Estate Cleanout, Bulk Item Pickup, Renovation Waste Removal",
-            "name": "Junk Removal Services in Bethesda, MD",
-            "provider": { "@id": "https://www.dmv-gc.com/#business" },
-            "areaServed": {
-                "@type": "City",
-                "name": "Bethesda",
-                "sameAs": "https://en.wikipedia.org/wiki/Bethesda,_Maryland"
-            },
-            "description": "Professional junk removal and debris hauling for Bethesda homeowners — construction debris, residential cleanouts, estate cleanouts, bulk item pickup, old furniture and appliances, renovation waste, and garage and basement cleanouts. Licensed and insured, MHIC #156178."
-        },
-        {
-            "@type": "BreadcrumbList",
-            "itemListElement": [
-                { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.dmv-gc.com/" },
-                { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.dmv-gc.com/services" },
-                { "@type": "ListItem", "position": 3, "name": "Junk Removal", "item": "https://www.dmv-gc.com/service/junk-removal" },
-                { "@type": "ListItem", "position": 4, "name": "Bethesda, MD", "item": "https://www.dmv-gc.com/service/junk-removal/bethesda-md" }
-            ]
-        },
-        {
-            "@type": "FAQPage",
-            "mainEntity": [
-                {
-                    "@type": "Question",
-                    "name": "What types of junk does DMV General Contracting Group remove in Bethesda?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "DMV General Contracting Group removes construction and renovation debris, old furniture and appliances, household junk, garage and basement clutter, yard waste, and bulk items from Bethesda residential properties. We also handle full estate cleanouts and pre-sale property cleanouts for Bethesda homes being prepared for the market."
-                    }
-                },
-                {
-                    "@type": "Question",
-                    "name": "Can DMV General Contracting Group remove construction debris from a Bethesda renovation?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "Yes. Construction debris removal is one of our most common junk removal requests in Bethesda — drywall scraps, lumber offcuts, tile, flooring, fixtures, and packaging waste from renovation projects. As a licensed general contractor, we coordinate debris removal as part of remodeling projects or as a standalone service for Bethesda homeowners managing their own renovation."
-                    }
-                },
-                {
-                    "@type": "Question",
-                    "name": "Do you offer estate cleanout services in Bethesda, MD?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "Yes. DMV General Contracting Group provides full estate cleanout services for Bethesda properties — removing furniture, appliances, household goods, and accumulated belongings from homes being prepared for sale, transfer, or renovation. We handle the heavy lifting, sorting, and responsible disposal, so families managing an estate transition do not have to."
-                    }
-                },
-                {
-                    "@type": "Question",
-                    "name": "How much does junk removal cost in Bethesda, MD?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "Junk removal costs in Bethesda depend on the volume and type of material being removed. A single-item pickup starts at $75–$150. A partial load runs $150–$350. A full truck load runs $350–$600+. Estate cleanouts and construction debris removal are priced by scope after a free on-site review. DMV General Contracting Group provides a free estimate before any junk removal work begins."
-                    }
-                }
-            ]
-        }
-    ]
-};
-
 export default function JunkRemovalBethesdaMD() {
     const faqData = [
         {
@@ -373,10 +254,6 @@ export default function JunkRemovalBethesdaMD() {
                 </div>
             </div>
 
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaJsonLd) }}
-            />
         </div>
     );
 }

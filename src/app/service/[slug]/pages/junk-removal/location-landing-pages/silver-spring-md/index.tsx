@@ -7,127 +7,6 @@ import NavitemActive from "@/components/Common/NavitemActive";
 import "@/app/service/[slug]/pages/junk-removal/location-landing-pages/city-service-style.scss";
 import "./style.scss";
 
-const schemaJsonLd = {
-    "@context": "https://schema.org",
-    "@graph": [
-        {
-            "@type": "GeneralContractor",
-            "@id": "https://www.dmv-gc.com/#business",
-            "name": "DMV General Contracting Group LLC",
-            "legalName": "DMV General Contracting Group LLC",
-            "alternateName": ["DMV General Contracting Group", "DMV-GC"],
-            "image": "https://www.dmv-gc.com/logo.png",
-            "url": "https://www.dmv-gc.com",
-            "telephone": "+1-240-730-1292",
-            "email": "support@dmv-gc.com",
-            "foundingDate": "2018",
-            "description": "Licensed Maryland general contractor providing professional junk removal in Silver Spring, MD. Pre-1950 home renovation debris removal, residential cleanouts, estate cleanouts, and bulk item pickup for Silver Spring's historic bungalows, foursquares and colonials. EPA RRP awareness. MHIC #156178.",
-            "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "11810 Grand Park Ave #500",
-                "addressLocality": "North Bethesda",
-                "addressRegion": "MD",
-                "postalCode": "20852",
-                "addressCountry": "US"
-            },
-            "geo": {
-                "@type": "GeoCoordinates",
-                "latitude": 39.0458,
-                "longitude": -77.1139
-            },
-            "areaServed": [
-                { "@type": "City", "name": "Silver Spring", "sameAs": "https://en.wikipedia.org/wiki/Silver_Spring,_Maryland" },
-                { "@type": "City", "name": "Takoma Park" },
-                { "@type": "City", "name": "Kensington" },
-                { "@type": "City", "name": "Wheaton" },
-                { "@type": "City", "name": "Bethesda" },
-                { "@type": "City", "name": "Chevy Chase" },
-                { "@type": "City", "name": "North Bethesda" },
-                { "@type": "City", "name": "Rockville" },
-                { "@type": "AdministrativeArea", "name": "Montgomery County, MD" }
-            ],
-            "hasCredential": [
-                {
-                    "@type": "EducationalOccupationalCredential",
-                    "name": "MHIC License",
-                    "credentialCategory": "Maryland Home Improvement Contractor License — issued by the Maryland Home Improvement Commission #156178"
-                },
-                {
-                    "@type": "EducationalOccupationalCredential",
-                    "name": "DLCP License",
-                    "credentialCategory": "Washington DC Department of Licensing and Consumer Protection — Home Improvement Contractor #410526000209"
-                }
-            ],
-            "priceRange": "$$",
-            "openingHoursSpecification": {
-                "@type": "OpeningHoursSpecification",
-                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-                "opens": "08:00",
-                "closes": "20:00"
-            }
-        },
-        {
-            "@type": "Service",
-            "@id": "https://www.dmv-gc.com/service/junk-removal/silver-spring-md#service",
-            "serviceType": "Junk Removal, Construction Debris Removal, Residential Cleanout, Estate Cleanout, Bulk Item Pickup, Pre-1950 Home Renovation Debris",
-            "name": "Junk Removal Services in Silver Spring, MD",
-            "provider": { "@id": "https://www.dmv-gc.com/#business" },
-            "areaServed": {
-                "@type": "City",
-                "name": "Silver Spring",
-                "sameAs": "https://en.wikipedia.org/wiki/Silver_Spring,_Maryland"
-            },
-            "description": "Professional junk removal for Silver Spring homeowners — pre-1950 home renovation debris, old plaster and lathe removal, residential cleanouts, estate cleanouts, bulk item pickup, and responsible disposal. EPA RRP aware for pre-1978 properties. MHIC #156178."
-        },
-        {
-            "@type": "BreadcrumbList",
-            "itemListElement": [
-                { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.dmv-gc.com/" },
-                { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.dmv-gc.com/services" },
-                { "@type": "ListItem", "position": 3, "name": "Junk Removal", "item": "https://www.dmv-gc.com/service/junk-removal" },
-                { "@type": "ListItem", "position": 4, "name": "Silver Spring, MD", "item": "https://www.dmv-gc.com/service/junk-removal/silver-spring-md" }
-            ]
-        },
-        {
-            "@type": "FAQPage",
-            "mainEntity": [
-                {
-                    "@type": "Question",
-                    "name": "Does junk removal from a Silver Spring pre-1950 home require lead paint precautions?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "For Silver Spring homes built before 1978, renovation debris — drywall, plaster, trim, siding, and any painted surfaces disturbed during renovation — may contain lead paint. Removal and disposal of lead-containing renovation debris must follow EPA Renovation, Repair and Painting (RRP) Rule requirements. DMV General Contracting Group follows EPA RRP protocols on all pre-1978 Silver Spring renovation debris projects — proper containment, handling, and disposal of potentially lead-containing materials."
-                    }
-                },
-                {
-                    "@type": "Question",
-                    "name": "Can you remove old plaster and lathe debris from a Silver Spring renovation?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "Yes. Old plaster and lathe debris is one of the most common renovation waste types in Silver Spring's pre-1950 homes — significantly heavier and more voluminous than modern drywall. DMV General Contracting Group removes plaster and lathe debris from Silver Spring gut renovations, with appropriate handling for pre-1978 properties where lead paint in plaster is a consideration."
-                    }
-                },
-                {
-                    "@type": "Question",
-                    "name": "Do you provide estate cleanout services in Silver Spring, MD?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "Yes. DMV General Contracting Group provides full estate cleanout services for Silver Spring properties — removing furniture, appliances, household goods, and accumulated belongings from homes being prepared for sale, renovation, or estate transfer. Silver Spring's older homes often contain original period furniture, vintage appliances, and decades of accumulated items — we handle the full scope with care and responsible disposal."
-                    }
-                },
-                {
-                    "@type": "Question",
-                    "name": "How much does junk removal cost in Silver Spring, MD?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "Junk removal costs in Silver Spring depend on the volume and type of material. A single bulk item pickup starts at $75–$150. A partial load runs $150–$350. A full truck load runs $350–$600+. Estate cleanouts and renovation debris projects are priced by scope after a free on-site estimate. DMV General Contracting Group provides a firm price before any work begins — no surprise charges at completion."
-                    }
-                }
-            ]
-        }
-    ]
-};
-
 export default function JunkRemovalSilverSpringMD() {
     const faqData = [
         {
@@ -373,10 +252,6 @@ export default function JunkRemovalSilverSpringMD() {
                 </div>
             </div>
 
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaJsonLd) }}
-            />
         </div>
     );
 }

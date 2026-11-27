@@ -7,120 +7,12 @@ import { useEffect } from "react";
 import { Accordion } from "react-bootstrap";
 import { useMyContext } from "@/hooks/context";
 
-const schemaJsonLd = {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "GeneralContractor",
-      "@id": "https://www.dmv-gc.com/#business",
-      "name": "DMV General Contracting Group LLC",
-      "legalName": "DMV General Contracting Group LLC",
-      "alternateName": ["DMV General Contracting Group", "DMV-GC"],
-      "image": "https://www.dmv-gc.com/logo.png",
-      "url": "https://www.dmv-gc.com",
-      "telephone": "+1-240-730-1292",
-      "email": "support@dmv-gc.com",
-      "foundingDate": "2018",
-      "description": "Licensed deck builder serving Rockville, MD. Custom deck construction across all Rockville neighborhoods — King Farm, Fallsgrove, Congressional, Twinbrook, Rockshire, and beyond — with City of Rockville and Montgomery County DPS permit expertise and full HOA ARC coordination.",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "11810 Grand Park Ave #500",
-        "addressLocality": "North Bethesda",
-        "addressRegion": "MD",
-        "postalCode": "20852",
-        "addressCountry": "US"
-      },
-      "geo": { "@type": "GeoCoordinates", "latitude": 39.0458, "longitude": -77.1139 },
-      "areaServed": [
-        { "@type": "City", "name": "Rockville", "sameAs": "https://en.wikipedia.org/wiki/Rockville,_Maryland" },
-        { "@type": "City", "name": "Gaithersburg" },
-        { "@type": "City", "name": "North Bethesda" },
-        { "@type": "City", "name": "Potomac" },
-        { "@type": "City", "name": "Germantown" }
-      ],
-      "hasCredential": [
-        { "@type": "EducationalOccupationalCredential", "name": "MHIC License", "credentialCategory": "Maryland Home Improvement Contractor License" }
-      ],
-      "priceRange": "$$$"
-    },
-    {
-      "@type": "Service",
-      "@id": "https://www.dmv-gc.com/service/decks/rockville-md#service",
-      "serviceType": "Deck Building",
-      "name": "Deck Building in Rockville, MD",
-      "alternateName": ["Custom Deck Construction", "Composite Deck", "King Farm Deck", "HOA Deck", "Multi-Level Deck"],
-      "provider": { "@id": "https://www.dmv-gc.com/#business" },
-      "areaServed": { "@type": "City", "name": "Rockville", "sameAs": "https://en.wikipedia.org/wiki/Rockville,_Maryland" },
-      "description": "Full-service deck design and construction in Rockville, MD. Custom composite decks, multi-level decks, and outdoor living builds across all Rockville neighborhoods — with City of Rockville DPS and Montgomery County DPS permit expertise, and King Farm, Fallsgrove, Congressional, and Rockshire HOA ARC coordination.",
-      "offers": {
-        "@type": "Offer",
-        "priceCurrency": "USD",
-        "priceSpecification": { "@type": "PriceSpecification", "minPrice": "19000", "maxPrice": "98000", "priceCurrency": "USD" }
-      }
-    },
-    {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.dmv-gc.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.dmv-gc.com/services" },
-        { "@type": "ListItem", "position": 3, "name": "Decks", "item": "https://www.dmv-gc.com/service/decks" },
-        { "@type": "ListItem", "position": 4, "name": "Rockville, MD", "item": "https://www.dmv-gc.com/service/decks/rockville-md" }
-      ]
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "How much does it cost to build a deck in Rockville, MD?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Deck construction in Rockville, MD typically costs between $19,000 and $98,000 depending on neighborhood, size, material, and features. A pressure-treated rear deck for an older Rockville colonial or split-level runs $19,000–$32,000. A composite deck costs $30,000–$58,000. A multi-level composite deck with pergola costs $50,000–$82,000. A full outdoor living build with outdoor kitchen runs $68,000–$98,000. King Farm and Fallsgrove's newer construction with larger lots often supports larger deck footprints than older Rockville neighborhoods. DMV General Contracting Group provides free in-home consultations with detailed estimates for every Rockville neighborhood."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Does the City of Rockville have its own deck permit process?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. The City of Rockville is an incorporated municipality with its own permit authority — the City of Rockville Department of Planning and Development Services at 111 Maryland Avenue. Properties within the City of Rockville's incorporated limits file deck permits with the City, not with Montgomery County DPS. Properties in unincorporated portions of the Rockville area — some Congressional area neighborhoods, Fallsgrove, and other areas — may use Montgomery County DPS. DMV General Contracting Group verifies the correct permit authority for every Rockville address before any application is filed."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Does King Farm HOA require approval for deck construction in Rockville?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. King Farm's Homeowners Association has an active Architectural Review Committee that must approve exterior modifications — including deck construction — before building permits are filed. The King Farm ARC reviews deck size, material, color, placement, and compatibility with the home's architectural character. DMV General Contracting Group prepares all required ARC documentation for King Farm deck projects — site plan, elevation drawings, material and color specifications — and manages the submission and review process in-house. We design King Farm decks to ARC standards from the first draft to minimize revision requests."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Does DMV General Contracting Group handle permits for deck building in all Rockville neighborhoods?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. DMV General Contracting Group handles deck permits with both the City of Rockville DPS (for properties within the city limits) and Montgomery County DPS (for unincorporated areas). We also manage HOA ARC submissions for King Farm, Fallsgrove, Congressional area communities, and Rockshire where applicable. Our permit team manages all correspondence with the applicable authority from application through final inspection — homeowners never need to contact either the city or county directly."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is DMV General Contracting Group licensed for deck building in Rockville, MD?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. DMV General Contracting Group holds a Maryland MHIC license — required for all home improvement and construction work in Rockville. We handle City of Rockville permits for properties within the city limits and Montgomery County DPS permits for unincorporated areas. We are fully bonded, carry comprehensive general liability insurance and workers' compensation coverage, and provide a 1-year workmanship warranty on every deck project in Rockville."
-          }
-        }
-      ]
-    }
-  ]
-};
-
 const faqData = [
-  { eventKey: "0", question: "How much does it cost to build a deck in Rockville, MD?", answer: "Deck construction in Rockville typically costs $19,000–$98,000 depending on neighborhood, size, material, and features. A pressure-treated deck for an older Twinbrook home runs $19,000–$32,000. A composite deck in King Farm or Fallsgrove costs $30,000–$58,000. A multi-level deck with pergola runs $55,000–$88,000. A full outdoor living build with kitchen costs $68,000–$98,000. HOA ARC coordination and City or County permit filing are included in every scope. DMV-GC Group provides free in-home consultations with detailed estimates." },
-  { eventKey: "1", question: "Does the City of Rockville have its own deck permit process?", answer: "Yes. Properties within the incorporated City of Rockville — including King Farm, Fallsgrove, Twinbrook (most of it), and the Town Center area — file deck permits with the City\'s Department of Planning and Development Services at 111 Maryland Avenue, not Montgomery County DPS. Properties outside the city limits use Montgomery County DPS. DMV-GC Group verifies the correct jurisdiction for every Rockville address before any permit application is filed." },
-  { eventKey: "2", question: "Does King Farm HOA need to approve my deck before permits are filed?", answer: "Yes. King Farm\'s HOA Architectural Review Committee must approve the deck design before the City of Rockville building permit is filed. The ARC reviews size, material, color, and placement. DMV-GC Group prepares all required ARC documentation — site plan, elevation drawings, material specifications, and color samples — and manages the complete review process in-house. We design King Farm decks to ARC standards from the first draft to minimize revision requests, and run the City permit preparation in parallel so it\'s ready to file the day ARC approval is received." },
-  { eventKey: "3", question: "Is the Congressional area in Rockville governed by City or County permits?", answer: "It depends on the specific parcel. The City of Rockville boundary runs through the Congressional area in a way that is not obvious from street addresses — some parcels are within city limits (City DPS permits), others are in unincorporated Montgomery County (MoCo DPS permits). DMV-GC Group verifies the specific jurisdiction for every Congressional area address using parcel boundary data before any design or permit work begins. This is one of the most jurisdiction-complex areas in the Rockville service region." },
-  { eventKey: "4", question: "Is DMV-GC Group licensed for deck building in Rockville, MD?", answer: "Yes. DMV-GC Group holds a Maryland MHIC license — required for all home improvement and construction work in Rockville. We handle City of Rockville DPS permits for properties within the city limits and Montgomery County DPS permits for unincorporated areas. We are fully bonded, carry comprehensive general liability insurance and workers\' compensation coverage, and provide a 1-year workmanship warranty on every deck project in Rockville." }
+  { eventKey: "0", question: "How much does it cost to build a deck in Rockville, MD?", answer: "Deck construction in Rockville typically costs $19,000–$98,000 depending on neighborhood, size, material, and features. A pressure-treated deck for an older Twinbrook home runs $19,000–$32,000. A composite deck in King Farm or Fallsgrove costs $30,000–$58,000. A multi-level deck with pergola runs $55,000–$88,000. A full outdoor living build with kitchen costs $68,000–$98,000. HOA ARC coordination and City or County permit filing are included in every scope. DMV General Contracting Group provides free in-home consultations with detailed estimates." },
+  { eventKey: "1", question: "Does the City of Rockville have its own deck permit process?", answer: "Yes. Properties within the incorporated City of Rockville — including King Farm, Fallsgrove, Twinbrook (most of it), and the Town Center area — file deck permits with the City\'s Department of Planning and Development Services at 111 Maryland Avenue, not Montgomery County DPS. Properties outside the city limits use Montgomery County DPS. DMV General Contracting Group verifies the correct jurisdiction for every Rockville address before any permit application is filed." },
+  { eventKey: "2", question: "Does King Farm HOA need to approve my deck before permits are filed?", answer: "Yes. King Farm\'s HOA Architectural Review Committee must approve the deck design before the City of Rockville building permit is filed. The ARC reviews size, material, color, and placement. DMV General Contracting Group prepares all required ARC documentation — site plan, elevation drawings, material specifications, and color samples — and manages the complete review process in-house. We design King Farm decks to ARC standards from the first draft to minimize revision requests, and run the City permit preparation in parallel so it\'s ready to file the day ARC approval is received." },
+  { eventKey: "3", question: "Is the Congressional area in Rockville governed by City or County permits?", answer: "It depends on the specific parcel. The City of Rockville boundary runs through the Congressional area in a way that is not obvious from street addresses — some parcels are within city limits (City DPS permits), others are in unincorporated Montgomery County (MoCo DPS permits). DMV General Contracting Group verifies the specific jurisdiction for every Congressional area address using parcel boundary data before any design or permit work begins. This is one of the most jurisdiction-complex areas in the Rockville service region." },
+  { eventKey: "4", question: "Is DMV General Contracting Group licensed for deck building in Rockville, MD?", answer: "Yes. DMV General Contracting Group holds a Maryland MHIC license — required for all home improvement and construction work in Rockville. We handle City of Rockville DPS permits for properties within the city limits and Montgomery County DPS permits for unincorporated areas. We are fully bonded, carry comprehensive general liability insurance and workers\' compensation coverage, and provide a 1-year workmanship warranty on every deck project in Rockville." }
 ];
 
 export default function DecksRockvilleMD() {
@@ -598,7 +490,6 @@ export default function DecksRockvilleMD() {
         </div>
       </div>
 
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaJsonLd) }} />
     </main>
   );
 }

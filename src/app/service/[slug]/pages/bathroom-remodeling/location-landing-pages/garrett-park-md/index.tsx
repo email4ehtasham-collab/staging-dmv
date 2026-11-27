@@ -10,27 +10,27 @@ export default function BathroomGarrettParkMD() {
     const faqData = [
         {
             question: "How much does a bathroom remodel cost in Garrett Park, MD?",
-            answer: "Bathroom remodeling in Garrett Park typically costs $8,000\u2013$120,000+ depending on bathroom type, scope, and finishes. A powder room or half-bath starts around $8,000\u2013$18,000. A hall or guest bath remodel runs $18,000\u2013$35,000. A tub-to-shower conversion runs $12,000\u2013$25,000. A primary (master) bath renovation costs $35,000\u2013$70,000, and a luxury primary bath can reach $70,000\u2013$120,000+. A new basement bathroom runs $20,000\u2013$45,000. DMV-GC Group provides free in-home consultations with detailed estimates specific to your home."
+            answer: "Bathroom remodeling in Garrett Park typically costs $8,000\u2013$120,000+ depending on bathroom type, scope, and finishes. A powder room or half-bath starts around $8,000\u2013$18,000. A hall or guest bath remodel runs $18,000\u2013$35,000. A tub-to-shower conversion runs $12,000\u2013$25,000. A primary (master) bath renovation costs $35,000\u2013$70,000, and a luxury primary bath can reach $70,000\u2013$120,000+. A new basement bathroom runs $20,000\u2013$45,000. DMV General Contracting Group provides free in-home consultations with detailed estimates specific to your home."
         },
         {
-            question: "Is DMV-GC Group licensed to do bathroom remodeling in Garrett Park, MD?",
-            answer: "Yes. DMV-GC Group holds a Maryland Home Improvement Contractor (MHIC) license issued by the Maryland Home Improvement Commission \u2014 the license required to legally perform residential renovation work in Garrett Park and throughout Maryland. We also hold a DC DLCP license for cross-border work. We are fully bonded and insured, and provide a 1-year workmanship warranty on every bathroom remodeling project. You can verify our MHIC number before hiring."
+            question: "Is DMV General Contracting Group licensed to do bathroom remodeling in Garrett Park, MD?",
+            answer: "Yes. DMV General Contracting Group holds a Maryland Home Improvement Contractor (MHIC) license issued by the Maryland Home Improvement Commission \u2014 the license required to legally perform residential renovation work in Garrett Park and throughout Maryland. We also hold a DC DLCP license for cross-border work. We are fully bonded and insured, and provide a 1-year workmanship warranty on every bathroom remodeling project. You can verify our MHIC number before hiring."
         },
         {
             question: "Do I need a permit to remodel a bathroom in Garrett Park / Montgomery County?",
-            answer: "In most cases, yes. Any bathroom remodel that involves moving plumbing, adding or relocating electrical, or making structural changes requires permits. In Garrett Park, building and electrical permits are issued by Montgomery County DPS and plumbing through WSSC Water \u2014 the town does not run its own building department. Because Garrett Park is a registered arboretum and National Register historic district, the Town also administers a tree-protection ordinance and exterior review, which typically apply to exterior changes and tree removal rather than interior bathroom work. DMV-GC Group identifies exactly which approvals apply to your property and handles every permit and inspection for you."
+            answer: "In most cases, yes. Any bathroom remodel that involves moving plumbing, adding or relocating electrical, or making structural changes requires permits. In Garrett Park, building and electrical permits are issued by Montgomery County DPS and plumbing through WSSC Water \u2014 the town does not run its own building department. Because Garrett Park is a registered arboretum and National Register historic district, the Town also administers a tree-protection ordinance and exterior review, which typically apply to exterior changes and tree removal rather than interior bathroom work. DMV General Contracting Group identifies exactly which approvals apply to your property and handles every permit and inspection for you."
         },
         {
-            question: "Can DMV-GC Group convert my tub to a walk-in shower?",
+            question: "Can DMV General Contracting Group convert my tub to a walk-in shower?",
             answer: "Yes. Tub-to-shower conversions are a popular project in Garrett Park \u2014 both in the town\u2019s older Victorian and bungalow homes with original tubs and in the mid-century homes of Garrett Park Estates. We remove the existing tub, rebuild the wet area with a proper bonded waterproofing system, and install a custom tile or low-maintenance walk-in shower \u2014 including frameless glass, niches, benches, and curbless accessible designs \u2014 while respecting the character of an older home. Most conversions are completed in 2\u20133 weeks."
         },
         {
-            question: "Can DMV-GC Group add a bathroom in my basement or primary suite?",
+            question: "Can DMV General Contracting Group add a bathroom in my basement or primary suite?",
             answer: "Yes. Adding a bathroom is a high-value upgrade for Garrett Park homes \u2014 many of the town\u2019s historic Victorians and bungalows were built with few bathrooms, so a primary-suite ensuite, a main-level powder room, or a basement bath makes them far more livable. We assess how the older home is built before planning the most efficient plumbing rough-in, then handle drainage, ventilation, waterproofing, and the full Montgomery County DPS and WSSC permit process."
         },
         {
             question: "How long does a bathroom remodel take in Garrett Park, MD?",
-            answer: "Most bathroom renovations in Garrett Park take 2\u20135 weeks from construction start to completion. A powder room refresh can be done in 1\u20132 weeks. A tub-to-shower conversion takes 2\u20133 weeks. A full primary bath renovation takes 4\u20136 weeks, and a new basement bathroom typically takes 3\u20135 weeks. Permit processing through Montgomery County DPS and WSSC usually adds 2\u20134 weeks before construction begins. DMV-GC Group factors realistic timelines into every project plan from the start."
+            answer: "Most bathroom renovations in Garrett Park take 2\u20135 weeks from construction start to completion. A powder room refresh can be done in 1\u20132 weeks. A tub-to-shower conversion takes 2\u20133 weeks. A full primary bath renovation takes 4\u20136 weeks, and a new basement bathroom typically takes 3\u20135 weeks. Permit processing through Montgomery County DPS and WSSC usually adds 2\u20134 weeks before construction begins. DMV General Contracting Group factors realistic timelines into every project plan from the start."
         }
     ];
 
@@ -393,117 +393,6 @@ export default function BathroomGarrettParkMD() {
             </div>
 
             {/* SCHEMA JSON-LD */}
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                    __html: JSON.stringify({
-                        "@context": "https://schema.org",
-                        "@graph": [
-                            {
-                                "@type": "GeneralContractor",
-                                "@id": "https://www.dmv-gc.com/#business",
-                                "name": "DMV General Contracting Group LLC",
-                                "legalName": "DMV General Contracting Group LLC",
-                                "alternateName": ["DMV General Contracting Group", "DMV-GC"],
-                                "image": "https://www.dmv-gc.com/logo.png",
-                                "url": "https://www.dmv-gc.com",
-                                "telephone": "+1-240-730-1292",
-                                "email": "support@dmv-gc.com",
-                                "foundingDate": "2018",
-                                "description": "Licensed design-build general contractor serving Garrett Park, MD and the greater Montgomery County area. Specializing in bathroom remodeling, master bath renovations, tub-to-shower conversions, basement bathroom additions, and aging-in-place remodels.",
-                                "address": {
-                                    "@type": "PostalAddress",
-                                    "streetAddress": "11810 Grand Park Ave #500",
-                                    "addressLocality": "North Bethesda",
-                                    "addressRegion": "MD",
-                                    "postalCode": "20852",
-                                    "addressCountry": "US"
-                                },
-                                "geo": {
-                                    "@type": "GeoCoordinates",
-                                    "latitude": 39.0458,
-                                    "longitude": -77.1139
-                                },
-                                "areaServed": [
-                                    {"@type": "City", "name": "Garrett Park", "sameAs": "https://en.wikipedia.org/wiki/Garrett_Park,_Maryland"},
-                                    {"@type": "City", "name": "Kensington"},
-                                    {"@type": "City", "name": "Rockville"},
-                                    {"@type": "City", "name": "North Bethesda"},
-                                    {"@type": "City", "name": "Bethesda"},
-                                    {"@type": "City", "name": "Wheaton"},
-                                    {"@type": "AdministrativeArea", "name": "Montgomery County, MD"}
-                                ],
-                                "hasCredential": [
-                                    {"@type": "EducationalOccupationalCredential", "name": "MHIC License", "credentialCategory": "Maryland Home Improvement Contractor License \u2014 issued by the Maryland Home Improvement Commission"},
-                                    {"@type": "EducationalOccupationalCredential", "name": "DLCP License", "credentialCategory": "Washington DC Department of Licensing and Consumer Protection \u2014 Home Improvement Contractor"}
-                                ],
-                                "priceRange": "$$$",
-                                "openingHoursSpecification": {
-                                    "@type": "OpeningHoursSpecification",
-                                    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
-                                    "opens": "08:00",
-                                    "closes": "20:00"
-                                }
-                            },
-                            {
-                                "@type": "Service",
-                                "@id": "https://www.dmv-gc.com/service/bathroom-remodeling/garrett-park-md#service",
-                                "serviceType": "Bathroom Remodeling",
-                                "name": "Bathroom Remodeling in Garrett Park, MD",
-                                "provider": {"@id": "https://www.dmv-gc.com/#business"},
-                                "areaServed": {
-                                    "@type": "City",
-                                    "name": "Garrett Park",
-                                    "sameAs": "https://en.wikipedia.org/wiki/Garrett_Park,_Maryland"
-                                },
-                                "description": "Full-service bathroom remodeling in Garrett Park, MD. Master and primary bath renovations, hall and guest bath remodels, powder rooms, tub-to-shower conversions, walk-in showers, basement bathroom additions, and accessible aging-in-place baths \u2014 design through final finishes \u2014 by an MHIC-licensed design-build contractor.",
-                                "offers": {
-                                    "@type": "Offer",
-                                    "priceCurrency": "USD",
-                                    "priceSpecification": {
-                                        "@type": "PriceSpecification",
-                                        "minPrice": "8000",
-                                        "maxPrice": "120000",
-                                        "priceCurrency": "USD"
-                                    }
-                                },
-                                "hasOfferCatalog": {
-                                    "@type": "OfferCatalog",
-                                    "name": "Bathroom Remodeling Services Garrett Park MD",
-                                    "itemListElement": [
-                                        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Master / Primary Bath Renovation"}},
-                                        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Hall & Guest Bathroom Remodel"}},
-                                        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Tub-to-Shower Conversion"}},
-                                        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Walk-In & Curbless Shower Installation"}},
-                                        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Basement Bathroom Addition"}},
-                                        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Accessible / Aging-in-Place Bathroom"}}
-                                    ]
-                                }
-                            },
-                            {
-                                "@type": "BreadcrumbList",
-                                "itemListElement": [
-                                    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.dmv-gc.com/"},
-                                    {"@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.dmv-gc.com/services"},
-                                    {"@type": "ListItem", "position": 3, "name": "Bathroom Remodeling", "item": "https://www.dmv-gc.com/service/bathroom-remodeling"},
-                                    {"@type": "ListItem", "position": 4, "name": "Garrett Park, MD", "item": "https://www.dmv-gc.com/service/bathroom-remodeling/garrett-park-md"}
-                                ]
-                            },
-                            {
-                                "@type": "FAQPage",
-                                "mainEntity": [
-                                    {"@type": "Question", "name": "How much does a bathroom remodel cost in Garrett Park, MD?", "acceptedAnswer": {"@type": "Answer", "text": "Bathroom remodeling in Garrett Park, MD typically costs between $8,000 and $120,000 depending on bathroom type, scope, and finishes. A powder room or half-bath refresh starts around $8,000\u2013$18,000. A hall or guest bath remodel runs $18,000\u2013$35,000. A tub-to-shower conversion runs $12,000\u2013$25,000. A primary (master) bath renovation costs $35,000\u2013$70,000, and a luxury primary bath can reach $70,000\u2013$120,000+. Adding a new basement bathroom runs $20,000\u2013$45,000. DMV General Contracting Group provides free in-home consultations with detailed estimates for any Garrett Park home."}},
-                                    {"@type": "Question", "name": "Is DMV General Contracting Group licensed to do bathroom remodeling in Garrett Park, MD?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. DMV General Contracting Group holds a Maryland Home Improvement Contractor (MHIC) license issued by the Maryland Home Improvement Commission \u2014 the license required to legally perform residential renovation work in Garrett Park and throughout Maryland. We are fully bonded and insured, and provide a 1-year workmanship warranty on every bathroom remodeling project completed in Montgomery County."}},
-                                    {"@type": "Question", "name": "Do I need a permit to remodel a bathroom in Garrett Park / Montgomery County?", "acceptedAnswer": {"@type": "Answer", "text": "In most cases, yes. Any bathroom remodel that involves moving plumbing, adding or relocating electrical, or structural changes requires permits. In Garrett Park, building and electrical permits are issued by Montgomery County DPS and plumbing permits through WSSC Water \u2014 the Town of Garrett Park does not run its own building department. Because Garrett Park is a registered arboretum and a National Register historic district, the town also administers a tree-protection ordinance and exterior review; these usually apply to exterior changes and tree removal rather than interior bathroom work, but we confirm the requirements for your property up front and handle every permit and approval for you."}},
-                                    {"@type": "Question", "name": "Can DMV General Contracting Group convert my tub to a walk-in shower?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Tub-to-shower conversions are a popular project in Garrett Park, both in the town\u2019s older Victorian and bungalow homes with original tubs and in the mid-century homes of Garrett Park Estates. We remove the existing tub, rebuild the wet area with proper waterproofing, and install a custom tile or low-maintenance walk-in shower \u2014 including curbless and accessible designs for aging-in-place \u2014 while respecting the character of older homes. Most conversions are completed in 2\u20133 weeks."}},
-                                    {"@type": "Question", "name": "How long does a bathroom remodel take in Garrett Park, MD?", "acceptedAnswer": {"@type": "Answer", "text": "Most bathroom renovations in Garrett Park take 2\u20135 weeks from construction start to completion. A powder room refresh can be done in 1\u20132 weeks. A tub-to-shower conversion takes 2\u20133 weeks. A full primary bath renovation takes 4\u20136 weeks, and a new basement bathroom typically takes 3\u20135 weeks. Permit processing through Montgomery County DPS and WSSC usually adds 2\u20134 weeks before construction begins. DMV General Contracting Group factors realistic timelines into every project plan."}},
-                                    {"@type": "Question", "name": "Can DMV General Contracting Group add a bathroom in my basement or primary suite?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Adding a bathroom is a high-value upgrade for Garrett Park homes \u2014 many of the town\u2019s historic Victorians and bungalows were built with few bathrooms, and adding a primary-suite ensuite, a main-level powder room, or a basement bath makes them far more livable. We assess how the older home is built before planning the most efficient plumbing rough-in, then handle drainage, ventilation, waterproofing, and the full Montgomery County DPS and WSSC permit process from start to finish."}}
-                                ]
-                            }
-                        ]
-                    }, null, 2)
-                }}
-            />
         </div>
     );
 }

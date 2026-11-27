@@ -7,181 +7,12 @@ import { useEffect } from "react";
 import { Accordion } from "react-bootstrap";
 import { useMyContext } from "@/hooks/context";
 
-const schemaJsonLd = {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "GeneralContractor",
-        "@id": "https://www.dmv-gc.com/#business",
-        "name": "DMV General Contracting Group LLC",
-        "legalName": "DMV General Contracting Group LLC",
-        "alternateName": ["DMV General Contracting Group", "DMV-GC"],
-        "image": "https://www.dmv-gc.com/logo.png",
-        "url": "https://www.dmv-gc.com",
-        "telephone": "+1-240-730-1292",
-        "email": "support@dmv-gc.com",
-        "foundingDate": "2018",
-        "description": "Licensed deck builder serving Laurel, MD. Custom deck construction across all three Laurel jurisdictions — City of Laurel, Montgomery County DPS (West Laurel/Montpelier), and Prince George's County DPS (Laurel Lakes/Russett) — with permit expertise for all three authorities and deck designs for Laurel's diverse housing stock.",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "11810 Grand Park Ave #500",
-          "addressLocality": "North Bethesda",
-          "addressRegion": "MD",
-          "postalCode": "20852",
-          "addressCountry": "US"
-        },
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": 39.0458,
-          "longitude": -77.1139
-        },
-        "areaServed": [
-          {
-            "@type": "City",
-            "name": "Laurel",
-            "sameAs": "https://en.wikipedia.org/wiki/Laurel,_Maryland"
-          },
-          {
-            "@type": "City",
-            "name": "Beltsville"
-          },
-          {
-            "@type": "City",
-            "name": "College Park"
-          },
-          {
-            "@type": "City",
-            "name": "Greenbelt"
-          },
-          {
-            "@type": "City",
-            "name": "Rockville"
-          }
-        ],
-        "hasCredential": [
-          {
-            "@type": "EducationalOccupationalCredential",
-            "name": "MHIC License",
-            "credentialCategory": "Maryland Home Improvement Contractor License"
-          }
-        ],
-        "priceRange": "$$$"
-      },
-      {
-        "@type": "Service",
-        "@id": "https://www.dmv-gc.com/service/decks/laurel-md#service",
-        "serviceType": "Deck Building",
-        "name": "Deck Building in Laurel, MD",
-        "alternateName": [
-          "Custom Deck Construction",
-          "Composite Deck",
-          "Split-Level Deck",
-          "Townhome Deck",
-          "MARC Commuter Deck"
-        ],
-        "provider": {
-          "@id": "https://www.dmv-gc.com/#business"
-        },
-        "areaServed": {
-          "@type": "City",
-          "name": "Laurel",
-          "sameAs": "https://en.wikipedia.org/wiki/Laurel,_Maryland"
-        },
-        "description": "Custom deck building in Laurel, MD. Composite rear decks, elevated split-level decks, townhome patio decks, and multi-level outdoor living builds across all Laurel neighborhoods — City of Laurel, West Laurel, Montpelier, Laurel Lakes, and Russett — with permit management for all three governing authorities.",
-        "offers": {
-          "@type": "Offer",
-          "priceCurrency": "USD",
-          "priceSpecification": {
-            "@type": "PriceSpecification",
-            "minPrice": "16000",
-            "maxPrice": "85000",
-            "priceCurrency": "USD"
-          }
-        }
-      },
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://www.dmv-gc.com/"
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Services",
-            "item": "https://www.dmv-gc.com/services"
-          },
-          {
-            "@type": "ListItem",
-            "position": 3,
-            "name": "Decks",
-            "item": "https://www.dmv-gc.com/service/decks"
-          },
-          {
-            "@type": "ListItem",
-            "position": 4,
-            "name": "Laurel, MD",
-            "item": "https://www.dmv-gc.com/service/decks/laurel-md"
-          }
-        ]
-      },
-      {
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "How much does it cost to build a deck in Laurel, MD?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Deck construction in Laurel, MD typically costs between $16,000 and $85,000 depending on neighborhood, home type, size, and material. A compact townhome patio deck runs $16,000–$28,000. A pressure-treated rear deck for a Laurel colonial or split-level costs $20,000–$36,000. A composite rear deck runs $28,000–$52,000. A multi-level deck with pergola and features costs $45,000–$85,000. Permit costs vary by jurisdiction — City of Laurel, Montgomery County, or Prince George's County — and are included in DMV General Contracting Group's detailed project proposals. Free in-home consultations available for all Laurel neighborhoods."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "How many permit jurisdictions does Laurel, MD have for deck building?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Laurel, MD has three distinct permit jurisdictions for deck construction — more than any single-city community in the DMV General Contracting Group service area. Properties within the City of Laurel's incorporated limits file deck permits with the City at 8103 Sandy Spring Road. Properties in West Laurel, Montpelier, and other western Laurel areas outside the city use Montgomery County DPS. Properties in Laurel Lakes, Russett, and other eastern Laurel areas use Prince George's County DPS. Mailing address alone does not determine jurisdiction — parcel boundary data does. DMV General Contracting Group verifies the correct permit authority for every Laurel address before any application is filed."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Does DMV General Contracting Group handle all three Laurel permit jurisdictions?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. DMV General Contracting Group handles deck permit applications with the City of Laurel (8103 Sandy Spring Road), Montgomery County DPS (for West Laurel and Montpelier), and Prince George's County DPS (for Laurel Lakes and Russett). Each authority has its own application format, plan review timeline, and inspection schedule. Our permit team manages all correspondence with whichever authority governs your specific Laurel address."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What deck type works best for Laurel's colonial and split-level homes?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Laurel's 1960s–80s colonials and split-levels in neighborhoods like Laurel Lakes, Montpelier, and Old Laurel have rear elevations typically 2–5 feet above grade — suitable for a standard elevated rear deck off the main living or dining room. Composite decking is the most popular choice in Laurel's market — 25–30 year lifespan, low maintenance, and good value at Laurel's mid-range price points. An elevated composite rear deck of 250–360 sq ft is the dominant project type across Laurel's single-family neighborhoods."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Is DMV General Contracting Group licensed for deck building in Laurel, MD?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. DMV General Contracting Group holds a Maryland MHIC license — required for all home improvement and construction work in Laurel across all three jurisdictions. We are fully bonded, carry comprehensive general liability insurance and workers' compensation coverage, and provide a 1-year workmanship warranty on every Laurel deck project."
-            }
-          }
-        ]
-      }
-    ]
-  };
-
 const faqData = [
-  { eventKey: "0", question: "How much does it cost to build a deck in Laurel, MD?", answer: "Deck construction in Laurel typically costs $16,000–$85,000 depending on neighborhood, home type, size, and scope. A compact Russett townhome deck runs $16,000–$32,000. A pressure-treated colonial rear deck costs $20,000–$36,000. A composite rear deck runs $26,000–$52,000. An elevated split-level deck in Montpelier costs $30,000–$58,000. Adding an under-deck drainage system brings that to $40,000–$68,000. A multi-level deck with pergola and outdoor kitchen runs $48,000–$85,000. All permit fees — City, MoCo, or PG County — are included in DMV-GC Group's project proposals. Free in-home consultations from our North Bethesda office." },
-  { eventKey: "1", question: "Which permit authority governs my Laurel deck project?", answer: "It depends on your specific parcel. Properties within the incorporated City of Laurel use City DPS at 8103 Sandy Spring Road. Properties in West Laurel and Montpelier use Montgomery County DPS. Properties in Laurel Lakes, Russett, and South Laurel use Prince George's County DPS. Your mailing address alone does not determine jurisdiction — parcel boundary data does. DMV-GC Group verifies the correct authority for every Laurel address before any application is filed, at no cost, as the first step of every Laurel deck project." },
-  { eventKey: "2", question: "Does my Russett or Laurel Lakes HOA need to approve a deck before permits are filed?", answer: "Many Laurel planned communities — including sections of Russett and Laurel Lakes — have active HOAs with exterior modification review requirements. HOA approval is typically required before the building permit is filed with Prince George's County DPS. DMV-GC Group confirms HOA requirements during the consultation, prepares all required HOA documentation, and manages the HOA submission process in-house. Permit application is prepared in parallel with HOA submission to minimize total pre-construction timeline." },
-  { eventKey: "3", question: "What is the best deck material for Laurel homes?", answer: "Composite decking — Trex, TimberTech, or Azek — is the most popular and practical choice for Laurel's mid-range single-family and townhome market. At 25–30 years of low-maintenance lifespan, composite outperforms pressure-treated in longevity and appearance at a cost premium that is well-justified in Laurel's resale-active market. Pressure-treated is a practical choice for cost-conscious projects on homes where the resale timeline is longer. Ipe hardwood is available for premium Montpelier and Old Laurel properties where the investment level warrants it. DMV-GC Group presents all three options with honest cost-benefit context during the consultation." },
-  { eventKey: "4", question: "Is DMV-GC Group licensed for deck building in Laurel, MD?", answer: "Yes. DMV-GC Group holds a Maryland MHIC license — required for all home improvement and construction work in Laurel across all three jurisdictions (City, Montgomery County, and Prince George's County). We are fully bonded, carry comprehensive general liability insurance and workers' compensation coverage, and provide a 1-year workmanship warranty on every Laurel deck project." }
+  { eventKey: "0", question: "How much does it cost to build a deck in Laurel, MD?", answer: "Deck construction in Laurel typically costs $16,000–$85,000 depending on neighborhood, home type, size, and scope. A compact Russett townhome deck runs $16,000–$32,000. A pressure-treated colonial rear deck costs $20,000–$36,000. A composite rear deck runs $26,000–$52,000. An elevated split-level deck in Montpelier costs $30,000–$58,000. Adding an under-deck drainage system brings that to $40,000–$68,000. A multi-level deck with pergola and outdoor kitchen runs $48,000–$85,000. All permit fees — City, MoCo, or PG County — are included in DMV General Contracting Group's project proposals. Free in-home consultations from our North Bethesda office." },
+  { eventKey: "1", question: "Which permit authority governs my Laurel deck project?", answer: "It depends on your specific parcel. Properties within the incorporated City of Laurel use City DPS at 8103 Sandy Spring Road. Properties in West Laurel and Montpelier use Montgomery County DPS. Properties in Laurel Lakes, Russett, and South Laurel use Prince George's County DPS. Your mailing address alone does not determine jurisdiction — parcel boundary data does. DMV General Contracting Group verifies the correct authority for every Laurel address before any application is filed, at no cost, as the first step of every Laurel deck project." },
+  { eventKey: "2", question: "Does my Russett or Laurel Lakes HOA need to approve a deck before permits are filed?", answer: "Many Laurel planned communities — including sections of Russett and Laurel Lakes — have active HOAs with exterior modification review requirements. HOA approval is typically required before the building permit is filed with Prince George's County DPS. DMV General Contracting Group confirms HOA requirements during the consultation, prepares all required HOA documentation, and manages the HOA submission process in-house. Permit application is prepared in parallel with HOA submission to minimize total pre-construction timeline." },
+  { eventKey: "3", question: "What is the best deck material for Laurel homes?", answer: "Composite decking — Trex, TimberTech, or Azek — is the most popular and practical choice for Laurel's mid-range single-family and townhome market. At 25–30 years of low-maintenance lifespan, composite outperforms pressure-treated in longevity and appearance at a cost premium that is well-justified in Laurel's resale-active market. Pressure-treated is a practical choice for cost-conscious projects on homes where the resale timeline is longer. Ipe hardwood is available for premium Montpelier and Old Laurel properties where the investment level warrants it. DMV General Contracting Group presents all three options with honest cost-benefit context during the consultation." },
+  { eventKey: "4", question: "Is DMV General Contracting Group licensed for deck building in Laurel, MD?", answer: "Yes. DMV General Contracting Group holds a Maryland MHIC license — required for all home improvement and construction work in Laurel across all three jurisdictions (City, Montgomery County, and Prince George's County). We are fully bonded, carry comprehensive general liability insurance and workers' compensation coverage, and provide a 1-year workmanship warranty on every Laurel deck project." }
 ];
 
 export default function DecksLaurelMD() {
@@ -1094,7 +925,6 @@ export default function DecksLaurelMD() {
         </div>
       </div>
 
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaJsonLd) }} />
     </main>
   );
 }

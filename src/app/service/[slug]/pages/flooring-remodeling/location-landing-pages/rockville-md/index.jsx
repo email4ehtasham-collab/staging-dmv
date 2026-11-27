@@ -7,144 +7,6 @@ import { useMyContext } from "@/hooks/context";
 import "../city-service-style.scss";
 import "./style.scss";
 
-const schemaJsonLd = {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "GeneralContractor",
-      "@id": "https://www.dmv-gc.com/#business",
-      "name": "DMV General Contracting Group LLC",
-      "legalName": "DMV General Contracting Group LLC",
-      "alternateName": ["DMV General Contracting Group", "DMV-GC"],
-      "url": "https://www.dmv-gc.com",
-      "telephone": "+1-240-730-1292",
-      "email": "support@dmv-gc.com",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "11810 Grand Park Ave #500",
-        "addressLocality": "North Bethesda",
-        "addressRegion": "MD",
-        "postalCode": "20852",
-        "addressCountry": "US"
-      },
-      "areaServed": {
-        "@type": "City",
-        "name": "Rockville",
-        "sameAs": "https://en.wikipedia.org/wiki/Rockville,_Maryland"
-      },
-      "hasCredential": [
-        {
-          "@type": "EducationalOccupationalCredential",
-          "name": "MHIC License #156178"
-        },
-        {
-          "@type": "EducationalOccupationalCredential",
-          "name": "DLCP License #410526000209"
-        }
-      ],
-      "priceRange": "$$$"
-    },
-    {
-      "@type": "Service",
-      "name": "Flooring Installation in Rockville, MD",
-      "serviceType": "Flooring Installation",
-      "provider": {
-        "@id": "https://www.dmv-gc.com/#business"
-      },
-      "areaServed": {
-        "@type": "City",
-        "name": "Rockville"
-      },
-      "description": "Full-service flooring installation, refinishing, and replacement in Rockville, MD. Wide-plank white oak for King Farm and Fallsgrove newer construction, original hardwood refinishing for Twinbrook and older Rockville colonials, LVP for split-level lower levels, and porcelain tile across all Rockville neighborhoods — with City of Rockville and Montgomery County DPS permit expertise where renovation scope requires it.",
-      "offers": {
-        "@type": "Offer",
-        "priceCurrency": "USD",
-        "priceSpecification": {
-          "@type": "PriceSpecification",
-          "minPrice": "3",
-          "maxPrice": "18",
-          "priceCurrency": "USD",
-          "unitCode": "SQFT"
-        }
-      }
-    },
-    {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://www.dmv-gc.com/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Services",
-          "item": "https://www.dmv-gc.com/services"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Flooring",
-          "item": "https://www.dmv-gc.com/service/flooring-remodeling"
-        },
-        {
-          "@type": "ListItem",
-          "position": 4,
-          "name": "Rockville, MD",
-          "item": "https://www.dmv-gc.com/service/flooring-remodeling/rockville-md"
-        }
-      ]
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "How much does flooring installation cost in Rockville, MD?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Flooring installation in Rockville, MD typically costs $3–$18 per square foot installed depending on material and neighborhood. Hardwood refinishing for Twinbrook and older Rockville colonials costs $3–$6 per square foot. Wide-plank white oak installation for King Farm and Fallsgrove runs $10–$18 per square foot. Standard hardwood installation costs $8–$15 per square foot. LVP for split-level lower levels and kitchens runs $5–$10 per square foot. Porcelain tile costs $8–$18 per square foot. A typical King Farm or Fallsgrove whole-home flooring project runs $14,000–$30,000. DMV General Contracting Group provides free, detailed in-home estimates for all Rockville neighborhoods."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What flooring is most popular in King Farm and Fallsgrove, Rockville?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Wide-plank white oak hardwood — typically 5-inch planks in natural to warm medium stain with matte or satin finish — is the most requested flooring upgrade in King Farm and Fallsgrove's 2000s colonials and townhomes. These homes were delivered with builder-grade carpet or narrow strip hardwood that is now 15–25 years old and ready for a first significant upgrade. The plywood subfloors throughout King Farm and Fallsgrove make wide-plank installation straightforward. LVP in the kitchen and lower level, and large-format porcelain tile in the primary bathroom, complete the most popular Rockville planned community flooring combination."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can the original hardwood floors in Twinbrook colonials be refinished?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Often yes. Twinbrook's 1950s–60s colonials and split-levels frequently have original 2.25-inch or 3-inch strip hardwood that has survived under carpet and retains sufficient thickness for refinishing. DMV General Contracting Group checks remaining wood thickness before recommending refinishing. When viable, refinishing restores the original floor at $3–$6 per square foot versus $8–$15 for new hardwood replacement. For Twinbrook's split-level homes, the two-zone strategy applies: above-grade floors are candidates for refinishing or new hardwood; lower-level below-grade floors require LVP regardless of original floor condition."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Does DMV General Contracting Group handle both City of Rockville and Montgomery County flooring projects?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. DMV General Contracting Group serves all Rockville neighborhoods regardless of whether they fall within the City of Rockville limits or in unincorporated Montgomery County. When flooring is part of a broader renovation scope that requires a building permit, we file with the correct authority — City of Rockville DPS at 111 Maryland Avenue for city-limit properties, or Montgomery County DPS for unincorporated areas. Flooring-only projects typically do not require a building permit in either jurisdiction."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is DMV General Contracting Group licensed for flooring installation in Rockville, MD?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. DMV General Contracting Group holds a Maryland MHIC license (#156178) — required for all home improvement work in Rockville across both City and County jurisdictions. We are fully bonded, carry comprehensive general liability insurance and workers' compensation coverage, and provide a 1-year workmanship warranty on every Rockville flooring project."
-          }
-        }
-      ]
-    }
-  ]
-};
-
 const RockvilleMD = () => {
   const { setActiveMenuItem } = useMyContext();
 
@@ -155,31 +17,29 @@ const RockvilleMD = () => {
   const faqData = [
     {
       question: "How much does flooring installation cost in Rockville, MD?",
-      answer: `Flooring in Rockville typically costs $3–$18 per square foot depending on material and neighborhood. Hardwood refinishing for Twinbrook and older homes costs $3–$6 per square foot. Wide-plank white oak for King Farm and Fallsgrove runs $10–$18 per square foot. Standard hardwood runs $8–$14 per square foot. Premium LVP costs $5–$10 per square foot. Porcelain tile runs $8–$20 depending on subfloor type and format. A typical King Farm or Fallsgrove whole-home package runs $14,000–$30,000. DMV-GC Group provides free, itemized estimates for every Rockville project.`
+      answer: `Flooring in Rockville typically costs $3–$18 per square foot depending on material and neighborhood. Hardwood refinishing for Twinbrook and older homes costs $3–$6 per square foot. Wide-plank white oak for King Farm and Fallsgrove runs $10–$18 per square foot. Standard hardwood runs $8–$14 per square foot. Premium LVP costs $5–$10 per square foot. Porcelain tile runs $8–$20 depending on subfloor type and format. A typical King Farm or Fallsgrove whole-home package runs $14,000–$30,000. DMV General Contracting Group provides free, itemized estimates for every Rockville project.`
     },
     {
       question: "Is my Twinbrook colonial's original hardwood refinishable?",
-      answer: `Often yes. Twinbrook's 1950s–60s colonials frequently have original 2.25-inch or 3-inch strip oak that has been under carpet for decades and retains sufficient thickness for refinishing. DMV-GC Group checks remaining thickness above the tongue during the free consultation before any recommendation is made. When viable — and it often is — refinishing at $3–$6 per square foot is far less than replacement at $8–$15 per square foot, and produces a floor with the authentic character of the original material.`
+      answer: `Often yes. Twinbrook's 1950s–60s colonials frequently have original 2.25-inch or 3-inch strip oak that has been under carpet for decades and retains sufficient thickness for refinishing. DMV General Contracting Group checks remaining thickness above the tongue during the free consultation before any recommendation is made. When viable — and it often is — refinishing at $3–$6 per square foot is far less than replacement at $8–$15 per square foot, and produces a floor with the authentic character of the original material.`
     },
     {
       question: "Should I install wide-plank oak or refinish my existing King Farm hardwood?",
-      answer: `It depends on your goal. If you want a stain color change — lighter or warmer than the existing — refinishing the original 2.25-inch strip hardwood costs $3–$6 per square foot versus $10–$18 for wide-plank replacement. If you want a plank width change from 2.25-inch to 5-inch, refinishing cannot achieve that — full replacement is required. DMV-GC Group presents both options with exact costs and helps you identify which path delivers what you actually want. We bring stain samples to show you what a refinish would produce in your home's specific light before you commit to either path.`
+      answer: `It depends on your goal. If you want a stain color change — lighter or warmer than the existing — refinishing the original 2.25-inch strip hardwood costs $3–$6 per square foot versus $10–$18 for wide-plank replacement. If you want a plank width change from 2.25-inch to 5-inch, refinishing cannot achieve that — full replacement is required. DMV General Contracting Group presents both options with exact costs and helps you identify which path delivers what you actually want. We bring stain samples to show you what a refinish would produce in your home's specific light before you commit to either path.`
     },
     {
       question: "Does my King Farm or Fallsgrove HOA need to approve interior flooring changes?",
-      answer: `Generally no — interior flooring changes are not exterior modifications and are not reviewed by King Farm or Fallsgrove's HOA Architectural Review Committees. However, if you are in an attached King Farm or Fallsgrove townhome, your HOA may have rules about acoustic underlayment under hard flooring on upper levels to limit noise transmission to neighbors below. DMV-GC Group checks the applicable HOA flooring rules for every attached townhome project before ordering materials, and specifies the correct acoustic underlayment where required — keeping the installation compliant without any action required from you.`
+      answer: `Generally no — interior flooring changes are not exterior modifications and are not reviewed by King Farm or Fallsgrove's HOA Architectural Review Committees. However, if you are in an attached King Farm or Fallsgrove townhome, your HOA may have rules about acoustic underlayment under hard flooring on upper levels to limit noise transmission to neighbors below. DMV General Contracting Group checks the applicable HOA flooring rules for every attached townhome project before ordering materials, and specifies the correct acoustic underlayment where required — keeping the installation compliant without any action required from you.`
     },
     {
-      question: "Is DMV-GC Group licensed for flooring in Rockville, MD?",
-      answer: `Yes. DMV-GC Group holds Maryland MHIC license #156178 — required for all home improvement work in Rockville across both the City of Rockville and unincorporated Montgomery County. When flooring is part of a broader renovation scope requiring a permit, we file with the City of Rockville DPS at 111 Maryland Avenue or Montgomery County DPS depending on the parcel's jurisdiction. We are fully bonded, carry comprehensive general liability insurance and workers' compensation coverage, and provide a 1-year workmanship warranty on every Rockville flooring project.`
+      question: "Is DMV General Contracting Group licensed for flooring in Rockville, MD?",
+      answer: `Yes. DMV General Contracting Group holds Maryland MHIC license #156178 — required for all home improvement work in Rockville across both the City of Rockville and unincorporated Montgomery County. When flooring is part of a broader renovation scope requiring a permit, we file with the City of Rockville DPS at 111 Maryland Avenue or Montgomery County DPS depending on the parcel's jurisdiction. We are fully bonded, carry comprehensive general liability insurance and workers' compensation coverage, and provide a 1-year workmanship warranty on every Rockville flooring project.`
     }
   ];
 
   return (
     <div className="city-service-detail-page flooring-rockville-md">
       <div className="container">
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaJsonLd) }} />
-
         <nav className="breadcrumb" aria-label="Breadcrumb">
           <Link href="/">Home</Link><span>›</span>
           <Link href="/services">Services</Link><span>›</span>

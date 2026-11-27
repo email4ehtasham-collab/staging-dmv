@@ -7,129 +7,13 @@ import { useEffect } from "react";
 import { Accordion } from "react-bootstrap";
 import { useMyContext } from "@/hooks/context";
 
-const schemaJsonLd = {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "GeneralContractor",
-      "@id": "https://www.dmv-gc.com/#business",
-      "name": "DMV General Contracting Group LLC",
-      "legalName": "DMV General Contracting Group LLC",
-      "alternateName": ["DMV General Contracting Group", "DMV-GC"],
-      "image": "https://www.dmv-gc.com/logo.png",
-      "url": "https://www.dmv-gc.com",
-      "telephone": "+1-240-730-1292",
-      "email": "support@dmv-gc.com",
-      "foundingDate": "2018",
-      "description": "Licensed deck builder serving Potomac, MD. Specializing in custom multi-level composite decks, pool decks, and fully equipped outdoor kitchens for Potomac estate properties — including Avenel, Travilah, and the River Road corridor.",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "11810 Grand Park Ave #500",
-        "addressLocality": "North Bethesda",
-        "addressRegion": "MD",
-        "postalCode": "20852",
-        "addressCountry": "US"
-      },
-      "geo": { "@type": "GeoCoordinates", "latitude": 39.0458, "longitude": -77.1139 },
-      "areaServed": [
-        { "@type": "City", "name": "Potomac", "sameAs": "https://en.wikipedia.org/wiki/Potomac,_Maryland" },
-        { "@type": "City", "name": "Bethesda" },
-        { "@type": "City", "name": "North Bethesda" },
-        { "@type": "City", "name": "Chevy Chase" },
-        { "@type": "City", "name": "Cabin John" }
-      ],
-      "hasCredential": [
-        { "@type": "EducationalOccupationalCredential", "name": "MHIC License", "credentialCategory": "Maryland Home Improvement Contractor License" }
-      ],
-      "priceRange": "$$$$"
-    },
-    {
-      "@type": "Service",
-      "@id": "https://www.dmv-gc.com/service/decks/potomac-md#service",
-      "serviceType": "Deck Building",
-      "name": "Deck Building in Potomac, MD",
-      "alternateName": ["Custom Deck Construction", "Composite Deck", "Pool Deck", "Outdoor Kitchen", "Multi-Level Deck"],
-      "provider": { "@id": "https://www.dmv-gc.com/#business" },
-      "areaServed": { "@type": "City", "name": "Potomac", "sameAs": "https://en.wikipedia.org/wiki/Potomac,_Maryland" },
-      "description": "Custom deck building in Potomac, MD. Multi-level composite decks, pool decks, outdoor kitchens, and premium hardwood decks for Potomac's estate properties — designed to estate scale, permitted through Montgomery County, and built with the quality Potomac's premium market demands.",
-      "offers": {
-        "@type": "Offer",
-        "priceCurrency": "USD",
-        "priceSpecification": { "@type": "PriceSpecification", "minPrice": "25000", "maxPrice": "200000", "priceCurrency": "USD" }
-      }
-    },
-    {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.dmv-gc.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.dmv-gc.com/services" },
-        { "@type": "ListItem", "position": 3, "name": "Decks", "item": "https://www.dmv-gc.com/service/decks" },
-        { "@type": "ListItem", "position": 4, "name": "Potomac, MD", "item": "https://www.dmv-gc.com/service/decks/potomac-md" }
-      ]
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "How much does it cost to build a deck in Potomac, MD?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Deck construction in Potomac, MD typically costs between $25,000 and $200,000+ depending on size, materials, and features. A mid-range composite deck runs $35,000–$65,000. A large multi-level composite deck with pergola costs $65,000–$110,000. A full outdoor living space with deck, outdoor kitchen, and pergola on a Potomac estate property can reach $120,000–$200,000+. Potomac's estate properties often support larger and more ambitious deck builds than most Montgomery County communities — and the premium real estate values mean quality deck investments return well at resale. DMV General Contracting Group provides free in-home consultations with detailed estimates."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Does DMV General Contracting Group handle permits for deck building in Potomac, MD?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. Potomac is in unincorporated Montgomery County — all deck building permits go through Montgomery County's Department of Permitting Services (DPS). DMV General Contracting Group handles all required building permits, structural drawings, and inspection scheduling as a standard part of every Potomac deck project. Homeowners never need to contact the county directly."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Does Avenel HOA approval affect deck building in Potomac?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. If your Potomac property is within Avenel or another HOA community, the HOA's Architectural Review Committee (ARC) must approve the deck design before Montgomery County permits are filed. ARC review considers the deck's size, materials, color, placement, and visibility from neighboring properties. DMV General Contracting Group prepares all required ARC documentation and manages the review process as a standard part of every Avenel and HOA-governed deck project. We design decks to ARC standards from the first draft to minimize revision requests."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What deck materials are best for Potomac, MD estates?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "For Potomac's estate properties, composite decking (Trex, TimberTech, or Azek) is the most popular choice — delivering the low-maintenance performance that busy estate owners want without the annual staining and sealing that wood requires. Ipe hardwood is the premium natural wood choice for Potomac — one of the hardest and most durable woods available, with a deep brown color that weathers beautifully and a lifespan of 40–75 years. PVC decking (Azek) is ideal for pool deck areas and shaded spots where moisture and mildew resistance are priorities. DMV General Contracting Group helps Potomac homeowners select the right material for each zone of their deck project."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can DMV General Contracting Group build a deck with an outdoor kitchen in Potomac?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. Outdoor kitchen integration is one of the most requested features on Potomac deck projects — built-in grills, countertops, refrigeration, sinks, and storage within the deck structure. DMV General Contracting Group designs and builds fully integrated outdoor kitchens as part of deck projects, managing all plumbing, electrical, and gas line connections in-house with licensed trades. This is a single-contract project — not a deck contractor and a separate outdoor kitchen company."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is DMV General Contracting Group licensed for deck building in Potomac, MD?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. DMV General Contracting Group holds a Maryland MHIC (Home Improvement Contractor) license — required for all home improvement and construction work in Potomac and Montgomery County. We are fully bonded, carry comprehensive general liability insurance and workers' compensation coverage, and provide a 1-year workmanship warranty on every deck project completed in Potomac."
-          }
-        }
-      ]
-    }
-  ]
-};
-
 const faqData = [
-  { eventKey: "0", question: "How much does it cost to build a deck in Potomac, MD?", answer: "Deck construction in Potomac typically costs $35,000–$200,000+ depending on size, material, and features. A single-level composite deck (300–400 sq ft) runs $35,000–$55,000. A multi-level composite deck (500–800 sq ft) costs $55,000–$95,000. An Ipe hardwood deck costs $45,000–$85,000. Adding an outdoor kitchen runs $25,000–$65,000 more. A full outdoor living build — deck, kitchen, pergola, and pool integration — can reach $110,000–$200,000+. DMV-GC Group provides free in-home consultations with detailed, itemized estimates for every Potomac deck scope." },
-  { eventKey: "1", question: "Does DMV-GC Group handle permits for deck building in Potomac?", answer: "Yes. Potomac is in unincorporated Montgomery County — all deck permits go through Montgomery County DPS. DMV-GC Group files all required building permits with complete structural drawings prepared by our in-house engineers, and manages all county correspondence, plan review, and inspection scheduling. For Avenel and other HOA properties, we also handle ARC documentation and review management. Homeowners never need to contact the county or HOA directly." },
-  { eventKey: "2", question: "Does Avenel HOA need to approve my deck design?", answer: "Yes. If your Potomac property is within Avenel's community boundaries, the HOA's Architectural Review Committee must approve the deck design before Montgomery County permits are filed. The ARC reviews size, material, color, placement, and visibility. DMV-GC Group prepares all required ARC documentation and manages the review process — and we design Avenel decks to ARC standards from the first draft to minimize revision requests. ARC and permit applications run simultaneously wherever possible." },
+  { eventKey: "0", question: "How much does it cost to build a deck in Potomac, MD?", answer: "Deck construction in Potomac typically costs $35,000–$200,000+ depending on size, material, and features. A single-level composite deck (300–400 sq ft) runs $35,000–$55,000. A multi-level composite deck (500–800 sq ft) costs $55,000–$95,000. An Ipe hardwood deck costs $45,000–$85,000. Adding an outdoor kitchen runs $25,000–$65,000 more. A full outdoor living build — deck, kitchen, pergola, and pool integration — can reach $110,000–$200,000+. DMV General Contracting Group provides free in-home consultations with detailed, itemized estimates for every Potomac deck scope." },
+  { eventKey: "1", question: "Does DMV General Contracting Group handle permits for deck building in Potomac?", answer: "Yes. Potomac is in unincorporated Montgomery County — all deck permits go through Montgomery County DPS. DMV General Contracting Group files all required building permits with complete structural drawings prepared by our in-house engineers, and manages all county correspondence, plan review, and inspection scheduling. For Avenel and other HOA properties, we also handle ARC documentation and review management. Homeowners never need to contact the county or HOA directly." },
+  { eventKey: "2", question: "Does Avenel HOA need to approve my deck design?", answer: "Yes. If your Potomac property is within Avenel's community boundaries, the HOA's Architectural Review Committee must approve the deck design before Montgomery County permits are filed. The ARC reviews size, material, color, placement, and visibility. DMV General Contracting Group prepares all required ARC documentation and manages the review process — and we design Avenel decks to ARC standards from the first draft to minimize revision requests. ARC and permit applications run simultaneously wherever possible." },
   { eventKey: "3", question: "What is the best deck material for a Potomac estate property?", answer: "For most Potomac estate primary decks, composite (Trex Transcend or TimberTech Legacy) offers the best balance of appearance, durability, and low maintenance. For pool deck surrounds, Azek PVC is the superior choice — 100% waterproof and slip-resistant. For homeowners who want a natural wood deck that makes a genuine statement and lasts a lifetime, Brazilian Ipe is the only wood we recommend at this investment level — its 40–75 year lifespan, Class A fire resistance, and exceptional density make it the premium choice for Potomac estates." },
-  { eventKey: "4", question: "Can DMV-GC Group integrate an outdoor kitchen into a Potomac deck?", answer: "Yes — and this is one of the most commonly requested features on Potomac deck projects. DMV-GC Group's in-house licensed plumbers, electricians, and gas line specialists handle all utility connections for outdoor kitchen installations. This is a single-contract project — not a deck contractor plus a separate outdoor kitchen company. The kitchen design is integrated with the deck structure from the first design draft." },
-  { eventKey: "5", question: "Is DMV-GC Group licensed for deck building in Potomac, MD?", answer: "Yes. DMV-GC Group holds a Maryland MHIC license — required for all home improvement and construction work in Potomac and Montgomery County. We carry comprehensive general liability insurance and workers' compensation coverage, are fully bonded, and provide a 1-year workmanship warranty on every deck project. Our in-house structural engineers prepare all required structural drawings for Montgomery County plan review." }
+  { eventKey: "4", question: "Can DMV General Contracting Group integrate an outdoor kitchen into a Potomac deck?", answer: "Yes — and this is one of the most commonly requested features on Potomac deck projects. DMV General Contracting Group's in-house licensed plumbers, electricians, and gas line specialists handle all utility connections for outdoor kitchen installations. This is a single-contract project — not a deck contractor plus a separate outdoor kitchen company. The kitchen design is integrated with the deck structure from the first design draft." },
+  { eventKey: "5", question: "Is DMV General Contracting Group licensed for deck building in Potomac, MD?", answer: "Yes. DMV General Contracting Group holds a Maryland MHIC license — required for all home improvement and construction work in Potomac and Montgomery County. We carry comprehensive general liability insurance and workers' compensation coverage, are fully bonded, and provide a 1-year workmanship warranty on every deck project. Our in-house structural engineers prepare all required structural drawings for Montgomery County plan review." }
 ];
 
 export default function DecksPotomacMD() {
@@ -594,7 +478,6 @@ export default function DecksPotomacMD() {
         </div>
       </div>
 
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaJsonLd) }} />
     </main>
   );
 }

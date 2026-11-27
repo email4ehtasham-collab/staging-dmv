@@ -22,7 +22,7 @@ const FramingWashingtonDC = () => {
         },
         {
             question: "Does DMV-GC serve Washington, DC?",
-            answer: "Yes. The company is headquartered at 11810 Grand Park Ave. Suite 500 in North Bethesda and lists DC DLCP #410526000209, serving DC rowhouses and condos."
+            answer: "Yes. The company is headquartered at 11810 Grand Park Ave #500 in North Bethesda and lists DC DLCP #410526000209, serving DC rowhouses and condos."
         }
     ];
 
@@ -30,61 +30,6 @@ const FramingWashingtonDC = () => {
         <div className="city-service-detail-page framing-washington-dc">
             <div className="container">
                 {/* SCHEMA JSON-LD */}
-                <script
-                    type="application/ld+json"
-                    dangerouslySetInnerHTML={{
-                        __html: JSON.stringify({
-                            "@context": "https://schema.org",
-                            "@graph": [
-                                {
-                                    "@type": "GeneralContractor",
-                                    "@id": "https://www.dmv-gc.com/#business",
-                                    "name": "DMV General Contracting Group LLC",
-                                    "legalName": "DMV General Contracting Group LLC",
-                                    "alternateName": ["DMV General Contracting Group", "DMV-GC"],
-                                    "url": "https://www.dmv-gc.com/",
-                                    "telephone": "+1-240-730-1292",
-                                    "email": "support@dmv-gc.com",
-                                    "description": "Residential general contractor providing framing services as part of its in-house trade services in Washington, DC.",
-                                    "address": {
-                                        "@type": "PostalAddress",
-                                        "streetAddress": "11810 Grand Park Ave #500",
-                                        "addressLocality": "North Bethesda",
-                                        "addressRegion": "MD",
-                                        "postalCode": "20852",
-                                        "addressCountry": "US"
-                                    },
-                                    "areaServed": { "@type": "City", "name": "Washington" }
-                                },
-                                {
-                                    "@type": "Service",
-                                    "name": "Framing Services in Washington, DC",
-                                    "provider": { "@type": "GeneralContractor", "name": "DMV General Contracting Group LLC", "telephone": "+1-240-730-1292", "url": "https://www.dmv-gc.com/" },
-                                    "areaServed": { "@type": "City", "name": "Washington" },
-                                    "serviceType": "Residential Wall, Structural, Addition and Basement Framing Services"
-                                },
-                                {
-                                    "@type": "BreadcrumbList",
-                                    "itemListElement": [
-                                        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.dmv-gc.com/" },
-                                        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.dmv-gc.com/services" },
-                                        { "@type": "ListItem", "position": 3, "name": "Framing", "item": "https://www.dmv-gc.com/service/framing" },
-                                        { "@type": "ListItem", "position": 4, "name": "Washington, DC", "item": "https://www.dmv-gc.com/service/framing/washington-dc" }
-                                    ]
-                                },
-                                {
-                                    "@type": "FAQPage",
-                                    "mainEntity": faqData.map(faq => ({
-                                        "@type": "Question",
-                                        "name": faq.question,
-                                        "acceptedAnswer": { "@type": "Answer", "text": faq.answer }
-                                    }))
-                                }
-                            ]
-                        })
-                    }}
-                />
-
                 {/* BREADCRUMB */}
                 <nav className="breadcrumb" aria-label="Breadcrumb">
                     <Link href="/">Home</Link><span>›</span>

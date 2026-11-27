@@ -21,7 +21,7 @@ const NorthBethesdaMD = () => {
         },
         {
             question: "Is DMV General Contracting Group local to North Bethesda?",
-            answer: "Yes — DMV General Contracting Group is headquartered at 11810 Grand Park Ave, Suite 500, North Bethesda, MD 20852. We are based in North Bethesda, file permits at MoCo DPS daily, and are familiar with every neighborhood and housing era in the community. When you hire DMV General Contracting Group for a North Bethesda addition, you are hiring your neighbor."
+            answer: "Yes — DMV General Contracting Group is headquartered at 11810 Grand Park Ave #500, North Bethesda, MD 20852. We are based in North Bethesda, file permits at MoCo DPS daily, and are familiar with every neighborhood and housing era in the community. When you hire DMV General Contracting Group for a North Bethesda addition, you are hiring your neighbor."
         },
         {
             question: "Do older North Bethesda ranches need electrical upgrades for a home addition?",

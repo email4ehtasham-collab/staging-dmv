@@ -17,27 +17,27 @@ const RockvilleMD = () => {
     const faqData = [
         {
             question: "How much does a kitchen remodel cost in Rockville, MD?",
-            answer: "Kitchen remodeling in Rockville, MD typically costs between $25,000 and $150,000 depending on home type, scope, and finishes. A cosmetic refresh starts around $15,000–$28,000. A mid-range remodel with new cabinets and countertops runs $32,000–$68,000. A full gut renovation with custom cabinetry costs $70,000–$120,000. Luxury renovations in larger single-family homes near King Farm or Fallsgrove can reach $120,000–$150,000+. DMV-GC Group provides free in-home consultations with detailed, itemized estimates for any Rockville home type."
+            answer: "Kitchen remodeling in Rockville, MD typically costs between $25,000 and $150,000 depending on home type, scope, and finishes. A cosmetic refresh starts around $15,000–$28,000. A mid-range remodel with new cabinets and countertops runs $32,000–$68,000. A full gut renovation with custom cabinetry costs $70,000–$120,000. Luxury renovations in larger single-family homes near King Farm or Fallsgrove can reach $120,000–$150,000+. DMV General Contracting Group provides free in-home consultations with detailed, itemized estimates for any Rockville home type."
         },
         {
-            question: "Does DMV-GC Group remodel kitchens in Rockville condos and high-rises?",
-            answer: "Yes. DMV-GC Group has experience renovating kitchens in Rockville's condo buildings and high-rises, particularly in Rockville Town Center and along the Pike District. Condo kitchen renovations require building management coordination, certificate of insurance submission, freight elevator scheduling, and adherence to building work-hour policies. We manage all of this coordination as part of every condo kitchen project."
+            question: "Does DMV General Contracting Group remodel kitchens in Rockville condos and high-rises?",
+            answer: "Yes. DMV General Contracting Group has experience renovating kitchens in Rockville's condo buildings and high-rises, particularly in Rockville Town Center and along the Pike District. Condo kitchen renovations require building management coordination, certificate of insurance submission, freight elevator scheduling, and adherence to building work-hour policies. We manage all of this coordination as part of every condo kitchen project."
         },
         {
-            question: "Does DMV-GC Group handle permits for kitchen remodeling in Rockville?",
-            answer: "Yes. Rockville is an incorporated city with its own permitting department — separate from Montgomery County. DMV-GC Group's in-house permit team determines whether your property requires a City of Rockville permit or a Montgomery County permit based on its exact location, and files all required building, electrical, and plumbing permits accordingly. Rockville homeowners never need to contact the city or county directly."
+            question: "Does DMV General Contracting Group handle permits for kitchen remodeling in Rockville?",
+            answer: "Yes. Rockville is an incorporated city with its own permitting department — separate from Montgomery County. DMV General Contracting Group's in-house permit team determines whether your property requires a City of Rockville permit or a Montgomery County permit based on its exact location, and files all required building, electrical, and plumbing permits accordingly. Rockville homeowners never need to contact the city or county directly."
         },
         {
-            question: "Can DMV-GC Group remodel a townhome kitchen in King Farm or Fallsgrove?",
-            answer: "Yes. Townhome kitchen remodels in King Farm, Fallsgrove, and Twinbrook are among our most common Rockville projects. These newer planned communities often have HOA guidelines covering exterior changes, contractor parking, and work hours. DMV-GC Group handles all required HOA documentation and coordination as a standard part of every project in these communities, alongside the full design, permit, and construction process."
+            question: "Can DMV General Contracting Group remodel a townhome kitchen in King Farm or Fallsgrove?",
+            answer: "Yes. Townhome kitchen remodels in King Farm, Fallsgrove, and Twinbrook are among our most common Rockville projects. These newer planned communities often have HOA guidelines covering exterior changes, contractor parking, and work hours. DMV General Contracting Group handles all required HOA documentation and coordination as a standard part of every project in these communities, alongside the full design, permit, and construction process."
         },
         {
             question: "How long does a kitchen remodel take in Rockville, MD?",
-            answer: "Most kitchen renovations in Rockville take 6–12 weeks from construction start to completion. A cosmetic refresh can be done in 3–5 weeks. A full gut renovation with layout changes takes 9–13 weeks. Permit processing — through the City of Rockville or Montgomery County depending on location — typically adds 3–6 weeks before construction begins. Condo projects may take slightly longer due to building access scheduling. DMV-GC Group manages the complete timeline in-house."
+            answer: "Most kitchen renovations in Rockville take 6–12 weeks from construction start to completion. A cosmetic refresh can be done in 3–5 weeks. A full gut renovation with layout changes takes 9–13 weeks. Permit processing — through the City of Rockville or Montgomery County depending on location — typically adds 3–6 weeks before construction begins. Condo projects may take slightly longer due to building access scheduling. DMV General Contracting Group manages the complete timeline in-house."
         },
         {
-            question: "Is DMV-GC Group licensed for kitchen remodeling in Rockville, MD?",
-            answer: "Yes. DMV-GC Group holds a Maryland MHIC (Home Improvement Contractor) license — required for all home renovation work in Rockville. We are fully bonded, carry comprehensive general liability insurance and workers' compensation coverage, and provide a 1-year workmanship warranty on every kitchen remodeling project completed in Rockville."
+            question: "Is DMV General Contracting Group licensed for kitchen remodeling in Rockville, MD?",
+            answer: "Yes. DMV General Contracting Group holds a Maryland MHIC (Home Improvement Contractor) license — required for all home renovation work in Rockville. We are fully bonded, carry comprehensive general liability insurance and workers' compensation coverage, and provide a 1-year workmanship warranty on every kitchen remodeling project completed in Rockville."
         }
     ];
 

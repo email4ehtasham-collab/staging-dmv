@@ -7,134 +7,6 @@ import { useMyContext } from "@/hooks/context";
 import "../city-service-style.scss";
 import "./style.scss";
 
-const schemaJsonLd = {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "GeneralContractor",
-      "@id": "https://www.dmv-gc.com/#business",
-      name: "DMV General Contracting Group LLC",
-      legalName: "DMV General Contracting Group LLC",
-      alternateName: ["DMV General Contracting Group", "DMV-GC"],
-      image: "https://www.dmv-gc.com/logo.png",
-      url: "https://www.dmv-gc.com",
-      telephone: "+1-240-730-1292",
-      email: "support@dmv-gc.com",
-      foundingDate: "2018",
-      description: "Licensed design-build general contractor serving Silver Spring, MD. Specializing in basement remodeling for Silver Spring's diverse housing stock — split-levels, colonials, ranches, and cape cods — including ADU basement conversions, recreation rooms, and home offices.",
-      address: {
-        "@type": "PostalAddress",
-        streetAddress: "11810 Grand Park Ave #500",
-        addressLocality: "North Bethesda",
-        addressRegion: "MD",
-        postalCode: "20852",
-        addressCountry: "US",
-      },
-      geo: { "@type": "GeoCoordinates", latitude: 39.0458, longitude: -77.1139 },
-      areaServed: [
-        { "@type": "City", name: "Silver Spring", sameAs: "https://en.wikipedia.org/wiki/Silver_Spring,_Maryland" },
-        { "@type": "City", name: "Wheaton" },
-        { "@type": "City", name: "Kensington" },
-        { "@type": "City", name: "Chevy Chase" },
-        { "@type": "City", name: "Takoma Park" },
-      ],
-      hasCredential: [
-        { "@type": "EducationalOccupationalCredential", name: "MHIC License", credentialCategory: "Maryland Home Improvement Contractor License" },
-        { "@type": "EducationalOccupationalCredential", name: "DLCP License", credentialCategory: "Washington DC Department of Licensing and Consumer Protection" },
-      ],
-      priceRange: "$$",
-    },
-    {
-      "@type": "Service",
-      "@id": "https://www.dmv-gc.com/service/basement-remodeling/silver-spring-md#service",
-      serviceType: "Basement Remodeling",
-      name: "Basement Remodeling in Silver Spring, MD",
-      provider: { "@id": "https://www.dmv-gc.com/#business" },
-      areaServed: { "@type": "City", name: "Silver Spring", sameAs: "https://en.wikipedia.org/wiki/Silver_Spring,_Maryland" },
-      description: "Full-service basement remodeling in Silver Spring, MD. Split-level basement finishing, ADU basement conversions, recreation rooms, home offices, guest suites, and basement bathroom additions — for Silver Spring's diverse housing stock of ranches, split-levels, colonials, and cape cods.",
-      offers: {
-        "@type": "Offer",
-        priceCurrency: "USD",
-        priceSpecification: { "@type": "PriceSpecification", minPrice: "18000", maxPrice: "110000", priceCurrency: "USD" },
-      },
-      hasOfferCatalog: {
-        "@type": "OfferCatalog",
-        name: "Basement Remodeling Services Silver Spring MD",
-        itemListElement: [
-          { "@type": "Offer", itemOffered: { "@type": "Service", name: "Split-Level Basement Finishing" } },
-          { "@type": "Offer", itemOffered: { "@type": "Service", name: "ADU Basement Conversion" } },
-          { "@type": "Offer", itemOffered: { "@type": "Service", name: "Recreation Room & Family Room" } },
-          { "@type": "Offer", itemOffered: { "@type": "Service", name: "Home Office Buildout" } },
-          { "@type": "Offer", itemOffered: { "@type": "Service", name: "Basement Guest Suite" } },
-          { "@type": "Offer", itemOffered: { "@type": "Service", name: "Basement Bathroom Addition" } },
-        ],
-      },
-    },
-    {
-      "@type": "BreadcrumbList",
-      itemListElement: [
-        { "@type": "ListItem", position: 1, name: "Home", item: "https://www.dmv-gc.com/" },
-        { "@type": "ListItem", position: 2, name: "Services", item: "https://www.dmv-gc.com/services" },
-        { "@type": "ListItem", position: 3, name: "Basement Remodeling", item: "https://www.dmv-gc.com/service/basement-remodeling" },
-        { "@type": "ListItem", position: 4, name: "Silver Spring, MD", item: "https://www.dmv-gc.com/service/basement-remodeling/silver-spring-md" },
-      ],
-    },
-    {
-      "@type": "FAQPage",
-      mainEntity: [
-        {
-          "@type": "Question",
-          name: "How much does basement remodeling cost in Silver Spring, MD?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Basement remodeling in Silver Spring, MD typically costs between $18,000 and $110,000 depending on scope, basement size, and finish level. A basic basement finishing runs $18,000–$40,000. A mid-range basement with a bathroom and home office runs $38,000–$70,000. A full ADU basement conversion with separate entrance, kitchen, and bathroom can reach $65,000–$110,000. Split-level basements in Silver Spring are often partially above grade, which simplifies egress but may have lower ceiling heights in below-grade portions. DMV General Contracting Group provides free in-home consultations with detailed estimates.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Can DMV General Contracting Group convert a Silver Spring basement into an ADU or rental unit?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Yes. ADU (Accessory Dwelling Unit) basement conversions are one of the most popular projects in Silver Spring, driven by the area's strong rental market and proximity to the Red Line Metro. A legal basement ADU in Montgomery County requires a Certificate of Occupancy, egress windows in sleeping areas, a separate entrance, a full kitchen or kitchenette, and a full bathroom — all of which DMV General Contracting Group designs and builds, including all required Montgomery County permits and inspections.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Does DMV General Contracting Group finish split-level basements in Silver Spring?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Yes. Split-level homes are extremely common in Silver Spring, and their lower levels — which are partially above grade on one side — are some of the most practical basement finishing projects we complete. The partially above-grade nature of split-level lower levels means natural light is often available without egress window excavation, and ceiling heights are typically more generous than fully below-grade basements. DMV General Contracting Group has extensive experience finishing Silver Spring split-level lower levels.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Does DMV General Contracting Group handle permits for basement remodeling in Silver Spring?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Yes. Silver Spring is an unincorporated community in Montgomery County, so all basement remodeling permits are processed through Montgomery County's Department of Permitting Services (DPS). DMV General Contracting Group's in-house permit team handles all required building, electrical, and plumbing permits and manages all county correspondence and inspection scheduling. For ADU conversions, we also manage the Certificate of Occupancy process.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "How long does a basement remodel take in Silver Spring, MD?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Most basement renovations in Silver Spring take 6–12 weeks from construction start to completion. A basic finishing takes 6–8 weeks. A full ADU conversion takes 10–14 weeks. Montgomery County permit processing typically adds 4–6 weeks before construction begins. ADU projects also require a Certificate of Occupancy inspection at completion, which adds 1–2 weeks to the final timeline. DMV General Contracting Group manages the complete timeline in-house.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Is DMV General Contracting Group licensed for basement remodeling in Silver Spring, MD?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Yes. DMV General Contracting Group holds a Maryland MHIC (Home Improvement Contractor) license — required for all home renovation work in Silver Spring and Montgomery County. We are fully bonded, carry comprehensive general liability insurance and workers' compensation coverage, and provide a 1-year workmanship warranty on every basement remodeling project completed in Silver Spring.",
-          },
-        },
-      ],
-    },
-  ],
-};
-
 export default function BasementSilverSpringMD() {
   const { setActiveMenuItem } = useMyContext();
 
@@ -572,25 +444,25 @@ export default function BasementSilverSpringMD() {
         <Accordion.Item eventKey="0" className="faq-item">
           <Accordion.Header>How much does basement remodeling cost in Silver Spring, MD?</Accordion.Header>
           <Accordion.Body>
-            Basement remodeling in Silver Spring typically costs $18,000–$110,000 depending on scope. A split-level lower level finishing runs $18,000–$38,000. A full basement finishing costs $28,000–$55,000. A mid-range basement with bathroom and office runs $38,000–$70,000. A full ADU conversion (egress windows, separate entrance, kitchen, bathroom, COO) costs $65,000–$110,000. DMV-GC Group provides free in-home consultations with itemized estimates for every scope.
+            Basement remodeling in Silver Spring typically costs $18,000–$110,000 depending on scope. A split-level lower level finishing runs $18,000–$38,000. A full basement finishing costs $28,000–$55,000. A mid-range basement with bathroom and office runs $38,000–$70,000. A full ADU conversion (egress windows, separate entrance, kitchen, bathroom, COO) costs $65,000–$110,000. DMV General Contracting Group provides free in-home consultations with itemized estimates for every scope.
           </Accordion.Body>
         </Accordion.Item>
         <Accordion.Item eventKey="1" className="faq-item">
-          <Accordion.Header>Can DMV-GC Group convert a Silver Spring basement into a legal ADU?</Accordion.Header>
+          <Accordion.Header>Can DMV General Contracting Group convert a Silver Spring basement into a legal ADU?</Accordion.Header>
           <Accordion.Body>
-            Yes. ADU basement conversions are one of our most common projects in Silver Spring. A legal Montgomery County ADU requires egress windows in sleeping areas, a separate entrance, a full kitchen or kitchenette, a full bathroom, proper fire separation, and a Certificate of Occupancy. DMV-GC Group manages all of these requirements — including the COO application and all required inspections — as part of every ADU project.
+            Yes. ADU basement conversions are one of our most common projects in Silver Spring. A legal Montgomery County ADU requires egress windows in sleeping areas, a separate entrance, a full kitchen or kitchenette, a full bathroom, proper fire separation, and a Certificate of Occupancy. DMV General Contracting Group manages all of these requirements — including the COO application and all required inspections — as part of every ADU project.
           </Accordion.Body>
         </Accordion.Item>
         <Accordion.Item eventKey="2" className="faq-item">
-          <Accordion.Header>Does DMV-GC Group finish split-level basements in Silver Spring?</Accordion.Header>
+          <Accordion.Header>Does DMV General Contracting Group finish split-level basements in Silver Spring?</Accordion.Header>
           <Accordion.Body>
             Yes. Split-level homes are extremely common in Silver Spring, and their lower levels are some of the most practical basement finishing projects we complete. The partially above-grade nature of split-level lower levels means natural light is often available, ceiling heights are more generous, and existing exterior doors sometimes already satisfy the separate entrance requirement for an ADU conversion.
           </Accordion.Body>
         </Accordion.Item>
         <Accordion.Item eventKey="3" className="faq-item">
-          <Accordion.Header>Does DMV-GC Group handle permits for basement remodeling in Silver Spring?</Accordion.Header>
+          <Accordion.Header>Does DMV General Contracting Group handle permits for basement remodeling in Silver Spring?</Accordion.Header>
           <Accordion.Body>
-            Yes. Silver Spring is an unincorporated community in Montgomery County — all permits go through Montgomery County DPS. DMV-GC Group handles all required building, electrical, and plumbing permits, plus the Certificate of Occupancy application for ADU projects. Our permit team manages all county correspondence and inspection scheduling from start to finish.
+            Yes. Silver Spring is an unincorporated community in Montgomery County — all permits go through Montgomery County DPS. DMV General Contracting Group handles all required building, electrical, and plumbing permits, plus the Certificate of Occupancy application for ADU projects. Our permit team manages all county correspondence and inspection scheduling from start to finish.
           </Accordion.Body>
         </Accordion.Item>
         <Accordion.Item eventKey="4" className="faq-item">
@@ -600,9 +472,9 @@ export default function BasementSilverSpringMD() {
           </Accordion.Body>
         </Accordion.Item>
         <Accordion.Item eventKey="5" className="faq-item">
-          <Accordion.Header>Is DMV-GC Group licensed for basement remodeling in Silver Spring, MD?</Accordion.Header>
+          <Accordion.Header>Is DMV General Contracting Group licensed for basement remodeling in Silver Spring, MD?</Accordion.Header>
           <Accordion.Body>
-            Yes. DMV-GC Group holds a Maryland MHIC (Home Improvement Contractor) license — required for all home renovation work in Silver Spring and Montgomery County. We employ licensed plumbers and electricians in-house, are fully bonded, carry comprehensive general liability insurance and workers&apos; compensation coverage, and provide a 1-year workmanship warranty on every basement project in Silver Spring.
+            Yes. DMV General Contracting Group holds a Maryland MHIC (Home Improvement Contractor) license — required for all home renovation work in Silver Spring and Montgomery County. We employ licensed plumbers and electricians in-house, are fully bonded, carry comprehensive general liability insurance and workers&apos; compensation coverage, and provide a 1-year workmanship warranty on every basement project in Silver Spring.
           </Accordion.Body>
         </Accordion.Item>
       </Accordion>
@@ -626,10 +498,6 @@ export default function BasementSilverSpringMD() {
         <a href="tel:+1 (240) 730-1292" className="cta-btn outline">📞 +1 240-730-1292</a>
       </div>
 
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaJsonLd) }}
-        />
       </div>
     </div>
   );

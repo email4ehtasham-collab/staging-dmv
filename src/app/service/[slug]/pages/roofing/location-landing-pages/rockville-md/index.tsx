@@ -73,61 +73,6 @@ const RoofingRockvilleMD = () => {
         <div className="city-service-detail-page roofing-rockville-md">
             <div className="container">
                 {/* SCHEMA JSON-LD */}
-                <script
-                    type="application/ld+json"
-                    dangerouslySetInnerHTML={{
-                        __html: JSON.stringify({
-                            "@context": "https://schema.org",
-                            "@graph": [
-                                {
-                                    "@type": "GeneralContractor",
-                                    "@id": "https://www.dmv-gc.com/#business",
-                                    "name": "DMV General Contracting Group LLC",
-                                    "legalName": "DMV General Contracting Group LLC",
-                                    "alternateName": ["DMV General Contracting Group", "DMV-GC"],
-                                    "url": "https://www.dmv-gc.com/",
-                                    "telephone": "+1-240-730-1292",
-                                    "email": "support@dmv-gc.com",
-                                    "description": "Licensed and insured general contractor providing residential roofing inspection, repair, replacement, emergency roofing and maintenance services in Rockville, Maryland. Dual permit jurisdiction expertise: City of Rockville at 111 Maryland Avenue and MoCo DPS at 2425 Reedie Drive.",
-                                    "address": {
-                                        "@type": "PostalAddress",
-                                        "streetAddress": "11810 Grand Park Ave #500",
-                                        "addressLocality": "North Bethesda",
-                                        "addressRegion": "MD",
-                                        "postalCode": "20852",
-                                        "addressCountry": "US"
-                                    },
-                                    "areaServed": { "@type": "City", "name": "Rockville" }
-                                },
-                                {
-                                    "@type": "Service",
-                                    "name": "Roofing Services in Rockville, MD",
-                                    "provider": { "@type": "GeneralContractor", "name": "DMV General Contracting Group LLC", "telephone": "+1-240-730-1292", "url": "https://www.dmv-gc.com/" },
-                                    "areaServed": { "@type": "City", "name": "Rockville" },
-                                    "serviceType": "Residential Roof Inspection, Repair, Replacement, Emergency Roofing and Maintenance"
-                                },
-                                {
-                                    "@type": "BreadcrumbList",
-                                    "itemListElement": [
-                                        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.dmv-gc.com/" },
-                                        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.dmv-gc.com/services" },
-                                        { "@type": "ListItem", "position": 3, "name": "Roofing", "item": "https://www.dmv-gc.com/service/roofing" },
-                                        { "@type": "ListItem", "position": 4, "name": "Rockville, MD", "item": "https://www.dmv-gc.com/service/roofing/rockville-md" }
-                                    ]
-                                },
-                                {
-                                    "@type": "FAQPage",
-                                    "mainEntity": faqData.map(faq => ({
-                                        "@type": "Question",
-                                        "name": faq.question,
-                                        "acceptedAnswer": { "@type": "Answer", "text": faq.answer }
-                                    }))
-                                }
-                            ]
-                        })
-                    }}
-                />
-
                 {/* BREADCRUMB */}
                 <nav className="breadcrumb" aria-label="Breadcrumb">
                     <Link href="/">Home</Link><span>›</span>

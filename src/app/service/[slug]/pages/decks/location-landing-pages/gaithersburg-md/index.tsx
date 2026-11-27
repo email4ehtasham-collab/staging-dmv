@@ -7,120 +7,12 @@ import { useEffect } from "react";
 import { Accordion } from "react-bootstrap";
 import { useMyContext } from "@/hooks/context";
 
-const schemaJsonLd = {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "GeneralContractor",
-      "@id": "https://www.dmv-gc.com/#business",
-      "name": "DMV General Contracting Group LLC",
-      "legalName": "DMV General Contracting Group LLC",
-      "alternateName": ["DMV General Contracting Group", "DMV-GC"],
-      "image": "https://www.dmv-gc.com/logo.png",
-      "url": "https://www.dmv-gc.com",
-      "telephone": "+1-240-730-1292",
-      "email": "support@dmv-gc.com",
-      "foundingDate": "2018",
-      "description": "Licensed deck builder serving Gaithersburg, MD. Custom deck construction across all Gaithersburg neighborhoods — Kentlands, Lakelands, Crown Farm, Washingtonian Woods, and beyond — with City of Gaithersburg and Montgomery County DPS permit expertise and full HOA ARC coordination.",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "11810 Grand Park Ave #500",
-        "addressLocality": "North Bethesda",
-        "addressRegion": "MD",
-        "postalCode": "20852",
-        "addressCountry": "US"
-      },
-      "geo": { "@type": "GeoCoordinates", "latitude": 39.0458, "longitude": -77.1139 },
-      "areaServed": [
-        { "@type": "City", "name": "Gaithersburg", "sameAs": "https://en.wikipedia.org/wiki/Gaithersburg,_Maryland" },
-        { "@type": "City", "name": "Rockville" },
-        { "@type": "City", "name": "North Bethesda" },
-        { "@type": "City", "name": "Germantown" },
-        { "@type": "City", "name": "Potomac" }
-      ],
-      "hasCredential": [
-        { "@type": "EducationalOccupationalCredential", "name": "MHIC License", "credentialCategory": "Maryland Home Improvement Contractor License" }
-      ],
-      "priceRange": "$$$"
-    },
-    {
-      "@type": "Service",
-      "@id": "https://www.dmv-gc.com/service/decks/gaithersburg-md#service",
-      "serviceType": "Deck Building",
-      "name": "Deck Building in Gaithersburg, MD",
-      "alternateName": ["Custom Deck Construction", "Composite Deck", "Kentlands Deck", "HOA Deck", "Rear Yard Deck"],
-      "provider": { "@id": "https://www.dmv-gc.com/#business" },
-      "areaServed": { "@type": "City", "name": "Gaithersburg", "sameAs": "https://en.wikipedia.org/wiki/Gaithersburg,_Maryland" },
-      "description": "Full-service deck design and construction in Gaithersburg, MD. Custom composite decks, multi-level decks, and outdoor living builds across all Gaithersburg neighborhoods — with City of Gaithersburg DPW and Montgomery County DPS permit expertise, and Kentlands, Lakelands, Crown Farm, and Washingtonian Woods HOA ARC coordination.",
-      "offers": {
-        "@type": "Offer",
-        "priceCurrency": "USD",
-        "priceSpecification": { "@type": "PriceSpecification", "minPrice": "18000", "maxPrice": "95000", "priceCurrency": "USD" }
-      }
-    },
-    {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.dmv-gc.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.dmv-gc.com/services" },
-        { "@type": "ListItem", "position": 3, "name": "Decks", "item": "https://www.dmv-gc.com/service/decks" },
-        { "@type": "ListItem", "position": 4, "name": "Gaithersburg, MD", "item": "https://www.dmv-gc.com/service/decks/gaithersburg-md" }
-      ]
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "How much does it cost to build a deck in Gaithersburg, MD?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Deck construction in Gaithersburg, MD typically costs between $18,000 and $95,000 depending on size, material, features, and neighborhood. A pressure-treated rear deck runs $18,000–$30,000. A composite deck costs $28,000–$56,000. A composite deck with pergola and built-in features costs $48,000–$82,000. A full outdoor living build with kitchen and pergola can reach $70,000–$95,000. HOA ARC approval — required in Kentlands, Lakelands, Crown Farm, and Washingtonian Woods — adds timeline but not significant cost. DMV General Contracting Group provides free in-home consultations with detailed estimates."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Does the City of Gaithersburg have its own deck permit process?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. The City of Gaithersburg is an incorporated municipality with its own Department of Public Works that issues building permits — separate from Montgomery County DPS. Properties within the City of Gaithersburg's incorporated limits file deck permits with the City DPW, not with Montgomery County. Properties in the unincorporated portions of the Gaithersburg area — Crown Farm, and other areas outside the city limits — file with Montgomery County DPS. Kentlands and Lakelands are within the City of Gaithersburg and file with the City. DMV General Contracting Group verifies the correct permit authority for every Gaithersburg address before any application is filed."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Does DMV General Contracting Group handle Kentlands and Lakelands HOA ARC approval for deck projects?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. Kentlands and Lakelands both have active Homeowners Associations with Architectural Review Committees that must approve exterior modifications — including deck construction — before permits are filed. DMV General Contracting Group prepares all required ARC documentation for Kentlands and Lakelands deck projects: site plan, elevation drawings, material and color specifications. We manage the ARC submission and review process in-house and design decks to ARC standards from the first draft to minimize revision requests."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What deck materials are best for Gaithersburg homes?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "For most Gaithersburg properties, composite decking — Trex, TimberTech, or Azek — is the most popular choice, delivering low maintenance and 25–30 year lifespan. For Kentlands and Lakelands homes where the ARC specifies material or color restrictions, DMV General Contracting Group works within the ARC's palette while selecting the best composite product available within those parameters. Pressure-treated wood is the most cost-effective entry-level option for homeowners prioritizing budget. Cedar is a mid-range natural wood option for homeowners who want natural wood appearance with moderate maintenance."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is DMV General Contracting Group licensed for deck building in Gaithersburg, MD?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. DMV General Contracting Group holds a Maryland MHIC license — required for all home improvement and construction work in Gaithersburg. We handle City of Gaithersburg DPW permits for properties within the city limits and Montgomery County DPS permits for unincorporated areas. We are fully bonded, carry comprehensive general liability insurance and workers' compensation coverage, and provide a 1-year workmanship warranty on every deck project in Gaithersburg."
-          }
-        }
-      ]
-    }
-  ]
-};
-
 const faqData = [
-  { eventKey: "0", question: "How much does it cost to build a deck in Gaithersburg, MD?", answer: "Deck construction in Gaithersburg typically costs $18,000–$95,000 depending on neighborhood, size, material, and features. A pressure-treated deck in older city neighborhoods runs $18,000–$30,000. A composite deck in Kentlands or Lakelands costs $28,000–$52,000. A larger Crown Farm composite deck runs $36,000–$62,000. A multi-level deck with stairs costs $48,000–$80,000. A full outdoor living build with kitchen and pergola runs $65,000–$95,000. HOA ARC coordination and City or County permit filing are included in every project scope. DMV-GC Group provides free in-home consultations with detailed estimates." },
-  { eventKey: "1", question: "Does the City of Gaithersburg have its own permit process for decks?", answer: "Yes. Properties within the incorporated City of Gaithersburg — including Kentlands and Lakelands — file deck permits with the City's Department of Public Works, not Montgomery County DPS. Crown Farm, being outside the city limits, uses Montgomery County DPS. DMV-GC Group verifies the correct jurisdiction for every Gaithersburg address before any permit application is filed." },
-  { eventKey: "2", question: "Does Kentlands HOA need to approve my deck before permits are filed?", answer: "Yes. Kentlands HOA's Architectural Review Committee must approve the deck design before the City of Gaithersburg building permit is filed. The ARC reviews deck size, material, color, placement, and compatibility with the home's and community's architectural character. DMV-GC Group prepares all required ARC documentation — site plan, elevation drawings, material specifications, color samples — and manages the complete review process. We design Kentlands decks to ARC standards from the first draft to minimize revision requests." },
-  { eventKey: "3", question: "Does Crown Farm use City of Gaithersburg or Montgomery County permits?", answer: "Crown Farm uses Montgomery County DPS permits — it is located outside the incorporated City of Gaithersburg limits. However, Crown Farm also has its own HOA with ARC review that must approve exterior modifications including decks before the MoCo permit is filed. DMV-GC Group manages both the Crown Farm ARC submission and the Montgomery County DPS permit application — often running simultaneously to minimize total timeline." },
-  { eventKey: "4", question: "Is DMV-GC Group licensed for deck building in Gaithersburg, MD?", answer: "Yes. DMV-GC Group holds a Maryland MHIC license — required for all home improvement and construction work in Gaithersburg. We handle City of Gaithersburg DPW permits for properties within the city limits and Montgomery County DPS permits for unincorporated areas. We are fully bonded, carry comprehensive general liability insurance and workers' compensation coverage, and provide a 1-year workmanship warranty on every deck project in Gaithersburg." }
+  { eventKey: "0", question: "How much does it cost to build a deck in Gaithersburg, MD?", answer: "Deck construction in Gaithersburg typically costs $18,000–$95,000 depending on neighborhood, size, material, and features. A pressure-treated deck in older city neighborhoods runs $18,000–$30,000. A composite deck in Kentlands or Lakelands costs $28,000–$52,000. A larger Crown Farm composite deck runs $36,000–$62,000. A multi-level deck with stairs costs $48,000–$80,000. A full outdoor living build with kitchen and pergola runs $65,000–$95,000. HOA ARC coordination and City or County permit filing are included in every project scope. DMV General Contracting Group provides free in-home consultations with detailed estimates." },
+  { eventKey: "1", question: "Does the City of Gaithersburg have its own permit process for decks?", answer: "Yes. Properties within the incorporated City of Gaithersburg — including Kentlands and Lakelands — file deck permits with the City's Department of Public Works, not Montgomery County DPS. Crown Farm, being outside the city limits, uses Montgomery County DPS. DMV General Contracting Group verifies the correct jurisdiction for every Gaithersburg address before any permit application is filed." },
+  { eventKey: "2", question: "Does Kentlands HOA need to approve my deck before permits are filed?", answer: "Yes. Kentlands HOA's Architectural Review Committee must approve the deck design before the City of Gaithersburg building permit is filed. The ARC reviews deck size, material, color, placement, and compatibility with the home's and community's architectural character. DMV General Contracting Group prepares all required ARC documentation — site plan, elevation drawings, material specifications, color samples — and manages the complete review process. We design Kentlands decks to ARC standards from the first draft to minimize revision requests." },
+  { eventKey: "3", question: "Does Crown Farm use City of Gaithersburg or Montgomery County permits?", answer: "Crown Farm uses Montgomery County DPS permits — it is located outside the incorporated City of Gaithersburg limits. However, Crown Farm also has its own HOA with ARC review that must approve exterior modifications including decks before the MoCo permit is filed. DMV General Contracting Group manages both the Crown Farm ARC submission and the Montgomery County DPS permit application — often running simultaneously to minimize total timeline." },
+  { eventKey: "4", question: "Is DMV General Contracting Group licensed for deck building in Gaithersburg, MD?", answer: "Yes. DMV General Contracting Group holds a Maryland MHIC license — required for all home improvement and construction work in Gaithersburg. We handle City of Gaithersburg DPW permits for properties within the city limits and Montgomery County DPS permits for unincorporated areas. We are fully bonded, carry comprehensive general liability insurance and workers' compensation coverage, and provide a 1-year workmanship warranty on every deck project in Gaithersburg." }
 ];
 
 export default function DecksGaithersburgMD() {
@@ -592,7 +484,6 @@ export default function DecksGaithersburgMD() {
         </div>
       </div>
 
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaJsonLd) }} />
     </main>
   );
 }

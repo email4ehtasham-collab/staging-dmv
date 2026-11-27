@@ -12,6 +12,7 @@ import BethesdaProjectsReviews from "@/components/ServiceArea/BethesdaProjectsRe
 import HomesMatrix from "@/components/ServiceArea/HomesMatrix";
 import ServiceAreaPage from "@/components/ServiceArea/ServiceAreaPage";
 import SupportingServices from "@/components/ServiceArea/SupportingServices";
+import PageSchema from "@/components/Schema/PageSchema";
 
 export const metadata: Metadata = {
   title: "General Contractor & Home Remodeling in Bethesda, MD | DMV General Contracting Group",
@@ -286,6 +287,8 @@ export default function BethesdaServiceAreaPage() {
       <HomeFaq variant="bethesda" />
 
       <Estimate />
+
+      <PageSchema path="/service-area/bethesda-md" />
     </ServiceAreaPage>
   );
 }

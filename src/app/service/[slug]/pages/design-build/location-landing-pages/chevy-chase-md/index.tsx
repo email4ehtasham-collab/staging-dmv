@@ -18,10 +18,10 @@ const ChevyChaseMD = () => {
     const faqData = [
         {
             question: "How many permit jurisdictions does Chevy Chase have, and which one governs my property?",
-            answer: "Chevy Chase has six permit jurisdictions: the Village of Chevy Chase, Chevy Chase Section 3, Chevy Chase Section 5, the Village of Somerset, the Village of Friendship Heights, and unincorporated Montgomery County (MoCo DPS). Every incorporated village has its own permit office independent of MoCo DPS. The correct jurisdiction for your property cannot be reliably determined from the street address or ZIP code alone — neighboring houses on the same street can be in different jurisdictions. DMV-GC Group determines the correct permit authority for every Chevy Chase project by parcel address lookup at the free consultation, before any permit-required scope begins."
+            answer: "Chevy Chase has six permit jurisdictions: the Village of Chevy Chase, Chevy Chase Section 3, Chevy Chase Section 5, the Village of Somerset, the Village of Friendship Heights, and unincorporated Montgomery County (MoCo DPS). Every incorporated village has its own permit office independent of MoCo DPS. The correct jurisdiction for your property cannot be reliably determined from the street address or ZIP code alone — neighboring houses on the same street can be in different jurisdictions. DMV General Contracting Group determines the correct permit authority for every Chevy Chase project by parcel address lookup at the free consultation, before any permit-required scope begins."
         },
         {
-            question: "Does DMV-GC Group preserve original hardwood floors in Chevy Chase renovations?",
+            question: "Does DMV General Contracting Group preserve original hardwood floors in Chevy Chase renovations?",
             answer: "Preservation is always our default. Chevy Chase's original old-growth heart pine, Douglas fir, and wide-plank white oak floors — species that are no longer available in the densities present in pre-1950 homes — are assessed for remaining sanding cycles, board stability, and finish condition at the consultation. In most cases, refinishing to natural or period-appropriate finish restores the original floors to better-than-new condition. Replacement is recommended only when damage, moisture, or structural modification makes refinishing impossible. When replacement is required in a specific area, we source period-compatible species and profiles to maintain visual continuity with the preserved original sections throughout the home."
         },
         {
@@ -29,7 +29,7 @@ const ChevyChaseMD = () => {
             answer: "Chevy Chase design-build costs reflect the estate-level quality and historic construction complexity these homes present. Kitchen remodels run $55,000–$175,000+. Primary bathroom expansions run $45,000–$130,000+. Open-concept conversions run $25,000–$70,000+. Rear or second-story additions range from $200,000–$700,000+. ADU or carriage house construction runs $100,000–$350,000+. Whole-home renovations range from $250,000–$900,000+. All costs include architectural design, structural engineering, historic detail preservation planning, and permit filing with the correct village jurisdiction. No separate architect billing rate."
         },
         {
-            question: "Is DMV-GC Group licensed for design-build in Chevy Chase, MD?",
+            question: "Is DMV General Contracting Group licensed for design-build in Chevy Chase, MD?",
             answer: "Yes. DMV General Contracting Group holds Maryland MHIC license #156178 — required for all home improvement and construction work in Chevy Chase across all six permit jurisdictions. Fully bonded, comprehensive general liability and workers' compensation coverage, and a 1-year workmanship warranty on every Chevy Chase design-build project."
         }
     ];

@@ -7,181 +7,12 @@ import { useEffect } from "react";
 import { Accordion } from "react-bootstrap";
 import { useMyContext } from "@/hooks/context";
 
-const schemaJsonLd = {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "GeneralContractor",
-        "@id": "https://www.dmv-gc.com/#business",
-        "name": "DMV General Contracting Group LLC",
-        "legalName": "DMV General Contracting Group LLC",
-        "alternateName": ["DMV General Contracting Group", "DMV-GC"],
-        "image": "https://www.dmv-gc.com/logo.png",
-        "url": "https://www.dmv-gc.com",
-        "telephone": "+1-240-730-1292",
-        "email": "support@dmv-gc.com",
-        "foundingDate": "2018",
-        "description": "Licensed deck builder serving Cabin John, MD. Specializing in walkout basement deck conversions, elevated rear decks, and multi-level outdoor living builds for Cabin John's wooded, sloped-lot homes — with tree-aware construction, Montgomery County permit management, and design that connects the home to Cabin John's extraordinary natural setting.",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "11810 Grand Park Ave #500",
-          "addressLocality": "North Bethesda",
-          "addressRegion": "MD",
-          "postalCode": "20852",
-          "addressCountry": "US"
-        },
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": 39.0458,
-          "longitude": -77.1139
-        },
-        "areaServed": [
-          {
-            "@type": "City",
-            "name": "Cabin John",
-            "sameAs": "https://en.wikipedia.org/wiki/Cabin_John,_Maryland"
-          },
-          {
-            "@type": "City",
-            "name": "Bethesda"
-          },
-          {
-            "@type": "City",
-            "name": "Potomac"
-          },
-          {
-            "@type": "City",
-            "name": "North Bethesda"
-          },
-          {
-            "@type": "City",
-            "name": "Chevy Chase"
-          }
-        ],
-        "hasCredential": [
-          {
-            "@type": "EducationalOccupationalCredential",
-            "name": "MHIC License",
-            "credentialCategory": "Maryland Home Improvement Contractor License"
-          }
-        ],
-        "priceRange": "$$$"
-      },
-      {
-        "@type": "Service",
-        "@id": "https://www.dmv-gc.com/service/decks/cabin-john-md#service",
-        "serviceType": "Deck Building",
-        "name": "Deck Building in Cabin John, MD",
-        "alternateName": [
-          "Custom Deck Construction",
-          "Walkout Deck",
-          "Elevated Rear Deck",
-          "Wooded Lot Deck",
-          "Sloped Lot Deck"
-        ],
-        "provider": {
-          "@id": "https://www.dmv-gc.com/#business"
-        },
-        "areaServed": {
-          "@type": "City",
-          "name": "Cabin John",
-          "sameAs": "https://en.wikipedia.org/wiki/Cabin_John,_Maryland"
-        },
-        "description": "Custom deck building in Cabin John, MD. Walkout basement decks, elevated rear decks, multi-level wooded landscape builds, and rear terrace additions for Cabin John's sloped, tree-covered lots along MacArthur Boulevard — with tree-aware construction practices and Montgomery County permit management.",
-        "offers": {
-          "@type": "Offer",
-          "priceCurrency": "USD",
-          "priceSpecification": {
-            "@type": "PriceSpecification",
-            "minPrice": "28000",
-            "maxPrice": "110000",
-            "priceCurrency": "USD"
-          }
-        }
-      },
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://www.dmv-gc.com/"
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Services",
-            "item": "https://www.dmv-gc.com/services"
-          },
-          {
-            "@type": "ListItem",
-            "position": 3,
-            "name": "Decks",
-            "item": "https://www.dmv-gc.com/service/decks"
-          },
-          {
-            "@type": "ListItem",
-            "position": 4,
-            "name": "Cabin John, MD",
-            "item": "https://www.dmv-gc.com/service/decks/cabin-john-md"
-          }
-        ]
-      },
-      {
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "How much does it cost to build a deck in Cabin John, MD?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Deck construction in Cabin John, MD typically costs between $28,000 and $110,000 depending on deck type, terrain, and scope. A walkout basement deck accessed from an existing rear door runs $28,000–$55,000. An elevated rear deck on a sloped lot costs $36,000–$68,000. A multi-level deck with rear terrace integration runs $52,000–$88,000. A full outdoor living build with pergola and outdoor kitchen on a larger Cabin John property can reach $70,000–$110,000. Site conditions — slope, tree proximity, terrain — vary more in Cabin John than in flat suburban communities and affect cost accordingly. DMV General Contracting Group visits every property before any estimate is prepared."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "How does tree protection affect deck construction in Cabin John?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Significantly. Cabin John's mature tree canopy is the community's defining characteristic and is protected under Montgomery County's Forest Conservation Law. Any deck footing installation, post hole drilling, or other excavation near significant trees must be assessed for proximity to the tree's Critical Root Zone — approximately 1 foot of radius per inch of trunk diameter. DMV General Contracting Group identifies all significant trees near any proposed deck footings before design is finalized, and uses extended joist spans to jump root zones where possible rather than relocating or removing footings from optimal structural positions."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What deck types work best on Cabin John's sloped lots?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Cabin John's terrain along the Potomac River palisades creates excellent elevated deck opportunities — particularly where homes have walkout basements or significant rear grade drops. A walkout basement deck (accessed from the existing rear door at basement level, with the deck surface at or just above grade on the downhill side) is the most natural and cost-effective deck configuration for Cabin John's sloped lots. Where the main living floor is elevated above the rear grade, an elevated rear deck off the main floor — with post heights varying to follow the slope — is the most functional configuration. Multi-level decks that step down with the terrain are also highly effective on Cabin John's steeply sloped properties."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Does DMV General Contracting Group handle Montgomery County deck permits for Cabin John?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. Cabin John is in unincorporated Montgomery County — all deck permits go through Montgomery County DPS. DMV General Contracting Group files all required building permits with structural drawings and manages all county correspondence, plan review, and inspection scheduling as a standard part of every Cabin John deck project. Significant trees near proposed construction are documented on permit drawings as required under Montgomery County's Forest Conservation Law."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Is DMV General Contracting Group licensed for deck building in Cabin John, MD?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. DMV General Contracting Group holds a Maryland MHIC license — required for all home improvement and construction work in Cabin John and Montgomery County. We are fully bonded, carry comprehensive general liability insurance and workers' compensation coverage, and provide a 1-year workmanship warranty on every deck project in Cabin John."
-            }
-          }
-        ]
-      }
-    ]
-  };
-
 const faqData = [
-  { eventKey: "0", question: "How much does it cost to build a deck in Cabin John, MD?", answer: "Deck construction in Cabin John typically costs $28,000–$110,000 depending on type, terrain, and scope. A walkout-level composite deck runs $28,000–$50,000. An Ipe walkout deck costs $38,000–$65,000. An elevated main-floor deck on a sloped lot runs $38,000–$68,000. A deck with rear terrace costs $36,000–$68,000. A multi-level terrain-following deck runs $52,000–$90,000. Extended beam spans to bridge significant tree root zones add $1,500–$4,500 per span. Site conditions — terrain slope and tree proximity — affect cost more in Cabin John than in flat suburban communities. DMV-GC Group visits every property before any estimate is prepared." },
-  { eventKey: "1", question: "How does DMV-GC Group protect trees during deck construction in Cabin John?", answer: "Tree protection is a mandatory first step on every Cabin John deck project — not an afterthought. We map the Critical Root Zone (CRZ) of every significant tree near the proposed deck footprint before any post locations are proposed. We design extended beam spans to bridge root zones where possible, use hand tools within CRZs where excavation is unavoidable, plan equipment access routes to avoid driving over root zones, and document significant trees on permit drawings as required by the Montgomery County Forest Conservation Law." },
-  { eventKey: "2", question: "What deck type works best for Cabin John's sloped lots?", answer: "It depends on where your home's rear door sits relative to the grade. For walkout basement homes — where an existing door opens at basement level to the downhill rear yard — a walkout-level deck is the most natural and cost-effective option. For homes where the main living floor is significantly elevated above the rear grade, an elevated rear deck with variable-height posts following the slope is the most functional configuration. Multi-level decks that step between both levels are the most complete solution for homes with both configurations. DMV-GC Group assesses your specific terrain configuration during the free consultation." },
-  { eventKey: "3", question: "Is Ipe hardwood a good choice for Cabin John decks?", answer: "Yes — particularly for homeowners who want a material that ages into the Cabin John landscape rather than maintaining an artificially maintained suburban look. Ipe's warm brown weathers to a distinguished silver-grey over 12–18 months if left unfinished — a color that integrates beautifully with Cabin John's grey-brown bark and stone. Its 40–75 year lifespan, Class A fire resistance, and genuine natural wood character make it well-suited to this setting. Pre-drilling every fastener location and sealing every cut end are essential correct Ipe installation practices — DMV-GC Group's carpenters are trained in both." },
-  { eventKey: "4", question: "Does DMV-GC Group handle Montgomery County deck permits for Cabin John?", answer: "Yes. Cabin John is in unincorporated Montgomery County — all deck permits go through Montgomery County DPS. DMV-GC Group files all required building permits with complete structural drawings, including significant tree documentation as required under the Forest Conservation Law. Our permit team manages all county correspondence, plan review responses, and inspection scheduling from permit application through final inspection." }
+  { eventKey: "0", question: "How much does it cost to build a deck in Cabin John, MD?", answer: "Deck construction in Cabin John typically costs $28,000–$110,000 depending on type, terrain, and scope. A walkout-level composite deck runs $28,000–$50,000. An Ipe walkout deck costs $38,000–$65,000. An elevated main-floor deck on a sloped lot runs $38,000–$68,000. A deck with rear terrace costs $36,000–$68,000. A multi-level terrain-following deck runs $52,000–$90,000. Extended beam spans to bridge significant tree root zones add $1,500–$4,500 per span. Site conditions — terrain slope and tree proximity — affect cost more in Cabin John than in flat suburban communities. DMV General Contracting Group visits every property before any estimate is prepared." },
+  { eventKey: "1", question: "How does DMV General Contracting Group protect trees during deck construction in Cabin John?", answer: "Tree protection is a mandatory first step on every Cabin John deck project — not an afterthought. We map the Critical Root Zone (CRZ) of every significant tree near the proposed deck footprint before any post locations are proposed. We design extended beam spans to bridge root zones where possible, use hand tools within CRZs where excavation is unavoidable, plan equipment access routes to avoid driving over root zones, and document significant trees on permit drawings as required by the Montgomery County Forest Conservation Law." },
+  { eventKey: "2", question: "What deck type works best for Cabin John's sloped lots?", answer: "It depends on where your home's rear door sits relative to the grade. For walkout basement homes — where an existing door opens at basement level to the downhill rear yard — a walkout-level deck is the most natural and cost-effective option. For homes where the main living floor is significantly elevated above the rear grade, an elevated rear deck with variable-height posts following the slope is the most functional configuration. Multi-level decks that step between both levels are the most complete solution for homes with both configurations. DMV General Contracting Group assesses your specific terrain configuration during the free consultation." },
+  { eventKey: "3", question: "Is Ipe hardwood a good choice for Cabin John decks?", answer: "Yes — particularly for homeowners who want a material that ages into the Cabin John landscape rather than maintaining an artificially maintained suburban look. Ipe's warm brown weathers to a distinguished silver-grey over 12–18 months if left unfinished — a color that integrates beautifully with Cabin John's grey-brown bark and stone. Its 40–75 year lifespan, Class A fire resistance, and genuine natural wood character make it well-suited to this setting. Pre-drilling every fastener location and sealing every cut end are essential correct Ipe installation practices — DMV General Contracting Group's carpenters are trained in both." },
+  { eventKey: "4", question: "Does DMV General Contracting Group handle Montgomery County deck permits for Cabin John?", answer: "Yes. Cabin John is in unincorporated Montgomery County — all deck permits go through Montgomery County DPS. DMV General Contracting Group files all required building permits with complete structural drawings, including significant tree documentation as required under the Forest Conservation Law. Our permit team manages all county correspondence, plan review responses, and inspection scheduling from permit application through final inspection." }
 ];
 
 export default function DecksCabinJohnMD() {
@@ -1042,7 +873,6 @@ export default function DecksCabinJohnMD() {
         </div>
       </div>
 
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaJsonLd) }} />
     </main>
   );
 }

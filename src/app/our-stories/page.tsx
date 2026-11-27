@@ -5,6 +5,7 @@ import Stories from "./stories";
 import styles from "./style.module.scss";
 import NavitemActive from "@/components/Common/NavitemActive";
 import GoogleReviews from "@/components/Testimonials/GoogleReviews";
+import PageSchema from "@/components/Schema/PageSchema";
 
 export const metadata: Metadata = {
     title: "Behind The Scenes Where Our Construction Projects Take Shape",
@@ -19,6 +20,7 @@ export const metadata: Metadata = {
 export default function OurStoriesPage() {
     return (
         <main className="page-wrapper">
+            <PageSchema path="/our-stories" />
             <NavitemActive nav="our-stories" />
 
             <div className={styles["banner-holder"]}>

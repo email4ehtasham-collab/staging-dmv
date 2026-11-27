@@ -7,134 +7,6 @@ import { useMyContext } from "@/hooks/context";
 import "../city-service-style.scss";
 import "./style.scss";
 
-const schemaJsonLd = {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "GeneralContractor",
-      "@id": "https://www.dmv-gc.com/#business",
-      "name": "DMV General Contracting Group LLC",
-      "legalName": "DMV General Contracting Group LLC",
-      "alternateName": ["DMV General Contracting Group", "DMV-GC"],
-      "image": "https://www.dmv-gc.com/logo.png",
-      "url": "https://www.dmv-gc.com",
-      "telephone": "+1-240-730-1292",
-      "email": "support@dmv-gc.com",
-      "foundingDate": "2018",
-      "description": "Licensed design-build general contractor serving Potomac, MD. Specializing in luxury basement remodeling, home theaters, wine cellars, guest suites, and full basement finishing for estate homes.",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "11810 Grand Park Ave #500",
-        "addressLocality": "North Bethesda",
-        "addressRegion": "MD",
-        "postalCode": "20852",
-        "addressCountry": "US"
-      },
-      "geo": { "@type": "GeoCoordinates", "latitude": 39.0458, "longitude": -77.1139 },
-      "areaServed": [
-        { "@type": "City", "name": "Potomac", "sameAs": "https://en.wikipedia.org/wiki/Potomac,_Maryland" },
-        { "@type": "City", "name": "Bethesda" },
-        { "@type": "City", "name": "North Bethesda" },
-        { "@type": "City", "name": "Chevy Chase" },
-        { "@type": "City", "name": "Rockville" }
-      ],
-      "hasCredential": [
-        { "@type": "EducationalOccupationalCredential", "name": "MHIC License", "credentialCategory": "Maryland Home Improvement Contractor License" },
-        { "@type": "EducationalOccupationalCredential", "name": "DLCP License", "credentialCategory": "Washington DC Department of Licensing and Consumer Protection" }
-      ],
-      "priceRange": "$$$$"
-    },
-    {
-      "@type": "Service",
-      "@id": "https://www.dmv-gc.com/service/basement-remodeling/potomac-md#service",
-      "serviceType": "Basement Remodeling",
-      "name": "Basement Remodeling in Potomac, MD",
-      "provider": { "@id": "https://www.dmv-gc.com/#business" },
-      "areaServed": { "@type": "City", "name": "Potomac", "sameAs": "https://en.wikipedia.org/wiki/Potomac,_Maryland" },
-      "description": "Full-service basement remodeling in Potomac, MD. Home theaters, wine cellars, guest suites, home offices, wet bars, and full basement finishing for Potomac estate homes — design through final finishes by a licensed design-build contractor.",
-      "offers": {
-        "@type": "Offer",
-        "priceCurrency": "USD",
-        "priceSpecification": { "@type": "PriceSpecification", "minPrice": "40000", "maxPrice": "250000", "priceCurrency": "USD" }
-      },
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Basement Remodeling Services Potomac MD",
-        "itemListElement": [
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Full Basement Finishing" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Home Theater / Media Room" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Wine Cellar Design & Build" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Basement Guest Suite" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Wet Bar & Entertainment Space" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Basement Home Office" } }
-        ]
-      }
-    },
-    {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.dmv-gc.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.dmv-gc.com/services" },
-        { "@type": "ListItem", "position": 3, "name": "Basement Remodeling", "item": "https://www.dmv-gc.com/service/basement-remodeling" },
-        { "@type": "ListItem", "position": 4, "name": "Potomac, MD", "item": "https://www.dmv-gc.com/service/basement-remodeling/potomac-md" }
-      ]
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "How much does basement remodeling cost in Potomac, MD?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Basement remodeling in Potomac, MD typically costs between $40,000 and $250,000+ depending on scope, basement size, and finish level. A standard basement finishing (framing, drywall, flooring, lighting) runs $40,000–$80,000. A mid-range basement with a bathroom and wet bar runs $75,000–$130,000. A full luxury basement — home theater, wine cellar, guest suite, and custom finishes — can range from $150,000–$250,000+. Potomac's large estate homes often have 1,500–3,000+ sq ft basements, which significantly increases scope and cost. DMV General Contracting Group provides free in-home consultations with detailed estimates."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What are the most popular basement remodeling projects in Potomac?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The most popular basement renovation projects in Potomac's estate homes are: home theaters and media rooms with acoustic treatment and dedicated AV infrastructure; wine cellars with climate control; guest suites with en-suite bathrooms; home gyms with rubber flooring and mirror walls; wet bars and entertainment spaces; and home offices with built-in cabinetry and soundproofing. Many Potomac homeowners combine several of these into a comprehensive basement renovation that activates the full lower-level square footage."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Does DMV General Contracting Group handle permits for basement remodeling in Potomac?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. DMV General Contracting Group handles all required Montgomery County permits for basement remodels in Potomac — building, electrical, plumbing, and mechanical permits included. Our in-house permit team manages every step from application to final inspection. Potomac homeowners never need to contact the county directly or manage any permit paperwork."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How long does a basement remodel take in Potomac?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Most basement renovations in Potomac take 8–16 weeks from construction start to completion depending on scope. A standard basement finishing takes 8–10 weeks. A full luxury basement renovation with home theater, wine cellar, and guest suite can take 14–20 weeks. Montgomery County permit processing typically adds 4–6 weeks before construction begins. DMV General Contracting Group provides a detailed project schedule with every estimate."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can DMV General Contracting Group build a wine cellar in a Potomac basement?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. Custom wine cellar design and construction is one of our most requested basement services in Potomac. A properly built wine cellar requires dedicated climate control (temperature 55°F and humidity 60–70%), vapor barrier and insulation to maintain those conditions, racking designed for the collection size, proper lighting (UV-filtered to protect wine), and a door with a tight seal. DMV General Contracting Group designs and builds all components in-house, including the climate control system integration."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is DMV General Contracting Group licensed for basement remodeling in Potomac, MD?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. DMV General Contracting Group holds a Maryland MHIC (Home Improvement Contractor) license — required for all home renovation work in Potomac and Montgomery County. We are fully bonded, carry comprehensive general liability insurance and workers' compensation coverage, and provide a 1-year workmanship warranty on every basement remodeling project completed in Potomac."
-          }
-        }
-      ]
-    }
-  ]
-};
-
 const BasementPotomacMD = () => {
   const { setActiveMenuItem } = useMyContext();
 
@@ -145,27 +17,27 @@ const BasementPotomacMD = () => {
   const faqData = [
     {
       question: "How much does basement remodeling cost in Potomac, MD?",
-      answer: "Basement remodeling in Potomac typically costs $55,000–$250,000+ depending on scope and finish level. Standard basement finishing runs $35–$65 per sq ft. A full 1,000–1,500 sq ft finishing costs $55,000–$100,000. A bathroom addition adds $20,000–$45,000. A home theater runs $35,000–$90,000. A wine cellar costs $25,000–$70,000. A full luxury multi-room renovation (theater, wine cellar, guest suite, wet bar) can reach $150,000–$250,000+. DMV-GC Group provides free in-home consultations with itemized estimates."
+      answer: "Basement remodeling in Potomac typically costs $55,000–$250,000+ depending on scope and finish level. Standard basement finishing runs $35–$65 per sq ft. A full 1,000–1,500 sq ft finishing costs $55,000–$100,000. A bathroom addition adds $20,000–$45,000. A home theater runs $35,000–$90,000. A wine cellar costs $25,000–$70,000. A full luxury multi-room renovation (theater, wine cellar, guest suite, wet bar) can reach $150,000–$250,000+. DMV General Contracting Group provides free in-home consultations with itemized estimates."
     },
     {
       question: "What are the most popular basement remodeling projects in Potomac?",
       answer: "The most popular basement renovation projects in Potomac are home theaters with acoustic treatment and 4K projection, custom wine cellars with climate control, guest suites with en-suite bathrooms, home gyms with rubber flooring and mirrors, and wet bars integrated into open entertainment spaces. Many Potomac homeowners combine several of these in a comprehensive renovation that activates the full lower-level square footage of their estate home."
     },
     {
-      question: "Does DMV-GC Group handle permits for basement remodeling in Potomac?",
-      answer: "Yes. DMV-GC Group handles all required Montgomery County permits for basement remodels in Potomac — building, electrical, plumbing, and mechanical permits included. Our in-house permit team manages every step from application to final inspection. Potomac homeowners never need to contact the county or manage any permit paperwork."
+      question: "Does DMV General Contracting Group handle permits for basement remodeling in Potomac?",
+      answer: "Yes. DMV General Contracting Group handles all required Montgomery County permits for basement remodels in Potomac — building, electrical, plumbing, and mechanical permits included. Our in-house permit team manages every step from application to final inspection. Potomac homeowners never need to contact the county or manage any permit paperwork."
     },
     {
-      question: "Can DMV-GC Group build a wine cellar in a Potomac basement?",
-      answer: "Yes. Custom wine cellar design and construction is one of our most requested basement services in Potomac. A properly built wine cellar requires dedicated climate control (55°F, 60–70% humidity), continuous vapor barrier, minimum R-19 insulation, UV-filtered lighting, solid-core insulated door, and wood racking designed for the collection. DMV-GC Group designs and builds all components in-house, including the climate control system integration."
+      question: "Can DMV General Contracting Group build a wine cellar in a Potomac basement?",
+      answer: "Yes. Custom wine cellar design and construction is one of our most requested basement services in Potomac. A properly built wine cellar requires dedicated climate control (55°F, 60–70% humidity), continuous vapor barrier, minimum R-19 insulation, UV-filtered lighting, solid-core insulated door, and wood racking designed for the collection. DMV General Contracting Group designs and builds all components in-house, including the climate control system integration."
     },
     {
       question: "How long does a basement remodel take in Potomac?",
       answer: "Most basement renovations in Potomac take 8–16 weeks from construction start to completion depending on scope. Standard finishing takes 8–10 weeks. A full luxury basement renovation with home theater, wine cellar, and guest suite can take 14–20 weeks. Montgomery County permit processing typically adds 4–6 weeks before construction begins."
     },
     {
-      question: "Is DMV-GC Group licensed for basement remodeling in Potomac, MD?",
-      answer: "Yes. DMV-GC Group holds a Maryland MHIC (Home Improvement Contractor) license — required for all home renovation work in Potomac and Montgomery County. We are fully bonded, carry comprehensive general liability insurance and workers' compensation coverage, and provide a 1-year workmanship warranty on every basement remodeling project completed in Potomac."
+      question: "Is DMV General Contracting Group licensed for basement remodeling in Potomac, MD?",
+      answer: "Yes. DMV General Contracting Group holds a Maryland MHIC (Home Improvement Contractor) license — required for all home renovation work in Potomac and Montgomery County. We are fully bonded, carry comprehensive general liability insurance and workers' compensation coverage, and provide a 1-year workmanship warranty on every basement remodeling project completed in Potomac."
     }
   ];
 
@@ -595,10 +467,6 @@ const BasementPotomacMD = () => {
           <a href="tel:+1 (240) 730-1292" className="cta-btn outline">📞 +1 240-730-1292</a>
         </div>
 
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaJsonLd) }}
-        />
       </div>
     </div>
   );

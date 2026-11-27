@@ -7,153 +7,36 @@ import { useEffect } from "react";
 import { Accordion } from "react-bootstrap";
 import { useMyContext } from "@/hooks/context";
 
-const schemaJsonLd = {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "GeneralContractor",
-      "@id": "https://www.dmv-gc.com/#business",
-      "name": "DMV General Contracting Group LLC",
-      "legalName": "DMV General Contracting Group LLC",
-      "alternateName": ["DMV General Contracting Group", "DMV-GC"],
-      "image": "https://www.dmv-gc.com/logo.png",
-      "url": "https://www.dmv-gc.com",
-      "telephone": "+1-240-730-1292",
-      "email": "support@dmv-gc.com",
-      "foundingDate": "2018",
-      "description": "Licensed design-build general contractor serving Gaithersburg, MD. Specializing in ADU construction across Gaithersburg's diverse housing — basement ADUs, garage conversions, and in-law suite additions — with both City of Gaithersburg and Montgomery County permit expertise.",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "11810 Grand Park Ave #500",
-        "addressLocality": "North Bethesda",
-        "addressRegion": "MD",
-        "postalCode": "20852",
-        "addressCountry": "US"
-      },
-      "geo": { "@type": "GeoCoordinates", "latitude": 39.0458, "longitude": -77.1139 },
-      "areaServed": [
-        { "@type": "City", "name": "Gaithersburg", "sameAs": "https://en.wikipedia.org/wiki/Gaithersburg,_Maryland" },
-        { "@type": "City", "name": "Rockville" },
-        { "@type": "City", "name": "North Bethesda" },
-        { "@type": "City", "name": "Germantown" },
-        { "@type": "City", "name": "Potomac" }
-      ],
-      "hasCredential": [
-        { "@type": "EducationalOccupationalCredential", "name": "MHIC License", "credentialCategory": "Maryland Home Improvement Contractor License" },
-        { "@type": "EducationalOccupationalCredential", "name": "DLCP License", "credentialCategory": "Washington DC Department of Licensing and Consumer Protection" }
-      ],
-      "priceRange": "$$"
-    },
-    {
-      "@type": "Service",
-      "@id": "https://www.dmv-gc.com/service/adu/gaithersburg-md#service",
-      "serviceType": "ADU Construction",
-      "name": "ADU Construction in Gaithersburg, MD",
-      "alternateName": ["Accessory Dwelling Unit", "In-Law Suite", "Basement Apartment", "Garage Conversion"],
-      "provider": { "@id": "https://www.dmv-gc.com/#business" },
-      "areaServed": { "@type": "City", "name": "Gaithersburg", "sameAs": "https://en.wikipedia.org/wiki/Gaithersburg,_Maryland" },
-      "description": "Full-service ADU design and construction in Gaithersburg, MD. Basement ADUs, garage conversions, and in-law suite additions across all Gaithersburg neighborhoods — with City of Gaithersburg and Montgomery County permit expertise and HOA coordination for Kentlands, Lakelands, and Crown Farm.",
-      "offers": {
-        "@type": "Offer",
-        "priceCurrency": "USD",
-        "priceSpecification": { "@type": "PriceSpecification", "minPrice": "58000", "maxPrice": "200000", "priceCurrency": "USD" }
-      }
-    },
-    {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.dmv-gc.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.dmv-gc.com/services" },
-        { "@type": "ListItem", "position": 3, "name": "ADU Construction", "item": "https://www.dmv-gc.com/service/adu" },
-        { "@type": "ListItem", "position": 4, "name": "Gaithersburg, MD", "item": "https://www.dmv-gc.com/service/adu/gaithersburg-md" }
-      ]
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "How much does it cost to build an ADU in Gaithersburg, MD?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "ADU construction in Gaithersburg, MD typically costs between $58,000 and $200,000 depending on ADU type, neighborhood, and HOA requirements. A basement ADU conversion runs $60,000–$115,000. A garage conversion ADU costs $58,000–$105,000. An attached in-law suite addition costs $95,000–$200,000. HOA architectural review in communities like Kentlands and Lakelands adds design coordination cost but not necessarily construction cost. DMV General Contracting Group provides free in-home consultations with detailed, honest estimates."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Does Gaithersburg use City permits or Montgomery County permits for ADU construction?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "It depends on which part of Gaithersburg your property is in. The City of Gaithersburg is an incorporated municipality with its own Department of Public Works and Planning that issues building permits for properties within the city limits. Properties in unincorporated areas with Gaithersburg mailing addresses — including Crown Farm, Washingtonian Center area, and others — require Montgomery County DPS permits instead. DMV General Contracting Group verifies the correct permit authority for every Gaithersburg address using parcel boundary data before filing any application — this is one of the most commonly mishandled permit questions in Gaithersburg construction."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can I build an ADU in Kentlands or Lakelands?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes, but ADU projects in Kentlands and Lakelands require Architectural Review Committee (ARC) approval from the community's HOA before building permits are filed with the City of Gaithersburg. The ARC reviews proposed designs for compatibility with the community's New Urbanist architectural character. Basement ADUs — which have no exterior impact — typically do not require ARC review for interior-only work, but any new exterior opening, separate entrance modification, or addition will. DMV General Contracting Group prepares all required ARC documentation and manages the review process as a standard part of Kentlands and Lakelands ADU projects."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What ADU types work best in Gaithersburg?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The most practical ADU types for Gaithersburg's diverse housing stock are: basement ADU conversions (most common in Gaithersburg's 1970s–2000s single-family homes); garage conversions (where a detached garage exists); and attached in-law suite additions (on lots with sufficient rear yard room after setbacks). Gaithersburg's newer construction — particularly in Kentlands, Lakelands, and Crown Farm — often has basements with higher ceilings and better rough-in infrastructure than older stock, making basement ADU conversions particularly straightforward in these communities. DMV General Contracting Group assesses which type is most feasible for your specific property during the free consultation."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Does DMV General Contracting Group handle HOA coordination for Kentlands and Lakelands ADU projects?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. DMV General Contracting Group handles all HOA coordination for Kentlands, Lakelands, Crown Farm, and any other Gaithersburg HOA community — including ARC documentation preparation, submission, and review management. We design all ADU additions to be compatible with each community's architectural character before submitting to the ARC, minimizing the likelihood of revision requests. HOA review runs concurrently with permit preparation wherever possible to minimize total project timeline."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is DMV General Contracting Group licensed for ADU construction in Gaithersburg, MD?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. DMV General Contracting Group holds a Maryland MHIC (Home Improvement Contractor) license — required for all home improvement and construction work in Gaithersburg. We are fully bonded, carry comprehensive general liability insurance and workers' compensation coverage, and provide a 1-year workmanship warranty on every ADU project completed in Gaithersburg."
-          }
-        }
-      ]
-    }
-  ]
-};
-
 const faqData = [
   {
     eventKey: "0",
     question: "How much does it cost to build an ADU in Gaithersburg, MD?",
-    answer: "ADU construction in Gaithersburg typically costs $58,000–$200,000 depending on type and neighborhood. A basement ADU in newer Kentlands or Lakelands construction runs $60,000–$100,000. A basement ADU in older established neighborhoods costs $62,000–$115,000. A garage conversion runs $58,000–$105,000. An attached in-law suite addition costs $95,000–$200,000. A detached backyard cottage costs $140,000–$260,000. Where a plumbing rough-in already exists, the bathroom addition cost is reduced by $6,000–$12,000. DMV-GC Group provides free in-home consultations with itemized estimates."
+    answer: "ADU construction in Gaithersburg typically costs $58,000–$200,000 depending on type and neighborhood. A basement ADU in newer Kentlands or Lakelands construction runs $60,000–$100,000. A basement ADU in older established neighborhoods costs $62,000–$115,000. A garage conversion runs $58,000–$105,000. An attached in-law suite addition costs $95,000–$200,000. A detached backyard cottage costs $140,000–$260,000. Where a plumbing rough-in already exists, the bathroom addition cost is reduced by $6,000–$12,000. DMV General Contracting Group provides free in-home consultations with itemized estimates."
   },
   {
     eventKey: "1",
     question: "Does my Gaithersburg ADU need City or County permits?",
-    answer: "It depends on your specific parcel location. Properties within the incorporated City of Gaithersburg use City of Gaithersburg Department of Public Works and Planning permits. Properties in unincorporated Montgomery County with Gaithersburg mailing addresses — including Crown Farm and parts of the Washingtonian corridor — use Montgomery County DPS permits. DMV-GC Group verifies the correct jurisdiction for every Gaithersburg address using parcel boundary data before filing anything. This verification is free and takes less than one business day."
+    answer: "It depends on your specific parcel location. Properties within the incorporated City of Gaithersburg use City of Gaithersburg Department of Public Works and Planning permits. Properties in unincorporated Montgomery County with Gaithersburg mailing addresses — including Crown Farm and parts of the Washingtonian corridor — use Montgomery County DPS permits. DMV General Contracting Group verifies the correct jurisdiction for every Gaithersburg address using parcel boundary data before filing anything. This verification is free and takes less than one business day."
   },
   {
     eventKey: "2",
     question: "Can I build an ADU in Kentlands without ARC approval?",
-    answer: "For interior-only basement ADUs with no exterior modification — no new windows, no new entrance, no exterior changes — ARC review from the Kentlands Community Foundation is typically not required. You proceed directly to City of Gaithersburg permits. However, any exterior modification — a new egress window opening, a new separate entrance, a garage conversion — requires ARC review before city permits are filed. DMV-GC Group determines which path applies for your specific Kentlands ADU scope and manages the ARC process where needed."
+    answer: "For interior-only basement ADUs with no exterior modification — no new windows, no new entrance, no exterior changes — ARC review from the Kentlands Community Foundation is typically not required. You proceed directly to City of Gaithersburg permits. However, any exterior modification — a new egress window opening, a new separate entrance, a garage conversion — requires ARC review before city permits are filed. DMV General Contracting Group determines which path applies for your specific Kentlands ADU scope and manages the ARC process where needed."
   },
   {
     eventKey: "3",
     question: "Does newer construction in Kentlands and Lakelands make basement ADUs easier?",
-    answer: "Yes — significantly. Kentlands and Lakelands homes (1990s–2010s construction) commonly have 8'–9' basement ceiling heights, poured concrete foundations, existing plumbing rough-ins, and 200-amp electrical panels — all of which reduce the cost and complexity of basement ADU conversion compared to older housing stock. Where a rough-in already exists, the bathroom addition cost is reduced by $6,000–$12,000. DMV-GC Group checks for rough-ins during every Gaithersburg newer-construction consultation."
+    answer: "Yes — significantly. Kentlands and Lakelands homes (1990s–2010s construction) commonly have 8'–9' basement ceiling heights, poured concrete foundations, existing plumbing rough-ins, and 200-amp electrical panels — all of which reduce the cost and complexity of basement ADU conversion compared to older housing stock. Where a rough-in already exists, the bathroom addition cost is reduced by $6,000–$12,000. DMV General Contracting Group checks for rough-ins during every Gaithersburg newer-construction consultation."
   },
   {
     eventKey: "4",
     question: "Is Crown Farm in the City of Gaithersburg or Montgomery County?",
-    answer: "Crown Farm is in unincorporated Montgomery County — despite having a Gaithersburg mailing address. Crown Farm ADU projects require Montgomery County DPS permits, not City of Gaithersburg permits. Crown Farm also has its own HOA with design guidelines that apply independently of the permit authority. DMV-GC Group handles both layers — county permits and Crown Farm HOA coordination — for all Crown Farm ADU projects."
+    answer: "Crown Farm is in unincorporated Montgomery County — despite having a Gaithersburg mailing address. Crown Farm ADU projects require Montgomery County DPS permits, not City of Gaithersburg permits. Crown Farm also has its own HOA with design guidelines that apply independently of the permit authority. DMV General Contracting Group handles both layers — county permits and Crown Farm HOA coordination — for all Crown Farm ADU projects."
   },
   {
     eventKey: "5",
-    question: "Is DMV-GC Group licensed for ADU construction in Gaithersburg, MD?",
-    answer: "Yes. DMV-GC Group holds a Maryland MHIC license — required for all home improvement and construction work in Gaithersburg. We employ licensed plumbers and electricians in-house, are fully bonded, carry comprehensive general liability insurance and workers' compensation coverage, and provide a 1-year workmanship warranty on every ADU project in Gaithersburg — whether permitted through the City or the County."
+    question: "Is DMV General Contracting Group licensed for ADU construction in Gaithersburg, MD?",
+    answer: "Yes. DMV General Contracting Group holds a Maryland MHIC license — required for all home improvement and construction work in Gaithersburg. We employ licensed plumbers and electricians in-house, are fully bonded, carry comprehensive general liability insurance and workers' compensation coverage, and provide a 1-year workmanship warranty on every ADU project in Gaithersburg — whether permitted through the City or the County."
   }
 ];
 
@@ -601,7 +484,6 @@ export default function ADUGaithersburgMD() {
         </div>
       </div>
 
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaJsonLd) }} />
     </main>
   );
 }

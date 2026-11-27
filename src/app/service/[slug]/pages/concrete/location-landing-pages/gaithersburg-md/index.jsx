@@ -17,22 +17,22 @@ const GaithersburgMD = () => {
     const faqData = [
         {
             question: "How much does concrete services cost in Gaithersburg, MD?",
-            answer: "Pricing depends on surface area, scope of work (driveways vs. decorative patios), concrete finish, terrain, existing concrete removal, and permitting requirements. DMV-GC Group provides a free on-site estimate with project-specific, itemized pricing."
+            answer: "Pricing depends on surface area, scope of work (driveways vs. decorative patios), concrete finish, terrain, existing concrete removal, and permitting requirements. DMV General Contracting Group provides a free on-site estimate with project-specific, itemized pricing."
         },
         {
             question: "Do I need a permit to install concrete in Gaithersburg, MD?",
-            answer: "Most new residential concrete projects require a permit through the Montgomery County Department of Permitting Services. DMV-GC Group handles the entire process — from project assessment and permit application to managing inspections — ensuring all work complies with Montgomery County codes."
+            answer: "Most new residential concrete projects require a permit through the Montgomery County Department of Permitting Services. DMV General Contracting Group handles the entire process — from project assessment and permit application to managing inspections — ensuring all work complies with Montgomery County codes."
         },
         {
             question: "What is the best concrete finish for a Gaithersburg home?",
             answer: "The best finish depends on the application. Broom finish is durable and slip-resistant for driveways; stamped and exposed aggregate provide high-end, decorative looks for patios; and smooth finishes are ideal for garages. We help Gaithersburg homeowners select the right finish for both aesthetics and functionality."
         },
         {
-            question: "Does DMV-GC Group install pool safety concrete surrounds?",
-            answer: "Yes. DMV-GC Group installs pool decks and concrete surrounds designed to meet all applicable safety standards, including appropriate texture for slip resistance, correct drainage, and gate hardware compliance. We manage all required permits and inspections."
+            question: "Does DMV General Contracting Group install pool safety concrete surrounds?",
+            answer: "Yes. DMV General Contracting Group installs pool decks and concrete surrounds designed to meet all applicable safety standards, including appropriate texture for slip resistance, correct drainage, and gate hardware compliance. We manage all required permits and inspections."
         },
         {
-            question: "Does DMV-GC Group work with HOA requirements in Gaithersburg?",
+            question: "Does DMV General Contracting Group work with HOA requirements in Gaithersburg?",
             answer: "Yes. Some Gaithersburg properties may have neighborhood or HOA requirements that affect exterior improvements, materials, colors or placement. We can provide project specifications and other documentation to support an HOA review when applicable."
         }
     ];

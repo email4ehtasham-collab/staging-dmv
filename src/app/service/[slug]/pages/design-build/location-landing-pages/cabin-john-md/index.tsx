@@ -26,14 +26,14 @@ const CabinJohnMD = () => {
         },
         {
             question: "Does crawlspace encapsulation need to happen before a kitchen renovation in Cabin John?",
-            answer: "In most Cabin John homes with elevated crawlspace moisture — which is the majority — yes. Encapsulation before kitchen flooring installation prevents the flooring failure that occurs when moisture from below affects a new floor installed over an unaddressed crawlspace. The encapsulation scope is typically $8,000–$25,000 depending on the crawlspace size and system design. That investment protects the kitchen renovation investment above it — a kitchen that costs $45,000–$90,000 is worth protecting with the precondition scope that makes it durable. DMV-GC Group presents encapsulation recommendations based on what we find at the consultation, not as a default upsell."
+            answer: "In most Cabin John homes with elevated crawlspace moisture — which is the majority — yes. Encapsulation before kitchen flooring installation prevents the flooring failure that occurs when moisture from below affects a new floor installed over an unaddressed crawlspace. The encapsulation scope is typically $8,000–$25,000 depending on the crawlspace size and system design. That investment protects the kitchen renovation investment above it — a kitchen that costs $45,000–$90,000 is worth protecting with the precondition scope that makes it durable. DMV General Contracting Group presents encapsulation recommendations based on what we find at the consultation, not as a default upsell."
         },
         {
             question: "How much does a design-build renovation cost in Cabin John, MD?",
             answer: "Design-build costs in Cabin John depend on scope. Crawlspace encapsulation runs $8,000–$25,000+. Kitchen remodels run $32,000–$98,000+. Bathroom renovations run $22,000–$70,000+. Open-concept conversions run $18,000–$55,000+. Rear additions range from $115,000–$360,000+. ADU construction runs $70,000–$250,000+. Whole-home renovations range from $130,000–$430,000+. Design, structural engineering, moisture assessment, and MoCo DPS permit processing are all included."
         },
         {
-            question: "Is DMV-GC Group licensed for design-build in Cabin John, MD?",
+            question: "Is DMV General Contracting Group licensed for design-build in Cabin John, MD?",
             answer: "Yes. DMV General Contracting Group holds Maryland MHIC license #156178 — required for all home improvement and construction work in Cabin John, which is unincorporated Montgomery County served by MoCo DPS at 2425 Reedie Drive, Wheaton. Fully bonded, comprehensive general liability and workers' compensation coverage, and a 1-year workmanship warranty on every Cabin John design-build project."
         }
     ];

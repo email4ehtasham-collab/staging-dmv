@@ -7,134 +7,6 @@ import { useMyContext } from "@/hooks/context";
 import "../city-service-style.scss";
 import "./style.scss";
 
-const schemaJsonLd = {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "GeneralContractor",
-      "@id": "https://www.dmv-gc.com/#business",
-      "name": "DMV General Contracting Group LLC",
-      "legalName": "DMV General Contracting Group LLC",
-      "alternateName": ["DMV General Contracting Group", "DMV-GC"],
-      "image": "https://www.dmv-gc.com/logo.png",
-      "url": "https://www.dmv-gc.com",
-      "telephone": "+1-240-730-1292",
-      "email": "support@dmv-gc.com",
-      "foundingDate": "2018",
-      "description": "Licensed design-build general contractor serving Gaithersburg, MD. Specializing in basement remodeling for Gaithersburg's planned communities (Kentlands, Lakelands, Crown) and traditional neighborhoods — recreation rooms, home offices, guest suites, and ADU conversions.",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "11810 Grand Park Ave #500",
-        "addressLocality": "North Bethesda",
-        "addressRegion": "MD",
-        "postalCode": "20852",
-        "addressCountry": "US"
-      },
-      "geo": { "@type": "GeoCoordinates", "latitude": 39.0458, "longitude": -77.1139 },
-      "areaServed": [
-        { "@type": "City", "name": "Gaithersburg", "sameAs": "https://en.wikipedia.org/wiki/Gaithersburg,_Maryland" },
-        { "@type": "City", "name": "Rockville" },
-        { "@type": "City", "name": "North Bethesda" },
-        { "@type": "City", "name": "Germantown" },
-        { "@type": "City", "name": "Montgomery Village" }
-      ],
-      "hasCredential": [
-        { "@type": "EducationalOccupationalCredential", "name": "MHIC License", "credentialCategory": "Maryland Home Improvement Contractor License" },
-        { "@type": "EducationalOccupationalCredential", "name": "DLCP License", "credentialCategory": "Washington DC Department of Licensing and Consumer Protection" }
-      ],
-      "priceRange": "$$"
-    },
-    {
-      "@type": "Service",
-      "@id": "https://www.dmv-gc.com/service/basement-remodeling/gaithersburg-md#service",
-      "serviceType": "Basement Remodeling",
-      "name": "Basement Remodeling in Gaithersburg, MD",
-      "provider": { "@id": "https://www.dmv-gc.com/#business" },
-      "areaServed": { "@type": "City", "name": "Gaithersburg", "sameAs": "https://en.wikipedia.org/wiki/Gaithersburg,_Maryland" },
-      "description": "Full-service basement remodeling in Gaithersburg, MD. Recreation rooms, home offices, guest suites, ADU conversions, and full basement finishing for Gaithersburg's planned communities and traditional neighborhoods — with HOA coordination and City/County permit handling included.",
-      "offers": {
-        "@type": "Offer",
-        "priceCurrency": "USD",
-        "priceSpecification": { "@type": "PriceSpecification", "minPrice": "18000", "maxPrice": "110000", "priceCurrency": "USD" }
-      },
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Basement Remodeling Services Gaithersburg MD",
-        "itemListElement": [
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Full Basement Finishing" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Recreation Room & Family Room" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Home Office Buildout" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Basement Guest Suite" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Basement Bathroom Addition" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "ADU Basement Conversion" } }
-        ]
-      }
-    },
-    {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.dmv-gc.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.dmv-gc.com/services" },
-        { "@type": "ListItem", "position": 3, "name": "Basement Remodeling", "item": "https://www.dmv-gc.com/service/basement-remodeling" },
-        { "@type": "ListItem", "position": 4, "name": "Gaithersburg, MD", "item": "https://www.dmv-gc.com/service/basement-remodeling/gaithersburg-md" }
-      ]
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "How much does basement remodeling cost in Gaithersburg, MD?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Basement remodeling in Gaithersburg, MD typically costs between $18,000 and $110,000 depending on scope, basement size, and finish level. A basic basement finishing runs $18,000–$42,000. A mid-range basement with bathroom and home office runs $38,000–$70,000. A full ADU conversion with egress windows, separate entrance, kitchen, and bathroom typically runs $62,000–$110,000. Gaithersburg's diverse housing stock — from Kentlands townhomes to larger single-family colonials — means renovation scopes and costs vary significantly by home type. DMV General Contracting Group provides free in-home consultations with detailed estimates."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Does DMV General Contracting Group handle HOA requirements for basement remodeling in Kentlands and Lakelands?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. Kentlands, Lakelands, and Crown are planned communities with active HOAs that may have guidelines covering exterior modifications, contractor parking, and work hours. DMV General Contracting Group prepares and submits all required HOA documentation — contractor insurance certificates, scope descriptions, and any architectural review submissions — as a standard part of every project in these communities. Homeowners never need to manage HOA coordination themselves."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Does Gaithersburg require City permits or Montgomery County permits for basement remodeling?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "It depends on your property's exact location. Gaithersburg is an incorporated city, so properties within the City of Gaithersburg's boundaries require City of Gaithersburg permits through the Department of Public Works — not Montgomery County permits. Properties outside the city limits in unincorporated areas use the same Gaithersburg mailing address but require Montgomery County DPS permits. DMV General Contracting Group verifies the correct permit jurisdiction for every Gaithersburg address before filing any permits."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can DMV General Contracting Group finish a basement in a Kentlands or Lakelands townhome?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. Townhome basement finishing is one of our most common projects in Gaithersburg's planned communities. Townhome basements are typically 400–700 sq ft — smaller than single-family home basements but very practical for a home office, recreation room, or guest suite with egress window and bathroom. We handle all required HOA documentation alongside the permit and construction process."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How long does a basement remodel take in Gaithersburg, MD?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Most basement renovations in Gaithersburg take 6–12 weeks from construction start to completion. A townhome basement finishing takes 5–8 weeks. A full single-family basement renovation with ADU conversion takes 10–14 weeks. Permit processing — through the City of Gaithersburg or Montgomery County depending on your address — typically adds 3–6 weeks before construction begins. HOA review, where required, runs concurrently with permit processing. DMV General Contracting Group manages the complete timeline in-house."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is DMV General Contracting Group licensed for basement remodeling in Gaithersburg, MD?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. DMV General Contracting Group holds a Maryland MHIC (Home Improvement Contractor) license — required for all home renovation work in Gaithersburg, whether in the incorporated city or the surrounding unincorporated county areas. We are fully bonded, carry comprehensive general liability insurance and workers' compensation coverage, and provide a 1-year workmanship warranty on every basement remodeling project completed in Gaithersburg."
-          }
-        }
-      ]
-    }
-  ]
-};
-
 const stepsData = [
   {
     num: 1,
@@ -172,32 +44,32 @@ const faqData = [
   {
     eventKey: "0",
     question: "How much does basement remodeling cost in Gaithersburg, MD?",
-    answer: "Basement remodeling in Gaithersburg typically costs $18,000–$110,000 depending on home type, scope, and finish level. A Kentlands or Lakelands townhome basement finishing runs $18,000–$38,000. A single-family basement finishing (700–1,000 sq ft) costs $28,000–$55,000. A mid-range renovation with bathroom runs $38,000–$70,000. A full ADU conversion costs $62,000–$110,000. DMV-GC Group provides free in-home consultations with itemized estimates for any Gaithersburg property type."
+    answer: "Basement remodeling in Gaithersburg typically costs $18,000–$110,000 depending on home type, scope, and finish level. A Kentlands or Lakelands townhome basement finishing runs $18,000–$38,000. A single-family basement finishing (700–1,000 sq ft) costs $28,000–$55,000. A mid-range renovation with bathroom runs $38,000–$70,000. A full ADU conversion costs $62,000–$110,000. DMV General Contracting Group provides free in-home consultations with itemized estimates for any Gaithersburg property type."
   },
   {
     eventKey: "1",
-    question: "Does DMV-GC Group handle HOA requirements for Kentlands and Lakelands basement projects?",
-    answer: "Yes. DMV-GC Group handles all HOA coordination for Kentlands, Lakelands, Crown, Montgomery Village, and any other Gaithersburg HOA community — including COI submission, contractor registration, work-hour scheduling, and egress window notification where required. This is included in our standard service, not an add-on. Homeowners never need to manage HOA coordination themselves."
+    question: "Does DMV General Contracting Group handle HOA requirements for Kentlands and Lakelands basement projects?",
+    answer: "Yes. DMV General Contracting Group handles all HOA coordination for Kentlands, Lakelands, Crown, Montgomery Village, and any other Gaithersburg HOA community — including COI submission, contractor registration, work-hour scheduling, and egress window notification where required. This is included in our standard service, not an add-on. Homeowners never need to manage HOA coordination themselves."
   },
   {
     eventKey: "2",
     question: "Does Gaithersburg require City permits or Montgomery County permits for basement remodeling?",
-    answer: "It depends on your property&apos;s exact location. Properties within the incorporated City of Gaithersburg require City of Gaithersburg Department of Public Works permits. Properties outside the city limits — including Crown Farm, Montgomery Village, and many areas with Gaithersburg mailing addresses — require Montgomery County DPS permits. DMV-GC Group verifies the correct jurisdiction for your specific address before filing anything."
+    answer: "It depends on your property&apos;s exact location. Properties within the incorporated City of Gaithersburg require City of Gaithersburg Department of Public Works permits. Properties outside the city limits — including Crown Farm, Montgomery Village, and many areas with Gaithersburg mailing addresses — require Montgomery County DPS permits. DMV General Contracting Group verifies the correct jurisdiction for your specific address before filing anything."
   },
   {
     eventKey: "3",
-    question: "Can DMV-GC Group finish a basement in a Kentlands or Lakelands townhome?",
+    question: "Can DMV General Contracting Group finish a basement in a Kentlands or Lakelands townhome?",
     answer: "Yes. Townhome basement finishing is one of our most common projects in Gaithersburg&apos;s planned communities. Kentlands and Lakelands townhome basements typically measure 400–650 sq ft — smart layout design maximizes the usable space for a home office, recreation room, or guest suite. We handle all HOA coordination alongside the permit and construction process."
   },
   {
     eventKey: "4",
     question: "How long does a basement remodel take in Gaithersburg?",
-    answer: "Most Gaithersburg basement renovations take 6–12 weeks from construction start to completion. Townhome finishing takes 5–8 weeks. Full ADU conversions take 10–14 weeks. Permit processing (City of Gaithersburg or Montgomery County) typically adds 3–6 weeks. HOA review and permit processing are run concurrently by DMV-GC Group wherever possible to minimize total timeline."
+    answer: "Most Gaithersburg basement renovations take 6–12 weeks from construction start to completion. Townhome finishing takes 5–8 weeks. Full ADU conversions take 10–14 weeks. Permit processing (City of Gaithersburg or Montgomery County) typically adds 3–6 weeks. HOA review and permit processing are run concurrently by DMV General Contracting Group wherever possible to minimize total timeline."
   },
   {
     eventKey: "5",
-    question: "Is DMV-GC Group licensed for basement remodeling in Gaithersburg, MD?",
-    answer: "Yes. DMV-GC Group holds a Maryland MHIC (Home Improvement Contractor) license — required for all home renovation work in Gaithersburg, whether within the incorporated city or the surrounding unincorporated county. We employ licensed plumbers and electricians in-house, are fully bonded, carry comprehensive general liability insurance, and provide a 1-year workmanship warranty on every basement project."
+    question: "Is DMV General Contracting Group licensed for basement remodeling in Gaithersburg, MD?",
+    answer: "Yes. DMV General Contracting Group holds a Maryland MHIC (Home Improvement Contractor) license — required for all home renovation work in Gaithersburg, whether within the incorporated city or the surrounding unincorporated county. We employ licensed plumbers and electricians in-house, are fully bonded, carry comprehensive general liability insurance, and provide a 1-year workmanship warranty on every basement project."
   }
 ];
 
@@ -643,10 +515,6 @@ export default function BasementGaithersburgMD() {
         </div>
 
         {/* SCHEMA JSON-LD */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaJsonLd) }}
-        />
       </div>
     </div>
   );

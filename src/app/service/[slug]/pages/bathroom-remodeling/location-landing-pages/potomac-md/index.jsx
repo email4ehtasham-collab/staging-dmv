@@ -22,20 +22,20 @@ export default function BathroomPotomacMD() {
             answer: "Most bathroom renovations in Potomac take 4–8 weeks from construction start to completion."
         },
         {
-            question: "Does DMV-GC Group design master bathroom suites in Potomac?",
+            question: "Does DMV General Contracting Group design master bathroom suites in Potomac?",
             answer: "Yes. Master bathroom design and renovation is one of our most requested services in Potomac."
         },
         {
-            question: "Does DMV-GC Group handle permits for bathroom remodeling in Potomac?",
-            answer: "Yes. DMV-GC Group handles all required Montgomery County permits for bathroom remodels in Potomac."
+            question: "Does DMV General Contracting Group handle permits for bathroom remodeling in Potomac?",
+            answer: "Yes. DMV General Contracting Group handles all required Montgomery County permits for bathroom remodels in Potomac."
         },
         {
-            question: "Can DMV-GC Group add a bathroom to an existing bedroom in a Potomac home?",
+            question: "Can DMV General Contracting Group add a bathroom to an existing bedroom in a Potomac home?",
             answer: "Yes. Adding an en-suite bathroom to an existing bedroom is a common project in Potomac's larger homes."
         },
         {
-            question: "Is DMV-GC Group licensed for bathroom remodeling in Potomac, MD?",
-            answer: "Yes. DMV-GC Group holds a Maryland MHIC (Home Improvement Contractor) license."
+            question: "Is DMV General Contracting Group licensed for bathroom remodeling in Potomac, MD?",
+            answer: "Yes. DMV General Contracting Group holds a Maryland MHIC (Home Improvement Contractor) license."
         }
     ];
 
