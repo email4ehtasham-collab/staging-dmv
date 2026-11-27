@@ -39,8 +39,6 @@ export default function BethesdaServiceAreaPage() {
       ]}
       factsTitle="Working With Us in Bethesda"
       factsSubtitle="6 essential operational facts"
-      heroImage="/images/services/general-contractor.webp"
-      heroImageAlt="General contractor remodeling homes in Bethesda, MD"
       facts={[
         {
           label: "Maryland license",

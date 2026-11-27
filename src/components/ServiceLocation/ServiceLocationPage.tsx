@@ -90,6 +90,110 @@ export default function ServiceLocationPage({
   media,
   children,
 }: ServiceLocationPageProps) {
+  // Pages that pass `media` (the Bethesda service pages) use the hub-style hero:
+  // photo, featured project, Google rating card and licence trust row.
+  if (media) {
+    return (
+      <main className={styles.page}>
+        <section className={`${styles.hero} ${styles.heroHub}`} aria-labelledby="service-location-title">
+          <Container>
+            <nav className={styles.breadcrumb} aria-label="Breadcrumb">
+              <Link href="/">Home</Link>
+              <ChevronIcon />
+              <Link href="/services">Services</Link>
+              <ChevronIcon />
+              <Link href={serviceHref}>{serviceName}</Link>
+              <ChevronIcon />
+              <span aria-current="page">{locationName}</span>
+            </nav>
+
+            <div className={styles.hubGrid}>
+              <div className={styles.hubContent}>
+                <Badge className="nostars">{badge}</Badge>
+
+                <h1 id="service-location-title" className={styles.title}>
+                  {title}
+                  {titleAccent ? (
+                    <>
+                      {" "}
+                      <span className={styles.titleAccent}>{titleAccent}</span>
+                    </>
+                  ) : null}
+                </h1>
+
+                <p className={styles.intro}>{intro}</p>
+
+                <div className={styles.hubActions}>
+                  <Button href="/contact-us" data-estimate-trigger icon={<ArrowIcon />}>
+                    Book a Free In-Home Consultation
+                  </Button>
+                  <Button href="tel:+12407301292" variant="secondary">
+                    +1 240-730-1292
+                  </Button>
+                </div>
+
+                <div className={styles.trustRow} aria-label="Credentials and ratings">
+                  {credentials.map((credential) => (
+                    <TrustItem credential={credential} key={credential} />
+                  ))}
+                </div>
+              </div>
+
+              <div className={styles.hubMedia}>
+                <div className={styles.hubImageWrap}>
+                  <Image
+                    src={media.image}
+                    alt={media.imageAlt}
+                    fill
+                    priority
+                    sizes="(max-width: 1024px) 100vw, 640px"
+                    className={styles.hubImage}
+                  />
+                  <div className={styles.hubOverlay} />
+                  <div className={styles.hubFeatured}>
+                    <Badge variant="accent" className="nostars">
+                      {media.featuredLabel ?? "Featured project"}
+                    </Badge>
+                    <p className={styles.hubFeaturedTitle}>{media.featuredTitle}</p>
+                    {media.featuredMeta ? <p className={styles.hubFeaturedMeta}>{media.featuredMeta}</p> : null}
+                  </div>
+                </div>
+
+                {media.reviewText ? (
+                  <aside className={styles.hubReview} aria-label="Google review rating">
+                    <div className={styles.hubReviewTop}>
+                      <strong>{media.reviewScore ?? "4.9"}</strong>
+                      <Stars />
+                    </div>
+                    <p className={styles.hubReviewText}>{media.reviewText}</p>
+                    <span className={styles.hubReviewMeta}>
+                      {media.reviewMeta ?? "Based on verified client feedback"}
+                    </span>
+                  </aside>
+                ) : null}
+              </div>
+            </div>
+
+            <div className={styles.glance} aria-label={factsTitle}>
+              {facts.map((fact) => (
+                <div className={styles.glanceItem} key={fact.label}>
+                  <span>{fact.label}</span>
+                  <strong>{fact.value}</strong>
+                </div>
+              ))}
+              <Link href={media.glanceLinkHref ?? "#service-location-pricing"} className={styles.glanceLink}>
+                {media.glanceLinkLabel ?? factsCtaLabel}
+                <ArrowIcon />
+              </Link>
+            </div>
+          </Container>
+        </section>
+
+        {children}
+      </main>
+    );
+  }
+
   const heroImage = getServiceHeroImage(serviceHref);
 
   return (
