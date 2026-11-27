@@ -10,9 +10,9 @@
   min-height: 34px;
   padding-inline: var(--dmv-space-4, 16px);
   border-radius: var(--dmv-radius-pill, 999px);
-  border: var(--dmv-border-width, 1px) solid var(--dmv-color-brand-wash-strong, rgba(197, 34, 31, 0.2));
-  background: var(--dmv-color-brand-wash, rgba(197, 34, 31, 0.1));
-  color: var(--dmv-color-brand, #c63940);
+  border: var(--dmv-border-width, 1px) solid var(--dmv-color-brand-secondary, #2973b0);
+  background: #e9ebed;
+  color: var(--dmv-color-brand-secondary, #2973b0);
   font-family: var(--dmv-font-body, var(--primary-font));
   font-size: 14px;
   font-weight: var(--dmv-weight-semibold, 600);
