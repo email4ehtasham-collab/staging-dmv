@@ -3,7 +3,7 @@ import type { ReactNode } from "react";
 import Badge from "@/components/Common/Badge";
 import Button from "@/components/Common/Button";
 import Container from "@/components/Common/Container";
-import ServiceHeroImage from "@/components/ServiceHero/ServiceHeroImage";
+import ServiceHeroImage, { GOOGLE_REVIEWS_URL } from "@/components/ServiceHero/ServiceHeroImage";
 import { getFallbackHeroImage } from "@/components/ServiceHero/resolveServiceHeroImage";
 import styles from "./service-area.module.scss";
 
@@ -106,6 +106,32 @@ export default function ServiceAreaPage({
   const fallbackHero = getFallbackHeroImage();
   const heroSrc = heroImage || fallbackHero.src;
   const heroAlt = heroImageAlt || fallbackHero.alt;
+  const googleCredential = credentials.find((credential) => credential.toLowerCase().includes("google"));
+  const hasGoogleFact = facts.some((fact) => fact.label.toLowerCase().includes("google"));
+  const tableFacts: ServiceAreaFact[] = [
+    ...facts.map((fact) => ({
+      ...fact,
+      value: fact.label.toLowerCase().includes("google") ? (
+        <a href={GOOGLE_REVIEWS_URL} target="_blank" rel="noopener noreferrer" className={styles.factLink}>
+          {fact.value}
+        </a>
+      ) : (
+        fact.value
+      ),
+    })),
+    ...(hasGoogleFact || !googleCredential
+      ? []
+      : [
+          {
+            label: "Google rating",
+            value: (
+              <a href={GOOGLE_REVIEWS_URL} target="_blank" rel="noopener noreferrer" className={styles.factLink}>
+                {googleCredential}
+              </a>
+            ),
+          },
+        ]),
+  ];
 
   return (
     <main className={styles.page}>
@@ -160,36 +186,43 @@ export default function ServiceAreaPage({
               </div>
             </div>
 
-            <ServiceHeroImage src={heroSrc} alt={heroAlt} />
+            <ServiceHeroImage src={heroSrc} alt={heroAlt} showReviewCard={false} />
           </div>
         </Container>
       </section>
 
       <section className={styles.factsSection} aria-label={factsTitle}>
         <Container>
-          <aside className={styles.factsCard} aria-labelledby="facts-title">
-            <div className={styles.factsHeader}>
-              <span className={styles.factsIcon}>
-                <ClipboardIcon />
-              </span>
-              <div>
-                <h2 id="facts-title">{factsTitle}</h2>
-                <p>{factsSubtitle}</p>
-              </div>
-            </div>
-
-            <ul className={styles.factsList}>
-              {facts.map((fact) => (
-                <li key={fact.label}>
-                  <span className={styles.factLabel}>{fact.label}</span>
-                  <span className={styles.factValue}>
-                    {fact.label.toLowerCase().includes("google") ? <StarIcon /> : null}
-                    {fact.value}
-                  </span>
-                </li>
-              ))}
-            </ul>
-          </aside>
+          <div className={styles.factsTableWrap}>
+            <table className={styles.factsTable}>
+              <caption className={styles.factsCaption}>
+                <span className={styles.factsCaptionIcon}>
+                  <ClipboardIcon />
+                </span>
+                <span>
+                  <strong className={styles.factsCaptionTitle}>{factsTitle}</strong>
+                  <span className={styles.factsCaptionText}>{factsSubtitle}</span>
+                </span>
+              </caption>
+              <thead>
+                <tr>
+                  <th scope="col">Item</th>
+                  <th scope="col">Detail</th>
+                </tr>
+              </thead>
+              <tbody>
+                {tableFacts.map((fact) => (
+                  <tr key={fact.label}>
+                    <th scope="row">{fact.label}</th>
+                    <td>
+                      {fact.label.toLowerCase().includes("google") ? <StarIcon /> : null}
+                      {fact.value}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </Container>
       </section>
 

@@ -2,6 +2,7 @@
 import ResponsiveImage from "@/components/Common/ResponsiveImage";
 
 import NavitemActive from "@/components/Common/NavitemActive";
+import ClientReviews from "@/components/Home/ClientReviews/ClientReviews";
 import Link from "next/link";
 import { useEffect } from "react";
 import { Accordion } from "react-bootstrap";
@@ -429,6 +430,8 @@ export default function DesignBuild({ data }) {
                         <p>Tell us what you're envisioning — our team will visit your home, assess the space, and walk you through exactly what is possible. No cost, no obligation.</p>
                         <Link href="/contact-us" className="cta-btn">Schedule Free Design Consultation →</Link>
                     </div>
+
+                    <ClientReviews id="home-reviews" />
 
                     <h2>Why Bethesda Homeowners Choose Design-Build for Major Renovations</h2>
                     <p>

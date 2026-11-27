@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo/resolve";
 import { notFound } from "next/navigation";
 import ProjectData from "@/data/projects/ProjectsData";
 import ProjectClient from "./ProjectClient";
@@ -15,14 +16,14 @@ export async function generateMetadata(
 
   const project = ProjectData.find((p) => p.slug === slug);
 
-  return {
+  return pageMetadata(`/project/${slug}`, {
     title: project?.client || "Project",
     description: project?.description || "",
 
     alternates: {
       canonical: `/project/${slug}`,
     },
-  };
+  });
 }
 
 export default async function Page({ params }: { params: Promise<{ slug: string }> }) {

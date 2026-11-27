@@ -1,8 +1,10 @@
 import type { ReactNode } from "react";
 import Link from "next/link";
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo/resolve";
 import Badge from "@/components/Common/Badge";
 import Button from "@/components/Common/Button";
+import ClientReviews from "@/components/Home/ClientReviews/ClientReviews";
 import Container from "@/components/Common/Container";
 import NavitemActive from "@/components/Common/NavitemActive";
 import ResponsiveImage from "@/components/Common/ResponsiveImage";
@@ -14,7 +16,7 @@ import locationStyles from "@/components/ServiceLocation/service-location.module
 import servicesData from "@/data/services/ServiceData";
 import styles from "./style.module.scss";
 
-export const metadata: Metadata = {
+const baseMetadata: Metadata = {
   title: "General Contractor & Remodeling Services in Maryland & DC",
   description:
     "All remodeling and construction services from DMV General Contracting in Maryland and DC, from kitchens and ADUs to roofing and decks.",
@@ -22,6 +24,10 @@ export const metadata: Metadata = {
     canonical: "https://dmv-gc.com/services",
   },
 };
+
+export function generateMetadata(): Promise<Metadata> {
+  return pageMetadata("/services", baseMetadata);
+}
 
 type ServiceItem = {
   title: string;
@@ -602,6 +608,8 @@ export default function ServicesPage() {
       </section>
 
       <RecentProjects />
+
+      <ClientReviews />
 
       <section className={`${styles.section} ${styles.sectionSoft}`} aria-labelledby="one-contractor-title">
         <Container>

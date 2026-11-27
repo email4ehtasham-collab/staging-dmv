@@ -1,5 +1,6 @@
 import ResponsiveImage from "@/components/Common/ResponsiveImage";
 import { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo/resolve";
 import NavitemActive from '@/components/Common/NavitemActive';
 import ContactForm from '@/components/ContactForm';
 
@@ -8,14 +9,18 @@ import GoogleMap from '@/components/GoogleMap';
 
 import StarsIcon from '@/assets/stars.svg';
 
-export const metadata: Metadata = {
+const baseMetadata: Metadata = {
   title: "Contact DMV General Contracting Group | Free Consultation Bethesda MD",
   description: "Contact DMV General Contracting Group for a free in-home consultation. Call +1 240-730-1292 or email support@dmv-gc.com. Serving Bethesda, Maryland and Washington DC.",
   
   	alternates: {
-      	canonical: `/contact-us`,
-    },
+       	canonical: `/contact-us`,
+     },
 };
+
+export function generateMetadata(): Promise<Metadata> {
+  return pageMetadata("/contact-us", baseMetadata);
+}
 
 
 function ContactPage() {

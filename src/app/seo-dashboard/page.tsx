@@ -151,6 +151,8 @@ export default function SeoDashboard() {
   const [onlyOverridden, setOnlyOverridden] = useState(false);
   const [openPath, setOpenPath] = useState<string | null>(null);
   const [draft, setDraft] = useState<Draft | null>(null);
+  const [pageSize, setPageSize] = useState(25);
+  const [pageIndex, setPageIndex] = useState(0);
 
   const [site, setSite] = useState<SiteSettings | null>(null);
   const [siteWarnings, setSiteWarnings] = useState<string[]>([]);
@@ -330,6 +332,40 @@ export default function SeoDashboard() {
     return Array.from(map.entries()).filter(([, paths]) => paths.length > 1);
   }, [data]);
 
+  const typeCounts = useMemo(() => {
+    const counts: Record<string, number> = {};
+    for (const page of data?.pages ?? []) {
+      counts[page.type] = (counts[page.type] ?? 0) + 1;
+    }
+    return counts;
+  }, [data]);
+
+  const sorted = useMemo(() => {
+    const order = Object.keys(TYPE_LABELS);
+    return [...filtered].sort((a, b) => {
+      const byType = order.indexOf(a.type) - order.indexOf(b.type);
+      if (byType !== 0) return byType;
+      const byGroup = (a.group ?? "").localeCompare(b.group ?? "");
+      if (byGroup !== 0) return byGroup;
+      return a.path.localeCompare(b.path);
+    });
+  }, [filtered]);
+
+  const pageSizeValue = pageSize > 0 ? pageSize : Math.max(sorted.length, 1);
+  const pageCount = Math.max(1, Math.ceil(sorted.length / pageSizeValue));
+  const paged = useMemo(
+    () => sorted.slice(pageIndex * pageSizeValue, (pageIndex + 1) * pageSizeValue),
+    [sorted, pageIndex, pageSizeValue]
+  );
+
+  useEffect(() => {
+    setPageIndex(0);
+  }, [search, typeFilter, groupFilter, onlyOverridden, pageSize]);
+
+  useEffect(() => {
+    if (pageIndex >= pageCount) setPageIndex(pageCount - 1);
+  }, [pageIndex, pageCount]);
+
   if (loading) {
     return <main className="seo-dashboard-main"><div className="seo-empty">Loadingâ€¦</div></main>;
   }
@@ -366,11 +402,9 @@ export default function SeoDashboard() {
       </header>
 
       <div className="seo-scope-note">
-        <strong>Phase 1 â€” our-team only.</strong> Saved changes apply live to the{" "}
-        {stats.total} team pages below. Every other page on the site still uses
-        the hardcoded metadata in its own route file, and the site-wide Google
-        tags in <code>layout.tsx</code> are untouched, so the site stays
-        statically rendered.
+        <strong>All {stats.total} site pages are listed below.</strong> Use the
+        type shortcuts, service/group filter, or search to jump to any page.
+        The <code>Open</code> link goes straight to the live page.
       </div>
 
       {error && <div className="seo-messages is-error" style={{ marginTop: 16 }}>{error}</div>}
@@ -393,6 +427,26 @@ export default function SeoDashboard() {
 
       {tab === "pages" && (
         <>
+          <div className="seo-toolbar seo-page-shortcuts">
+            <button
+              type="button"
+              className={`seo-shortcut${typeFilter === "all" ? " is-active" : ""}`}
+              onClick={() => setTypeFilter("all")}
+            >
+              All <span>{data.pages.length}</span>
+            </button>
+            {Object.keys(TYPE_LABELS).map((key) => (
+              <button
+                key={key}
+                type="button"
+                className={`seo-shortcut${typeFilter === key ? " is-active" : ""}`}
+                onClick={() => setTypeFilter(key)}
+              >
+                {TYPE_LABELS[key]} <span>{typeCounts[key] ?? 0}</span>
+              </button>
+            ))}
+          </div>
+
           <div className="seo-toolbar">
             <input
               className="seo-input seo-input-search"
@@ -407,7 +461,7 @@ export default function SeoDashboard() {
               ))}
             </select>
             <select className="seo-select" value={groupFilter} onChange={(e) => setGroupFilter(e.target.value)}>
-              <option value="all">All services</option>
+              <option value="all">All groups</option>
               {groups.map((group) => (
                 <option key={group} value={group}>{group}</option>
               ))}
@@ -420,8 +474,18 @@ export default function SeoDashboard() {
               />
               Only customised
             </label>
+            <select
+              className="seo-select"
+              value={pageSize}
+              onChange={(e) => setPageSize(Number(e.target.value))}
+            >
+              <option value={25}>25 / page</option>
+              <option value={50}>50 / page</option>
+              <option value={100}>100 / page</option>
+              <option value={0}>All</option>
+            </select>
             <span className="seo-hint">
-              {filtered.length} of {data.pages.length} pages
+              {sorted.length} of {data.pages.length} pages
             </span>
           </div>
 
@@ -455,11 +519,30 @@ export default function SeoDashboard() {
                 </tr>
               </thead>
               <tbody>
-                {filtered.map((page) => (
+                {paged.map((page, index) => {
+                  const previous = paged[index - 1];
+                  const showHeading =
+                    !previous ||
+                    previous.type !== page.type ||
+                    (previous.group ?? "") !== (page.group ?? "");
+                  const heading =
+                    page.group && page.type !== "static"
+                      ? `${TYPE_LABELS[page.type] ?? page.type} / ${page.group}`
+                      : TYPE_LABELS[page.type] ?? page.type;
+
+                  return (
                   <React.Fragment key={page.path}>
+                    {showHeading && (
+                      <tr className="seo-group-row">
+                        <td colSpan={5}>{heading}</td>
+                      </tr>
+                    )}
                     <tr>
                       <td>
                         <div className="seo-path">{page.path}</div>
+                        {page.group && (
+                          <div className="seo-meta">group: {page.group}</div>
+                        )}
                         {page.resolved.updatedAt && (
                           <div className="seo-meta">
                             edited {new Date(page.resolved.updatedAt).toLocaleString()}
@@ -487,16 +570,26 @@ export default function SeoDashboard() {
                         </div>
                       </td>
                       <td>
-                        <button
-                          className="seo-button"
-                          type="button"
-                          onClick={() => {
-                            setOpenPath(page.path === openPath ? null : page.path);
-                            setDraft(draftFrom(page));
-                          }}
-                        >
-                          {page.path === openPath ? "Close" : "Edit"}
-                        </button>
+                        <div className="seo-row-actions">
+                          <button
+                            className="seo-button"
+                            type="button"
+                            onClick={() => {
+                              setOpenPath(page.path === openPath ? null : page.path);
+                              setDraft(draftFrom(page));
+                            }}
+                          >
+                            {page.path === openPath ? "Close" : "Edit"}
+                          </button>
+                          <a
+                            className="seo-open-link"
+                            href={`https://www.dmv-gc.com${page.path}`}
+                            target="_blank"
+                            rel="noreferrer"
+                          >
+                            Open
+                          </a>
+                        </div>
                       </td>
                     </tr>
 
@@ -628,15 +721,38 @@ export default function SeoDashboard() {
                       </tr>
                     )}
                   </React.Fragment>
-                ))}
+                  );
+                })}
 
-                {filtered.length === 0 && (
+                {sorted.length === 0 && (
                   <tr>
                     <td colSpan={5} className="seo-empty">No pages match these filters.</td>
                   </tr>
                 )}
               </tbody>
             </table>
+          </div>
+
+          <div className="seo-pagination">
+            <button
+              className="seo-button"
+              type="button"
+              disabled={pageIndex === 0}
+              onClick={() => setPageIndex((current) => Math.max(0, current - 1))}
+            >
+              Previous
+            </button>
+            <span className="seo-hint">
+              Page {pageIndex + 1} of {pageCount}
+            </span>
+            <button
+              className="seo-button"
+              type="button"
+              disabled={pageIndex >= pageCount - 1}
+              onClick={() => setPageIndex((current) => Math.min(pageCount - 1, current + 1))}
+            >
+              Next
+            </button>
           </div>
         </>
       )}

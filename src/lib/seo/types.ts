@@ -163,7 +163,7 @@ export interface SnapshotResponse {
   site: SiteSettings;
   scripts: ScriptBlock[];
   audit: AuditEntry[];
-  storage: "file" | "memory";
+  storage: "file" | "memory" | "mongo";
   writable: boolean;
   session: SeoSession;
   limits: typeof SEO_LIMITS;

@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo/resolve";
 import Estimate from "@/components/Home/Estimate/Estimate";
 import FiveSteps from "@/components/Home/FiveSteps/FiveSteps";
 import HomeFaq from "@/components/Home/HomeFaq/HomeFaq";
 import InHomeConsultation from "@/components/Home/InHomeConsultation/InHomeConsultation";
 import LicensedInsured from "@/components/Home/LicensedInsured/LicensedInsured";
+import ClientReviews from "@/components/Home/ClientReviews/ClientReviews";
 import HomeServices from "@/components/Home/Services/Services";
 import BethesdaContractorValue from "@/components/ServiceArea/BethesdaContractorValue";
 import BethesdaGuide from "@/components/ServiceArea/BethesdaGuide";
@@ -13,7 +15,7 @@ import HomesMatrix from "@/components/ServiceArea/HomesMatrix";
 import ServiceAreaPage from "@/components/ServiceArea/ServiceAreaPage";
 import SupportingServices from "@/components/ServiceArea/SupportingServices";
 
-export const metadata: Metadata = {
+const baseMetadata: Metadata = {
   title: "General Contractor & Home Remodeling in Bethesda, MD | DMV General Contracting Group",
   description:
     "Licensed general contractor in Bethesda, MD for kitchens, bathrooms, basements, additions and whole-home renovations. MHIC #156178 and DC DLCP #410526000209. Call (240) 730-1292.",
@@ -21,6 +23,10 @@ export const metadata: Metadata = {
     canonical: "/service-area/bethesda-md",
   },
 };
+
+export function generateMetadata(): Promise<Metadata> {
+  return pageMetadata("/service-area/bethesda-md", baseMetadata);
+}
 
 export default function BethesdaServiceAreaPage() {
   return (
@@ -277,6 +283,7 @@ export default function BethesdaServiceAreaPage() {
         showContact={false}
       />
 
+      <ClientReviews id="home-reviews" />
       <LicensedInsured variant="bethesda" />
 
       <BethesdaProjectsReviews />

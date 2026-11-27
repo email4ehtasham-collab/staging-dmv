@@ -7,6 +7,7 @@ import Badge from "@/components/Common/Badge";
 import Button from "@/components/Common/Button";
 import Container from "@/components/Common/Container";
 import NavitemActive from "@/components/Common/NavitemActive";
+import ClientReviews from "@/components/Home/ClientReviews/ClientReviews";
 import SectionHeading from "@/components/Common/SectionHeading";
 import Estimate from "@/components/Home/Estimate/Estimate";
 import HomeFaq from "@/components/Home/HomeFaq/HomeFaq";
@@ -1189,6 +1190,8 @@ export default function BathroomRemodeling(_props: { data?: BathroomService }) {
             </section>
 
             <Permits variant="bathroom" />
+
+            <ClientReviews id="home-reviews" />
 
             <LicensedInsured variant="bathroom" />
 

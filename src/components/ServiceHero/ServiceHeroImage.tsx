@@ -7,9 +7,10 @@ type ServiceHeroImageProps = {
   alt: string;
   priority?: boolean;
   sizes?: string;
+  showReviewCard?: boolean;
 };
 
-const REVIEWS_URL =
+export const GOOGLE_REVIEWS_URL =
   "https://www.google.com/maps/place/DMV+General+Contracting+Group+LLC/@39.0493761,-77.1200241,17z/data=!3m1!4b1!4m6!3m5!1s0x158dd0ef2148a11:0xceda33050d2dcdfb!8m2!3d39.049372!4d-77.1174492!16s%2Fg%2F11v3gbzc44?hl=en&entry=ttu&g_ep=EgoyMDI2MTEwMS4wIKXMDSoASAFQAw%3D%3D";
 
 function StarIcon() {
@@ -33,6 +34,7 @@ export default function ServiceHeroImage({
   alt,
   priority = true,
   sizes = "(max-width: 1024px) 100vw, 560px",
+  showReviewCard = true,
 }: ServiceHeroImageProps) {
   return (
     <div className={styles.heroMedia}>
@@ -47,23 +49,25 @@ export default function ServiceHeroImage({
         <div className={styles.mediaOverlay} />
       </div>
 
-      <aside className={styles.reviewCard} aria-label="Google review rating">
-        <div className={styles.reviewTop}>
-          <span className={styles.rating}>4.9</span>
-          <span className={styles.stars} role="img" aria-label="Rated 5 out of 5">
-            <StarIcon />
-            <StarIcon />
-            <StarIcon />
-            <StarIcon />
-            <StarIcon />
-          </span>
-        </div>
-        <p className={styles.reviewText}>Homeowners rate us 4.9 out of 5 on Google.</p>
-        <Link href={REVIEWS_URL} className={styles.reviewLink}>
-          <span>Read reviews</span>
-          <ArrowIcon />
-        </Link>
-      </aside>
+      {showReviewCard ? (
+        <aside className={styles.reviewCard} aria-label="Google review rating">
+          <div className={styles.reviewTop}>
+            <span className={styles.rating}>4.9</span>
+            <span className={styles.stars} role="img" aria-label="Rated 5 out of 5">
+              <StarIcon />
+              <StarIcon />
+              <StarIcon />
+              <StarIcon />
+              <StarIcon />
+            </span>
+          </div>
+          <p className={styles.reviewText}>Homeowners rate us 4.9 out of 5 on Google.</p>
+          <Link href={GOOGLE_REVIEWS_URL} className={styles.reviewLink}>
+            <span>Read reviews</span>
+            <ArrowIcon />
+          </Link>
+        </aside>
+      ) : null}
     </div>
   );
 }

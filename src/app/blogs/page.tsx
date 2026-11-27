@@ -1,12 +1,13 @@
 import ResponsiveImage from "@/components/Common/ResponsiveImage";
 import { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo/resolve";
 import BlogCard from "@/components/generic/blog/Card";
 import blogData from "@/data/blogs/BlogsData";
 import NavitemActive from "@/components/Common/NavitemActive";
 
 import styles from "./style.module.scss";
 
-export const metadata: Metadata = {
+const baseMetadata: Metadata = {
   title: "Discover Our Construction Blogs for Modern Building Ideas",
   description: "Read up-to-date construction blogs covering modern designs, remodeling ideas, design trends, and practical real-world insights to plan smarter building projects.",
 
@@ -14,6 +15,10 @@ export const metadata: Metadata = {
         canonical: `/blogs`,
     },
 };
+
+export function generateMetadata(): Promise<Metadata> {
+    return pageMetadata("/blogs", baseMetadata);
+}
 
 export default function ProjectsPage() {
     return (

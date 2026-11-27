@@ -2,6 +2,7 @@
 import ResponsiveImage from "@/components/Common/ResponsiveImage";
 
 import NavitemActive from "@/components/Common/NavitemActive";
+import ClientReviews from "@/components/Home/ClientReviews/ClientReviews";
 import Link from "next/link";
 import { useEffect } from "react";
 import { Accordion } from "react-bootstrap";
@@ -231,6 +232,8 @@ export default function FenceInstallation({ data }) {
                         <div className="service-item">Montgomery County Permit Processing</div>
                         <div className="service-item">HOA Documentation Support</div>
                     </div>
+
+                    <ClientReviews id="home-reviews" />
 
                     <h2>Why Bethesda Homeowners Install Fences</h2>
                     <p>

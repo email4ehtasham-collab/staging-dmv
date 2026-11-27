@@ -2,6 +2,7 @@
 import ResponsiveImage from "@/components/Common/ResponsiveImage";
 
 import NavitemActive from "@/components/Common/NavitemActive";
+import ClientReviews from "@/components/Home/ClientReviews/ClientReviews";
 import Link from "next/link";
 import { useEffect } from "react";
 import { Accordion } from "react-bootstrap";
@@ -475,6 +476,8 @@ export default function SidingInstallation({ data }) {
                         <p>Our team will visit your home, assess your existing siding, measure your exterior, and provide a detailed material-by-material estimate — at no cost and with no obligation.</p>
                         <Link href="/contact-us" className="cta-btn">Schedule Free Siding Consultation →</Link>
                     </div>
+
+                    <ClientReviews id="home-reviews" />
 
                     <h2>Why Bethesda Homeowners Choose DMV General Contracting Group for Siding</h2>
                     <p>

@@ -2,11 +2,12 @@ import ResponsiveImage from "@/components/Common/ResponsiveImage";
 import { Accordion } from 'react-bootstrap';
 import NavitemActive from '@/components/Common/NavitemActive';
 import { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo/resolve";
 
 import styles from './style.module.scss';
 import Faqs from './faqs';
 
-export const metadata: Metadata = {
+const baseMetadata: Metadata = {
   title: "FAQs Concerning Our General Contractor Services",
   description: "Find clear answers to frequently asked questions about our general contractor services, including quality standards, expectations, timelines, and warranties.",
   
@@ -14,6 +15,10 @@ export const metadata: Metadata = {
     canonical: "/faqs",
   },
 };
+
+export function generateMetadata(): Promise<Metadata> {
+  return pageMetadata("/faqs", baseMetadata);
+}
 
 function FaqPage() {
 

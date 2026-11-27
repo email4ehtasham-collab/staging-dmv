@@ -1,5 +1,6 @@
 import ResponsiveImage from "@/components/Common/ResponsiveImage";
 import { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo/resolve";
 import styled, { createGlobalStyle } from "styled-components";
 import NavitemActive from "@/components/Common/NavitemActive";
 
@@ -102,7 +103,7 @@ const StyledCom = styled.div`
 
 `;
 
-export const metadata: Metadata = {
+const baseMetadata: Metadata = {
   title: "Client Reviews & Testimonials | DMV General Contracting Group Bethesda MD",
   description: "See what homeowners say about DMV General Contracting Group. Read verified reviews from satisfied clients across Maryland, Virginia & DC. 4.9★ rated on Google with 97+ reviews.",
 
@@ -110,6 +111,10 @@ export const metadata: Metadata = {
       canonical: `/testimonials`,
     },
 };
+
+export function generateMetadata(): Promise<Metadata> {
+  return pageMetadata("/testimonials", baseMetadata);
+}
 
 
 export default function TestimonialsPage() {

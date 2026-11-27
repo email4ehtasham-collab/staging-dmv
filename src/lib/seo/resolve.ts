@@ -92,6 +92,17 @@ export async function seoForLocation(
   );
 }
 
+export async function pageMetadata(
+  pagePath: string,
+  base: Metadata = {}
+): Promise<Metadata> {
+  const seo = await seoFor(pagePath, {
+    title: typeof base.title === "string" ? base.title : "",
+    description: base.description ?? "",
+  });
+  return { ...base, ...toMetadata(seo, normalizePathname(pagePath)) };
+}
+
 export function robotsFor(noindex: boolean): Metadata["robots"] {
   return noindex ? { index: false, follow: false } : undefined;
 }

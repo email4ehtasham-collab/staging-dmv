@@ -23,7 +23,9 @@ import NavitemActive from "@/components/Common/NavitemActive";
 import { homeRecentProjects, homeServiceOverrides } from "@/data/home/homePageMedia";
 
 import { Metadata } from "next";
-export const metadata: Metadata = {
+import { pageMetadata } from "@/lib/seo/resolve";
+
+const baseMetadata: Metadata = {
   title: "General Contractor Maryland & DC | DMV General Contracting",
   description: "Licensed general contractor in Maryland and DC for home remodeling: kitchens, baths, basements and ADUs. Most cost $60-$250+ per sq ft. Free estimate.",
   
@@ -31,6 +33,10 @@ export const metadata: Metadata = {
     canonical: "/",
   },
 };
+
+export function generateMetadata(): Promise<Metadata> {
+  return pageMetadata("/", baseMetadata);
+}
 
 
 	const schemaDataFaq = {
@@ -143,6 +149,7 @@ export default function Home() {
                     text={<>We offer <strong>home remodeling in Maryland</strong> and DC through seven main services. Each one has its own page with details on design, permits, costs and timelines, and the rest of our services are listed after these seven.</>}
                     serviceOverrides={homeServiceOverrides}
                 />
+                <ClientReviews />
                 <LicensedInsured />
                 <InHomeConsultation />
                 <FiveSteps />
@@ -150,7 +157,6 @@ export default function Home() {
                 <ServiceAreas />
                 <CostGuide />
                 <RecentProjects projects={homeRecentProjects} />
-                <ClientReviews />
                 <TradesComparison />
                 <HomeBlogs />
                 <HomeFaq />

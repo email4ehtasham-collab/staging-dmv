@@ -1,5 +1,7 @@
 import { notFound } from "next/navigation";
 import { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo/resolve";
+import ReviewsBeforeWhyChooseUs from "@/components/Home/ClientReviews/ReviewsBeforeWhyChooseUs";
 import ServiceData from "@/data/services/ServiceData";
 import locationMetadata from "@/data/services/locationMetadata";
 import getDynamicLocationComponent, { getLocationStaticParams } from "../../getDynamicLocationComponent";
@@ -25,13 +27,13 @@ export async function generateMetadata(
         return word.charAt(0).toUpperCase() + word.slice(1);
     }).join(" ");
 
-    return {
+    return pageMetadata(`/service/${slug}/${location}`, {
         title: specificMetadata?.title ?? `${formattedSlug} in ${formattedLocation} | Licensed Contractor | DMV-GC Group`,
         description: specificMetadata?.description ?? `Licensed ${formattedSlug.toLowerCase()} contractor in ${formattedLocation}. Specializing in custom renovations and remodeling. Free in-home consultation.`,
         alternates: {
             canonical: `/service/${slug}/${location}`,
         },
-    };
+    });
 }
 
 export default async function Page({ params }: { params: Promise<{ slug: string; location: string }> }) {
@@ -45,5 +47,10 @@ export default async function Page({ params }: { params: Promise<{ slug: string;
 
     const service = ServiceData.find((s) => s.slug === slug);
 
-    return <DynamicComponent data={service} location={location} />;
+    return (
+        <>
+            <DynamicComponent data={service} location={location} />
+            <ReviewsBeforeWhyChooseUs />
+        </>
+    );
 }
