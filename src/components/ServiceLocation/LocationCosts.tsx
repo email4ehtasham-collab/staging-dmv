@@ -13,6 +13,7 @@ export default function LocationCosts({
   rows,
   note,
   ctaLabel,
+  layout = "cards",
 }: ServiceLocationCostsData) {
   return (
     <section
@@ -38,17 +39,46 @@ export default function LocationCosts({
           </div>
         ) : null}
 
-        <div className={styles.costGrid}>
-          {rows.map((row) => (
-            <article className={styles.costCard} key={row.level}>
-              {row.badge ? <span className={styles.costBadge}>{row.badge}</span> : null}
-              <span className={styles.costLevel}>{row.level}</span>
-              <h3 className={styles.costTitle}>{row.title}</h3>
-              <strong className={styles.costRange}>{row.range}</strong>
-              <p className={styles.costText}>{row.text}</p>
-            </article>
-          ))}
-        </div>
+        {layout === "table" ? (
+          <div className={styles.costTableWrap}>
+            <table className={styles.costTable}>
+              <thead>
+                <tr>
+                  <th scope="col">Budget tier</th>
+                  <th scope="col">Typical cost</th>
+                  <th scope="col">What it includes</th>
+                </tr>
+              </thead>
+              <tbody>
+                {rows.map((row) => (
+                  <tr key={row.level}>
+                    <th scope="row" data-label="Budget tier">
+                      <span className={styles.costTableTag}>{row.level}</span>
+                      {row.title}
+                      {row.badge ? <span className={styles.costTableBadge}>{row.badge}</span> : null}
+                    </th>
+                    <td data-label="Typical cost" className={styles.costTableRange}>
+                      <strong>{row.range}</strong>
+                    </td>
+                    <td data-label="What it includes">{row.text}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        ) : (
+          <div className={styles.costGrid}>
+            {rows.map((row) => (
+              <article className={styles.costCard} key={row.level}>
+                {row.badge ? <span className={styles.costBadge}>{row.badge}</span> : null}
+                <span className={styles.costLevel}>{row.level}</span>
+                <h3 className={styles.costTitle}>{row.title}</h3>
+                <strong className={styles.costRange}>{row.range}</strong>
+                <p className={styles.costText}>{row.text}</p>
+              </article>
+            ))}
+          </div>
+        )}
 
         <div className={styles.costFooter}>
           <p>{note}</p>

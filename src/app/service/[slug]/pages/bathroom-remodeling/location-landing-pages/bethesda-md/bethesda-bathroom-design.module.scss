@@ -125,11 +125,15 @@
   stroke-dasharray: 3 3;
 }
 
-.layoutCard h4, .layoutCard :global(.h4) {
+.layoutCard h4, .layoutCard :global(.h4), .layoutTitle {
   color: var(--dmv-color-heading);
   font-size: var(--dmv-font-size-lg);
   font-weight: var(--dmv-weight-bold);
   line-height: var(--dmv-line-snug);
+}
+
+.layoutTitle {
+  display: block;
 }
 
 .layoutCard p {

@@ -6,15 +6,11 @@ const bethesdaBathroomContent: ServiceLocationContent = {
     serviceHref: "/service/bathroom-remodeling",
     locationName: "Bethesda, MD",
     badge: "Bethesda · Montgomery County, MD",
-    title: "Bethesda Bathroom Remodeling for Primary Suites and Hall Baths, Without Leaks or Surprises",
+    title: "Bathroom Remodel in Bethesda, MD",
+    titleAccent: "Without Leaks or Surprises",
     intro:
       "Bathroom remodeling in Bethesda, MD is a big part of what DMV General Contracting Group does, working as a licensed design-build general contractor from our office a short drive up Rockville Pike in North Bethesda. A single contract covers the design, the county and WSSC permits, the waterproofing and the build for primary suites, hall baths and powder rooms, and our workmanship carries a one-year warranty. The sections below cover the bathrooms we build, Bethesda pricing, design by house style, the process and schedule, permits and local projects.",
-    credentials: [
-      "Maryland license MHIC #156178",
-      "4.9 rating on Google",
-      "35 years of residential work",
-      "Office in North Bethesda",
-    ],
+    credentials: ["4.9 on Google", "MHIC #156178", "DLCP #410526000209"],
     factsTitle: "Bethesda Bathroom At A Glance",
     factsCtaText:
       "Get a free bathroom estimate and bring your inspiration photos; we will tell you what they cost in your house.",
@@ -26,7 +22,7 @@ const bethesdaBathroomContent: ServiceLocationContent = {
         note: "for a full remodel; primary suites often $50,000 and up",
       },
       {
-        label: "Build time",
+        label: "Construction time",
         value: "3–6 weeks",
         note: "A full bath usually wraps in 3–6 weeks once crews start",
       },
@@ -36,10 +32,21 @@ const bethesdaBathroomContent: ServiceLocationContent = {
         note: "County DPS for walls and wiring, WSSC Water for any pipe work",
       },
       {
-        label: "Warranty",
-        value: "1 year on workmanship",
+        label: "Workmanship warranty",
+        value: "1 year",
       },
     ],
+    media: {
+      image: "/images/bathroom-remodeling-bethesda-md/bethesda-bathroom-remodeling-condo-glass-shower.webp",
+      imageAlt:
+        "Bathroom remodeling in Bethesda, MD: condo bathroom with a frameless glass shower, white wall tile and a new vanity",
+      featuredTitle: "Bethesda condo bathroom remodel",
+      featuredMeta: "Frameless glass shower, white wall tile and a new vanity",
+      reviewScore: "4.9",
+      reviewText: "Homeowners rate our bathroom remodels 4.9 out of 5 on Google.",
+      glanceLinkLabel: "See Bethesda Bathroom Pricing",
+      glanceLinkHref: "#service-location-pricing",
+    },
   },
   overview: {
     eyebrow: "Bethesda Bathrooms",
@@ -97,12 +104,13 @@ const bethesdaBathroomContent: ServiceLocationContent = {
       {
         level: "Tier 4",
         title: "Basement bathroom addition",
-        range: "Usually full-remodel tier or above",
+        range: "$25,000 and up",
         text: "New drain and vent lines, often an ejector pump, plus a fan sized for a lower level",
       },
     ],
     note: "Your estimate comes in writing after the visit, with every allowance shown.",
     ctaLabel: "Get a Free Bathroom Estimate",
+    layout: "table",
   },
   consultation: {
     title: "Get a free bathroom estimate.",

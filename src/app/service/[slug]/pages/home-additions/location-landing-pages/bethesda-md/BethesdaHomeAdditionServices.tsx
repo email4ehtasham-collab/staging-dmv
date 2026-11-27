@@ -113,7 +113,13 @@ export default function BethesdaHomeAdditionServices() {
             align="center"
             eyebrow={<Badge>Services</Badge>}
             title="Bethesda Home Addition Contractor for Every Type of Addition"
-            text="We build eight kinds of additions in Bethesda, the same range behind our home additions in Maryland and DC, fitted to the 1930s to 1960s houses that fill most neighborhoods here:"
+            text={
+              <>
+                As a <strong>Bethesda home addition contractor</strong>, we build eight kinds of additions, the same
+                range behind our home additions in Maryland and DC, fitted to the 1930s to 1960s houses that fill most
+                neighborhoods here:
+              </>
+            }
           />
         </div>
 
@@ -129,7 +135,8 @@ export default function BethesdaHomeAdditionServices() {
 
         <div className={styles.note}>
           <p className={styles.noteText}>
-            Working as your home addition contractor in Bethesda, MD, we can cost two of these side by side, and the
+            Working as your <strong>home addition contractor in Bethesda, MD</strong>, we can cost two of these side by
+            side, and the
             rest of what we build nearby is listed on our general contractor in Bethesda page.
           </p>
         </div>

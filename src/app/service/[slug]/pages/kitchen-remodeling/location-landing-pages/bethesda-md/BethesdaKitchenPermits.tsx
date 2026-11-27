@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Badge from "@/components/Common/Badge";
 import Container from "@/components/Common/Container";
 import SectionHeading from "@/components/Common/SectionHeading";
@@ -61,7 +62,23 @@ export default function BethesdaKitchenPermits() {
             align="center"
             eyebrow={<Badge>Permits</Badge>}
             title="Do You Need a Permit to Remodel a Kitchen in Bethesda?"
-            text="A permit is needed when walls, wiring or plumbing change, but swapping cabinets or flooring alone does not require one. Bethesda is unincorporated, so Montgomery County DPS issues building permits and WSSC Water handles plumbing, as shown in the county's 2024 Permits Required / No Permits Required list:"
+            text={
+              <>
+                <strong>
+                  A permit is needed when walls, wiring or plumbing change, but swapping cabinets or flooring alone does
+                  not require one.
+                </strong>{" "}
+                Bethesda is unincorporated, so{" "}
+                <Link target="_blank" href="https://www.montgomerycountymd.gov/department-permitting-services">
+                  Montgomery County DPS
+                </Link>{" "}
+                issues building permits and{" "}
+                <Link target="_blank" href="https://www.wsscwater.com/">
+                  WSSC Water
+                </Link>{" "}
+                handles plumbing, as shown in the county&apos;s 2024 Permits Required / No Permits Required list:
+              </>
+            }
           />
         </div>
 
@@ -76,7 +93,14 @@ export default function BethesdaKitchenPermits() {
 
         <div className={styles.note}>
           <InfoIcon />
-          <p>We file and track every permit for you and schedule each inspection.</p>
+          <p>
+            We file and track every permit for you and schedule each inspection. Before you sign with any contractor,
+            check the license with the{" "}
+            <Link target="_blank" href="https://labor.maryland.gov/license/mhic/">
+              Maryland Home Improvement Commission
+            </Link>
+            ; ours is MHIC #156178.
+          </p>
         </div>
 
         <div className={styles.tableWrap}>

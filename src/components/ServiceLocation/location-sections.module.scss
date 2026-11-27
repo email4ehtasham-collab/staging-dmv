@@ -285,6 +285,135 @@
   line-height: 1.7;
 }
 
+/* Table layout for cost tiers (layout="table") */
+.costTableWrap {
+  overflow-x: auto;
+  overflow-y: hidden;
+  border: var(--dmv-border-width) solid var(--dmv-color-border-card);
+  border-radius: 18px;
+  background: var(--dmv-color-surface);
+  box-shadow: var(--dmv-shadow-soft);
+}
+
+.costTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 16px;
+}
+
+.costTable th,
+.costTable td {
+  padding: 18px 24px;
+  border-bottom: var(--dmv-border-width) solid var(--dmv-color-line-soft);
+  color: var(--dmv-color-body);
+  font-weight: 400;
+  line-height: var(--dmv-line-normal);
+  text-align: left;
+  vertical-align: top;
+}
+
+.costTable thead th {
+  background: var(--dmv-color-heading);
+  color: #fff;
+  font-size: 13px;
+  font-weight: var(--dmv-weight-bold);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.costTable tbody th {
+  color: var(--dmv-color-heading);
+  font-size: 18px;
+  font-weight: var(--dmv-weight-bold);
+}
+
+.costTable tbody tr:nth-child(even) {
+  background: var(--dmv-color-surface-soft);
+}
+
+.costTable tbody tr:last-child th,
+.costTable tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.costTableTag {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--dmv-color-brand);
+  font-size: 11px;
+  font-weight: var(--dmv-weight-bold);
+  letter-spacing: 0.08em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.costTableBadge {
+  display: block;
+  margin-top: 6px;
+  color: var(--dmv-color-body);
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.costTable .costTableRange {
+  white-space: nowrap;
+}
+
+.costTableRange strong {
+  color: var(--dmv-color-heading);
+  font-size: 20px;
+  font-weight: var(--dmv-weight-extrabold);
+}
+
+.costFeatured + .costTableWrap,
+.header + .costTableWrap {
+  margin-top: var(--dmv-space-8);
+}
+
+.costTableWrap + .costFooter {
+  margin-top: var(--dmv-space-6);
+}
+
+@media (max-width: 640px) {
+  .costTable thead {
+    display: none;
+  }
+
+  .costTable,
+  .costTable tbody,
+  .costTable tr,
+  .costTable th,
+  .costTable td {
+    display: block;
+    width: 100%;
+  }
+
+  .costTable tr {
+    border-bottom: var(--dmv-border-width) solid var(--dmv-color-line-soft);
+  }
+
+  .costTable th,
+  .costTable td {
+    padding: 8px 18px;
+    border-bottom: 0;
+  }
+
+  .costTable td::before {
+    content: attr(data-label);
+    display: block;
+    margin-bottom: 2px;
+    color: var(--dmv-color-brand);
+    font-size: 11px;
+    font-weight: var(--dmv-weight-bold);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .costTable .costTableRange {
+    white-space: normal;
+  }
+}
+
 @media (max-width: 1100px) {
   .overviewGrid {
     grid-template-columns: 1fr;

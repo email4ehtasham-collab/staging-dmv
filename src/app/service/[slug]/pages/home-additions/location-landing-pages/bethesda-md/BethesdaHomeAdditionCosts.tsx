@@ -71,7 +71,13 @@ export default function BethesdaHomeAdditionCosts() {
             align="center"
             eyebrow={<Badge>Cost and Pricing</Badge>}
             title="How Much Does a Home Addition Cost in Bethesda?"
-            text="Most home additions in Bethesda cost $200 to $400 per finished square foot, and local projects usually land in the upper half of that range because of finish levels and older structures. Typical totals by type:"
+            text={
+              <>
+                <strong>Most home additions in Bethesda cost $200 to $400 per finished square foot.</strong> Local
+                projects usually land in the upper half of that range because of finish levels and older structures.
+                This table shows typical totals by type:
+              </>
+            }
           />
         </div>
 

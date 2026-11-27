@@ -7,6 +7,8 @@ import styles from "./bethesda-nearby-areas.module.scss";
 type NearbyArea = {
   eyebrow: string;
   name: string;
+  /** Optional zip codes, shown in bold under the area name. */
+  zips?: string;
   text: string;
   linkLabel?: string;
   href?: string;
@@ -92,6 +94,7 @@ export default function BethesdaNearbyAreas({
             <article className={styles.card} key={area.name}>
               <span className={styles.eyebrow}>{area.eyebrow}</span>
               <h3 className={styles.title}>{area.name}</h3>
+              {area.zips ? <strong className={styles.zips}>{area.zips}</strong> : null}
               <p className={styles.text}>{area.text}</p>
               {area.href && area.linkLabel ? (
                 <Link href={area.href} className={styles.areaLink}>

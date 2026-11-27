@@ -6,16 +6,11 @@ const bethesdaKitchenContent: ServiceLocationContent = {
     serviceHref: "/service/kitchen-remodeling",
     locationName: "Bethesda, MD",
     badge: "Bethesda · Montgomery County, MD",
-    title: "Kitchen Remodeling in",
-    titleAccent: "Bethesda, MD",
+    title: "Kitchen Remodel in Bethesda, MD",
+    titleAccent: "Without Budget Surprises",
     intro:
       "DMV General Contracting Group handles kitchen remodeling in Bethesda, MD as a licensed design-build general contractor, so one team draws your new kitchen, files the Montgomery County permits and builds it, whether that means refacing cabinets or a full gut renovation.",
-    credentials: [
-      "MHIC #156178",
-      "DC DLCP #410526000209",
-      "4.9 on Google",
-      "1-Year Warranty",
-    ],
+    credentials: ["4.9 on Google", "MHIC #156178", "DLCP #410526000209"],
     factsTitle: "Bethesda Kitchen At A Glance",
     factsCtaText:
       "Ask for a free in-home consultation to get ideas and a budget range for your kitchen.",
@@ -23,13 +18,13 @@ const bethesdaKitchenContent: ServiceLocationContent = {
     facts: [
       {
         label: "Typical cost",
-        value: "$35,000 - $75,000",
+        value: "$35,000–$75,000",
         note: "for a mid-range remodel",
       },
       {
-        label: "Build time",
-        value: "Roughly 2 months",
-        note: "of construction for a typical mid-range job",
+        label: "Construction time",
+        value: "6–10 weeks",
+        note: "for a typical mid-range job",
       },
       {
         label: "Permits",
@@ -37,11 +32,21 @@ const bethesdaKitchenContent: ServiceLocationContent = {
         note: "County DPS handles building; WSSC handles plumbing",
       },
       {
-        label: "Warranty & Nearby Areas",
-        value: "1 year on workmanship",
-        note: "Chevy Chase, North Bethesda, Potomac",
+        label: "Workmanship warranty",
+        value: "1 year",
       },
     ],
+    media: {
+      image: "/images/kitchen-remodeling-bethesda-md/bethesda-kitchen-remodeling-white-peninsula-pendants.webp",
+      imageAlt:
+        "Bethesda kitchen remodeling project with a white peninsula, shaker cabinets and globe pendant lights",
+      featuredTitle: "Bethesda kitchen remodel",
+      featuredMeta: "White peninsula, shaker cabinets and globe pendant lights",
+      reviewScore: "4.9",
+      reviewText: "Homeowners rate our kitchen remodels 4.9 out of 5 on Google.",
+      glanceLinkLabel: "See Bethesda Kitchen Pricing",
+      glanceLinkHref: "#service-location-pricing",
+    },
   },
   overview: {
     eyebrow: "Bethesda Kitchens",
@@ -122,7 +127,8 @@ const bethesdaKitchenContent: ServiceLocationContent = {
   costs: {
     eyebrow: "Cost and Pricing",
     title: "How Much Does a Kitchen Remodel Cost in Bethesda, MD?",
-    text: "Kitchen remodels in Bethesda most often fall between $35,000 and $75,000. Cosmetic updates fall around $15,000 to $30,000, and custom kitchens with new layouts begin near $75,000 and often pass $120,000:",
+    text: "Kitchen remodels in Bethesda most often fall between $35,000 and $75,000. Cosmetic updates fall around $15,000 to $30,000, and custom kitchens with new layouts begin near $75,000 and often pass $120,000. This table shows what each Bethesda budget tier includes:",
+    layout: "table",
     featured: {
       range: "$35,000–$75,000",
       label: "Most Bethesda kitchen remodels",

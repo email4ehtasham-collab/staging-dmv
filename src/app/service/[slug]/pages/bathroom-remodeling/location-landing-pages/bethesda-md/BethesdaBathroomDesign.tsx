@@ -88,7 +88,7 @@ export default function BethesdaBathroomDesign() {
             {houseStyles.map((style) => (
               <article className={styles.layoutCard} key={style.title}>
                 <div className={styles.floorplan}>{style.graphic}</div>
-                <h2 className="h4">{style.title}</h2>
+                <strong className={styles.layoutTitle}>{style.title}</strong>
                 <p>{style.text}</p>
               </article>
             ))}

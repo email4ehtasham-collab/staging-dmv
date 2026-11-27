@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Badge from "@/components/Common/Badge";
 import Container from "@/components/Common/Container";
 import SectionHeading from "@/components/Common/SectionHeading";
@@ -81,7 +82,23 @@ export default function BethesdaBasementPermits() {
                         align="center"
                         eyebrow={<Badge>Permits</Badge>}
                         title="Do You Need a Permit to Finish a Basement in Bethesda?"
-                        text="Yes. Finishing a basement is an interior alteration, so Montgomery County DPS requires a building permit, plus electrical permits for new circuits, and a basement bathroom needs a WSSC Water plumbing permit. Because Bethesda has no municipal government, the county and WSSC are the only permit offices involved. The county's 2024 permit list treats basement work like this:"
+                        text={
+                            <>
+                                <strong>Yes, finishing a basement in Bethesda needs a permit.</strong> It is an interior
+                                alteration, so{" "}
+                                <Link target="_blank" href="https://www.montgomerycountymd.gov/department-permitting-services">
+                                    Montgomery County DPS
+                                </Link>{" "}
+                                requires a building permit, plus electrical permits for new circuits, and a basement
+                                bathroom needs a{" "}
+                                <Link target="_blank" href="https://www.wsscwater.com/">
+                                    WSSC Water
+                                </Link>{" "}
+                                plumbing permit. Because Bethesda has no municipal government, the county and WSSC are the
+                                only permit offices involved. The county&apos;s 2024 permit list treats basement work like
+                                this:
+                            </>
+                        }
                     />
                 </div>
 
@@ -96,7 +113,14 @@ export default function BethesdaBasementPermits() {
 
                 <div className={styles.note}>
                     <InfoIcon />
-                    <p>We prepare the drawings, file both permits and book every inspection.</p>
+                    <p>
+                        We prepare the drawings, file both permits and book every inspection. Check any contractor&apos;s
+                        license with the{" "}
+                        <Link target="_blank" href="https://labor.maryland.gov/license/mhic/">
+                            Maryland Home Improvement Commission
+                        </Link>{" "}
+                        before you sign; ours is MHIC #156178.
+                    </p>
                 </div>
 
                 <div className={styles.tableWrap}>

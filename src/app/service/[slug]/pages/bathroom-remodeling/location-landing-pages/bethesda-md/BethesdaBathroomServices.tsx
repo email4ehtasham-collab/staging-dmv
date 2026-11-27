@@ -132,7 +132,12 @@ export default function BethesdaBathroomServices() {
             align="center"
             eyebrow={<Badge>Services</Badge>}
             title="Bethesda Bathroom Remodeling Services"
-            text="Bethesda bathroom remodeling for us falls into eight project types, drawn from our wider bathroom remodeling in Maryland and DC and fitted to local colonials, Cape Cods and infill houses:"
+            text={
+              <>
+                <strong>Bethesda bathroom remodeling</strong> for us falls into eight project types, drawn from our wider
+                bathroom remodeling in Maryland and DC and fitted to local colonials, Cape Cods and infill houses:
+              </>
+            }
           />
           <Button href="/service/bathroom-remodeling" variant="secondary" className={styles.headerButton}>
             All Bathroom Services
@@ -151,7 +156,7 @@ export default function BethesdaBathroomServices() {
 
         <div className={styles.note}>
           <p className={styles.noteText}>
-            Every bathroom renovation in Bethesda, MD begins with a free visit, and our{" "}
+            Every <strong>bathroom renovation in Bethesda, MD</strong> begins with a free visit, and our{" "}
             <Link href="/service-area/bethesda-md">general contractor in Bethesda page</Link> covers the other
             projects we handle locally.
           </p>

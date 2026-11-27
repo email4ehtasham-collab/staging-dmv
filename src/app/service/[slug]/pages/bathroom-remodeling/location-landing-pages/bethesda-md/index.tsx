@@ -3,6 +3,7 @@ import FiveSteps from "@/components/Home/FiveSteps/FiveSteps";
 import InHomeConsultation from "@/components/Home/InHomeConsultation/InHomeConsultation";
 import LicensedInsured from "@/components/Home/LicensedInsured/LicensedInsured";
 import BethesdaNearbyAreas from "@/components/ServiceArea/BethesdaNearbyAreas";
+import BethesdaOfficeLocation from "@/components/ServiceArea/BethesdaOfficeLocation";
 import BethesdaProjectsReviews from "@/components/ServiceArea/BethesdaProjectsReviews";
 import LocationCosts from "@/components/ServiceLocation/LocationCosts";
 import ServiceLocationPage from "@/components/ServiceLocation/ServiceLocationPage";
@@ -18,14 +19,35 @@ import bethesdaBathroomContent from "./content";
 
 export default function BathroomRemodelingBethesda() {
   return (
-    <ServiceLocationPage {...bethesdaBathroomContent.hero}>
+    <ServiceLocationPage
+      {...bethesdaBathroomContent.hero}
+      intro={
+        <>
+          DMV General Contracting Group handles <strong>bathroom remodeling in Bethesda, MD</strong> as a licensed
+          design-build general contractor. One contract covers the design, the county and WSSC permits, the
+          waterproofing and the build for primary suites, hall baths and powder rooms, and every job carries a 1-year
+          workmanship warranty.
+        </>
+      }
+    >
       <BethesdaBathroomServices />
-      <LocationCosts {...bethesdaBathroomContent.costs} />
+      <LocationCosts
+        {...bethesdaBathroomContent.costs}
+        text={
+          <>
+            <strong>A Bethesda hall or kids&apos; bath rebuilt from the studs typically costs $25,000 to $45,000.</strong>{" "}
+            Keeping the plumbing and changing finishes brings it to roughly $10,000 to $20,000, and an enlarged primary
+            suite usually starts around $50,000, with high-end suites above $80,000. This table shows what each Bethesda
+            budget tier includes:
+          </>
+        }
+      />
       <BethesdaBathroomCostDrivers />
       <BethesdaBathroomBudgetLessons />
       <InHomeConsultation
         id="service-location-consultation"
         headingId="bethesda-bathroom-consultation-title"
+        titleAs="strong"
         title="Get a free bathroom estimate."
         text="Bring your inspiration photos; we will tell you what they cost in your house."
         ctaLabel="Get a Free Bathroom Estimate"
@@ -46,10 +68,10 @@ export default function BathroomRemodelingBethesda() {
         project={{
           badgeLabel: "Case Studies & Projects",
           location: "Bethesda, MD",
-          image: "/images/projects-galary/primary-bathroom-entry-powder-room/1.webp",
-          imageAlt: "Remodeled bathroom in Bethesda, Maryland",
+          image: "/images/bathroom-remodeling-bethesda-md/bathroom-remodel-bethesda-md-glass-tub-herringbone-tile.webp",
+          imageAlt: "Bethesda bathroom remodeling project with a glass-panel tub, herringbone wall tile and matte black fixtures",
           title: "Bathroom Remodeling Projects in Bethesda",
-          text: "To see primary suites, kids' baths and powder rooms we have finished, browse the remodeling projects gallery.",
+          text: "This Bethesda bath now has a glass-panel tub, herringbone wall tile and matte black fixtures. More primary suites, kids' baths and powder rooms are in our remodeling projects gallery.",
           primaryLabel: "Browse remodeling projects",
           primaryHref: "/projects",
         }}
@@ -65,6 +87,11 @@ export default function BathroomRemodelingBethesda() {
       />
       <LicensedInsured variant="bethesda-bathroom" />
       <BethesdaBathroomRelatedWork />
+      <BethesdaOfficeLocation
+        title="Bathroom Remodels Across Bethesda, MD"
+        workNoun="bathrooms"
+        mapTitle="DMV General Contracting Group LLC | Bathroom Remodeling in Bethesda, MD"
+      />
       <BethesdaNearbyAreas
         eyebrow="Area We Serve"
         title="Bathroom Remodeling Near Bethesda"
@@ -73,26 +100,27 @@ export default function BathroomRemodelingBethesda() {
           {
             eyebrow: "Montgomery County",
             name: "Chevy Chase",
-            text: "Some of its villages and towns add their own building approval, as explained under bathroom remodeling in Chevy Chase.",
-            linkLabel: "Bathroom remodeling in Chevy Chase",
+            zips: "20815",
+            text: "Some of its villages and towns add their own building approval, and our Chevy Chase page explains the extra step.",
+            linkLabel: "Chevy Chase",
             href: "/service/bathroom-remodeling/chevy-chase-md",
           },
           {
             eyebrow: "Montgomery County",
             name: "Potomac",
-            text: "Out River Road, big-house primary baths are the focus of bathroom remodeling in Potomac.",
-            linkLabel: "Bathroom remodeling in Potomac",
+            zips: "20854",
+            text: "Out River Road, the usual project is a large primary bath in a bigger house.",
+            linkLabel: "Potomac",
             href: "/service/bathroom-remodeling/potomac-md",
           },
           {
-            eyebrow: "Washington, DC",
-            name: "Washington, DC",
-            text: "Rowhouse and condo baths under DOB permits are described on our bathroom remodeling in Washington DC page.",
-            linkLabel: "Bathroom remodeling in Washington, DC",
-            href: "/service/bathroom-remodeling/washington-dc",
+            eyebrow: "Near Our Office",
+            name: "North Bethesda",
+            zips: "20852",
+            text: "Townhome and condo baths close to our Grand Park Avenue office.",
           },
         ]}
-        noteText="Cross a town or District line and the permit office changes, so check the linked page for yours."
+        noteText="Cross a town line and the permit office can change, so check the linked page for yours."
       />
       <BethesdaBathroomFaq />
       <Estimate variant="bethesda-bathroom" />

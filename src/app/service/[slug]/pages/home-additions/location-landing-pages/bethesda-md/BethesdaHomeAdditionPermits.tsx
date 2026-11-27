@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Badge from "@/components/Common/Badge";
 import Container from "@/components/Common/Container";
 import SectionHeading from "@/components/Common/SectionHeading";
@@ -50,7 +51,20 @@ export default function BethesdaHomeAdditionPermits() {
             align="center"
             eyebrow={<Badge>Permits</Badge>}
             title="Zoning and Permits for Bethesda Home Additions"
-            text="Yes, every addition needs a building permit from Montgomery County DPS and must meet the zone's setbacks, height and lot coverage, while any new bath or kitchen plumbing goes through WSSC Water. Bethesda's two most common zones set these limits:"
+            text={
+              <>
+                <strong>Yes, every addition in Bethesda needs a building permit.</strong> It comes from{" "}
+                <Link target="_blank" href="https://www.montgomerycountymd.gov/department-permitting-services">
+                  Montgomery County DPS
+                </Link>{" "}
+                and must meet the zone&apos;s setbacks, height and lot coverage, while any new bath or kitchen plumbing
+                goes through{" "}
+                <Link target="_blank" href="https://www.wsscwater.com/">
+                  WSSC Water
+                </Link>
+                . Bethesda&apos;s two most common zones set these limits:
+              </>
+            }
           />
         </div>
 
@@ -80,7 +94,11 @@ export default function BethesdaHomeAdditionPermits() {
           <p>
             Older lots can have different side and rear figures, and homes in the Chevy Chase towns or a county historic
             district need extra approvals for exterior work. We confirm your zone and lot record with Montgomery
-            Planning before design starts.
+            Planning before design starts. Check any addition contractor&apos;s license with the{" "}
+            <Link target="_blank" href="https://labor.maryland.gov/license/mhic/">
+              Maryland Home Improvement Commission
+            </Link>{" "}
+            before you sign; ours is MHIC #156178.
           </p>
         </div>
       </Container>

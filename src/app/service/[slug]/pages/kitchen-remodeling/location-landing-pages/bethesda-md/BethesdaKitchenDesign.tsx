@@ -96,7 +96,7 @@ export default function BethesdaKitchenDesign() {
             {layouts.map((layout) => (
               <article className={styles.layoutCard} key={layout.title}>
                 <div className={styles.floorplan}>{layout.graphic}</div>
-                <h2 className="h4">{layout.title}</h2>
+                <strong className={styles.layoutTitle}>{layout.title}</strong>
                 <p>{layout.text}</p>
               </article>
             ))}

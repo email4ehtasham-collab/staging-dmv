@@ -1,30 +1,54 @@
+import Link from "next/link";
 import HomeFaq from "@/components/Home/HomeFaq/HomeFaq";
 
 const bethesdaBathroomFaqs = [
   {
-    question: "Are you licensed and insured?",
-    answer:
-      "Yes. Our Maryland home improvement license is MHIC #156178, our District license is DLCP #410526000209, and general liability coverage is active on each project.",
+    question: "Are you licensed to remodel bathrooms in Bethesda?",
+    answer: (
+      <>
+        <strong>Yes, we hold Maryland Home Improvement Commission license #156178.</strong> You can look it up on the{" "}
+        <Link target="_blank" href="https://labor.maryland.gov/license/mhic/">
+          MHIC license search
+        </Link>{" "}
+        before you sign, and our DC license is DLCP #410526000209.
+      </>
+    ),
   },
   {
     question: "Can you convert my tub to a walk-in shower?",
-    answer:
-      "Yes. We remove the tub, rebuild the floor with a proper slope and membrane, and finish the shower with tile and glass.",
+    answer: (
+      <>
+        <strong>Yes, we convert tubs to walk-in showers.</strong> We remove the tub, rebuild the floor with a proper
+        slope and membrane, and finish the shower with tile and glass.
+      </>
+    ),
   },
   {
     question: "Can a full bathroom go in my basement?",
-    answer:
-      "Yes. We run new drain and vent lines, add an ejector pump if the drain sits below the sewer, and file the WSSC and DPS permits.",
+    answer: (
+      <>
+        <strong>Yes, a full bathroom can go in most Bethesda basements.</strong> We run new drain and vent lines, add an
+        ejector pump if the drain sits below the sewer, and file the WSSC and DPS permits.
+      </>
+    ),
   },
   {
     question: "Do you offer a warranty?",
-    answer:
-      "Yes. Any problem caused by our workmanship in the first twelve months is ours to fix.",
+    answer: (
+      <>
+        <strong>Yes, every bathroom remodel comes with a 1-year workmanship warranty.</strong> Any problem caused by our
+        workmanship in the first twelve months is ours to fix.
+      </>
+    ),
   },
   {
     question: "Do you take small jobs?",
-    answer:
-      "Yes. We have no minimum, so a powder-room update or vanity replacement is welcome.",
+    answer: (
+      <>
+        <strong>Yes, we set no minimum project size.</strong> A powder-room update or a vanity replacement gets the same
+        free visit and written estimate as a full remodel.
+      </>
+    ),
   },
 ];
 

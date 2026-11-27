@@ -9,6 +9,7 @@ import ServiceLocationPage from "@/components/ServiceLocation/ServiceLocationPag
 import BethesdaKitchenCostDrivers from "./BethesdaKitchenCostDrivers";
 import BethesdaKitchenDesign from "./BethesdaKitchenDesign";
 import BethesdaKitchenFaq from "./BethesdaKitchenFaq";
+import BethesdaKitchenLocation from "./BethesdaKitchenLocation";
 import BethesdaKitchenPermits from "./BethesdaKitchenPermits";
 import BethesdaKitchenRelatedWork from "./BethesdaKitchenRelatedWork";
 import BethesdaKitchenServices from "./BethesdaKitchenServices";
@@ -17,13 +18,32 @@ import bethesdaKitchenContent from "./content";
 
 export default function KitchenRemodelingBethesda() {
   return (
-    <ServiceLocationPage {...bethesdaKitchenContent.hero}>
+    <ServiceLocationPage
+      {...bethesdaKitchenContent.hero}
+      intro={
+        <>
+          DMV General Contracting Group handles <strong>kitchen remodeling in Bethesda, MD</strong> as a licensed
+          design-build general contractor, so one team draws your new kitchen, files the Montgomery County permits and
+          builds it, whether that means refacing cabinets or a full gut renovation.
+        </>
+      }
+    >
       <BethesdaKitchenServices />
-      <LocationCosts {...bethesdaKitchenContent.costs} />
+      <LocationCosts
+        {...bethesdaKitchenContent.costs}
+        text={
+          <>
+            <strong>Kitchen remodels in Bethesda most often fall between $35,000 and $75,000.</strong> Cosmetic updates
+            fall around $15,000 to $30,000, and custom kitchens with new layouts begin near $75,000 and often pass
+            $120,000. This table shows what each Bethesda budget tier includes:
+          </>
+        }
+      />
       <BethesdaKitchenCostDrivers />
       <InHomeConsultation
         id="service-location-consultation"
         headingId="bethesda-kitchen-consultation-title"
+        titleAs="strong"
         title="Get an itemized price for your Bethesda kitchen."
         text="Every quote is itemized in writing after the free in-home consultation."
         ctaLabel="Book a Free Consultation"
@@ -44,10 +64,10 @@ export default function KitchenRemodelingBethesda() {
         project={{
           badgeLabel: "Case Studies & Projects",
           location: "Bethesda, MD",
-          image: "/images/projects-galary/calvert-st-kitchen/1.webp",
-          imageAlt: "Remodeled kitchen in Bethesda, Maryland",
+          image: "/images/kitchen-remodeling-bethesda-md/bethesda-condo-galley-kitchen-renovation.webp",
+          imageAlt: "Galley kitchen renovation in a Bethesda condo with white cabinets, a built-in desk and recessed lighting",
           title: "Kitchen Remodeling Projects in Bethesda",
-          text: "Our kitchen work across Bethesda and the surrounding area, from galley updates to open-plan conversions, is shown with before and after photos on our remodeling projects page.",
+          text: "This Bethesda condo galley kitchen now has white cabinets, a built-in desk and recessed lighting. More kitchens, from galley updates to open-plan conversions, are shown with before and after photos on our remodeling projects page.",
           primaryLabel: "See before and after photos",
           primaryHref: "/projects",
         }}
@@ -63,6 +83,7 @@ export default function KitchenRemodelingBethesda() {
       />
       <LicensedInsured variant="bethesda-kitchen" />
       <BethesdaKitchenRelatedWork />
+      <BethesdaKitchenLocation />
       <BethesdaNearbyAreas
         eyebrow="Nearby Areas"
         title="Kitchen Remodeling Near Bethesda"
@@ -71,23 +92,24 @@ export default function KitchenRemodelingBethesda() {
           {
             eyebrow: "Montgomery County",
             name: "Chevy Chase",
-            text: "Where town approval is often added to the county permit, our kitchen remodeling in Chevy Chase page explains the extra step.",
-            linkLabel: "Kitchen remodeling in Chevy Chase",
+            zips: "20815",
+            text: "Town approval is often added to the county permit, and our Chevy Chase page explains the extra step.",
+            linkLabel: "Chevy Chase",
             href: "/service/kitchen-remodeling/chevy-chase-md",
           },
           {
             eyebrow: "Montgomery County",
             name: "Potomac",
-            text: "Large custom kitchens with high-end finishes; see kitchen remodeling in Potomac.",
-            linkLabel: "Kitchen remodeling in Potomac",
+            zips: "20854",
+            text: "Large custom kitchens with high-end finishes on bigger lots west of Bethesda.",
+            linkLabel: "Potomac",
             href: "/service/kitchen-remodeling/potomac-md",
           },
           {
             eyebrow: "Near Our Office",
             name: "North Bethesda",
+            zips: "20852",
             text: "Townhomes and condos close to our Grand Park Avenue office.",
-            linkLabel: "Kitchen remodeling in North Bethesda",
-            href: "/service/kitchen-remodeling",
           },
         ]}
         noteText="If the bathroom or basement is next on your list, that work can share the same Bethesda crew and contract."
