@@ -2,6 +2,7 @@
 import ResponsiveImage from "@/components/Common/ResponsiveImage";
 
 import NavitemActive from "@/components/Common/NavitemActive";
+import ClientReviews from "@/components/Home/ClientReviews/ClientReviews";
 import Link from "next/link";
 import { useEffect } from "react";
 import { Accordion } from "react-bootstrap";
@@ -437,6 +438,8 @@ export default function Decks({ data }) {
                         <p>Tell us what you're envisioning — we'll visit your property, assess your yard and home, and provide a detailed estimate at no cost and with no obligation.</p>
                         <Link href="/contact-us" className="cta-btn">Schedule Free Consultation →</Link>
                     </div>
+
+                    <ClientReviews id="home-reviews" />
 
                     <h2>Why Bethesda Homeowners Choose DMV General Contracting Group for Deck Building</h2>
                     <p>

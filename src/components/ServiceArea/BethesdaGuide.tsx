@@ -197,7 +197,7 @@ export default function BethesdaGuide() {
               <strong className={styles.statValue}>20817</strong>
             </div>
             <div className={`${styles.statCard} ${styles.statFeatured}`} aria-label="Population about 68,000 people">
-              <strong className={styles.statValue}>~68,000 people</strong>
+              <span className={styles.statValue}>~68,000 people</span>
             </div>
           </div>
 
@@ -237,7 +237,7 @@ export default function BethesdaGuide() {
             title="Who Issues Building Permits in Bethesda?"
             text={
               <>
-                Montgomery County&apos;s Department of Permitting Services (DPS) issues building permits in Bethesda, because Bethesda has no city government. Plumbing and gas permits come from <strong>WSSC Water</strong>. Under the DPS permit list, common Bethesda remodeling jobs break down this way:
+                <strong>Montgomery County&apos;s Department of Permitting Services (DPS) issues building permits in Bethesda, because Bethesda has no city government.</strong> Plumbing and gas permits come from WSSC Water. Under the DPS permit list, common Bethesda remodeling jobs break down this way:
               </>
             }
           />
@@ -291,7 +291,11 @@ export default function BethesdaGuide() {
             align="center"
             eyebrow={<Badge>Cost and Pricing</Badge>}
             title="What Does a Remodel Cost in Bethesda?"
-            text="Most Bethesda remodels land in the upper half of Maryland's ranges, because owners choose custom cabinetry, natural stone and bigger layout changes. This table compares Maryland ranges with where Bethesda projects often land:"
+            text={
+              <>
+                <strong>Most Bethesda remodels land in the upper half of Maryland&apos;s ranges, because owners choose custom cabinetry, natural stone and bigger layout changes.</strong> This table compares Maryland ranges with where Bethesda projects often land:
+              </>
+            }
           />
 
           <div className={styles.tableWrap}>
@@ -325,17 +329,17 @@ export default function BethesdaGuide() {
             <span className={styles.demoEyebrow}>Market Demographics</span>
             <h3>Is Bethesda, MD a Wealthy Area?</h3>
             <p>
-              Yes. The U.S. Census Bureau reports a median household income of <strong>$192,237</strong> in Bethesda and a median owner-occupied home value of <strong>$1,169,900</strong> (ACS 2020–2024). For remodeling, that means custom finishes, careful protection of valuable homes and close attention to neighbors.
+              Yes. The U.S. Census Bureau reports a median household income of $192,237 in Bethesda and a median owner-occupied home value of $1,169,900 (ACS 2020–2024). For remodeling, that means custom finishes, careful protection of valuable homes and close attention to neighbors.
             </p>
 
             <div className={styles.demoStats}>
               <div className={styles.demoStat}>
                 <span>Median Household Income</span>
-                <strong>$192,237</strong>
+                <span className={styles.demoStatValue}>$192,237</span>
               </div>
               <div className={styles.demoStat}>
                 <span>Median Home Value</span>
-                <strong>$1,169,900</strong>
+                <span className={styles.demoStatValue}>$1,169,900</span>
               </div>
             </div>
 

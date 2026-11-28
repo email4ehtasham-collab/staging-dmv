@@ -1,23 +1,26 @@
 ﻿"use client";
 
-import { useState } from "react";
+import { useCallback, useEffect, useRef, useState, type FocusEvent, type KeyboardEvent } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import Button from "@/components/Common/Button";
 import Container from "@/components/Common/Container";
+import {
+  AREA_LINKS,
+  HEADER_CTA,
+  HEADER_PHONE,
+  MAIN_LINKS,
+  SERVICE_GROUPS,
+  SERVICES_PAGE,
+  VIEW_ALL_SERVICES,
+} from "@/config/navigation";
 import styles from "./main-header.module.scss";
 
-const navItems: { label: string; href: string; active?: boolean }[] = [
-  { label: "Services", href: "/services"},
-  // { label: "Home", href: "/", active: true },
-  { label: "Process", href: "/#process" },
-  { label: "Permits", href: "/#permits" },
-  { label: "Pricing", href: "/#cost" },
-  { label: "Projects", href: "/projects" },
-  { label: "Reviews", href: "/#reviews" },
-  { label: "Areas", href: "/#areas" },
-  { label: "Testimonials", href: "/testimonials" },
-];
+type MenuKey = "services" | "areas";
+
+// Desktop layout (dropdowns open on hover) from this width; below it the hamburger menu is used.
+const DESKTOP_QUERY = "(min-width: 1366px)";
 
 function EstimateIcon() {
   return (
@@ -39,8 +42,84 @@ function MenuIcon({ open }: { open: boolean }) {
   );
 }
 
+function ChevronIcon() {
+  return (
+    <svg viewBox="0 0 12 12" fill="none" aria-hidden="true" focusable="false" className={styles.chevron}>
+      <path d="m3 4.5 3 3 3-3" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+function PhoneIcon() {
+  return (
+    <svg viewBox="0 0 16 16" fill="none" aria-hidden="true" focusable="false" className={styles.phoneIcon}>
+      <path
+        d="M5 2.6 6.7 4.2c.2.2.3.5.2.8l-.5 1.4c.8 1.3 1.9 2.4 3.2 3.2L11 9.1c.3-.1.6 0 .8.2l1.6 1.7c.2.2.2.6 0 .8l-1.1 1.1c-.5.5-1.2.7-1.9.6C6.6 13 3 9.4 2.6 5.6c-.1-.7.1-1.4.6-1.9l1.1-1.1c.2-.2.6-.2.8 0Z"
+        stroke="currentColor"
+        strokeWidth="1.2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+const normalize = (path: string) => (path.length > 1 ? path.replace(/\/+$/, "") : path);
+
 export default function MainHeader() {
+  const pathname = normalize(usePathname() || "/");
   const [menuOpen, setMenuOpen] = useState(false);
+  const [openMenu, setOpenMenu] = useState<MenuKey | null>(null);
+  const navRef = useRef<HTMLElement>(null);
+  const triggerRefs = useRef<Partial<Record<MenuKey, HTMLButtonElement | null>>>({});
+
+  const isCurrent = (href: string) => pathname === href;
+  const servicesActive = pathname === SERVICES_PAGE.href || pathname.startsWith("/service/");
+  const areasActive = AREA_LINKS.some((link) => pathname === link.href || pathname.startsWith(`${link.href}/`));
+
+  const closeAll = useCallback(() => {
+    setOpenMenu(null);
+    setMenuOpen(false);
+  }, []);
+
+  // Close menus after navigation.
+  useEffect(() => {
+    closeAll();
+  }, [pathname, closeAll]);
+
+  // Outside click and Escape close the open dropdown.
+  useEffect(() => {
+    const onPointer = (event: PointerEvent) => {
+      if (navRef.current && !navRef.current.contains(event.target as Node)) setOpenMenu(null);
+    };
+    document.addEventListener("pointerdown", onPointer);
+    return () => document.removeEventListener("pointerdown", onPointer);
+  }, []);
+
+  const isDesktop = () => typeof window !== "undefined" && window.matchMedia(DESKTOP_QUERY).matches;
+  const toggle = (key: MenuKey) => setOpenMenu((current) => (current === key ? null : key));
+  const hoverOpen = (key: MenuKey) => {
+    if (isDesktop()) setOpenMenu(key);
+  };
+  const hoverClose = (key: MenuKey) => {
+    if (isDesktop()) setOpenMenu((current) => (current === key ? null : current));
+  };
+
+  const onItemKeyDown = (key: MenuKey) => (event: KeyboardEvent<HTMLLIElement>) => {
+    if (event.key === "Escape" && openMenu === key) {
+      event.stopPropagation();
+      setOpenMenu(null);
+      triggerRefs.current[key]?.focus();
+    }
+  };
+  const onItemBlur = (key: MenuKey) => (event: FocusEvent<HTMLLIElement>) => {
+    if (!event.currentTarget.contains(event.relatedTarget as Node | null)) {
+      setOpenMenu((current) => (current === key ? null : current));
+    }
+  };
+
+  const itemClass = (key: MenuKey, active: boolean) =>
+    [styles.item, styles.hasMenu, openMenu === key ? styles.itemOpen : "", active ? styles.itemActive : ""].join(" ");
 
   return (
     <header className={styles.header}>
@@ -49,30 +128,150 @@ export default function MainHeader() {
           <Image src="/images/logo.webp" alt="DMV General Contracting Group" width={200} height={60} priority className={styles.logoImage} />
         </Link>
 
-        <nav id="preview-primary-nav" className={`${styles.nav} ${menuOpen ? styles.navOpen : ""}`} aria-label="Primary">
-          {navItems.map((item) => (
-            <Link
-              key={item.label}
-              href={item.href}
-              className={`${styles.link} ${item.active ? styles.linkActive : ""}`}
-              aria-current={item.active ? "page" : undefined}
-              onClick={() => setMenuOpen(false)}
+        <nav
+          ref={navRef}
+          id="main-nav"
+          className={`${styles.nav} ${menuOpen ? styles.navOpen : ""}`}
+          aria-label="Main"
+        >
+          <ul className={styles.menu}>
+            <li
+              className={itemClass("services", servicesActive)}
+              onMouseEnter={() => hoverOpen("services")}
+              onMouseLeave={() => hoverClose("services")}
+              onKeyDown={onItemKeyDown("services")}
+              onBlur={onItemBlur("services")}
             >
-              {item.label}
-            </Link>
-          ))}
+              <div className={styles.trigger}>
+                <Link
+                  href={SERVICES_PAGE.href}
+                  className={styles.link}
+                  aria-current={isCurrent(SERVICES_PAGE.href) ? "page" : undefined}
+                  onClick={closeAll}
+                >
+                  {SERVICES_PAGE.label}
+                </Link>
+                <button
+                  type="button"
+                  ref={(el) => {
+                    triggerRefs.current.services = el;
+                  }}
+                  className={styles.chevronButton}
+                  aria-label="Show the Services menu"
+                  aria-expanded={openMenu === "services"}
+                  aria-controls="nav-menu-services"
+                  onClick={() => toggle("services")}
+                >
+                  <ChevronIcon />
+                </button>
+              </div>
+
+              <div id="nav-menu-services" className={`${styles.dropdown} ${styles.mega}`}>
+                <div className={styles.megaGrid}>
+                  {SERVICE_GROUPS.map((group) => (
+                    <div key={group.title} className={styles.group}>
+                      <p className={styles.groupTitle}>{group.title}</p>
+                      <ul className={styles.subList}>
+                        {group.links.map((link) => (
+                          <li key={link.href}>
+                            <Link
+                              href={link.href}
+                              className={styles.subLink}
+                              aria-current={isCurrent(link.href) ? "page" : undefined}
+                              onClick={closeAll}
+                            >
+                              {link.label}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                </div>
+                <Link href={VIEW_ALL_SERVICES.href} className={styles.viewAll} onClick={closeAll}>
+                  {VIEW_ALL_SERVICES.label} <span aria-hidden="true">→</span>
+                </Link>
+              </div>
+            </li>
+
+            <li
+              className={itemClass("areas", areasActive)}
+              onMouseEnter={() => hoverOpen("areas")}
+              onMouseLeave={() => hoverClose("areas")}
+              onKeyDown={onItemKeyDown("areas")}
+              onBlur={onItemBlur("areas")}
+            >
+              <button
+                type="button"
+                ref={(el) => {
+                  triggerRefs.current.areas = el;
+                }}
+                className={`${styles.link} ${styles.linkButton}`}
+                aria-expanded={openMenu === "areas"}
+                aria-controls="nav-menu-areas"
+                onClick={() => toggle("areas")}
+              >
+                Areas
+                <ChevronIcon />
+              </button>
+
+              <div id="nav-menu-areas" className={`${styles.dropdown} ${styles.areas}`}>
+                <ul className={styles.subList}>
+                  {AREA_LINKS.map((link) => (
+                    <li key={link.href}>
+                      <Link
+                        href={link.href}
+                        className={styles.subLink}
+                        aria-current={isCurrent(link.href) ? "page" : undefined}
+                        onClick={closeAll}
+                      >
+                        {link.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </li>
+
+            {MAIN_LINKS.map((link) => (
+              <li key={link.href} className={`${styles.item} ${isCurrent(link.href) ? styles.itemActive : ""}`}>
+                <Link
+                  href={link.href}
+                  className={styles.link}
+                  aria-current={isCurrent(link.href) ? "page" : undefined}
+                  onClick={closeAll}
+                >
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+
+          <div className={styles.mobileActions}>
+            <a href={HEADER_PHONE.href} className={styles.phone}>
+              <PhoneIcon />
+              {HEADER_PHONE.label}
+            </a>
+            <Button href={HEADER_CTA.href} data-estimate-trigger icon={<EstimateIcon />} iconPosition="left">
+              {HEADER_CTA.label}
+            </Button>
+          </div>
         </nav>
 
         <div className={styles.actions}>
-          <Button href="/contact-us" data-estimate-trigger icon={<EstimateIcon />} iconPosition="left">
-            Get Free Estimate
+          <a href={HEADER_PHONE.href} className={`${styles.phone} ${styles.desktopPhone}`}>
+            <PhoneIcon />
+            {HEADER_PHONE.label}
+          </a>
+          <Button href={HEADER_CTA.href} data-estimate-trigger icon={<EstimateIcon />} iconPosition="left">
+            {HEADER_CTA.label}
           </Button>
           <button
             type="button"
             className={styles.menuButton}
             aria-label={menuOpen ? "Close menu" : "Open menu"}
             aria-expanded={menuOpen}
-            aria-controls="preview-primary-nav"
+            aria-controls="main-nav"
             onClick={() => setMenuOpen((current) => !current)}
           >
             <MenuIcon open={menuOpen} />

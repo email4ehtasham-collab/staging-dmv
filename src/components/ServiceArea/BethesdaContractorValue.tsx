@@ -33,8 +33,8 @@ export default function BethesdaContractorValue() {
             title="Is It Worth Getting a General Contractor?"
             text={
               <>
-                Yes, once a job spans several trades or needs a permit. A general contractor usually charges{" "}
-                <strong>10% to 20%</strong> of the project cost, and up to 25% or 30% on complex work. That fee covers hiring and scheduling the trades, pulling permits and standing behind the result. For a single-trade repair, such as a faucet or a wall patch, hiring that trade directly is usually cheaper.
+                <strong>Yes, once a job spans several trades or needs a permit.</strong> A general contractor usually charges{" "}
+                10% to 20% of the project cost, and up to 25% or 30% on complex work. That fee covers hiring and scheduling the trades, pulling permits and standing behind the result. For a single-trade repair, such as a faucet or a wall patch, hiring that trade directly is usually cheaper.
               </>
             }
           />
@@ -44,7 +44,7 @@ export default function BethesdaContractorValue() {
           <div className={styles.feeCard}>
             <div>
               <span className={styles.feeLabel}>Typical General Contractor Fee</span>
-              <strong className={styles.feeValue}>10%–20%</strong>
+              <span className={styles.feeValue}>10%–20%</span>
               <p className={styles.feeText}>of the project cost — up to 25% or 30% on complex work</p>
             </div>
             <div className={styles.feeFooter}>Covers scheduling, trade coordination, permits &amp; warranty.</div>

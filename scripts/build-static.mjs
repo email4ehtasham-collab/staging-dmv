@@ -103,7 +103,7 @@ function runNextBuild() {
     const child = spawn(process.execPath, [nextBin, "build", "--webpack"], {
       cwd: root,
       stdio: "inherit",
-      env: { ...process.env, NEXT_TELEMETRY_DISABLED: "1" },
+      env: { ...process.env, NEXT_TELEMETRY_DISABLED: "1", DMV_STATIC_EXPORT: "1" },
     });
 
     child.on("error", (error) => {

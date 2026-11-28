@@ -106,7 +106,7 @@ export default function Stories() {
                                     <div className={styles["content-side"]}>
                                         <div className={styles["info-header"]}>
                                             <span className={styles["tag"]}>Project Series</span>
-                                            <h1 className={`${styles["project-title"]} h2`}>{project.projectName}</h1>
+                                            <h2 className={`${styles["project-title"]} h2`}>{project.projectName}</h2>
                                             <p className={styles["main-desc"]}>{project.projectDesc}</p>
                                         </div>
 

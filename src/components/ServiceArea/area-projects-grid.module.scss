@@ -1,0 +1,15 @@
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: var(--dmv-space-6);
+  margin-top: var(--dmv-space-8);
+}
+
+.allLink {
+  color: var(--dmv-color-brand);
+  font-weight: var(--dmv-weight-semibold);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}

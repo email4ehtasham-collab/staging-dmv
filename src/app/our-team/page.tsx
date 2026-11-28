@@ -8,6 +8,7 @@ import { Metadata } from "next";
 import styles from "./style.module.scss";
 import { seoFor, toMetadata } from "@/lib/seo/resolve";
 import PageSchema from "@/components/Schema/PageSchema";
+import { withOgImage } from "@/data/seo/ogImages";
 
 export async function generateMetadata(): Promise<Metadata> {
   const seo = await seoFor("/our-team", {
@@ -16,7 +17,7 @@ export async function generateMetadata(): Promise<Metadata> {
       "Meet the dedicated professionals who make our projects successful.",
   });
 
-  return toMetadata(seo, "/our-team");
+  return withOgImage(toMetadata(seo, "/our-team"), "/our-team");
 }
 
 export default function OurTeam() {

@@ -20,8 +20,5 @@ Disallow: /api
 Disallow: /404
 Disallow: /500
 
-# LLMs.txt — AI Model Optimization
-LLMs: https://www.dmv-gc.com/llms.txt
-
 # ─── SITEMAP ────────────────────────────────────
 Sitemap: https://www.dmv-gc.com/sitemap.xml

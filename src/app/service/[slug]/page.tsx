@@ -1,8 +1,10 @@
 import ResponsiveImage from "@/components/Common/ResponsiveImage";
 import { notFound } from "next/navigation";
 import { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo/resolve";
 import ServiceData from "@/data/services/ServiceData";
 import NavitemActive from "@/components/Common/NavitemActive";
+import ClientReviews from "@/components/Home/ClientReviews/ClientReviews";
 import getDynamicComponent from "../getDynamicComponent";
 
 import OurValues from "@/components/OurValues";
@@ -10,6 +12,7 @@ import StarsIcon from '@/assets/stars.svg';
 
 import styles from "./style.module.scss";
 import PageSchema from "@/components/Schema/PageSchema";
+import { withOgImage } from "@/data/seo/ogImages";
 
 export function generateStaticParams() {
     return ServiceData.map((service) => ({ slug: service.slug }));
@@ -25,14 +28,14 @@ export async function generateMetadata(
     (s) => s.slug === slug
   );
 
-  return {
+  return pageMetadata(`/service/${slug}`, {
     title: service?.meta_title || "Service",
     description: service?.meta_description || "",
     
     alternates: {
         canonical: `/service/${slug}`,
     },
-  };
+  }).then((metadata) => withOgImage(metadata, `/service/${slug}`));
 
 }
 
@@ -61,6 +64,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
         <main className="page-wrapper">
             <PageSchema path={`/service/${slug}`} />
             <NavitemActive nav="service" />
+            <ClientReviews id="home-reviews" />
             <div className="container">
                 <h1 className="section-title mb-2 h3">
                     <div className={'stars-icon'}>

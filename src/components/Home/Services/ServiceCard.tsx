@@ -15,6 +15,8 @@ export type ServiceCardData = {
 
 type ServiceCardProps = {
   service: ServiceCardData;
+  /** Set false to drop the small label above the title. */
+  showEyebrow?: boolean;
 };
 
 function ArrowIcon() {
@@ -25,7 +27,7 @@ function ArrowIcon() {
   );
 }
 
-export default function ServiceCard({ service }: ServiceCardProps) {
+export default function ServiceCard({ service, showEyebrow = true }: ServiceCardProps) {
   return (
     <Link
       href={service.href ?? `/service/${service.slug}`}
@@ -42,7 +44,7 @@ export default function ServiceCard({ service }: ServiceCardProps) {
         />
       </div>
       <div className={styles.body}>
-        {service.eyebrow ? <span className={styles.cardEyebrow}>{service.eyebrow}</span> : null}
+        {showEyebrow && service.eyebrow ? <span className={styles.cardEyebrow}>{service.eyebrow}</span> : null}
         <h3 className={styles.cardTitle}>{service.title}</h3>
         <p className={styles.cardText}>{service.desc}</p>
         <span className={styles.details}>

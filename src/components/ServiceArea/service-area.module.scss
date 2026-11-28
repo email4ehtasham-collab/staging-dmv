@@ -294,3 +294,194 @@
     font-size: 12px;
   }
 }
+
+.factsSection .factsCard::before {
+  display: none;
+}
+
+.factsSection .factsHeader {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.factsSection .factsList {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0;
+}
+
+.factsSection .factsList li {
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 3px;
+  padding: var(--dmv-space-3) var(--dmv-space-5);
+  border-bottom: 0;
+  border-left: var(--dmv-border-width) solid rgba(255, 255, 255, 0.14);
+}
+
+.factsSection .factsList li:first-child {
+  padding-left: 0;
+  border-left: 0;
+}
+
+.factsSection .factsList li:nth-last-child(-n + 2) .factValue {
+  font-size: 13px;
+}
+
+.factsSection .factValue {
+  justify-content: flex-start;
+  max-width: none;
+  text-align: left;
+}
+
+@media (max-width: 1100px) {
+  .factsSection .factsCard {
+    grid-template-columns: 1fr;
+    gap: var(--dmv-space-5);
+  }
+
+  .factsSection .factsList {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: var(--dmv-space-4);
+  }
+}
+
+@media (max-width: 560px) {
+  .factsSection .factsList {
+    grid-template-columns: 1fr;
+  }
+
+  .factsSection .factsList li {
+    padding: var(--dmv-space-3) 0;
+    border-top: var(--dmv-border-width) solid rgba(255, 255, 255, 0.14);
+    border-left: 0;
+  }
+
+  .factsSection .factsList li:first-child {
+    border-top: 0;
+  }
+
+  .factsSection .factValue {
+    max-width: none;
+    font-size: 13px;
+  }
+}
+
+.factsSection {
+  padding-block: var(--dmv-space-8);
+}
+
+.factsTableWrap {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.factsTable {
+  width: 100%;
+  border-collapse: collapse;
+  color: var(--dmv-color-inverse);
+  font-size: 14px;
+}
+
+.factsCaption {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: var(--dmv-space-5);
+  color: var(--dmv-color-inverse);
+  text-align: left;
+}
+
+.factsCaptionIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  flex: none;
+  border-radius: 10px;
+  background: var(--dmv-color-brand);
+  color: var(--dmv-color-inverse);
+}
+
+.factsCaptionIcon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.factsCaptionTitle {
+  display: block;
+  color: var(--dmv-color-inverse);
+  font-size: 18px;
+  font-weight: var(--dmv-weight-bold);
+  line-height: 1.3;
+}
+
+.factsCaptionText {
+  display: block;
+  margin-top: 2px;
+  color: rgba(255, 255, 255, 0.62);
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.factsTable th,
+.factsTable td {
+  padding: 14px 18px;
+  border-top: var(--dmv-border-width) solid rgba(255, 255, 255, 0.14);
+  text-align: left;
+  vertical-align: top;
+}
+
+.factsTable thead th {
+  border-top: 0;
+  color: rgba(255, 255, 255, 0.62);
+  font-size: 12px;
+  font-weight: var(--dmv-weight-bold);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.factsTable tbody th {
+  width: 32%;
+  color: rgba(255, 255, 255, 0.72);
+  font-weight: var(--dmv-weight-semibold);
+}
+
+.factsTable tbody td {
+  color: var(--dmv-color-inverse);
+  font-weight: var(--dmv-weight-bold);
+}
+
+.factsTable tbody td svg {
+  width: 13px;
+  height: 13px;
+  margin-right: 6px;
+  color: var(--dmv-color-accent);
+  vertical-align: -1px;
+}
+
+.factsTable tbody tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.factLink {
+  color: var(--dmv-color-inverse);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.factLink:hover {
+  color: var(--dmv-color-accent);
+}
+
+@media (max-width: 560px) {
+  .factsTable th,
+  .factsTable td {
+    padding: 12px 14px;
+  }
+
+  .factsTable tbody th {
+    width: 45%;
+  }
+}

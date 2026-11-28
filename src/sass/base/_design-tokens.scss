@@ -1,8 +1,9 @@
 :root {
     --dmv-font-body: var(--font-jakarta), Arial, sans-serif;
 
-    --dmv-color-brand: #c63940;
+    // --dmv-color-brand: #c63940;
     --dmv-color-brand-secondary: #2973b0;
+    --dmv-color-brand: var(--dmv-color-brand-secondary);
     // --dmv-color-brand: #2973b0;
     --dmv-color-brand-dark: #c5221f;
     --dmv-color-accent: #d4af37;

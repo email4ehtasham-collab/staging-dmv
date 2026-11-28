@@ -7,6 +7,8 @@ import localFont from "next/font/local";
 import { MyContextProvider } from "@/hooks/context";
 
 import StyledComponentsRegistry from "@/lib/registry";
+import { DEFAULT_OG_IMAGE } from "@/data/seo/ogImages";
+import { checkNavigationRoutes } from "@/config/navigationCheck";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -125,6 +127,14 @@ export const metadata: Metadata = {
     verification: {
         google: "FD2Eg66WLTKVmM3d-ImTnaOLj1F2LYcz0myqfIA7yAY",
     },
+    // Sitewide default share image. Pages that set their own openGraph add it via withOgImage().
+    openGraph: {
+        images: [{ url: DEFAULT_OG_IMAGE.url, width: 1200, height: 630, alt: DEFAULT_OG_IMAGE.alt }],
+    },
+    twitter: {
+        card: "summary_large_image",
+        images: [{ url: DEFAULT_OG_IMAGE.url, alt: DEFAULT_OG_IMAGE.alt }],
+    },
 };
 
 const jakarta = localFont({
@@ -169,6 +179,8 @@ export default function RootLayout({
 }: {
     children: React.ReactNode;
 }) {
+    checkNavigationRoutes();
+
     return (
         <html suppressHydrationWarning lang="en-US" className={jakarta.variable}>
 

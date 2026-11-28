@@ -2,6 +2,7 @@
 import ResponsiveImage from "@/components/Common/ResponsiveImage";
 
 import NavitemActive from "@/components/Common/NavitemActive";
+import ClientReviews from "@/components/Home/ClientReviews/ClientReviews";
 import Link from "next/link";
 import { useEffect } from "react";
 import { Accordion } from "react-bootstrap";
@@ -484,6 +485,8 @@ export default function FlooringRemodeling({ data }) {
                         <p>Our team will visit your home, measure every room, assess your subfloor, and provide a detailed material-by-material estimate — free of charge, with no obligation.</p>
                         <Link href="/contact-us" className="cta-btn">Schedule Free Flooring Consultation →</Link>
                     </div>
+
+                    <ClientReviews id="home-reviews" />
 
                     <h2>Why Bethesda Homeowners Choose DMV General Contracting Group for Flooring</h2>
                     <p>

@@ -9,11 +9,13 @@ import CalltoAction from '@/components/CalltoAction';
 import NavitemActive from "@/components/Common/NavitemActive";
 
 import { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo/resolve";
 
 import StarsIcon from '@/assets/stars.svg';
 import PageSchema from "@/components/Schema/PageSchema";
+import { withOgImage } from "@/data/seo/ogImages";
 
-export const metadata: Metadata = {
+const baseMetadata: Metadata = {
   title: "About DMV General Contracting Group | Licensed General Contractor Bethesda MD",
   description: "Learn about DMV General Contracting Group — a trusted design-build general contractor serving Bethesda MD & DC. Years of experience, licensed in-house teams & 4.9★ rated. Meet our team.",
   
@@ -21,6 +23,10 @@ export const metadata: Metadata = {
     canonical: "/about-us",
   },
 };
+
+export function generateMetadata(): Promise<Metadata> {
+  return pageMetadata("/about-us", baseMetadata).then((metadata) => withOgImage(metadata, "/about-us"));
+}
 
 function AboutPage() {
 

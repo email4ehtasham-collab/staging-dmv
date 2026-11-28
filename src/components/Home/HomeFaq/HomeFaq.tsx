@@ -86,15 +86,15 @@ const aduFaqs: Faq[] = [
 const bethesdaFaqs: Faq[] = [
   {
     question: "Are you licensed to work in Bethesda, MD?",
-    answer: "Yes. Maryland Home Improvement Commission license #156178 covers our home improvement work in Bethesda and every other Maryland county. The state's license search shows it as active. General liability insurance is in force on all Bethesda sites.",
+    answer: <><strong>Yes. Maryland Home Improvement Commission license #156178 covers our home improvement work in Bethesda and every other Maryland county.</strong> The state&apos;s license search shows it as active. General liability insurance is in force on all Bethesda sites.</>,
   },
   {
     question: "Who issues building permits in Bethesda?",
-    answer: "Montgomery County DPS issues building permits in Bethesda, and WSSC Water issues plumbing and gas permits. Homes in incorporated towns such as Somerset also need a town permit. Historic districts add a Historic Area Work Permit for exterior changes.",
+    answer: <><strong>Montgomery County DPS issues building permits in Bethesda, and WSSC Water issues plumbing and gas permits.</strong> Homes in incorporated towns such as Somerset also need a town permit. Historic districts add a Historic Area Work Permit for exterior changes.</>,
   },
   {
     question: "How much does a general contractor cost?",
-    answer: "Usually 10% to 20% of the project cost, and up to 25% or 30% on complex custom work. The fee is built into the total on your estimate, not added later. It pays for scheduling trades, permits, supervision and responsibility for the result.",
+    answer: <><strong>Usually 10% to 20% of the project cost, and up to 25% or 30% on complex custom work.</strong> The fee is built into the total on your estimate, not added later. It pays for scheduling trades, permits, supervision and responsibility for the result.</>,
   },
   {
     question: "What is the difference between a contractor and a general contractor?",
@@ -103,6 +103,29 @@ const bethesdaFaqs: Faq[] = [
   {
     question: "What is the best way to find a general contractor?",
     answer: "Look up the company's MHIC number in the state database first. Then compare written estimates from two or three contractors and read their recent reviews. Ask to see finished projects similar to yours before you sign.",
+  },
+];
+
+const washingtonDcFaqs: Faq[] = [
+  {
+    question: "Are you licensed to work in Washington, DC?",
+    answer: <><strong>Yes. We hold DC DLCP license #410526000209, which you can confirm in the District&apos;s Scout database or the DLCP online portal.</strong> Across the line in Maryland, MHIC #156178 applies. Every District site is insured under our general liability policy, and DC trade licenses cover the electrical, plumbing and mechanical work.</>,
+  },
+  {
+    question: "Who issues building permits in Washington, DC?",
+    answer: <><strong>The DC Department of Buildings issues them.</strong> In a historic district, the Historic Preservation Office also reviews exterior plans, and in Georgetown the Commission of Fine Arts does. A condo building adds its own sign-off on top. Our office assembles and submits each filing for you.</>,
+  },
+  {
+    question: "How much does a general contractor cost in DC?",
+    answer: <><strong>DC general contractors usually add 10% to 20% to the build cost, and 25% to 30% on demanding custom work.</strong> You are paying for trade coordination, DOB and preservation paperwork, a supervisor on site each day and one company liable for the outcome. In our estimates it is built into the line-item price, not added at the end.</>,
+  },
+  {
+    question: "What is the difference between a contractor and a general contractor?",
+    answer: "A trade contractor handles one kind of work, such as plumbing or tile, and pulls only its own permit. A general contractor holds the overall contract, obtains the primary permit and sequences all the specialists. For a remodel that touches plumbing, wiring and carpentry, that means one point of contact and one party responsible.",
+  },
+  {
+    question: "What is the best way to find a general contractor in DC?",
+    answer: "Check the license in Scout first, then confirm the company carries liability insurance. Ask for two or three written, itemized estimates and compare them line by line. Read recent reviews and ask to see finished work in homes like yours, such as rowhouses or condos. Agree on payment terms in a signed contract before work starts.",
   },
 ];
 
@@ -115,7 +138,7 @@ function PlusIcon() {
 }
 
 type HomeFaqProps = {
-  variant?: "home" | "kitchen" | "bethesda" | "adu";
+  variant?: "home" | "kitchen" | "bethesda" | "adu" | "washington-dc";
   eyebrow?: string;
   title?: string;
   text?: string;
@@ -132,7 +155,8 @@ export default function HomeFaq({
   const isKitchen = variant === "kitchen";
   const isBethesda = variant === "bethesda";
   const isAdu = variant === "adu";
-  const faqs = customFaqs ?? (isAdu ? aduFaqs : isKitchen ? kitchenFaqs : isBethesda ? bethesdaFaqs : homeFaqs);
+  const isWashingtonDc = variant === "washington-dc";
+  const faqs = customFaqs ?? (isWashingtonDc ? washingtonDcFaqs : isAdu ? aduFaqs : isKitchen ? kitchenFaqs : isBethesda ? bethesdaFaqs : homeFaqs);
 
   return (
     <section id="faq" className={styles.section} data-variant={variant} aria-labelledby="faq-title">

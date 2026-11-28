@@ -2,6 +2,7 @@
 import ResponsiveImage from "@/components/Common/ResponsiveImage";
 
 import NavitemActive from "@/components/Common/NavitemActive";
+import ClientReviews from "@/components/Home/ClientReviews/ClientReviews";
 import Link from "next/link";
 import { useEffect } from "react";
 import { Accordion } from "react-bootstrap";
@@ -510,6 +511,8 @@ export default function CarpetInstallation({ data }) {
                         <p>We'll visit your home, measure every room, help you choose the right carpet and padding, and provide an exact quote — at no cost and no obligation.</p>
                         <Link href="/contact-us" className="cta-btn">Schedule Free Carpet Consultation →</Link>
                     </div>
+
+                    <ClientReviews id="home-reviews" />
 
                     <h2>Why Bethesda Homeowners Choose DMV General Contracting Group for Carpet Installation</h2>
                     <p>

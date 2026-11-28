@@ -90,8 +90,6 @@ export default function ServiceLocationPage({
   media,
   children,
 }: ServiceLocationPageProps) {
-  // Pages that pass `media` (the Bethesda service pages) use the hub-style hero:
-  // photo, featured project, Google rating card and licence trust row.
   if (media) {
     return (
       <main className={styles.page}>

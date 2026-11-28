@@ -1,5 +1,6 @@
 import ResponsiveImage from "@/components/Common/ResponsiveImage";
 import { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo/resolve";
 import styled, { createGlobalStyle } from "styled-components";
 import NavitemActive from "@/components/Common/NavitemActive";
 
@@ -8,6 +9,7 @@ import { Suspense } from "react";
 
 import StarsIcon from '@/assets/stars.svg';
 import PageSchema from "@/components/Schema/PageSchema";
+import { withOgImage } from "@/data/seo/ogImages";
 
 const GlobalStyles = createGlobalStyle`
     .modal-video {
@@ -103,7 +105,7 @@ const StyledCom = styled.div`
 
 `;
 
-export const metadata: Metadata = {
+const baseMetadata: Metadata = {
   title: "Client Reviews & Testimonials | DMV General Contracting Group Bethesda MD",
   description: "See what homeowners say about DMV General Contracting Group. Read verified reviews from satisfied clients across Maryland & DC. 4.9★ rated on Google with 97+ reviews.",
 
@@ -111,6 +113,10 @@ export const metadata: Metadata = {
       canonical: `/testimonials`,
     },
 };
+
+export function generateMetadata(): Promise<Metadata> {
+  return pageMetadata("/testimonials", baseMetadata).then((metadata) => withOgImage(metadata, "/testimonials"));
+}
 
 
 export default function TestimonialsPage() {

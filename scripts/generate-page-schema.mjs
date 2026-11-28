@@ -3,9 +3,9 @@
 // business and website nodes stay in src/app/layout.tsx.
 //
 // HOW TO RUN (from the repo root):
-//   1. npm run build                           (builds the pages into out/)
+//   1. npm run build:static                    (builds the pages into out/)
 //   2. node scripts/generate-page-schema.mjs   (reads out/, writes src/data/schema/pageSchema.json)
-//   3. npm run build                           (builds again, now with the new schema)
+//   3. npm run build:static                    (builds again, now with the new schema)
 //   Then commit src/data/schema/pageSchema.json together with the page change.
 //
 // WHEN TO RERUN: after any change to a page title, meta description or FAQ
@@ -28,7 +28,7 @@ const REPO = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const arg = (name, def) => { const i = process.argv.indexOf(name); return i > -1 ? process.argv[i + 1] : def; };
 const OUT = path.resolve(REPO, arg('--out', 'out'));
 const DEST = arg('--report', '') ? path.resolve(REPO, arg('--report')) : '';
-if (!fs.existsSync(path.join(OUT, 'sitemap.xml'))) { console.error(`No build found at ${OUT}. Run "npm run build" first.`); process.exit(1); }
+if (!fs.existsSync(path.join(OUT, 'sitemap.xml'))) { console.error(`No build found at ${OUT}. Run "npm run build:static" first.`); process.exit(1); }
 const SITE = 'https://www.dmv-gc.com';
 const BIZ = { '@id': `${SITE}/#business` };
 const WEBSITE = { '@id': `${SITE}/#website` };
@@ -172,9 +172,15 @@ for (const { url, lastmod } of entries) {
     if (!CITIES[parts[2]]) throw new Error('unknown city ' + parts[2]);
     crumbs.push(['Services', `${SITE}/services`], [name, `${SITE}/service/${parts[1]}`], [CITIES[parts[2]][1]]);
     mainEntity = { '@type': 'Service', '@id': `${url}#service`, name: `${name} in ${CITIES[parts[2]][1]}`, serviceType: type, url, description: desc, provider: BIZ, areaServed: city(parts[2]) };
+  } else if (parts[0] === 'service-area' && parts.length === 1) {
+    kind = 'Service areas'; pageType = 'CollectionPage'; about = BIZ;
+    crumbs.push(['Service Areas']);
+    const kids = [...links].filter((l) => sitemapUrls.has(l) && //service-area/[^/]+$/.test(l));
+    if (kids.length) mainEntity = { '@type': 'ItemList', '@id': `${url}#itemlist`, numberOfItems: kids.length, itemListElement: kids.map((k, i) => ({ '@type': 'ListItem', position: i + 1, url: k })) };
   } else if (parts[0] === 'service-area') {
-    kind = 'Area hub';
-    crumbs.push([CITIES[parts[1]][1]]);
+    kind = 'Area hub'; about = BIZ;
+    // Matches the visible breadcrumb: Home > Service Areas > area
+    crumbs.push(['Service Areas', `${SITE}/service-area`], [CITIES[parts[1]][1]]);
     mainEntity = { '@type': 'Service', '@id': `${url}#service`, name: `General Contracting and Home Remodeling in ${CITIES[parts[1]][1]}`, serviceType: 'General contracting', url, description: desc, provider: BIZ, areaServed: city(parts[1]) };
   } else if (parts[0] === 'blog') {
     kind = 'Blog post';

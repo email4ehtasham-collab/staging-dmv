@@ -2,6 +2,7 @@
 import ResponsiveImage from "@/components/Common/ResponsiveImage";
 
 import NavitemActive from "@/components/Common/NavitemActive";
+import ClientReviews from "@/components/Home/ClientReviews/ClientReviews";
 import Link from "next/link";
 import { useEffect } from "react";
 import { Accordion } from "react-bootstrap";
@@ -519,6 +520,8 @@ export default function ElectricalServices({ data }) {
                         <p>Our licensed electricians will assess your electrical system and provide a detailed, no-surprise estimate — at no charge. Available 7 days a week.</p>
                         <Link href="/contact-us" className="cta-btn">Schedule Free Electrical Estimate →</Link>
                     </div>
+
+                    <ClientReviews id="home-reviews" />
 
                     <h2>Why Choose DMV General Contracting Group for Electrical Work in Bethesda</h2>
                     <p>

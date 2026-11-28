@@ -2,6 +2,7 @@
 import ResponsiveImage from "@/components/Common/ResponsiveImage";
 
 import NavitemActive from "@/components/Common/NavitemActive";
+import ClientReviews from "@/components/Home/ClientReviews/ClientReviews";
 import Link from "next/link";
 import { useEffect } from "react";
 import { Accordion } from "react-bootstrap";
@@ -543,6 +544,8 @@ export default function Concrete({ data }) {
                         <p>We'll visit your property, assess existing conditions, measure the project area, and provide a detailed itemized estimate — at no cost and no obligation.</p>
                         <Link href="/contact-us" className="cta-btn">Schedule Free Concrete Consultation →</Link>
                     </div>
+
+                    <ClientReviews id="home-reviews" />
 
                     <h2>Why Choose DMV General Contracting Group for Concrete Work in Bethesda</h2>
                     <p>

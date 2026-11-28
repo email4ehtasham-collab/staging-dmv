@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import Link from "next/link";
 import Badge from "@/components/Common/Badge";
 import Container from "@/components/Common/Container";
@@ -5,7 +6,8 @@ import SectionHeading from "@/components/Common/SectionHeading";
 import { GOOGLE_BUSINESS_PROFILE_URL } from "@/data/home/homePageMedia";
 import styles from "./bethesda-office-location.module.scss";
 
-// Bethesda-only My Maps embed, shared by every Bethesda service page.
+// Office NAP card, driving directions and My Maps embed. The defaults are the Bethesda
+// service-page versions; the area pages (Bethesda, Washington, DC) pass their own.
 const MAP_EMBED_URL = "https://www.google.com/maps/d/embed?mid=1JRgCEcvd6nI6fuvITm45SnbhRtyNbNk&ehbc=2E312F&noprof=1";
 const BETHESDA_WIKI_URL = "https://en.wikipedia.org/wiki/Bethesda,_Maryland";
 
@@ -16,19 +18,39 @@ type BethesdaOfficeLocationProps = {
   workNoun: string;
   /** iframe title: Brand | Keyword in Bethesda, MD. */
   mapTitle: string;
+  /** My Maps embed URL (defaults to the Bethesda service-page map). */
+  mapUrl?: string;
+  /** Text under the H2 (defaults to the Bethesda paragraph with zip codes). */
+  text?: ReactNode;
+  napTitle?: string;
+  directionsTitle?: string;
+  /** Directions body: intro, steps and closing line (defaults to the downtown Bethesda route). */
+  directions?: ReactNode;
+  sectionId?: string;
 };
 
-export default function BethesdaOfficeLocation({ title, workNoun, mapTitle }: BethesdaOfficeLocationProps) {
+export default function BethesdaOfficeLocation({
+  title,
+  workNoun,
+  mapTitle,
+  mapUrl = MAP_EMBED_URL,
+  text,
+  napTitle = "Our office near Bethesda",
+  directionsTitle = "Driving from downtown Bethesda",
+  directions,
+  sectionId = "bethesda-location",
+}: BethesdaOfficeLocationProps) {
   return (
-    <section id="bethesda-location" className={styles.section} aria-labelledby="bethesda-location-title">
+    <section id={sectionId} className={styles.section} aria-labelledby={`${sectionId}-title`}>
       <Container>
         <div className={styles.header}>
           <SectionHeading
-            id="bethesda-location-title"
+            id={`${sectionId}-title`}
             align="center"
             eyebrow={<Badge>Area We Serve</Badge>}
             title={title}
             text={
+              text ?? (
               <>
                 <Link target="_blank" href={BETHESDA_WIKI_URL}>
                   Bethesda
@@ -38,6 +60,7 @@ export default function BethesdaOfficeLocation({ title, workNoun, mapTitle }: Be
                 NIH campus and Walter Reed. We cover zip codes <strong>20814</strong>, <strong>20816</strong> and{" "}
                 <strong>20817</strong>.
               </>
+              )
             }
           />
         </div>
@@ -45,7 +68,7 @@ export default function BethesdaOfficeLocation({ title, workNoun, mapTitle }: Be
         <div className={styles.grid}>
           <div className={styles.copy}>
             <div className={styles.napCard}>
-              <strong className={styles.napTitle}>Our office near Bethesda</strong>
+              <strong className={styles.napTitle}>{napTitle}</strong>
               <p>
                 <a href={GOOGLE_BUSINESS_PROFILE_URL} target="_blank" rel="noopener noreferrer">
                   DMV General Contracting Group LLC
@@ -61,7 +84,9 @@ export default function BethesdaOfficeLocation({ title, workNoun, mapTitle }: Be
             </div>
 
             <div className={styles.directions}>
-              <strong className={styles.directionsTitle}>Driving from downtown Bethesda</strong>
+              <strong className={styles.directionsTitle}>{directionsTitle}</strong>
+              {directions ?? (
+              <>
               <p>
                 From the Bethesda Metro station at 7450 Wisconsin Avenue, the drive is about 5 miles and takes about 11
                 minutes. Follow these 3 steps:
@@ -74,12 +99,14 @@ export default function BethesdaOfficeLocation({ title, workNoun, mapTitle }: Be
               <p>
                 The route ends at 11810 Grand Park Ave #500, North Bethesda, MD <strong>20852</strong>.
               </p>
+              </>
+              )}
             </div>
           </div>
 
           <div className={styles.mapWrap}>
             <iframe
-              src={MAP_EMBED_URL}
+              src={mapUrl}
               title={mapTitle}
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"

@@ -41,7 +41,7 @@ function createSummary(text = "", maxLength = 155) {
   return `${shortened.slice(0, lastSpace > 0 ? lastSpace : maxLength).trim()}...`;
 }
 
-function createProjectCard(project: ProjectSource): ProjectCardData {
+export function createProjectCard(project: ProjectSource): ProjectCardData {
   const [categoryTitle, categoryLocation] = project.category
     .split("|")
     .map((part) => part.trim());

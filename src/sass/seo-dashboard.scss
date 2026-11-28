@@ -250,16 +250,56 @@
 		}
 	}
 
+	.seo-shortcut {
+		display: inline-flex;
+		align-items: center;
+		gap: 7px;
+		padding: 7px 12px;
+		border: 1px solid var(--seo-border-strong);
+		border-radius: 999px;
+		background: var(--seo-panel);
+		color: var(--seo-heading);
+		font-size: 12px;
+		font-weight: 600;
+		cursor: pointer;
+		transition: all 120ms ease;
+
+		span {
+			padding: 1px 6px;
+			border-radius: 999px;
+			background: var(--seo-bg);
+			color: var(--seo-muted);
+			font-size: 11px;
+		}
+
+		&.is-active {
+			border-color: var(--seo-accent);
+			background: var(--seo-accent);
+			color: var(--seo-inverse);
+
+			span {
+				background: rgba(255,255,255,0.2);
+				color: var(--seo-inverse);
+			}
+		}
+
+		&:hover:not(.is-active) {
+			border-color: var(--seo-accent);
+			color: var(--seo-accent);
+		}
+	}
+
 	.seo-table-wrap {
 		background: var(--seo-panel);
 		border: 1px solid var(--seo-border);
 		border-radius: 10px;
-		overflow: hidden;
+		overflow-x: auto;
 		box-shadow: 0 4px 14px var(--seo-shadow);
 	}
 
 	.seo-table {
 		width: 100%;
+		min-width: 940px;
 		border-collapse: collapse;
 		table-layout: fixed;
 
@@ -294,6 +334,51 @@
 		margin-top: 5px;
 		color: var(--seo-muted);
 		font-size: 11px;
+	}
+
+	.seo-group-row {
+		background: var(--seo-bg);
+
+		td {
+			padding: 8px 12px;
+			border-bottom: 1px solid var(--seo-border-strong);
+			font-size: 11px;
+			font-weight: 700;
+			text-transform: uppercase;
+			letter-spacing: 0.04em;
+			color: var(--seo-accent);
+		}
+	}
+
+	.seo-row-actions {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 7px;
+	}
+
+	.seo-open-link {
+		font-size: 12px;
+		font-weight: 600;
+		color: var(--seo-accent);
+		text-decoration: none;
+
+		&:hover, &:focus {
+			text-decoration: underline;
+		}
+	}
+
+	.seo-pagination {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 14px;
+		margin: 16px 0;
+
+		.seo-hint {
+			margin-top: 0;
+			font-size: 12px;
+		}
 	}
 
 	.seo-row-editor {
@@ -489,7 +574,7 @@
 	}
 
 	.seo-actions-cell {
-		width: 110px;
+		width: 150px;
 	}
 
 	.seo-col-path {

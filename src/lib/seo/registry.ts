@@ -102,18 +102,20 @@ function buildRecord(
   };
 }
 
+function staticRecord(pagePath: string, pageFile: string, group: string | null): PageRecord {
+  const source = fs.readFileSync(pageFile, "utf8");
+  return buildRecord(pagePath, "static", group, path.relative(process.cwd(), pageFile), {
+    title: readStringLiteral(source, "title"),
+    description: readStringLiteral(source, "description"),
+  });
+}
+
 export function collectStaticPages(): PageRecord[] {
   const records: PageRecord[] = [];
 
   const homeFile = firstExistingFile(APP_DIR, PAGE_FILES);
   if (homeFile) {
-    const source = fs.readFileSync(homeFile, "utf8");
-    records.push(
-      buildRecord("/", "static", null, path.relative(process.cwd(), homeFile), {
-        title: readStringLiteral(source, "title"),
-        description: readStringLiteral(source, "description"),
-      })
-    );
+    records.push(staticRecord("/", homeFile, null));
   }
 
   for (const dir of fs.readdirSync(APP_DIR, { withFileTypes: true })) {
@@ -121,22 +123,41 @@ export function collectStaticPages(): PageRecord[] {
     if (EXCLUDED_ROUTES.has(dir.name)) continue;
     if (dir.name.startsWith("[") || dir.name.startsWith("(")) continue;
 
-    const pageFile = firstExistingFile(path.join(APP_DIR, dir.name), PAGE_FILES);
-    if (!pageFile) continue;
+    const dirPath = path.join(APP_DIR, dir.name);
+    const pageFile = firstExistingFile(dirPath, PAGE_FILES);
+    if (pageFile) {
+      records.push(staticRecord(`/${dir.name}`, pageFile, STATIC_TITLES[dir.name] ?? dir.name));
+      continue;
+    }
 
-    const source = fs.readFileSync(pageFile, "utf8");
-    records.push(
-      buildRecord(
-        `/${dir.name}`,
-        "static",
-        STATIC_TITLES[dir.name] ? dir.name : null,
-        path.relative(process.cwd(), pageFile),
-        {
-          title: readStringLiteral(source, "title"),
-          description: readStringLiteral(source, "description"),
-        }
-      )
-    );
+    for (const child of fs.readdirSync(dirPath, { withFileTypes: true })) {
+      if (!child.isDirectory()) continue;
+      if (child.name.startsWith("[") || child.name.startsWith("(")) continue;
+
+      const childPath = path.join(dirPath, child.name);
+      const childFile = firstExistingFile(childPath, PAGE_FILES);
+      if (childFile) {
+        records.push(staticRecord(`/${dir.name}/${child.name}`, childFile, dir.name));
+      }
+
+      for (const grandChild of fs.readdirSync(childPath, { withFileTypes: true })) {
+        if (!grandChild.isDirectory()) continue;
+        if (grandChild.name.startsWith("[") || grandChild.name.startsWith("(")) continue;
+
+        const grandChildFile = firstExistingFile(
+          path.join(childPath, grandChild.name),
+          PAGE_FILES
+        );
+        if (!grandChildFile) continue;
+        records.push(
+          staticRecord(
+            `/${dir.name}/${child.name}/${grandChild.name}`,
+            grandChildFile,
+            dir.name
+          )
+        );
+      }
+    }
   }
 
   return records;
@@ -223,12 +244,14 @@ export function collectTeamListingPage(): PageRecord[] {
   ];
 }
 
-/**
- * Phase 1 scope: only /our-team pages read overrides at request time.
- * The rest of the site stays statically rendered and keeps the metadata
- * that is hardcoded in its own route file.
- */
-export const LIVE_SCOPE: SeoPageType[] = ["team", "static"];
+export const LIVE_SCOPE: SeoPageType[] = [
+  "static",
+  "service",
+  "location",
+  "blog",
+  "project",
+  "team",
+];
 
 let cached: PageRecord[] | null = null;
 
@@ -238,7 +261,14 @@ export function getPageRegistry(): PageRecord[] {
   const seen = new Set<string>();
   const all: PageRecord[] = [];
 
-  const groups = [collectTeamListingPage(), collectTeamPages()];
+  const groups = [
+    collectStaticPages(),
+    collectServicePages(),
+    collectLocationPages(),
+    collectBlogPages(),
+    collectProjectPages(),
+    collectTeamPages(),
+  ];
 
   for (const record of groups.flat()) {
     if (seen.has(record.path)) continue;

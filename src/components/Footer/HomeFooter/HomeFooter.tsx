@@ -25,7 +25,7 @@ const companyLinks = [
 ];
 
 const areaLinks = [
-  { label: "Washington, DC", href: "/#areas" },
+  { label: "Washington, DC", href: "/service-area/washington-dc" },
   { label: "Bethesda", href: "/#areas" },
   { label: "North Bethesda", href: "/#areas" },
   { label: "Rockville", href: "/#areas" },
@@ -138,7 +138,7 @@ export default function HomeFooter() {
         <div className={styles.body}>
           <div className={styles.intro}>
             <p className={styles.description}>
-              Licensed residential general contractor in Maryland and Washington, DC, with 35 years of experience. Design, permits and construction under one contract.
+              Licensed residential general contractor in Maryland and DC, with 35 years of experience. Design, permits and construction under one contract.
             </p>
 
             <div className={styles.legalRow}>

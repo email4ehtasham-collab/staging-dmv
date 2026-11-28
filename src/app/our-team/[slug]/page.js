@@ -9,6 +9,7 @@ import { seoFor, toMetadata } from "@/lib/seo/resolve";
 import styles from "../style.module.scss";
 import NavitemActive from "@/components/Common/NavitemActive";
 import PageSchema from "@/components/Schema/PageSchema";
+import { withOgImage } from "@/data/seo/ogImages";
 
 export function generateStaticParams() {
   return TEAM_MEMBERS.map((member) => ({ slug: member.slug }));
@@ -25,7 +26,7 @@ export async function generateMetadata({ params }) {
       : "",
   });
 
-  return toMetadata(seo, `/our-team/${slug}`);
+  return withOgImage(toMetadata(seo, `/our-team/${slug}`), `/our-team/${slug}`);
 }
 
 export default async function OurTeam({ params }) {

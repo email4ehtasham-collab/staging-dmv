@@ -2,6 +2,7 @@
 import ResponsiveImage from "@/components/Common/ResponsiveImage";
 
 import NavitemActive from "@/components/Common/NavitemActive";
+import ClientReviews from "@/components/Home/ClientReviews/ClientReviews";
 import Link from "next/link";
 import { useEffect } from "react";
 import { Accordion } from "react-bootstrap";
@@ -231,6 +232,8 @@ export default function Roofing({ data, location }) {
                             </div>
                         ))}
                     </div>
+
+                    <ClientReviews id="home-reviews" />
 
                     <h2>Why Choose DMV General Contracting Group?</h2>
                     <div className="trust-grid">

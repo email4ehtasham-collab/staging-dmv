@@ -7,6 +7,7 @@ import Badge from "@/components/Common/Badge";
 import Button from "@/components/Common/Button";
 import Container from "@/components/Common/Container";
 import NavitemActive from "@/components/Common/NavitemActive";
+import ClientReviews from "@/components/Home/ClientReviews/ClientReviews";
 import SectionHeading from "@/components/Common/SectionHeading";
 import BethesdaProjectsReviews from "@/components/ServiceArea/BethesdaProjectsReviews";
 import Estimate from "@/components/Home/Estimate/Estimate";
@@ -1047,6 +1048,8 @@ export default function BasementRemodeling(_props: { data?: BasementService }) {
                     </div>
                 </Container>
             </section>
+
+            <ClientReviews id="home-reviews" />
 
             <LicensedInsured variant="basement" />
 

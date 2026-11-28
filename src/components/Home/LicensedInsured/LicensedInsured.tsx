@@ -198,6 +198,33 @@ const bethesdaReasons = [
   },
 ];
 
+const washingtonDcReasons = [
+  {
+    icon: "verified" as IconName,
+    label: "Licensed",
+    title: "Licensed in DC and Maryland",
+    text: "We hold a current DLCP license in the District and an MHIC license in Maryland, so a family moving across the line can keep the same contractor.",
+  },
+  {
+    icon: "experience" as IconName,
+    label: "Experience",
+    title: "Comfortable With Old Rowhouses",
+    text: "Party walls, shallow footings and century-old framing are routine for a team with 35 years in older homes.",
+  },
+  {
+    icon: "compliance" as IconName,
+    label: "Approvals",
+    title: "Reviews and Approvals Handled",
+    text: "DOB filings, historic review and condo board packages are prepared in-house, so you are not left managing agencies.",
+  },
+  {
+    icon: "inHouse" as IconName,
+    label: "Trades",
+    title: "Trades on Staff",
+    text: "Our designers and licensed trades share an office and a payroll, so a cramped rowhouse job never waits on an outside firm.",
+  },
+];
+
 const bathroomReasons = [
   {
     icon: "verified" as IconName,
@@ -455,7 +482,7 @@ function ReasonIcon({ name }: { name: IconName }) {
 }
 
 type LicensedInsuredProps = {
-  variant?: "home" | "kitchen" | "bethesda" | "bethesda-kitchen" | "bethesda-bathroom" | "bethesda-basement" | "bathroom" | "basement" | "adu" | "home-additions" | "bethesda-home-additions";
+  variant?: "home" | "kitchen" | "bethesda" | "bethesda-kitchen" | "bethesda-bathroom" | "bethesda-basement" | "bathroom" | "basement" | "adu" | "home-additions" | "bethesda-home-additions" | "washington-dc";
 };
 
 export default function LicensedInsured({ variant = "home" }: LicensedInsuredProps) {
@@ -469,7 +496,10 @@ export default function LicensedInsured({ variant = "home" }: LicensedInsuredPro
   const isBethesdaBasement = variant === "bethesda-basement";
   const isBathroom = variant === "bathroom";
   const isBasement = variant === "basement";
-  const reasons = isBethesdaAddition
+  const isWashingtonDc = variant === "washington-dc";
+  const reasons = isWashingtonDc
+    ? washingtonDcReasons
+    : isBethesdaAddition
     ? bethesdaHomeAdditionReasons
     : isAddition
     ? homeAdditionReasons
@@ -507,7 +537,9 @@ export default function LicensedInsured({ variant = "home" }: LicensedInsuredPro
                 <Badge>{isKitchen || isAdu || isBethesda || isBethesdaKitchen || isBethesdaBathroom || isBethesdaBasement || isBathroom || isBasement ? "Why Choose Us" : "Why choose us"}</Badge>
               }
               title={
-                isBethesdaAddition
+                isWashingtonDc
+                  ? "Why DC Homeowners Hire Us"
+                  : isBethesdaAddition
                   ? "Why Bethesda Families Add On With Us"
                   : isAddition
                   ? "Why Families Trust Us With Their Addition"
@@ -530,7 +562,9 @@ export default function LicensedInsured({ variant = "home" }: LicensedInsuredPro
                           : "Licensed and Insured in Maryland and DC"
               }
               text={
-                isBethesdaAddition
+                isWashingtonDc
+                  ? "District homeowners usually mention four reasons:"
+                  : isBethesdaAddition
                   ? "On a Bethesda addition, three of our habits save the most time:"
                   : isAddition
                   ? "Families choose us for home additions for five reasons:"
@@ -571,7 +605,16 @@ export default function LicensedInsured({ variant = "home" }: LicensedInsuredPro
           </div>
 
           <div className={styles.footer}>
-            {isBethesdaAddition ? (
+            {isWashingtonDc ? (
+              <>
+                <p>That keeps one name on the permit and one number to call.</p>
+                <div className={styles.actions}>
+                  <Button href="/contact-us" data-estimate-trigger>
+                    Get a Free Estimate
+                  </Button>
+                </div>
+              </>
+            ) : isBethesdaAddition ? (
               <p>Thirty-five years in residential building sit behind every Bethesda addition, and our labor on it is guaranteed for twelve months.</p>
             ) : isAddition ? (
               <p>One company answers for the design, the structure and the finish.</p>

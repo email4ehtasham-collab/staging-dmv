@@ -372,11 +372,16 @@
   text-transform: uppercase;
 }
 
-.demoStat strong {
+.demoStat strong,
+.demoStat .demoStatValue {
+  display: inline;
+  margin-bottom: 0;
   color: var(--dmv-color-accent);
   font-size: 30px;
   font-weight: var(--dmv-weight-extrabold);
+  letter-spacing: normal;
   line-height: 1.2;
+  text-transform: none;
 }
 
 .demoSource {
@@ -434,7 +439,8 @@
     font-size: 22px;
   }
 
-  .demoStat strong {
+  .demoStat strong,
+  .demoStat .demoStatValue {
     font-size: 26px;
   }
 }

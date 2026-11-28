@@ -1,7 +1,9 @@
 
+const isStaticExport = process.env.DMV_STATIC_EXPORT === "1";
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "export",
+  ...(isStaticExport ? { output: "export" } : {}),
 
   images: {
     unoptimized: true,

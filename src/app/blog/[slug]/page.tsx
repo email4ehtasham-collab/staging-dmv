@@ -1,5 +1,6 @@
 import ResponsiveImage from "@/components/Common/ResponsiveImage";
 import { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo/resolve";
 import { notFound } from "next/navigation";
 
 import blogRoutes from "./blogRoutes";
@@ -10,6 +11,7 @@ import StarsIcon from '@/assets/stars.svg';
 
 import "./style.scss";
 import PageSchema from "@/components/Schema/PageSchema";
+import { withOgImage } from "@/data/seo/ogImages";
 
 export function generateStaticParams() {
   const slugs = new Set<string>([
@@ -28,14 +30,14 @@ export async function generateMetadata(
 
   const blog = blogsData.find((b) => b.slug === slug);
 
-  return {
+  return pageMetadata(`/blog/${slug}`, {
     title: blog?.meta_title || "Blog",
     description: blog?.meta_description || "",
 
     alternates: {
       canonical: `/blog/${slug}`,
     },
-  };
+  }).then((metadata) => withOgImage(metadata, `/blog/${slug}`));
 }
 
 export default async function BlogDetailPage(

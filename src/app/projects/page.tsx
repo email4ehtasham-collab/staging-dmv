@@ -1,5 +1,6 @@
 import ResponsiveImage from "@/components/Common/ResponsiveImage";
 import { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo/resolve";
 import NavitemActive from "@/components/Common/NavitemActive";
 import ProjectCard from "@/components/generic/project/Card";
 import projectData from "@/data/projects/ProjectsData";
@@ -9,8 +10,9 @@ import StarsIcon from '@/assets/stars.svg';
 import styles from "./style.module.scss";
 import ProjectsVideos from "@/components/ProjectsVideos/ProjectsVideos";
 import PageSchema from "@/components/Schema/PageSchema";
+import { withOgImage } from "@/data/seo/ogImages";
 
-export const metadata: Metadata = {
+const baseMetadata: Metadata = {
   title: "Home Renovation Projects & Portfolio | DMV General Contracting Group Bethesda MD",
   description: "Browse DMV General Contracting Group's completed home renovation projects in Bethesda MD. Before & after photos of kitchen remodels, bathroom renovations, basement finishing & more.",
   
@@ -18,6 +20,10 @@ export const metadata: Metadata = {
     canonical: "/projects",
   },
 };
+
+export function generateMetadata(): Promise<Metadata> {
+  return pageMetadata("/projects", baseMetadata).then((metadata) => withOgImage(metadata, "/projects"));
+}
 
 export default function ProjectsPage() {
     return (

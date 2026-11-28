@@ -1,5 +1,6 @@
 ﻿import type { ReactNode } from "react";
 import Link from "next/link";
+import { cityServiceHref } from "@/data/services/cityServiceHref";
 import Badge from "@/components/Common/Badge";
 import Button from "@/components/Common/Button";
 import Container from "@/components/Common/Container";
@@ -30,6 +31,10 @@ type ServicesProps = {
   align?: "left" | "center";
   serviceOverrides?: ServiceCardOverride[];
   serviceOrder?: string[];
+  /** City slug (e.g. "bethesda-md"): links go to that city's service page when it exists, else to the hub. */
+  citySlug?: string;
+  /** Set false to hide the small label above each card title. */
+  showCardEyebrow?: boolean;
 };
 
 function getServices(serviceOverrides?: ServiceCardOverride[], serviceOrder?: string[]): ServiceCardData[] {
@@ -60,8 +65,14 @@ export default function Services({
   align = "left",
   serviceOverrides,
   serviceOrder,
+  citySlug,
+  showCardEyebrow = true,
 }: ServicesProps = {}) {
-  const services = getServices(serviceOverrides, serviceOrder);
+  const services = getServices(serviceOverrides, serviceOrder).map((service) =>
+    citySlug && (!service.href || service.href === `/service/${service.slug}`)
+      ? { ...service, href: cityServiceHref(service.slug, citySlug) }
+      : service
+  );
 
   return (
     <section id="services" className={styles.section} aria-labelledby="services-title">
@@ -82,7 +93,7 @@ export default function Services({
 
         <div className={styles.grid}>
           {services.map((service) => (
-            <ServiceCard key={service.slug} service={service} />
+            <ServiceCard key={service.slug} service={service} showEyebrow={showCardEyebrow} />
           ))}
         </div>
 
@@ -95,7 +106,7 @@ export default function Services({
             <ul className={styles.tags} aria-label="Supporting remodeling services">
               {supportingLinks.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href}>{link.label}</Link>
+                  <Link href={citySlug ? cityServiceHref(link.href.replace("/service/", ""), citySlug) : link.href}>{link.label}</Link>
                 </li>
               ))}
             </ul>

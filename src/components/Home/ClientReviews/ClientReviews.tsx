@@ -14,16 +14,22 @@ function StarIcon() {
   );
 }
 
-export default function ClientReviews() {
+type ClientReviewsProps = {
+  id?: string;
+  /** Section H2; defaults to "What Our Clients Say". */
+  title?: string;
+};
+
+export default function ClientReviews({ id = "reviews", title = "What Our Clients Say" }: ClientReviewsProps = {}) {
   return (
-    <section id="reviews" className={styles.section} aria-labelledby="reviews-title">
+    <section id={id} className={styles.section} aria-labelledby="reviews-title">
       <Container>
         <div className={styles.header}>
           <SectionHeading
             id="reviews-title"
             align="center"
             eyebrow={<Badge>Testimonials</Badge>}
-            title="What Our Clients Say"
+            title={title}
             text={
               <>
                 Our clients rate us <strong>4.9 out of 5 on Google</strong>. You can read every review on our <Link href="https://www.google.com/maps/place/DMV+General+Contracting+Group+LLC/@39.0493761,-77.1200241,17z/data=!3m1!4b1!4m6!3m5!1s0x158dd0ef2148a11:0xceda33050d2dcdfb!8m2!3d39.049372!4d-77.1174492!16s%2Fg%2F11v3gbzc44?hl=en&entry=ttu&g_ep=EgoyMDI2MTEwMS4wIKXMDSoASAFQAw%3D%3D">Google Business Profile</Link> and more client stories on our{" "}

@@ -7,6 +7,7 @@ import Badge from "@/components/Common/Badge";
 import Button from "@/components/Common/Button";
 import Container from "@/components/Common/Container";
 import NavitemActive from "@/components/Common/NavitemActive";
+import ClientReviews from "@/components/Home/ClientReviews/ClientReviews";
 import SectionHeading from "@/components/Common/SectionHeading";
 import Estimate from "@/components/Home/Estimate/Estimate";
 import HomeFaq from "@/components/Home/HomeFaq/HomeFaq";
@@ -805,6 +806,8 @@ export default function Adu(_props: { data?: AduService }) {
             </section>
 
             <Permits variant="adu" />
+
+            <ClientReviews id="home-reviews" />
 
             <LicensedInsured variant="adu" />
 

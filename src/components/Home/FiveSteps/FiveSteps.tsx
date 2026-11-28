@@ -139,7 +139,7 @@ export default function FiveSteps({
           <div className={styles.durations}>
             {durations.map((duration) => (
               <div className={styles.durationCard} key={`${duration.value}-${duration.text}`}>
-                <strong className={styles.durationValue}>{duration.value}</strong>
+                <span className={styles.durationValue}>{duration.value}</span>
                 <p className={styles.durationText}>{duration.text}</p>
               </div>
             ))}

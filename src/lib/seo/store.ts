@@ -2,6 +2,7 @@ import fs from "fs";
 import path from "path";
 
 import { DEFAULT_SCRIPTS, DEFAULT_SITE_SETTINGS } from "./defaults";
+import { mongoStore } from "./mongoStore";
 import { normalizePathname } from "./path";
 
 import type {
@@ -138,7 +139,7 @@ export const devStore: SeoStore = {
 };
 
 export async function readSiteSettings(): Promise<SiteSettings> {
-  const db = await devStore.read();
+  const db = await getSeoStore().read();
   const stored = db.site;
   if (!stored) return { ...DEFAULT_SITE_SETTINGS };
 
@@ -151,11 +152,15 @@ export async function readSiteSettings(): Promise<SiteSettings> {
 }
 
 export async function readScriptBlocks(): Promise<ScriptBlock[]> {
-  const db = await devStore.read();
+  const db = await getSeoStore().read();
   if (db.scripts.length > 0) return db.scripts;
   return DEFAULT_SCRIPTS.map((block) => ({ ...block }));
 }
 
 export function getSeoStore(): SeoStore {
+  const uri = process.env.MONGODB_URI ?? process.env.MONGO_URI;
+  if (uri && process.env.SEO_STORE !== "file") {
+    return mongoStore;
+  }
   return devStore;
 }

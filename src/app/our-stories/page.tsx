@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo/resolve";
 import { Suspense } from "react";
 import Stories from "./stories";
 
@@ -6,8 +7,9 @@ import styles from "./style.module.scss";
 import NavitemActive from "@/components/Common/NavitemActive";
 import GoogleReviews from "@/components/Testimonials/GoogleReviews";
 import PageSchema from "@/components/Schema/PageSchema";
+import { withOgImage } from "@/data/seo/ogImages";
 
-export const metadata: Metadata = {
+const baseMetadata: Metadata = {
     title: "Behind The Scenes Where Our Construction Projects Take Shape",
     description:
         "Step behind the scenes to see how our expert team plans, builds, and designs throughout a construction project from early planning to on-site execution.",
@@ -16,6 +18,10 @@ export const metadata: Metadata = {
         canonical: `/our-stories`,
     },
 };
+
+export function generateMetadata(): Promise<Metadata> {
+    return pageMetadata("/our-stories", baseMetadata).then((metadata) => withOgImage(metadata, "/our-stories"));
+}
 
 export default function OurStoriesPage() {
     return (

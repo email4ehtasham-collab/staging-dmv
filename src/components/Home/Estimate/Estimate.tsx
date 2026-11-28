@@ -1,8 +1,17 @@
+import type { ReactNode } from "react";
 import Badge from "@/components/Common/Badge";
 import Container from "@/components/Common/Container";
 import SectionHeading from "@/components/Common/SectionHeading";
 import EstimateForm from "./EstimateForm";
 import styles from "./estimate.module.scss";
+
+/** Page-specific copy that replaces the section text (heading, intro, contact line, NAP line). */
+export type EstimateContent = {
+  title: string;
+  text: ReactNode;
+  intro: ReactNode;
+  contact: ReactNode;
+};
 
 type EstimateVariant = "home" | "services" | "kitchen" | "bethesda-kitchen" | "bethesda-bathroom" | "bethesda-basement" | "bathroom" | "basement" | "adu" | "home-additions" | "bethesda-home-additions";
 
@@ -158,7 +167,8 @@ function ClockIcon() {
   );
 }
 
-export default function Estimate({ variant = "home" }: { variant?: EstimateVariant }) {
+// `content` replaces the variant's copy for one page; the form and its button stay the same.
+export default function Estimate({ variant = "home", content }: { variant?: EstimateVariant; content?: EstimateContent }) {
   const isServices = variant === "services";
   const isKitchen = variant === "kitchen";
   const isAdu = variant === "adu";
@@ -211,7 +221,8 @@ export default function Estimate({ variant = "home" }: { variant?: EstimateVaria
                 )
               }
               title={
-                isServices
+                content?.title ??
+                (isServices
                   ? "Get a Free Estimate for Any Home Remodeling Service in Maryland"
                   : isBethesdaAddition
                   ? "Plan Your Home Addition in Bethesda, MD"
@@ -231,10 +242,12 @@ export default function Estimate({ variant = "home" }: { variant?: EstimateVaria
                         ? "Start Your Bathroom Remodel in Maryland"
                         : isKitchen
                           ? "Start Your Kitchen Remodel in Maryland"
-                          : "Get a Free Estimate From a Maryland General Contractor"
+                          : "Get a Free Estimate From a Maryland General Contractor")
               }
               text={
-                isServices
+                content
+                  ? content.text
+                  : isServices
                   ? "Whatever the size of the job, our home remodeling services in Maryland and Washington, DC come from one licensed general contractor and design-build team with no minimum project size."
                   : isBethesdaAddition
                   ? "A Bethesda addition starts with a look at your lot and a plan for the traffic and noise that come with construction. We check zoning first, price every line of the work in writing, and keep one crew and one schedule from demolition to the final county inspection."
@@ -258,7 +271,9 @@ export default function Estimate({ variant = "home" }: { variant?: EstimateVaria
               }
             />
 
-            {isServices ? (
+            {content ? (
+              <p className={styles.contactIntro}>{content.intro}</p>
+            ) : isServices ? (
               <p className={styles.contactIntro}>
                 Use the online form to ask for a free estimate, or dial{" "}
                 <a href="tel:+12407301292">+1 240-730-1292</a>; the line is staffed daily.
@@ -316,7 +331,7 @@ export default function Estimate({ variant = "home" }: { variant?: EstimateVaria
               </p>
             )}
 
-            {benefits.length > 0 ? (
+            {!content && benefits.length > 0 ? (
               <ul className={styles.benefits}>
                 {benefits.map((benefit) => (
                   <li key={benefit}>
@@ -327,7 +342,9 @@ export default function Estimate({ variant = "home" }: { variant?: EstimateVaria
               </ul>
             ) : null}
 
-            {isBethesdaAddition || isBethesdaKitchen || isBethesdaBathroom || isBethesdaBasement ? (
+            {content ? (
+              <p className={styles.contactIntro}>{content.contact}</p>
+            ) : isBethesdaAddition || isBethesdaKitchen || isBethesdaBathroom || isBethesdaBasement ? (
               <div className={styles.contact}>
                 <p className={styles.companyName}>DMV General Contracting Group LLC</p>
                 <p>
@@ -364,11 +381,13 @@ export default function Estimate({ variant = "home" }: { variant?: EstimateVaria
               </div>
             ) : null}
 
-            <ul className={styles.trust} aria-label="Credentials and ratings">
-              {trustItems.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
+            {content ? null : (
+              <ul className={styles.trust} aria-label="Credentials and ratings">
+                {trustItems.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            )}
           </div>
 
           <div className={styles.formCard}>

@@ -122,7 +122,7 @@ export default function PageData() {
 
                             <div className="mt-4">
                                 <div className="h-list align-items-center mb-3 gap-3">
-                                    <h1 className="h4">{video.title}</h1>
+                                    <h2 className="h4">{video.title}</h2>
 
                                     <Link href={ video.projectLink || "#" } className="d-flex align-items-center fw-bold font-size-16 text-primary"> {video.projectLink ? "View Project" : ""}
                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
